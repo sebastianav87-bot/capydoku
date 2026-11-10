@@ -1,69 +1,70 @@
-# Capydoku · playable local prototype
+# Capydoku v3 — local playable PWA
 
-**Local build only. No publication, repository, account, paid API, analytics or runtime CDN.**
+No publication, repositories, accounts, payments, runtime dependencies or remote APIs. Production/live v1 was not touched.
 
-## Run on the box
+## Run on this box
 
 ```sh
 cd /workspace/capydoku/app
 python3 -m http.server 8765 --bind 127.0.0.1
-# Box browser: http://127.0.0.1:8765/
+# http://127.0.0.1:8765/
 ```
 
-A local preview server is already running on that address at handoff. This is the box's localhost, not a server on a registered computer. Any simple static server works. Do not open index.html as file:// (modules and service workers require HTTP). No build step or npm dependency is needed to play. Service workers require localhost or HTTPS; no public hosting was configured.
+Serve over localhost (not file://) for service workers. Runtime requires only a static server. All art/fonts/modules are local; the PWA precaches every essential URL atomically, then works offline. Cache is content-addressed `capydoku-v3-…`; old Capydoku caches are deleted after successful install. Use a separate origin/profile if you want to keep playing the frozen v2 independently.
 
 ## Play
 
-- One capy per row, column and patterned/color zone. No touching, including diagonals. Rocks are blocked.
-- Single tap: empty → ×; tap × again to clear. **Double tap (within 280 ms, same cell): empty/× → capy.** Tap a capy to clear. A first tap waits 280 ms before committing: there is no transient × or clear during a double tap. Tapping a different cell commits the previous single tap. Undo/Hint/navigation cancels any still-pending tap.
-- Keyboard Enter/Space performs a single tap; a mouse double-click also places. No hover is needed.
-- Undo restores the previous board, **not spent oranges**. This avoids bypassing the lives rule. Undo history is session-local (up to 100 actions); board, oranges and mode survive reload.
-- A new capy conflicting with another costs one orange, regardless of number of conflicts. Both/all offending capys are red with an **!** indicator. Marks/clears cost nothing. A wrong *but locally legal* capy is not silently compared to a solution.
-- At zero oranges, retry or retry in Chill. Chill has no lives limit, keeps the conflict indicators, and never spends oranges. Turning Chill off uses the same saved orange count; it never refills lives.
-- Hint changes **no board state**. It highlights a single logically forced cell, supporting candidates and ruled-out spots. It never renders a full solution or places a capy. It refuses a nudge if a complete monotone proof cannot support the current partial layout. Conflicts get a repair highlight instead.
+Pick Jun, Bloom or Remy. Tap = ×; double tap = capy; tap an existing mark/capy = clear. Exactly one capy per row, column and patterned zone. No touching, including diagonals. Rocks are blocked. Three oranges; a locally rule-breaking capy costs exactly one. Both offenders stay red until repaired. A locally legal but ultimately incorrect move is not penalized. Relax has no lives.
 
-## Content and progress
+Drag from empty = paint new ×; from × = clear ×. Capys/rocks never change. One drag is one Undo. Board-only `touch-action:none`, pointer capture after **10 CSS px** movement, interpolated every ≤6px; page/map scrolling remains native outside the board. Singles are delayed **280ms**; a second tap within that window atomically places/clears a capy, without transient × flashes.
 
-- 30 distinct connected-zone puzzles: 5×5 at 1–8, 6×6 at 9–20, 7×7 at 21–30. Rocks start at 21. Sizes + sorted logical proof effort provide a heuristic ramp (not human-tested balance).
-- Boss 10/20/30 use the same rules and unlock **Beanie / Orange / Duck**. Classic is available initially. Select an unlocked capy in Hot Spring to use it on the board.
-- Daily Pond uses the **local calendar date**, a generated 365-board bank, and deterministic dihedral transforms for successive cycles. 365 consecutive dates (2026-01-01…2026-12-31) were checked with independent enumeration and no-guessing logic. This is a finite bank, not a claim of endlessly novel boards. Daily can contain a 7×7/rock puzzle regardless of campaign progress.
-- A daily session keeps its displayed date if midnight passes. Completing the same date twice never advances a streak; consecutive calendar dates increment it, missed dates reset it, clock backdating does not add credit. Changing devices/browser data does not synchronize progress.
-- localStorage key: `capydoku.progress.v1`. Validated schema, bounded sessions, safe fallbacks for corrupt/unavailable storage. Unknown/future schemas are **read-only**, never overwritten. Browser data clearing removes progress. No account or server is involved.
+### Powers — once per level attempt
 
-## Verification and tests
+- **Jun / Peek:** choose one random unplaced solution cell; ghost/glow only. Never auto-places, never targets ×, rocks or fixed cells, never exposes the full solution. Allowed when only one eligible target remains; disabled with none. Marking/placing its target removes the ghost. It remains spent.
+- **Bloom / Second chance:** available after a life-losing mistake, while lives <3. Erases the latest offender if it is still red, restores exactly one lost orange (max 3). If already manually repaired/undone, refund that orange without touching a later legal replacement. Can rescue the fatal third error from the game-over sheet. No mistake/full lives = disabled.
+- **Remy / Nap:** activate three protected moves. Every actual new capy placement or new × consumes one charge, including safe/correct moves. Protected mistakes stay red but cost no orange. Clears, removing capys, rocks, skipped/unchanged cells and Undo consume no charges. A drag spends one charge for EACH newly painted × (not one per gesture). Protection persists across cosmetic switches and consumes remaining charges even if Relax is enabled.
+
+Switch from the Home badge, your Hot Spring chip/figure, or the in-level avatar. Board, oranges, history, progress and streak stay intact. Unused power changes to the new starter's unused power; once activated it stays spent across switches, navigation, Undo and reload. Undo restores board state only, not lives/charges/power activation. Retry or **Replay** creates a genuinely fresh attempt. Daily streak is still credited at most once per calendar date.
+
+In Relax, **every starter's unused power acts as Peek**. The one product switch is `GAME_CONFIG.relaxPowersAsPeek` in `config.js`; setting false instead disables defensive powers in Relax. Toggling modes never replenishes spent power.
+
+Clear a boss (10/20/30) without activating any power in that attempt to earn its persistent **golden lily pad**. Ordinary mistakes, marks and Undo do not disqualify this. Powered clears still grow/decorate the spring; replay later without power to earn the lily. Old completions do not get unverifiable retroactive lilies.
+
+### Haptics and install
+
+Persisted Haptics toggle, default on. Legal placement **24ms**; rule break **[35,55,35]ms**; solve **[35,55,55,55,85]ms**; landing **12ms**. Drag mark/clear tick **8ms**, new changes only, throttled to ≥**70ms** between ticks. All feature-detected/caught: missing/throwing `navigator.vibrate` is silent, including iOS. Sound is optional locally synthesized WebAudio, default off.
+
+iPhone/iPad install copy: **Share → Add to Home Screen** (no beforeinstallprompt dependency). Standalone detection uses Safari `navigator.standalone` OR `(display-mode: standalone)`. Safe areas use `viewport-fit=cover` and `env(safe-area-inset-*)`. Actual iPhone/S24 hardware has not been tested.
+
+## Progress migration
+
+- Current key: `capydoku.progress.v3`, schema 3; v1/v2 keys are left unchanged. New players see chooser (Bloom preview). Migrating players bypass it and can switch immediately.
+- v2 → v3: same board data/signatures, all compatible partial boards/oranges, cleared levels, streak, Relax/haptic/audio and rock-intro state retained. Classic→Jun, Beanie→Remy, Orange→Bloom, Duck→Jun; original ID retained in `legacySelected`. Earned boss milestones still decorate the spring. Existing attempts begin with unused new powers, then persist normally. No retroactive lilies.
+- v1 → v3: keep earned progress/streak/settings, preserve unchanged signed 21–30 boards; discard retuned 1–20 and old daily partial boards as v2 did. Completed IDs are never revoked. Rock intro runs on first actual rock board if not seen.
+- Future schema is read-only, malformed/quota-blocked storage is caught with a visible warning. At most 40 partial sessions retained. Browser clearing/site-data eviction can still erase local-only progress.
+
+Daily = local calendar date + eligibility state. No rocks until campaign 21 is unlocked/reached or a rock-era pond cleared. Both banks are deterministic; changing eligibility changes session identity, not same-date streak credit. 365 boards/state plus eight dihedral transforms is finite, not an infinite novelty claim.
+
+## Reproduce verification/tests
 
 ```sh
-# Re-generate ALL content and exhaustive reports (~140 seconds here)
-python3 scripts/generate.py
-python3 scripts/build-sw.py       # content-hash cache; rerun after any runtime edit
-
-# Test dependencies only, not needed to play
-npm ci
-npx playwright install chromium
+python3 scripts/verify-v3.py
+TZ=America/New_York node scripts/verify-daily-v3.mjs
+python3 scripts/build-sw.py
 npm run test:unit
-npm run test:e2e                 # starts/reuses localhost:8765
-python3 scripts/contact-sheet.py # requires Pillow, already available on this box
+npm run test:e2e
+python3 scripts/contact-sheet-v3.py
+python3 scripts/package-runtime.py --verify
 ```
 
-- `reports/verification.json` + `.md`: count=1, logic flag, size, rock cells/count, techniques and proof effort for every campaign board and 365 daily source dates.
-- `scripts/generate.py`: seeded connected region growth, proof filtering and independent **all-permutation oracle**. It loads the supplied mockup's enumerator without calling its file-writing main; agrees on its unique solution. Mockup is unchanged.
-- `core.js`: separate JS row-by-row backtracker independently cross-checks all 395 boards. Unit tests verify every logical forced cell/elimination against that oracle, daily transformations, storage, rules and generation repeatability.
-- Deduction set: **house-single** and **shared-conflict**. A house is a row/column/zone; it needs one capy. The only remaining cell is forced. A cell conflicting with *every* candidate of a house is excluded. This covers locked row/zone intersections and common-neighbor spacing. Iterative elimination only: no guessing, recursive trial or uniqueness-as-a-deduction.
-- Playwright: 412×915 CSS viewport, device scale 1, mobile + actual touch input, America/New_York, Chromium. Browser errors are asserted absent in **each** test; console logs are not suppressed.
-- Real `context.setOffline(true)` test after SW control: navigator.onLine=false, reload, unvisited query navigation, essential resources, saved state, all success. Update checks may fail normally while offline and are caught separately from cached game requests.
-- `reports/precache-status.json`: all 24 precached URLs return 200. Atomic install, content-hashed cache, old Capydoku caches retired at activation, no stale-cache fallback for updated resources. App navigation with arbitrary query parameters uses cached index.html.
-- `reports/unit.log`, `reports/e2e.log`, `reports/playwright.json`, `reports/playwright-html/index.html`, `reports/offline.json`, `reports/test-summary.json`.
+Playwright is a local dev dependency; runtime needs no Node packages. Tests use Chromium, touch/mobile 412×915, scale 1, America/New_York. Reports: `reports/verification.json/.md`, `proof-effort-v1-v2-v3.json/.md`, `daily-dihedral-v3.json`, `unit-v3.log`, `e2e-v3.log`, `playwright.json`, `playwright-html/`, `TEST-SUMMARY-v3.md`. Native PNGs: `reports/screenshots-v3/`, contact sheet `reports/contact-sheet-v3.png`. Runtime archive: `/workspace/capydoku/capydoku-v3-runtime.tar.gz` (runtime + docs only; development scripts/tests/reports stay in the full app folder).
 
-## Screenshots and visual review
+The campaign and both daily banks are unchanged from v2: **760 unique, pure-logic-solvable, connected-region boards**. Independent Python full-permutation oracle + JS row DFS; every logic step cross-checked. First five levels have singleton starts, no preliminary deductions. Generator remains deterministic `scripts/retune-v2.py`; `verify-v3.py` is read-only and never rewrites content.
 
-`reports/screenshots/`: 14 real browser PNGs, each **412×915**, numbered 01–14. Includes Pond Path, progress, forced hint, red violation + spent orange, game over, Chill, boss, three timed jump frames, Daily, collection, 7×7 rocks and offline play. `reports/contact-sheet.png` puts them together. Boss screenshots use documented seeded progress fixtures (1–9/1–29 complete); the boss itself is actually played/solved. Daily screenshot uses a fixed test date for repeatability. Screens are not mockup compositing.
+## Visual source and deliberate conflicts
 
-All final screenshots were inspected. The duplicated source capys during the first jump implementation were fixed: each capy leaves a subtle cleared check in its cell and arrives in the spring. No clipping/overlap observed at the target viewport. See `reports/visual-review.md`.
+v5-starters final supplied alpha cutouts and palette; mandatory dark outlines unchanged. All character paths in `characters.js`. Approved v3 chrome, rules sheet, rock art/intro, counters/Relax, celebration and boss-growing Hot Spring retained. Trail is computed through actual centers of all 30 nodes (Catmull–Rom), not guessed coordinates. Friends soak together in supplied scene, not a card grid.
 
-## Design correspondence and deviations
+The brief overrides notes: **Hint removed** (notes recommend keeping it); powers reset per **attempt** (not once forever per puzzle); all Relax powers default to **Peek** (notes disable defensive powers). Switching is cosmetic for board/progression, but intentionally changes an unused power as explicitly required. Full-screen mobile selector is used for switching. Jun/Remy previews use their unchanged cutouts over a CSS pond; Bloom uses supplied composed stage. The source's fixed-Doze / wearable-accessory demonstration is not added as a new campaign mechanic; no generated levels changed. Legacy earnings remain as boss decoration progress/metadata, not wearable asset compositing. All three starters are available immediately.
 
-Uses supplied v2 artwork, **exact A–F dusty palette**, six redundant patterns and **true 5 CSS-px clipped SVG zone boundaries**, matching pond frame, backgrounds, fruit oranges, lower reed strip and spring. Nunito is vendored with its full OFL license (`assets/Nunito-OFL.txt`); runtime is dependency-free DOM/CSS/JS.
-
-Functional differences from a static illustration: real initial progress (Pond 1, zero streak), scrollable 30-node map with a connecting path, four real collectible capys rather than decorative unearned items, undo/retry/settings/hints, and interactive animated cleared boards. A seventh taupe/chevron zone is added for 7×7; it has not had a clinical color-vision test. No changes were made to `/workspace/capydoku/mockup/v2/`.
-
-See **KNOWN-ISSUES.md** for unverified device/install and difficulty limitations.
+Backups: `/workspace/capydoku/app-v1-backup/` and `/workspace/capydoku/app-v2-backup/` remain intact; non-node_modules hashes are audited in `reports/backup-integrity-v3.json`.
