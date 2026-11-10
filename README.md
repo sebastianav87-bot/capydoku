@@ -1,8 +1,6 @@
-> **Current working folder: completed LOCAL v3.1 preview.** Nothing has been pushed or published. Shipped v3 remains frozen in `../app-v3-backup/` and `../capydoku-v3-runtime.tar.gz`. This batch retains the Peek/chooser fixes and restores v1-style launches, fits solved controls at both target sizes, adds single-switch A/B board sizing (constant-width B default) and adds licensed offline music. A v3.1 cache is prepared locally under the user's conditional permission; see `reports/cache-hold-v3.1.json`. Screenshot approval is still needed before any live update. Main report: `reports/ROUND-v3.1.md`; images: `reports/screenshots-v3.1/`; contact sheet: `reports/contact-sheet-v3.1.png`.
+# Capydoku v4 — local-only playable PWA
 
-# Capydoku v3.1 — local playable PWA
-
-No publication, repositories, accounts, payments, runtime dependencies or remote APIs. No live deployment was touched.
+Approved v6 + v6.1 + v6.2 + v6.3 + v6.4 + v6.5 illustrated world map, illustrated generic board pieces, pictogram rules, companion powers, a growing Hot Spring and a replayable touch tutorial. No publication, repository creation, accounts, fees, remote APIs or runtime CDN. The Producer owns any later deployment; screenshot review comes first.
 
 ## Run on this box
 
@@ -12,77 +10,74 @@ python3 -m http.server 8765 --bind 127.0.0.1
 # http://127.0.0.1:8765/
 ```
 
-Serve over localhost (not file://) for service workers. Runtime requires only a static server. All art/fonts/modules are local; the PWA precaches every essential URL atomically, then works offline. Cache is content-addressed `capydoku-v3.1-…`; old Capydoku caches are deleted after successful install. Use a separate origin/profile if you want to keep playing the frozen v2 independently.
+Use localhost, not `file://`, for the installable/offline PWA. The runtime needs only a static server, no Node dependencies. All modules, art, Nunito font and music are local. The content-addressed `capydoku-v4-…` service worker atomically precaches local runtime files, supports offline navigation/query URLs and audio byte ranges. Settings labels the code actually running using generated `build-info.js`, from the same digest/version as `sw.js`.
+
+**Automatic updates:** launch, focus and becoming visible check registration.update(), shared throttle ≥60 seconds. A fully installed new worker calls skipWaiting()/clients.claim(). The page saves immediately on controllerchange and reloads exactly once on Map or results; while playing, in a tutorial or a modal, it defers until finish/return to Map. The old client remains pinned to its previous cache, including across SW restarts/offline, so it cannot mix new assets into an old pond. Previous caches are deleted only once no live client needs them. After safe reload, “Updated to v4.0” appears once per changed build. Initial activation, unchanged/offline/failed checks never cause loops; a failed state save blocks reload.
+
+**One-time v3.1.3 exception:** its already-running page has only a passive “Reload when you like” controllerchange handler; v4 cannot retroactively replace that JavaScript without forcing a possibly active pond. The actual read-only-source test confirms no forced reload/data loss and old-asset affinity offline. Finish/leave the pond and reload once or close/relaunch to enter v4. From then onward updates are automatic. This first legacy handoff is not falsely presented as an automatic map reload.
 
 ## Play
 
-Pick Jun, Bloom or Remy. Tap = ×; double tap = capy; tap an existing mark/capy = clear. Exactly one capy per row, column and patterned zone. No touching, including diagonals. Rocks are blocked. Three oranges; a locally rule-breaking capy costs exactly one. Both offenders stay red until repaired. A locally legal but ultimately incorrect move is not penalized. Relax has no lives.
+One capy per row, column and patterned zone; no touching, diagonals included. Rocks block cells. Tap = ×; double tap = capy; tap an existing mark/capy = clear. Singles wait **280ms**; the second tap atomically places/clears without a transient × flash.
 
-Drag from empty = paint new ×; from × = clear ×. Capys/rocks never change. One drag is one Undo. Board-only `touch-action:none`, pointer capture after **10 CSS px** movement, interpolated every ≤6px; page/map scrolling remains native outside the board. Singles are delayed **280ms**; a second tap within that window atomically places/clears a capy, without transient × flashes.
+Drag from empty paints ×; drag from × clears ×. Capys and rocks never change. One drag = one Undo. Board-only `touch-action:none`, pointer capture after **10 CSS px** movement, path interpolation ≤6px; map scrolling remains native. A handled control's delayed native click is consumed before it can touch newly opened board DOM.
 
-### Powers — once per level attempt
+Three oranges always apply: each locally conflicting placement costs one, except Remy's protected moves. There is **no Relax/Chill mode**. Conflicting cells have red outlines/`!`; generic capys retain natural colors. The counter reports the actual total. **Clear conflicts** removes every currently conflicting capy using local rules only, preserves other pieces/marks and is one Undo step; it never refunds resources. Game over has only Try again / Pond Path.
 
-- **Jun / Peek:** choose one random unplaced solution cell; ghost/glow only. Never auto-places, never targets ×, rocks or fixed cells, never exposes the full solution. Allowed when only one eligible target remains; disabled with none. Marking/placing its target removes the ghost. It remains spent.
-- **Bloom / Second chance:** available after a life-losing mistake, while lives <3. Erases the latest offender if it is still red, restores exactly one lost orange (max 3). If already manually repaired/undone, refund that orange without touching a later legal replacement. Can rescue the fatal third error from the game-over sheet. No mistake/full lives = disabled.
-- **Remy / Nap:** activate three protected moves. Every actual new capy placement or new × consumes one charge, including safe/correct moves. Protected mistakes stay red but cost no orange. Clears, removing capys, rocks, skipped/unchanged cells and Undo consume no charges. A drag spends one charge for EACH newly painted × (not one per gesture). Protection persists across cosmetic switches and consumes remaining charges even if Relax is enabled.
+### Powers — once per attempt
 
-Switch from the Home badge, your Hot Spring chip/figure, or the in-level avatar. Board, oranges, history, progress and streak stay intact. Unused power changes to the new starter's unused power; once activated it stays spent across switches, navigation, Undo and reload. Undo restores board state only, not lives/charges/power activation. Retry or **Replay** creates a genuinely fresh attempt. Daily streak is still credited at most once per calendar date.
+- **Jun / Peek:** one eligible solution cell glows with a generic ghost. It never places a capy; the player does. No ×, rock, fixed or currently conflicting target; candidates must agree across all enumerated solutions. Allowed for the final missing capy. A stale ghost hides while another placement obstructs it and returns when repaired. No eligible target = disabled, not spent.
+- **Bloom / Second chance:** after a life-losing mistake, erases the latest offender if still conflicting and restores exactly one orange, max 3. If manually repaired/undone, refunds that orange without erasing a later legal replacement. Use before the last orange is lost. No mistake/full lives/game over = disabled (latest retry/map-only instruction supersedes the previous fatal-rescue UI).
+- **Remy / Nap:** protects **three actual new capy placements or newly painted × cells**, including safe moves. Protected conflicts remain visible but cost no orange. Clearing, rocks, unchanged cells and Undo do not spend charges. A drag spends one charge per new ×, not per gesture.
 
-In Relax, **every starter's unused power acts as Peek**. The one product switch is `GAME_CONFIG.relaxPowersAsPeek` in `config.js`; setting false instead disables defensive powers in Relax. Toggling modes never replenishes spent power.
+Cosmetic switching from Home, Hot Spring or the in-level avatar preserves progress/streak/board. An unused power changes to the new companion's power; a spent one stays spent, including remaining Nap charges. Undo restores the board, not life/power resources. Retry/Replay creates a fresh attempt.
 
-Clear a boss (10/20/30) without activating any power in that attempt to earn its persistent **golden lily pad**. Ordinary mistakes, marks and Undo do not disqualify this. Powered clears still grow/decorate the spring; replay later without power to earn the lily. Old completions do not get unverifiable retroactive lilies.
+**First-use cards:** an eligible unused power first opens its canonical explanation with Use X / Not now. Cancel spends nothing. Confirm activates normally and persists its explanation flag. Flags are once per native power. Switching or Undo never restores a spent budget. Active feedback is inline only, never duplicated in a toast.
 
-### Haptics and install
+The v6.3 map uses50px normal nodes and120px dark/next/golden boss bodies, with29 curves through all30node centers. Bosses 10/20/30 grow the Hot Spring with lanterns, bamboo and a mountain pool. Clear a boss without activating power to earn its persistent golden lily pad. Old clears are not awarded unverifiable retroactive lilies. All three starters are friends from the start, not unlockable board pieces. The next-tier silhouette names the real upgrade (Lanterns / Bamboo nook / Mountain pool) and boss10/20/30, disappearing at max tier. Subtitle: “Beat a boss to grow your spring”.
 
-Persisted Haptics toggle, default on. Legal placement **32ms**; rule break **[45,60,45]ms**; solve **[45,60,70,60,105]ms**; landing **18ms**. Drag mark/clear tick **12ms**, new changes only, throttled to ≥**70ms** between ticks. All feature-detected/caught: missing/throwing `navigator.vibrate` is silent, including iOS. Sound is optional locally synthesized WebAudio, default off.
+### First visit / tutorial
 
-iPhone/iPad install copy: **Share → Add to Home Screen** (no beforeinstallprompt dependency). Standalone detection uses Safari `navigator.standalone` OR `(display-mode: standalone)`. Safe areas use `viewport-fit=cover` and `env(safe-area-inset-*)`. Actual iPhone/S24 hardware has not been tested.
+First launch (including existing players once) asks a local-only nickname:2–16 Unicode graphemes, emoji allowed, trim+NFC, controls/bidi overrides rejected. No email, account, network validation or consent/analytics UI. Editable in Settings. New players then choose a capy; existing chosen capys stay chosen. First entry to Pond 1 teaches tap, double-tap and drag with a ghost hand. Skip is always available; skip/completion persists `tutorialSeen`. Actual player marks remain, ghost effects never write moves, and guidance costs no lives/power. `? → Replay tutorial` uses a disposable sandbox and restores the existing board, history, charges and streak. The guide uses the unchanged verified **5×5** Pond 1 rather than the source's static 4×4 example; see the deviation rationale in `reports/ROUND-v4.md`.
 
-## Progress migration
+## Water lilies — optional, never a gate
 
-- Current key: `capydoku.progress.v3`, schema 3; v1/v2 keys are left unchanged. New players see chooser (Bloom preview). Migrating players bypass it and can switch immediately.
-- v2 → v3: same board data/signatures, all compatible partial boards/oranges, cleared levels, streak, Relax/haptic/audio and rock-intro state retained. Classic→Jun, Beanie→Remy, Orange→Bloom, Duck→Jun; original ID retained in `legacySelected`. Earned boss milestones still decorate the spring. Existing attempts begin with unused new powers, then persist normally. No retroactive lilies.
-- v1 → v3: keep earned progress/streak/settings, preserve unchanged signed 21–30 boards; discard retuned 1–20 and old daily partial boards as v2 did. Completed IDs are never revoked. Rock intro runs on first actual rock board if not seen.
-- Future schema is read-only, malformed/quota-blocked storage is caught with a visible warning. At most 40 partial sessions retained. Browser clearing/site-data eviction can still erase local-only progress.
+Each campaign pond has three independently earned, permanent OR-flags: cleared /zero mistakes /strictly under its target. Targets in config.js version1:5×5=120000ms,6×6=180000ms,7×7=270000ms. No visible countdown. Lowest active time and mistakes are retained across attempts. Replay never removes lilies; powers are allowed for normal lilies. Boss no-power golden lilies remain separate (max3). Daily awards are date-keyed separately and do not change the90-lily campaign total or double-credit streaks.
 
-Daily = local calendar date + eligibility state. No rocks until campaign 21 is unlocked/reached or a rock-era pond cleared. Both banks are deterministic; changing eligibility changes session identity, not same-date streak credit. 365 boards/state plus eight dihedral transforms is finite, not an infinite novelty claim.
+Active time begins at the first genuine board gesture and ends at the final placement. It excludes tutorial, rules/sheets, Map, hidden app and closed/reloading time; it persists when resuming, resets on Replay. A mistake is each actual new conflicting capy placement; Nap protection and Bloom's orange refund do not erase it, nor does Undo. X/clear, unchanged moves, and inaccessible rocks are not mistakes. Disabled rocks reject input before a capy is attempted. Existing clears migrate to the cleared lily only; old partial normal attempts retain their board but unknown pre-update timing/error history cannot earn perfect/timed lilies until Replay. Tap a map node for an accessible replay sheet; Settings→Progress holds the complete per-world/per-pond collection. Flowers are12px inside normal50px nodes,16px in boss rows; golden ~24px badge (26px bordered envelope) is separate.
 
-## Reproduce verification/tests
+## Layout, art, audio and install
+
+- Mode **B** is default: board width = **35/36 (97.2222%)** of app width, all grid sizes. At 412px: board400.55, 5/6/7 cells73.30/60.58/51.50px minimum. At360px: board350, cells63.19/52.16/44.28px. `GAME_CONFIG.boardSizingMode='A'` retains target52px cells/growing boards. All tested cells ≥44px. Results fit without scrolling at412×915 and360×780, including boss30 and Daily.
+- Starters and generic board/jump/swim pieces are independently swappable in `characters.js`. Approved Bloom v6.4 is centralized in CAST/POWER_FACES with supplied32/44/51/64px1x/2x/3x srcsets; Jun/Remy are unchanged. The central `POWER_ICONS`, `POWER_FACES` and `POWER_IDENTITY` maps feed the approved v6.1 chooser, switch rows, 72px button, first-use card, companion panel and all three Hot Spring friend tags. Neutral-arrow Undo is separate. Used powers display a 0 badge, unused ones 1.
+- V1-style **1500ms** upward launches, **100ms** stagger, **85px** arc remain visible over the expanded spring. Reduced motion settles directly. No repeated full board on results; all actions remain usable throughout.
+- Haptics default on: single-tap mark/clear tick**12ms** only after its280ms resolution; double-tap placement has no tick, just its legal/illegal pattern. Drag tick**12ms**, ≥**70ms** throttle; legal**32ms**; illegal**[45,60,45]ms**; solve**[45,60,70,60,105]ms**; landing**18ms**. Missing/throwing `navigator.vibrate` is silent. Sound effects are optional synthesized WebAudio, default off.
+- Music is a separate persisted toggle, default on but silent until a genuine gesture. **Northumberland — Spring Spring / Spring Enterprises** is the only track (CC0, source rechecked10 November2026 EST). Native loop with40ms head/500ms tail fades; gain0.14,800ms fade-in/240ms toggle fade-out, immediate hidden-tab pause, Opus64kbps /MP3112kbps fallback. Two files total4,186,008bytes; older tracks absent from runtime/precache. Sources/licenses: `assets/music/LICENSES.md`; credits in Settings. No Timberborn material was used.
+- iPhone/iPad install copy: **Share → Add to Home Screen**. Standalone detection supports `navigator.standalone` and display-mode; safe areas use `viewport-fit=cover`/`env(safe-area-inset-*)`.
+
+## Progress / Daily
+
+The approved v6.2 illustrated generic asset is shared by board, counter, rules and Peek via one `BOARD_SPRITE`. It is a self-contained SVG wrapper around the provided 51px@3x PNG; no external image dependency.
+
+Current key/schema stays `capydoku.progress.v3` /3. v3/v3.1/v3.1.x →v4 preserves compatible normal boards, progress, selected capy, powers, lilies, streak and settings. All stored chill/relax preferences and attempt flags are discarded. Explicit Relax attempts, or mode-less attempts under an old Relax preference, restart empty with3oranges and unused native power. Explicit normal attempts remain intact. The active save is rewritten safely on migration. New optional fields include nickname, lilies/dailyLilies, attempt metrics, tutorialSeen and powerIntroSeen; completed-Pond1 players without a tutorial flag are not nagged. New players name themselves then choose a starter.
+
+v2 →v3/v4 retains compatible boards/progress/streak/settings, maps Classic→Jun, Beanie→Remy, Orange→Bloom, Duck→Jun, and starts the new powers unused. v1 retains earned progress/streak/settings and unchanged21–30 boards; retuned1–20/old-Daily partial boards are discarded, never completed IDs. Old keys remain untouched. Malformed/unavailable storage is caught; future schema is read-only; at most40 partial sessions. Site-data deletion/eviction can erase local progress.
+
+Daily depends on local date and campaign rock eligibility: no-rock bank until21 is reached/unlocked or a rock-era pond is cleared. First actual rock encounter shows a one-time intro. Changing eligibility does not double-credit a date; missed dates reset the streak. It is a finite365-board bank per state plus8 transforms, not infinite novelty.
+
+## Verify / test / package
 
 ```sh
-python3 scripts/verify-v3.py
-TZ=America/New_York node scripts/verify-daily-v3.mjs
-# Cache already prepared; accidental rebuilds are guarded.
+python3 scripts/verify-v4.py
 npm run test:unit
-CAPYDOKU_REPORT_VERSION=v3.1 CAPYDOKU_SCREENSHOT_DIR=reports/screenshots-v3.1/regression npm run test:e2e
-python3 scripts/contact-sheet-v3.1.py
-## Optional later local packaging only (never replaces the shipped v3 tar):
-# python3 scripts/package-runtime.py --verify
+CAPYDOKU_REPORT_VERSION=v4 CAPYDOKU_SCREENSHOT_DIR=reports/screenshots-v4/regression npm run test:e2e
+python3 scripts/capture-v4.py
+python3 scripts/contact-sheet-v4.py
+python3 scripts/package-runtime.py --replace-local-package --verify
 ```
 
-Playwright is a local dev dependency; runtime needs no Node packages. Current results: **66 unit + 69 e2e pass**, Chromium mobile/touch at 412×915, plus 360×780 sizing/end-screen cases, scale 1, America/New_York. Current reports: `reports/verification-v3.1.json/.md`, `reports/ROUND-v3.1.md`, `reports/TEST-SUMMARY-v3.1.json`, `reports/unit-v3.1.log`, `reports/e2e-v3.1.log`, `reports/playwright-v3.1.json`, `reports/playwright-html-v3.1/`. Native captures: `reports/screenshots-v3.1/`, smaller-size additions in its `360x780/` subfolder; main contact sheet `reports/contact-sheet-v3.1.png`. The existing `/workspace/capydoku/capydoku-v3-runtime.tar.gz` is the **frozen old release**, not this round. No new archive was generated. Legacy v3 reports remain historical.
+These development commands apply to the full app tree, not the minimal runtime archive. Playwright is a local development dependency. Full mobile/touch projects run at both target viewports, scale1, America/New_York, with configured retries0 and browser error capture. Authoritative counts/results: `reports/TEST-SUMMARY-v4.json`, `unit-v4.log`, `e2e-v4.log`, `playwright-v4.json`/HTML. Verification: `verification-v4.json/.md`, `daily-independent-v4.json`, `proof-effort-v1-v2-v3-v4.json/.md`. All760source boards and5,840actual daily outputs have unique solutions and complete documented no-guess proofs; independent Python permutation enumeration agrees with JS row DFS.
 
-The campaign and both daily banks are unchanged from v2: **760 unique, pure-logic-solvable, connected-region boards**. Independent Python full-permutation oracle + JS row DFS; every logic step cross-checked. First five levels have singleton starts, no preliminary deductions. Generator remains deterministic `scripts/retune-v2.py`; `verify-v3.py` is read-only and never rewrites content.
+Main handoff: `reports/ROUND-v4.md`, `reports/screenshots-v4/`, `reports/contact-sheet-v4.png`. Runtime archive: `../capydoku-v4-runtime.tar.gz`. Packaging never overwrites any shipped earlier tar. Cache rebuilds are guarded; deliberate runtime edits require `python3 scripts/build-sw.py --bump-cache`, refreshed hold hashes and tests again.
 
-## Visual source and deliberate conflicts
-
-v5-starters final supplied alpha cutouts and palette; mandatory dark outlines unchanged. All character paths in `characters.js`. Approved v3 chrome, rules sheet, rock art/intro, counters/Relax, celebration and boss-growing Hot Spring retained. Trail is computed through actual centers of all 30 nodes (Catmull–Rom), not guessed coordinates. Friends soak together in supplied scene, not a card grid.
-
-The brief overrides notes: **Hint removed** (notes recommend keeping it); powers reset per **attempt** (not once forever per puzzle); all Relax powers default to **Peek** (notes disable defensive powers). Switching is cosmetic for board/progression, but intentionally changes an unused power as explicitly required. Full-screen mobile selector is used for switching. Jun/Remy previews use their unchanged cutouts over a CSS pond; Bloom uses supplied composed stage. The source's fixed-Doze / wearable-accessory demonstration is not added as a new campaign mechanic; no generated levels changed. Legacy earnings remain as boss decoration progress/metadata, not wearable asset compositing. All three starters are available immediately.
-
-Backups: `/workspace/capydoku/app-v1-backup/` and `/workspace/capydoku/app-v2-backup/` remain intact; v3 and pre-extension v3.1 snapshots also remain intact; all original non-node_modules hashes are audited in `reports/backup-integrity-v3.1.json`.
-
-## v3.1 controls, sizing, music and local cache
-
-- **One sizing switch:** `GAME_CONFIG.boardSizingMode` in `config.js`. Default **B** keeps every board at **35/36 (97.2222%)** of app width, matching the supplied reference frame ratio: board **400.55px at 412** / **350px at 360**, for all grid sizes. Minimum 5/6/7 cell widths: **73.30 / 60.58 / 51.50px** at 412; **63.19 / 52.16 / 44.28px** at 360. Mode **A** retains the earlier target 52px cells / growing 294–404px board. B deliberately restores larger 5×5 cells per the latest direction. No query/storage override. Comparison: `reports/sizing-A-vs-B.png`; exact captures in `reports/screenshots-v3.1/sizing/`; table and measurement method in `reports/ROUND-v3.1.md`. Existing 10px drag threshold, delayed 280ms tap and 70ms drag-tick throttle stay unchanged.
-- Haptics (ms): tick 12; legal 32; illegal `[45,60,45]`; solve `[45,60,70,60,105]`; each landing 18. One existing Haptics toggle controls everything. Missing/blocked APIs remain silent.
-- Restored direct upward 1.5s launches, stagger 100ms. All three supplied starter cutouts remain untouched; a CSS water-edge mask softens their lower edge on arrival. Timed rings, steam, reaction, saved oranges and pure-boss golden lily remain. Reduced motion goes straight to soaking.
-- Replay / Next pond / Hot Spring all fit without scrolling after normal, boss (including 30) and daily solves at 412×915 and 360×780. Daily's Next pond opens the next uncleared campaign pond; after campaign 30 it returns to Pond Path.
-- Music is separate from Sound effects, default on but **silent until a genuine first tap/key** on each page load. Stored `music:false` stays off, including reload. Existing v3/v2/v1 progress gets the safe new-field default without changing schema, progress, powers or streak. Sound effects off is not a master music mute: use the explicit Music toggle.
-- Three original CC0 recordings rotate locally: Alex McCulloch's *Flute and Guitar*, Spring Spring's *Minimalistic Flute & Strings Tune*, Indieteur's *Revelation*. Source/license evidence and sizes: `assets/music/LICENSES.md`, `reports/music-v3.1.json`. All credits are also in Settings → Music credits.
-- Low Web Audio gain 0.14, Relax 0.085; 800ms fade-in, 240ms toggle fade-out. Hidden tabs pause immediately (no delayed background sound). Rotation wraps to the first track. No external media requests, accounts, fees or runtime APIs. HTML media respects its muted flag; controller also supports explicit mute. Platform audio interruptions remain subject to browser/OS policy.
-- Opus 40kbps plus MP3 64kbps fallback; 4,987,618 combined audio bytes. Older Safari selects MP3; decode failure tries MP3 once. All six files are precached. The service worker supports single-byte-range audio responses offline for iPhone seeking.
-- `python3 scripts/build-sw.py` is guarded against accidental further cache rebuilds. A deliberate new runtime change needs `--bump-cache`, updated audit hashes and the full tests again. No deployment is authorized by this local preparation.
-- Full commands/results: `reports/ROUND-v3.1.md`, `reports/unit-v3.1.log`, `reports/e2e-v3.1.log`, `reports/TEST-SUMMARY-v3.1.json`. Independent verification is unchanged-content `reports/verification-v3.1.json/.md`.
-
-Real iPhone/S24, physical vibration/audio quality and subjective Timberborn-like mood remain human/device checks. v6 exists but was not marked approved, so it was not integrated. No v3.1 archive is requested or generated in this round; the packaging helper now targets a separate v3.1 filename if used later.
+STEP0 stable-backup gate passed before any app edit; evidence `reports/step0-v4.json`. All v1/v2/v3/v3.1 backups and shipped archives remain immutable. This localhost preview is not a phone-accessible live link. Real iPhone/S24, physical haptics/audio and comprehensive accessibility remain unverified; see `KNOWN-ISSUES.md`.
