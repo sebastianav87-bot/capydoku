@@ -50,7 +50,7 @@ export function dailyPuzzle(data,d=new Date(),eligible=false){
 export function fresh(){return{version:SCHEMA,completed:[],selected:'Jun',starterChosen:false,goldenLilies:[],legacySelected:null,chill:false,haptics:true,audio:false,music:true,rockIntroSeen:false,rocksReached:false,daily:{lastDay:null,streak:0},sessions:{}}}
 export function cleanAttempt(v,length){
  const raw=v?.power??{},used=raw.used===true,kind=['peek','secondChance','nap'].includes(raw.kind)?raw.kind:null;
- return{power:{used,kind,napRemaining:used&&kind==='nap'&&Number.isInteger(raw.napRemaining)?Math.max(0,Math.min(3,raw.napRemaining)):0,peekCell:used&&kind==='peek'&&Number.isInteger(raw.peekCell)&&raw.peekCell>=0&&raw.peekCell<length?raw.peekCell:null},lastMistake:Number.isInteger(v?.lastMistake?.cell)&&v.lastMistake.cell>=0&&v.lastMistake.cell<length?{cell:v.lastMistake.cell}:null};
+ return{...(typeof v?.relax==='boolean'?{relax:v.relax}:{}),power:{used,kind,napRemaining:used&&kind==='nap'&&Number.isInteger(raw.napRemaining)?Math.max(0,Math.min(3,raw.napRemaining)):0,peekCell:used&&kind==='peek'&&Number.isInteger(raw.peekCell)&&raw.peekCell>=0&&raw.peekCell<length?raw.peekCell:null},lastMistake:Number.isInteger(v?.lastMistake?.cell)&&v.lastMistake.cell>=0&&v.lastMistake.cell<length?{cell:v.lastMistake.cell}:null};
 }
 export function sanitize(raw){
  if(!raw||raw.version!==SCHEMA)return fresh();const p=fresh();p.completed=[...new Set((Array.isArray(raw.completed)?raw.completed:[]).filter(n=>Number.isInteger(n)&&n>=1&&n<=30))].sort((a,b)=>a-b);p.chill=raw.chill===true;p.haptics=raw.haptics!==false;p.audio=raw.audio===true;p.music=raw.music!==false;p.rockIntroSeen=raw.rockIntroSeen===true;p.rocksReached=raw.rocksReached===true;

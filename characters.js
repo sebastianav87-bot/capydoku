@@ -4,3 +4,6 @@ export const CHARACTERS={Jun:{id:'jun',name:'Jun',color:'#32417B',accessory:'Nav
 export function label(name){return CHARACTERS[name]?.name||'Jun'}
 export function sprite(name='Jun',pose='board'){return 'assets/'+CAST[(CHARACTERS[name]||CHARACTERS.Jun).id]}
 export function sceneSprite(scene){return 'assets/'+CAST[scene==='sleep'?'doze':'base']}
+
+// Board identity is independent of the starter / companion.
+export const BOARD_SPRITE='assets/generic-capy.svg';

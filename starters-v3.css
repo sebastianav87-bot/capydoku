@@ -43,3 +43,14 @@
 .celebration .reward-lily{left:50%;right:auto;top:40%;bottom:auto;margin-left:-33px}
 /* Narrow-phone QA: the Relax switch and all three oranges must remain visible. */
 @media(max-width:380px){.game:not(.solved) .daily-date{display:none}.game:not(.solved) .capy-slot{width:24px;height:24px}}
+
+/* v3.1.1: retain the original zone gradient under Peek; never tint character art red. */
+.cell.peeked{background-image:var(--zone-gradient)!important}
+.cell.bad .capy{filter:drop-shadow(0 2px 2px #0003)}
+.relax-toggle{width:132px}.relax-toggle:disabled{opacity:1;cursor:default;color:inherit;box-shadow:none}
+.relax-copy small{font-size:9px}.home-mode{display:flex;justify-content:flex-end;margin:-4px 0 8px}
+.capy-counter-total{font-size:11px;white-space:nowrap;margin-left:2px}
+.capy-slot{width:24px;height:24px}.capy-counters{gap:3px;padding:8px 5px}
+.strip.conflict-box>img{display:none}.strip.conflict-box{gap:8px}.conflict-box .message-copy{flex:1;min-width:0}
+.clear-conflicts{min-width:76px;min-height:48px;font-size:12px;line-height:1.2;padding:6px;border-radius:14px;flex-shrink:0;background:#fff3d5}
+@media(max-width:380px){.capy-slot{width:20px;height:20px}.capy-counters{gap:2px;padding:8px 4px}.relax-toggle{width:124px;padding:8px 7px;gap:5px}}
