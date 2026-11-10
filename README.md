@@ -1,6 +1,8 @@
-# Capydoku v3 — local playable PWA
+> **Current working folder: completed LOCAL v3.1 preview.** Nothing has been pushed or published. Shipped v3 remains frozen in `../app-v3-backup/` and `../capydoku-v3-runtime.tar.gz`. This batch retains the Peek/chooser fixes and restores v1-style launches, fits solved controls at both target sizes, adds single-switch A/B board sizing (constant-width B default) and adds licensed offline music. A v3.1 cache is prepared locally under the user's conditional permission; see `reports/cache-hold-v3.1.json`. Screenshot approval is still needed before any live update. Main report: `reports/ROUND-v3.1.md`; images: `reports/screenshots-v3.1/`; contact sheet: `reports/contact-sheet-v3.1.png`.
 
-No publication, repositories, accounts, payments, runtime dependencies or remote APIs. Production/live v1 was not touched.
+# Capydoku v3.1 — local playable PWA
+
+No publication, repositories, accounts, payments, runtime dependencies or remote APIs. No live deployment was touched.
 
 ## Run on this box
 
@@ -10,7 +12,7 @@ python3 -m http.server 8765 --bind 127.0.0.1
 # http://127.0.0.1:8765/
 ```
 
-Serve over localhost (not file://) for service workers. Runtime requires only a static server. All art/fonts/modules are local; the PWA precaches every essential URL atomically, then works offline. Cache is content-addressed `capydoku-v3-…`; old Capydoku caches are deleted after successful install. Use a separate origin/profile if you want to keep playing the frozen v2 independently.
+Serve over localhost (not file://) for service workers. Runtime requires only a static server. All art/fonts/modules are local; the PWA precaches every essential URL atomically, then works offline. Cache is content-addressed `capydoku-v3.1-…`; old Capydoku caches are deleted after successful install. Use a separate origin/profile if you want to keep playing the frozen v2 independently.
 
 ## Play
 
@@ -32,7 +34,7 @@ Clear a boss (10/20/30) without activating any power in that attempt to earn its
 
 ### Haptics and install
 
-Persisted Haptics toggle, default on. Legal placement **24ms**; rule break **[35,55,35]ms**; solve **[35,55,55,55,85]ms**; landing **12ms**. Drag mark/clear tick **8ms**, new changes only, throttled to ≥**70ms** between ticks. All feature-detected/caught: missing/throwing `navigator.vibrate` is silent, including iOS. Sound is optional locally synthesized WebAudio, default off.
+Persisted Haptics toggle, default on. Legal placement **32ms**; rule break **[45,60,45]ms**; solve **[45,60,70,60,105]ms**; landing **18ms**. Drag mark/clear tick **12ms**, new changes only, throttled to ≥**70ms** between ticks. All feature-detected/caught: missing/throwing `navigator.vibrate` is silent, including iOS. Sound is optional locally synthesized WebAudio, default off.
 
 iPhone/iPad install copy: **Share → Add to Home Screen** (no beforeinstallprompt dependency). Standalone detection uses Safari `navigator.standalone` OR `(display-mode: standalone)`. Safe areas use `viewport-fit=cover` and `env(safe-area-inset-*)`. Actual iPhone/S24 hardware has not been tested.
 
@@ -50,14 +52,15 @@ Daily = local calendar date + eligibility state. No rocks until campaign 21 is u
 ```sh
 python3 scripts/verify-v3.py
 TZ=America/New_York node scripts/verify-daily-v3.mjs
-python3 scripts/build-sw.py
+# Cache already prepared; accidental rebuilds are guarded.
 npm run test:unit
-npm run test:e2e
-python3 scripts/contact-sheet-v3.py
-python3 scripts/package-runtime.py --verify
+CAPYDOKU_REPORT_VERSION=v3.1 CAPYDOKU_SCREENSHOT_DIR=reports/screenshots-v3.1/regression npm run test:e2e
+python3 scripts/contact-sheet-v3.1.py
+## Optional later local packaging only (never replaces the shipped v3 tar):
+# python3 scripts/package-runtime.py --verify
 ```
 
-Playwright is a local dev dependency; runtime needs no Node packages. Tests use Chromium, touch/mobile 412×915, scale 1, America/New_York. Reports: `reports/verification.json/.md`, `proof-effort-v1-v2-v3.json/.md`, `daily-dihedral-v3.json`, `unit-v3.log`, `e2e-v3.log`, `playwright.json`, `playwright-html/`, `TEST-SUMMARY-v3.md`. Native PNGs: `reports/screenshots-v3/`, contact sheet `reports/contact-sheet-v3.png`. Runtime archive: `/workspace/capydoku/capydoku-v3-runtime.tar.gz` (runtime + docs only; development scripts/tests/reports stay in the full app folder).
+Playwright is a local dev dependency; runtime needs no Node packages. Current results: **66 unit + 69 e2e pass**, Chromium mobile/touch at 412×915, plus 360×780 sizing/end-screen cases, scale 1, America/New_York. Current reports: `reports/verification-v3.1.json/.md`, `reports/ROUND-v3.1.md`, `reports/TEST-SUMMARY-v3.1.json`, `reports/unit-v3.1.log`, `reports/e2e-v3.1.log`, `reports/playwright-v3.1.json`, `reports/playwright-html-v3.1/`. Native captures: `reports/screenshots-v3.1/`, smaller-size additions in its `360x780/` subfolder; main contact sheet `reports/contact-sheet-v3.1.png`. The existing `/workspace/capydoku/capydoku-v3-runtime.tar.gz` is the **frozen old release**, not this round. No new archive was generated. Legacy v3 reports remain historical.
 
 The campaign and both daily banks are unchanged from v2: **760 unique, pure-logic-solvable, connected-region boards**. Independent Python full-permutation oracle + JS row DFS; every logic step cross-checked. First five levels have singleton starts, no preliminary deductions. Generator remains deterministic `scripts/retune-v2.py`; `verify-v3.py` is read-only and never rewrites content.
 
@@ -67,4 +70,19 @@ v5-starters final supplied alpha cutouts and palette; mandatory dark outlines un
 
 The brief overrides notes: **Hint removed** (notes recommend keeping it); powers reset per **attempt** (not once forever per puzzle); all Relax powers default to **Peek** (notes disable defensive powers). Switching is cosmetic for board/progression, but intentionally changes an unused power as explicitly required. Full-screen mobile selector is used for switching. Jun/Remy previews use their unchanged cutouts over a CSS pond; Bloom uses supplied composed stage. The source's fixed-Doze / wearable-accessory demonstration is not added as a new campaign mechanic; no generated levels changed. Legacy earnings remain as boss decoration progress/metadata, not wearable asset compositing. All three starters are available immediately.
 
-Backups: `/workspace/capydoku/app-v1-backup/` and `/workspace/capydoku/app-v2-backup/` remain intact; non-node_modules hashes are audited in `reports/backup-integrity-v3.json`.
+Backups: `/workspace/capydoku/app-v1-backup/` and `/workspace/capydoku/app-v2-backup/` remain intact; v3 and pre-extension v3.1 snapshots also remain intact; all original non-node_modules hashes are audited in `reports/backup-integrity-v3.1.json`.
+
+## v3.1 controls, sizing, music and local cache
+
+- **One sizing switch:** `GAME_CONFIG.boardSizingMode` in `config.js`. Default **B** keeps every board at **35/36 (97.2222%)** of app width, matching the supplied reference frame ratio: board **400.55px at 412** / **350px at 360**, for all grid sizes. Minimum 5/6/7 cell widths: **73.30 / 60.58 / 51.50px** at 412; **63.19 / 52.16 / 44.28px** at 360. Mode **A** retains the earlier target 52px cells / growing 294–404px board. B deliberately restores larger 5×5 cells per the latest direction. No query/storage override. Comparison: `reports/sizing-A-vs-B.png`; exact captures in `reports/screenshots-v3.1/sizing/`; table and measurement method in `reports/ROUND-v3.1.md`. Existing 10px drag threshold, delayed 280ms tap and 70ms drag-tick throttle stay unchanged.
+- Haptics (ms): tick 12; legal 32; illegal `[45,60,45]`; solve `[45,60,70,60,105]`; each landing 18. One existing Haptics toggle controls everything. Missing/blocked APIs remain silent.
+- Restored direct upward 1.5s launches, stagger 100ms. All three supplied starter cutouts remain untouched; a CSS water-edge mask softens their lower edge on arrival. Timed rings, steam, reaction, saved oranges and pure-boss golden lily remain. Reduced motion goes straight to soaking.
+- Replay / Next pond / Hot Spring all fit without scrolling after normal, boss (including 30) and daily solves at 412×915 and 360×780. Daily's Next pond opens the next uncleared campaign pond; after campaign 30 it returns to Pond Path.
+- Music is separate from Sound effects, default on but **silent until a genuine first tap/key** on each page load. Stored `music:false` stays off, including reload. Existing v3/v2/v1 progress gets the safe new-field default without changing schema, progress, powers or streak. Sound effects off is not a master music mute: use the explicit Music toggle.
+- Three original CC0 recordings rotate locally: Alex McCulloch's *Flute and Guitar*, Spring Spring's *Minimalistic Flute & Strings Tune*, Indieteur's *Revelation*. Source/license evidence and sizes: `assets/music/LICENSES.md`, `reports/music-v3.1.json`. All credits are also in Settings → Music credits.
+- Low Web Audio gain 0.14, Relax 0.085; 800ms fade-in, 240ms toggle fade-out. Hidden tabs pause immediately (no delayed background sound). Rotation wraps to the first track. No external media requests, accounts, fees or runtime APIs. HTML media respects its muted flag; controller also supports explicit mute. Platform audio interruptions remain subject to browser/OS policy.
+- Opus 40kbps plus MP3 64kbps fallback; 4,987,618 combined audio bytes. Older Safari selects MP3; decode failure tries MP3 once. All six files are precached. The service worker supports single-byte-range audio responses offline for iPhone seeking.
+- `python3 scripts/build-sw.py` is guarded against accidental further cache rebuilds. A deliberate new runtime change needs `--bump-cache`, updated audit hashes and the full tests again. No deployment is authorized by this local preparation.
+- Full commands/results: `reports/ROUND-v3.1.md`, `reports/unit-v3.1.log`, `reports/e2e-v3.1.log`, `reports/TEST-SUMMARY-v3.1.json`. Independent verification is unchanged-content `reports/verification-v3.1.json/.md`.
+
+Real iPhone/S24, physical vibration/audio quality and subjective Timberborn-like mood remain human/device checks. v6 exists but was not marked approved, so it was not integrated. No v3.1 archive is requested or generated in this round; the packaging helper now targets a separate v3.1 filename if used later.

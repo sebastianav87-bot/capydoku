@@ -1,5 +1,5 @@
 /* No dependencies, no network, no hidden solution table. */
-export const SCHEMA=3, KEY='capydoku.progress.v3', V2_KEY='capydoku.progress.v2', LEGACY_KEY='capydoku.progress.v1', DOUBLE_TAP_MS=280, DRAG_THRESHOLD=10, DRAG_TICK_MS=8, DRAG_TICK_GAP=70;
+export const SCHEMA=3, KEY='capydoku.progress.v3', V2_KEY='capydoku.progress.v2', LEGACY_KEY='capydoku.progress.v1', DOUBLE_TAP_MS=280, DRAG_THRESHOLD=10, DRAG_TICK_MS=12, DRAG_TICK_GAP=70;
 export function peers(p,a,b){const n=p.n,ar=Math.floor(a/n),br=Math.floor(b/n),ac=a%n,bc=b%n;return a!==b&&(ar===br||ac===bc||p.zones[a]===p.zones[b]||Math.max(Math.abs(ar-br),Math.abs(ac-bc))<=1)}
 export function violations(p,cells){const capys=cells.map((v,i)=>v===2?i:-1).filter(i=>i>=0),bad=new Set();for(const a of capys){if(p.rocks.includes(a))bad.add(a);for(const b of capys)if(peers(p,a,b)){bad.add(a);bad.add(b)}}return bad}
 export function solved(p,cells){return cells.filter(v=>v===2).length===p.n&&violations(p,cells).size===0&&!p.rocks.some(i=>cells[i]===2)}
@@ -47,13 +47,13 @@ export function dailyPuzzle(data,d=new Date(),eligible=false){
  function trans(i){let r=Math.floor(i/n),c=i%n;if(variant&4)c=n-1-c;for(let k=0;k<(variant%4);k++)[r,c]=[c,n-1-r];return r*n+c}
  const zones=Array(n*n);p.zones.forEach((z,i)=>zones[trans(i)]=z);return{...p,zones,rocks:p.rocks.map(trans).sort((a,b)=>a-b),id:`daily-${dateKey(d)}-${eligible?'rocks':'safe'}`,date:dateKey(d),day};
 }
-export function fresh(){return{version:SCHEMA,completed:[],selected:'Jun',starterChosen:false,goldenLilies:[],legacySelected:null,chill:false,haptics:true,audio:false,rockIntroSeen:false,rocksReached:false,daily:{lastDay:null,streak:0},sessions:{}}}
+export function fresh(){return{version:SCHEMA,completed:[],selected:'Jun',starterChosen:false,goldenLilies:[],legacySelected:null,chill:false,haptics:true,audio:false,music:true,rockIntroSeen:false,rocksReached:false,daily:{lastDay:null,streak:0},sessions:{}}}
 export function cleanAttempt(v,length){
  const raw=v?.power??{},used=raw.used===true,kind=['peek','secondChance','nap'].includes(raw.kind)?raw.kind:null;
  return{power:{used,kind,napRemaining:used&&kind==='nap'&&Number.isInteger(raw.napRemaining)?Math.max(0,Math.min(3,raw.napRemaining)):0,peekCell:used&&kind==='peek'&&Number.isInteger(raw.peekCell)&&raw.peekCell>=0&&raw.peekCell<length?raw.peekCell:null},lastMistake:Number.isInteger(v?.lastMistake?.cell)&&v.lastMistake.cell>=0&&v.lastMistake.cell<length?{cell:v.lastMistake.cell}:null};
 }
 export function sanitize(raw){
- if(!raw||raw.version!==SCHEMA)return fresh();const p=fresh();p.completed=[...new Set((Array.isArray(raw.completed)?raw.completed:[]).filter(n=>Number.isInteger(n)&&n>=1&&n<=30))].sort((a,b)=>a-b);p.chill=raw.chill===true;p.haptics=raw.haptics!==false;p.audio=raw.audio===true;p.rockIntroSeen=raw.rockIntroSeen===true;p.rocksReached=raw.rocksReached===true;
+ if(!raw||raw.version!==SCHEMA)return fresh();const p=fresh();p.completed=[...new Set((Array.isArray(raw.completed)?raw.completed:[]).filter(n=>Number.isInteger(n)&&n>=1&&n<=30))].sort((a,b)=>a-b);p.chill=raw.chill===true;p.haptics=raw.haptics!==false;p.audio=raw.audio===true;p.music=raw.music!==false;p.rockIntroSeen=raw.rockIntroSeen===true;p.rocksReached=raw.rocksReached===true;
  p.selected=['Jun','Bloom','Remy'].includes(raw.selected)?raw.selected:'Jun';p.starterChosen=raw.starterChosen===true;
  p.goldenLilies=[...new Set((Array.isArray(raw.goldenLilies)?raw.goldenLilies:[]).filter(id=>[10,20,30].includes(id)&&p.completed.includes(id)))];
  p.legacySelected=['Classic','Beanie','Orange','Duck'].includes(raw.legacySelected)?raw.legacySelected:null;
@@ -65,7 +65,7 @@ export function migrateV2(raw){return sanitize({...raw,version:SCHEMA,selected:(
 export function boardSignature(p){return `${p.n}|${p.zones.join('')}|${[...p.rocks].sort((a,b)=>a-b).join(',')}`}
 export function rocksUnlocked(p){return p.rocksReached||unlocked(p)>=21||p.completed.some(n=>n>=21)}
 export function migrateV1(raw,data){
- const p=migrateV2({...raw,haptics:true,audio:false,rockIntroSeen:false,rocksReached:false});p.sessions={};
+ const p=migrateV2({...raw,haptics:true,audio:false,music:true,rockIntroSeen:false,rocksReached:false});p.sessions={};
  p.rocksReached=rocksUnlocked(p);
  // Only 21–30 are unchanged; all retuned and legacy daily partial boards start fresh.
  if(data)for(const [key,v]of Object.entries(raw.sessions??{})){
@@ -90,5 +90,5 @@ export function move(p,state,i,value,chill){if(p.rocks.includes(i)||state.lives=
 
 // Pure mark painter: never changes rocks/capys and is idempotent within a gesture.
 export function paintMark(p,cells,i,value){if(!Number.isInteger(i)||i<0||i>=cells.length||p.rocks.includes(i)||cells[i]===2||cells[i]===value||![0,1].includes(value))return cells;const next=[...cells];next[i]=value;return next}
-export const HAPTICS={legal:24,illegal:[35,55,35],solve:[35,55,55,55,85],tick:DRAG_TICK_MS,splash:12};
+export const HAPTICS={legal:32,illegal:[45,60,45],solve:[45,60,70,60,105],tick:DRAG_TICK_MS,splash:18};
 export function vibrate(kind,enabled=true,nav=globalThis.navigator){if(!enabled||typeof nav?.vibrate!=='function')return false;try{return nav.vibrate(HAPTICS[kind])!==false}catch{return false}}
