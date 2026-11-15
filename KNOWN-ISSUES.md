@@ -1,4 +1,14 @@
-# Known issues / honest limits — local v4
+# Known issues / honest limits — local v4.1 (adds to the v4 list below)
+
+- Haptic strength is measured only as mocked `navigator.vibrate` patterns in Chromium; how strong it feels on a real Android phone is unverified. iOS Safari has no Vibration API, so iPhone gets no haptics (documented in `config.js`).
+- The difficulty score is a structural deduction measure (techniques and step counts), not timed human playtests.
+- Locks are permanent for the attempt. Replay starts a fresh, empty board. A rule-breaking placement still costs one orange even when the new capy is correct (v4 rule kept). The capy still locks, and Clear conflicts / Second chance remove the unlocked capy it clashes with.
+- In-progress boards for ponds whose board changed in v4.1 (6–20 and 22–30) are dropped once on update, and a toast says so. Cleared ponds, lilies, golden lilies, Hot Spring, nickname, starter and streak are kept.
+- The illustrated map is gone from the flow. `assets/v6/map-painted.jpg` stays on disk (HTTP 200 for old v4 clients) but is no longer precached. The boss SVGs are still used on the boss transition screen.
+- The "lost first tap after a drag" fix is for a Chromium touch behavior seen in emulation. Real-device touch timing is unverified.
+- The "Back to Pond Path" label stays in the frozen v3.1.3/v4 handoff tests, because those versions still use it.
+
+## v4 list
 
 - No known failing automated test is being accepted as a release exception; authoritative results are in `reports/TEST-SUMMARY-v4.json`. Real Galaxy S24, iPhone/Safari/WebKit, physical haptics, notches, OS install prompts and hardware audio/mute behavior are **unverified**. Tests use Chromium mobile/touch at412×915 and360×780, plus mocked iOS values and density3 asset selection.
 - Progress is localStorage only. Browser eviction/site-data deletion can erase it; no sync/account/export UI. Future schemas are read-only. Old Relax attempts intentionally restart empty/full lives; explicit normal attempts and all earned progress/streak survive. Archival v1/v2 keys remain untouched but are not active saves.

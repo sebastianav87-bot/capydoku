@@ -5,3 +5,10 @@
 .cell.hint-source{outline:2px dashed #fff3b3;outline-offset:-8px}.cell.hint-excluded:after{content:'−';position:absolute;width:20px;height:20px;border:2px solid #5a655b;border-radius:50%;background:#eef0dccc;color:#4a5548;font-size:17px;line-height:15px;z-index:4}
 
 .solved .cell.vacated:after{content:'✓';position:absolute;inset:0;display:grid;place-items:center;color:#45554f66;font-size:24px;font-weight:800;pointer-events:none}
+
+/* Correct placements remain part of this attempt, never an Undo target. */
+.cell.capy-locked{box-shadow:inset 0 0 0 2px #fff1a8,inset 0 0 12px 1px #ffe58acc}
+.lock-badge{position:absolute;right:3px;bottom:3px;width:14px;height:14px;border-radius:50%;background:#fff6c8;pointer-events:none;border:1px solid #a89256;display:grid;place-items:center;z-index:3}.lock-badge svg{width:9px;height:9px;fill:none;stroke:#695437;stroke-width:2.4;stroke-linecap:round}
+.cell.locked-bump .capy{animation:locked-bump .28s ease-out}
+@keyframes locked-bump{0%,100%{transform:scale(1)}40%{transform:scale(1.13) translateY(-2px)}}
+@media(prefers-reduced-motion:reduce){.cell.locked-bump .capy{animation:none}.cell.locked-bump{outline:2px solid #b7a25d;outline-offset:-3px}}

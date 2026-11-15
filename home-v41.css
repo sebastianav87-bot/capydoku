@@ -1,0 +1,51 @@
+/* v4.1: plain home (Continue · Daily · pond list) and the "Next pond" transition screen. No illustrated path. */
+.home.home-v41{background:linear-gradient(#FBF5E5,#F1EBD6 55%,#E6E8D2)}
+.home-v41 .content{padding:14px 0 0;height:100%;display:flex;flex-direction:column}
+.home-v41 .home-scroll{flex:1;overflow-y:auto;overscroll-behavior:contain;padding:2px 0 96px;-webkit-overflow-scrolling:touch}
+.continue-card{display:flex;align-items:center;gap:12px;margin:6px 18px 4px;width:calc(100% - 36px);min-height:104px;padding:12px 16px;border-radius:22px;border:0;text-align:left;color:#fff;background:linear-gradient(160deg,#7FB27E,#4F8A58);box-shadow:0 6px 14px #3d5f4140}
+.continue-card.boss{background:linear-gradient(160deg,#C9A24F,#8E6A2C)}
+.continue-capy{width:68px;height:68px;object-fit:contain;flex-shrink:0;filter:drop-shadow(0 2px 3px #0003)}
+.continue-copy{display:flex;flex-direction:column;flex:1;min-width:0}
+.continue-copy small{font-size:12px;font-weight:700;opacity:.9}
+.continue-copy strong{font-size:25px;line-height:1.15;font-weight:800}
+.continue-copy em{font-style:normal;font-size:12.5px;font-weight:700;opacity:.92}
+.continue-go{width:46px;height:46px;border-radius:50%;background:#ffffff33;display:grid;place-items:center;font-size:19px;flex-shrink:0}
+.home-v41 .daily{margin:10px 18px 6px;width:calc(100% - 36px)}
+.pond-list{padding:4px 18px 0}
+.pond-list-title{font-size:13px;font-weight:800;color:#5d6b57;margin:10px 2px 6px}
+.pond-world{margin:0 0 12px}
+.pond-world h3{display:flex;justify-content:space-between;align-items:baseline;font-size:15px;font-weight:800;color:#4a5f47;margin:0 2px 6px}
+.pond-world h3 small{font-size:11.5px;font-weight:700;color:#7a8670}
+.pond-tiles{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}
+.pond-tile{position:relative;min-height:56px;height:56px;padding:5px 2px 4px;border-radius:15px;border:1px solid #BFC7A6;background:#FCF7E7;display:flex;flex-direction:column;align-items:center;justify-content:space-between;color:#4c5f48}
+.pond-tile .tile-num{font-size:17px;font-weight:800;line-height:1.1;display:flex;align-items:center;gap:2px}
+.pond-tile .tile-crown{font-style:normal;font-size:12px;color:#a27a2c}
+.pond-tile.done{background:#E6EFD6;border-color:#9DB884}
+.pond-tile.current{background:#fff;border:2px solid #5E9A63;box-shadow:0 0 0 3px #5e9a6326}
+.pond-tile.boss{border-color:#C9A24F;background:#FBF0D5}
+.pond-tile.boss.current{border-color:#B48A35;box-shadow:0 0 0 3px #b48a3530}
+.pond-tile.locked{opacity:.5;background:#EFEBDD}
+.pond-tile .tile-lilies{display:flex;gap:1px;height:13px;margin:0;padding:0;border:0;background:none}
+.pond-tile .tile-lilies img{width:13px;height:13px}
+.pond-tile .tile-golden{width:15px;height:15px}
+/* Transition */
+.transition{background:linear-gradient(#FBF5E5,#EEF0DC)}
+.transition-card{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px 22px calc(28px + env(safe-area-inset-bottom));gap:8px}
+.transition-kicker{font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#6e8a63}
+.transition h1{font-size:38px;line-height:1.1;margin:0;color:#3f513e}
+.boss-transition h1{color:#7a5a1f}
+.transition-world{margin:0;font-weight:800;color:#5d6b57;font-size:15px}
+.transition-capy{width:150px;height:150px;object-fit:contain;margin:8px 0}
+.transition-boss{width:170px;height:170px;object-fit:contain;margin:4px 0}
+.boss-info{background:#FBF0D5;border:1px solid #D7B56A;border-radius:16px;padding:10px 14px;display:flex;flex-direction:column;gap:3px;max-width:330px}
+.boss-info strong{font-size:14px;color:#6b4e18}.boss-info small{font-size:12.5px;line-height:1.4;color:#6b5a3b}
+.transition-note{margin:0;font-size:13px;color:#5d6b57;font-weight:700;line-height:1.4}
+.transition-lilies{width:100%;max-width:360px;background:#fffdf5;border:1px solid #C9CFB1;border-radius:18px;padding:10px 8px;margin:6px 0}
+.transition-lilies>strong{display:block;font-size:13px;margin-bottom:6px}
+.transition-card button{width:100%;max-width:360px;min-height:52px;border-radius:18px;font-weight:800}
+.transition-card button.primary{min-height:60px;font-size:18px}
+.replay-pond-link{width:100%;min-height:46px;margin:8px 0;border-radius:14px}
+.rock-callout{width:248px}.rock-callout p{font-size:12.5px;line-height:1.45}
+.rock-callout.above .rock-arrow{top:auto;bottom:-8px;transform:rotate(225deg)}
+.rules-summary p.rock-rule{font-size:12px;line-height:1.45;font-weight:700;color:#5f6f55}.rules-summary p.rock-rule strong{font-size:12px}
+.transition-lilies small{display:none}.transition-lilies .lily-condition strong{font-size:12.5px}

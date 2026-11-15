@@ -1,3 +1,9 @@
+# Capydoku v4.1 — local-only playable PWA (not published)
+
+**v4.1 changes:** correct capys lock (subtle glow + padlock, bump + light haptic on tap, no penalty); one stronger haptic config in `config.js`; a measured difficulty ramp per world with breathers after bosses (`reports/DIFFICULTY-v4.1.md`); rock fixes and clearer rock copy; the illustrated Pond Path map is replaced by a simple home (Continue · Daily · all ponds) and a "Next pond" transition screen after each solve. Full write-up: `reports/ROUND-v4.1.md`. iOS Safari has no Vibration API, so haptics are Android/Chromium only.
+
+---
+
 # Capydoku v4 — local-only playable PWA
 
 Approved v6 + v6.1 + v6.2 + v6.3 + v6.4 + v6.5 illustrated world map, illustrated generic board pieces, pictogram rules, companion powers, a growing Hot Spring and a replayable touch tutorial. No publication, repository creation, accounts, fees, remote APIs or runtime CDN. The Producer owns any later deployment; screenshot review comes first.
