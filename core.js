@@ -1,7 +1,8 @@
 import { HAPTIC_CONFIG } from "./config.js";
-import { cleanMetrics, cleanLilies } from "./rewards.js";
+import { cleanMetrics, cleanLilies, emptyLilies } from "./rewards.js";
 import { nickname } from "./profile.js";
 import { cleanBonus } from "./crates.js";
+import { BOSS_PONDS, GOLDEN_REMAP, isCrate } from "./roles.js";
 /* No dependencies, no network, no hidden solution table. */
 export const SCHEMA = 3,
   KEY = "capydoku.progress.v3",
@@ -203,6 +204,8 @@ export function fresh() {
     // v4.2 crate bonus (additive, still storage schema 3 so a v4.1 rollback keeps all progress): solved bonus levels,
     // best moves, the one pending spare orange, D-pad preference and whether the controls card was seen.
     bonus: cleanBonus(null),
+    // v4.3 pond layout: 2 = crate ponds at 5/10/15/20/25/30, bosses at 9/19/29. Missing/1 = the v4.2 layout (one-time migration).
+    layout: 2,
   };
 }
 export function cleanAttempt(v, length) {
@@ -258,9 +261,12 @@ export function sanitize(raw) {
   p.tutorialSeen = raw.tutorialSeen === true || (raw.tutorialSeen === undefined && p.completed.includes(1));
   p.selected = ["Jun", "Bloom", "Remy"].includes(raw.selected) ? raw.selected : "Jun";
   p.starterChosen = raw.starterChosen === true;
+  // Golden lilies sit on the boss ids of the layout the save was written in (v4.2: 10/20/30, v4.3: 9/19/29).
+  p.layout = raw.layout === 2 ? 2 : 1;
+  const bossIds = p.layout === 2 ? BOSS_PONDS : [10, 20, 30];
   p.goldenLilies = [
     ...new Set(
-      (Array.isArray(raw.goldenLilies) ? raw.goldenLilies : []).filter((id) => [10, 20, 30].includes(id) && p.completed.includes(id)),
+      (Array.isArray(raw.goldenLilies) ? raw.goldenLilies : []).filter((id) => bossIds.includes(id) && p.completed.includes(id)),
     ),
   ];
   p.bonus = cleanBonus(raw.bonus);
@@ -272,7 +278,7 @@ export function sanitize(raw) {
       if (
         !legacyRelaxAttempt(raw, v) &&
         /^(pond-([1-9]|[12][0-9]|30)|daily-\d{4}-\d{2}-\d{2}-(safe|rocks))$/.test(key) &&
-        [25, 36, 49].includes(v?.cells?.length) &&
+        [25, 36, 49, 64, 81, 100].includes(v?.cells?.length) &&
         v.cells.every((x) => [0, 1, 2].includes(x)) &&
         Number.isInteger(v.lives) &&
         v.lives >= 0 &&
@@ -332,10 +338,12 @@ export function load(storage, data = null) {
     if (raw) {
       const progress = sanitize(raw),
         readOnly = raw.version !== SCHEMA,
+        layoutMigration = readOnly ? { changed: false } : migrateLayout(progress),
         contentMigration = readOnly ? { dropped: [], upgraded: [] } : migrateCampaign(progress, data),
         migrated =
           !readOnly &&
-          (contentMigration.dropped.length > 0 ||
+          (layoutMigration.changed ||
+            contentMigration.dropped.length > 0 ||
             contentMigration.upgraded.length > 0 ||
             ["chill", "relax"].some((k) => Object.hasOwn(raw, k)) ||
             Object.values(raw.sessions ?? {}).some(
@@ -354,12 +362,13 @@ export function load(storage, data = null) {
         try {
           storage.setItem(KEY, JSON.stringify(progress));
         } catch {}
-      return { progress, readOnly, error, migrated, contentMigration, bonusMigrated };
+      return { progress, readOnly, error, migrated, contentMigration, bonusMigrated, layoutMigration };
     }
     const v2 = JSON.parse(storage.getItem(V2_KEY) || "null"),
       old = v2?.version === 2 ? v2 : JSON.parse(storage.getItem(LEGACY_KEY) || "null");
     if (old?.version === 1 || old?.version === 2) {
       const progress = old.version === 1 ? migrateV1(old, data) : migrateV2(old);
+      const layoutMigration = migrateLayout(progress);
       const contentMigration = migrateCampaign(progress, data);
       let error = null;
       try {
@@ -367,7 +376,7 @@ export function load(storage, data = null) {
       } catch {
         error = "Progress migration is in memory only; storage is unavailable.";
       }
-      return { progress, readOnly: false, error, migrated: true, contentMigration };
+      return { progress, readOnly: false, error, migrated: true, contentMigration, layoutMigration };
     }
     return { progress: fresh(), readOnly: false, error: null, migrated: false };
   } catch {
@@ -407,12 +416,25 @@ export function move(p, state, i, value, protectedMove = false) {
     ![0, 1, 2].includes(value)
   )
     return state;
+  // v4.3 rev b (Producer decision, Nov 15): every board has a unique solution, so a capy on a cell that is not in it
+  // is a mistake right away. It costs one orange (Nap: none; the spare orange absorbs it first, in attemptMove), it is
+  // counted as a mistake, and it is REJECTED: the cell keeps what it had (empty or ×). Only correct capys stay, so
+  // the board can never hold a wrong capy and can never reach a "no legal cell left in a zone" dead end.
+  const sol = solutionCells(p);
+  if (value === 2 && sol.length && !sol.includes(i))
+    return { cells: [...state.cells], lives: Math.max(0, state.lives - (protectedMove ? 0 : 1)), rejected: i };
   const cells = [...state.cells];
   cells[i] = value;
-  // v4 rule kept: any placement that breaks a rule costs one orange, even when the new capy is correct
-  // (it still locks; Clear conflicts then removes only the unlocked offender).
-  const loss = value === 2 && violations(p, cells).has(i) && !protectedMove ? 1 : 0;
+  // Fallback for a board without a unique solution (never shipped): the old rule-break check.
+  const loss = !sol.length && value === 2 && violations(p, cells).has(i) && !protectedMove ? 1 : 0;
   return { cells, lives: Math.max(0, state.lives - loss) };
+}
+// v4.3 rev b: boards saved before the rule could hold unlocked wrong capys. They are dropped when the pond is resumed
+// (no orange or mistake change), so an old save cannot carry a dead end forward.
+export function dropWrongCapys(p, s) {
+  const sol = solutionCells(p);
+  if (!sol.length || !s.cells.some((v, i) => v === 2 && !sol.includes(i))) return s;
+  return { ...s, cells: s.cells.map((v, i) => (v === 2 && !sol.includes(i) ? 0 : v)) };
 }
 
 // Pure mark painter: never changes rocks/capys and is idempotent within a gesture.
@@ -461,6 +483,40 @@ export function withLocks(p, s) {
   const locked = solutionCells(p).filter((i) => s.cells[i] === 2);
   return { ...s, locked };
 }
+/* v4.3 one-time layout migration (layout 1 → 2). Nothing is ever removed: completions and lilies stay by pond id
+ * (lilies on 5/10/15/20/25/30 now count as crate-pond lilies), golden lilies move 10→9, 20→19, 30→29 (the boss is
+ * marked cleared if needed), Crate Cove 3 / Crate Cove 5 solves clear ponds 10 / 20 with their best moves (Par lily
+ * when best ≤ par; Clean run is never inferred from history). Crate Cove 1 stays in bonus.legacy. Idempotent. */
+// Pars follow the one v4.3 rule (optimal moves × 1.45, nearest 5): Crate Cove 3 = 30 moves → 45, Crate Cove 5 = 57 → 85.
+export const LEGACY_CRATES = Object.freeze({ 2: { pond: 10, par: 45 }, 3: { pond: 20, par: 85 } });
+export function migrateLayout(p) {
+  if (p.layout === 2) return { changed: false, golden: [], crates: [] };
+  const lily = (id) => (p.lilies[id] = { ...emptyLilies(), ...p.lilies[id] }),
+    complete = (id) => {
+      if (!p.completed.includes(id)) p.completed = [...p.completed, id].sort((a, b) => a - b);
+      lily(id).cleared = true;
+    },
+    golden = [],
+    crates = [];
+  p.goldenLilies = [...new Set(p.goldenLilies.map((id) => GOLDEN_REMAP[id] ?? id))].filter((id) => BOSS_PONDS.includes(id));
+  for (const id of p.goldenLilies) {
+    complete(id);
+    golden.push(id);
+  }
+  const leg = p.bonus?.legacy;
+  for (const [lv, { pond, par }] of Object.entries(LEGACY_CRATES)) {
+    if (!leg?.solved.includes(Number(lv))) continue;
+    complete(pond);
+    const best = leg.best[lv];
+    if (Number.isInteger(best)) {
+      p.bonus.best[pond] = Math.min(p.bonus.best[pond] ?? Infinity, best);
+      if (best <= par) lily(pond).underTarget = true;
+    }
+    crates.push(pond);
+  }
+  p.layout = 2;
+  return { changed: true, golden, crates };
+}
 export function migrateCampaign(progress, data) {
   const dropped = [],
     upgraded = [];
@@ -469,7 +525,7 @@ export function migrateCampaign(progress, data) {
     const id = /^pond-(\d+)$/.exec(k),
       p = id ? data.levels[Number(id[1]) - 1] : null;
     if (!p) continue;
-    if (s.signature !== boardSignature(p)) {
+    if (p.crate || isCrate(Number(id[1])) || s.cells.length !== p.n * p.n || s.signature !== boardSignature(p)) {
       delete progress.sessions[k];
       dropped.push(Number(id[1]));
       continue;

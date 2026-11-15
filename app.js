@@ -22,6 +22,7 @@ import {
   ruleCards,
   powerIcon,
   navHTML,
+  navIcon,
   springScene,
   switchHTML,
   starterCards,
@@ -70,6 +71,7 @@ import {
   cleanAttempt,
   isLocked,
   withLocks,
+  dropWrongCapys,
   solutionCells,
 } from "./core.js";
 import {
@@ -81,18 +83,18 @@ import {
   attemptMove,
   undoAttempt,
   undoChanges,
-  clearConflicts,
   needsPowerIntro,
   rememberPowerIntro,
   awardPureBoss,
 } from "./powers.js";
 import { installCopy, isStandalone, isIOS } from "./platform.js";
-import { createBonus } from "./bonus-ui.js";
+import { createBonus, crateLilyDetails } from "./bonus-ui.js";
+import { isBoss, isCrate, isGate, role, pondLabel, worldOf, GATE_PONDS, FINALE_POND, BREATHER_PONDS } from "./roles.js";
 import { claimSpare } from "./crates.js";
 const root = document.querySelector("#app"),
   storage = { getItem: (k) => localStorage.getItem(k), setItem: (k, v) => localStorage.setItem(k, v) };
 const clock = new AttemptClock();
-// v4.2 optional crate bonus (offered on the transition after ponds 5, 15, 25).
+// v4.3 crate ponds (5/10/15/20/25/30) are part of the main path; this module plays them.
 const bonus = createBonus({
   root,
   shell: (cls, inner) => shell(cls, inner),
@@ -115,8 +117,8 @@ const bonus = createBonus({
   getView: () => view,
   setModal: (m) => (modal = m),
   getModal: () => modal,
-  leave: (id, from) => transition(id, from),
-  continueTo: (id) => start(id),
+  leave: () => home(),
+  continueTo: (id) => transition(id || null, null),
 });
 let versionNotice = null,
   nicknameEditing = false,
@@ -156,6 +158,7 @@ let data,
   gesture = null,
   controlTap = null,
   cellTap = null,
+  recentTaps = [],
   lastDragPointer = -1,
   lastDragTick = -Infinity,
   modal = null,
@@ -194,9 +197,6 @@ function saveRound() {
 function shell(cls, inner) {
   root.innerHTML = `<section class="screen ${cls}">${inner}<div class="art-tag">AI illustration</div>${warning ? `<div class="persistent-warning" role="status">${warning}</div>` : ""}</section>`;
 }
-function nav(active) {
-  return navHTML(active);
-}
 function capyBadge(where = "home") {
   return `<button class="capy-badge ${where === "game" ? "mini" : ""}" data-action="switchCapy" aria-label="Switch capy"><img src="${sprite(progress.selected)}" alt="">${where !== "game" ? `<span><strong>${progress.selected}</strong><small>${where === "collection" ? "Tap to switch" : "Your capy"}</small></span>` : ""}<b aria-hidden="true">⇄</b></button>`;
 }
@@ -217,7 +217,7 @@ function chooser(first = false) {
   view = "choose";
   shell(
     "chooser first-chooser",
-    `<h1>Choose your capy</h1><p class="chooser-sub">A friend with a little power</p><div class="starter-cards">${starterCards(chooserDraft, null, true)}</div><p class="switch-anytime">Switch anytime in Home or Hot Spring</p><button class="primary chooser-confirm" data-action="confirmCapy">Start with ${chooserDraft}</button>`,
+    `<h1>Choose your capy</h1><p class="chooser-sub">A friend with a little power</p><div class="starter-cards">${starterCards(chooserDraft, null, true)}</div><p class="switch-anytime">Switch anytime with ⇄ or in the Hot Spring</p><button class="primary chooser-confirm" data-action="confirmCapy">Start with ${chooserDraft}</button>`,
   );
 }
 
@@ -242,103 +242,103 @@ function confirmCapy() {
     } else if (state.lives === 0) gameOver();
   }
 }
+// v4.3 rev b: there is no pond grid any more. "Home" IS the current pond's "Next pond" screen (the hub):
+// level, world, grid size and Start, with Daily as a secondary button and Hot Spring / Settings as header icons.
+// Replaying cleared ponds lives only in Settings › Progress.
+const HUB_KEY = "capydoku.hub";
+function rememberHub(on) {
+  try {
+    if (on) sessionStorage.setItem(HUB_KEY, "1");
+    else sessionStorage.removeItem(HUB_KEY);
+  } catch {}
+}
+function inProgress(id) {
+  if (!id || isCrate(id)) return false;
+  const q = data.levels[id - 1],
+    saved = progress.sessions[`pond-${id}`];
+  return !!(q && saved?.cells?.some(Boolean) && saved.signature === boardSignature(q) && saved.cells.length === q.n * q.n && !solved(q, saved.cells) && saved.lives > 0);
+}
+function currentPond() {
+  return progress.completed.length >= 30 ? null : unlocked(progress);
+}
+// App launch: straight back into a pond that is in progress, otherwise the current pond's transition screen.
+// (A reload while on the hub — e.g. an auto-update — stays on the hub.)
+function launch() {
+  let onHub = false;
+  try {
+    onHub = sessionStorage.getItem(HUB_KEY) === "1";
+  } catch {}
+  const next = currentPond();
+  if (!onHub && inProgress(next)) start(next);
+  else home();
+}
 function home() {
   bonus.stop();
-  clock.pause();
   if (view === "game" && state && puzzle && !tutorial?.replay) saveRound();
+  transition(currentPond());
+}
+function hubBar() {
+  const n = totalLilies(progress), g = progress.goldenLilies.length;
+  return `<header class="hub-bar"><div class="hub-brand"><strong>Capydoku</strong><span class="map-lily-total lily-chip" aria-label="${n} of 90 lilies, ${g} golden">${lilyImg(true)}${n}/90</span></div><div class="hub-icons">${navHTML(null, ["settings"])}</div></header>`;
+}
+// Designer home-start-A: Daily and Hot Spring as two tiles under the primary button.
+function dailyButton() {
+  const streak = streakAt(progress, calendarDay());
+  return `<button class="hub-tile hub-daily" data-action="daily" aria-label="Daily Pond · ${streak}-day streak">${navIcon("daily")}<span><strong>Daily</strong><small>◕ ${streak}-day streak</small></span></button>`;
+}
+function hubTiles() {
+  return `<div class="hub-tiles">${dailyButton()}<button class="hub-tile hub-spring" data-action="collection" aria-label="Hot Spring">${navIcon("collection")}<span><strong>Hot Spring</strong><small>${Object.keys(CHARACTERS).length} capys</small></span></button></div>`;
+}
+function hubCapy() {
+  return `<div class="capy-wrap"><img class="transition-capy" src="${sprite(progress.selected, "portrait")}" alt=""><button class="capy-swap" data-action="switchCapy" aria-label="Switch capy">⇄</button></div>`;
+}
+// The "Next pond" transition (= the hub). Variants: normal, boss, new-world breather, crate, gate, finale and all-clear.
+function transition(id) {
+  bonus.stop();
   clock.pause();
   cancelTap();
   tutorial = null;
   roundToken++;
-  view = "home";
   modal = null;
-  const next = unlocked(progress),
-    allDone = progress.completed.length >= 30,
-    streak = streakAt(progress, calendarDay()),
-    q = data.levels[next - 1],
-    boss = next % 10 === 0,
-    world = WORLDS[Math.floor((next - 1) / 10)],
-    saved = progress.sessions[`pond-${next}`],
-    resume = !allDone && saved?.cells?.some(Boolean) && saved.signature === boardSignature(q) && !solved(q, saved.cells) && saved.lives > 0;
-  // v4.1: no illustrated path. Home = Continue + Daily + a plain pond list (replay for lilies).
-  const tiles = WORLDS.map((w, k) => {
-    const ids = Array.from({ length: 10 }, (_, i) => k * 10 + i + 1),
-      count = ids.reduce((a, id) => a + lilyCount(progress.lilies[id]), 0);
-    return `<section class="pond-world" aria-label="${w}"><h3>${w}<small>${count}/30 lilies</small></h3><div class="pond-tiles">${ids
-      .map((i) => {
-        const b = i % 10 === 0,
-          done = progress.completed.includes(i),
-          lock = i > next && !done;
-        return `<button class="pond-tile ${b ? "boss " : ""}${done ? "done" : lock ? "locked" : "current"}" data-pond="${i}" ${b ? `data-boss-state="${bossState(progress, i)}"` : ""} aria-label="${b ? "Boss " : ""}Pond ${i}${done ? ", cleared" : ""}" ${lock ? "disabled" : ""}><span class="tile-num">${b ? (progress.goldenLilies.includes(i) ? '<img class="tile-golden" src="assets/v65/lily-golden.svg" alt="Golden lily earned">' : '<i class="tile-crown" aria-hidden="true">♛</i>') : ""}${i}</span>${lilyRow(progress.lilies[i], "tile-lilies")}</button>`;
-      })
-      .join("")}</div></section>`;
-  }).join("");
+  view = "home";
+  rememberHub(true);
+  if (!id || id > 30) {
+    shell(
+      "transition hub all-clear",
+      `${hubBar()}<div class="transition-card"><small class="transition-kicker">Every pond cleared</small><h1>All 30 ponds ✓</h1><p>${totalLilies(progress)}/90 lilies · ${progress.goldenLilies.length}/3 golden</p><p class="transition-note">Replay any pond for more lilies in<br>Settings › Your pond collection.</p>${hubTiles()}</div>`,
+    );
+    showVersionNotice();
+    return;
+  }
+  const q = data.levels[id - 1],
+    boss = isBoss(id),
+    k = worldOf(id),
+    newWorld = BREATHER_PONDS.includes(id),
+    r = progress.lilies[id] || emptyLilies(),
+    bs = boss ? bossState(progress, id) : "",
+    spare = progress.bonus.spare?.forPond === id,
+    resume = inProgress(id);
+  if (isCrate(id)) {
+    crateTransition(id, k, r);
+    showVersionNotice();
+    return;
+  }
   shell(
-    "home home-v41",
-    `<div class="content"><header class="home-header"><div class="brand"><h1>Capydoku</h1><p class="map-lily-total">${lilyImg(true)} ${totalLilies(progress)}/90 lilies · ${progress.goldenLilies.length} golden</p></div>${capyBadge()}</header><div class="home-scroll"><button class="continue-card ${boss && !allDone ? "boss" : ""}" data-action="continue" aria-label="${allDone ? "All ponds cleared · replay any pond" : `${resume ? "Continue" : "Play"} ${boss ? "Boss " : ""}Pond ${next}`}"><img class="continue-capy" src="${sprite(progress.selected)}" alt=""><span class="continue-copy"><small>${allDone ? "Every pond cleared" : resume ? "Continue where you left off" : "Your next pond"}</small><strong>${allDone ? "All 30 ponds ✓" : `${boss ? "Boss " : ""}Pond ${next}`}</strong><em>${allDone ? "Replay any pond below for lilies" : `${world} · ${q.n}×${q.n}${boss ? " · grows your Hot Spring" : ""}`}</em></span><b class="continue-go" aria-hidden="true">${allDone ? "↓" : "▶"}</b></button><button class="daily" data-action="daily"><span class="daily-lily">♧</span><span class="text"><strong>Daily Pond</strong><small>A fresh little challenge</small></span><span class="streak" aria-label="${streak} day streak">◕ ${streak}</span></button><div class="pond-list" aria-label="30 ponds"><h2 class="pond-list-title">All ponds · tap one to replay for lilies</h2>${tiles}</div></div>${nav("home")}</div>`,
+    `transition hub ${boss ? "boss-transition" : ""}`,
+    `${hubBar()}<div class="transition-card" data-level="${id}" data-role="${role(id)}"><small class="transition-kicker">${resume ? "In progress" : newWorld ? "New world" : boss ? "Boss pond" : "Next pond"}</small><h1>${boss ? "Boss " : ""}Pond ${id}</h1><p class="transition-world">${WORLDS[k]} · ${q.n}×${q.n}${q.rocks.length ? ` · ${q.rocks.length} rock${q.rocks.length > 1 ? "s" : ""}` : ""}</p>${boss ? `<img class="transition-boss" src="${bossAsset(id, bs)}" alt=""><div class="boss-info"><strong>The world's toughest pond</strong><small>The crate gate after it grows your Hot Spring.<br>Clear it without your power for a golden lily.</small></div>` : hubCapy()}${newWorld ? '<p class="transition-note">A gentler pond to warm up in the new world.</p>' : ""}${spare ? `<p class="transition-spare"><i class="orange spare" aria-hidden="true"></i>Spare orange ready · from the crate pond</p>` : ""}<section class="solve-lilies transition-lilies" aria-label="Lilies for this pond"><strong>Lilies · ${lilyCount(r)}/3</strong>${lilyDetails(r, q.n)}</section><button class="primary" data-action="enterPond" data-level="${id}" data-entry-primary>${resume ? "Continue" : "Start"} ${boss ? "boss " : ""}pond ${id}</button>${hubTiles()}</div>`,
   );
   showVersionNotice();
 }
-// v4.1 "Next pond" transition: its own screen between a solved pond and the next one.
-function transition(id, from = null) {
-  bonus.stop();
-  clock.pause();
-  cancelTap();
-  tutorial = null;
-  roundToken++;
-  modal = null;
-  if (!id || id > 30) {
-    view = "transition";
-    shell(
-      "transition all-clear",
-      `<div class="transition-card"><small class="transition-kicker">Every pond cleared</small><h1>All 30 ponds ✓</h1><p>${totalLilies(progress)}/90 lilies · ${progress.goldenLilies.length}/3 golden</p><p class="transition-note">Replay any pond from Home for more lilies,<br>or try today's Daily Pond.</p><button class="primary" data-action="home">Home</button><button data-action="daily">Daily Pond</button></div>`,
-    );
-    return;
-  }
-  view = "transition";
-  const q = data.levels[id - 1],
-    boss = id % 10 === 0,
-    k = Math.floor((id - 1) / 10),
-    newWorld = id % 10 === 1 && id > 1,
-    r = progress.lilies[id] || emptyLilies(),
-    bs = boss ? bossState(progress, id) : "",
-    offer = from && id === from + 1 ? bonus.offerHTML(from, id) : "";
+// v4.3 crate pond / gate transition: a thumbnail of the crate board and its three lilies.
+function crateTransition(id, k, r) {
+  const lv = bonus.levelInfo(id),
+    gate = isGate(id),
+    finale = id === FINALE_POND;
   shell(
-    `transition ${boss ? "boss-transition" : ""} ${offer ? "with-bonus" : ""}`,
-    `<div class="transition-card" data-level="${id}"><small class="transition-kicker">${newWorld ? "New world" : boss ? "Boss pond" : "Next pond"}</small><h1>${boss ? "Boss " : ""}Pond ${id}</h1><p class="transition-world">${WORLDS[k]} · ${q.n}×${q.n}${q.rocks.length ? ` · ${q.rocks.length} rock${q.rocks.length > 1 ? "s" : ""}` : ""}</p>${boss ? `<img class="transition-boss" src="${bossAsset(id, bs)}" alt=""><div class="boss-info"><strong>The world's toughest pond</strong><small>Beat it to grow your Hot Spring.<br>Clear it without your power for a golden lily.</small></div>` : `<img class="transition-capy" src="${sprite(progress.selected, "portrait")}" alt="">`}${newWorld ? '<p class="transition-note">A gentler pond to warm up after the boss.</p>' : ""}<section class="solve-lilies transition-lilies" aria-label="Lilies for this pond"><strong>Lilies · ${lilyCount(r)}/3</strong>${lilyDetails(r, q.n)}</section><button class="primary" data-action="enterPond" data-level="${id}" data-entry-primary>Start ${boss ? "boss " : ""}pond ${id}</button>${offer}<button class="${offer ? "transition-home-link" : ""}" data-action="home">Home</button></div>`,
+    `transition hub crate-transition ${gate ? "gate-transition" : ""}`,
+    `${hubBar()}<div class="transition-card" data-level="${id}" data-role="${role(id)}"><small class="transition-kicker">${finale ? "The finale" : gate ? "World gate" : "Crate pond"}</small><h1>${pondLabel(id)}</h1><p class="transition-world">${WORLDS[k]} · ${lv ? `${lv.n}×${lv.n} · par ${lv.par}` : "crates"}</p><div class="crate-transition-art">${bonus.thumbFor(id)}</div><div class="boss-info crate-info"><strong>${finale ? "Pack the last crates of the pond" : gate ? "Pack the fruit to open the next world" : "Push every crate onto a fruit"}</strong><small>${gate ? "Clearing it grows your Hot Spring.<br>" : ""}${finale ? "No orange here · just the big finish." : "Make par for +1 orange on the next pond."}</small></div><section class="solve-lilies transition-lilies" aria-label="Lilies for this pond"><strong>Lilies · ${lilyCount(r)}/3</strong>${crateLilyDetails(r, lv?.par ?? "—")}</section><button class="primary" data-action="enterPond" data-level="${id}" data-entry-primary>Start crate pond ${id}</button>${hubTiles()}</div>`,
   );
 }
-function continuePond() {
-  const next = unlocked(progress);
-  if (progress.completed.length >= 30) {
-    root.querySelector(".pond-list")?.scrollIntoView({ block: "start" });
-    return;
-  }
-  start(next);
-}
-function drawPath() {
-  const svg = root.querySelector(".path-line"),
-    path = root.querySelector(".path");
-  if (!svg || !path) return;
-  const r = path.getBoundingClientRect(),
-    pts = [...path.querySelectorAll(".node")].map((e) => {
-      const b = e.getBoundingClientRect();
-      return [b.left - r.left + b.width / 2, b.top - r.top + b.height / 2];
-    });
-  svg.setAttribute("viewBox", `0 0 ${r.width} ${r.height}`);
-  svg.dataset.centers = JSON.stringify(pts);
-  svg.innerHTML = pts
-    .slice(0, -1)
-    .map((a, i) => {
-      const b = pts[i + 1],
-        prev = pts[Math.max(0, i - 1)],
-        next = pts[Math.min(pts.length - 1, i + 2)],
-        d = `M${a} C${a[0] + (b[0] - prev[0]) / 6},${a[1] + (b[1] - prev[1]) / 6} ${b[0] - (next[0] - a[0]) / 6},${b[1] - (next[1] - a[1]) / 6} ${b}`;
-      return `<path d="${d}" class="trail ${i + 1 < unlocked(progress) ? "complete" : "pending"} ${i + 2 === unlocked(progress) && (i + 2) % 10 === 0 ? "next-entry" : ""}"/>`;
-    })
-    .join("");
-}
-
 function collection() {
   clock.pause();
   cancelTap();
@@ -346,19 +346,26 @@ function collection() {
   roundToken++;
   view = "collection";
   modal = null;
-  const tier = 1 + [10, 20, 30].filter((i) => progress.completed.includes(i)).length,
+  const tier = 1 + GATE_PONDS.filter((i) => progress.completed.includes(i)).length,
     friends = Object.keys(CHARACTERS).filter((n) => n !== progress.selected);
   shell(
     "collection",
-    `<div class="pool crew-pool" data-tier="${tier}">${springScene(progress)}</div><div class="collection-title"><h1>Hot Spring</h1><p>Beat a boss to grow your spring</p><span class="tier-pill sr-only">Tier ${tier}</span></div><p class="friend-names sr-only" aria-label="Your Hot Spring friends">Friends · ${friends.join(" & ")}</p><div class="spring-invite"><strong>Tap a capy to switch</strong><small>Each friend brings one power</small></div>${nav("collection")}`,
+    `<div class="pool crew-pool" data-tier="${tier}">${springScene(progress)}</div><div class="collection-title"><h1>Hot Spring</h1><p>Open a world gate to grow your spring</p><span class="tier-pill sr-only">Tier ${tier}</span></div><p class="friend-names sr-only" aria-label="Your Hot Spring friends">Friends · ${friends.join(" & ")}</p><div class="spring-invite"><strong>Tap a capy to switch</strong><small>Each friend brings one power</small></div><header class="spring-bar"><button class="spring-back" data-action="home" aria-label="Back to pond">‹ Pond</button><div class="hub-icons">${navHTML("collection", ["settings"])}</div></header>`,
   );
 }
 function start(id, daily = false, retry = false) {
+  rememberHub(false);
   clock.pause();
   lastLilyResult = null;
   cancelTap();
   powerNotice = false;
   roundToken++;
+  if (!daily && isCrate(id)) {
+    // v4.3: crate ponds are played by the crate module, not the logic board.
+    isDaily = false;
+    bonus.open(id);
+    return;
+  }
   isDaily = daily;
   puzzle = daily ? dailyPuzzle(data, new Date(), rocksUnlocked(progress)) : data.levels[id - 1];
   if (!puzzle) return;
@@ -370,7 +377,7 @@ function start(id, daily = false, retry = false) {
     saved = progress.sessions[k];
   state =
     !retry && saved && saved.signature === boardSignature(puzzle) && saved.cells.length === puzzle.n * puzzle.n
-      ? { cells: [...saved.cells], lives: saved.lives, ...cleanAttempt(saved, saved.cells.length) }
+      ? dropWrongCapys(puzzle, { cells: [...saved.cells], lives: saved.lives, ...cleanAttempt(saved, saved.cells.length) })
       : newAttempt(puzzle.n);
   // v4.2: a spare orange earned in the crate bonus joins the first attempt on the pond it was earned for.
   if (!daily && claimSpare(progress.bonus, puzzle.id)) state = { ...state, spare: 1 };
@@ -405,6 +412,11 @@ function pattern(z) {
     body = `<circle cx="20" cy="22" r="6" fill="none" stroke="${stroke}" stroke-width="2"/><circle cx="42" cy="40" r="5" fill="none" stroke="${stroke}" stroke-width="2"/>`;
   if (z === 5) body = `<path d="M18 10v16M18 34v16M42 12v14M42 36v14" stroke="${stroke}" stroke-width="2.2" stroke-linecap="round"/>`;
   if (z === 6) body = `<path d="M12 16l5 7-5 7M34 34l5 7-5 7" fill="none" stroke="${stroke}" stroke-width="2.2"/>`;
+  // v4.3: patterns for zones 8-10 (9×9 and 10×10 boards).
+  // Designer v4.3 check: open squares (the old small crosses read like player × marks).
+  if (z === 7) body = `<rect x="13" y="13" width="10" height="10" rx="1.5" fill="none" stroke="${stroke}" stroke-width="2.2"/><rect x="37" y="35" width="10" height="10" rx="1.5" fill="none" stroke="${stroke}" stroke-width="2.2"/>`;
+  if (z === 8) body = `<path d="M18 12l6 10H12zM42 34l6 10H36z" fill="${stroke}"/>`;
+  if (z === 9) body = `<path d="M18 12l6 7-6 7-6-7zM42 34l6 7-6 7-6-7z" fill="none" stroke="${stroke}" stroke-width="2.2"/>`;
   return `<svg class="pat" viewBox="0 0 60 60" aria-hidden="true">${body}</svg>`;
 }
 function peekVisible() {
@@ -413,7 +425,7 @@ function peekVisible() {
 }
 function boardHTML() {
   const bad = violations(puzzle, state.cells);
-  return `<div class="pond-wrap" data-sizing-mode="${sizingMode()}" style="--board-max:${boardMaxWidth(puzzle.n)}px;--board-width:${boardWidthCSS()};--board-viewport-width:${boardViewportWidthCSS()}"><div class="zone-grid" role="group" aria-label="${puzzle.n} by ${puzzle.n} pond" style="--n:${puzzle.n}">${state.cells
+  return `<div class="pond-wrap" data-sizing-mode="${sizingMode()}" data-n="${puzzle.n}" data-level="${isDaily ? "daily" : puzzle.id}" style="--board-max:${boardMaxWidth(puzzle.n)}px;--board-width:${boardWidthCSS()};--board-viewport-width:${boardViewportWidthCSS()}"><div class="zone-grid" role="group" aria-label="${puzzle.n} by ${puzzle.n} pond" style="--n:${puzzle.n}">${state.cells
     .map((v, i) => {
       const rock = puzzle.rocks.includes(i),
         locked = isLocked(puzzle, state, i),
@@ -428,14 +440,14 @@ function renderGame() {
   const clear = view === "solved",
     bad = violations(puzzle, state.cells),
     count = state.cells.filter((v) => v === 2).length,
-    label = isDaily ? "Daily Pond" : `${puzzle.id % 10 === 0 ? "Boss " : ""}Pond ${puzzle.id}`,
-    reward = !isDaily && puzzle.id % 10 === 0,
+    label = isDaily ? "Daily Pond" : pondLabel(puzzle.id),
+    reward = !isDaily && isBoss(puzzle.id),
     peeked = peekVisible(),
     kind = effectivePower(progress.selected),
     pureReward = reward && !state.power.used && progress.goldenLilies.includes(puzzle.id);
   shell(
     `game ${clear ? "solved" : ""}`,
-    `<header class="topbar"><button class="level-pill" data-action="home" aria-label="Back to home">‹ ${clear ? label : ""}</button>${clear ? "" : '<button class="help-btn" data-action="rules" aria-label="Rules">?</button>'}${clear ? `<div class="solved-counter" aria-label="${count} of ${puzzle.n} capys"><img src="${pieceSprite()}" alt=""><strong>${count}/${puzzle.n}</strong></div>` : `<h2>${label}${isDaily ? ` · ${puzzle.date.slice(5)}` : ""}</h2><div class="top-counter"><img src="${pieceSprite()}" alt=""><strong class="capy-counter-total">${count}/${puzzle.n}</strong></div>`}${clear ? "" : `<div class="life-area"><div class="lives" data-lives="${state.lives}" data-spare="${state.spare ? 1 : 0}" aria-label="${state.lives} oranges left${state.spare ? " plus 1 bonus orange" : ""}">${[0, 1, 2].map((i) => `<span class="orange ${i >= state.lives ? "used" : ""}"></span>`).join("")}${state.spare ? '<span class="orange spare" title="Bonus orange · this pond only"></span>' : ""}</div>${state.power.napRemaining ? `<span class="nap-badge">Nap · ${state.power.napRemaining}</span>` : ""}</div>`}</header>${clear ? '<div class="banner" role="status">Pond cleared</div>' : ruleCards()}${boardHTML()}<section class="lower">${clear ? `<div class="spring celebration" data-phase="gather"><div class="steam"></div><div class="dock"></div>${progress.completed.includes(10) ? '<div class="lantern l1"></div><div class="lantern l2"></div>' : ""}<div class="ripples">${Array.from({ length: puzzle.n }, (_, i) => `<i class="splash-ring" style="--i:${i};--land:${landingAt(i)}ms;left:${((i + 0.5) * 100) / puzzle.n}%"></i>`).join("")}</div><div class="steam-puffs"><i></i><i></i><i></i></div><div class="jumpers" style="--count:${puzzle.n}">${Array.from({ length: puzzle.n }, (_, i) => `<img class="soaking-capy" src="${pieceSprite("swim")}" alt="" style="--i:${i};--land:${landingAt(i)}ms;--soak-x:${[18, 65, 34, 80, 17, 59, 45][i]}%;--soak-y:${[42, 46, 65, 66, 82, 83, 56][i]}%">`).join("")}</div>${pureReward ? `<span class="reward-lily golden-lily" role="img" aria-label="Golden lily pad reward" style="--reaction:${reactionAt(puzzle.n)}ms">✦<small>${puzzle.id}</small></span>` : ""}<div class="reaction" style="--reaction:${reactionAt(puzzle.n)}ms"><img src="${sprite(progress.selected, "portrait")}" alt=""><span>Ahh…</span></div>${state.lives ? `<div class="orange-saved" style="--reaction:${reactionAt(puzzle.n)}ms">🍊 ${state.lives} kept</div>` : ""}</div>${lilyResultsHTML()}<p class="sub">${reward ? `${pureReward ? "Pure solve · Golden lily pad" : "Boss cleared · the spring grew!"}` : isDaily ? `Splash! ${streakAt(progress, puzzle.day)} day streak` : "Splash! Into the hot spring"}</p><div class="chips"><button class="chip" data-action="collection">♨ Hot Spring</button><button class="chip" data-action="retry">Replay</button><button class="chip primary" data-action="next">Next pond →</button></div>` : `${state.spare ? '<p class="tap-hint spare-hint"><i class="orange spare mini" aria-hidden="true"></i><span><strong>Bonus orange · this pond only</strong> · used first if you slip; mistakes still count</span></p>' : '<p class="tap-hint">Tap × · Double-tap capy · Drag ×</p>'}${messageCardHTML()}<div class="controls"><button class="undo-round" data-action="undo" aria-label="Undo" ${history.some((h) => undoChanges(state, h.cells, puzzle)) ? "" : "disabled"}><span class="round-icon neutral-undo"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M37 24H11m0 0 12-12M11 24l12 12"/></svg></span><strong>Undo</strong></button>${powerButton()}</div>`}</section>`,
+    `<header class="topbar"><button class="level-pill" data-action="home" aria-label="Back to home">‹ ${clear ? label : ""}</button>${clear ? "" : '<button class="help-btn" data-action="rules" aria-label="Rules">?</button>'}${clear ? `<div class="solved-counter" aria-label="${count} of ${puzzle.n} capys"><img src="${pieceSprite()}" alt=""><strong>${count}/${puzzle.n}</strong></div>` : `<h2>${label}${isDaily ? ` · ${puzzle.date.slice(5)}` : ""}</h2><div class="top-counter"><img src="${pieceSprite()}" alt=""><strong class="capy-counter-total">${count}/${puzzle.n}</strong></div>`}${clear ? "" : `<div class="life-area"><div class="lives" data-lives="${state.lives}" data-spare="${state.spare ? 1 : 0}" aria-label="${state.lives} oranges left${state.spare ? " plus 1 spare orange" : ""}">${[0, 1, 2].map((i) => `<span class="orange ${i >= state.lives ? "used" : ""}"></span>`).join("")}${state.spare ? '<span class="orange spare" title="Spare orange · this pond only"></span>' : ""}</div>${state.power.napRemaining ? `<span class="nap-badge">Nap · ${state.power.napRemaining}</span>` : ""}</div>`}</header>${clear ? '<div class="banner" role="status">Pond cleared</div>' : ruleCards()}${boardHTML()}<section class="lower">${clear ? `<div class="spring celebration" data-phase="gather"><div class="steam"></div><div class="dock"></div>${progress.completed.includes(10) ? '<div class="lantern l1"></div><div class="lantern l2"></div>' : ""}<div class="ripples">${Array.from({ length: puzzle.n }, (_, i) => `<i class="splash-ring" style="--i:${i};--land:${landingAt(i)}ms;left:${((i + 0.5) * 100) / puzzle.n}%"></i>`).join("")}</div><div class="steam-puffs"><i></i><i></i><i></i></div><div class="jumpers" style="--count:${puzzle.n}">${Array.from({ length: puzzle.n }, (_, i) => `<img class="soaking-capy" src="${pieceSprite("swim")}" alt="" style="--i:${i};--land:${landingAt(i)}ms;--soak-x:${[18, 65, 34, 80, 17, 59, 45, 28, 74, 50][i]}%;--soak-y:${[42, 46, 65, 66, 82, 83, 56, 54, 58, 72][i]}%">`).join("")}</div>${pureReward ? `<span class="reward-lily golden-lily" role="img" aria-label="Golden lily pad reward" style="--reaction:${reactionAt(puzzle.n)}ms">✦<small>${puzzle.id}</small></span>` : ""}<div class="reaction" style="--reaction:${reactionAt(puzzle.n)}ms"><img src="${sprite(progress.selected, "portrait")}" alt=""><span>Ahh…</span></div>${state.lives ? `<div class="orange-saved" style="--reaction:${reactionAt(puzzle.n)}ms">🍊 ${state.lives} kept</div>` : ""}</div>${lilyResultsHTML()}<p class="sub">${reward ? `${pureReward ? "Pure solve · Golden lily pad" : "Boss cleared · the crate gate is next!"}` : isDaily ? `Splash! ${streakAt(progress, puzzle.day)} day streak` : "Splash! Into the hot spring"}</p><div class="chips"><button class="chip" data-action="collection">♨ Hot Spring</button><button class="chip primary" data-action="next">Next pond →</button></div>` : `${state.spare ? '<p class="tap-hint spare-hint"><i class="orange spare mini" aria-hidden="true"></i><span><strong>Spare orange · this pond only</strong> · used first if you slip; mistakes still count</span></p>' : '<p class="tap-hint">Tap × · Double-tap capy · Drag ×</p>'}${messageCardHTML()}<div class="controls"><button class="undo-round" data-action="undo" aria-label="Undo" ${history.some((h) => undoChanges(state, h.cells, puzzle)) ? "" : "disabled"}><span class="round-icon neutral-undo"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M37 24H11m0 0 12-12M11 24l12 12"/></svg></span><strong>Undo</strong></button>${powerButton()}</div>`}</section>`,
   );
   if (focusedCell !== undefined) root.querySelector(`[data-cell="${focusedCell}"]`)?.focus({ preventScroll: true });
   requestAnimationFrame(() => {
@@ -451,29 +463,20 @@ function powerButton() {
 }
 // Exactly one message surface for every power: the compact status card.
 function pondMessage() {
-  const bad = violations(puzzle, state.cells).size;
-  if (bad)
-    return {
-      title: "These capys need more space",
-      detail: `${state.cells.filter((v) => v === 2).length}/${puzzle.n} capys · one per row, column & zone; no touching.`,
-      conflict: true,
-    };
   if (peekVisible()) return { title: "Peek · a friend is near", detail: "Place the glowing spot" };
   if (state.power.napRemaining)
-    return { title: `Nap · ${state.power.napRemaining} safe moves left`, detail: "Each new capy or × spends a charge" };
-  if (powerNotice) return { title: "Second chance · orange restored", detail: "Mistake undone · try a different cozy spot" };
+    return { title: `Nap · ${state.power.napRemaining} safe moves left`, detail: "Each new capy or × spends a charge · no orange lost" };
+  if (powerNotice) return { title: "Second chance · orange restored", detail: "The mistake still counts · the wrong spot stays empty" };
   return null;
 }
 function messageCardInner(m = pondMessage()) {
   const id = powerIdentity(progress.selected, effectivePower(progress.selected));
-  if (m?.conflict)
-    return `<div class="message-copy" role="status"><strong>${m.title}</strong><small>${m.detail}</small></div><button class="clear-conflicts" data-action="clearConflicts" aria-label="Clear conflicts">Clear<br>conflicts</button>`;
   return `${capyBadge("game")}<div class="message-copy" role="status"><strong>${progress.selected} · ${id.name}</strong><small class="identity-phrase">${id.phrase}</small>${m ? `<span class="power-feedback"><strong>${m.title}</strong><small>${m.detail}</small></span>` : ""}</div>${powerIcon(id.kind)}`;
 }
 function messageCardHTML() {
   const m = pondMessage(),
     id = powerIdentity(progress.selected, effectivePower(progress.selected));
-  return `<div class="strip companion-line ${m?.conflict ? "conflict-box" : ""} ${peekVisible() ? "peek-box" : ""}" style="--identity:${id.color};--identity-light:${id.light}">${messageCardInner(m)}</div>`;
+  return `<div class="strip companion-line ${peekVisible() ? "peek-box" : ""}" style="--identity:${id.color};--identity-light:${id.light}">${messageCardInner(m)}</div>`;
 }
 let powerIntroOrigin = null;
 function requestPower() {
@@ -542,7 +545,6 @@ function updatePowerUI() {
     m = pondMessage();
   if (strip) {
     strip.classList.toggle("peek-box", peekVisible());
-    strip.classList.toggle("conflict-box", !!m?.conflict);
     strip.innerHTML = messageCardInner(m);
   }
 }
@@ -588,14 +590,19 @@ function play(i, value, singleTap = false) {
     after = tutorial ? { ...state, cells: state.cells.map((v, k) => (k === i ? value : v)) } : attemptMove(puzzle, state, i, value);
   if (after === state) return;
   powerNotice = false;
-  solveOrder = solveOrder.filter((c) => c !== i);
-  if (value === 2) solveOrder.push(i);
-  if (value === 2) vibrate(violations(puzzle, after.cells).has(i) ? "mistake" : "correct", progress.haptics);
+  // v4.3 rev b: a capy on a cell outside the unique solution is rejected at once (mistake buzz, orange, red shake).
+  const rejected = after.rejected !== undefined;
+  if (!rejected) {
+    solveOrder = solveOrder.filter((c) => c !== i);
+    if (value === 2) solveOrder.push(i);
+    history.push(before);
+    if (history.length > 100) history.shift();
+  }
+  if (value === 2) vibrate(rejected || violations(puzzle, after.cells).has(i) ? "mistake" : "correct", progress.haptics);
   else if (singleTap) vibrate(value === 1 ? "markX" : "clearTap", progress.haptics);
-  history.push(before);
-  if (history.length > 100) history.shift();
   const spareJustUsed = !tutorial && after.spareUsed;
   state = withLocks(puzzle, after);
+  delete state.rejected;
   if (spareJustUsed) delete state.spareUsed;
   currentHint = null;
   saveRound();
@@ -604,9 +611,25 @@ function play(i, value, singleTap = false) {
     return;
   }
   renderGame();
-  if (spareJustUsed) toast("Bonus orange used · the mistake still counts");
+  if (rejected) rejectCapy(i);
+  if (spareJustUsed) toast("Spare orange used · the mistake still counts");
   if (tutorial) advanceTutorial();
   if (state.lives === 0) gameOver();
+}
+// The rejected capy appears for a moment with a red ring, shakes and hops out; the cell keeps its old content.
+function rejectCapy(i) {
+  const cell = root.querySelector(`[data-cell="${i}"]`);
+  if (!cell) return;
+  cell.classList.add("reject-shake");
+  cell.insertAdjacentHTML("beforeend", `<img class="capy reject-capy" alt="" src="${pieceSprite()}">`);
+  const label = cell.getAttribute("aria-label");
+  cell.setAttribute("aria-label", `${label}, wrong spot: capy hopped out`);
+  setTimeout(() => {
+    if (!cell.isConnected) return;
+    cell.classList.remove("reject-shake");
+    cell.querySelector(".reject-capy")?.remove();
+    cell.setAttribute("aria-label", label);
+  }, 480);
 }
 let lastBump = { i: -1, at: -Infinity };
 function bumpLocked(i) {
@@ -756,7 +779,7 @@ function settings() {
     .querySelector(".screen")
     .insertAdjacentHTML(
       "beforeend",
-      `<div class="shade"><section class="dialog settings-dialog" role="dialog" aria-modal="true" aria-labelledby="settings-title"><h2 id="settings-title">Make yourself cozy</h2><div class="settings-row"><span>Haptics · gentle buzz</span><button data-action="settingsHaptics" aria-label="Haptics" aria-pressed="${progress.haptics}">${progress.haptics ? "On" : "Off"}</button></div><div class="settings-row"><span>Sound effects · splashes</span><button data-action="settingsAudio" aria-label="Sound" aria-pressed="${progress.audio}">${progress.audio ? "On" : "Off"}</button></div><div class="settings-row"><span>Music · pastoral pond</span><button data-action="settingsMusic" aria-label="Music" aria-pressed="${progress.music}">${progress.music ? "On" : "Off"}</button></div><div class="settings-row"><span>Crate bonus · D-pad</span><button data-action="settingsDpad" aria-label="Crate bonus D-pad" aria-pressed="${progress.bonus.dpad}">${progress.bonus.dpad ? "On" : "Off"}</button></div><button class="nickname-setting" data-action="editNickname">Nickname · ${escapeHTML(progress.nickname)} · Edit</button><button data-action="progress">Your pond collection · ${totalLilies(progress)}/90</button><button class="music-credit-link" data-action="musicCredits">Music credits · CC0</button><button data-action="install" aria-label="Install app">${installCopy()}</button><p class="small-text">One capy per row, column & zone.<br>No touching — diagonals too.</p><p class="build-label" data-build="${BUILD.build}" aria-label="Running version">v${BUILD.version} · build ${BUILD.build}</p><button class="primary" data-action="closeSettings">Done</button></section></div>`,
+      `<div class="shade"><section class="dialog settings-dialog" role="dialog" aria-modal="true" aria-labelledby="settings-title"><h2 id="settings-title">Make yourself cozy</h2><div class="settings-row"><span>Haptics · gentle buzz</span><button data-action="settingsHaptics" aria-label="Haptics" aria-pressed="${progress.haptics}">${progress.haptics ? "On" : "Off"}</button></div><div class="settings-row"><span>Sound effects · splashes</span><button data-action="settingsAudio" aria-label="Sound" aria-pressed="${progress.audio}">${progress.audio ? "On" : "Off"}</button></div><div class="settings-row"><span>Music · pastoral pond</span><button data-action="settingsMusic" aria-label="Music" aria-pressed="${progress.music}">${progress.music ? "On" : "Off"}</button></div><div class="settings-row"><span>Crate ponds · D-pad</span><button data-action="settingsDpad" aria-label="Crate ponds D-pad" aria-pressed="${progress.bonus.dpad}">${progress.bonus.dpad ? "On" : "Off"}</button></div><button class="nickname-setting" data-action="editNickname">Nickname · ${escapeHTML(progress.nickname)} · Edit</button><button data-action="progress">Your pond collection · ${totalLilies(progress)}/90</button><button class="music-credit-link" data-action="musicCredits">Music credits · CC0</button><button data-action="install" aria-label="Install app">${installCopy()}</button><p class="small-text">One capy per row, column & zone.<br>No touching — diagonals too.</p><p class="build-label" data-build="${BUILD.build}" aria-label="Running version">v${BUILD.version} · build ${BUILD.build}</p><button class="primary" data-action="closeSettings">Done</button></section></div>`,
     );
 }
 function toast(text, power = null) {
@@ -881,10 +904,16 @@ function endGesture(e, cancelled = false) {
   else if (!g.dragging) {
     // v4.1: touch Chromium can drop the click of the first tap after a drag (the "lost first tap" behind a
     // double-tap turning into a single tap). If no native click arrives by the next frame, deliver the tap once.
-    const t = (cellTap = { pointer: g.pointer, i: g.i, handled: false });
+    // v4.3 fix: every non-drag contact is ONE tap, delivered exactly once by whichever comes first (native click or
+    // this fallback). The v4.1 code only remembered the LAST contact, so a late native click of tap A arriving after
+    // tap B's pointerup no longer matched and was delivered a second time, so "tap A, tap B" became a double-tap on A
+    // and a capy was placed where the player only meant to mark × (usually right next to another capy).
+    const t = (cellTap = { pointer: g.pointer, i: g.i, handled: false, clicked: false, at: performance.now() });
+    recentTaps.push(t);
+    if (recentTaps.length > 8) recentTaps.shift();
     requestAnimationFrame(() =>
       setTimeout(() => {
-        if (cellTap === t && !t.handled && view === "game") {
+        if (!t.handled && view === "game") {
           t.handled = true;
           tap(t.i);
         }
@@ -955,7 +984,7 @@ function renderTutorial() {
   );
   lower.insertAdjacentHTML(
     "beforeend",
-    `<div class="tutorial-instruction" role="status">${TUTORIAL_COPY[t.step]}</div><div class="tutorial-dots" aria-hidden="true">${[0, 1, 2].map((i) => `<i class="${i <= t.step ? "on" : ""}"></i>`).join("")}</div>${t.step === 3 ? '<button class="primary tutorial-play" data-action="tutorialPlay">Let’s play</button>' : ""}`,
+    `<div class="tutorial-instruction" role="status">${TUTORIAL_COPY[t.step]}</div><div class="tutorial-dots" aria-hidden="true">${[0, 1, 2].map((i) => `<i class="${i <= t.step ? "on" : ""}"></i>`).join("")}</div>${t.step === 3 ? '<p class="tutorial-note">A capy in the wrong spot hops back out and costs an orange.</p><button class="primary tutorial-play" data-action="tutorialPlay">Let’s play</button>' : ""}`,
   );
   root.querySelectorAll(".controls button,.capy-badge").forEach((e) => (e.disabled = true));
   const target = t.step === 0 ? t.plan.mark : t.step === 1 ? t.plan.place : t.plan.drag[0];
@@ -1014,17 +1043,13 @@ function rulesSheet() {
       .map(([a, b], i) => `<li><span>${i + 1}</span><div><strong>${a}</strong><small>${b}</small></div></li>`)
       .join(
         "",
-      )}</ol><p class="power-brief">Same puzzle rules for every buddy.<br>One power per attempt · Three oranges.<br>Lily time target: ${duration(targetMs(puzzle.n))}. No countdown.</p><button class="primary replay-tutorial" data-action="replayTutorial">↻ Replay tutorial</button><small class="replay-sub">A quick, hands-on reminder</small><button class="sheet-done" data-action="closeRules">Back to pond</button></section>`,
+      )}</ol><p class="mistake-rule"><strong>Wrong spot?</strong> The capy hops right back out and costs an orange. Right spots lock in place.</p><p class="power-brief">Same puzzle rules for every buddy.<br>One power per attempt · Three oranges.<br>Lily time target: ${duration(targetMs(puzzle.n))}. No countdown.</p><button class="primary replay-tutorial" data-action="replayTutorial">↻ Replay tutorial</button><small class="replay-sub">A quick, hands-on reminder</small><button class="sheet-done" data-action="closeRules">Back to pond</button></section>`,
   );
   root.querySelector(".sheet-done").focus();
 }
 function activateControl(b) {
   clock.flush();
   cancelTap();
-  if (b.dataset.pond) {
-    pondReplay(Number(b.dataset.pond));
-    return;
-  }
   if (b.dataset.choice) {
     chooserDraft = b.dataset.choice;
     chooser(view === "choose");
@@ -1051,11 +1076,14 @@ function activateControl(b) {
       root.querySelector(".progress-ledger")?.remove();
       settings();
       break;
-    case "closePondReplay":
-      closePondReplay();
-      break;
     case "enterPond":
       start(Number(b.dataset.level), false, b.dataset.retry === "true");
+      break;
+    case "replayPond":
+      // v4.3 rev b: the only replay entry point (Settings › Progress). Resumes a board in progress, else a fresh attempt.
+      modal = null;
+      root.querySelector(".progress-ledger")?.remove();
+      start(Number(b.dataset.level), false, !inProgress(Number(b.dataset.level)));
       break;
     case "tutorialSkip":
       finishTutorial();
@@ -1110,13 +1138,6 @@ function activateControl(b) {
       if (isDaily) transition(progress.completed.length >= 30 ? null : unlocked(progress));
       else transition(puzzle.id === 30 ? (progress.completed.length >= 30 ? null : unlocked(progress)) : puzzle.id + 1, puzzle.id);
       break;
-    case "continue":
-      continuePond();
-      break;
-    case "pondList":
-      home();
-      root.querySelector(".pond-list")?.scrollIntoView({ block: "start" });
-      break;
     case "undo":
       while (history.length) {
         const prev = history.pop();
@@ -1128,20 +1149,6 @@ function activateControl(b) {
         saveRound();
         renderGame();
         break;
-      }
-      break;
-    case "clearConflicts":
-      if (view !== "game" || modal) break;
-      {
-        const next = clearConflicts(puzzle, state);
-        if (next !== state) {
-          history.push({ cells: [...state.cells], lives: state.lives, order: [...solveOrder] });
-          state = next;
-          powerNotice = false;
-          solveOrder = solveOrder.filter((i) => state.cells[i] === 2);
-          saveRound();
-          renderGame();
-        }
       }
       break;
     case "retry":
@@ -1227,16 +1234,32 @@ root.addEventListener("pointerup", (e) => {
       }
     });
 });
+// v4.3: match a native click to the contact that produced it: by pointerId (Chromium gives touch clicks the touch's
+// own, ever-increasing id), else (engines whose click has no pointerId) the oldest recent contact on the same cell
+// that has not had its click yet. One click consumes one contact.
+function tapForClick(e, i) {
+  const now = performance.now();
+  if (Number.isInteger(e.pointerId) && e.pointerId > 0) {
+    const byId = recentTaps.findLast((t) => t.pointer === e.pointerId && !t.clicked);
+    if (byId) return byId;
+    if (recentTaps.some((t) => t.pointer === e.pointerId)) return { handled: true }; // duplicate click of a consumed contact
+    return null;
+  }
+  return recentTaps.find((t) => t.i === i && !t.clicked && now - t.at < 1000) ?? null;
+}
 // Consume a control fallback's late native click before routing into replacement board DOM.
 root.addEventListener("click", (e) => {
-  if (controlTap?.pointer === e.pointerId && (controlTap.handled || controlTap.cancelled)) return;
+  // v4.3: guard null (a click without pointerId, e.g. a plain MouseEvent, used to throw here when no control tap was pending).
+  if (controlTap && controlTap.pointer === e.pointerId && (controlTap.handled || controlTap.cancelled)) return;
   const b = e.target.closest("button");
   if (!b || b.disabled) return;
   if (b.dataset.cell !== undefined) {
-    if (cellTap && cellTap.pointer === e.pointerId && e.detail !== 0) {
-      if (cellTap.handled) return; // fallback already delivered this tap
-      cellTap.handled = true;
-      tap(cellTap.i);
+    const t = e.detail !== 0 ? tapForClick(e, Number(b.dataset.cell)) : null;
+    if (t) {
+      t.clicked = true;
+      if (t.handled) return; // fallback already delivered this tap
+      t.handled = true;
+      tap(t.i);
       return;
     }
     if (e.detail === 0 || e.pointerId !== lastDragPointer) tap(Number(b.dataset.cell));
@@ -1261,7 +1284,7 @@ try {
   if (!res.ok) throw Error("content");
   data = await res.json();
   loaded = load(storage, data);
-  bonus.ensureLevels().catch(() => {});
+  await bonus.ensureLevels().catch(() => {}); // rev b: the hub can open on a crate pond, so its par/thumbnail must be ready before the first render.
   progress = loaded.progress;
   music.configure({ enabled: progress.music });
   warning = loaded.readOnly ? "Newer progress found. Playing without overwriting it." : loaded.error;
@@ -1305,7 +1328,7 @@ function enterOnboarding() {
   else if (!progress.starterChosen) {
     chooserDraft = "Jun";
     chooser(true);
-  } else home();
+  } else launch();
 }
 function nicknameScreen(edit = false) {
   clock.pause();
@@ -1348,39 +1371,25 @@ function saveNickname() {
     settings();
   } else enterOnboarding();
 }
-function pondReplay(id) {
-  const q = data.levels[id - 1];
-  if (!q) return;
-  modal = "pondReplay";
-  const r = progress.lilies[id] || emptyLilies(),
-    saved = progress.sessions[`pond-${id}`],
-    resume = saved?.cells.some(Boolean) && !solved(q, saved.cells) && saved.lives > 0;
-  root
-    .querySelector(".screen")
-    .insertAdjacentHTML(
-      "beforeend",
-      `<div class="sheet-scrim" data-action="closePondReplay"></div><section class="sheet pond-replay" role="dialog" aria-modal="true" aria-label="Pond ${id} lilies"><button class="rules-close" data-action="closePondReplay" aria-label="Close pond">×</button><h2>${id % 10 === 0 ? "Boss " : ""}Pond ${id} · ${q.n}×${q.n}</h2><p>Best collection · ${lilyCount(r)}/3 lilies</p>${lilyDetails(r, q.n)}${progress.goldenLilies.includes(id) ? '<p class="replay-golden"><img src="assets/v65/lily-golden.svg" alt="">Golden lily earned · no power</p>' : ""}<small class="replay-best">Best time ${r.bestMs === null ? "—" : duration(r.bestMs)} · Best mistakes ${r.bestMistakes ?? "—"}</small><button class="primary" data-action="enterPond" data-level="${id}" data-retry="${progress.completed.includes(id) && !resume}" data-entry-primary>${resume ? "Continue pond" : progress.completed.includes(id) ? "Replay for 3 lilies" : "Enter pond"}</button><small class="replay-keeps">Keep every lily you already earned</small></section>`,
-    );
-}
-function closePondReplay() {
-  modal = null;
-  root.querySelector(".pond-replay")?.remove();
-  root.querySelector(".sheet-scrim")?.remove();
+function replayListHTML() {
+  const ids = [...progress.completed].filter((id) => id >= 1 && id <= 30).sort((x, y) => x - y);
+  if (!ids.length) return '<p class="replay-empty">Clear a pond and it shows up here to replay for lilies.</p>';
+  return `<ol class="replay-list" aria-label="Cleared ponds">${ids
+    .map((id) => {
+      const crate = isCrate(id),
+        n = crate ? bonus.levelInfo(id)?.n : data.levels[id - 1]?.n,
+        resume = inProgress(id),
+        label = pondLabel(id);
+      return `<li class="replay-row" data-row="${id}"><span class="replay-name"><strong>${label}</strong><small>${n ? `${n}×${n}` : ""}${crate ? " · crates" : ""}</small></span>${lilyRow(progress.lilies[id], "replay-lilies")}${progress.goldenLilies.includes(id) ? '<img class="ledger-gold" src="assets/v65/lily-golden.svg" alt="Golden lily earned">' : ""}<button class="replay-btn" data-action="replayPond" data-level="${id}" aria-label="${resume ? "Continue" : "Replay"} ${label}">${resume ? "Continue" : "Replay"}</button></li>`;
+    })
+    .join("")}</ol>`;
 }
 function progressLedger() {
   modal = "progress";
   root.querySelector(".shade")?.remove();
   root.querySelector(".screen").insertAdjacentHTML(
     "beforeend",
-    `<section class="progress-ledger" role="dialog" aria-modal="true" aria-label="Your pond collection"><header><div><h2>Your pond collection</h2><small>Settings · Progress</small></div><button data-action="backProgress" aria-label="Back to Settings">‹</button></header><div class="ledger-scroll"><div class="collection-total">${lilyImg(true)}<strong>${totalLilies(progress)}/90</strong><span>water lilies collected</span><small><img src="assets/v65/lily-golden.svg" alt="">${progress.goldenLilies.length}/3 golden · earned separately</small></div><h3>A little more in every world</h3>${WORLDS.map(
-      (w, k) => {
-        const ids = Array.from({ length: 10 }, (_, i) => k * 10 + i + 1),
-          count = ids.reduce((a, id) => a + lilyCount(progress.lilies[id]), 0);
-        return `<details class="ledger-world"><summary><strong>${w}</strong><b>${count}/30</b><small>Ponds ${ids[0]}–${ids.at(-1)}</small><progress max="30" value="${count}" aria-label="${w} lilies"></progress></summary><div class="ledger-ponds">${ids.map((id) => `<div><strong>${id % 10 === 0 ? "Boss " : ""}${id}</strong>${lilyRow(progress.lilies[id])}${progress.goldenLilies.includes(id) ? '<img class="ledger-gold" src="assets/v65/lily-golden.svg" alt="Golden lily earned">' : ""}</div>`).join("")}</div></details>`;
-      },
-    ).join(
-      "",
-    )}<div class="ledger-encouragement"><img src="${sprite(progress.selected)}" alt=""><div><strong>Every clear is progress</strong><p>Replay a pond for another lily.<br>Earned lilies always stay yours.</p></div></div><p class="small-text">Nickname · ${escapeHTML(progress.nickname)}<br>Stored only on this phone. Nothing is sent.</p></div><button class="replay-pond-link" data-action="pondList">Replay a pond · all ponds</button><button class="primary" data-action="backProgress">Back to Settings</button></section>`,
+    `<section class="progress-ledger" role="dialog" aria-modal="true" aria-label="Your pond collection"><header><div><h2>Your pond collection</h2><small>Settings · Progress</small></div><button data-action="backProgress" aria-label="Back to Settings">‹</button></header><div class="ledger-scroll"><div class="collection-total">${lilyImg(true)}<strong>${totalLilies(progress)}/90</strong><span>water lilies collected</span><small><img src="assets/v65/lily-golden.svg" alt="">${progress.goldenLilies.length}/3 golden · earned separately</small></div><h3>Replay a pond for lilies</h3>${replayListHTML()}<div class="ledger-encouragement"><img src="${sprite(progress.selected)}" alt=""><div><strong>Every clear is progress</strong><p>Replay a pond for another lily.<br>Earned lilies always stay yours.</p></div></div><p class="small-text">Nickname · ${escapeHTML(progress.nickname)}<br>Stored only on this phone. Nothing is sent.</p></div><button class="primary" data-action="backProgress">Back to Settings</button></section>`,
   );
 }
 function lilyResultsHTML() {

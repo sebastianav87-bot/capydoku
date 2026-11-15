@@ -1,0 +1,35 @@
+/* v4.3 crate ponds in the main path: Home tiles, transition, Show me, gate tags{border-color:#A88A52;background:#F6EBD2}
+
+
+
+
+.bonus-tag.gate-tag{background:#E8C98A;border-color:#8E6A2C;color:#5A421B}
+.crate-transition-art{display:flex;justify-content:center;margin:10px 0 6px}
+.crate-transition-art .bonus-thumb{width:min(34vw,132px)}
+.transition-spare{display:flex;align-items:center;justify-content:center;gap:8px;font-size:13px;font-weight:800;color:#7A5320;margin:6px 0}
+.transition-spare .orange{width:20px;height:20px}
+.crate-showme{width:calc(100% - 28px);display:flex;align-items:center;justify-content:space-between;gap:10px;background:#EAF1DE;border:1.4px solid #6B9F62;border-radius:16px;padding:6px 8px 6px 14px}
+.crate-showme[hidden]{display:none}
+.crate-showme span{display:flex;flex-direction:column}
+.crate-showme strong{color:#2E5D2B;font-size:14px}
+.crate-showme small{font-size:11.5px;color:#4C6B47}
+.crate-showme button{min-height:44px;background:var(--green-600);color:#fff;border-radius:14px;padding:8px 14px;font-weight:850}
+.crate-screen.replaying .crate-board{pointer-events:none}
+.crate-screen.replaying .bonus-controls{opacity:.5;pointer-events:none}
+.crate-pond-reward .crate-reward-lilies{margin:8px 14px 0}
+.crate-pond-reward .reward-scene{max-height:28svh}
+.crate-lilies .lily-condition small{white-space:normal}
+.finale-reward h1{font-size:28px}
+.crate-showme button{white-space:nowrap;flex:0 0 auto}
+.crate-transition h1{font-size:clamp(26px,8vw,32px);line-height:1.1}
+/* v4.3 fix: the global button min-height (48px) forced every crate cell to ≥48px, so 8×8 boards overflowed
+   360px screens (and 7×7 touched the edges). Cells now shrink with the board, which keeps the logic-board width. */
+.crate-cell{min-height:0;min-width:0}
+.crate-screen .crate-wrap{width:min(var(--board-width,97.2222%),var(--board-max,427.78px));margin-left:auto;margin-right:auto;box-sizing:border-box}
+
+/* v4.3 Designer check: 10×10 (boss 29) at narrow widths. A slimmer frame (3px), a 1px grid inset and 2px gaps on a
+   viewport-wide board (2px side margins) lift 360px cells from 30.1px to 33px. 412px and boards ≤9×9 are unchanged. */
+@media (max-width:400px){
+  .game:not(.solved)>.pond-wrap[data-n="10"]{width:calc(100vw - 4px);max-width:none;padding:3px;border-radius:13px}
+  .pond-wrap[data-n="10"] .zone-grid{padding:1px;gap:2px;border-radius:9px}
+}

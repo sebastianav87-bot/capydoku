@@ -7,7 +7,7 @@ export const sizingMode=(mode=GAME_CONFIG.boardSizingMode)=>mode==='A'?'A':'B';
 export function boardMaxWidth(n,mode=GAME_CONFIG.boardSizingMode){return sizingMode(mode)==='A'?n*TARGET_CELL_PX+(n-1)*3+2*3+2*8:MAX_SCREEN_WIDTH*CONSTANT_BOARD_RATIO}
 export function boardWidthCSS(mode=GAME_CONFIG.boardSizingMode){return sizingMode(mode)==='A'?'calc(100% - 8px)':`${CONSTANT_BOARD_RATIO*100}%`}
 export function boardViewportWidthCSS(mode=GAME_CONFIG.boardSizingMode){return sizingMode(mode)==='A'?'calc(100vw - 8px)':`${CONSTANT_BOARD_RATIO*100}vw`}
-export function boardMetrics(n,viewportWidth,mode=GAME_CONFIG.boardSizingMode){const screen=Math.min(viewportWidth,MAX_SCREEN_WIDTH),available=sizingMode(mode)==='A'?screen-8:screen*CONSTANT_BOARD_RATIO,board=Math.min(available,boardMaxWidth(n,mode));return{mode:sizingMode(mode),board_px:board,cell_px:(board-16-6-(n-1)*3)/n}}
+export function boardMetrics(n,viewportWidth,mode=GAME_CONFIG.boardSizingMode){const screen=Math.min(viewportWidth,MAX_SCREEN_WIDTH),available=sizingMode(mode)==='A'?screen-8:screen*CONSTANT_BOARD_RATIO,board=Math.min(available,boardMaxWidth(n,mode));/* v4.3: 10×10 at ≤400px uses a viewport-wide slim frame (crates-v43.css) */if(sizingMode(mode)==='B'&&n===10&&viewportWidth<=400){const wide=viewportWidth-4;return{mode:'B',board_px:wide,cell_px:(wide-6-2-(n-1)*2)/n}}return{mode:sizingMode(mode),board_px:board,cell_px:(board-16-6-(n-1)*3)/n}}
 export const FLIGHT_MS=1500,FLIGHT_STAGGER_MS=100;
 export const landingAt=i=>FLIGHT_MS+i*FLIGHT_STAGGER_MS;
 export const soakAt=n=>landingAt(n-1)+350;

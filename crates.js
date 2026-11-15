@@ -1,3 +1,4 @@
+import { CRATE_PONDS } from "./roles.js";
 /* v4.2 crate bonus: pure Sokoban rules (no DOM). Levels are stored with an outer '#' border so the Designer's
  * verify/solver.py reads them unchanged; in the app that border is the board frame and only the n×n interior
  * is drawn. Cells are interior indices r*n+c. '#' inside = solid rock. */
@@ -166,20 +167,31 @@ export function solveCrates(L, limit = 3e6) {
   return { solvable: false, explored: seen.size };
 }
 
-/* v4.2 bonus reward: +1 spare orange for the NEXT pond only. Pure helpers so the rules are unit-tested. */
-export const BONUS_AFTER = Object.freeze({ 5: 1, 15: 2, 25: 3 }); // pond cleared → bonus level number
+/* v4.3 crate ponds: Par earns +1 spare orange for the NEXT pond only. Pure helpers so the rules are unit-tested.
+ * bonus.v2 = { v:2, best:{pondId:moves}, legacy:{solved,best}|null (v4.2 Crate Cove record), spare, dpad, controlsSeen }. */
+export const SHOW_ME_AFTER = 3; // Restarts before "Show me" appears
+export const SPARE_PONDS = Object.freeze(CRATE_PONDS.filter((id) => id !== 30).map((id) => id + 1)); // 6/11/16/21/26
+const okMoves = (m) => Number.isInteger(m) && m > 0 && m < 100000;
+function cleanLegacy(b) {
+  const solved = [...new Set((Array.isArray(b?.solved) ? b.solved : []).filter((k) => [1, 2, 3].includes(k)))].sort(),
+    best = {};
+  for (const k of solved) if (okMoves(b.best?.[k])) best[k] = b.best[k];
+  return solved.length ? { solved, best } : null;
+}
 export function cleanBonus(raw) {
   const b = raw && typeof raw === "object" ? raw : {},
-    solved = [...new Set((Array.isArray(b.solved) ? b.solved : []).filter((k) => [1, 2, 3].includes(k)))].sort(),
+    v2 = b.v === 2,
     best = {};
-  for (const k of solved) if (Number.isInteger(b.best?.[k]) && b.best[k] > 0 && b.best[k] < 100000) best[k] = b.best[k];
-  const forPond = Number.isInteger(b.spare?.forPond) && [6, 16, 26].includes(b.spare.forPond) ? b.spare.forPond : null;
-  return { v: 1, solved, best, spare: forPond ? { forPond } : null, dpad: b.dpad === true, controlsSeen: b.controlsSeen === true };
+  if (v2) for (const id of CRATE_PONDS) if (okMoves(b.best?.[id])) best[id] = b.best[id];
+  const legacy = v2 ? cleanLegacy(b.legacy) : cleanLegacy(b),
+    forPond = Number.isInteger(b.spare?.forPond) && SPARE_PONDS.includes(b.spare.forPond) ? b.spare.forPond : null;
+  return { v: 2, best, legacy, spare: forPond ? { forPond } : null, dpad: b.dpad === true, controlsSeen: b.controlsSeen === true };
 }
-/** Solving a bonus grants one spare orange for the pond right after; never stacks. Returns true if newly granted. */
-export function grantSpare(bonus, afterPond) {
-  const forPond = afterPond + 1;
-  if (bonus.spare?.forPond === forPond) return false;
+/** Par on a crate pond grants one spare orange for the pond right after; never stacks; never from the finale (30).
+ * Returns true if newly granted. */
+export function grantSpare(bonus, pond) {
+  const forPond = pond + 1;
+  if (!SPARE_PONDS.includes(forPond) || bonus.spare?.forPond === forPond) return false;
   bonus.spare = { forPond };
   return true;
 }
@@ -189,4 +201,22 @@ export function claimSpare(bonus, pondId, daily = false) {
   if (!bonus.spare || daily || bonus.spare.forPond !== pondId) return false;
   bonus.spare = null;
   return true;
+}
+
+/** v4.3: records a crate-pond solve. Lilies: cleared = Packed, noMistakes = Clean run (no Undo/Restart, no Show me),
+ * underTarget = Par (moves ≤ par, no Show me). Earned lilies are never removed. Par grants the next pond's spare
+ * orange (not from the finale). Returns { newly:[3 bools], par, clean, granted, already }. */
+export function awardCrate(progress, pond, par, { moves, clean = false, shown = false }) {
+  const b = progress.bonus,
+    isClean = clean && !shown,
+    isPar = !shown && Number.isInteger(moves) && moves <= par,
+    before = { cleared: false, noMistakes: false, underTarget: false, bestMs: null, bestMistakes: null, targetVersion: 1, ...progress.lilies[pond] },
+    after = { ...before, cleared: true, noMistakes: before.noMistakes || isClean, underTarget: before.underTarget || isPar },
+    newly = [!before.cleared, after.noMistakes && !before.noMistakes, after.underTarget && !before.underTarget];
+  progress.lilies[pond] = after;
+  if (!progress.completed.includes(pond)) progress.completed = [...progress.completed, pond].sort((x, y) => x - y);
+  if (!shown && Number.isInteger(moves)) b.best[pond] = Math.min(b.best[pond] ?? Infinity, moves);
+  const already = isPar && b.spare?.forPond === pond + 1,
+    granted = isPar ? grantSpare(b, pond) : false;
+  return { newly, par: isPar, clean: isClean, granted, already };
 }

@@ -1,4 +1,50 @@
-# Known issues / honest limits — local v4.2 (adds to the v4.1 and v4 lists below)
+# Known issues / honest limits — local v4.3 rev b (crate ponds, no level screen, Fresh Leaf, wrong-capy rule; not published)
+
+## v4.3 list
+
+### rev b
+- **Wrong capy = immediate mistake** (Producer decision, Nov 15). A capy outside the unique solution is rejected with a red shake, costs an orange (spare first; none under Nap) and counts as a mistake. This replaces the v4 rule "a rule-breaking placement costs an orange and stays until you clear it" (v4.1 and v4 notes below are superseded). A capy that is legal but wrong — Sebastián's pond 23 dead end — can no longer stay on the board.
+  - It is stricter than before: placing a capy now reveals whether that cell is right (it either locks or hops out). That was already true via the lock badge; now it also costs an orange. Playtesting may show the game feels harder on 9×9.
+  - **Clear conflicts was removed.** The pure helper `clearConflicts()` is kept (unused by the UI) because old-board tests still use it.
+  - Old saves with wrong capys are repaired once when resumed (wrong capys dropped, no orange or mistake change).
+  - Second chance's approved v6.1 phrase "Undo mistake, restore one orange" was kept (it is the Designer's asset); the first-use card and notice explain that it now only restores the orange.
+  - Sebastián's screenshot (`attachments/b584c6e4….jpg`) was not on the box. The v4.2 pond 23 position was rebuilt from `app-v4.2.1-backup/levels.json`; locks 0, 9, 19, 22 + wrong r6c4/r7c7 is the only set that matches his description.
+- **No level screen:** the app opens to the hub (next pond's transition) or resumes the pond in progress. Replay only in Settings › Progress. The hub button says "Start/Continue pond N" (the mock says "Play pond N").
+- **Fresh Leaf:** CSS greens only. Inline greens in JS (zone outline stroke #3F513E, tutorial pictograms) were not recoloured, as in the Designer's mapping. #4E944F/#4A944E were mapped to the green-500 variable (Designer: #3B7E3D/#319741) — a visually minor difference.
+- **Retired/rewritten tests (rev b):** Home-tile tests → hub/Progress tests; every spec that left a wrong capy on the board (mobile violation ×4, game over, Nap/Second chance, relax-bug overfill/Peek obstruction, v41/v43 Clear conflicts and conflict ring, v2 tap cycle/haptics, no-mode taps, power-identity offline step, rewards metric) now expects the rejection; v43 unit tests "Undo of Clear conflicts" and "Undo restores a mutual conflict" were retired (those boards can't exist). Test seeds use a nonce (`settleSeed`) because a resumed game page could save on top of a seed.
+
+- **Boss 29 (10×10) cells are below the 44 px guideline at 360 px.** Measured 33.00 px at 360×780 (rev b, 2 px gaps) and 35.14 px at 412×915 (no scroll, all four corner cells tap correctly in E2E: `reports/v4.3/boss29-fit-*.json`). 9×9 ponds are about 34 px at 360. This was approved (9×9 cap, boss 29 = 10×10). Real-finger accuracy on a phone is unverified.
+- **Zone colours 8–10** are the Designer's colour-blind fixes (rev b): zone 8 #A6A5E7 with open squares, zone 9 #E8A0BF, zone 10 #BCD49E. Checked in screenshots only, not on a real device or with colour-blind players.
+- **The crate ramp has not been playtested.** The 6 crate ponds (26/30/39/57/66/80 optimal moves; pars 40/45/55/85/95/115 = moves × 1.45, nearest 5) are the Designer's edited ramp. They were re-verified with the Designer solver and the app's BFS, and the deadlock hint has 0 false alarms on all 6 (`reports/v4.3/deadlock-audit-v43.json`). C2 (pond 10, unchanged layout) still has the highest silent-trap rate: 9.6% of pushes, from push 1. Undo/Restart are free, and "Show me" appears after 3 restarts.
+- **Crate ponds are now mandatory** (confirmed by Sebastián). A player who can't solve one can use "Show me" after 3 restarts. It plays the solution and awards only the Packed lily: no Clean run, no Par and no +1 orange.
+- **Old half-played boards are dropped once** ("Ponds refreshed"). Every pond whose board changed in v4.3 is affected: ponds 1–4 are now 7×7, 6–9 8×8, and the rest have new boards. So are boards on the old crate-pond ids. Cleared ponds, lilies, goldens, streak, nickname and starter are kept. Goldens move 10→9, 20→19, 30→29, and those bosses count as cleared. Crate Cove 3/5 solves carry over to ponds 10/20, with Par only if the old best ≤ the new par. Crate Cove 1 (no pond equivalent) is kept only as legacy best-moves data.
+- **Rollback to v4.2.1 code** keeps every completion and lily. v4.2.1 would not show goldens on 9/19/29 (it expects 10/20/30) and ignores the v2 bonus block. A v4.2.1 tab left open next to v4.3 could overwrite those extras.
+- **Hot Spring growth now comes from the world gates (crate ponds 10/20/30)**, not the logic bosses. Tier copy is "Open a world gate to grow your spring". Bosses still give the golden lily.
+- **The old "every early pond has a 1-cell zone" rule no longer holds.** The v4.3 ramp starts at 7×7, and the smallest zone in ponds 1–4 is 2–3 cells. `v2.spec.js` now checks "smallest zone ≤ 3".
+- **Retired tests:** `v42.spec.js` and `upgrade-v42.spec.js` (the optional bonus offer after ponds 5/15/25 no longer exists) were replaced by `v43-crates.spec.js` and `upgrade-v43.spec.js`. Old specs were adapted to the v4.3 layout:
+  - bosses 9/19/29 and `pondLabel()`;
+  - normal-board checks moved off crate ids 5/25/30;
+  - sizes read from `levels.json`;
+  - 8×8+ cell floor of 30 px;
+  - old saves now "refreshed once" instead of "board kept".
+  No other behavioural assertion was weakened.
+- **Stale v4.2-era reports** (`reports/verification.json`, `reports/difficulty-v4.1.json`) describe the old 5×5–7×7 content. The v4.3 content report is `reports/v4.3/levels-pick.json`.
+- **v4.2 crate bug found while building:** the global 48 px button min-height made crate cells ≥ 48 px, so 8×8 crate boards overflowed 360 px. Fixed in `crates-v43.css`. v4.2's 3 bonus levels were ≤ 7×7, so the bug never showed live.
+- The real-device caveats from v4.2/v4.1 still apply: haptics are verified only as mocked calls, iOS has no vibration, and touch is emulated.
+
+## v4.2.1 list (phase 1)
+
+- **"A capy ends up next to another one" — two root causes fixed, a third path possible.**
+  - (A) Undo kept today's locked capys but restored an older board around them. That could bring back a wrong capy you had removed, now touching a capy that was locked later (row, column, zone or diagonal). No orange was lost. Undo now leaves such a capy cleared. Boards that really had the clash (e.g. undoing Clear conflicts) are restored as before.
+  - (B) If a phone delivered the native click of tap A late (after tap B), A was delivered twice. The game read that as a double-tap, so a capy landed where you only meant to mark ×.
+  - Reproduced in E2E with synthetic late clicks. Whether Sebastián's phone hits (A), (B) or both can't be confirmed without his detail.
+  - Not changed: a capy that is legal but wrong still gets the "correct" buzz (110 ms) and no lock badge. Only correct capys lock. Giving it a different buzz would be a design change and needs a decision.
+- **Smaller tap targets come with v4.3 phase 2 (8×8/9×9)**, not in this build. See PLAN.md.
+- **Haptics v4.2.1** (every pattern about 1.5× longer, same shapes): verified as mocked `navigator.vibrate` calls only. Real-device feel is unverified, and iPhones still have no Vibration API.
+- **Fixed alongside:** a click event with no pointerId (a plain MouseEvent) threw `Cannot read properties of null (reading 'handled')` in v4.2. A locked capy in a conflict now shows the red ring (the gold lock glow used to hide it).
+- **Test maintenance:** version literals were moved from 4.2 to 4.2.1 in `unit.test.js`, `updates.test.js`, `v31.test.js`, `v42.test.js`, `updates.spec.js`, `upgrade-v42.spec.js`, `v42.spec.js` and `v31-extension.spec.js`. The haptic pins in `unit.test.js` were updated to the new values. One v4.1 test ("Undo can restore wrong cells") still passes unchanged.
+
+## v4.2 list
 
 - **Not playtested by humans.** The three crate levels are verified by the Designer's exact solver (`verify/solver.py`) and by the app's BFS, but "ramping difficulty" is measured as board size + optimal moves/pushes + search states (18/8 → 30/13 → 57/22), not by timing real players. Level 3 (57 moves, 7×7) may feel long on a phone; par is shown (80) but has no consequence.
 - **Deadlock hint is deliberately cautious.** It only flags provably dead crates (corner, frozen 2×2, a wall line with no fruit). An exhaustive check of every reachable state found **0 false alarms**, but it catches 82% / 88% / 98% of dead positions in levels 1 / 2 / 3 (`reports/v4.2/deadlock-audit.json`). Some hopeless positions (for example, two crates blocking each other away from walls) show no hint; Undo and Restart are always free.

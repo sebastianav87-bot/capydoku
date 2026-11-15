@@ -1,3 +1,4 @@
+import { isBoss } from "./roles.js";
 import { newMetrics } from "./rewards.js";
 import { move, violations, enumerate, peers, cleanAttempt, solved, isLocked, withLocks, solutionCells } from "./core.js";
 import { CHARACTERS } from "./characters.js";
@@ -51,28 +52,39 @@ export function usePower(p, s, selected, rng = Math.random) {
 // Charges and power use are attempt resources: Undo never refunds them.
 export function attemptMove(p, s, i, value) {
   if (s.lives === 0 || isLocked(p, s, i)) return s;
+  if (value === 2 && s.cells[i] === 2) return s;
   const charge = (value === 2 && s.cells[i] !== 2) || (value === 1 && s.cells[i] === 0),
     protectedMove = charge && s.power.napRemaining > 0;
   const result = move(p, s, i, value, protectedMove);
   if (result === s) return s;
   const next = { ...s, ...result, power: { ...s.power }, metrics: { ...s.metrics } };
+  if (result.rejected === undefined) delete next.rejected; // transient flag, only on the rejecting move
   // v4.2: the crate-bonus spare orange absorbs the first lost orange; the mistake itself is still counted below.
   if (result.lives < s.lives && s.spare > 0) {
     next.lives = s.lives;
     next.spare = 0;
     next.spareUsed = true;
   } else delete next.spareUsed;
-  if (value === 2 && violations(p, result.cells).has(i)) next.metrics.mistakes++;
+  // A rejected capy (not in the solution) is always a mistake, Nap or not; it never stays on the board.
+  if (result.rejected !== undefined || (value === 2 && violations(p, result.cells).has(i))) next.metrics.mistakes++;
   if (protectedMove) next.power.napRemaining--;
   if (result.lives < s.lives) next.lastMistake = { cell: i };
   if (next.power.peekCell !== null && next.cells[next.power.peekCell] !== 0) next.power.peekCell = null;
   return withLocks(p, next);
 }
+// v4.3 fix: Undo keeps locks (proven-correct capys), but it must never rebuild a board that never existed.
+// Merging today's locks into an older snapshot used to bring back an unlocked capy that touches (row, column,
+// zone or any of the 8 neighbours, diagonals included) a capy that was locked LATER, i.e. a lock the snapshot did
+// not have. A capy "appeared" next to another one with no orange lost. Such a capy can never be correct (it clashes
+// with a proven capy), so it stays cleared. Snapshots that really had the clash (e.g. undoing Clear conflicts) are
+// restored exactly as before.
 export function undoAttempt(s, cells, p = null) {
   const locked = p ? withLocks(p, s).locked : s.locked || [],
+    future = locked.filter((j) => cells[j] !== 2),
+    restored = cells.map((v, i) => (locked.includes(i) ? 2 : v)),
     next = {
       ...s,
-      cells: cells.map((v, i) => (locked.includes(i) ? 2 : v)),
+      cells: p ? restored.map((v, i) => (v === 2 && !locked.includes(i) && future.some((j) => peers(p, i, j)) ? 0 : v)) : restored,
       locked: [...locked],
       power: { ...s.power, peekCell: s.power.peekCell !== null && cells[s.power.peekCell] === 0 ? s.power.peekCell : null },
     };
@@ -82,14 +94,16 @@ export function undoChanges(s, cells, p = null) {
   return undoAttempt(s, cells, p).cells.some((v, i) => v !== s.cells[i]);
 }
 export function awardPureBoss(progress, p, s, daily = false) {
-  if (solved(p, s.cells) && !daily && [10, 20, 30].includes(p.id) && !s.power.used && !progress.goldenLilies.includes(p.id)) {
+  if (solved(p, s.cells) && !daily && isBoss(p.id) && !s.power.used && !progress.goldenLilies.includes(p.id)) {
     progress.goldenLilies.push(p.id);
     return true;
   }
   return false;
 }
 
-// Priority recovery clears local offenders, preserving confirmed solution locks; one undo step.
+// v4.3 rev b: the Clear conflicts button and action were retired. Wrong capys are rejected on placement (core.move) and
+// dropped from old saves on resume (core.dropWrongCapys), so a board can no longer hold a conflict to clear. The pure
+// helper stays exported (unused by the UI) for old-board tooling and tests.
 export function clearConflicts(p, s) {
   const bad = violations(p, s.cells);
   return bad.size ? { ...s, cells: s.cells.map((v, i) => (bad.has(i) && !isLocked(p, s, i) ? 0 : v)) } : s;
