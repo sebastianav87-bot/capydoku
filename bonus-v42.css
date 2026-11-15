@@ -1,0 +1,147 @@
+/* v4.2 crate bonus (Designer v3 spec): offer card, play screen, controls card, reward, spare orange. */
+:root{--crate-ink:#3f513e;--crate-sage:#6e8a63;--crate-cream:#fffdf5;--crate-gold:#E3A747}
+/* ---------- spare orange (HUD, offer, reward) ---------- */
+.orange.spare{width:27px;height:30px;outline:3px solid #F2CF68;outline-offset:1px;background:#F1A137;border-radius:48%;position:relative}
+.orange.spare:after{content:'+1';position:absolute;right:-11px;top:-11px;width:17px;height:17px;border-radius:50%;background:#6D8F5E;color:#FFF9E9;font-size:9.5px;font-weight:900;line-height:17px;text-align:center;border:1.5px solid #FFF6DC}
+.lives .orange.spare{margin-left:4px}
+.orange.spare.mini{display:inline-block;width:15px;height:17px;outline-width:2px;flex:0 0 auto;margin-right:9px;vertical-align:middle}
+.orange.spare.mini:before{top:-4px;left:6px;width:4px;height:6px}
+.orange.spare.mini:after{width:11px;height:11px;line-height:11px;font-size:7px;right:-9px;top:-8px}
+.tap-hint.spare-hint{display:flex;align-items:center;justify-content:center;gap:2px;margin:4px 10px 2px;padding:5px 10px;border-radius:12px;background:#F7EBC6;border:1px solid #DDBF6C;color:#5c4a22;font-size:11.5px;line-height:1.25;text-align:left}
+.tap-hint.spare-hint strong{color:#4a3a14}
+/* ---------- offer card on the transition ---------- */
+.transition.with-bonus .transition-card{justify-content:flex-start;padding-top:max(18px,env(safe-area-inset-top));gap:6px}
+.transition.with-bonus .transition-capy,.transition.with-bonus .transition-boss{display:none}
+.transition.with-bonus h1{font-size:32px}
+.transition.with-bonus .transition-lilies{margin:2px 0;padding:6px 8px}
+.transition.with-bonus .transition-card button.primary{min-height:54px}
+.bonus-offer{width:100%;max-width:360px;background:#F4ECD3;border:1.3px solid #C9B27A;border-radius:22px;padding:10px 12px 12px;text-align:left;margin-top:4px}
+.bonus-offer-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.bonus-offer-top small{font-weight:800;color:var(--crate-sage);font-size:12px}
+.bonus-tag{display:inline-block;background:#F0DFAE;border:1px solid #C2A35A;border-radius:12px;padding:3px 10px;font-size:10.5px;font-weight:900;letter-spacing:.05em;text-transform:uppercase;color:#6D562A}
+.bonus-offer-body{display:flex;gap:12px;align-items:center}
+.bonus-thumb{flex:0 0 auto;width:min(31vw,118px);aspect-ratio:1;display:grid;grid-template-columns:repeat(var(--n),1fr);gap:1.5px;padding:3px;background:#879D7B;border-radius:10px;box-shadow:inset 0 0 0 3px #879D7B}
+.bonus-thumb i{display:block;background:#EFE1BC center/86% no-repeat;border-radius:3px}
+.bonus-thumb .t-rock{background:#CDBE96 url(assets/rock.png) center/88% no-repeat}
+.bonus-thumb .t-crate{background-image:url(assets/crates/crate.svg)}
+.bonus-thumb .t-capy{background-size:100%}
+.bonus-offer-copy{display:flex;flex-direction:column;gap:3px;min-width:0}
+.bonus-offer-copy>strong{font-size:17px;line-height:1.15;color:var(--crate-ink)}
+.bonus-offer-copy>small{font-size:12px;font-weight:700;color:var(--crate-sage)}
+.bonus-orange-line{display:flex;align-items:center;gap:10px;font-weight:900;color:#6D562A;font-size:14.5px;line-height:1.1;margin-top:4px}
+.bonus-orange-line>span{display:flex;flex-direction:column;gap:1px}.bonus-orange-line small{display:block;font-weight:700;font-size:11.5px;color:#7d6a40}
+.bonus-orange-line .orange.spare{width:22px;height:25px;flex:0 0 auto;margin-right:6px}
+.bonus-done{color:#5c7a4f!important;font-weight:800!important}
+.transition-card .bonus-play{margin-top:10px;width:100%;min-height:46px!important;background:#FFF8E6;border:1.5px solid #C9CFB1;font-size:16px}
+.bonus-skip{margin:2px 0 0;font-size:13px;color:#5d6b57;line-height:1.3}
+.bonus-skip small{font-size:11.5px;font-weight:700}
+.transition-card button.transition-home-link{min-height:38px;background:none;border:none;box-shadow:none;color:#5d6b57;text-decoration:underline;font-size:14px}
+/* ---------- play screen ---------- */
+.crate-screen{background:linear-gradient(#FBF5E5,#EEF0DC);display:flex;flex-direction:column;align-items:center;padding:max(10px,env(safe-area-inset-top)) 0 calc(8px + env(safe-area-inset-bottom));gap:clamp(4px,1.1svh,10px)}
+.bonus-header{width:calc(100% - 28px);display:flex;align-items:center;justify-content:space-between}
+.bonus-title{text-align:center;display:flex;flex-direction:column;align-items:center;gap:3px}
+.bonus-title h2{margin:0;font-size:24px;color:var(--crate-ink)}
+.bonus-round{width:44px;height:44px;border-radius:50%;border:1.5px solid #C9CFB1;background:var(--crate-cream);display:grid;place-items:center;padding:0}
+.bonus-round svg{width:22px;height:22px;fill:none;stroke:var(--crate-ink);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.bonus-stats{width:calc(100% - 28px);display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.bonus-stats span{display:flex;justify-content:space-between;align-items:center;background:var(--crate-cream);border:1px solid #D6D9C2;border-radius:14px;padding:6px 10px}
+.bonus-stats small{font-weight:800;color:#5d6b57;font-size:12px}
+.bonus-stats b{font-size:19px;color:var(--crate-ink)}
+.crate-wrap{position:relative;padding:8px}
+.crate-board{position:relative;display:grid;grid-template-columns:repeat(var(--n),1fr);gap:3px;padding:3px;background:#E8ECE8;border-radius:10px;aspect-ratio:1;width:100%;touch-action:none;overscroll-behavior:contain;user-select:none;-webkit-user-select:none}
+.crate-cell{aspect-ratio:1;border:0;padding:0;border-radius:7px;background:#EFE1BC;position:relative;display:grid;place-items:center;touch-action:none;overflow:visible;box-shadow:inset 0 0 0 1px #0000000d}
+.crate-cell:before{content:'';position:absolute;inset:0;border-radius:inherit;background:radial-gradient(circle at 25% 72%,#D6C39388 0 3%,transparent 4%),radial-gradient(circle at 70% 25%,#D6C39388 0 2.5%,transparent 3.5%);pointer-events:none}
+.crate-cell.is-rock{background:#CDBE96}
+.crate-cell .rock-art{width:90%;height:90%;object-fit:contain;pointer-events:none}
+.crate-cell .fruit-target{width:84%;height:84%;pointer-events:none;transition:transform .25s,opacity .2s}
+.crate-cell.goal.filled .fruit-target{opacity:0;transform:translateY(-30%) scale(.6)}
+.crate-cell.nope{animation:crate-nope .28s}
+@keyframes crate-nope{30%{box-shadow:inset 0 0 0 3px #C9785A88}}
+.crate-layer{position:absolute;inset:3px;pointer-events:none;--cell:calc((100% - (var(--n) - 1) * 3px) / var(--n))}
+.crate-sprite,.crate-player{position:absolute;left:0;top:0;width:var(--cell);height:var(--cell);transform:translate(calc(var(--c) * (100% + 3px)),calc(var(--r) * (100% + 3px)));transition:transform 110ms ease-out;will-change:transform}
+.crate-sprite img{position:absolute;inset:0;width:100%;height:100%}
+.crate-sprite .crate-packed-img,.crate-sprite .crate-fruit{opacity:0}
+.crate-sprite .crate-fruit{inset:auto;left:19%;top:-14%;width:62%;height:62%;transition:opacity .15s}
+.crate-sprite.packed .crate-img{opacity:0}
+.crate-sprite.packed .crate-packed-img,.crate-sprite.packed .crate-fruit{opacity:1}
+.crate-sprite.pop .crate-fruit{animation:fruit-hop .6s cubic-bezier(.3,1.6,.5,1)}
+.crate-sprite.pop .crate-packed-img{animation:crate-squash .45s}
+@keyframes fruit-hop{0%{transform:translateY(55%) scale(1.25);opacity:1}45%{transform:translateY(-38%) scale(1.05)}100%{transform:none}}
+@keyframes crate-squash{30%{transform:scale(1.12,.9)}65%{transform:scale(.96,1.05)}}
+.crate-sprite.stuck:after{content:'';position:absolute;inset:2px;border-radius:8px;box-shadow:0 0 0 3px #C9785A,0 0 10px 2px #C9785A99;animation:stuck-pulse 1.2s ease-in-out infinite}
+@keyframes stuck-pulse{50%{box-shadow:0 0 0 3px #C9785A66,0 0 4px 1px #C9785A44}}
+.crate-player img{width:112%;height:112%;margin:-8% -6%;object-fit:contain;filter:drop-shadow(0 3px 2px #0003);transition:transform .12s}
+.crate-player.face-left img{transform:scaleX(-1)}
+.crate-player.nudge img{animation:capy-nudge .2s}
+@keyframes capy-nudge{40%{translate:0 -6%}}
+.crate-board.all-packed{animation:board-glow 1s ease-out}
+@keyframes board-glow{40%{box-shadow:0 0 0 4px #F2CF68,0 0 24px #F2CF68}}
+.crate-packed-pill{display:flex;align-items:center;gap:12px;background:var(--crate-cream);border:1px solid #D6D9C2;border-radius:99px;padding:4px 16px 4px 12px}
+.crate-packed-pill .pill-fruits{display:flex;gap:2px}
+.crate-packed-pill img{width:26px;height:26px;filter:grayscale(1);opacity:.4;transition:filter .3s,opacity .3s}
+.crate-packed-pill img.got{filter:none;opacity:1}
+.crate-packed-pill strong{color:var(--crate-ink);font-size:15px}
+.bonus-hint{margin:0;font-size:13px;font-weight:800;color:#5d6b57}
+.bonus-stuck{width:calc(100% - 28px);display:flex;align-items:center;justify-content:space-between;gap:10px;background:#FBE7DC;border:1.4px solid #C9785A;border-radius:16px;padding:6px 8px 6px 14px}
+.bonus-stuck[hidden]{display:none}
+.bonus-stuck span{display:flex;flex-direction:column}
+.bonus-stuck strong{color:#7a3a22;font-size:14px}
+.bonus-stuck small{color:#8a5a44;font-size:11.5px;font-weight:700}
+.bonus-stuck button{min-height:40px;padding:0 16px;border-radius:14px;border:0;background:#7a8f5f;color:#fff;font-weight:900;font-size:15px}
+.bonus-controls{width:calc(100% - 28px);display:flex;align-items:center;justify-content:space-around;gap:6px}
+.bonus-controls .undo-round{display:flex;flex-direction:column;align-items:center;gap:4px;background:none;border:0;padding:0;min-width:72px}
+.bonus-controls .undo-round strong{font-size:13px;color:var(--crate-ink)}
+.bonus-controls .undo-round:disabled{opacity:.45}
+.bonus-controls .round-icon{width:58px;height:58px;border-radius:50%;background:var(--crate-cream);border:1.5px solid #C9CFB1;display:grid;place-items:center;box-shadow:0 3px 0 #C9CFB1}
+.bonus-controls .round-icon svg{width:28px;height:28px;fill:none;stroke:var(--crate-ink);stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round}
+.bonus-capy-chip{display:flex;align-items:center;gap:8px;background:var(--crate-cream);border:1px solid #D6D9C2;border-radius:99px;padding:4px 14px 4px 6px;font-weight:800;font-size:13px;color:var(--crate-ink)}
+.bonus-capy-chip img{width:34px;height:34px;object-fit:contain}
+.bonus-dpad{display:grid;grid-template-columns:repeat(3,44px);grid-template-rows:repeat(3,40px);gap:2px}
+.bonus-dpad button{width:44px;height:40px;border-radius:50%;border:1.5px solid #C9CFB1;background:var(--crate-cream);display:grid;place-items:center;padding:0}
+.bonus-dpad svg{width:22px;height:22px;fill:none;stroke:var(--crate-ink);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.dpad-up{grid-area:1/2}.dpad-left{grid-area:2/1}.dpad-right{grid-area:2/3}.dpad-down{grid-area:3/2}
+.bonus-leave-card{width:calc(100% - 28px);display:flex;align-items:center;justify-content:space-between;background:#FBF3DC;border:1px solid #D9C48A;border-radius:16px;padding:8px 14px}
+.bonus-leave-card span{display:flex;flex-direction:column}
+.bonus-leave-card strong{font-size:14px;color:var(--crate-ink)}
+.bonus-leave-card small{font-size:11.5px;font-weight:700;color:#5d6b57}
+.bonus-leave-card em{font-style:normal;font-weight:900;font-size:12.5px;color:#6D562A}
+.crate-screen.with-dpad .bonus-leave-card{display:none}
+@media (max-height:800px){.bonus-controls .round-icon{width:50px;height:50px}.bonus-stats span{padding:4px 10px}.bonus-leave-card{padding:6px 12px}}
+/* ---------- controls card ---------- */
+.bonus-controls-dialog{text-align:left}
+.move-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.move-head h2{margin:0}
+.move-head small{font-weight:800;color:#6D562A;font-size:12px}
+.move-toggle{display:grid;grid-template-columns:1fr 1fr;background:#E3E8D6;border-radius:99px;padding:3px;margin:12px 0 6px}
+.move-toggle button{border:0;border-radius:99px;min-height:40px;background:none;font-weight:900;color:#5d6b57}
+.move-toggle button[aria-checked="true"]{background:#6E8F5E;color:#fff}
+.move-steps{margin:6px 0;padding-left:22px;display:flex;flex-direction:column;gap:6px}
+.move-steps strong{display:block;color:var(--crate-ink)}
+.move-steps small{color:#5d6b57;font-weight:700}
+.move-note{font-size:12.5px;color:#5d6b57;margin:6px 0 10px}
+/* ---------- reward ---------- */
+.bonus-reward{background:linear-gradient(#FBF5E5,#EEF0DC);display:flex;flex-direction:column;align-items:center;text-align:center;padding:max(16px,env(safe-area-inset-top)) 20px calc(16px + env(safe-area-inset-bottom));gap:clamp(6px,1.2svh,12px)}
+.reward-tag{align-self:flex-start}
+.bonus-reward h1{margin:0;font-size:34px;color:var(--crate-ink)}
+.reward-sub{margin:0;font-weight:800;color:#5d6b57;font-size:14px}
+.reward-scene{position:relative;width:100%;max-width:372px;aspect-ratio:372/250;border-radius:22px;overflow:hidden;border:1.5px solid #D6D9C2}
+.reward-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.reward-capy{position:absolute;right:6%;bottom:6%;width:34%;object-fit:contain;filter:drop-shadow(0 4px 4px #0004)}
+.reward-crates{position:absolute;left:3%;bottom:4%;display:flex;gap:2px}
+.reward-crates span{position:relative;width:min(16vw,62px);aspect-ratio:1}
+.reward-crates img{position:absolute;inset:0;width:100%}
+.reward-crates .reward-fruit{left:18%;top:-22%;width:64%;inset:auto}
+.reward-orange{width:100%;max-width:372px;display:flex;gap:30px;align-items:center;background:var(--crate-cream);border:1.3px solid #D9C48A;border-radius:22px;padding:12px 18px;text-align:left}
+.reward-orange .orange.spare.big{width:52px;height:58px;outline-width:5px;outline-offset:3px;flex:0 0 auto}
+.reward-orange .orange.spare.big:before{left:22px;width:10px;height:12px;top:-8px}
+.reward-orange .orange.spare.big:after{width:28px;height:28px;line-height:28px;font-size:14px;right:-16px;top:-16px}
+.reward-orange span{display:flex;flex-direction:column;gap:2px}
+.reward-orange strong{font-size:24px;color:var(--crate-ink)}
+.reward-orange small{font-weight:800;color:#5d6b57}
+.reward-orange em{font-style:normal;font-weight:800;color:#6D562A;font-size:14px}
+.reward-orange .reward-fine{font-size:11.5px}
+.reward-moves{margin:0;color:#5d6b57;font-size:14px}
+.reward-moves small{font-weight:700;font-size:12px}
+.bonus-reward button{width:100%;max-width:372px;min-height:52px;border-radius:18px;font-weight:800}
+.bonus-reward button.primary{min-height:60px;font-size:19px}
+@media (prefers-reduced-motion:reduce){.crate-sprite,.crate-player{transition:none}.crate-sprite.pop .crate-fruit,.crate-sprite.pop .crate-packed-img,.crate-sprite.stuck:after,.crate-board.all-packed{animation:none}}

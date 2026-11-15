@@ -1,4 +1,17 @@
-# Known issues / honest limits — local v4.1 (adds to the v4 list below)
+# Known issues / honest limits — local v4.2 (adds to the v4.1 and v4 lists below)
+
+- **Not playtested by humans.** The three crate levels are verified by the Designer's exact solver (`verify/solver.py`) and by the app's BFS, but "ramping difficulty" is measured as board size + optimal moves/pushes + search states (18/8 → 30/13 → 57/22), not by timing real players. Level 3 (57 moves, 7×7) may feel long on a phone; par is shown (80) but has no consequence.
+- **Deadlock hint is deliberately cautious.** It only flags provably dead crates (corner, frozen 2×2, a wall line with no fruit). An exhaustive check of every reachable state found **0 false alarms**, but it catches 82% / 88% / 98% of dead positions in levels 1 / 2 / 3 (`reports/v4.2/deadlock-audit.json`). Some hopeless positions (for example, two crates blocking each other away from walls) show no hint; Undo and Restart are always free.
+- **Spare orange rules (decisions):** it is tied to the pond right after the bonus ("for Pond 6"). The first attempt started on that pond takes it, whether it's a new or a resumed board. It waits if you play the Daily or another pond first. Retry/Replay after spending it gets no new spare. Second chance restores the normal oranges only, never the spare. Undo never refunds it.
+- **Bonus progress isn't saved mid-level.** Leaving, reloading or closing the app during a bonus restarts that bonus from the beginning (it's short and optional). Solved bonuses, best moves, the pending spare orange and the D-pad choice are saved.
+- **Rollback/old tabs:** storage stays schema 3 with an additive `bonus` block, so rolling back to v4.1 keeps every pond, lily and streak. v4.1 would drop only the bonus extras (and a pending spare orange). A v4.1 tab left open alongside a v4.2 tab could overwrite those extras the same way.
+- **Haptics:** crate ticks (24 ms per pushed cell) and the landing pattern ([40,50,140]) are verified as mocked `navigator.vibrate` calls in Chromium only. How they feel on a real Android phone is unverified. iOS Safari has no Vibration API, so iPhones get no haptics. The cell landing a crate gets the landing pattern instead of the tick (one vibration per step).
+- **Swipe** is one step per swipe (≥24 px) with no hold-to-repeat. Tap-to-walk animates the capy one cell every 85 ms. Real-device touch feel and accidental swipes vs. taps are unverified (emulated touch only).
+- The orange/+1 badge on the HUD and the golden banana on a golden crate are the lowest-contrast pairs. They read in screenshots at 360 and 412 px, but they haven't had a real-device accessibility review.
+- Bonus levels aren't listed in Settings > Progress. A solved bonus is replayed from the same "Next pond" screen (after ponds 5, 15 and 25, including replays of those ponds).
+- **Test maintenance:** version-literal assertions were moved from v4.1 to v4.2 (or to `BUILD.version`) in `unit.test.js`, `updates.test.js`, `v31.test.js`, `updates.spec.js`, `upgrade-v41.spec.js` and `v31-extension.spec.js`. No behavioral assertion was weakened. The v4 → current upgrade spec now writes its logs to `reports/v4.2/regression-v4-upgrade-*`.
+
+## v4.1 list
 
 - Haptic strength is measured only as mocked `navigator.vibrate` patterns in Chromium; how strong it feels on a real Android phone is unverified. iOS Safari has no Vibration API, so iPhone gets no haptics (documented in `config.js`).
 - The difficulty score is a structural deduction measure (techniques and step counts), not timed human playtests.

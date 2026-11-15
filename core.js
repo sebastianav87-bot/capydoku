@@ -1,6 +1,7 @@
 import { HAPTIC_CONFIG } from "./config.js";
 import { cleanMetrics, cleanLilies } from "./rewards.js";
 import { nickname } from "./profile.js";
+import { cleanBonus } from "./crates.js";
 /* No dependencies, no network, no hidden solution table. */
 export const SCHEMA = 3,
   KEY = "capydoku.progress.v3",
@@ -199,6 +200,9 @@ export function fresh() {
     rocksReached: false,
     daily: { lastDay: null, streak: 0 },
     sessions: {},
+    // v4.2 crate bonus (additive, still storage schema 3 so a v4.1 rollback keeps all progress): solved bonus levels,
+    // best moves, the one pending spare orange, D-pad preference and whether the controls card was seen.
+    bonus: cleanBonus(null),
   };
 }
 export function cleanAttempt(v, length) {
@@ -215,6 +219,8 @@ export function cleanAttempt(v, length) {
       peekCell:
         used && kind === "peek" && Number.isInteger(raw.peekCell) && raw.peekCell >= 0 && raw.peekCell < length ? raw.peekCell : null,
     },
+    // v4.2: a spare orange from the crate bonus (0/1). It is spent before the three normal oranges.
+    spare: v?.spare === 1 ? 1 : 0,
     lastMistake:
       Number.isInteger(v?.lastMistake?.cell) && v.lastMistake.cell >= 0 && v.lastMistake.cell < length
         ? { cell: v.lastMistake.cell }
@@ -257,6 +263,7 @@ export function sanitize(raw) {
       (Array.isArray(raw.goldenLilies) ? raw.goldenLilies : []).filter((id) => [10, 20, 30].includes(id) && p.completed.includes(id)),
     ),
   ];
+  p.bonus = cleanBonus(raw.bonus);
   p.legacySelected = ["Classic", "Beanie", "Orange", "Duck"].includes(raw.legacySelected) ? raw.legacySelected : null;
   if (Number.isInteger(raw.daily?.lastDay) && Number.isInteger(raw.daily?.streak) && raw.daily.streak >= 0 && raw.daily.streak < 100000)
     p.daily = { lastDay: raw.daily.lastDay, streak: raw.daily.streak };
@@ -341,7 +348,13 @@ export function load(storage, data = null) {
         } catch {
           error = "Progress migration is in memory only; storage is unavailable.";
         }
-      return { progress, readOnly, error, migrated, contentMigration };
+      // v4.2: a v4.1 save gains the bonus block on first launch (silently; nothing else changes).
+      const bonusMigrated = !readOnly && !migrated && !(raw.bonus && typeof raw.bonus === "object");
+      if (bonusMigrated)
+        try {
+          storage.setItem(KEY, JSON.stringify(progress));
+        } catch {}
+      return { progress, readOnly, error, migrated, contentMigration, bonusMigrated };
     }
     const v2 = JSON.parse(storage.getItem(V2_KEY) || "null"),
       old = v2?.version === 2 ? v2 : JSON.parse(storage.getItem(LEGACY_KEY) || "null");

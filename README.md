@@ -1,3 +1,9 @@
+# Capydoku v4.2 — local-only playable PWA (not published)
+
+**v4.2 changes:** an optional crate-pushing bonus pond is offered on the "Next pond" screen after ponds 5, 15 and 25 ("Start pond N" stays the primary action; "Skipping costs nothing"). Your active capy pushes wooden X-crates onto watermelon/banana/pear targets; the fruit hops into the crate and turns golden ("x/3 packed"). Swipe = one step, tap a tile = walk (never pushes), free Undo, Restart, Leave anytime, optional D-pad (Settings or the first-run "Move your way" card), arrow keys/WASD on desktop. Three solver-verified levels (5×5 18 moves → Crate Cove 3 6×6 30 moves → 7×7 57 moves) with sound deadlock hints ("That crate is stuck · Undo?"). Reward: +1 spare orange for the next pond only; it absorbs the first mistake, the mistake still costs the 0-mistakes lily, it never stacks and the bonus is outside the 100%. Crate haptics come from the same `HAPTIC_CONFIG` (`cratePush` 24 ms per pushed cell, `crateLand` [40,50,140]). Full write-up: `reports/ROUND-v4.2.md`.
+
+---
+
 # Capydoku v4.1 — local-only playable PWA (not published)
 
 **v4.1 changes:** correct capys lock (subtle glow + padlock, bump + light haptic on tap, no penalty); one stronger haptic config in `config.js`; a measured difficulty ramp per world with breathers after bosses (`reports/DIFFICULTY-v4.1.md`); rock fixes and clearer rock copy; the illustrated Pond Path map is replaced by a simple home (Continue · Daily · all ponds) and a "Next pond" transition screen after each solve. Full write-up: `reports/ROUND-v4.1.md`. iOS Safari has no Vibration API, so haptics are Android/Chromium only.

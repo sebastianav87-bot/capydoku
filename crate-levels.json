@@ -1,0 +1,85 @@
+{
+ "schema": 1,
+ "solver": "mockup/boxworld-concept/v3/verify/solver.py",
+ "solver_sha256": "eb5314bb98fe8ebd3991e86fdbdd92aa2122bc9133cc7f7eb8d53dc7fd1797cf",
+ "levels": [
+  {
+   "id": 1,
+   "name": "Crate Cove 1",
+   "afterPond": 5,
+   "n": 5,
+   "rows": [
+    "#######",
+    "#.   .#",
+    "#  @  #",
+    "##$.$ #",
+    "#   $ #",
+    "###   #",
+    "#######"
+   ],
+   "fruit": [
+    "watermelon",
+    "banana",
+    "pear"
+   ],
+   "optimalMoves": 18,
+   "optimalPushes": 8,
+   "pushesInMoveOptimal": 8,
+   "par": 25,
+   "solution": "DDRDRUUUDLDLLUURUL"
+  },
+  {
+   "id": 2,
+   "name": "Crate Cove 3",
+   "afterPond": 15,
+   "n": 6,
+   "rows": [
+    "########",
+    "#  @## #",
+    "#$.    #",
+    "# #   .#",
+    "#. ##$ #",
+    "#   $  #",
+    "#  #   #",
+    "########"
+   ],
+   "fruit": [
+    "watermelon",
+    "banana",
+    "pear"
+   ],
+   "optimalMoves": 30,
+   "optimalPushes": 13,
+   "pushesInMoveOptimal": 13,
+   "par": 40,
+   "solution": "LLDDDRDDLURRRRUURULLLDRRDDDRUU"
+  },
+  {
+   "id": 3,
+   "name": "Crate Cove 5",
+   "afterPond": 25,
+   "n": 7,
+   "rows": [
+    "#########",
+    "#  . #  #",
+    "# .   # #",
+    "#. # $$ #",
+    "#       #",
+    "#    @  #",
+    "#  $ #  #",
+    "## #   ##",
+    "#########"
+   ],
+   "fruit": [
+    "watermelon",
+    "banana",
+    "pear"
+   ],
+   "optimalMoves": 57,
+   "optimalPushes": 20,
+   "pushesInMoveOptimal": 22,
+   "par": 80,
+   "solution": "LLLDRURRRDDLLUURULLDLUUULURDRRRDDRRULLDRDLLLLDLUURRRURULL"
+  }
+ ]
+}

@@ -56,6 +56,12 @@ export function attemptMove(p, s, i, value) {
   const result = move(p, s, i, value, protectedMove);
   if (result === s) return s;
   const next = { ...s, ...result, power: { ...s.power }, metrics: { ...s.metrics } };
+  // v4.2: the crate-bonus spare orange absorbs the first lost orange; the mistake itself is still counted below.
+  if (result.lives < s.lives && s.spare > 0) {
+    next.lives = s.lives;
+    next.spare = 0;
+    next.spareUsed = true;
+  } else delete next.spareUsed;
   if (value === 2 && violations(p, result.cells).has(i)) next.metrics.mistakes++;
   if (protectedMove) next.power.napRemaining--;
   if (result.lives < s.lives) next.lastMistake = { cell: i };
