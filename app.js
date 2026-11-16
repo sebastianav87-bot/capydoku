@@ -45,6 +45,7 @@ import {
 import { sound, warmAudio } from "./audio.js";
 import { PondMusic, MUSIC_TRACKS } from "./music.js";
 import { boardMaxWidth, boardWidthCSS, boardViewportWidthCSS, sizingMode, landingAt, soakAt, reactionAt } from "./layout.js";
+import { installFit } from "./fit.js";
 const music = new PondMusic();
 let tutorial = null;
 import {
@@ -143,6 +144,8 @@ new MutationObserver(() => {
   updates?.checkSafe();
 }).observe(root, { childList: true, subtree: true });
 window.addEventListener("resize", () => updateResponsiveCharacters(root));
+// v4.3.1: size the crate/logic board from the visible height too (iPhone Safari tab with toolbars, safe areas).
+installFit(root, () => { if (view === "game" && !tutorial) drawOutlines(); });
 let loaded = { progress: fresh(), readOnly: false },
   progress = loaded.progress,
   warning = null;

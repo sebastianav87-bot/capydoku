@@ -1,4 +1,11 @@
-# Known issues / honest limits — local v4.3 rev b (crate ponds, no level screen, Fresh Leaf, wrong-capy rule; not published)
+# Known issues / honest limits — local v4.3.1 (v4.3 rev b + iPhone fit; not published)
+
+## v4.3.1 (iPhone fit)
+- **Verified only in emulation.** Playwright WebKit with iPhone emulation (DPR 3), not a real iPhone or iOS Safari. Every crate pond and Boss 29 fit at 375×525/667, 390×664/694/844, 393×702/852 and 430×782/932 (180/180 harness states; 119 WebKit E2E tests).
+- **iOS 26 floating toolbar:** it can't be emulated. The page uses svh/dvh and safe-area padding, but if iOS draws its translucent bar over the layout viewport, the bottom of the lilies card/controls could still sit under it. Needs a check on Sebastián's phone.
+- **Short screens get smaller cells.** In a Safari tab at 375×525 (iPhone SE with toolbars): crate 8×8 cells are 28 px, Boss 29 is 24 px (the floor), pond 7 is 27 px. At 390×664, Boss 29 is 36 px and crate 8×8 is 40 px. On short screens the crate hint text, and on very short screens the packed-lilies pill and the tap hint, are hidden. The controls stay ≥ 44 px.
+- **The layout tier depends on the measured height.** 390×694 uses compact + a small shrink (Boss 29: 34 px) while 390×664 uses the tight row controls (36 px), so cell size isn't strictly monotonic with height.
+- **The rev b Show me styling was broken on every device** by an unterminated CSS comment (gate tag, transition art, replay lock and crate reward styling too). Fixed, and a unit test now rejects CSS comments that swallow rules.
 
 ## v4.3 list
 
