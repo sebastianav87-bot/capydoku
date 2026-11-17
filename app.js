@@ -94,7 +94,7 @@ import { installCopy, isStandalone, isIOS } from "./platform.js";
 import { createBonus, crateLilyDetails } from "./bonus-ui.js";
 import { isBoss, isCrate, isGate, isWorldGate, role, pondLabel, worldOf, worldPonds, GATE_PONDS, WORLD_GATES, FINALE_POND, NEW_WORLD_PONDS, POND_COUNT, WORLD_COUNT, BOSS_PONDS } from "./roles.js";
 import { logicScore, recordScore, worldScore, worldScores } from "./score.js";
-import { createLeaderboard, pickAdapter, DEFAULT_NAME } from "./leaderboard.js";
+import { createLeaderboard, pickAdapter, DEFAULT_NAME, lastCleared } from "./leaderboard.js";
 import { claimSpare } from "./crates.js";
 import { explainCapy, neighbours8, solvedZones, zoneMarkCells, OFF_SOLUTION_HINT } from "./explain.js";
 const root = document.querySelector("#app"),
@@ -149,9 +149,10 @@ function proceed(id) {
   else start(id);
 }
 function queueScores() {
-  if (leaderboard.enqueue(worldScores(progress))) leaderboard.flush();
+  if (leaderboard.enqueueProgress(progress)) return leaderboard.flush();
+  return Promise.resolve({ sent:0 });
 }
-addEventListener("online", () => leaderboard.flush(true));
+addEventListener("online", () => { leaderboard.flush(true).then(() => { if(modal === 'leaderboard') refreshLeaderboard(); }); });
 let versionNotice = null,
   nicknameEditing = false,
   lastLilyResult = null,
@@ -329,7 +330,7 @@ function dailyButton() {
   return `<button class="hub-tile hub-daily" data-action="daily" aria-label="Daily Pond · ${streak}-day streak">${navIcon("daily")}<span><strong>Daily</strong><small>◕ ${streak}-day streak</small></span></button>`;
 }
 function hubTiles() {
-  return `<div class="hub-tiles">${dailyButton()}<button class="hub-tile hub-spring" data-action="collection" aria-label="Hot Spring">${navIcon("collection")}<span><strong>Hot Spring</strong><small>${Object.keys(CHARACTERS).length} capys</small></span></button></div>`;
+  return `<div class="hub-tiles"><button class="hub-tile hub-leaderboard" data-action="leaderboard">🏆 Leaderboard</button>${dailyButton()}<button class="hub-tile hub-spring" data-action="collection" aria-label="Hot Spring">${navIcon("collection")}<span><strong>Hot Spring</strong><small>${Object.keys(CHARACTERS).length} capys</small></span></button></div>`;
 }
 function hubCapy() {
   return `<div class="capy-wrap"><img class="transition-capy" src="${sprite(progress.selected, "portrait")}" alt=""><button class="capy-swap" data-action="switchCapy" aria-label="Switch capy">⇄</button></div>`;
@@ -501,7 +502,7 @@ function renderGame() {
     compact = v5Chrome();
   shell(
     `game ${clear ? "solved" : ""} ${compact && !clear ? "chrome-v5" : ""}`,
-    `${compact && !clear ? compactHeaderHTML(label, count) : `<header class="topbar"><button class="level-pill" data-action="home" aria-label="Back to home">‹ ${clear ? label : ""}</button>${clear ? "" : '<button class="help-btn" data-action="rules" aria-label="Rules">?</button>'}${clear ? `<div class="solved-counter" aria-label="${count} of ${puzzle.n} capys"><img src="${pieceSprite()}" alt=""><strong>${count}/${puzzle.n}</strong></div>` : `<h2>${label}${isDaily ? ` · ${puzzle.date.slice(5)}` : ""}</h2><div class="top-counter"><img src="${pieceSprite()}" alt=""><strong class="capy-counter-total">${count}/${puzzle.n}</strong></div>`}${clear ? "" : `<div class="life-area"><div class="lives" data-lives="${state.lives}" data-spare="${state.spare ? 1 : 0}" aria-label="${state.lives} oranges left${state.spare ? " plus 1 spare orange" : ""}">${[0, 1, 2].map((i) => `<span class="orange ${i >= state.lives ? "used" : ""}"></span>`).join("")}${state.spare ? '<span class="orange spare" title="Spare orange · this pond only"></span>' : ""}</div>${state.power.napRemaining ? `<span class="nap-badge">Nap · ${state.power.napRemaining}</span>` : ""}</div>`}</header>`}${!isDaily && state.boss && !clear ? bossBadgeHTML() : ""}${clear ? '<div class="banner" role="status">Pond cleared</div>' : compact ? "" : ruleCards()}${boardHTML()}<section class="lower">${clear ? `<div class="spring celebration" data-phase="gather"><div class="steam"></div><div class="dock"></div>${progress.completed.includes(10) ? '<div class="lantern l1"></div><div class="lantern l2"></div>' : ""}<div class="ripples">${Array.from({ length: puzzle.n }, (_, i) => `<i class="splash-ring" style="--i:${i};--land:${landingAt(i)}ms;left:${((i + 0.5) * 100) / puzzle.n}%"></i>`).join("")}</div><div class="steam-puffs"><i></i><i></i><i></i></div><div class="jumpers" style="--count:${puzzle.n}">${Array.from({ length: puzzle.n }, (_, i) => `<img class="soaking-capy" src="${pieceSprite("swim")}" alt="" style="--i:${i};--land:${landingAt(i)}ms;--soak-x:${[18, 65, 34, 80, 17, 59, 45, 28, 74, 50][i]}%;--soak-y:${[42, 46, 65, 66, 82, 83, 56, 54, 58, 72][i]}%">`).join("")}</div>${pureReward ? `<span class="reward-lily golden-lily" role="img" aria-label="Golden lily pad reward" style="--reaction:${reactionAt(puzzle.n)}ms">✦<small>${puzzle.id}</small></span>` : ""}<div class="reaction" style="--reaction:${reactionAt(puzzle.n)}ms"><img src="${sprite(progress.selected, "portrait")}" alt=""><span>Ahh…</span></div>${state.lives ? `<div class="orange-saved" style="--reaction:${reactionAt(puzzle.n)}ms">🍊 ${state.lives} kept</div>` : ""}</div>${lilyResultsHTML()}<p class="sub">${reward ? `${pureReward ? "Pure solve · Golden lily pad" : "Boss cleared · the crate gate is next!"}` : isDaily ? `Splash! ${streakAt(progress, puzzle.day)} day streak` : "Splash! Into the hot spring"}</p><div class="chips"><button class="chip" data-action="collection">♨ Hot Spring</button><button class="chip primary" data-action="next">Next pond →</button></div>` : (compact ? thumbLowerHTML() : `${state.spare ? '<p class="tap-hint spare-hint"><i class="orange spare mini" aria-hidden="true"></i><span><strong>Spare orange · this pond only</strong> · used first if you slip; mistakes still count</span></p>' : '<p class="tap-hint">Tap × · Double-tap capy · Drag ×</p>'}${messageCardHTML()}<div class="controls"><button class="undo-round" data-action="undo" aria-label="Undo" ${history.some((h) => undoChanges(state, h.cells, puzzle)) ? "" : "disabled"}><span class="round-icon neutral-undo"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M37 24H11m0 0 12-12M11 24l12 12"/></svg></span><strong>Undo</strong></button>${powerButton()}</div>`)}</section>`,
+    `${compact && !clear ? compactHeaderHTML(label, count) : `<header class="topbar"><button class="level-pill" data-action="home" aria-label="Back to home">‹ ${clear ? label : ""}</button>${clear ? "" : '<button class="help-btn" data-action="rules" aria-label="Rules">?</button>'}${clear ? `<div class="solved-counter" aria-label="${count} of ${puzzle.n} capys"><img src="${pieceSprite()}" alt=""><strong>${count}/${puzzle.n}</strong></div>` : `<h2>${label}${isDaily ? ` · ${puzzle.date.slice(5)}` : ""}</h2><div class="top-counter"><img src="${pieceSprite()}" alt=""><strong class="capy-counter-total">${count}/${puzzle.n}</strong></div>`}${clear ? "" : `<div class="life-area"><div class="lives" data-lives="${state.lives}" data-spare="${state.spare ? 1 : 0}" aria-label="${state.lives} oranges left${state.spare ? " plus 1 spare orange" : ""}">${[0, 1, 2].map((i) => `<span class="orange ${i >= state.lives ? "used" : ""}"></span>`).join("")}${state.spare ? '<span class="orange spare" title="Spare orange · this pond only"></span>' : ""}</div>${state.power.napRemaining ? `<span class="nap-badge">Nap · ${state.power.napRemaining}</span>` : ""}</div>`}</header>`}${!isDaily && state.boss && !clear ? bossBadgeHTML() : ""}${clear ? '<div class="banner" role="status">Pond cleared</div>' : compact ? "" : ruleCards()}${boardHTML()}<section class="lower">${clear ? `<div class="spring celebration" data-phase="gather"><div class="steam"></div><div class="dock"></div>${progress.completed.includes(10) ? '<div class="lantern l1"></div><div class="lantern l2"></div>' : ""}<div class="ripples">${Array.from({ length: puzzle.n }, (_, i) => `<i class="splash-ring" style="--i:${i};--land:${landingAt(i)}ms;left:${((i + 0.5) * 100) / puzzle.n}%"></i>`).join("")}</div><div class="steam-puffs"><i></i><i></i><i></i></div><div class="jumpers" style="--count:${puzzle.n}">${Array.from({ length: puzzle.n }, (_, i) => `<img class="soaking-capy" src="${pieceSprite("swim")}" alt="" style="--i:${i};--land:${landingAt(i)}ms;--soak-x:${[18, 65, 34, 80, 17, 59, 45, 28, 74, 50][i]}%;--soak-y:${[42, 46, 65, 66, 82, 83, 56, 54, 58, 72][i]}%">`).join("")}</div>${pureReward ? `<span class="reward-lily golden-lily" role="img" aria-label="Golden lily pad reward" style="--reaction:${reactionAt(puzzle.n)}ms">✦<small>${puzzle.id}</small></span>` : ""}<div class="reaction" style="--reaction:${reactionAt(puzzle.n)}ms"><img src="${sprite(progress.selected, "portrait")}" alt=""><span>Ahh…</span></div>${state.lives ? `<div class="orange-saved" style="--reaction:${reactionAt(puzzle.n)}ms">🍊 ${state.lives} kept</div>` : ""}</div>${lilyResultsHTML()}<p class="sub">${reward ? `${pureReward ? "Pure solve · Golden lily pad" : "Boss cleared · the crate gate is next!"}` : isDaily ? `Splash! ${streakAt(progress, puzzle.day)} day streak` : "Splash! Into the hot spring"}</p><div class="chips"><button class="chip" data-action="collection">♨ Hot Spring</button><button class="chip primary" data-action="next">Next pond →</button></div>` : (compact ? thumbLowerHTML() : `${state.spare ? '<p class="tap-hint spare-hint"><i class="orange spare mini" aria-hidden="true"></i><span><strong>Spare orange · this pond only</strong> · used first if you slip; mistakes still count</span></p>' : '<div class="play-menu"><p class="tap-hint">Tap × · Double-tap capy · Drag ×</p><button class="pause-btn" data-action="pause">Ⅱ Pause</button></div>'}${messageCardHTML()}<div class="controls"><button class="undo-round" data-action="undo" aria-label="Undo" ${history.some((h) => undoChanges(state, h.cells, puzzle)) ? "" : "disabled"}><span class="round-icon neutral-undo"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M37 24H11m0 0 12-12M11 24l12 12"/></svg></span><strong>Undo</strong></button>${powerButton()}</div>`)}</section>`,
   );
   if (state.boss) root.querySelector(".screen").dataset.bossPhase = String(bossPhase(state));
   if (focusedCell !== undefined) root.querySelector(`[data-cell="${focusedCell}"]`)?.focus({ preventScroll: true });
@@ -535,7 +536,7 @@ function compactHeaderHTML(label, count) {
 const TOOL_HINT = { x: "× tool · one tap marks ×", capy: "Capy tool · one tap places a capy", none: "Tap × · double-tap capy · drag ×" };
 function thumbLowerHTML() {
   const undoOk = history.some((h) => undoChanges(state, h.cells, puzzle));
-  return `${state.spare ? '<p class="tap-hint spare-hint"><i class="orange spare mini" aria-hidden="true"></i><span><strong>Spare orange</strong> · used first if you slip</span></p>' : ""}<p class="tool-hint" data-tool="${tool || "none"}">${TOOL_HINT[tool || "none"]}</p><div class="controls thumbbar" role="toolbar" aria-label="Pond tools"><button class="tool-btn" data-action="tool" data-tool="x" aria-pressed="${tool === "x"}" aria-label="× tool"><span class="tool-icon x-icon" aria-hidden="true">×</span><strong>Mark</strong></button><button class="tool-btn" data-action="tool" data-tool="capy" aria-pressed="${tool === "capy"}" aria-label="Capy tool"><img class="tool-icon" src="${pieceSprite()}" alt=""><strong>Capy</strong></button><button class="undo-round tool-btn" data-action="undo" aria-label="Undo" ${undoOk ? "" : "disabled"}><span class="round-icon neutral-undo"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M37 24H11m0 0 12-12M11 24l12 12"/></svg></span><strong>Undo</strong></button>${powerButton()}</div>`;
+  return `${state.spare ? '<p class="tap-hint spare-hint"><i class="orange spare mini" aria-hidden="true"></i><span><strong>Spare orange</strong> · used first if you slip</span></p>' : ""}<div class="play-menu"><p class="tool-hint" data-tool="${tool || "none"}">${TOOL_HINT[tool || "none"]}</p><button class="pause-btn" data-action="pause">Ⅱ Pause</button></div><div class="controls thumbbar" role="toolbar" aria-label="Pond tools"><button class="tool-btn" data-action="tool" data-tool="x" aria-pressed="${tool === "x"}" aria-label="× tool"><span class="tool-icon x-icon" aria-hidden="true">×</span><strong>Mark</strong></button><button class="tool-btn" data-action="tool" data-tool="capy" aria-pressed="${tool === "capy"}" aria-label="Capy tool"><img class="tool-icon" src="${pieceSprite()}" alt=""><strong>Capy</strong></button><button class="undo-round tool-btn" data-action="undo" aria-label="Undo" ${undoOk ? "" : "disabled"}><span class="round-icon neutral-undo"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M37 24H11m0 0 12-12M11 24l12 12"/></svg></span><strong>Undo</strong></button>${powerButton()}</div>`;
 }
 function powerButton() {
   const kind = effectivePower(progress.selected),
@@ -975,7 +976,7 @@ function settings() {
     .querySelector(".screen")
     .insertAdjacentHTML(
       "beforeend",
-      `<div class="shade"><section class="dialog settings-dialog" role="dialog" aria-modal="true" aria-labelledby="settings-title"><h2 id="settings-title">Make yourself cozy</h2><div class="settings-row"><span>Haptics · gentle buzz</span><button data-action="settingsHaptics" aria-label="Haptics" aria-pressed="${progress.haptics}">${progress.haptics ? "On" : "Off"}</button></div><div class="settings-row"><span>Sound effects · splashes</span><button data-action="settingsAudio" aria-label="Sound" aria-pressed="${progress.audio}">${progress.audio ? "On" : "Off"}</button></div><div class="settings-row"><span>Music · pastoral pond</span><button data-action="settingsMusic" aria-label="Music" aria-pressed="${progress.music}">${progress.music ? "On" : "Off"}</button></div><div class="settings-row"><span>Crate ponds · D-pad</span><button data-action="settingsDpad" aria-label="Crate ponds D-pad" aria-pressed="${progress.bonus.dpad}">${progress.bonus.dpad ? "On" : "Off"}</button></div><button class="nickname-setting" data-action="editNickname">Nickname · ${escapeHTML(progress.nickname)} · Edit</button><button data-action="progress">Your pond collection · ${totalLilies(progress)}/${POND_COUNT * 3}</button><button class="leaderboard-setting" data-action="leaderboard">Leaderboard · ${leaderboard.state().optIn ? `joined as ${escapeHTML(leaderboard.displayName())}` : "off · opt in"}</button><button class="music-credit-link" data-action="musicCredits">Music credits · CC0</button><button data-action="install" aria-label="Install app">${installCopy()}</button><p class="small-text">One capy per row, column & zone.<br>No touching — diagonals too.</p><p class="build-label" data-build="${BUILD.build}" aria-label="Running version">v${BUILD.version} · build ${BUILD.build}</p><button class="primary" data-action="closeSettings">Done</button></section></div>`,
+      `<div class="shade"><section class="dialog settings-dialog" role="dialog" aria-modal="true" aria-labelledby="settings-title"><h2 id="settings-title">Make yourself cozy</h2><div class="settings-row"><span>Haptics · gentle buzz</span><button data-action="settingsHaptics" aria-label="Haptics" aria-pressed="${progress.haptics}">${progress.haptics ? "On" : "Off"}</button></div><div class="settings-row"><span>Sound effects · splashes</span><button data-action="settingsAudio" aria-label="Sound" aria-pressed="${progress.audio}">${progress.audio ? "On" : "Off"}</button></div><div class="settings-row"><span>Music · pastoral pond</span><button data-action="settingsMusic" aria-label="Music" aria-pressed="${progress.music}">${progress.music ? "On" : "Off"}</button></div><div class="settings-row"><span>Crate ponds · D-pad</span><button data-action="settingsDpad" aria-label="Crate ponds D-pad" aria-pressed="${progress.bonus.dpad}">${progress.bonus.dpad ? "On" : "Off"}</button></div><button class="nickname-setting" data-action="editNickname">Nickname · ${escapeHTML(progress.nickname)} · Edit</button><button data-action="progress">Your pond collection · ${totalLilies(progress)}/${POND_COUNT * 3}</button><button class="leaderboard-setting" data-action="leaderboard">Leaderboard · ${leaderboard.state().optIn ? `joined as ${escapeHTML(leaderboard.displayName())}` : "view rankings"}</button><button class="music-credit-link" data-action="musicCredits">Music credits · CC0</button><button data-action="install" aria-label="Install app">${installCopy()}</button><p class="small-text">One capy per row, column & zone.<br>No touching — diagonals too.</p><p class="build-label" data-build="${BUILD.build}" aria-label="Running version">v${BUILD.version} · build ${BUILD.build}</p><button class="primary" data-action="closeSettings">Done</button></section></div>`,
     );
 }
 function toast(text, power = null) {
@@ -1257,31 +1258,24 @@ function activateControl(b) {
   if (!tutorial && bonus.handle(b)) return;
   if (tutorial && !["tutorialSkip", "tutorialPlay"].includes(action)) return;
   switch (action) {
-    case "leaderboard":
-      leaderboardDialog();
-      break;
-    case "lbJoin": {
-      const was = leaderboard.state().optIn,
-        name = root.querySelector("#lb-name")?.value ?? "";
-      if (!leaderboard.join(name)) {
-        leaderboardDialog("!Nicknames are 2–16 characters, or leave it empty.");
-        break;
-      }
-      queueScores();
-      leaderboard.flush(true).then(() => modal === "leaderboard" && leaderboardDialog(was ? "Nickname saved" : "You joined the leaderboard"));
-      leaderboardDialog(was ? "Nickname saved" : "You joined the leaderboard");
+    case 'pause': pauseMenu(); break;
+    case 'resume': root.querySelector('.shade')?.remove();modal=null;bonus.resume?.();syncClock();break;
+    case 'leaderboard': openLeaderboard(); break;
+    case 'lbEdit':leaderboardDialog('',true);break;
+    case 'lbCancelName':leaderboardDialog();break;
+    case 'lbOverall':lbMode='overall';refreshLeaderboard();break;
+    case 'lbByWorld':lbMode='world';refreshLeaderboard();break;
+    case 'lbRefresh':leaderboard.flush(true).then(refreshLeaderboard);break;
+    case 'lbJoin': {
+      const name=root.querySelector('#lb-name')?.value||'';
+      if(!leaderboard.join(name)){leaderboardDialog('Use 2–16 characters, or leave the name empty.',true);break;}
+      queueScores().then(()=>{if(modal==='leaderboard'){leaderboardDialog(leaderboard.pending()?'Your entry is queued. It will sync when connected.':'Your entry is synced.');refreshLeaderboard();}});
+      leaderboardDialog('Syncing your existing scores and progress…');
       break;
     }
-    case "lbLeave":
-      leaderboard.leave().then(({ removed }) => {
-        if (modal === "leaderboard") leaderboardDialog(removed ? "You left · nickname and scores deleted" : "You left · nickname deleted here; the server copy will be removed when it can be reached");
-      });
-      break;
-    case "lbClose":
-      modal = null;
-      root.querySelector(".shade")?.remove();
-      settings();
-      break;
+    case 'lbLeave':
+      leaderboard.leave().then(({removed})=>{if(modal==='leaderboard'){leaderboardDialog(removed?'Your shared entry was deleted.':'Deletion queued. Reconnect to remove your shared entry.');refreshLeaderboard();}});break;
+    case 'lbClose':closeLeaderboard();break;
     case "worldTop":
       root.querySelector(".progress-ledger")?.remove();
       worldTop(Number(b.dataset.world), () => home());
@@ -1356,10 +1350,10 @@ function activateControl(b) {
       root.querySelector(`[data-action="tool"][data-tool="${b.dataset.tool}"]`)?.focus({ preventScroll: true });
       break;
     case "rules":
-      rulesSheet();
+      root.querySelector('.shade')?.remove();rulesSheet();
       break;
     case "closeRules":
-      modal = null;
+      bonus.resume?.();modal = null;
       root.querySelector(".sheet")?.remove();
       root.querySelector(".sheet-scrim")?.remove();
       break;
@@ -1395,7 +1389,7 @@ function activateControl(b) {
       saveRound();
       break;
     case "settings":
-      settings();
+      root.querySelector('.shade')?.remove();settings();
       break;
     case "settingsHaptics":
       progress.haptics = !progress.haptics;
@@ -1443,7 +1437,7 @@ function activateControl(b) {
       if (state.lives === 0 && view === "game") gameOver();
       break;
     case "closeSettings":
-      modal = null;
+      bonus.resume?.();modal = null;
       root.querySelector(".shade")?.remove();
       if (view === "home") home();
       break;
@@ -1546,6 +1540,7 @@ try {
   loaded = load(storage, data);
   await bonus.ensureLevels().catch(() => {}); // rev b: the hub can open on a crate pond, so its par/thumbnail must be ready before the first render.
   progress = loaded.progress;
+  queueScores();
   music.configure({ enabled: progress.music });
   warning = loaded.readOnly ? "Newer progress found. Playing without overwriting it." : loaded.error;
   enterOnboarding();
@@ -1665,11 +1660,10 @@ const LOCAL_REASON = {
   error: "Local only · couldn't reach the leaderboard. Your scores are queued and will retry.",
 };
 function top10HTML(b) {
-  const row = (rank, name, score, me) => `<li class="top10-row ${me ? "me" : ""}"><b>${rank ?? "–"}</b><span>${escapeHTML(name)}${me ? " (you)" : ""}</span><strong>${score.toLocaleString("en-US")}</strong></li>`;
-  if (b.mode === "local")
-    return `<h2>Top 10</h2><p class="top10-local" data-reason="${b.reason}">${LOCAL_REASON[b.reason] || LOCAL_REASON.error}</p><ol class="top10-list local">${row("You", b.me.nickname, b.me.score, true)}</ol>`;
-  const mine = b.entries.some((e) => e.me);
-  return `<h2>Top 10</h2><ol class="top10-list shared">${b.entries.map((e, i) => row(i + 1, e.nickname, e.score, e.me)).join("")}</ol><p class="top10-rank">${b.me.rank ? `Your rank: <strong>#${b.me.rank}</strong> of ${b.me.of}` : leaderboard.pending() ? "Your score is queued · it appears after the next upload" : "Not ranked yet"}${!mine && b.me.rank ? ` · ${b.me.score.toLocaleString("en-US")}` : ""}</p>`;
+  if (b.mode === 'local') return `<h2>Top 10</h2><p class="top10-local" data-reason="${b.reason}">${LOCAL_REASON[b.reason] || LOCAL_REASON.error}</p>`;
+  const row=(e)=>`<tr class="top10-row ${e.me?'me':''}"><td>#${e.rank}</td><th scope="row">${escapeHTML(e.nickname)}${e.me?' (you)':''}</th><td>${Number(e.score).toLocaleString('en-US')} pts</td><td>Pond ${e.last_cleared||0}</td></tr>`;
+  const stamp=b.mode==='cached'?`<p class="last-synced">Last synced · ${escapeHTML(new Date(b.syncedAt).toLocaleString('en-US'))}${navigator.onLine?' · could not refresh':' · offline'}</p>`:'';
+  return `<h2>Top 10</h2>${stamp}<div class="lb-table-wrap"><table class="top10-list shared"><thead><tr><th>Rank</th><th>Name</th><th>Score</th><th>Last cleared</th></tr></thead><tbody>${b.entries.map(row).join('')}</tbody></table></div>${!b.entries.length?'<p>No entries yet. You can be the first.</p>':''}${leaderboard.state().optIn?`<p class="top10-rank">${b.me.rank?`Your rank: <strong>#${b.me.rank}</strong>${b.me.of?` of ${b.me.of}`:''} · ${Number(b.me.score).toLocaleString('en-US')} pts · Pond ${b.me.last_cleared||0}`:leaderboard.pending()?'Your entry is queued · reconnect to sync':'Not ranked yet'}</p>`:''}`;
 }
 function worldTop(w, next, complete = false) {
   bonus.stop();
@@ -1697,23 +1691,43 @@ function worldTop(w, next, complete = false) {
       if (token === roundToken && box) box.innerHTML = top10HTML(b);
     });
 }
-function leaderboardDialog(note = "") {
-  cancelTap();
-  modal = "leaderboard";
-  root.querySelector(".shade")?.remove();
-  const st = leaderboard.state(),
-    privacy = `<p class="lb-privacy"><strong>Optional · ${st.optIn ? "you joined" : "off until you join"}</strong>If you join, Capybara Calm shares only a nickname you pick (optional), a random player id and your best world scores (with the pond scores behind them). No account, email, contacts or location. Leave anytime to delete your nickname and scores.</p>`,
-    status = !leaderboard.adapter.connected
-      ? "The shared leaderboard isn't connected yet; your scores wait on this phone."
-      : st.optIn
-        ? leaderboard.pending()
-          ? `${leaderboard.pending()} world score${leaderboard.pending() > 1 ? "s" : ""} queued · uploads when online`
-          : "All scores uploaded"
-        : "";
-  root.querySelector(".screen").insertAdjacentHTML(
-    "beforeend",
-    `<div class="shade"><section class="dialog leaderboard-dialog" role="dialog" aria-modal="true" aria-labelledby="lb-title"><h2 id="lb-title">Leaderboard</h2>${privacy}${st.optIn ? `<p class="lb-joined">Joined as <strong>${escapeHTML(leaderboard.displayName())}</strong></p>` : ""}<label class="lb-label" for="lb-name">Leaderboard nickname (optional)</label><input id="lb-name" autocomplete="off" spellcheck="false" placeholder="${DEFAULT_NAME}" value="${escapeHTML(st.nickname)}"><p class="lb-error" role="alert" ${note.startsWith("!") ? "" : "hidden"}>${note.startsWith("!") ? escapeHTML(note.slice(1)) : ""}</p>${note && !note.startsWith("!") ? `<p class="lb-note" role="status">${escapeHTML(note)}</p>` : ""}${status ? `<p class="lb-status small-text">${status}</p>` : ""}<button class="primary" data-action="lbJoin">${st.optIn ? "Save nickname" : "Join leaderboard"}</button>${st.optIn ? '<button class="lb-leave" data-action="lbLeave">Leave and delete my nickname</button>' : ""}<button data-action="lbClose">${st.optIn ? "Done" : "Not now"}</button></section></div>`,
-  );
+let lbMode='overall',lbWorld=0,lbRequest=0,lbTimer=null;
+function pauseMenu() {
+  if(view==='game') saveRound();
+  clock.pause();bonus.pause?.();cancelTap();modal='pause';
+  root.querySelector('.shade')?.remove();
+  root.querySelector('.screen').insertAdjacentHTML('beforeend',`<div class="shade"><section class="dialog pause-dialog" role="dialog" aria-label="Paused"><h2>Paused</h2><button class="primary" data-action="resume">Resume pond</button><button data-action="leaderboard">🏆 Leaderboard</button>${view==='bonus'?'':'<button data-action="rules">Rules</button>'}<button data-action="settings">Settings</button><button data-action="home">Back to home</button></section></div>`);
+}
+function openLeaderboard() {
+  if(view==='game') saveRound();
+  clock.pause();bonus.pause?.();cancelTap();
+  root.querySelector('.shade')?.remove();root.querySelector('.sheet')?.remove();root.querySelector('.sheet-scrim')?.remove();
+  modal='leaderboard';lbMode='overall';lbWorld=worldOf(puzzle?.id||currentPond()||1);
+  root.querySelector('.screen').insertAdjacentHTML('beforeend',`<div class="shade leaderboard-layer"><section class="dialog leaderboard-dialog" role="dialog" aria-label="Leaderboard"><header><h2>🏆 Leaderboard</h2><button data-action="lbClose" aria-label="Close leaderboard">×</button></header><div class="lb-tabs"><button data-action="lbOverall" aria-pressed="true">Overall</button><button data-action="lbByWorld" aria-pressed="false">By world</button><select class="lb-world" aria-label="World" hidden>${WORLDS.map((name,i)=>`<option value="${i}" ${i===lbWorld?'selected':''}>World ${i+1} · ${name}</option>`).join('')}</select></div><section class="top10" aria-live="polite"><p>Loading…</p></section><div class="lb-membership"></div><button data-action="lbRefresh">Refresh</button></section></div>`);
+  leaderboardDialog();refreshLeaderboard();clearInterval(lbTimer);lbTimer=setInterval(()=>{if(modal==='leaderboard')refreshLeaderboard();else clearInterval(lbTimer);},20000);
+}
+function leaderboardDialog(note='',editing=false) {
+  if(modal!=='leaderboard'){openLeaderboard();return;}
+  const st=leaderboard.state(),form=editing;
+  root.querySelector('.lb-membership').innerHTML=`<p class="small-text lb-note" role="status">${escapeHTML(note)}</p>${form?`<p class="lb-privacy">If you join, others can see your chosen name, best campaign scores and last cleared pond. No account is needed.</p><label class="lb-label" for="lb-name">Display name (optional)</label><input id="lb-name" autocomplete="off" maxlength="64" value="${escapeHTML(st.optIn?st.nickname:progress.nickname||'')}"><p class="lb-preview" aria-live="polite"></p><button class="primary" data-action="lbJoin">${st.optIn?'Save name':'Join leaderboard'}</button><button data-action="lbCancelName">Cancel</button>`:`<button data-action="lbEdit">${st.optIn?'Edit name':'Join leaderboard'}</button>`}${st.optIn?'<button class="lb-leave" data-action="lbLeave">Leave and delete my entry</button>':''}`;
+  if(form)updateLeaderboardPreview();
+}
+function updateLeaderboardPreview() {
+  const input=root.querySelector('#lb-name'),preview=root.querySelector('.lb-preview');
+  if(preview&&input)preview.textContent=`Preview: #— · ${input.value.trim()||DEFAULT_NAME} · ${worldScores(progress).reduce((sum,w)=>sum+w.total,0).toLocaleString('en-US')} pts · Pond ${lastCleared(progress.completed)}`;
+}
+async function refreshLeaderboard() {
+  if(modal!=='leaderboard')return;
+  const token=++lbRequest,mode=lbMode,w=lbWorld;
+  root.querySelector('[data-action="lbOverall"]').setAttribute('aria-pressed',String(mode==='overall'));
+  root.querySelector('[data-action="lbByWorld"]').setAttribute('aria-pressed',String(mode!=='overall'));
+  root.querySelector('.lb-world').hidden=mode==='overall';
+  const local=mode==='overall'?{total:worldScores(progress).reduce((sum,x)=>sum+x.total,0),last_cleared:lastCleared(progress.completed)}:worldScore(progress,w);
+  const board=await leaderboard.board(mode==='overall'?'overall':w,local);
+  if(token===lbRequest&&modal==='leaderboard')root.querySelector('.leaderboard-layer .top10').innerHTML=top10HTML(board);
+}
+function closeLeaderboard() {
+  lbRequest++;clearInterval(lbTimer);root.querySelector('.leaderboard-layer')?.remove();modal=null;bonus.resume?.();syncClock();
 }
 function replayRow(id) {
   const crate = isCrate(id),
@@ -1751,6 +1765,7 @@ function lilyResultsHTML() {
 
 root.addEventListener("input", (e) => {
   if (e.target.id === "nickname-input") validateNicknameInput();
+  if (e.target.id === 'lb-name') updateLeaderboardPreview();
 });
 root.addEventListener("pointerdown", (e) => bonus.pointerDown(e));
 root.addEventListener("pointerup", (e) => bonus.pointerUp(e));
@@ -1773,3 +1788,5 @@ window.addEventListener("pagehide", () => {
 setInterval(() => {
   if (clock.at !== null && state && view === "game") saveRound();
 }, 1000);
+
+root.addEventListener('change',e=>{if(e.target.matches('.lb-world')){lbWorld=Number(e.target.value);refreshLeaderboard();}});
