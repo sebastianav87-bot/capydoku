@@ -1,0 +1,81 @@
+{
+  "version": "4.1",
+  "cache": "capydoku-v4.1-923843f2cc02",
+  "published": false,
+  "timezone": "America/New_York (EST)",
+  "unit": {
+    "command": "npm run test:unit",
+    "tests": 137,
+    "passed": 137,
+    "failed": 0,
+    "log": "reports/unit-v4.1-final.log"
+  },
+  "e2e_final_full_run": {
+    "started": "2026-11-14 23:27 EST",
+    "projects": [
+      "mobile-412 (412x915)",
+      "mobile-360 (360x780)"
+    ],
+    "touch": true,
+    "vibrate": "mocked",
+    "tests": 298,
+    "passed": 297,
+    "failed": 1,
+    "failed_tests": [
+      "[mobile-360] tests/mobile.spec.js:22 Daily Pond deterministic reload + same-day streak (timed out waiting for .home after reload)"
+    ],
+    "log": "reports/e2e-v4.1-final.log",
+    "json": "reports/playwright-v4.1-final.json",
+    "html": "reports/playwright-html-v4.1-final/"
+  },
+  "e2e_isolation_reruns": [
+    {
+      "tests": "mobile.spec.js:22 x5 repeats, both viewports",
+      "runs": 10,
+      "passed": 10,
+      "failed": 0,
+      "log": "reports/v4.1/e2e-rerun-daily.log"
+    }
+  ],
+  "e2e_previous_full_attempt": {
+    "started": "2026-11-14 23:02 EST",
+    "tests": 298,
+    "passed": 294,
+    "failed": 4,
+    "failed_tests": [
+      "v2.spec.js:25 drag haptic ticks @412",
+      "v31-extension.spec.js:11 solved boss30 fit @412",
+      "mobile.spec.js:17 row violation @360",
+      "mobile.spec.js:20 boss 10 golden lily @360"
+    ],
+    "note": "box load spiked during the run (tests ran for 1-2 min against a 45 s timeout); none of these 4 failed in the next full run",
+    "isolation_reruns": [
+      {
+        "tests": "the 4 failing tests x2, both viewports",
+        "passed": 56,
+        "failed": 0,
+        "log": "reports/v4.1/e2e-rerun-failures.log"
+      },
+      {
+        "tests": "v2.spec.js:25 + mobile.spec.js:17 x8",
+        "passed": 80,
+        "failed": 0,
+        "log": "reports/v4.1/e2e-flake-check.log"
+      }
+    ],
+    "log": "reports/v4.1/e2e-final-attempt1.log"
+  },
+  "assessment": "Intermittent and timing-related: each failure passed every isolation rerun and no test failed in both full runs. These are not accepted as green. They are reported as flaky.",
+  "screenshots": {
+    "dir": "reports/screenshots-v4.1/regression",
+    "count": 256,
+    "contact_sheet": "reports/contact-sheet-v4.1.png",
+    "key_sheet": "reports/contact-sheet-v4.1-key.png"
+  },
+  "runtime_tar": {
+    "path": "/workspace/capydoku/capydoku-v4.1-runtime.tar.gz",
+    "sha256": "53e11568ee827424e8579cd6ec648d56e73dce05b47813af9c21cb3d4d39e6c9",
+    "files": 94,
+    "extracted_offline_smoke": true
+  }
+}

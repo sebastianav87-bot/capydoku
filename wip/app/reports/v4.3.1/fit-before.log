@@ -1,0 +1,181 @@
+se-tab-p5-plain FAIL board cell 46.36
+se-tab-p5-showme FAIL board,showme-layout cell 46.36
+se-tab-p5-dpad-showme FAIL board,showme-layout cell 46.36
+se-tab-p10-plain FAIL board cell 54.59
+se-tab-p10-showme FAIL board,showme-layout cell 54.59
+se-tab-p10-dpad-showme FAIL board,showme-layout cell 54.59
+se-tab-p15-plain FAIL board cell 46.36
+se-tab-p15-showme FAIL board,showme-layout cell 46.36
+se-tab-p15-dpad-showme FAIL board,showme-layout cell 46.36
+se-tab-p20-plain FAIL board cell 46.36
+se-tab-p20-showme FAIL board,showme-layout cell 46.36
+se-tab-p20-dpad-showme FAIL board,showme-layout cell 46.36
+se-tab-p25-plain FAIL board cell 40.19
+se-tab-p25-showme FAIL board,showme-layout cell 40.19
+se-tab-p25-dpad-showme FAIL board,showme-layout cell 40.19
+se-tab-p30-plain FAIL board cell 40.19
+se-tab-p30-showme FAIL board,showme-layout cell 40.19
+se-tab-p30-dpad-showme FAIL board,showme-layout cell 40.19
+se-tab-p29-plain FAIL board,companion,undo,power,page-scroll cell 34.5
+se-tab-p7-plain FAIL companion,undo,power,page-scroll cell 40.19
+se-standalone-p5-plain FAIL board cell 46.36
+se-standalone-p5-showme FAIL board,showme-layout cell 46.36
+se-standalone-p5-dpad-showme FAIL board,showme-layout cell 46.36
+se-standalone-p10-plain FAIL board cell 54.59
+se-standalone-p10-showme FAIL board,showme-layout cell 54.59
+se-standalone-p10-dpad-showme FAIL board,showme-layout cell 54.59
+se-standalone-p15-plain FAIL board cell 46.36
+se-standalone-p15-showme FAIL board,showme-layout cell 46.36
+se-standalone-p15-dpad-showme FAIL board,showme-layout cell 46.36
+se-standalone-p20-plain FAIL board cell 46.36
+se-standalone-p20-showme FAIL board,showme-layout cell 46.36
+se-standalone-p20-dpad-showme FAIL board,showme-layout cell 46.36
+se-standalone-p25-plain FAIL board cell 40.19
+se-standalone-p25-showme FAIL board,showme-layout cell 40.19
+se-standalone-p25-dpad-showme FAIL board,showme-layout cell 40.19
+se-standalone-p30-plain FAIL board cell 40.19
+se-standalone-p30-showme FAIL board,showme-layout cell 40.19
+se-standalone-p30-dpad-showme FAIL board,showme-layout cell 40.19
+se-standalone-p29-plain FAIL undo,power,page-scroll cell 34.5
+se-standalone-p7-plain FAIL undo,power,page-scroll cell 40.19
+390-tab-p5-plain FAIL board cell 48.44
+390-tab-p5-showme FAIL board,showme-layout cell 48.44
+390-tab-p5-dpad-showme FAIL board,showme-layout cell 48.44
+390-tab-p10-plain FAIL board cell 57.02
+390-tab-p10-showme FAIL board,showme-layout cell 57.02
+390-tab-p10-dpad-showme FAIL board,showme-layout cell 57.02
+390-tab-p15-plain FAIL board cell 48.44
+390-tab-p15-showme FAIL board,showme-layout cell 48.44
+390-tab-p15-dpad-showme FAIL board,showme-layout cell 48.44
+390-tab-p20-plain FAIL board cell 48.44
+390-tab-p20-showme FAIL board,showme-layout cell 48.44
+390-tab-p20-dpad-showme FAIL board,showme-layout cell 48.44
+390-tab-p25-plain FAIL board cell 42.02
+390-tab-p25-showme FAIL board,showme-layout cell 42.02
+390-tab-p25-dpad-showme FAIL board,showme-layout cell 42.02
+390-tab-p30-plain FAIL board cell 42.02
+390-tab-p30-showme FAIL board,showme-layout cell 42.02
+390-tab-p30-dpad-showme FAIL board,showme-layout cell 42.02
+390-tab-p29-plain FAIL undo,power,page-scroll cell 36
+390-tab-p7-plain FAIL undo,power,page-scroll cell 42.02
+390-tab-694-p5-plain FAIL board cell 48.44
+390-tab-694-p5-showme FAIL board,showme-layout cell 48.44
+390-tab-694-p5-dpad-showme FAIL board,showme-layout cell 48.44
+390-tab-694-p10-plain FAIL board cell 57.02
+390-tab-694-p10-showme FAIL board,showme-layout cell 57.02
+390-tab-694-p10-dpad-showme FAIL board,showme-layout cell 57.02
+390-tab-694-p15-plain FAIL board cell 48.44
+390-tab-694-p15-showme FAIL board,showme-layout cell 48.44
+390-tab-694-p15-dpad-showme FAIL board,showme-layout cell 48.44
+390-tab-694-p20-plain FAIL board cell 48.44
+390-tab-694-p20-showme FAIL board,showme-layout cell 48.44
+390-tab-694-p20-dpad-showme FAIL board,showme-layout cell 48.44
+390-tab-694-p25-plain FAIL board cell 42.02
+390-tab-694-p25-showme FAIL board,showme-layout cell 42.02
+390-tab-694-p25-dpad-showme FAIL board,showme-layout cell 42.02
+390-tab-694-p30-plain FAIL board cell 42.02
+390-tab-694-p30-showme FAIL board,showme-layout cell 42.02
+390-tab-694-p30-dpad-showme FAIL board,showme-layout cell 42.02
+390-tab-694-p29-plain FAIL undo,power,page-scroll cell 36
+390-tab-694-p7-plain FAIL undo,power,page-scroll cell 42.02
+390-standalone-p5-plain FITS cell 48.44
+390-standalone-p5-showme FAIL board,showme-layout cell 48.44
+390-standalone-p5-dpad-showme FAIL board,showme-layout cell 48.44
+390-standalone-p10-plain FITS cell 57.02
+390-standalone-p10-showme FAIL board,showme-layout cell 57.02
+390-standalone-p10-dpad-showme FAIL board,showme-layout cell 57.02
+390-standalone-p15-plain FITS cell 48.44
+390-standalone-p15-showme FAIL board,showme-layout cell 48.44
+390-standalone-p15-dpad-showme FAIL board,showme-layout cell 48.44
+390-standalone-p20-plain FITS cell 48.44
+390-standalone-p20-showme FAIL board,showme-layout cell 48.44
+390-standalone-p20-dpad-showme FAIL board,showme-layout cell 48.44
+390-standalone-p25-plain FITS cell 42.02
+390-standalone-p25-showme FAIL board,showme-layout cell 42.02
+390-standalone-p25-dpad-showme FAIL board,showme-layout cell 42.02
+390-standalone-p30-plain FITS cell 42.02
+390-standalone-p30-showme FAIL board,showme-layout cell 42.02
+390-standalone-p30-dpad-showme FAIL board,showme-layout cell 42.02
+390-standalone-p29-plain FAIL undo,power,page-scroll cell 36
+390-standalone-p7-plain FAIL undo,power,page-scroll cell 42.02
+393-tab-p5-plain FAIL board cell 48.86
+393-tab-p5-showme FAIL board,showme-layout cell 48.86
+393-tab-p5-dpad-showme FAIL board,showme-layout cell 48.86
+393-tab-p10-plain FAIL board cell 57.5
+393-tab-p10-showme FAIL board,showme-layout cell 57.5
+393-tab-p10-dpad-showme FAIL board,showme-layout cell 57.5
+393-tab-p15-plain FAIL board cell 48.86
+393-tab-p15-showme FAIL board,showme-layout cell 48.86
+393-tab-p15-dpad-showme FAIL board,showme-layout cell 48.86
+393-tab-p20-plain FAIL board cell 48.86
+393-tab-p20-showme FAIL board,showme-layout cell 48.86
+393-tab-p20-dpad-showme FAIL board,showme-layout cell 48.86
+393-tab-p25-plain FAIL board cell 42.38
+393-tab-p25-showme FAIL board,showme-layout cell 42.38
+393-tab-p25-dpad-showme FAIL board,showme-layout cell 42.38
+393-tab-p30-plain FAIL board cell 42.38
+393-tab-p30-showme FAIL board,showme-layout cell 42.38
+393-tab-p30-dpad-showme FAIL board,showme-layout cell 42.38
+393-tab-p29-plain FAIL undo,power,page-scroll cell 36.3
+393-tab-p7-plain FAIL undo,power,page-scroll cell 42.38
+393-standalone-p5-plain FITS cell 48.86
+393-standalone-p5-showme FAIL board,showme-layout cell 48.86
+393-standalone-p5-dpad-showme FAIL board,showme-layout cell 48.86
+393-standalone-p10-plain FITS cell 57.5
+393-standalone-p10-showme FAIL board,showme-layout cell 57.5
+393-standalone-p10-dpad-showme FAIL board,showme-layout cell 57.5
+393-standalone-p15-plain FITS cell 48.86
+393-standalone-p15-showme FAIL board,showme-layout cell 48.86
+393-standalone-p15-dpad-showme FAIL board,showme-layout cell 48.86
+393-standalone-p20-plain FITS cell 48.86
+393-standalone-p20-showme FAIL board,showme-layout cell 48.86
+393-standalone-p20-dpad-showme FAIL board,showme-layout cell 48.86
+393-standalone-p25-plain FITS cell 42.38
+393-standalone-p25-showme FAIL board,showme-layout cell 42.38
+393-standalone-p25-dpad-showme FAIL board,showme-layout cell 42.38
+393-standalone-p30-plain FITS cell 42.38
+393-standalone-p30-showme FAIL board,showme-layout cell 42.38
+393-standalone-p30-dpad-showme FAIL board,showme-layout cell 42.38
+393-standalone-p29-plain FAIL undo,power,page-scroll cell 36.3
+393-standalone-p7-plain FAIL undo,power,page-scroll cell 42.38
+430-tab-p5-plain FITS cell 54
+430-tab-p5-showme FAIL board,showme-layout cell 54
+430-tab-p5-dpad-showme FAIL board,showme-layout cell 54
+430-tab-p10-plain FITS cell 63.5
+430-tab-p10-showme FAIL board,showme-layout cell 63.5
+430-tab-p10-dpad-showme FAIL board,showme-layout cell 63.5
+430-tab-p15-plain FITS cell 54
+430-tab-p15-showme FAIL board,showme-layout cell 54
+430-tab-p15-dpad-showme FAIL board,showme-layout cell 54
+430-tab-p20-plain FITS cell 54
+430-tab-p20-showme FAIL board,showme-layout cell 54
+430-tab-p20-dpad-showme FAIL board,showme-layout cell 54
+430-tab-p25-plain FITS cell 46.88
+430-tab-p25-showme FAIL board,showme-layout cell 46.88
+430-tab-p25-dpad-showme FAIL board,showme-layout cell 46.88
+430-tab-p30-plain FITS cell 46.88
+430-tab-p30-showme FAIL board,showme-layout cell 46.88
+430-tab-p30-dpad-showme FAIL board,showme-layout cell 46.88
+430-tab-p29-plain FITS cell 36.89
+430-tab-p7-plain FITS cell 46.88
+430-standalone-p5-plain FITS cell 54
+430-standalone-p5-showme FAIL board,showme-layout cell 54
+430-standalone-p5-dpad-showme FAIL showme-layout cell 54
+430-standalone-p10-plain FITS cell 63.5
+430-standalone-p10-showme FAIL board,showme-layout cell 63.5
+430-standalone-p10-dpad-showme FAIL showme-layout cell 63.5
+430-standalone-p15-plain FITS cell 54
+430-standalone-p15-showme FAIL board,showme-layout cell 54
+430-standalone-p15-dpad-showme FAIL showme-layout cell 54
+430-standalone-p20-plain FITS cell 54
+430-standalone-p20-showme FAIL board,showme-layout cell 54
+430-standalone-p20-dpad-showme FAIL showme-layout cell 54
+430-standalone-p25-plain FITS cell 46.88
+430-standalone-p25-showme FAIL board,showme-layout cell 46.88
+430-standalone-p25-dpad-showme FAIL showme-layout cell 46.88
+430-standalone-p30-plain FITS cell 46.88
+430-standalone-p30-showme FAIL board,showme-layout cell 46.88
+430-standalone-p30-dpad-showme FAIL showme-layout cell 46.88
+430-standalone-p29-plain FAIL undo,power cell 36.89
+430-standalone-p7-plain FAIL undo,power cell 46.88
+26/180 fit

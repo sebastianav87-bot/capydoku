@@ -1,0 +1,15 @@
+{
+  "viewport": "412x915",
+  "n": 10,
+  "rocks": [
+    35,
+    64
+  ],
+  "cellPx": 35.14,
+  "cellPxH": 35.14,
+  "gapPx": 3,
+  "boardRight": 395.25,
+  "boardBottom": 574.546875,
+  "noScroll": true,
+  "cornerTaps": "ok"
+}

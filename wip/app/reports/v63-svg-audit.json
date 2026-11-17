@@ -1,0 +1,65 @@
+[
+  {
+    "name": "boss-cave-beaten.svg",
+    "bytes": 247059,
+    "embedded_images": 1,
+    "external_links": [],
+    "has_NEXT": false
+  },
+  {
+    "name": "boss-cave-locked.svg",
+    "bytes": 154033,
+    "embedded_images": 1,
+    "external_links": [],
+    "has_NEXT": false
+  },
+  {
+    "name": "boss-cave-next.svg",
+    "bytes": 167245,
+    "embedded_images": 1,
+    "external_links": [],
+    "has_NEXT": true
+  },
+  {
+    "name": "boss-geyser-beaten.svg",
+    "bytes": 222555,
+    "embedded_images": 1,
+    "external_links": [],
+    "has_NEXT": false
+  },
+  {
+    "name": "boss-geyser-locked.svg",
+    "bytes": 168196,
+    "embedded_images": 1,
+    "external_links": [],
+    "has_NEXT": false
+  },
+  {
+    "name": "boss-geyser-next.svg",
+    "bytes": 184572,
+    "embedded_images": 1,
+    "external_links": [],
+    "has_NEXT": true
+  },
+  {
+    "name": "boss-waterfall-beaten.svg",
+    "bytes": 243421,
+    "embedded_images": 1,
+    "external_links": [],
+    "has_NEXT": false
+  },
+  {
+    "name": "boss-waterfall-locked.svg",
+    "bytes": 163910,
+    "embedded_images": 1,
+    "external_links": [],
+    "has_NEXT": false
+  },
+  {
+    "name": "boss-waterfall-next.svg",
+    "bytes": 178262,
+    "embedded_images": 1,
+    "external_links": [],
+    "has_NEXT": true
+  }
+]

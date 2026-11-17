@@ -1,0 +1,32 @@
+[
+  {
+    "mode": "B",
+    "viewport": "360x780",
+    "level": 3,
+    "n": 7,
+    "board_px": 350,
+    "cell_px": 44.28125,
+    "minimum_cell_px": 44.28125,
+    "board_screen_ratio": 0.9722222222222222
+  },
+  {
+    "mode": "B",
+    "viewport": "360x780",
+    "level": 9,
+    "n": 8,
+    "board_px": 350,
+    "cell_px": 38.375,
+    "minimum_cell_px": 38.375,
+    "board_screen_ratio": 0.9722222222222222
+  },
+  {
+    "mode": "B",
+    "viewport": "360x780",
+    "level": 21,
+    "n": 9,
+    "board_px": 350,
+    "cell_px": 33.765625,
+    "minimum_cell_px": 33.765625,
+    "board_screen_ratio": 0.9722222222222222
+  }
+]

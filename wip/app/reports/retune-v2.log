@@ -1,0 +1,8 @@
+safe daily 0
+safe daily 60
+safe daily 120
+safe daily 180
+safe daily 240
+safe daily 300
+safe daily 360
+{'campaign': 30, 'daily_dates_per_state': 365, 'daily_states': 2, 'source_boards_checked': 760, 'all_unique': True, 'all_logic': True, 'elapsed_seconds': 4.1}

@@ -1,0 +1,38 @@
+[
+  {
+    "starter": "jun",
+    "unchanged_supplied_dark_outline_asset": true,
+    "sha256": "59026bcf81e77dd08ff70fae9f470e636831a4c01c90ac6b934b36470de4d32d",
+    "transparent_corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "signature_hex": "#32417B"
+  },
+  {
+    "starter": "bloom",
+    "unchanged_supplied_dark_outline_asset": true,
+    "sha256": "c44c330fdebb8f04992596030772162e2be601bd3920255d05f7f95577986664",
+    "transparent_corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "signature_hex": "#E2AD32"
+  },
+  {
+    "starter": "remy",
+    "unchanged_supplied_dark_outline_asset": true,
+    "sha256": "9e5378a852eab095266894f24c429485570720237a98e65884bb74c3ecd3d46e",
+    "transparent_corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "signature_hex": "#A65430"
+  }
+]

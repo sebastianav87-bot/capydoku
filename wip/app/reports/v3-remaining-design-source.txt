@@ -1,0 +1,1498 @@
+
+### assets/board.js
+window.CAPY = {
+  zones: [
+    ["A","A","A","B","B","C"],
+    ["A","B","B","B","B","C"],
+    ["A","A","B","E","E","C"],
+    ["D","D","D","E","C","C"],
+    ["D","E","E","E","C","F"],
+    ["D","D","E","F","F","F"]
+  ],
+  rocks: new Set(["0,2"]),
+  solution: new Set(["0,1","1,3","2,5","3,0","4,2","5,4"]),
+  placed: new Set(["0,1","3,0"]),
+  xs: new Set(["0,0","0,4","1,1","2,1","4,4","5,1"]),
+  colors: {
+    A:["#6CC874","#5EBA66"],
+    B:["#BBE2F9","#ADD4EB"],
+    C:["#F9DF88","#EBD17A"],
+    D:["#AE7ED0","#A070C2"],
+    E:["#F1977B","#E3896D"],
+    F:["#5FC6BF","#51B8B1"]
+  },
+  cues: {A:'dots',B:'hdashes',C:'lily',D:'diag',E:'rings',F:'vdashes'}
+};
+
+function patternSVG(kind, stroke){
+  if(kind==='dots') return `<svg class="pat" viewBox="0 0 60 60" aria-hidden="true"><circle cx="15" cy="15" r="2.2" fill="${stroke}"/><circle cx="45" cy="18" r="2.2" fill="${stroke}"/><circle cx="28" cy="42" r="2.2" fill="${stroke}"/></svg>`;
+  if(kind==='hdashes') return `<svg class="pat" viewBox="0 0 60 60"><path d="M10 18h16M34 18h16M12 40h14M36 40h14" stroke="${stroke}" stroke-width="2.2" stroke-linecap="round"/></svg>`;
+  if(kind==='lily') return `<svg class="pat" viewBox="0 0 60 60"><ellipse cx="18" cy="22" rx="7" ry="3.5" fill="${stroke}" transform="rotate(-20 18 22)"/><ellipse cx="42" cy="40" rx="6" ry="3" fill="${stroke}" transform="rotate(25 42 40)"/></svg>`;
+  if(kind==='diag') return `<svg class="pat" viewBox="0 0 60 60"><path d="M14 46l12-12M30 48l14-14M12 28l10-10" stroke="${stroke}" stroke-width="2.2" stroke-linecap="round"/></svg>`;
+  if(kind==='rings') return `<svg class="pat" viewBox="0 0 60 60"><circle cx="20" cy="22" r="6" fill="none" stroke="${stroke}" stroke-width="2"/><circle cx="42" cy="40" r="5" fill="none" stroke="${stroke}" stroke-width="2"/></svg>`;
+  if(kind==='vdashes') return `<svg class="pat" viewBox="0 0 60 60"><path d="M18 10v16M18 34v16M42 12v14M42 36v14" stroke="${stroke}" stroke-width="2.2" stroke-linecap="round"/></svg>`;
+  return '';
+}
+
+function buildBoard(opts){
+  const {mode, gridEl} = opts;
+  const Z = CAPY.zones;
+  gridEl.innerHTML = '';
+  gridEl.classList.add('zone-grid');
+
+  for(let r=0;r<6;r++){
+    for(let c=0;c<6;c++){
+      const z=Z[r][c];
+      const cell=document.createElement('div');
+      const [hi,lo]=CAPY.colors[z];
+      cell.className='cell';
+      cell.style.background=`linear-gradient(145deg,${hi},${lo})`;
+      const key=r+','+c;
+      cell.innerHTML = patternSVG(CAPY.cues[z], 'rgba(255,255,255,0.40)');
+      if(CAPY.rocks.has(key)){
+        cell.insertAdjacentHTML('beforeend','<img class="rock" src="../art/rock.png" alt="rock"/>');
+      } else if(mode==='solved' && CAPY.solution.has(key)){
+        cell.insertAdjacentHTML('beforeend','<img class="capy" src="../art/capy-jump.png"/>');
+      } else if(mode==='progress' && CAPY.placed.has(key)){
+        cell.insertAdjacentHTML('beforeend','<img class="capy" src="../art/capy-sit.png"/>');
+      } else if(mode==='progress' && CAPY.xs.has(key)){
+        cell.insertAdjacentHTML('beforeend','<div class="xmark">×</div>');
+      }
+      gridEl.appendChild(cell);
+    }
+  }
+  requestAnimationFrame(()=>drawOutlines(gridEl));
+}
+
+window.drawOutlines = function drawOutlines(gridEl){
+  gridEl.querySelectorAll('svg.zone-outline').forEach(e=>e.remove());
+  const cells=[...gridEl.querySelectorAll('.cell')];
+  if(cells.length!==36) return;
+  const gr=gridEl.getBoundingClientRect();
+  const c00=cells[0].getBoundingClientRect();
+  const c01=cells[1].getBoundingClientRect();
+  const c10=cells[6].getBoundingClientRect();
+  const cellW=c00.width, cellH=c00.height;
+  const gapX=c01.left-c00.right, gapY=c10.top-c00.bottom;
+  const ox=c00.left-gr.left, oy=c00.top-gr.top;
+  const W=gr.width, H=gr.height;
+  const SW=5;
+  const half=SW/2;
+  const xs=[], ys=[];
+  xs[0] = ox - gapX/2;
+  ys[0] = oy - gapY/2;
+  for(let i=1;i<=5;i++){
+    xs[i] = ox + i*(cellW+gapX) - gapX/2;
+    ys[i] = oy + i*(cellH+gapY) - gapY/2;
+  }
+  xs[6] = ox + 6*cellW + 5*gapX + gapX/2;
+  ys[6] = oy + 6*cellH + 5*gapY + gapY/2;
+  for(let i=0;i<=6;i++){
+    xs[i] = Math.min(W-half, Math.max(half, xs[i]));
+    ys[i] = Math.min(H-half, Math.max(half, ys[i]));
+  }
+  const svgNS='http://www.w3.org/2000/svg';
+  const svg=document.createElementNS(svgNS,'svg');
+  svg.setAttribute('class','zone-outline');
+  svg.setAttribute('width',String(W));
+  svg.setAttribute('height',String(H));
+  svg.setAttribute('viewBox',`0 0 ${W} ${H}`);
+  svg.style.cssText='position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:8;overflow:hidden;';
+  const g=document.createElementNS(svgNS,'g');
+  g.setAttribute('fill','none');
+  g.setAttribute('stroke','#45554F');
+  g.setAttribute('stroke-width',String(SW));
+  g.setAttribute('stroke-linejoin','round');
+  g.setAttribute('stroke-linecap','butt');
+  const outer=document.createElementNS(svgNS,'rect');
+  outer.setAttribute('x',String(xs[0]));
+  outer.setAttribute('y',String(ys[0]));
+  outer.setAttribute('width',String(xs[6]-xs[0]));
+  outer.setAttribute('height',String(ys[6]-ys[0]));
+  outer.setAttribute('rx','11');
+  outer.setAttribute('ry','11');
+  g.appendChild(outer);
+  const Z=CAPY.zones;
+  for(let r=0;r<6;r++){
+    for(let c=0;c<5;c++){
+      if(Z[r][c]===Z[r][c+1]) continue;
+      let y1=ys[r], y2=ys[r+1];
+      if(r===0) y1 = ys[0] + half;
+      if(r===5) y2 = ys[6] - half;
+      const line=document.createElementNS(svgNS,'line');
+      line.setAttribute('x1',String(xs[c+1]));
+      line.setAttribute('x2',String(xs[c+1]));
+      line.setAttribute('y1',String(y1));
+      line.setAttribute('y2',String(y2));
+      g.appendChild(line);
+    }
+  }
+  for(let r=0;r<5;r++){
+    for(let c=0;c<6;c++){
+      if(Z[r][c]===Z[r+1][c]) continue;
+      let x1=xs[c], x2=xs[c+1];
+      if(c===0) x1 = xs[0] + half;
+      if(c===5) x2 = xs[6] - half;
+      const line=document.createElementNS(svgNS,'line');
+      line.setAttribute('x1',String(x1));
+      line.setAttribute('x2',String(x2));
+      line.setAttribute('y1',String(ys[r+1]));
+      line.setAttribute('y2',String(ys[r+1]));
+      g.appendChild(line);
+    }
+  }
+  svg.appendChild(g);
+  gridEl.appendChild(svg);
+};
+
+
+### assets/common.css
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:412px;height:915px;overflow:hidden;font-family:'Nunito',system-ui,sans-serif;background:#E6E2D6;color:#4A463E}
+.screen{width:412px;height:915px;position:relative;overflow:hidden}
+.ai-tag{position:absolute;bottom:8px;right:10px;font-size:10px;color:rgba(74,70,62,0.45);letter-spacing:0.02em;z-index:50}
+
+
+### assets/home-optionB.html
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"/>
+<link rel="stylesheet" href="common.css"/>
+<style>
+.screen{background:#D9E2DA url('../art/map-bg.jpg') center/cover no-repeat}
+.veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(230,226,214,0.55),rgba(214,222,214,0.72) 40%,rgba(200,214,206,0.82))}
+.content{position:relative;z-index:2;padding:28px 16px 14px;height:100%;display:flex;flex-direction:column}
+.brand{text-align:center;margin-bottom:8px}
+.brand h1{font-size:30px;font-weight:800;color:#4A5548;letter-spacing:0.02em;text-shadow:0 1px 0 rgba(255,255,255,0.5)}
+.brand p{font-size:13px;color:#667266;margin-top:2px}
+.daily{
+  margin:4px 2px 10px;padding:12px 14px;border-radius:20px;
+  background:rgba(255,255,255,0.62);border:1.5px solid rgba(90,100,90,0.14);
+  box-shadow:0 8px 18px rgba(70,90,80,0.10);display:flex;align-items:center;gap:12px;min-height:64px;
+}
+.daily-art{width:48px;height:48px;border-radius:14px;overflow:hidden;background:#C9D6D0;flex-shrink:0}
+.daily-art img{width:100%;height:100%;object-fit:cover}
+.daily-text{flex:1}
+.daily-text .t{font-weight:800;font-size:15px;color:#4A5548}
+.daily-text .s{font-size:12px;color:#6A7568;margin-top:2px}
+.streak{background:linear-gradient(145deg,#FFD29A,#E08A2E);color:#5A3A12;font-weight:800;font-size:12px;padding:7px 10px;border-radius:999px}
+.map-card{
+  flex:1;border-radius:24px;padding:12px 10px 14px;
+  background:rgba(255,255,255,0.48);border:1.5px solid rgba(90,100,90,0.12);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.4);position:relative;overflow:hidden;
+}
+.map-title{text-align:center;font-weight:800;font-size:14px;color:#556054;margin-bottom:6px}
+.path{position:relative;height:560px;margin:0 auto;width:100%}
+.spring-node{
+  position:absolute;left:50%;transform:translateX(-50%);top:4px;width:120px;height:78px;
+  border-radius:22px;background:
+    radial-gradient(ellipse at 50% 60%, rgba(140,210,220,0.75), rgba(100,170,180,0.35) 60%, transparent 75%),
+    linear-gradient(180deg,rgba(200,220,210,0.7),rgba(160,190,185,0.55));
+  border:2.5px solid rgba(255,255,255,0.65);
+  box-shadow:0 6px 16px rgba(70,90,80,0.16), 0 0 18px rgba(140,200,210,0.35);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:5;
+}
+.spring-node img{width:42px;height:42px;object-fit:contain;filter:drop-shadow(0 2px 2px rgba(0,0,0,0.12))}
+.spring-node .lbl{font-size:11px;font-weight:800;color:#356068;margin-top:-2px}
+.steam-mini{position:absolute;top:-4px;left:20%;right:20%;height:22px;background:radial-gradient(ellipse,rgba(255,255,255,0.7),transparent 70%);opacity:0.8;pointer-events:none}
+.node{
+  position:absolute;width:52px;height:52px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:800;font-size:15px;color:#4A5548;
+  border:3px solid rgba(255,255,255,0.7);
+  box-shadow:0 4px 10px rgba(70,90,80,0.16);
+}
+.node.done{background:linear-gradient(145deg,#7EBA70,#4A944E);color:#fff}
+.node.current{
+  background:linear-gradient(145deg,#E2D2B0,#C9A87A);color:#fff;
+  transform:scale(1.08);box-shadow:0 0 0 4px rgba(201,168,122,0.35),0 6px 14px rgba(70,90,80,0.18);
+}
+.node.locked{background:rgba(180,186,176,0.75);color:#7A8276}
+.node.boss{
+  width:64px;height:64px;font-size:12px;line-height:1.05;text-align:center;
+  background:linear-gradient(145deg,#8E66B0,#764E9E);color:#fff;padding:6px;
+}
+.capy-mini{width:32px;height:32px;object-fit:contain}
+.ribbon{position:absolute;left:50%;top:70px;bottom:30px;width:6px;transform:translateX(-50%);
+  background:linear-gradient(180deg,#A8BCA8,#8EA48E);border-radius:6px;opacity:0.55}
+.footer{display:flex;justify-content:center;gap:18px;margin-top:10px}
+.nav{width:64px;height:52px;border-radius:16px;background:rgba(255,255,255,0.55);display:flex;align-items:center;justify-content:center;font-size:22px;border:1.5px solid rgba(90,100,90,0.12)}
+.note{text-align:center;font-size:11px;color:#667266;margin-top:4px;font-weight:700}
+</style>
+</head><body>
+<div class="screen">
+  <div class="veil"></div>
+  <div class="content">
+    <div class="brand"><h1>Capydoku</h1><p>cozy pond puzzles</p></div>
+    <div class="daily">
+      <div class="daily-art"><img src="../art/capy-plain.png"/></div>
+      <div class="daily-text">
+        <div class="t">Daily Pond</div>
+        <div class="s">A fresh puzzle every day</div>
+      </div>
+      <div class="streak">🔥 4</div>
+    </div>
+    <div class="map-card">
+      <div class="map-title">Pond Path · spring at the top</div>
+      <div class="path">
+        <div class="ribbon"></div>
+        <div class="spring-node">
+          <div class="steam-mini"></div>
+          <img src="../art/capy-swim.png"/>
+          <div class="lbl">Hot Spring</div>
+        </div>
+        <div class="node done" style="left:48px;top:100px">1</div>
+        <div class="node done" style="left:170px;top:140px">2</div>
+        <div class="node done" style="left:280px;top:110px">3</div>
+        <div class="node done" style="left:230px;top:200px">4</div>
+        <div class="node done" style="left:90px;top:230px">5</div>
+        <div class="node done" style="left:40px;top:310px">6</div>
+        <div class="node done" style="left:160px;top:340px">7</div>
+        <div class="node done" style="left:280px;top:310px">8</div>
+        <div class="node done" style="left:250px;top:400px">9</div>
+        <div class="node boss" style="left:120px;top:420px">Boss<br/>10</div>
+        <div class="node current" style="left:40px;top:500px"><img class="capy-mini" src="../art/capy-sit.png"/><span style="position:absolute;bottom:-4px;font-size:11px;background:#C9A87A;color:#fff;padding:1px 6px;border-radius:8px">11</span></div>
+        <div class="node locked" style="left:170px;top:520px">12</div>
+        <div class="node locked" style="left:290px;top:490px">13</div>
+      </div>
+      <div class="note">Tap the spring anytime · no separate tab</div>
+    </div>
+    <div class="footer"><div class="nav">🗺️</div><div class="nav">⚙️</div></div>
+  </div>
+  <div class="ai-tag">AI illustration</div>
+</div>
+</body></html>
+
+
+### assets/palette.json
+{
+  "A": {
+    "hex": "#5EBA66",
+    "hi": "#6CC874",
+    "lo": "#5EBA66"
+  },
+  "B": {
+    "hex": "#ADD4EB",
+    "hi": "#BBE2F9",
+    "lo": "#ADD4EB"
+  },
+  "C": {
+    "hex": "#EBD17A",
+    "hi": "#F9DF88",
+    "lo": "#EBD17A"
+  },
+  "D": {
+    "hex": "#A070C2",
+    "hi": "#AE7ED0",
+    "lo": "#A070C2"
+  },
+  "E": {
+    "hex": "#E3896D",
+    "hi": "#F1977B",
+    "lo": "#E3896D"
+  },
+  "F": {
+    "hex": "#51B8B1",
+    "hi": "#5FC6BF",
+    "lo": "#51B8B1"
+  }
+}
+
+### assets/puzzle-relax.html
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"/>
+<link rel="stylesheet" href="common.css"/>
+<link rel="stylesheet" href="puzzle-chrome.css"/>
+</head><body>
+<div class="screen">
+  <div class="topbar">
+    <div class="level-pill">Pond 11</div>
+    <div class="help-btn" title="Rules">?</div>
+    <div class="lives relax-on">
+      <div class="orange"></div>
+      <div class="orange"></div>
+      <div class="orange used"></div>
+      <div class="lives-inf">∞ no lives</div>
+    </div>
+  </div>
+  <div class="rules-line">One capy per row, column &amp; color — no touching</div>
+  <div class="pond-wrap"><div class="grid zone-grid" id="grid"></div></div>
+  <div class="controls">
+    <div class="btn">↶ Undo</div>
+    <div class="btn">💡 Hint</div>
+  </div>
+  <div class="lower">
+    <div class="strip">
+      <img src="../art/capy-swim.png" alt=""/>
+      <div class="meta">
+        <div class="t">Take your time…</div>
+        <div class="s">Mistakes don’t cost oranges</div>
+      </div>
+    </div>
+    <div class="status-row">
+      <div class="capy-counters" aria-label="2 of 6 placed">
+        <div class="capy-slot"><img src="../art/capy-sit.png"/></div>
+        <div class="capy-slot"><img src="../art/capy-sit.png"/></div>
+        <div class="capy-slot empty"></div>
+        <div class="capy-slot empty"></div>
+        <div class="capy-slot empty"></div>
+        <div class="capy-slot empty"></div>
+      </div>
+      <div class="relax-toggle">
+        <div class="relax-copy"><span class="main">Relax</span><span class="sub">no lives</span></div>
+        <div class="switch on"><div class="knob"></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="ai-tag">AI illustration</div>
+</div>
+<script src="board.js"></script>
+<script>
+buildBoard({mode:'progress', gridEl:document.getElementById('grid')});
+setTimeout(()=>{ const g=document.getElementById('grid'); if(window.drawOutlines) drawOutlines(g); }, 120);
+</script>
+</body></html>
+
+
+### assets/puzzle.html
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"/>
+<link rel="stylesheet" href="common.css"/>
+<link rel="stylesheet" href="puzzle-chrome.css"/>
+</head><body>
+<div class="screen">
+  <div class="topbar">
+    <div class="level-pill">Pond 11</div>
+    <div class="help-btn" title="Rules">?</div>
+    <div class="lives">
+      <div class="orange"></div>
+      <div class="orange"></div>
+      <div class="orange used"></div>
+      <div class="lives-inf">∞ Relax</div>
+    </div>
+  </div>
+  <div class="rules-line">One capy per row, column &amp; color — no touching</div>
+  <div class="pond-wrap"><div class="grid zone-grid" id="grid"></div></div>
+  <div class="controls">
+    <div class="btn">↶ Undo</div>
+    <div class="btn">💡 Hint</div>
+  </div>
+  <div class="lower">
+    <div class="strip">
+      <img src="../art/capy-sit.png" alt=""/>
+      <div class="meta">
+        <div class="t">Waiting by the reeds…</div>
+        <div class="s">Tap × · double-tap place</div>
+      </div>
+    </div>
+    <div class="status-row">
+      <div class="capy-counters" aria-label="2 of 6 placed">
+        <div class="capy-slot"><img src="../art/capy-sit.png"/></div>
+        <div class="capy-slot"><img src="../art/capy-sit.png"/></div>
+        <div class="capy-slot empty"></div>
+        <div class="capy-slot empty"></div>
+        <div class="capy-slot empty"></div>
+        <div class="capy-slot empty"></div>
+      </div>
+      <div class="relax-toggle">
+        <div class="relax-copy"><span class="main">Relax</span><span class="sub">no lives</span></div>
+        <div class="switch"><div class="knob"></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="ai-tag">AI illustration</div>
+</div>
+<script src="board.js"></script>
+<script>
+buildBoard({mode:'progress', gridEl:document.getElementById('grid')});
+setTimeout(()=>{ const g=document.getElementById('grid'); if(window.drawOutlines) drawOutlines(g); }, 120);
+</script>
+</body></html>
+
+
+### assets/rock-intro.html
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"/>
+<link rel="stylesheet" href="common.css"/>
+<link rel="stylesheet" href="puzzle-chrome.css"/>
+<style>
+.spotlight{position:absolute;inset:0;background:rgba(40,50,45,0.45);z-index:30;pointer-events:none}
+.hole{position:absolute;border-radius:14px;box-shadow:0 0 0 9999px rgba(40,50,45,0.45);z-index:31;pointer-events:none}
+.callout.rock-tip{top:168px;left:118px;z-index:62}
+.callout.rock-tip .arrow{top:-8px;left:78px;transform:rotate(-135deg)}
+</style>
+</head><body>
+<div class="screen">
+  <div class="topbar">
+    <div class="level-pill">Pond 11</div>
+    <div class="help-btn">?</div>
+    <div class="lives"><div class="orange"></div><div class="orange"></div><div class="orange"></div></div>
+  </div>
+  <div class="rules-line">One capy per row, column &amp; color — no touching</div>
+  <div class="pond-wrap"><div class="grid zone-grid" id="grid"></div></div>
+  <div class="controls"><div class="btn">↶ Undo</div><div class="btn">💡 Hint</div></div>
+  <div class="lower">
+    <div class="status-row">
+      <div class="capy-counters">
+        <div class="capy-slot empty"></div><div class="capy-slot empty"></div><div class="capy-slot empty"></div>
+        <div class="capy-slot empty"></div><div class="capy-slot empty"></div><div class="capy-slot empty"></div>
+      </div>
+      <div class="relax-toggle"><div class="relax-copy"><span class="main">Relax</span><span class="sub">no lives</span></div><div class="switch"><div class="knob"></div></div></div>
+    </div>
+  </div>
+  <div id="hole" class="hole"></div>
+  <div class="callout rock-tip">
+    <div class="arrow"></div>
+    <div class="t">Rocks block a spot</div>
+    <div class="got">Got it</div>
+  </div>
+  <div class="ai-tag">AI illustration</div>
+</div>
+<script src="board.js"></script>
+<script>
+// empty progress for intro feel
+CAPY.placed = new Set(); CAPY.xs = new Set();
+buildBoard({mode:'progress', gridEl:document.getElementById('grid')});
+setTimeout(()=>{
+  drawOutlines(document.getElementById('grid'));
+  const cells=[...document.querySelectorAll('.cell')];
+  const rock=cells[2]; // 0,2
+  const r=rock.getBoundingClientRect();
+  const s=document.querySelector('.screen').getBoundingClientRect();
+  const h=document.getElementById('hole');
+  h.style.left=(r.left-s.left-4)+'px';
+  h.style.top=(r.top-s.top-4)+'px';
+  h.style.width=(r.width+8)+'px';
+  h.style.height=(r.height+8)+'px';
+}, 160);
+</script>
+</body></html>
+
+
+### assets/rules-sheet.html
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"/>
+<link rel="stylesheet" href="common.css"/>
+<link rel="stylesheet" href="puzzle-chrome.css"/>
+</head><body>
+<div class="screen">
+  <div class="topbar">
+    <div class="level-pill">Pond 11</div>
+    <div class="help-btn" title="Rules">?</div>
+    <div class="lives">
+      <div class="orange"></div><div class="orange"></div><div class="orange used"></div>
+    </div>
+  </div>
+  <div class="rules-line">One capy per row, column &amp; color — no touching</div>
+  <div class="pond-wrap"><div class="grid zone-grid" id="grid"></div></div>
+  <div class="controls"><div class="btn">↶ Undo</div><div class="btn">💡 Hint</div></div>
+  <div class="lower">
+    <div class="status-row">
+      <div class="capy-counters">
+        <div class="capy-slot"><img src="../art/capy-sit.png"/></div>
+        <div class="capy-slot"><img src="../art/capy-sit.png"/></div>
+        <div class="capy-slot empty"></div>
+        <div class="capy-slot empty"></div>
+        <div class="capy-slot empty"></div>
+        <div class="capy-slot empty"></div>
+      </div>
+      <div class="relax-toggle"><div class="relax-copy"><span class="main">Relax</span><span class="sub">no lives</span></div><div class="switch"><div class="knob"></div></div></div>
+    </div>
+  </div>
+  <div class="sheet-scrim"></div>
+  <div class="sheet">
+    <div class="handle"></div>
+    <h2>How to play</h2>
+    <div class="sub">Place cozy capys on the pond</div>
+    <div class="rule-row">
+      <div class="rule-ico"><img src="../art/capy-sit.png"/></div>
+      <div class="rule-txt"><div class="t">Basics</div><div class="s">One capy per row, column &amp; color. Capys can’t touch — even at corners.</div></div>
+    </div>
+    <div class="rule-row">
+      <div class="rule-ico"><img src="../art/rock.png"/></div>
+      <div class="rule-txt"><div class="t">Rock</div><div class="s">Blocked spot. No capy here.</div></div>
+    </div>
+    <div class="rule-row">
+      <div class="rule-ico"><img src="../art/capy-sleep.png"/></div>
+      <div class="rule-txt"><div class="t">Sleepy Capy</div><div class="s">Already placed. Leave it be.</div></div>
+    </div>
+    <div class="rule-row">
+      <div class="rule-ico"><img src="../art/capy-duck.png"/></div>
+      <div class="rule-txt"><div class="t">Duck Capy</div><div class="s">May touch others at a corner.</div></div>
+    </div>
+  </div>
+  <div class="ai-tag">AI illustration</div>
+</div>
+<script src="board.js"></script>
+<script>
+buildBoard({mode:'progress', gridEl:document.getElementById('grid')});
+setTimeout(()=>{ const g=document.getElementById('grid'); if(window.drawOutlines) drawOutlines(g); }, 120);
+</script>
+</body></html>
+
+
+### colorblind/palette.json
+{
+  "palette": {
+    "A": "#5EBA66",
+    "B": "#ADD4EB",
+    "C": "#EBD17A",
+    "D": "#A070C2",
+    "E": "#E3896D",
+    "F": "#51B8B1"
+  },
+  "palette_rgb": {
+    "A": [
+      94,
+      186,
+      102
+    ],
+    "B": [
+      173,
+      212,
+      235
+    ],
+    "C": [
+      235,
+      209,
+      122
+    ],
+    "D": [
+      160,
+      112,
+      194
+    ],
+    "E": [
+      227,
+      137,
+      109
+    ],
+    "F": [
+      81,
+      184,
+      177
+    ]
+  },
+  "glyph_contrast": {
+    "A": {
+      "X": 6.95,
+      "capy": 4.64,
+      "X_ok": true,
+      "capy_ok": true
+    },
+    "B": {
+      "X": 10.72,
+      "capy": 7.14,
+      "X_ok": true,
+      "capy_ok": true
+    },
+    "C": {
+      "X": 11.15,
+      "capy": 7.43,
+      "X_ok": true,
+      "capy_ok": true
+    },
+    "D": {
+      "X": 4.47,
+      "capy": 2.98,
+      "X_ok": true,
+      "capy_ok": true
+    },
+    "E": {
+      "X": 6.45,
+      "capy": 4.3,
+      "X_ok": true,
+      "capy_ok": true
+    },
+    "F": {
+      "X": 7.07,
+      "capy": 4.72,
+      "X_ok": true,
+      "capy_ok": true
+    }
+  },
+  "X": "#1C1E1A",
+  "results": {
+    "normal": {
+      "A-B": {
+        "dE": 36.37,
+        "dL": 14.54,
+        "ok": true,
+        "sim_a": [
+          94,
+          186,
+          102
+        ],
+        "sim_b": [
+          173,
+          212,
+          235
+        ]
+      },
+      "A-D": {
+        "dE": 48.89,
+        "dL": 13.33,
+        "ok": true,
+        "sim_a": [
+          94,
+          186,
+          102
+        ],
+        "sim_b": [
+          160,
+          112,
+          194
+        ]
+      },
+      "B-C": {
+        "dE": 37.42,
+        "dL": 1.42,
+        "ok": true,
+        "sim_a": [
+          173,
+          212,
+          235
+        ],
+        "sim_b": [
+          235,
+          209,
+          122
+        ]
+      },
+      "B-D": {
+        "dE": 28.92,
+        "dL": 27.87,
+        "ok": true,
+        "sim_a": [
+          173,
+          212,
+          235
+        ],
+        "sim_b": [
+          160,
+          112,
+          194
+        ]
+      },
+      "B-E": {
+        "dE": 40.14,
+        "dL": 16.89,
+        "ok": true,
+        "sim_a": [
+          173,
+          212,
+          235
+        ],
+        "sim_b": [
+          227,
+          137,
+          109
+        ]
+      },
+      "C-E": {
+        "dE": 29.99,
+        "dL": 18.31,
+        "ok": true,
+        "sim_a": [
+          235,
+          209,
+          122
+        ],
+        "sim_b": [
+          227,
+          137,
+          109
+        ]
+      },
+      "C-F": {
+        "dE": 34.17,
+        "dL": 15.42,
+        "ok": true,
+        "sim_a": [
+          235,
+          209,
+          122
+        ],
+        "sim_b": [
+          81,
+          184,
+          177
+        ]
+      },
+      "D-E": {
+        "dE": 35.03,
+        "dL": 10.98,
+        "ok": true,
+        "sim_a": [
+          160,
+          112,
+          194
+        ],
+        "sim_b": [
+          227,
+          137,
+          109
+        ]
+      },
+      "E-F": {
+        "dE": 45.87,
+        "dL": 2.89,
+        "ok": true,
+        "sim_a": [
+          227,
+          137,
+          109
+        ],
+        "sim_b": [
+          81,
+          184,
+          177
+        ]
+      }
+    },
+    "deuteranopia": {
+      "A-B": {
+        "dE": 34.79,
+        "dL": 16.99,
+        "ok": true,
+        "sim_a": [
+          171,
+          156,
+          106
+        ],
+        "sim_b": [
+          192,
+          202,
+          235
+        ]
+      },
+      "A-D": {
+        "dE": 41.93,
+        "dL": 9.64,
+        "ok": true,
+        "sim_a": [
+          171,
+          156,
+          106
+        ],
+        "sim_b": [
+          111,
+          129,
+          191
+        ]
+      },
+      "B-C": {
+        "dE": 38.33,
+        "dL": 3.83,
+        "ok": true,
+        "sim_a": [
+          192,
+          202,
+          235
+        ],
+        "sim_b": [
+          238,
+          212,
+          124
+        ]
+      },
+      "B-D": {
+        "dE": 22.24,
+        "dL": 26.63,
+        "ok": true,
+        "sim_a": [
+          192,
+          202,
+          235
+        ],
+        "sim_b": [
+          111,
+          129,
+          191
+        ]
+      },
+      "B-E": {
+        "dE": 34.67,
+        "dL": 15.15,
+        "ok": true,
+        "sim_a": [
+          192,
+          202,
+          235
+        ],
+        "sim_b": [
+          176,
+          161,
+          109
+        ]
+      },
+      "C-E": {
+        "dE": 15.19,
+        "dL": 18.98,
+        "ok": true,
+        "sim_a": [
+          238,
+          212,
+          124
+        ],
+        "sim_b": [
+          176,
+          161,
+          109
+        ]
+      },
+      "C-F": {
+        "dE": 38.38,
+        "dL": 21.24,
+        "ok": true,
+        "sim_a": [
+          238,
+          212,
+          124
+        ],
+        "sim_b": [
+          148,
+          155,
+          178
+        ]
+      },
+      "D-E": {
+        "dE": 42.72,
+        "dL": 11.48,
+        "ok": true,
+        "sim_a": [
+          111,
+          129,
+          191
+        ],
+        "sim_b": [
+          176,
+          161,
+          109
+        ]
+      },
+      "E-F": {
+        "dE": 29.82,
+        "dL": 2.26,
+        "ok": true,
+        "sim_a": [
+          176,
+          161,
+          109
+        ],
+        "sim_b": [
+          148,
+          155,
+          178
+        ]
+      }
+    },
+    "protanopia": {
+      "A-B": {
+        "dE": 35.01,
+        "dL": 15.26,
+        "ok": true,
+        "sim_a": [
+          189,
+          167,
+          98
+        ],
+        "sim_b": [
+          201,
+          210,
+          236
+        ]
+      },
+      "A-D": {
+        "dE": 48.61,
+        "dL": 15.1,
+        "ok": true,
+        "sim_a": [
+          189,
+          167,
+          98
+        ],
+        "sim_b": [
+          103,
+          126,
+          198
+        ]
+      },
+      "B-C": {
+        "dE": 35.4,
+        "dL": 1.89,
+        "ok": true,
+        "sim_a": [
+          201,
+          210,
+          236
+        ],
+        "sim_b": [
+          231,
+          203,
+          117
+        ]
+      },
+      "B-D": {
+        "dE": 26.05,
+        "dL": 30.36,
+        "ok": true,
+        "sim_a": [
+          201,
+          210,
+          236
+        ],
+        "sim_b": [
+          103,
+          126,
+          198
+        ]
+      },
+      "B-E": {
+        "dE": 32.59,
+        "dL": 24.03,
+        "ok": true,
+        "sim_a": [
+          201,
+          210,
+          236
+        ],
+        "sim_b": [
+          156,
+          145,
+          107
+        ]
+      },
+      "C-E": {
+        "dE": 19.51,
+        "dL": 22.14,
+        "ok": true,
+        "sim_a": [
+          231,
+          203,
+          117
+        ],
+        "sim_b": [
+          156,
+          145,
+          107
+        ]
+      },
+      "C-F": {
+        "dE": 27.29,
+        "dL": 12.04,
+        "ok": true,
+        "sim_a": [
+          231,
+          203,
+          117
+        ],
+        "sim_b": [
+          170,
+          172,
+          177
+        ]
+      },
+      "D-E": {
+        "dE": 40.42,
+        "dL": 6.33,
+        "ok": true,
+        "sim_a": [
+          103,
+          126,
+          198
+        ],
+        "sim_b": [
+          156,
+          145,
+          107
+        ]
+      },
+      "E-F": {
+        "dE": 19.95,
+        "dL": 10.1,
+        "ok": true,
+        "sim_a": [
+          156,
+          145,
+          107
+        ],
+        "sim_b": [
+          170,
+          172,
+          177
+        ]
+      }
+    },
+    "tritanopia": {
+      "A-B": {
+        "dE": 15.04,
+        "dL": 15.55,
+        "ok": true,
+        "sim_a": [
+          86,
+          181,
+          160
+        ],
+        "sim_b": [
+          159,
+          218,
+          219
+        ]
+      },
+      "A-D": {
+        "dE": 45.81,
+        "dL": 13.13,
+        "ok": true,
+        "sim_a": [
+          86,
+          181,
+          160
+        ],
+        "sim_b": [
+          158,
+          120,
+          137
+        ]
+      },
+      "B-C": {
+        "dE": 37.75,
+        "dL": 0.34,
+        "ok": true,
+        "sim_a": [
+          159,
+          218,
+          219
+        ],
+        "sim_b": [
+          255,
+          194,
+          183
+        ]
+      },
+      "B-D": {
+        "dE": 45.46,
+        "dL": 28.68,
+        "ok": true,
+        "sim_a": [
+          159,
+          218,
+          219
+        ],
+        "sim_b": [
+          158,
+          120,
+          137
+        ]
+      },
+      "B-E": {
+        "dE": 46.8,
+        "dL": 15.39,
+        "ok": true,
+        "sim_a": [
+          159,
+          218,
+          219
+        ],
+        "sim_b": [
+          255,
+          126,
+          129
+        ]
+      },
+      "C-E": {
+        "dE": 16.23,
+        "dL": 15.73,
+        "ok": true,
+        "sim_a": [
+          255,
+          194,
+          183
+        ],
+        "sim_b": [
+          255,
+          126,
+          129
+        ]
+      },
+      "C-F": {
+        "dE": 44.44,
+        "dL": 13.1,
+        "ok": true,
+        "sim_a": [
+          255,
+          194,
+          183
+        ],
+        "sim_b": [
+          56,
+          191,
+          181
+        ]
+      },
+      "D-E": {
+        "dE": 21.15,
+        "dL": 13.29,
+        "ok": true,
+        "sim_a": [
+          158,
+          120,
+          137
+        ],
+        "sim_b": [
+          255,
+          126,
+          129
+        ]
+      },
+      "E-F": {
+        "dE": 57.89,
+        "dL": 2.63,
+        "ok": true,
+        "sim_a": [
+          255,
+          126,
+          129
+        ],
+        "sim_b": [
+          56,
+          191,
+          181
+        ]
+      }
+    }
+  },
+  "cvd_adjacent_all_ok": true
+}
+
+### colorblind/report.txt
+Capydoku v3 brighter cozy palette (polish)
+Method: Machado 2009 + CIEDE2000; WCAG relative-luminance contrast
+Adjacent pass: ΔE>=15 OR |ΔL|>=18
+Glyph target >=3:1
+X #1C1E1A; capy #4E3622
+B/C/E brightened (sat sky / sunny butter / warm coral); A nudged only if CVD required; D/F kept
+Patterns + 5px outlines retained
+
+  A: #5EBA66  RGB(94, 186, 102)  HSL≈(125°, 40%, 55%)
+  B: #ADD4EB  RGB(173, 212, 235)  HSL≈(202°, 61%, 80%)
+  C: #EBD17A  RGB(235, 209, 122)  HSL≈(46°, 74%, 70%)
+  D: #A070C2  RGB(160, 112, 194)  HSL≈(275°, 40%, 60%)
+  E: #E3896D  RGB(227, 137, 109)  HSL≈(14°, 68%, 66%)
+  F: #51B8B1  RGB(81, 184, 177)  HSL≈(176°, 42%, 52%)
+
+Adjacent: [('A', 'B'), ('A', 'D'), ('B', 'C'), ('B', 'D'), ('B', 'E'), ('C', 'E'), ('C', 'F'), ('D', 'E'), ('E', 'F')]
+
+=== normal ===
+  A-B: ΔE=36.4 ΔL=14.5 [OK]
+  A-D: ΔE=48.9 ΔL=13.3 [OK]
+  B-C: ΔE=37.4 ΔL=1.4 [OK]
+  B-D: ΔE=28.9 ΔL=27.9 [OK]
+  B-E: ΔE=40.1 ΔL=16.9 [OK]
+  C-E: ΔE=30.0 ΔL=18.3 [OK]
+  C-F: ΔE=34.2 ΔL=15.4 [OK]
+  D-E: ΔE=35.0 ΔL=11.0 [OK]
+  E-F: ΔE=45.9 ΔL=2.9 [OK]
+
+=== deuteranopia ===
+  A-B: ΔE=34.8 ΔL=17.0 [OK]
+  A-D: ΔE=41.9 ΔL=9.6 [OK]
+  B-C: ΔE=38.3 ΔL=3.8 [OK]
+  B-D: ΔE=22.2 ΔL=26.6 [OK]
+  B-E: ΔE=34.7 ΔL=15.1 [OK]
+  C-E: ΔE=15.2 ΔL=19.0 [OK]
+  C-F: ΔE=38.4 ΔL=21.2 [OK]
+  D-E: ΔE=42.7 ΔL=11.5 [OK]
+  E-F: ΔE=29.8 ΔL=2.3 [OK]
+
+=== protanopia ===
+  A-B: ΔE=35.0 ΔL=15.3 [OK]
+  A-D: ΔE=48.6 ΔL=15.1 [OK]
+  B-C: ΔE=35.4 ΔL=1.9 [OK]
+  B-D: ΔE=26.1 ΔL=30.4 [OK]
+  B-E: ΔE=32.6 ΔL=24.0 [OK]
+  C-E: ΔE=19.5 ΔL=22.1 [OK]
+  C-F: ΔE=27.3 ΔL=12.0 [OK]
+  D-E: ΔE=40.4 ΔL=6.3 [OK]
+  E-F: ΔE=20.0 ΔL=10.1 [OK]
+
+=== tritanopia ===
+  A-B: ΔE=15.0 ΔL=15.5 [OK]
+  A-D: ΔE=45.8 ΔL=13.1 [OK]
+  B-C: ΔE=37.8 ΔL=0.3 [OK]
+  B-D: ΔE=45.5 ΔL=28.7 [OK]
+  B-E: ΔE=46.8 ΔL=15.4 [OK]
+  C-E: ΔE=16.2 ΔL=15.7 [OK]
+  C-F: ΔE=44.4 ΔL=13.1 [OK]
+  D-E: ΔE=21.1 ΔL=13.3 [OK]
+  E-F: ΔE=57.9 ΔL=2.6 [OK]
+
+=== glyph contrast ===
+  A vs X: 6.95:1 [OK]  vs capy: 4.64:1 [OK]
+  B vs X: 10.72:1 [OK]  vs capy: 7.14:1 [OK]
+  C vs X: 11.15:1 [OK]  vs capy: 7.43:1 [OK]
+  D vs X: 4.47:1 [OK]  vs capy: 2.98:1 [OK]
+  E vs X: 6.45:1 [OK]  vs capy: 4.30:1 [OK]
+  F vs X: 7.07:1 [OK]  vs capy: 4.72:1 [OK]
+
+cvd_adjacent_all_ok: True
+
+
+### verify/puzzle.json
+{
+  "n": 6,
+  "zones": [
+    [
+      "A",
+      "A",
+      "A",
+      "B",
+      "B",
+      "C"
+    ],
+    [
+      "A",
+      "B",
+      "B",
+      "B",
+      "B",
+      "C"
+    ],
+    [
+      "A",
+      "A",
+      "B",
+      "E",
+      "E",
+      "C"
+    ],
+    [
+      "D",
+      "D",
+      "D",
+      "E",
+      "C",
+      "C"
+    ],
+    [
+      "D",
+      "E",
+      "E",
+      "E",
+      "C",
+      "F"
+    ],
+    [
+      "D",
+      "D",
+      "E",
+      "F",
+      "F",
+      "F"
+    ]
+  ],
+  "rocks": [
+    [
+      0,
+      2
+    ]
+  ],
+  "solution": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      5,
+      4
+    ]
+  ],
+  "placed": [
+    [
+      0,
+      1
+    ],
+    [
+      3,
+      0
+    ]
+  ],
+  "x_marks": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      5,
+      1
+    ]
+  ],
+  "unique": true,
+  "solutions_found": 1
+}
+
+### verify/result.txt
+Capydoku 6x6 uniqueness verifier
+Rules: one per row, column, zone; no orthogonal/diagonal touch; rocks blocked
+ZONES:
+  A A A B B C
+  A B B B B C
+  A A B E E C
+  D D D E C C
+  D E E E C F
+  D D E F F F
+ROCKS: [(0, 2)]
+solutions_found: 1
+solution[0]: [(0, 1), (1, 3), (2, 5), (3, 0), (4, 2), (5, 4)]
+unique: True
+matches_expected: True
+solution_cells: [(0, 1), (1, 3), (2, 5), (3, 0), (4, 2), (5, 4)]
+placed: [(0, 1), (3, 0)]
+placed_in_solution: True
+x_marks: [(0, 0), (0, 4), (1, 1), (2, 1), (4, 4), (5, 1)]
+xs_not_in_solution: True
+rocks_not_in_solution: True
+mockup_state_ok: True
+
+
+### verify/solver.py
+#!/usr/bin/env python3
+"""Capydoku 6x6 uniqueness verifier. Enumerates ALL solutions under the rules."""
+from itertools import permutations
+from collections import defaultdict
+
+N = 6
+
+# Zone labels A-F (unequal sizes OK; exactly one capy per zone)
+ZONES = [
+    list("AAABBC"),
+    list("ABBBBC"),
+    list("AABEEC"),
+    list("DDDECC"),
+    list("DEEECF"),
+    list("DDEFFF"),
+]
+
+ROCKS = {(0, 2)}
+
+# Known unique solution (row, col), 0-indexed
+SOLUTION = [(0, 1), (1, 3), (2, 5), (3, 0), (4, 2), (5, 4)]
+
+# Mockup progress state
+PLACED = [(0, 1), (3, 0)]  # must be in solution
+X_MARKS = [(0, 0), (0, 4), (1, 1), (2, 1), (4, 4), (5, 1)]  # must NOT be in solution
+
+
+def king_adjacent(a, b):
+    r1, c1 = a
+    r2, c2 = b
+    return max(abs(r1 - r2), abs(c1 - c2)) <= 1 and a != b
+
+
+def valid(perm):
+    cells = [(r, perm[r]) for r in range(N)]
+    if any(cell in ROCKS for cell in cells):
+        return False
+    zc = defaultdict(int)
+    for r, c in cells:
+        zc[ZONES[r][c]] += 1
+    if len(zc) != N or any(v != 1 for v in zc.values()):
+        return False
+    for i in range(N):
+        for j in range(i + 1, N):
+            if king_adjacent(cells[i], cells[j]):
+                return False
+    return True
+
+
+def enumerate_all():
+    return [[(r, p[r]) for r in range(N)] for p in permutations(range(N)) if valid(p)]
+
+
+def main():
+    sols = enumerate_all()
+    lines = []
+    lines.append("Capydoku 6x6 uniqueness verifier")
+    lines.append("Rules: one per row, column, zone; no orthogonal/diagonal touch; rocks blocked")
+    lines.append("ZONES:")
+    for row in ZONES:
+        lines.append("  " + " ".join(row))
+    lines.append(f"ROCKS: {sorted(ROCKS)}")
+    lines.append(f"solutions_found: {len(sols)}")
+    for i, s in enumerate(sols):
+        lines.append(f"solution[{i}]: {s}")
+    unique = len(sols) == 1
+    lines.append(f"unique: {unique}")
+    ok = True
+    if unique:
+        sol = set(map(tuple, sols[0]))
+        expected = set(SOLUTION)
+        lines.append(f"matches_expected: {sol == expected}")
+        lines.append(f"solution_cells: {sorted(sol)}")
+        placed_ok = all(p in sol for p in PLACED)
+        xs_ok = all(x not in sol for x in X_MARKS)
+        rocks_ok = all(r not in sol for r in ROCKS)
+        lines.append(f"placed: {PLACED}")
+        lines.append(f"placed_in_solution: {placed_ok}")
+        lines.append(f"x_marks: {X_MARKS}")
+        lines.append(f"xs_not_in_solution: {xs_ok}")
+        lines.append(f"rocks_not_in_solution: {rocks_ok}")
+        ok = sol == expected and placed_ok and xs_ok and rocks_ok
+    else:
+        ok = False
+    lines.append(f"mockup_state_ok: {ok}")
+    text = "\n".join(lines) + "\n"
+    print(text)
+    with open("/workspace/capydoku/mockup/v3/verify/result.txt", "w") as f:
+        f.write(text)
+    # shared puzzle data for renderers
+    import json
+    data = {
+        "n": N,
+        "zones": ZONES,
+        "rocks": [list(r) for r in sorted(ROCKS)],
+        "solution": [list(c) for c in SOLUTION],
+        "placed": [list(c) for c in PLACED],
+        "x_marks": [list(c) for c in X_MARKS],
+        "unique": unique,
+        "solutions_found": len(sols),
+    }
+    with open("/workspace/capydoku/mockup/v3/verify/puzzle.json", "w") as f:
+        json.dump(data, f, indent=2)
+    return 0 if ok and unique else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -1,0 +1,39 @@
+{
+  "viewport": {
+    "width": 412,
+    "height": 915
+  },
+  "document": {
+    "h": 915,
+    "w": 412,
+    "inner": 915
+  },
+  "buttons": [
+    {
+      "text": "♨ Hot Spring",
+      "rect": {
+        "x": 18,
+        "y": 833,
+        "width": 181,
+        "height": 52,
+        "top": 833,
+        "right": 199,
+        "bottom": 885,
+        "left": 18
+      }
+    },
+    {
+      "text": "Next pond →",
+      "rect": {
+        "x": 18,
+        "y": 761,
+        "width": 376,
+        "height": 60,
+        "top": 761,
+        "right": 394,
+        "bottom": 821,
+        "left": 18
+      }
+    }
+  ]
+}

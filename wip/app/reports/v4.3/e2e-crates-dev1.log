@@ -1,0 +1,61 @@
+
+Running 14 tests using 1 worker
+
+(node:1614552) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[1/14] [mobile-412] › tests/v43-crates.spec.js:61:1 › Home: crate tiles on 5/10/15/20/25/30 (gates 10/20/30), crowns on bosses 9/19/29, Continue names the crate pond
+[2/14] [mobile-412] › tests/v43-crates.spec.js:80:1 › pond 4 → transition to Crate Pond 5: no bonus offer, crate thumbnail, Packed/Clean run/Par lilies, Start crate pond
+[3/14] [mobile-412] › tests/v43-crates.spec.js:99:1 › first entry 'Move your way'; swipe, tap-walk, free undo, restart; Leave → Home with nothing awarded
+[4/14] [mobile-412] › tests/v43-crates.spec.js:126:1 › clean run at par: all 3 lilies, push/landing haptics, +1 orange for Pond 6 → transition shows it → it absorbs one mistake
+[5/14] [mobile-412] › tests/v43-crates.spec.js:165:1 › Undo costs the Clean run lily (Par + orange kept); over par keeps Clean run but no Par and no orange
+[6/14] [mobile-412] › tests/v43-crates.spec.js:187:1 › Show me appears only after 3 Restarts, replays the stored solution, gives the Packed lily only (no orange, no best)
+[7/14] [mobile-412] › tests/v43-crates.spec.js:218:1 › gate pond 10 (after boss 9): World gate transition, 'World gate open!', the Hot Spring grows, then the breather Pond 11
+[8/14] [mobile-412] › tests/v43-crates.spec.js:240:1 › finale pond 30: no orange, 'The Hot Spring is complete!', Finish → All 30 ponds ✓
+[9/14] [mobile-412] › tests/v43-crates.spec.js:262:3 › crate pond 20 (7×7) is solvable with its stored solution, without scrolling
+[10/14] [mobile-412] › tests/v43-crates.spec.js:262:3 › crate pond 25 (8×8) is solvable with its stored solution on the D-pad, without scrolling
+[11/14] [mobile-412] › tests/v43-crates.spec.js:275:1 › Settings: 'Crate ponds · D-pad' persists; the D-pad steps
+[12/14] [mobile-412] › tests/v43-crates.spec.js:291:1 › boss 29 (10×10, 2 rocks) fits with no scroll and every corner cell is tappable; cell size recorded
+[13/14] [mobile-412] › tests/v43-crates.spec.js:315:1 › each size on the path renders without scrolling: ponds 1 (7×7), 6 (8×8), 14 (9×9), 21 (9×9 + rock)
+[14/14] [mobile-412] › tests/v43-crates.spec.js:325:1 › save migration (v4.2.1 save): 'Ponds refreshed' once, goldens on bosses 9/19, Crate Cove 3 clears gate 10, no lily lost
+  1) [mobile-412] › tests/v43-crates.spec.js:325:1 › save migration (v4.2.1 save): 'Ponds refreshed' once, goldens on bosses 9/19, Crate Cove 3 clears gate 10, no lily lost 
+
+    Error: expect(locator).not.toContainText(expected) failed
+
+    Locator: locator('.toast')
+    Expected substring: not "Ponds refreshed"
+    Timeout: 7000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "not toContainText" locator('.toast') with timeout 7000ms
+      - waiting for locator('.toast')
+
+
+      345 |   await expect(page.locator(".home")).toBeVisible();
+      346 |   await page.waitForTimeout(600);
+    > 347 |   await expect(page.locator(".toast")).not.toContainText("Ponds refreshed");
+          |                                            ^
+      348 |   expect(await stored(page)).toEqual(p);
+      349 | });
+      350 |
+        at /workspace/capydoku/app/tests/v43-crates.spec.js:347:44
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/v43-crates-save-migration--e37a8-clears-gate-10-no-lily-lost-mobile-412/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/v43-crates-save-migration--e37a8-clears-gate-10-no-lily-lost-mobile-412/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/v43-crates-save-migration--e37a8-clears-gate-10-no-lily-lost-mobile-412/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/v43-crates-save-migration--e37a8-clears-gate-10-no-lily-lost-mobile-412/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+  1 failed
+    [mobile-412] › tests/v43-crates.spec.js:325:1 › save migration (v4.2.1 save): 'Ponds refreshed' once, goldens on bosses 9/19, Crate Cove 3 clears gate 10, no lily lost 
+  13 passed (49.9s)

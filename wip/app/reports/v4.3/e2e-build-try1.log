@@ -1,0 +1,41 @@
+
+Running 350 tests using 1 worker
+
+(node:1630012) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘    1 [mobile-412] › tests/design-latest.spec.js:6:1 › v4.1 (illustrated map removed): boss tiles keep locked/next/beaten state; all 30 pond tiles ≥44px, in order, no overlap or clipping (7.8s)
+(node:1630323) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘    2 [mobile-412] › tests/design-latest.spec.js:8:1 › every Bloom reference is v6.4 across chooser,map,HUD,power,first-use,switch,Spring,celebration; density3 uses supplied files (8.5s)
+(node:1630663) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓    3 [mobile-412] › tests/mobile.spec.js:14:1 › home, marks/capy/clear and undo; double tap no X flash; mobile targets (3.3s)
+  ✓    4 [mobile-412] › tests/mobile.spec.js:16:1 › Peek ghosts one unsolved spot, never places; Hint is gone and power stays spent (1.5s)
+  ✓    5 [mobile-412] › tests/mobile.spec.js:17:54 › row violation red and costs exactly one orange; clear repairs (1.3s)
+  ✓    6 [mobile-412] › tests/mobile.spec.js:17:54 › column violation red and costs exactly one orange; clear repairs (1.3s)
+  ✓    7 [mobile-412] › tests/mobile.spec.js:17:54 › zone violation red and costs exactly one orange; clear repairs (1.3s)
+  ✓    8 [mobile-412] › tests/mobile.spec.js:17:54 › diagonal violation red and costs exactly one orange; clear repairs (1.2s)
+  ✓    9 [mobile-412] › tests/mobile.spec.js:18:1 › game over, input locked, retry resets oranges and board (1.9s)
+  ✓   10 [mobile-412] › tests/mobile.spec.js:19:1 › solve, actual jump frames, unlock + persistence after reload (5.3s)
+  ✘   11 [mobile-412] › tests/mobile.spec.js:20:1 › boss 10 grows spring and grants persistent pure-solve golden lily (45.5s)
+(node:1632833) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   12 [mobile-412] › tests/mobile.spec.js:21:1 › boss 20/30 rewards and blocked rocks; 7×7 tap targets (45.5s)
+(node:1633542) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   13 [mobile-412] › tests/mobile.spec.js:22:1 › Daily Pond deterministic reload + same-day streak, consecutive +1, missed-day reset (4.1s)
+  ✓   14 [mobile-412] › tests/mobile.spec.js:24:1 › PWA precache 200 + offline startup/reload, unseen query, essential resources (1.6s)
+  ✓   15 [mobile-412] › tests/mobile.spec.js:25:1 › settings have no mode; corrupt and future storage cannot crash or overwrite (1.7s)
+  ✘   16 [mobile-412] › tests/no-mode.spec.js:10:1 › no Relax or Chill UI on map, settings, Hot Spring, chooser, puzzle, rules or tutorial; every starter has its native power (1.6m)
+(node:1634602) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   17 [mobile-412] › tests/no-mode.spec.js:11:1 › v3.1.x no-lives attempt restarts normal with three oranges; explicit normal attempt, path, streak and settings preserved (978ms)
+(node:1634847) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   18 [mobile-412] › tests/no-mode.spec.js:12:1 › game over only offers retry and map for all companions; retry starts a full normal attempt (8.1s)
+(node:1635152) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   19 [mobile-412] › tests/no-mode.spec.js:13:1 › Hot Spring next-tier silhouette and exact real upgrade copy at tiers 0/1/2; hidden at max tier (10.6s)
+(node:1635467) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+EXIT 143

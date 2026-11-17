@@ -1,0 +1,15 @@
+safe daily 0
+safe daily 60
+safe daily 120
+safe daily 180
+safe daily 240
+safe daily 300
+safe daily 360
+Traceback (most recent call last):
+  File "/workspace/capydoku/app/scripts/retune-v2.py", line 96, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/workspace/capydoku/app/scripts/retune-v2.py", line 84, in main
+    sols=solutions(q);ok,_=logic(q);assert len(sols)==1 and ok
+                                           ^^^^^^^^^^^^^^^^^^^
+AssertionError

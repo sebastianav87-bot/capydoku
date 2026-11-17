@@ -1,0 +1,193 @@
+
+> capydoku-local-prototype@4.0.0 test:e2e
+> playwright test
+
+
+Running 69 tests using 1 worker
+
+(node:400012) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/mobile.spec.js:12:1 › home, marks/capy/clear and undo; double tap no X flash; mobile targets (3.3s)
+  ✓   2 tests/mobile.spec.js:14:1 › Peek ghosts one unsolved spot, never places; Hint is gone and power stays spent (972ms)
+  ✓   3 tests/mobile.spec.js:15:54 › row violation red and costs exactly one orange; clear repairs (1.4s)
+  ✓   4 tests/mobile.spec.js:15:54 › column violation red and costs exactly one orange; clear repairs (1.3s)
+  ✓   5 tests/mobile.spec.js:15:54 › zone violation red and costs exactly one orange; clear repairs (1.4s)
+  ✓   6 tests/mobile.spec.js:15:54 › diagonal violation red and costs exactly one orange; clear repairs (1.3s)
+  ✓   7 tests/mobile.spec.js:16:1 › game over, input locked, retry resets oranges and board (2.0s)
+  ✓   8 tests/mobile.spec.js:17:1 › Chill never loses oranges; no game over and mode persists (3.2s)
+  ✓   9 tests/mobile.spec.js:18:1 › solve, actual jump frames, unlock + persistence after reload (5.2s)
+  ✓  10 tests/mobile.spec.js:19:1 › boss 10 grows spring and grants persistent pure-solve golden lily (5.5s)
+  ✓  11 tests/mobile.spec.js:20:1 › boss 20/30 rewards and blocked rocks; 7×7 tap targets (2.1s)
+  ✓  12 tests/mobile.spec.js:21:1 › Daily Pond deterministic reload + same-day streak, consecutive +1, missed-day reset (3.2s)
+  ✓  13 tests/mobile.spec.js:23:1 › PWA precache 200 + offline startup/reload, unseen query, essential resources (1.3s)
+  ✓  14 tests/mobile.spec.js:24:1 › settings toggles Chill; corrupt and future storage cannot crash or overwrite (1.5s)
+  ✓  15 tests/sizing.spec.js:5:76 › single-config sizing A/B comparison › A: 5/6/7 grids and targets at 412×915 (2.4s)
+  ✓  16 tests/sizing.spec.js:5:76 › single-config sizing A/B comparison › A: 5/6/7 grids and targets at 360×780 (2.3s)
+  ✓  17 tests/sizing.spec.js:5:76 › single-config sizing A/B comparison › B: 5/6/7 grids and targets at 412×915 (2.4s)
+  ✓  18 tests/sizing.spec.js:5:76 › single-config sizing A/B comparison › B: 5/6/7 grids and targets at 360×780 (2.3s)
+  ✓  19 tests/starters.spec.js:13:1 › first-run chooser matches supplied starters; selected state, preview, persistence and Home badge (698ms)
+  ✓  20 tests/starters.spec.js:14:1 › Home / Hot Spring switching is cosmetic and preserves progress, streak and board; other two are friends (1.1s)
+  ✘  21 tests/starters.spec.js:15:1 › Catmull–Rom trail connects actual centers of ALL 30 nodes without overlaps (929ms)
+(node:413508) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  22 tests/starters.spec.js:16:1 › mid-level unused switch gives new power; spent stays spent; Nap charges survive switch, Undo and reload (1.8s)
+  ✓  23 tests/starters.spec.js:17:1 › Nap protects three moves including correct / X; fourth illegal placement costs orange; retry resets attempt (1.9s)
+  ✓  24 tests/starters.spec.js:18:1 › Nap drag spends one charge per new X, one Undo never refunds charges (629ms)
+  ✓  25 tests/starters.spec.js:19:1 › Peek last target is allowed, all remaining targets X disables, no auto-place and no Hint anywhere (726ms)
+  ✓  26 tests/starters.spec.js:20:1 › Bloom disabled without mistake; Second chance removes last offender, restores one life, stays spent on reload (891ms)
+  ✓  27 tests/starters.spec.js:21:1 › Second chance can rescue fatal last-orange error; never refills all oranges (712ms)
+  ✓  28 tests/starters.spec.js:22:1 › Relax uses Peek for ALL three starters and toggling back cannot restore power (1.2s)
+  ✓  29 tests/starters.spec.js:23:1 › Powered boss gets no lily; Replay is fresh attempt and a subsequent pure solve earns persistent lily (2.6s)
+  ✓  30 tests/starters.spec.js:25:1 › iOS platform emulation › iPhone emulated UA: missing vibration silent, install instruction, safe-area viewport metadata (2.4s)
+  ✓  31 tests/starters.spec.js:26:1 › iOS platform emulation › iOS standalone is detected without beforeinstallprompt (522ms)
+  ✓  32 tests/starters.spec.js:28:1 › v2→v3 migration preserves board / progression / streak / settings; v2 key untouched (612ms)
+  ✓  33 tests/starters.spec.js:29:1 › real v2 service worker → v3 upgrade, old cache removed, migration and strict offline reload (3.6s)
+  ✓  34 tests/v2.spec.js:18:1 › drag paints/clears, skips capys, interpolates fast paths; each gesture is ONE undo; tap cycle survives (2.0s)
+  ✓  35 tests/v2.spec.js:19:1 › 10px threshold preserves taps; board drag never scrolls/reloads; native map scroll still works (1.5s)
+  ✓  36 tests/v2.spec.js:20:1 › mocked haptics: legal 32ms, illegal double buzz, solve celebration; toggle persists and suppresses all (3.3s)
+  ✓  37 tests/v2.spec.js:23:1 › drag haptic ticks: new cells only, clearing too, 70ms throttle on fast drag, toggle off (2.9s)
+  ✘  38 tests/v2.spec.js:28:1 › early 1–3 screenshots, obvious first starts, rules sheet and collection purpose (8.9s)
+(node:417367) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  39 tests/v2.spec.js:29:1 › daily rocks gated until campaign 21; campaign-first and daily-first intros are one-time (1.9s)
+  ✓  40 tests/v2.spec.js:32:1 › date-only streak remains idempotent when daily eligibility changes (2.4s)
+  ✓  41 tests/v2.spec.js:33:1 › v1→v3 migration retains earned progress and compatible board; legacy key untouched (848ms)
+  ✘  42 tests/v2.spec.js:34:1 › missing/throwing vibration API never errors; real-device feedback not claimed (8.4s)
+(node:419317) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  43 tests/v2.spec.js:35:1 › real v1 SW→v3 update, effective JS, migrated progress, strict offline reload and unseen query (3.7s)
+  ✓  44 tests/v3.spec.js:9:1 › v3 rules line, sheet, true 5px outlines, counters, Relax off/on, safe flex layout (1.6s)
+  ✓  45 tests/v3.spec.js:10:1 › Hot Spring option A stages at zero/one/two/three bosses, earned slots and decorations (1.6s)
+  ✓  46 tests/v3.spec.js:11:1 › enhanced solve: six live frames, solve-order jumps, timed splash haptics, optional local sound (5.0s)
+  ✓  47 tests/v3.spec.js:12:1 › reduced motion crossfades straight to soaking with no jumps or splash haptics (3.7s)
+  ✓  48 tests/v3.spec.js:13:1 › mouse pointer ID reuse after drag still permits mark, clear and one-click controls (2.0s)
+  ✓  49 tests/v31-extension.spec.js:8:2 › default B constant-width 5/6/7 boards and all cells ≥44px at 412×915 (968ms)
+  ✓  50 tests/v31-extension.spec.js:9:54 › solved normal: Replay / Next pond / Hot Spring fit with NO scroll at 412×915 (4.0s)
+  ✓  51 tests/v31-extension.spec.js:9:54 › solved boss: Replay / Next pond / Hot Spring fit with NO scroll at 412×915 (3.9s)
+  ✓  52 tests/v31-extension.spec.js:9:54 › solved boss30: Replay / Next pond / Hot Spring fit with NO scroll at 412×915 (4.2s)
+  ✓  53 tests/v31-extension.spec.js:9:54 › solved daily: Replay / Next pond / Hot Spring fit with NO scroll at 412×915 (4.1s)
+  ✓  54 tests/v31-extension.spec.js:8:2 › default B constant-width 5/6/7 boards and all cells ≥44px at 360×780 (1.2s)
+  ✓  55 tests/v31-extension.spec.js:9:54 › solved normal: Replay / Next pond / Hot Spring fit with NO scroll at 360×780 (3.9s)
+  ✓  56 tests/v31-extension.spec.js:9:54 › solved boss: Replay / Next pond / Hot Spring fit with NO scroll at 360×780 (3.9s)
+  ✓  57 tests/v31-extension.spec.js:9:54 › solved boss30: Replay / Next pond / Hot Spring fit with NO scroll at 360×780 (3.8s)
+  ✓  58 tests/v31-extension.spec.js:9:54 › solved daily: Replay / Next pond / Hot Spring fit with NO scroll at 360×780 (3.8s)
+  ✓  59 tests/v31-extension.spec.js:11:41 › restored v1 concurrent upward launch uses Jun, visible 1.5s flight then matched soaking (3.7s)
+  ✓  60 tests/v31-extension.spec.js:11:41 › restored v1 concurrent upward launch uses Bloom, visible 1.5s flight then matched soaking (3.7s)
+  ✓  61 tests/v31-extension.spec.js:11:41 › restored v1 concurrent upward launch uses Remy, visible 1.5s flight then matched soaking (3.7s)
+  ✓  62 tests/v31-extension.spec.js:13:1 › music: NO playback before interaction, own toggle persists separately from effects, off really pauses (2.4s)
+  ✓  63 tests/v31-extension.spec.js:14:1 › music: hidden tab pauses immediately, visible resumes, Relax lowers volume, ended rotates all three (2.5s)
+  ✓  64 tests/v31-extension.spec.js:15:1 › music: older-iPhone MP3 path and actual local Opus/MP3 metadata decode without console errors (365ms)
+  ✓  65 tests/v31-extension.spec.js:16:1 › music plays actual local audio only after touch, then pauses on hidden tab without mocks (2.3s)
+  ✓  66 tests/v31-extension.spec.js:17:1 › real shipped v3 → local v3.1 service-worker upgrade, new music cached, all URLs 200 offline and MP3 Range supported (3.3s)
+  ✓  67 tests/v31.spec.js:6:1 › v3.1 Peek has ONE message, compact card never flex-grows; empty content collapses without shifting board/counters (3.8s)
+  ✓  68 tests/v31.spec.js:9:1 › v3.1 Nap and Second chance also have one card-only message, no duplicate power toast (1.8s)
+  ✓  69 tests/v31.spec.js:11:1 › v3.1 clean Bloom preview at first run AND switch; source steam pixels absent and other starters still decode (966ms)
+
+
+  1) tests/starters.spec.js:15:1 › Catmull–Rom trail connects actual centers of ALL 30 nodes without overlaps 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 1
+
+      13 | test('first-run chooser matches supplied starters; selected state, preview, persistence and Home badge',async({page})=>{await page.goto('/');await expect(page.getByRole('heading',{name:'Choose your capy'})).toBeVisible();await expect(page.getByRole('button',{name:'Choose Bloom',exact:true})).toHaveAttribute('aria-pressed','true');await shot(page,'00-first-run-chooser');await page.getByRole('button',{name:'Choose Jun',exact:true}).tap();await expect(page.locator('.preview-capy')).toHaveAttribute('src','assets/starters/jun.png');await page.getByRole('button',{name:"Let's go",exact:true}).tap();await expect(page.getByRole('button',{name:'Switch capy',exact:true})).toContainText('Jun');await shot(page,'starter-home-badge');await page.reload();await expect(page.getByRole('heading',{name:'Choose your capy'})).toHaveCount(0);expect((await progress(page)).selected).toBe('Jun')});
+      14 | test('Home / Hot Spring switching is cosmetic and preserves progress, streak and board; other two are friends',async({page})=>{await seed(page,{completed:[1,2,10],daily:{lastDay:20766,streak:4}});const before=await progress(page);await page.getByRole('button',{name:'Switch capy',exact:true}).tap();await expect(page.getByText('With you',{exact:true})).toBeVisible();await expect(page.getByRole('heading',{name:'Who’s joining you?'})).toBeVisible();await shot(page,'starter-switch-sheet');await page.getByRole('button',{name:'Choose Bloom',exact:true}).tap();await page.getByRole('button',{name:/^Go with /,exact:false}).tap();let after=await progress(page);expect(after.completed).toEqual(before.completed);expect(after.daily).toEqual(before.daily);expect(after.sessions).toEqual(before.sessions);await page.getByRole('button',{name:'Hot Spring',exact:true}).tap();await expect(page.locator('.spring-friend')).toHaveCount(3);await expect(page.getByLabel('Your Hot Spring friends')).toHaveText('Friends · Jun & Remy');await shot(page,'starter-hotspring-friends');await page.getByRole('button',{name:'Switch soaking Bloom',exact:true}).tap();await page.getByRole('button',{name:'Choose Remy',exact:true}).tap();await page.getByRole('button',{name:/^Go with /,exact:false}).tap();await expect(page.getByLabel('Your Hot Spring friends')).toHaveText('Friends · Jun & Bloom');expect((await progress(page)).daily).toEqual(before.daily);await shot(page,'starter-hotspring-remy')});
+    > 15 | test('Catmull–Rom trail connects actual centers of ALL 30 nodes without overlaps',async({page})=>{await seed(page,{completed:Array.from({length:10},(_,i)=>i+1)});await shot(page,'starter-connected-path');const result=await page.evaluate(()=>{const svg=document.querySelector('.path-line'),r=document.querySelector('.path').getBoundingClientRect(),nodes=[...document.querySelectorAll('.node')].map(e=>e.getBoundingClientRect()),pts=JSON.parse(svg.dataset.centers);let max=0,overlaps=0;nodes.forEach((b,i)=>{max=Math.max(max,Math.hypot(b.left-r.left+b.width/2-pts[i][0],b.top-r.top+b.height/2-pts[i][1]));for(let j=i+1;j<nodes.length;j++){let c=nodes[j];if(Math.min(b.right,c.right)>Math.max(b.left,c.left)&&Math.min(b.bottom,c.bottom)>Math.max(b.top,c.top))overlaps++}});return{max,overlaps,segments:svg.querySelectorAll('path').length,complete:svg.querySelectorAll('.complete').length,first:[svg.querySelector('path').getPointAtLength(0).x,svg.querySelector('path').getPointAtLength(0).y],firstCenter:pts[0]}});expect(result.max).toBeLessThan(.01);expect(result.overlaps).toBe(0);expect(result.segments).toBe(29);expect(result.complete).toBe(10);expect(result.first).toEqual(result.firstCenter);fs.writeFileSync('reports/path-geometry-v3.json',JSON.stringify(result,null,2))});
+         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ^
+      16 | test('mid-level unused switch gives new power; spent stays spent; Nap charges survive switch, Undo and reload',async({page})=>{await first(page);await open(page);await double(page,0);const before=await cells(page);await switchTo(page,'Remy');expect(await cells(page)).toEqual(before);await expect(page.getByRole('button',{name:'Nap',exact:true})).toBeEnabled();await page.getByRole('button',{name:'Nap',exact:true}).tap();await single(page,5);await expect(page.locator('.nap-badge')).toHaveText('Nap · 2');await switchTo(page,'Bloom');expect((await progress(page)).sessions['pond-1'].power.napRemaining).toBe(2);await expect(page.getByRole('button',{name:'Second chance',exact:true})).toBeDisabled();await expect(page.getByRole('button',{name:'Second chance',exact:true})).toContainText('✓ Used');await page.getByRole('button',{name:'Undo'}).tap();await expect(page.locator('[data-cell="5"]')).toHaveAttribute('data-value','0');expect((await progress(page)).sessions['pond-1'].power.napRemaining).toBe(2);await page.reload();await open(page);await expect(page.getByRole('button',{name:'Second chance',exact:true})).toBeDisabled();expect((await progress(page)).sessions['pond-1'].power.napRemaining).toBe(2)});
+      17 | test('Nap protects three moves including correct / X; fourth illegal placement costs orange; retry resets attempt',async({page})=>{await seed(page,{selected:'Remy'});await open(page);await page.getByRole('button',{name:'Nap',exact:true}).tap();await shot(page,'power-nap-active-3');await single(page,5);await double(page,0);await shot(page,'power-nap-active-1');await double(page,1);await expect(page.locator('.bad')).toHaveCount(2);await expect(page.locator('.lives')).toHaveAttribute('data-lives','3');expect((await progress(page)).sessions['pond-1'].power.napRemaining).toBe(0);await double(page,2);await expect(page.locator('.lives')).toHaveAttribute('data-lives','2');await page.getByRole('button',{name:'Undo'}).tap();await expect(page.locator('.lives')).toHaveAttribute('data-lives','2');for(let i=0;i<2;i++){await double(page,2);if(i===0)await single(page,2)}await expect(page.getByRole('dialog',{name:'Out of oranges'})).toBeVisible();await page.getByRole('button',{name:'Try again',exact:true}).tap();await expect(page.getByRole('button',{name:'Nap',exact:true})).toBeEnabled();expect((await progress(page)).sessions['pond-1'].power.used).toBe(false)});
+      18 | test('Nap drag spends one charge per new X, one Undo never refunds charges',async({page})=>{await seed(page,{selected:'Remy'});await open(page);await page.getByRole('button',{name:'Nap',exact:true}).tap();const topBefore=await page.locator('.zone-grid').evaluate(e=>e.getBoundingClientRect().top);const cdp=await page.context().newCDPSession(page),a=await page.locator('[data-cell="0"]').boundingBox(),b=await page.locator('[data-cell="4"]').boundingBox();await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:a.x+a.width/2,y:a.y+a.height/2,id:0}]});await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:b.x+b.width/2,y:b.y+b.height/2,id:0}]});expect(await page.locator('.zone-grid').evaluate(e=>e.getBoundingClientRect().top)).toBe(topBefore);await expect(page.locator('.strip strong')).not.toContainText('Nap');await expect(page.locator('.nap-badge')).toHaveText('Nap · 0');await shot(page,'power-nap-drag');await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await cdp.detach();expect((await cells(page)).slice(0,5)).toEqual([1,1,1,1,1]);expect((await progress(page)).sessions['pond-1'].power.napRemaining).toBe(0);await page.getByRole('button',{name:'Undo'}).tap();expect((await cells(page)).slice(0,5)).toEqual([0,0,0,0,0]);expect((await progress(page)).sessions['pond-1'].power.napRemaining).toBe(0)});
+        at /workspace/capydoku/app/tests/starters.spec.js:15:1073
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/starters-Catmull–Rom-trail-80e7b-L-30-nodes-without-overlaps/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/starters-Catmull–Rom-trail-80e7b-L-30-nodes-without-overlaps/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/starters-Catmull–Rom-trail-80e7b-L-30-nodes-without-overlaps/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/starters-Catmull–Rom-trail-80e7b-L-30-nodes-without-overlaps/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/v2.spec.js:28:1 › early 1–3 screenshots, obvious first starts, rules sheet and collection purpose 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('Grows with every boss pond')
+    Expected: visible
+    Timeout: 7000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByText('Grows with every boss pond') with timeout 7000ms
+      - waiting for getByText('Grows with every boss pond')
+
+
+      26 |  await page.waitForTimeout(90);await page.evaluate(()=>window.__buzz=[]);await drag(page,[0,1,2,3,4],100);expect((await buzz(page)).map(x=>x.pattern)).toEqual([12,12,12,12,12]);await page.waitForTimeout(90);await page.evaluate(()=>window.__buzz=[]);await drag(page,[0,4]);b=await buzz(page);expect(b.length).toBeGreaterThan(0);expect(b.length).toBeLessThan(5);for(let i=1;i<b.length;i++)expect(b[i].at-b[i-1].at).toBeGreaterThanOrEqual(69);
+      27 |  await page.getByRole('button',{name:'Back to Pond Path'}).tap();await page.getByRole('button',{name:'Settings'}).tap();await page.getByRole('button',{name:'Haptics',exact:true}).tap();await page.getByRole('button',{name:'Done',exact:true}).tap();await open(page);await page.evaluate(()=>window.__buzz=[]);await drag(page,[0,4],100);await drag(page,[10,14],100);expect(await buzz(page)).toEqual([])});
+    > 28 | test('early 1–3 screenshots, obvious first starts, rules sheet and collection purpose',async({page})=>{await seed(page,Array.from({length:4},(_,i)=>i+1));for(let id=1;id<=5;id++){await open(page,id);if(id<=3)await shot(page,`early-${id}`);expect(Array.from({length:data.levels[id-1].n},(_,z)=>data.levels[id-1].zones.filter(x=>x===z).length)).toContain(1);await page.getByRole('button',{name:'Rules',exact:true}).tap();await expect(page.getByRole('dialog',{name:'How to play'})).toBeVisible();await expect(page.getByText(/Same puzzle rules for every buddy/i)).toBeVisible();if(id===1)await shot(page,'18-rules-sheet');await page.getByRole('button',{name:'Let’s play',exact:true}).tap();await page.getByRole('button',{name:'Back to Pond Path'}).tap()}await page.getByRole('button',{name:'Hot Spring',exact:true}).tap();await shot(page,'19-hot-spring-tier1');await expect(page.getByText('Grows with every boss pond')).toBeVisible();await expect(page.getByText('Friends soak here · tap your capy to switch')).toBeVisible()});
+         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ^
+      29 | test('daily rocks gated until campaign 21; campaign-first and daily-first intros are one-time',async({page})=>{await page.clock.install({time:new Date('2026-01-01T12:00:00-05:00')});await home(page);await page.getByRole('button',{name:/Daily Pond/}).tap();await expect(page.locator('.rock-art')).toHaveCount(0);await expect(page.getByRole('dialog',{name:'Rock introduction'})).toHaveCount(0);await shot(page,'20-daily-without-rocks');const safe=await values(page);await page.reload();await page.getByRole('button',{name:/Daily Pond/}).tap();expect(await values(page)).toEqual(safe);
+      30 |  await seed(page,Array.from({length:20},(_,i)=>i+1));await page.getByRole('button',{name:/Daily Pond/}).tap();await expect(page.locator('.rock-art')).toHaveCount(1);await expect(page.getByRole('dialog',{name:'Rock introduction'})).toBeVisible();await shot(page,'21-daily-first-rock-intro');await page.getByRole('button',{name:'Got it',exact:true}).tap();await shot(page,'22-daily-with-rocks');await page.reload();await page.getByRole('button',{name:/Daily Pond/}).tap();await expect(page.getByRole('dialog',{name:'Rock introduction'})).toHaveCount(0);
+      31 |  await seed(page,Array.from({length:20},(_,i)=>i+1));await open(page,21);await expect(page.getByRole('dialog',{name:'Rock introduction'})).toBeVisible();await shot(page,'23-campaign-rock-intro');await page.getByRole('button',{name:'Got it',exact:true}).tap();await page.getByRole('button',{name:'Back to Pond Path'}).tap();await page.getByRole('button',{name:/Daily Pond/}).tap();await expect(page.getByRole('dialog',{name:'Rock introduction'})).toHaveCount(0)});
+        at /workspace/capydoku/app/tests/v2.spec.js:28:917
+
+    Error: apiRequestContext._wrapApiCall: ENOENT: no such file or directory, copyfile '/workspace/capydoku/app/test-results/.playwright-artifacts-1/traces/fe8e25e0817ed2c6ece7-33537c460b3c7fb287e8-recording33.network' -> '/workspace/capydoku/app/test-results/.playwright-artifacts-1/traces/fe8e25e0817ed2c6ece7-33537c460b3c7fb287e8-recording33-pwnetcopy-1.network'
+
+    Error: browserContext._wrapApiCall: ENOENT: no such file or directory, open '/workspace/capydoku/app/test-results/.playwright-artifacts-1/traces/fe8e25e0817ed2c6ece7-33537c460b3c7fb287e8-recording32.trace'
+
+    Error: ENOENT: no such file or directory, open '/workspace/capydoku/app/test-results/.playwright-artifacts-1/6d492a72ac32279e89b385e0e52d3435.zip'
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/v2-early-1–3-screenshots-o-e0b68-heet-and-collection-purpose/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/v2.spec.js:34:1 › missing/throwing vibration API never errors; real-device feedback not claimed 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('.lives')
+    Expected: "2"
+    Received: "3"
+    Timeout:  7000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('.lives') with timeout 7000ms
+      - waiting for locator('.lives')
+        18 × locator resolved to <div class="lives" data-lives="3" aria-label="3 oranges left">…</div>
+           - unexpected value "3"
+
+
+      32 | test('date-only streak remains idempotent when daily eligibility changes',async({page})=>{await page.clock.install({time:new Date('2026-01-01T12:00:00-05:00')});await home(page);await page.getByRole('button',{name:/Daily Pond/}).tap();for(const i of enumerate(data.dailySafe[0])[0])await double(page,i);await expect(page.getByText('Pond cleared',{exact:true})).toBeVisible();let p=await page.evaluate(k=>JSON.parse(localStorage.getItem(k)),KEY);expect(p.daily.streak).toBe(1);p.completed=Array.from({length:20},(_,i)=>i+1);await page.evaluate(({k,p})=>localStorage.setItem(k,JSON.stringify(p)),{k:KEY,p});await page.reload();await page.getByRole('button',{name:/Daily Pond/}).tap();await page.getByRole('button',{name:'Got it',exact:true}).tap();for(const i of enumerate(data.daily[0])[0])await double(page,i);await expect(page.getByText('Pond cleared',{exact:true})).toBeVisible();expect((await page.evaluate(k=>JSON.parse(localStorage.getItem(k)),KEY)).daily.streak).toBe(1)});
+      33 | test('v1→v3 migration retains earned progress and compatible board; legacy key untouched',async({page})=>{const old={version:1,completed:Array.from({length:20},(_,i)=>i+1),selected:'Orange',chill:true,daily:{lastDay:20700,streak:4},sessions:{'pond-1':{cells:Array(25).fill(1),lives:2},'pond-21':{cells:Array.from({length:49},(_,i)=>data.levels[20].rocks.includes(i)?0:1),lives:1},'daily-2026-01-01':{cells:Array(49).fill(1),lives:2}}};await page.addInitScript(({key,raw})=>{if(!localStorage.getItem(key))localStorage.setItem(key,raw)},{key:LEGACY_KEY,raw:JSON.stringify(old)});await page.goto('/');await expect(page.getByRole('button',{name:'Pond 21',exact:true})).toBeEnabled();const p=await page.evaluate(k=>JSON.parse(localStorage.getItem(k)),KEY);expect(p.version).toBe(3);expect(p.completed).toEqual(old.completed);expect(p.daily).toEqual(old.daily);expect(p.haptics).toBe(true);expect(p.sessions['pond-1']).toBeUndefined();expect(p.sessions['pond-21'].lives).toBe(1);expect(await page.evaluate(k=>localStorage.getItem(k),LEGACY_KEY)).toBe(JSON.stringify(old));await page.getByRole('button',{name:'Hot Spring',exact:true}).tap();await expect(page.getByRole('button',{name:'Switch capy',exact:true})).toContainText('Bloom');await shot(page,'24-migrated-spring-tier3');await page.getByRole('button',{name:'Pond Path',exact:true}).tap();await open(page,21);await page.getByRole('button',{name:'Got it',exact:true}).tap();expect((await values(page)).filter(v=>v===1).length).toBe(49-data.levels[20].rocks.length);await page.reload();await open(page,21);await expect(page.getByRole('dialog',{name:'Rock introduction'})).toHaveCount(0);expect((await values(page)).filter(v=>v===1).length).toBe(49-data.levels[20].rocks.length)});
+    > 34 | test('missing/throwing vibration API never errors; real-device feedback not claimed',async({page})=>{await page.addInitScript(()=>Object.defineProperty(navigator,'vibrate',{configurable:true,value:undefined}));await home(page);await open(page);await double(page,0);await drag(page,[5,9]);await page.evaluate(()=>Object.defineProperty(navigator,'vibrate',{configurable:true,value:()=>{throw Error('not supported')}}));await double(page,1);await drag(page,[10,14]);await expect(page.locator('.lives')).toHaveAttribute('data-lives','2')});
+         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ^
+      35 | test('real v1 SW→v3 update, effective JS, migrated progress, strict offline reload and unseen query',async({page,context})=>{
+      36 |  // Exact frozen v1 bytes, then exact v2 bytes on the SAME localhost origin.
+      37 |  // Python's static transport matches the documented preview; it supplies complete Content-Length responses.
+        at /workspace/capydoku/app/tests/v2.spec.js:34:501
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/v2-missing-throwing-vibrat-e1de6-device-feedback-not-claimed/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/v2-missing-throwing-vibrat-e1de6-device-feedback-not-claimed/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/v2-missing-throwing-vibrat-e1de6-device-feedback-not-claimed/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/v2-missing-throwing-vibrat-e1de6-device-feedback-not-claimed/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3 failed
+    tests/starters.spec.js:15:1 › Catmull–Rom trail connects actual centers of ALL 30 nodes without overlaps 
+    tests/v2.spec.js:28:1 › early 1–3 screenshots, obvious first starts, rules sheet and collection purpose 
+    tests/v2.spec.js:34:1 › missing/throwing vibration API never errors; real-device feedback not claimed 
+  66 passed (3.0m)

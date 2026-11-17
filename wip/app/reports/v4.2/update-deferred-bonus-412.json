@@ -1,0 +1,8 @@
+{
+  "from": "capydoku-v4.2.1-bc0fb084a94b",
+  "to": "capydoku-v4.2.1-bc0fb084a94b-later",
+  "deferredDuring": "bonus",
+  "reloadOn": "leave → transition",
+  "automaticReloads": 1,
+  "consoleErrors": []
+}

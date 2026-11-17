@@ -1,0 +1,27 @@
+se-tab 7 {"n":8,"cellPx":27.38,"boardPx":246,"fitMode":"shrunk","controlsInView":true,"noScroll":true,"thumbBarTop":451.3}
+se-tab 17 {"n":9,"cellPx":24,"boardPx":246.1,"fitMode":"shrunk","controlsInView":true,"noScroll":true,"thumbBarTop":451.3}
+se-tab 29 {"n":10,"cellPx":24,"boardPx":260,"fitMode":"shrunk","controlsInView":true,"noScroll":true,"thumbBarTop":454}
+se-standalone 7 {"n":8,"cellPx":34.38,"boardPx":302,"fitMode":"shrunk","controlsInView":true,"noScroll":true,"thumbBarTop":566.5}
+se-standalone 17 {"n":9,"cellPx":35.39,"boardPx":348.6,"fitMode":"tight","controlsInView":true,"noScroll":true,"thumbBarTop":586.9}
+se-standalone 29 {"n":10,"cellPx":34.5,"boardPx":365,"fitMode":"tight","controlsInView":true,"noScroll":true,"thumbBarTop":589}
+390-tab 7 {"n":8,"cellPx":36.63,"boardPx":320,"fitMode":"shrunk","controlsInView":true,"noScroll":true,"thumbBarTop":563.8}
+390-tab 17 {"n":9,"cellPx":37.02,"boardPx":363.2,"fitMode":"tight","controlsInView":true,"noScroll":true,"thumbBarTop":583}
+390-tab 29 {"n":10,"cellPx":36,"boardPx":380,"fitMode":"tight","controlsInView":true,"noScroll":true,"thumbBarTop":585.3}
+390-tab-694 7 {"n":8,"cellPx":40.38,"boardPx":350,"fitMode":"shrunk","controlsInView":true,"noScroll":true,"thumbBarTop":593.8}
+390-tab-694 17 {"n":9,"cellPx":35.55,"boardPx":350,"fitMode":"shrunk","controlsInView":true,"noScroll":true,"thumbBarTop":593.8}
+390-tab-694 29 {"n":10,"cellPx":34,"boardPx":360,"fitMode":"shrunk","controlsInView":true,"noScroll":true,"thumbBarTop":593.8}
+390-standalone 7 {"n":8,"cellPx":42.02,"boardPx":363.2,"fitMode":"compact","controlsInView":true,"noScroll":true,"thumbBarTop":704.3}
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.waitFor: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('.zone-grid') to be visible
+
+    at /workspace/capydoku/app/scripts/cell-sizes-v50.mjs:46:40 {
+  log: [ "  - waiting for locator('.zone-grid') to be visible" ],
+  name: 'TimeoutError'
+}
+
+Node.js v24.22.1

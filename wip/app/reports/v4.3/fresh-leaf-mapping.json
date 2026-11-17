@@ -1,0 +1,709 @@
+{
+ "#7EBA70": {
+  "to": "#63BF63",
+  "token": null,
+  "uses": [
+   "style.css: .node.done"
+  ]
+ },
+ "#3F7A42": {
+  "to": "#207E32",
+  "token": null,
+  "uses": [
+   "style.css: .node.done:after"
+  ]
+ },
+ "#596653": {
+  "to": "#53684F",
+  "token": null,
+  "uses": [
+   "style.css: .strip small",
+   "theme-v3.css: .rule-txt small"
+  ]
+ },
+ "#658A72": {
+  "to": "#608C68",
+  "token": null,
+  "uses": [
+   "style.css: .slot.selected"
+  ]
+ },
+ "#698A6C": {
+  "to": "#3B7E3D",
+  "token": "primary",
+  "uses": [
+   "style.css: .primary",
+   "crates-v43.css: .crate-showme button"
+  ]
+ },
+ "#356A3E": {
+  "to": "#206D30",
+  "token": null,
+  "uses": [
+   "starters-v3.css: .starter-card em"
+  ]
+ },
+ "#80B96E": {
+  "to": "#418042",
+  "token": "primary_top",
+  "uses": [
+   "starters-v3.css: .chooser-confirm"
+  ]
+ },
+ "#9DCDA6": {
+  "to": "#93D099",
+  "token": null,
+  "uses": [
+   "starters-v3.css: .capy-badge"
+  ]
+ },
+ "#61715E": {
+  "to": "#5B735A",
+  "token": null,
+  "uses": [
+   "starters-v3.css: .capy-badge small"
+  ]
+ },
+ "#7ABC73": {
+  "to": "#61C065",
+  "token": null,
+  "uses": [
+   "starters-v3.css: .trail.complete"
+  ]
+ },
+ "#6B8872": {
+  "to": "#668A6A",
+  "token": null,
+  "uses": [
+   "starters-v3.css: .trail.complete"
+  ]
+ },
+ "#3F513E": {
+  "to": "#314E2F",
+  "token": "header",
+  "uses": [
+   "visuals-v4.css: ture, haptic, audio and power engines retained. */\nhtml,body",
+   "visuals-v4.css: .screen",
+   "visuals-v4.css: .xmark",
+   "visuals-v4.css: .game .controls>button",
+   "visuals-v4.css: .power-use-badge",
+   "visuals-v4.css: .wood-plaque,.wood-sign",
+   "visuals-v4.css: .guide-demo",
+   "visuals-v4.css: .rules-v4 .sheet-done",
+   "power-identity-v4.css: .starter-info>.identity-phrase",
+   "power-identity-v4.css: .companion-line .message-copy>.identity-phrase",
+   "power-identity-v4.css: .power-feedback>strong",
+   "power-identity-v4.css: .power-use-badge",
+   "power-identity-v4.css: ty without becoming upgrade cards. */\n.collection .power-tag",
+   "rewards-v4.css: .nickname-form input",
+   "home-v41.css: .transition h1",
+   "home-v41.css: .hub-icon",
+   "home-v41.css: .spring-back"
+  ]
+ },
+ "#B6C19D": {
+  "to": "#A7C599",
+  "token": null,
+  "uses": [
+   "visuals-v4.css: button",
+   "visuals-v4.css: ot(.solved) .topbar .level-pill,.game:not(.solved) .help-btn",
+   "visuals-v4.css: .capy-badge.mini b",
+   "visuals-v4.css: .game.solved .chips .chip",
+   "rewards-v4.css: .solved-counter"
+  ]
+ },
+ "#A8B18A": {
+  "to": "#89A986",
+  "token": "lip",
+  "uses": [
+   "visuals-v4.css: .primary"
+  ]
+ },
+ "#93AC81": {
+  "to": "#83B07A",
+  "token": null,
+  "uses": [
+   "visuals-v4.css: .capy-badge"
+  ]
+ },
+ "#29402D": {
+  "to": "#234127",
+  "token": null,
+  "uses": [
+   "visuals-v4.css: .capy-badge",
+   "home-v41.css: .hub-icon",
+   "home-v41.css: .spring-back"
+  ]
+ },
+ "#65795B": {
+  "to": "#5A7C55",
+  "token": null,
+  "uses": [
+   "visuals-v4.css: .capy-badge b"
+  ]
+ },
+ "#4C6044": {
+  "to": "#42623F",
+  "token": null,
+  "uses": [
+   "visuals-v4.css: .trail.complete,.trail.pending"
+  ]
+ },
+ "#BDC6A6": {
+  "to": "#AFCAA2",
+  "token": null,
+  "uses": [
+   "visuals-v4.css: .rule-card",
+   "visuals-v4.css: .rules-summary"
+  ]
+ },
+ "#879D7B": {
+  "to": "#71946E",
+  "token": "frame",
+  "uses": [
+   "visuals-v4.css: .game:not(.solved)>.pond-wrap",
+   "bonus-v42.css: .bonus-thumb",
+   "bonus-v42.css: .bonus-thumb"
+  ]
+ },
+ "#293F2E": {
+  "to": "#244028",
+  "token": null,
+  "uses": [
+   "visuals-v4.css: .game:not(.solved)>.pond-wrap",
+   "visuals-v4.css: .wood-plaque,.wood-sign",
+   "power-identity-v4.css: ty without becoming upgrade cards. */\n.collection .power-tag"
+  ]
+ },
+ "#718264": {
+  "to": "#546F52",
+  "token": "subtext",
+  "uses": [
+   "visuals-v4.css: .strip small",
+   "visuals-v4.css: .tutorial-guide[data-step=\"2\"]:after",
+   "visuals-v4.css: .rules-summary p",
+   "visuals-v4.css: .gesture-lessons small",
+   "visuals-v4.css: .power-brief",
+   "visuals-v4.css: .replay-sub",
+   "power-identity-v4.css: .switch-anytime",
+   "power-identity-v4.css: .intro-copy p",
+   "power-identity-v4.css: .intro-budget"
+  ]
+ },
+ "#E6E8CD": {
+  "to": "#D9ECCA",
+  "token": null,
+  "uses": [
+   "visuals-v4.css: .capy-badge.mini b"
+  ]
+ },
+ "#56734D": {
+  "to": "#487645",
+  "token": null,
+  "uses": [
+   "visuals-v4.css: .capy-badge.mini b"
+  ]
+ },
+ "#B6C2A0": {
+  "to": "#A8C69C",
+  "token": null,
+  "uses": [
+   "visuals-v4.css: .round-icon"
+  ]
+ },
+ "#BDC7A9": {
+  "to": "#B1CBA5",
+  "token": null,
+  "uses": [
+   "visuals-v4.css: .round-icon"
+  ]
+ },
+ "#607850": {
+  "to": "#507C49",
+  "token": null,
+  "uses": [
+   "visuals-v4.css: .round-icon"
+  ]
+ },
+ "#789563": {
+  "to": "#29612C",
+  "token": "border",
+  "uses": [
+   "visuals-v4.css: .game .controls .power-btn .round-icon"
+  ]
+ },
+ "#7A8D5D": {
+  "to": "#659256",
+  "token": null,
+  "uses": [
+   "visuals-v4.css: .power-use-badge"
+  ]
+ },
+ "#8D9A6D": {
+  "to": "#799F67",
+  "token": null,
+  "uses": [
+   "visuals-v4.css: d objects and real wooden switch sign. */\n.screen.collection"
+  ]
+ },
+ "#6D795E": {
+  "to": "#627C5A",
+  "token": null,
+  "uses": [
+   "visuals-v4.css: .collection-title p",
+   "visuals-v4.css: .rules-summary small"
+  ]
+ },
+ "#435847": {
+  "to": "#3F5941",
+  "token": null,
+  "uses": [
+   "visuals-v4.css: .bamboo-silhouette"
+  ]
+ },
+ "#8D9A7E": {
+  "to": "#829D7A",
+  "token": null,
+  "uses": [
+   "visuals-v4.css: .object-label"
+  ]
+ },
+ "#68785F": {
+  "to": "#5F7A5B",
+  "token": null,
+  "uses": [
+   "visuals-v4.css: .object-label small"
+  ]
+ },
+ "#B1BD94": {
+  "to": "#9FC28F",
+  "token": null,
+  "uses": [
+   "visuals-v4.css: .spring-invite",
+   "visuals-v4.css: er persisted until the player acts. */\n.tutorial-instruction"
+  ]
+ },
+ "#6D7A61": {
+  "to": "#647D5D",
+  "token": null,
+  "uses": [
+   "visuals-v4.css: .spring-invite small"
+  ]
+ },
+ "#203C2F": {
+  "to": "#1D3D27",
+  "token": null,
+  "uses": [
+   "visuals-v4.css: .switch-scrim",
+   "visuals-v4.css: .chooser-overlay.switch-sheet"
+  ]
+ },
+ "#A8AC80": {
+  "to": "#92B27B",
+  "token": null,
+  "uses": [
+   "visuals-v4.css: .chooser-overlay.switch-sheet"
+  ]
+ },
+ "#6F7D61": {
+  "to": "#64805D",
+  "token": null,
+  "uses": [
+   "visuals-v4.css: .switch-sheet .chooser-sub"
+  ]
+ },
+ "#E2E8C9": {
+  "to": "#D4ECC5",
+  "token": null,
+  "uses": [
+   "visuals-v4.css: .switch-sheet .starter-card.chosen"
+  ]
+ },
+ "#6F925F": {
+  "to": "#5B9655",
+  "token": null,
+  "uses": [
+   "visuals-v4.css: .switch-sheet .starter-card.chosen"
+  ]
+ },
+ "#789A67": {
+  "to": "#649E5D",
+  "token": null,
+  "uses": [
+   "visuals-v4.css: .switch-sheet .you-tag"
+  ]
+ },
+ "#E2E7C9": {
+  "to": "#D4EBC6",
+  "token": null,
+  "uses": [
+   "visuals-v4.css: .game.solved>.topbar>.level-pill",
+   "visuals-v4.css: .rules-close"
+  ]
+ },
+ "#A4BA9A": {
+  "to": "#99BD94",
+  "token": null,
+  "uses": [
+   "visuals-v4.css: .game.solved .spring"
+  ]
+ },
+ "#B7C3A5": {
+  "to": "#ABC6A1",
+  "token": null,
+  "uses": [
+   "visuals-v4.css: .game.solved .spring"
+  ]
+ },
+ "#CED8B3": {
+  "to": "#BEDDAF",
+  "token": null,
+  "uses": [
+   "visuals-v4.css: .tutorial-dots i"
+  ]
+ },
+ "#6D945C": {
+  "to": "#4B904C",
+  "token": "accent",
+  "uses": [
+   "visuals-v4.css: .tutorial-dots i.on"
+  ]
+ },
+ "#263C26": {
+  "to": "#1E3E20",
+  "token": null,
+  "uses": [
+   "visuals-v4.css: .tutorial-guide img"
+  ]
+ },
+ "#DEE7C7": {
+  "to": "#D5E8D2",
+  "token": "accent_soft",
+  "uses": [
+   "visuals-v4.css: .gesture-lessons li>span"
+  ]
+ },
+ "#40543E": {
+  "to": "#395639",
+  "token": null,
+  "uses": [
+   "visuals-v4.css: .next-spring"
+  ]
+ },
+ "#63735A": {
+  "to": "#5A7556",
+  "token": null,
+  "uses": [
+   "visuals-v4.css: st-reload notification, never a refresh CTA. */\n.build-label"
+  ]
+ },
+ "#BBC3A3": {
+  "to": "#ADC79F",
+  "token": null,
+  "uses": [
+   "power-identity-v4.css: .first-chooser .starter-card"
+  ]
+ },
+ "#B9C1A3": {
+  "to": "#ACC59F",
+  "token": null,
+  "uses": [
+   "power-identity-v4.css: .first-chooser .starter-card"
+  ]
+ },
+ "#C1C7AD": {
+  "to": "#B6CAAA",
+  "token": null,
+  "uses": [
+   "power-identity-v4.css: pty message row. */\n.game:not(.solved) .strip.companion-line"
+  ]
+ },
+ "#B6C3A0": {
+  "to": "#A8C79B",
+  "token": null,
+  "uses": [
+   "power-identity-v4.css: .game .controls .power-btn .round-icon"
+  ]
+ },
+ "#74816D": {
+  "to": "#6D8369",
+  "token": null,
+  "uses": [
+   "power-identity-v4.css: .neutral-undo"
+  ]
+ },
+ "#253F2F": {
+  "to": "#214028",
+  "token": null,
+  "uses": [
+   "power-identity-v4.css: toast. The whole board stays above it. */\n.power-intro-shade"
+  ]
+ },
+ "#34402E": {
+  "to": "#2E422B",
+  "token": null,
+  "uses": [
+   "power-identity-v4.css: .power-first-use"
+  ]
+ },
+ "#658061": {
+  "to": "#5B835A",
+  "token": null,
+  "uses": [
+   "rewards-v4.css: .nickname-screen header p"
+  ]
+ },
+ "#8BAA86": {
+  "to": "#80AD7E",
+  "token": null,
+  "uses": [
+   "rewards-v4.css: .nickname-companions"
+  ]
+ },
+ "#6E8664": {
+  "to": "#62895D",
+  "token": null,
+  "uses": [
+   "rewards-v4.css: .nickname-question p"
+  ]
+ },
+ "#B9C5A6": {
+  "to": "#ADC9A2",
+  "token": null,
+  "uses": [
+   "rewards-v4.css: .nickname-form input"
+  ]
+ },
+ "#6D9163": {
+  "to": "#5C9559",
+  "token": null,
+  "uses": [
+   "rewards-v4.css: .nickname-form input.valid",
+   "rewards-v4.css: .nickname-form input:focus"
+  ]
+ },
+ "#708467": {
+  "to": "#668761",
+  "token": null,
+  "uses": [
+   "rewards-v4.css: .nickname-validation"
+  ]
+ },
+ "#74866A": {
+  "to": "#6A8965",
+  "token": null,
+  "uses": [
+   "rewards-v4.css: .local-name-note small"
+  ]
+ },
+ "#73866B": {
+  "to": "#6A8866",
+  "token": null,
+  "uses": [
+   "rewards-v4.css: .nickname-edit-note"
+  ]
+ },
+ "#70866A": {
+  "to": "#678864",
+  "token": null,
+  "uses": [
+   "rewards-v4.css: .solve-time"
+  ]
+ },
+ "#B4C4A5": {
+  "to": "#A9C7A0",
+  "token": null,
+  "uses": [
+   "rewards-v4.css: .solve-lilies"
+  ]
+ },
+ "#7B8D6C": {
+  "to": "#6F9067",
+  "token": null,
+  "uses": [
+   "rewards-v4.css: .solve-lilies .lily-condition small"
+  ]
+ },
+ "#728568": {
+  "to": "#688863",
+  "token": null,
+  "uses": [
+   "rewards-v4.css: .progress-ledger header small",
+   "home-v41.css: .replay-name small"
+  ]
+ },
+ "#B8C4A6": {
+  "to": "#ACC7A2",
+  "token": null,
+  "uses": [
+   "rewards-v4.css: .collection-total"
+  ]
+ },
+ "#71876A": {
+  "to": "#678A64",
+  "token": null,
+  "uses": [
+   "rewards-v4.css: .collection-total>span"
+  ]
+ },
+ "#C3CCB0": {
+  "to": "#B7CFAC",
+  "token": null,
+  "uses": [
+   "rewards-v4.css: .ledger-world",
+   "rewards-v4.css: .ledger-encouragement"
+  ]
+ },
+ "#7B8F70": {
+  "to": "#70926A",
+  "token": null,
+  "uses": [
+   "rewards-v4.css: .ledger-world summary small"
+  ]
+ },
+ "#7A9C6D": {
+  "to": "#69A064",
+  "token": null,
+  "uses": [
+   "rewards-v4.css: .ledger-world progress"
+  ]
+ },
+ "#E9EDCE": {
+  "to": "#DAF1CB",
+  "token": null,
+  "uses": [
+   "rewards-v4.css: .ledger-encouragement"
+  ]
+ },
+ "#718568": {
+  "to": "#678862",
+  "token": null,
+  "uses": [
+   "rewards-v4.css: .ledger-encouragement p"
+  ]
+ },
+ "#E0E5CE": {
+  "to": "#D6E8CB",
+  "token": null,
+  "uses": [
+   "rewards-v4.css: .ledger-world progress",
+   "rewards-v4.css: .ledger-world progress::-webkit-progress-bar"
+  ]
+ },
+ "#82A475": {
+  "to": "#71A86C",
+  "token": null,
+  "uses": [
+   "rewards-v4.css: .ledger-world progress::-webkit-progress-value",
+   "rewards-v4.css: .ledger-world progress::-moz-progress-bar"
+  ]
+ },
+ "#6E8A63": {
+  "to": "#546F52",
+  "token": "subtext",
+  "uses": [
+   "home-v41.css: .transition-kicker"
+  ]
+ },
+ "#5D6B57": {
+  "to": "#566D53",
+  "token": null,
+  "uses": [
+   "home-v41.css: .transition-world",
+   "home-v41.css: .transition-note",
+   "home-v41.css: .hub-bar .map-lily-total",
+   "home-v41.css: .replay-empty",
+   "bonus-v42.css: .bonus-skip",
+   "bonus-v42.css: .transition-card button.transition-home-link",
+   "bonus-v42.css: .bonus-stats small",
+   "bonus-v42.css: .bonus-hint",
+   "bonus-v42.css: .bonus-leave-card small",
+   "bonus-v42.css: .move-toggle button",
+   "bonus-v42.css: .move-steps small",
+   "bonus-v42.css: .move-note",
+   "bonus-v42.css: .reward-sub",
+   "bonus-v42.css: .reward-moves"
+  ]
+ },
+ "#C9CFB1": {
+  "to": "#BBD3AE",
+  "token": null,
+  "uses": [
+   "home-v41.css: .transition-lilies",
+   "home-v41.css: .hub-icon",
+   "home-v41.css: .transition-card button.hub-daily",
+   "home-v41.css: .replay-row",
+   "bonus-v42.css: .transition-card .bonus-play",
+   "bonus-v42.css: .bonus-round",
+   "bonus-v42.css: .bonus-controls .round-icon",
+   "bonus-v42.css: .bonus-controls .round-icon",
+   "bonus-v42.css: .bonus-dpad button"
+  ]
+ },
+ "#5F6F55": {
+  "to": "#567150",
+  "token": null,
+  "uses": [
+   "home-v41.css: .rules-summary p.rock-rule"
+  ]
+ },
+ "#ACB896": {
+  "to": "#9EBC92",
+  "token": null,
+  "uses": [
+   "home-v41.css: .spring-back"
+  ]
+ },
+ "#5C7A4F": {
+  "to": "#4B7E47",
+  "token": null,
+  "uses": [
+   "bonus-v42.css: .bonus-done"
+  ]
+ },
+ "#D6D9C2": {
+  "to": "#CBDCBF",
+  "token": null,
+  "uses": [
+   "bonus-v42.css: .bonus-stats span",
+   "bonus-v42.css: .crate-packed-pill",
+   "bonus-v42.css: .bonus-capy-chip",
+   "bonus-v42.css: .reward-scene"
+  ]
+ },
+ "#7A8F5F": {
+  "to": "#669458",
+  "token": null,
+  "uses": [
+   "bonus-v42.css: .bonus-stuck button"
+  ]
+ },
+ "#6E8F5E": {
+  "to": "#5B9355",
+  "token": null,
+  "uses": [
+   "bonus-v42.css: .move-toggle button[aria-checked=\"true\"]"
+  ]
+ },
+ "#7E9B6A": {
+  "to": "#6B9F62",
+  "token": null,
+  "uses": [
+   "crates-v43.css: .crate-showme"
+  ]
+ },
+ "#3F5A33": {
+  "to": "#2E5D2B",
+  "token": null,
+  "uses": [
+   "crates-v43.css: .crate-showme strong"
+  ]
+ },
+ "#56684C": {
+  "to": "#4C6B47",
+  "token": null,
+  "uses": [
+   "crates-v43.css: .crate-showme small"
+  ]
+ }
+}

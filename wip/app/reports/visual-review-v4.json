@@ -1,0 +1,56 @@
+{
+  "reviewedAtEST": "2026-11-10T02:01:49.240858-05:00",
+  "sourceDesigns": [
+    "v6",
+    "v6.1",
+    "v6.2",
+    "v6.3",
+    "v6.4",
+    "v6.5"
+  ],
+  "nativeScreensReviewed": [
+    "nickname empty/filled",
+    "chooser",
+    "replay sheet",
+    "progress ledger",
+    "boss10 next412",
+    "boss20 next360",
+    "boss30 result360",
+    "gentle one-lily result360",
+    "Settings412"
+  ],
+  "findings": [
+    {
+      "issue": "Result Pond label invisible: a stale :last-child rule hides the sole header button after the old right pill was removed.",
+      "fixed": "Restore a visible Pond pill plus a generic capy completion counter in its already allocated top row; no height increase."
+    },
+    {
+      "issue": "Replay title centered and sheet edge-to-edge differs from the source 12px inset/left alignment.",
+      "fixed": "Use 12px inset and left-aligned title."
+    }
+  ],
+  "alreadyFixed": [
+    "right-edge current-node label flips left",
+    "current-node lily row remains absolute",
+    "ledger progress fill appearance",
+    "readable result captions",
+    "nickname focus outline sage"
+  ],
+  "finalRecapturePending": false,
+  "cache": "capydoku-v4-9d6ebe4d0481",
+  "nativeCaptureCount": 139,
+  "byViewport": {
+    "412x915": 90,
+    "360x780": 49
+  },
+  "allDocumentsFit": true,
+  "browserErrors": [],
+  "reviewed": "Contact sheet plus native changed screens at both sizes, compared with approved v6\u2013v6.5 sources.",
+  "reviewPages": 18,
+  "fixedDuringFinalReview": [
+    "Restored solved pond identity and generic capy completion counter without extra header height",
+    "Replay sheet source inset/left alignment",
+    "Nickname top padding uses max(24px, safe-area inset)",
+    "Expanded ledgers captured after native tap-highlight fade"
+  ]
+}

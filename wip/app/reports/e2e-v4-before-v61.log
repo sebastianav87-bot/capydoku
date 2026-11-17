@@ -1,0 +1,267 @@
+
+> capydoku-local-prototype@4.0.0 test:e2e
+> playwright test
+
+
+Running 174 tests using 1 worker
+
+(node:491703) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓    1 [mobile-412] › tests/mobile.spec.js:12:1 › home, marks/capy/clear and undo; double tap no X flash; mobile targets (3.2s)
+  ✓    2 [mobile-412] › tests/mobile.spec.js:14:1 › Peek ghosts one unsolved spot, never places; Hint is gone and power stays spent (849ms)
+  ✓    3 [mobile-412] › tests/mobile.spec.js:15:54 › row violation red and costs exactly one orange; clear repairs (1.2s)
+  ✓    4 [mobile-412] › tests/mobile.spec.js:15:54 › column violation red and costs exactly one orange; clear repairs (1.1s)
+  ✓    5 [mobile-412] › tests/mobile.spec.js:15:54 › zone violation red and costs exactly one orange; clear repairs (1.1s)
+  ✓    6 [mobile-412] › tests/mobile.spec.js:15:54 › diagonal violation red and costs exactly one orange; clear repairs (1.1s)
+  ✓    7 [mobile-412] › tests/mobile.spec.js:16:1 › game over, input locked, retry resets oranges and board (1.8s)
+  ✓    8 [mobile-412] › tests/mobile.spec.js:17:1 › Chill never loses oranges; no game over and mode persists (2.8s)
+  ✓    9 [mobile-412] › tests/mobile.spec.js:18:1 › solve, actual jump frames, unlock + persistence after reload (4.9s)
+  ✓   10 [mobile-412] › tests/mobile.spec.js:19:1 › boss 10 grows spring and grants persistent pure-solve golden lily (5.4s)
+  ✓   11 [mobile-412] › tests/mobile.spec.js:20:1 › boss 20/30 rewards and blocked rocks; 7×7 tap targets (2.1s)
+  ✓   12 [mobile-412] › tests/mobile.spec.js:21:1 › Daily Pond deterministic reload + same-day streak, consecutive +1, missed-day reset (3.1s)
+  ✓   13 [mobile-412] › tests/mobile.spec.js:23:1 › PWA precache 200 + offline startup/reload, unseen query, essential resources (1.2s)
+  ✓   14 [mobile-412] › tests/mobile.spec.js:24:1 › settings toggles Chill; corrupt and future storage cannot crash or overwrite (1.5s)
+  ✓   15 [mobile-412] › tests/relax-bug.spec.js:13:2 › 412×915 touch Relax regression › late native click after control fallback cannot become a phantom board tap (1.0s)
+  ✓   16 [mobile-412] › tests/relax-bug.spec.js:18:2 › 412×915 touch Relax regression › Pond 5 purple Peek preserves zone, only ghosts; overfill recovery is clear, generic and undoable (3.1s)
+  ✓   17 [mobile-412] › tests/relax-bug.spec.js:25:2 › 412×915 touch Relax regression › mode locks on entry before first move, persisted attempt cannot be switched via Home/reload/forged control (909ms)
+  ✓   18 [mobile-412] › tests/relax-bug.spec.js:29:2 › 412×915 touch Relax regression › solved mode setting is enabled, next/replay adopt it; completed attempt and celebration remain intact (1.4s)
+  ✓   19 [mobile-412] › tests/relax-bug.spec.js:33:2 › 412×915 touch Relax regression › daily and boss use the same entry lock, end control, stored mode and no-scroll layout (3.6s)
+  ✓   20 [mobile-412] › tests/relax-bug.spec.js:13:2 › 360×780 touch Relax regression › late native click after control fallback cannot become a phantom board tap (989ms)
+  ✓   21 [mobile-412] › tests/relax-bug.spec.js:18:2 › 360×780 touch Relax regression › Pond 5 purple Peek preserves zone, only ghosts; overfill recovery is clear, generic and undoable (3.1s)
+  ✓   22 [mobile-412] › tests/relax-bug.spec.js:25:2 › 360×780 touch Relax regression › mode locks on entry before first move, persisted attempt cannot be switched via Home/reload/forged control (873ms)
+  ✓   23 [mobile-412] › tests/relax-bug.spec.js:29:2 › 360×780 touch Relax regression › solved mode setting is enabled, next/replay adopt it; completed attempt and celebration remain intact (1.3s)
+  ✓   24 [mobile-412] › tests/relax-bug.spec.js:33:2 › 360×780 touch Relax regression › daily and boss use the same entry lock, end control, stored mode and no-scroll layout (3.6s)
+  ✓   25 [mobile-412] › tests/sizing.spec.js:5:76 › single-config sizing A/B comparison › A: 5/6/7 grids and targets at 412×915 (2.4s)
+  ✓   26 [mobile-412] › tests/sizing.spec.js:5:76 › single-config sizing A/B comparison › A: 5/6/7 grids and targets at 360×780 (2.2s)
+  ✓   27 [mobile-412] › tests/sizing.spec.js:5:76 › single-config sizing A/B comparison › B: 5/6/7 grids and targets at 412×915 (2.4s)
+  ✓   28 [mobile-412] › tests/sizing.spec.js:5:76 › single-config sizing A/B comparison › B: 5/6/7 grids and targets at 360×780 (2.2s)
+  ✓   29 [mobile-412] › tests/starters.spec.js:13:1 › first-run chooser matches supplied starters; selected state, preview, persistence and Home badge (688ms)
+  ✓   30 [mobile-412] › tests/starters.spec.js:14:1 › Home / Hot Spring switching is cosmetic and preserves progress, streak and board; other two are friends (1.1s)
+  ✓   31 [mobile-412] › tests/starters.spec.js:15:1 › Catmull–Rom trail connects actual centers of ALL 30 nodes without overlaps (425ms)
+  ✓   32 [mobile-412] › tests/starters.spec.js:16:1 › mid-level unused switch gives new power; spent stays spent; Nap charges survive switch, Undo and reload (1.6s)
+  ✓   33 [mobile-412] › tests/starters.spec.js:17:1 › Nap protects three moves including correct / X; fourth illegal placement costs orange; retry resets attempt (1.9s)
+  ✓   34 [mobile-412] › tests/starters.spec.js:18:1 › Nap drag spends one charge per new X, one Undo never refunds charges (669ms)
+  ✓   35 [mobile-412] › tests/starters.spec.js:19:1 › Peek last target is allowed, all remaining targets X disables, no auto-place and no Hint anywhere (636ms)
+  ✓   36 [mobile-412] › tests/starters.spec.js:20:1 › Bloom disabled without mistake; Second chance removes last offender, restores one life, stays spent on reload (826ms)
+  ✓   37 [mobile-412] › tests/starters.spec.js:21:1 › Second chance can rescue fatal last-orange error; never refills all oranges (559ms)
+  ✓   38 [mobile-412] › tests/starters.spec.js:22:1 › Relax uses Peek for ALL three starters and toggling back cannot restore power (962ms)
+  ✓   39 [mobile-412] › tests/starters.spec.js:23:1 › Powered boss gets no lily; Replay is fresh attempt and a subsequent pure solve earns persistent lily (2.5s)
+  ✓   40 [mobile-412] › tests/starters.spec.js:25:1 › iOS platform emulation › iPhone emulated UA: missing vibration silent, install instruction, safe-area viewport metadata (2.3s)
+  ✓   41 [mobile-412] › tests/starters.spec.js:26:1 › iOS platform emulation › iOS standalone is detected without beforeinstallprompt (489ms)
+  ✓   42 [mobile-412] › tests/starters.spec.js:28:1 › v2→v3 migration preserves board / progression / streak / settings; v2 key untouched (580ms)
+  ✓   43 [mobile-412] › tests/starters.spec.js:29:1 › real v2 service worker → v3 upgrade, old cache removed, migration and strict offline reload (3.5s)
+  ✓   44 [mobile-412] › tests/v2.spec.js:18:1 › drag paints/clears, skips capys, interpolates fast paths; each gesture is ONE undo; tap cycle survives (1.9s)
+  ✓   45 [mobile-412] › tests/v2.spec.js:19:1 › 10px threshold preserves taps; board drag never scrolls/reloads; native map scroll still works (1.5s)
+  ✓   46 [mobile-412] › tests/v2.spec.js:20:1 › mocked haptics: legal 32ms, illegal double buzz, solve celebration; toggle persists and suppresses all (3.4s)
+  ✓   47 [mobile-412] › tests/v2.spec.js:23:1 › drag haptic ticks: new cells only, clearing too, 70ms throttle on fast drag, toggle off (2.8s)
+  ✓   48 [mobile-412] › tests/v2.spec.js:28:1 › early 1–3 screenshots, obvious first starts, rules sheet and collection purpose (1.8s)
+  ✓   49 [mobile-412] › tests/v2.spec.js:29:1 › daily rocks gated until campaign 21; campaign-first and daily-first intros are one-time (1.4s)
+  ✓   50 [mobile-412] › tests/v2.spec.js:32:1 › date-only streak remains idempotent when daily eligibility changes (2.3s)
+  ✓   51 [mobile-412] › tests/v2.spec.js:33:1 › v1→v3 migration retains earned progress and compatible board; legacy key untouched (745ms)
+  ✓   52 [mobile-412] › tests/v2.spec.js:34:1 › missing/throwing vibration API never errors; real-device feedback not claimed (906ms)
+  ✓   53 [mobile-412] › tests/v2.spec.js:35:1 › real v1 SW→v3 update, effective JS, migrated progress, strict offline reload and unseen query (3.8s)
+  ✓   54 [mobile-412] › tests/v3.spec.js:9:1 › v3 rules line, sheet, true 5px outlines, counters, entry-locked Relax off/on, safe flex layout (1.9s)
+  ✓   55 [mobile-412] › tests/v3.spec.js:10:1 › Hot Spring option A stages at zero/one/two/three bosses, earned slots and decorations (1.4s)
+  ✓   56 [mobile-412] › tests/v3.spec.js:11:1 › enhanced solve: six live frames, solve-order jumps, timed splash haptics, optional local sound (4.8s)
+  ✓   57 [mobile-412] › tests/v3.spec.js:12:1 › reduced motion crossfades straight to soaking with no jumps or splash haptics (3.6s)
+  ✓   58 [mobile-412] › tests/v3.spec.js:13:1 › mouse pointer ID reuse after drag still permits mark, clear and one-click controls (2.0s)
+  ✓   59 [mobile-412] › tests/v31-extension.spec.js:8:2 › default B constant-width 5/6/7 boards and all cells ≥44px at 412×915 (840ms)
+  ✓   60 [mobile-412] › tests/v31-extension.spec.js:9:54 › solved normal: Replay / Next pond / Hot Spring fit with NO scroll at 412×915 (3.8s)
+  ✓   61 [mobile-412] › tests/v31-extension.spec.js:9:54 › solved boss: Replay / Next pond / Hot Spring fit with NO scroll at 412×915 (3.8s)
+  ✓   62 [mobile-412] › tests/v31-extension.spec.js:9:54 › solved boss30: Replay / Next pond / Hot Spring fit with NO scroll at 412×915 (3.8s)
+  ✓   63 [mobile-412] › tests/v31-extension.spec.js:9:54 › solved daily: Replay / Next pond / Hot Spring fit with NO scroll at 412×915 (3.8s)
+  ✓   64 [mobile-412] › tests/v31-extension.spec.js:8:2 › default B constant-width 5/6/7 boards and all cells ≥44px at 360×780 (877ms)
+  ✓   65 [mobile-412] › tests/v31-extension.spec.js:9:54 › solved normal: Replay / Next pond / Hot Spring fit with NO scroll at 360×780 (3.7s)
+  ✓   66 [mobile-412] › tests/v31-extension.spec.js:9:54 › solved boss: Replay / Next pond / Hot Spring fit with NO scroll at 360×780 (3.8s)
+  ✓   67 [mobile-412] › tests/v31-extension.spec.js:9:54 › solved boss30: Replay / Next pond / Hot Spring fit with NO scroll at 360×780 (3.8s)
+  ✓   68 [mobile-412] › tests/v31-extension.spec.js:9:54 › solved daily: Replay / Next pond / Hot Spring fit with NO scroll at 360×780 (3.7s)
+  ✓   69 [mobile-412] › tests/v31-extension.spec.js:11:41 › restored v1 concurrent upward launch uses Jun, visible 1.5s flight then matched soaking (3.7s)
+  ✓   70 [mobile-412] › tests/v31-extension.spec.js:11:41 › restored v1 concurrent upward launch uses Bloom, visible 1.5s flight then matched soaking (3.7s)
+  ✓   71 [mobile-412] › tests/v31-extension.spec.js:11:41 › restored v1 concurrent upward launch uses Remy, visible 1.5s flight then matched soaking (3.7s)
+  ✓   72 [mobile-412] › tests/v31-extension.spec.js:13:1 › music: NO playback before interaction, own toggle persists separately from effects, off really pauses (2.4s)
+  ✓   73 [mobile-412] › tests/v31-extension.spec.js:14:1 › music: hidden tab pauses immediately, visible resumes, Relax lowers volume, ended rotates all three (2.5s)
+  ✓   74 [mobile-412] › tests/v31-extension.spec.js:15:1 › music: older-iPhone MP3 path and actual local Opus/MP3 metadata decode without console errors (305ms)
+  ✓   75 [mobile-412] › tests/v31-extension.spec.js:16:1 › music plays actual local audio only after touch, then pauses on hidden tab without mocks (2.2s)
+  ✓   76 [mobile-412] › tests/v31-extension.spec.js:17:1 › real shipped v3 → local v3.1 service-worker upgrade, new music cached, all URLs 200 offline and MP3 Range supported (3.2s)
+  ✓   77 [mobile-412] › tests/v31.spec.js:6:1 › v3.1 Peek has ONE message, compact card never flex-grows; empty content collapses without shifting board/counters (3.7s)
+  ✓   78 [mobile-412] › tests/v31.spec.js:9:1 › v3.1 Nap and Second chance also have one card-only message, no duplicate power toast (1.7s)
+  ✘   79 [mobile-412] › tests/v31.spec.js:11:1 › v3.1 clean Bloom preview at first run AND switch; source steam pixels absent and other starters still decode (1.1s)
+(node:503048) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   80 [mobile-412] › tests/v4.spec.js:9:1 › tutorial appears on first Level 1, ghosts do NOT mutate, skip survives navigation and reload (3.1s)
+  ✓   81 [mobile-412] › tests/v4.spec.js:10:1 › tutorial completion preserves only real marks/capy, no lives/power spent, never auto-reappears (2.5s)
+  ✓   82 [mobile-412] › tests/v4.spec.js:11:1 › question-mark sheet replays tutorial in sandbox and restores board, Nap charges, streak and companion (2.4s)
+  ✓   83 [mobile-412] › tests/v4.spec.js:12:1 › all three world bosses have locked / next / beaten art; every map node is connected (2.2s)
+  ✓   84 [mobile-412] › tests/v4.spec.js:13:1 › Hot Spring growth is in-scene, earned objects and golden lilies persist; wood sheet switches cosmetic companion (1.7s)
+  ✓   85 [mobile-412] › tests/v4.spec.js:14:1 › generic SVG pieces for EVERY starter; companion retained; Peek manual placement, use badge, Relax Peek, no Hint (1.5s)
+  ✓   86 [mobile-412] › tests/v4.spec.js:15:1 › actual shipped v3.1 SW → v4, same-schema migration preserves attempt and settings; all assets 200 offline (3.3s)
+  ✓   87 [mobile-412] › tests/v4.spec.js:17:1 › centrally mapped power art is visible in chooser, switch sheet, power button/card and Hot Spring (1.8s)
+(node:504454) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   88 [mobile-360] › tests/mobile.spec.js:12:1 › home, marks/capy/clear and undo; double tap no X flash; mobile targets (3.0s)
+  ✓   89 [mobile-360] › tests/mobile.spec.js:14:1 › Peek ghosts one unsolved spot, never places; Hint is gone and power stays spent (793ms)
+  ✓   90 [mobile-360] › tests/mobile.spec.js:15:54 › row violation red and costs exactly one orange; clear repairs (1.1s)
+  ✓   91 [mobile-360] › tests/mobile.spec.js:15:54 › column violation red and costs exactly one orange; clear repairs (1.1s)
+  ✓   92 [mobile-360] › tests/mobile.spec.js:15:54 › zone violation red and costs exactly one orange; clear repairs (1.1s)
+  ✓   93 [mobile-360] › tests/mobile.spec.js:15:54 › diagonal violation red and costs exactly one orange; clear repairs (1.1s)
+  ✓   94 [mobile-360] › tests/mobile.spec.js:16:1 › game over, input locked, retry resets oranges and board (1.8s)
+  ✓   95 [mobile-360] › tests/mobile.spec.js:17:1 › Chill never loses oranges; no game over and mode persists (2.8s)
+  ✓   96 [mobile-360] › tests/mobile.spec.js:18:1 › solve, actual jump frames, unlock + persistence after reload (4.7s)
+  ✓   97 [mobile-360] › tests/mobile.spec.js:19:1 › boss 10 grows spring and grants persistent pure-solve golden lily (5.2s)
+  ✓   98 [mobile-360] › tests/mobile.spec.js:20:1 › boss 20/30 rewards and blocked rocks; 7×7 tap targets (2.0s)
+  ✓   99 [mobile-360] › tests/mobile.spec.js:21:1 › Daily Pond deterministic reload + same-day streak, consecutive +1, missed-day reset (3.0s)
+  ✓  100 [mobile-360] › tests/mobile.spec.js:23:1 › PWA precache 200 + offline startup/reload, unseen query, essential resources (1.2s)
+  ✓  101 [mobile-360] › tests/mobile.spec.js:24:1 › settings toggles Chill; corrupt and future storage cannot crash or overwrite (1.5s)
+  ✓  102 [mobile-360] › tests/relax-bug.spec.js:13:2 › 412×915 touch Relax regression › late native click after control fallback cannot become a phantom board tap (1.0s)
+  ✓  103 [mobile-360] › tests/relax-bug.spec.js:18:2 › 412×915 touch Relax regression › Pond 5 purple Peek preserves zone, only ghosts; overfill recovery is clear, generic and undoable (3.1s)
+  ✓  104 [mobile-360] › tests/relax-bug.spec.js:25:2 › 412×915 touch Relax regression › mode locks on entry before first move, persisted attempt cannot be switched via Home/reload/forged control (874ms)
+  ✓  105 [mobile-360] › tests/relax-bug.spec.js:29:2 › 412×915 touch Relax regression › solved mode setting is enabled, next/replay adopt it; completed attempt and celebration remain intact (1.4s)
+  ✓  106 [mobile-360] › tests/relax-bug.spec.js:33:2 › 412×915 touch Relax regression › daily and boss use the same entry lock, end control, stored mode and no-scroll layout (3.6s)
+  ✓  107 [mobile-360] › tests/relax-bug.spec.js:13:2 › 360×780 touch Relax regression › late native click after control fallback cannot become a phantom board tap (1.0s)
+  ✓  108 [mobile-360] › tests/relax-bug.spec.js:18:2 › 360×780 touch Relax regression › Pond 5 purple Peek preserves zone, only ghosts; overfill recovery is clear, generic and undoable (3.1s)
+  ✓  109 [mobile-360] › tests/relax-bug.spec.js:25:2 › 360×780 touch Relax regression › mode locks on entry before first move, persisted attempt cannot be switched via Home/reload/forged control (840ms)
+  ✓  110 [mobile-360] › tests/relax-bug.spec.js:29:2 › 360×780 touch Relax regression › solved mode setting is enabled, next/replay adopt it; completed attempt and celebration remain intact (1.3s)
+  ✓  111 [mobile-360] › tests/relax-bug.spec.js:33:2 › 360×780 touch Relax regression › daily and boss use the same entry lock, end control, stored mode and no-scroll layout (3.6s)
+  ✓  112 [mobile-360] › tests/sizing.spec.js:5:76 › single-config sizing A/B comparison › A: 5/6/7 grids and targets at 412×915 (2.4s)
+  ✓  113 [mobile-360] › tests/sizing.spec.js:5:76 › single-config sizing A/B comparison › A: 5/6/7 grids and targets at 360×780 (2.2s)
+  ✓  114 [mobile-360] › tests/sizing.spec.js:5:76 › single-config sizing A/B comparison › B: 5/6/7 grids and targets at 412×915 (2.4s)
+  ✓  115 [mobile-360] › tests/sizing.spec.js:5:76 › single-config sizing A/B comparison › B: 5/6/7 grids and targets at 360×780 (2.2s)
+  ✓  116 [mobile-360] › tests/starters.spec.js:13:1 › first-run chooser matches supplied starters; selected state, preview, persistence and Home badge (618ms)
+  ✓  117 [mobile-360] › tests/starters.spec.js:14:1 › Home / Hot Spring switching is cosmetic and preserves progress, streak and board; other two are friends (892ms)
+  ✓  118 [mobile-360] › tests/starters.spec.js:15:1 › Catmull–Rom trail connects actual centers of ALL 30 nodes without overlaps (346ms)
+  ✓  119 [mobile-360] › tests/starters.spec.js:16:1 › mid-level unused switch gives new power; spent stays spent; Nap charges survive switch, Undo and reload (1.5s)
+  ✓  120 [mobile-360] › tests/starters.spec.js:17:1 › Nap protects three moves including correct / X; fourth illegal placement costs orange; retry resets attempt (1.9s)
+  ✓  121 [mobile-360] › tests/starters.spec.js:18:1 › Nap drag spends one charge per new X, one Undo never refunds charges (648ms)
+  ✓  122 [mobile-360] › tests/starters.spec.js:19:1 › Peek last target is allowed, all remaining targets X disables, no auto-place and no Hint anywhere (625ms)
+  ✓  123 [mobile-360] › tests/starters.spec.js:20:1 › Bloom disabled without mistake; Second chance removes last offender, restores one life, stays spent on reload (858ms)
+  ✓  124 [mobile-360] › tests/starters.spec.js:21:1 › Second chance can rescue fatal last-orange error; never refills all oranges (561ms)
+  ✓  125 [mobile-360] › tests/starters.spec.js:22:1 › Relax uses Peek for ALL three starters and toggling back cannot restore power (961ms)
+  ✓  126 [mobile-360] › tests/starters.spec.js:23:1 › Powered boss gets no lily; Replay is fresh attempt and a subsequent pure solve earns persistent lily (2.5s)
+  ✓  127 [mobile-360] › tests/starters.spec.js:25:1 › iOS platform emulation › iPhone emulated UA: missing vibration silent, install instruction, safe-area viewport metadata (2.3s)
+  ✓  128 [mobile-360] › tests/starters.spec.js:26:1 › iOS platform emulation › iOS standalone is detected without beforeinstallprompt (449ms)
+  ✓  129 [mobile-360] › tests/starters.spec.js:28:1 › v2→v3 migration preserves board / progression / streak / settings; v2 key untouched (576ms)
+  ✓  130 [mobile-360] › tests/starters.spec.js:29:1 › real v2 service worker → v3 upgrade, old cache removed, migration and strict offline reload (3.5s)
+  ✓  131 [mobile-360] › tests/v2.spec.js:18:1 › drag paints/clears, skips capys, interpolates fast paths; each gesture is ONE undo; tap cycle survives (2.0s)
+  ✓  132 [mobile-360] › tests/v2.spec.js:19:1 › 10px threshold preserves taps; board drag never scrolls/reloads; native map scroll still works (1.5s)
+  ✓  133 [mobile-360] › tests/v2.spec.js:20:1 › mocked haptics: legal 32ms, illegal double buzz, solve celebration; toggle persists and suppresses all (3.3s)
+  ✓  134 [mobile-360] › tests/v2.spec.js:23:1 › drag haptic ticks: new cells only, clearing too, 70ms throttle on fast drag, toggle off (2.8s)
+  ✓  135 [mobile-360] › tests/v2.spec.js:28:1 › early 1–3 screenshots, obvious first starts, rules sheet and collection purpose (1.7s)
+  ✓  136 [mobile-360] › tests/v2.spec.js:29:1 › daily rocks gated until campaign 21; campaign-first and daily-first intros are one-time (1.4s)
+  ✓  137 [mobile-360] › tests/v2.spec.js:32:1 › date-only streak remains idempotent when daily eligibility changes (2.3s)
+  ✓  138 [mobile-360] › tests/v2.spec.js:33:1 › v1→v3 migration retains earned progress and compatible board; legacy key untouched (727ms)
+  ✓  139 [mobile-360] › tests/v2.spec.js:34:1 › missing/throwing vibration API never errors; real-device feedback not claimed (877ms)
+  ✓  140 [mobile-360] › tests/v2.spec.js:35:1 › real v1 SW→v3 update, effective JS, migrated progress, strict offline reload and unseen query (3.8s)
+  ✓  141 [mobile-360] › tests/v3.spec.js:9:1 › v3 rules line, sheet, true 5px outlines, counters, entry-locked Relax off/on, safe flex layout (1.9s)
+  ✓  142 [mobile-360] › tests/v3.spec.js:10:1 › Hot Spring option A stages at zero/one/two/three bosses, earned slots and decorations (1.3s)
+  ✓  143 [mobile-360] › tests/v3.spec.js:11:1 › enhanced solve: six live frames, solve-order jumps, timed splash haptics, optional local sound (4.6s)
+  ✓  144 [mobile-360] › tests/v3.spec.js:12:1 › reduced motion crossfades straight to soaking with no jumps or splash haptics (3.6s)
+  ✓  145 [mobile-360] › tests/v3.spec.js:13:1 › mouse pointer ID reuse after drag still permits mark, clear and one-click controls (1.9s)
+  ✓  146 [mobile-360] › tests/v31-extension.spec.js:8:2 › default B constant-width 5/6/7 boards and all cells ≥44px at 412×915 (893ms)
+  ✓  147 [mobile-360] › tests/v31-extension.spec.js:9:54 › solved normal: Replay / Next pond / Hot Spring fit with NO scroll at 412×915 (3.8s)
+  ✓  148 [mobile-360] › tests/v31-extension.spec.js:9:54 › solved boss: Replay / Next pond / Hot Spring fit with NO scroll at 412×915 (3.8s)
+  ✓  149 [mobile-360] › tests/v31-extension.spec.js:9:54 › solved boss30: Replay / Next pond / Hot Spring fit with NO scroll at 412×915 (3.8s)
+  ✓  150 [mobile-360] › tests/v31-extension.spec.js:9:54 › solved daily: Replay / Next pond / Hot Spring fit with NO scroll at 412×915 (3.8s)
+  ✓  151 [mobile-360] › tests/v31-extension.spec.js:8:2 › default B constant-width 5/6/7 boards and all cells ≥44px at 360×780 (811ms)
+  ✓  152 [mobile-360] › tests/v31-extension.spec.js:9:54 › solved normal: Replay / Next pond / Hot Spring fit with NO scroll at 360×780 (3.7s)
+  ✓  153 [mobile-360] › tests/v31-extension.spec.js:9:54 › solved boss: Replay / Next pond / Hot Spring fit with NO scroll at 360×780 (3.7s)
+  ✓  154 [mobile-360] › tests/v31-extension.spec.js:9:54 › solved boss30: Replay / Next pond / Hot Spring fit with NO scroll at 360×780 (3.7s)
+  ✓  155 [mobile-360] › tests/v31-extension.spec.js:9:54 › solved daily: Replay / Next pond / Hot Spring fit with NO scroll at 360×780 (3.7s)
+  ✓  156 [mobile-360] › tests/v31-extension.spec.js:11:41 › restored v1 concurrent upward launch uses Jun, visible 1.5s flight then matched soaking (3.6s)
+  ✓  157 [mobile-360] › tests/v31-extension.spec.js:11:41 › restored v1 concurrent upward launch uses Bloom, visible 1.5s flight then matched soaking (3.6s)
+  ✓  158 [mobile-360] › tests/v31-extension.spec.js:11:41 › restored v1 concurrent upward launch uses Remy, visible 1.5s flight then matched soaking (3.6s)
+  ✓  159 [mobile-360] › tests/v31-extension.spec.js:13:1 › music: NO playback before interaction, own toggle persists separately from effects, off really pauses (2.3s)
+  ✓  160 [mobile-360] › tests/v31-extension.spec.js:14:1 › music: hidden tab pauses immediately, visible resumes, Relax lowers volume, ended rotates all three (2.5s)
+  ✓  161 [mobile-360] › tests/v31-extension.spec.js:15:1 › music: older-iPhone MP3 path and actual local Opus/MP3 metadata decode without console errors (269ms)
+  ✓  162 [mobile-360] › tests/v31-extension.spec.js:16:1 › music plays actual local audio only after touch, then pauses on hidden tab without mocks (2.2s)
+  ✓  163 [mobile-360] › tests/v31-extension.spec.js:17:1 › real shipped v3 → local v3.1 service-worker upgrade, new music cached, all URLs 200 offline and MP3 Range supported (3.1s)
+  ✓  164 [mobile-360] › tests/v31.spec.js:6:1 › v3.1 Peek has ONE message, compact card never flex-grows; empty content collapses without shifting board/counters (3.7s)
+  ✓  165 [mobile-360] › tests/v31.spec.js:9:1 › v3.1 Nap and Second chance also have one card-only message, no duplicate power toast (1.7s)
+  ✘  166 [mobile-360] › tests/v31.spec.js:11:1 › v3.1 clean Bloom preview at first run AND switch; source steam pixels absent and other starters still decode (1.0s)
+(node:515836) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  167 [mobile-360] › tests/v4.spec.js:9:1 › tutorial appears on first Level 1, ghosts do NOT mutate, skip survives navigation and reload (3.1s)
+  ✓  168 [mobile-360] › tests/v4.spec.js:10:1 › tutorial completion preserves only real marks/capy, no lives/power spent, never auto-reappears (2.5s)
+  ✓  169 [mobile-360] › tests/v4.spec.js:11:1 › question-mark sheet replays tutorial in sandbox and restores board, Nap charges, streak and companion (2.3s)
+  ✓  170 [mobile-360] › tests/v4.spec.js:12:1 › all three world bosses have locked / next / beaten art; every map node is connected (2.1s)
+  ✓  171 [mobile-360] › tests/v4.spec.js:13:1 › Hot Spring growth is in-scene, earned objects and golden lilies persist; wood sheet switches cosmetic companion (1.6s)
+  ✓  172 [mobile-360] › tests/v4.spec.js:14:1 › generic SVG pieces for EVERY starter; companion retained; Peek manual placement, use badge, Relax Peek, no Hint (1.6s)
+  ✓  173 [mobile-360] › tests/v4.spec.js:15:1 › actual shipped v3.1 SW → v4, same-schema migration preserves attempt and settings; all assets 200 offline (3.3s)
+  ✓  174 [mobile-360] › tests/v4.spec.js:17:1 › centrally mapped power art is visible in chooser, switch sheet, power button/card and Hot Spring (1.8s)
+
+
+  1) [mobile-412] › tests/v31.spec.js:11:1 › v3.1 clean Bloom preview at first run AND switch; source steam pixels absent and other starters still decode 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator: locator('[data-choice="Jun"] img')
+    Expected: "assets/starters/jun.png"
+    Error: strict mode violation: locator('[data-choice="Jun"] img') resolved to 2 elements:
+        1) <img alt="" src="assets/starters/jun.png"/> aka getByRole('button', { name: 'Choose Jun' })
+        2) <img alt="" class="power-glyph" src="assets/power-icons/peek.svg"/> aka getByRole('button', { name: 'Choose Jun' })
+
+    Call log:
+      - Expect "toHaveAttribute" locator('[data-choice="Jun"] img') with timeout 7000ms
+      - waiting for locator('[data-choice="Jun"] img')
+
+
+       9 | test('v3.1 Nap and Second chance also have one card-only message, no duplicate power toast',async({page})=>{await seed(page,'Remy');await page.getByRole('button',{name:'Nap',exact:true}).tap();await expect(page.getByText('Nap · 3 safe moves left',{exact:true})).toHaveCount(1);await expect(page.locator('.toast')).toHaveCount(0);await capture(page,'after-nap-single-card');await page.locator('[data-cell="5"]').tap();await page.waitForTimeout(330);await expect(page.getByText('Nap · 2 safe moves left',{exact:true})).toHaveCount(1);await expect(page.getByText('Nap · 3 safe moves left',{exact:true})).toHaveCount(0);expect((await page.locator('.strip').boundingBox()).height).toBeLessThanOrEqual(104);
+      10 |  await seed(page,'Bloom');await double(page,0);await double(page,1);await page.getByRole('button',{name:'Second chance',exact:true}).tap();await expect(page.getByText('Second chance · orange restored',{exact:true})).toHaveCount(1);await expect(page.locator('.strip')).toContainText('Second chance · orange restored');await expect(page.locator('.toast')).toHaveCount(0);await capture(page,'after-second-chance-single-card');await page.locator('[data-cell="5"]').tap();await page.waitForTimeout(330);await expect(page.getByText('Second chance · orange restored',{exact:true})).toHaveCount(0)});
+    > 11 | test('v3.1 clean Bloom preview at first run AND switch; source steam pixels absent and other starters still decode',async({page})=>{await page.goto('/');await expect(page.getByRole('heading',{name:'Choose your capy'})).toBeVisible();await capture(page,'after-chooser-bloom');const inspect=()=>page.locator('.preview-scene').evaluate(async img=>{await img.decode();const c=document.createElement('canvas');c.width=img.naturalWidth;c.height=img.naturalHeight;const ctx=c.getContext('2d');ctx.drawImage(img,0,0);let white=0;const p=ctx.getImageData(0,0,c.width,c.height).data;for(let y=210;y<445;y++)for(const [a,b]of[[165,260],[655,765]])for(let x=a;x<b;x++){const i=(y*c.width+x)*4;if(Math.min(p[i],p[i+1],p[i+2])>=238)white++}return{width:c.width,height:c.height,white}});expect(await inspect()).toEqual({width:900,height:700,white:0});await page.getByRole('button',{name:"Let's go",exact:true}).tap();await page.getByRole('button',{name:'Switch capy',exact:true}).tap();await capture(page,'after-switch-bloom');await expect(page.locator('.switch-sheet')).toBeVisible();await expect(page.locator('.preview-scene')).toHaveCount(0);for(const name of['Jun','Remy']){await page.getByRole('button',{name:`Choose ${name}`,exact:true}).tap();await expect(page.locator('.preview-scene')).toHaveCount(0);await expect(page.locator(`[data-choice="${name}"] img`)).toHaveAttribute('src',`assets/starters/${name.toLowerCase()}.png`);await capture(page,`after-switch-${name.toLowerCase()}`)}await page.getByRole('button',{name:'Close capy chooser',exact:true}).tap()});
+         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ^
+      12 |
+        at /workspace/capydoku/app/tests/v31.spec.js:11:1354
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/v31-v3-1-clean-Bloom-previ-11162-other-starters-still-decode-mobile-412/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/v31-v3-1-clean-Bloom-previ-11162-other-starters-still-decode-mobile-412/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/v31-v3-1-clean-Bloom-previ-11162-other-starters-still-decode-mobile-412/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/v31-v3-1-clean-Bloom-previ-11162-other-starters-still-decode-mobile-412/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [mobile-360] › tests/v31.spec.js:11:1 › v3.1 clean Bloom preview at first run AND switch; source steam pixels absent and other starters still decode 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator: locator('[data-choice="Jun"] img')
+    Expected: "assets/starters/jun.png"
+    Error: strict mode violation: locator('[data-choice="Jun"] img') resolved to 2 elements:
+        1) <img alt="" src="assets/starters/jun.png"/> aka getByRole('button', { name: 'Choose Jun' })
+        2) <img alt="" class="power-glyph" src="assets/power-icons/peek.svg"/> aka getByRole('button', { name: 'Choose Jun' })
+
+    Call log:
+      - Expect "toHaveAttribute" locator('[data-choice="Jun"] img') with timeout 7000ms
+      - waiting for locator('[data-choice="Jun"] img')
+
+
+       9 | test('v3.1 Nap and Second chance also have one card-only message, no duplicate power toast',async({page})=>{await seed(page,'Remy');await page.getByRole('button',{name:'Nap',exact:true}).tap();await expect(page.getByText('Nap · 3 safe moves left',{exact:true})).toHaveCount(1);await expect(page.locator('.toast')).toHaveCount(0);await capture(page,'after-nap-single-card');await page.locator('[data-cell="5"]').tap();await page.waitForTimeout(330);await expect(page.getByText('Nap · 2 safe moves left',{exact:true})).toHaveCount(1);await expect(page.getByText('Nap · 3 safe moves left',{exact:true})).toHaveCount(0);expect((await page.locator('.strip').boundingBox()).height).toBeLessThanOrEqual(104);
+      10 |  await seed(page,'Bloom');await double(page,0);await double(page,1);await page.getByRole('button',{name:'Second chance',exact:true}).tap();await expect(page.getByText('Second chance · orange restored',{exact:true})).toHaveCount(1);await expect(page.locator('.strip')).toContainText('Second chance · orange restored');await expect(page.locator('.toast')).toHaveCount(0);await capture(page,'after-second-chance-single-card');await page.locator('[data-cell="5"]').tap();await page.waitForTimeout(330);await expect(page.getByText('Second chance · orange restored',{exact:true})).toHaveCount(0)});
+    > 11 | test('v3.1 clean Bloom preview at first run AND switch; source steam pixels absent and other starters still decode',async({page})=>{await page.goto('/');await expect(page.getByRole('heading',{name:'Choose your capy'})).toBeVisible();await capture(page,'after-chooser-bloom');const inspect=()=>page.locator('.preview-scene').evaluate(async img=>{await img.decode();const c=document.createElement('canvas');c.width=img.naturalWidth;c.height=img.naturalHeight;const ctx=c.getContext('2d');ctx.drawImage(img,0,0);let white=0;const p=ctx.getImageData(0,0,c.width,c.height).data;for(let y=210;y<445;y++)for(const [a,b]of[[165,260],[655,765]])for(let x=a;x<b;x++){const i=(y*c.width+x)*4;if(Math.min(p[i],p[i+1],p[i+2])>=238)white++}return{width:c.width,height:c.height,white}});expect(await inspect()).toEqual({width:900,height:700,white:0});await page.getByRole('button',{name:"Let's go",exact:true}).tap();await page.getByRole('button',{name:'Switch capy',exact:true}).tap();await capture(page,'after-switch-bloom');await expect(page.locator('.switch-sheet')).toBeVisible();await expect(page.locator('.preview-scene')).toHaveCount(0);for(const name of['Jun','Remy']){await page.getByRole('button',{name:`Choose ${name}`,exact:true}).tap();await expect(page.locator('.preview-scene')).toHaveCount(0);await expect(page.locator(`[data-choice="${name}"] img`)).toHaveAttribute('src',`assets/starters/${name.toLowerCase()}.png`);await capture(page,`after-switch-${name.toLowerCase()}`)}await page.getByRole('button',{name:'Close capy chooser',exact:true}).tap()});
+         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ^
+      12 |
+        at /workspace/capydoku/app/tests/v31.spec.js:11:1354
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/v31-v3-1-clean-Bloom-previ-11162-other-starters-still-decode-mobile-360/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/v31-v3-1-clean-Bloom-previ-11162-other-starters-still-decode-mobile-360/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/v31-v3-1-clean-Bloom-previ-11162-other-starters-still-decode-mobile-360/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/v31-v3-1-clean-Bloom-previ-11162-other-starters-still-decode-mobile-360/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [mobile-412] › tests/v31.spec.js:11:1 › v3.1 clean Bloom preview at first run AND switch; source steam pixels absent and other starters still decode 
+    [mobile-360] › tests/v31.spec.js:11:1 › v3.1 clean Bloom preview at first run AND switch; source steam pixels absent and other starters still decode 
+  172 passed (6.4m)

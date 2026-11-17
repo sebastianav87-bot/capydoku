@@ -1,0 +1,1 @@
+{"n":9,"rocks":2,"seconds":180,"tries":2380374,"candidates":257838,"duplicateCandidates":0,"noGuess":0,"noGuessUnique":0,"validPerSecond":0,"msPerCandidateProof":0.183,"msPerUniqCheck":0,"histogramBy50":{},"independentRecheckOk":true}

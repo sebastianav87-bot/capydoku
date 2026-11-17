@@ -1,0 +1,61 @@
+{
+  "source": "supplied final v4 core cutouts",
+  "swappable_module": "characters.js",
+  "legacy_save_ids_preserved": true,
+  "gameplay_names": {
+    "Classic": "Pebble",
+    "Beanie": "Tuff",
+    "Orange": "Pip",
+    "Duck": "Nib"
+  },
+  "scene_only": [
+    "Ring",
+    "Doze"
+  ],
+  "new_rule_variants": false,
+  "future_unlocks_added": false,
+  "assets": [
+    {
+      "character": "pebble",
+      "source": "/workspace/capydoku/mockup/v4-cast/art/pebble.png",
+      "runtime": "assets/cast/pebble.png",
+      "sha256": "b9814a28468cb31e300f5a511cc6c3071195ab9ff0436a3e2bf93f30799fc067",
+      "copied_unchanged": true
+    },
+    {
+      "character": "tuff",
+      "source": "/workspace/capydoku/mockup/v4-cast/art/tuff.png",
+      "runtime": "assets/cast/tuff.png",
+      "sha256": "077ea745f2efd31ce021e98c369a69b83158d15f8236c2aa67e115b2513bdc93",
+      "copied_unchanged": true
+    },
+    {
+      "character": "pip",
+      "source": "/workspace/capydoku/mockup/v4-cast/art/pip.png",
+      "runtime": "assets/cast/pip.png",
+      "sha256": "d777c4f189aab4b9881588bf8e81ef1643fd33df77541d5cbc4e0062d1321faa",
+      "copied_unchanged": true
+    },
+    {
+      "character": "ring",
+      "source": "/workspace/capydoku/mockup/v4-cast/art/ring.png",
+      "runtime": "assets/cast/ring.png",
+      "sha256": "61e03b3657b515cbd38a1f554a0f2c1072d31061f18a3f5544a9f860e4f569ae",
+      "copied_unchanged": true
+    },
+    {
+      "character": "nib",
+      "source": "/workspace/capydoku/mockup/v4-cast/art/nib.png",
+      "runtime": "assets/cast/nib.png",
+      "sha256": "7635cf918c525a9075eeaf5fffd70d6e02533c7d39148d9b3d5de843cd35c871",
+      "copied_unchanged": true
+    },
+    {
+      "character": "doze",
+      "source": "/workspace/capydoku/mockup/v4-cast/art/doze.png",
+      "runtime": "assets/cast/doze.png",
+      "sha256": "4ca14bbc19b672fddad4a9d652b5cf74c5cd6e8f334e478ece31a3cbd5f7722c",
+      "copied_unchanged": true
+    }
+  ]
+}

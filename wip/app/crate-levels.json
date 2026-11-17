@@ -1,0 +1,189 @@
+{
+ "schema": 2,
+ "layout": 2,
+ "solver": "/workspace/capydoku/mockup/boxworld-concept/v3/verify/solver.py",
+ "solver_sha256": "eb5314bb98fe8ebd3991e86fdbdd92aa2122bc9133cc7f7eb8d53dc7fd1797cf",
+ "levels": [
+  {
+   "id": 1,
+   "slot": "C1",
+   "pond": 5,
+   "name": "Reed Crates",
+   "n": 7,
+   "rows": [
+    "#########",
+    "#       #",
+    "# $ @ # #",
+    "# $     #",
+    "#   ..$ #",
+    "#   . # #",
+    "#  #    #",
+    "#  #    #",
+    "#########"
+   ],
+   "fruit": [
+    "watermelon",
+    "banana",
+    "pear"
+   ],
+   "optimalMoves": 26,
+   "optimalPushes": 9,
+   "pushesInMoveOptimal": 9,
+   "par": 40,
+   "solution": "ULLLDRDDLDRRUULURURDDRRRDL",
+   "source": "Designer review edit of draft C1 (no silent traps; first mandatory crate pond)",
+   "review": "Designer v4.3 review (crate-ramp-edited.json)"
+  },
+  {
+   "id": 2,
+   "slot": "C2",
+   "pond": 10,
+   "name": "Reedwater Gate",
+   "n": 6,
+   "rows": [
+    "########",
+    "#  @## #",
+    "#$.    #",
+    "# #   .#",
+    "#. ##$ #",
+    "#   $  #",
+    "#  #   #",
+    "########"
+   ],
+   "fruit": [
+    "watermelon",
+    "banana",
+    "pear"
+   ],
+   "optimalMoves": 30,
+   "optimalPushes": 13,
+   "pushesInMoveOptimal": 13,
+   "par": 45,
+   "solution": "LLDDDRDDLURRRRUURULLLDRRDDDRUU",
+   "source": "live Crate Cove 3 (Designer v3 level, unchanged) (kept)",
+   "review": "Designer v4.3 review (crate-ramp-edited.json)"
+  },
+  {
+   "id": 3,
+   "slot": "C3",
+   "pond": 15,
+   "name": "Bamboo Crates",
+   "n": 7,
+   "rows": [
+    "#########",
+    "#  #    #",
+    "#   $   #",
+    "#     $ #",
+    "##  $#  #",
+    "##      #",
+    "# .    ##",
+    "# .@.  ##",
+    "#########"
+   ],
+   "fruit": [
+    "watermelon",
+    "banana",
+    "pear"
+   ],
+   "optimalMoves": 39,
+   "optimalPushes": 17,
+   "pushesInMoveOptimal": 17,
+   "par": 55,
+   "solution": "UUUURDDRRURULLLRULLDDULLUURDDDDDUURDRDL",
+   "source": "Designer review edit of draft C3 (fewer silent traps)",
+   "review": "Designer v4.3 review (crate-ramp-edited.json)"
+  },
+  {
+   "id": 4,
+   "slot": "C4",
+   "pond": 20,
+   "name": "Bamboo Gate",
+   "n": 7,
+   "rows": [
+    "#########",
+    "#  . #  #",
+    "# .   # #",
+    "#. # $$ #",
+    "#       #",
+    "#    @  #",
+    "#  $ #  #",
+    "## #   ##",
+    "#########"
+   ],
+   "fruit": [
+    "watermelon",
+    "banana",
+    "pear"
+   ],
+   "optimalMoves": 57,
+   "optimalPushes": 20,
+   "pushesInMoveOptimal": 22,
+   "par": 85,
+   "solution": "LLLDRURRRDDLLUURULLDLUUULURDRRRDDRRULLDRDLLLLDLUURRRURULL",
+   "source": "live Crate Cove 5 (unchanged) (kept)",
+   "review": "Designer v4.3 review (crate-ramp-edited.json)"
+  },
+  {
+   "id": 5,
+   "slot": "C5",
+   "pond": 25,
+   "name": "Summit Crates",
+   "n": 8,
+   "rows": [
+    "##########",
+    "# @.  # ##",
+    "#        #",
+    "#   #.   #",
+    "#  .#  # #",
+    "#  #  #  #",
+    "#     $  #",
+    "# # $ $  #",
+    "#        #",
+    "##########"
+   ],
+   "fruit": [
+    "watermelon",
+    "banana",
+    "pear"
+   ],
+   "optimalMoves": 66,
+   "optimalPushes": 23,
+   "pushesInMoveOptimal": 25,
+   "par": 95,
+   "solution": "DDDDDRDRDRUUUUURULLULDRRDDDDDDRRULDLUUUUUDDDDRRULDLUUURUULLLDLULUR",
+   "source": "Designer review edit of draft C5 (8 rocks instead of 16, shorter)",
+   "review": "Designer v4.3 review (crate-ramp-edited.json)"
+  },
+  {
+   "id": 6,
+   "slot": "C6",
+   "pond": 30,
+   "name": "Cloudwater Finale",
+   "n": 8,
+   "rows": [
+    "##########",
+    "# #     ##",
+    "# @$ #   #",
+    "# $$  ## #",
+    "## #     #",
+    "#     . ##",
+    "#    ## .#",
+    "#   # .  #",
+    "#        #",
+    "##########"
+   ],
+   "fruit": [
+    "watermelon",
+    "banana",
+    "pear"
+   ],
+   "optimalMoves": 80,
+   "optimalPushes": 26,
+   "pushesInMoveOptimal": 28,
+   "par": 115,
+   "solution": "RURDDDUULLDDDRRRRURDDRDDLLURDLLLLULULURRRRRURDDULLLLLUURURDDULLDDRRRLDLDDRRRRRUL",
+   "source": "Designer review edit of draft C6 (98/47 -> 80/26, 11 rocks)",
+   "review": "Designer v4.3 review (crate-ramp-edited.json)"
+  }
+ ]
+}

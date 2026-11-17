@@ -1,0 +1,1256 @@
+{
+  "browser_errors": [],
+  "records": [
+    {
+      "file": "reports/screenshots-v4/00a-nickname-empty.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/00b-nickname-filled.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/00-choose-capy.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/01-home-world1.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/02-home-world2.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/03-home-world3.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/04-boss10-next.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/05-boss20-next.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/06-boss30-next.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/07-boss30-beaten.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/08-pond3-5x5.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/09-pond11-6x6.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/10-pond21-7x7.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/11-rules-sheet.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/12-switch-sheet.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/13-peek-ghost.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/14-nap-protected.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/14b-drag-mid-gesture.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/15-conflict-orange-lost.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/16-second-chance-restored.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/17-game-over.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/18-native-bloom-ready.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/19-rock-intro.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/20-daily-no-rocks.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/21-daily-with-rocks.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/22-spring-stage-0.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/23-spring-stage-1.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/24-spring-stage-2.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/25-spring-stage-3.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/26-spring-switch.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/70-map-lilies.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/71-pond-replay.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/27-settings-music.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/72-progress-collection.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/73-progress-detail.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/74-edit-nickname.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/28-tutorial-tap.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/29-tutorial-double-tap.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/30-tutorial-drag.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/31-tutorial-done.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/32-solved-0150ms.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/32-solved-0550ms.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/32-solved-0950ms.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/32-solved-1350ms.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/32-solved-1750ms.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/32-solved-2300ms.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/32-solved-3200ms.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/33-end-normal.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/33-end-boss.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/33-end-boss30.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/33-end-daily.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/40-power-ready-jun.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/41-first-use-jun.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/42-power-used-jun.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/40-power-ready-bloom.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/41-first-use-bloom.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/42-power-used-bloom.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/40-power-ready-remy.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/41-first-use-remy.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/42-power-used-remy.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/50-boss10-locked.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/50-boss10-next.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/50-boss10-beaten.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/50-boss20-locked.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/50-boss20-next.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/50-boss20-beaten.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/50-boss30-locked.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/50-boss30-next.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/50-boss30-beaten.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/60-bloom-chooser.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/61-bloom-map.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/62-bloom-hud.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/63-bloom-power-button.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/64-bloom-first-use.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/65-bloom-switch.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/66-bloom-spring.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/67-bloom-celebration.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/80-nickname-empty.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/81-nickname-filled.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/82-lily-map-47.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/83-replay-two-lilies.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/84-settings-version.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/85-progress-47.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/86-progress-expanded.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/87-music-northumberland.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/88-lilies-gentle-one.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/88-lilies-perfect-three.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/88-lilies-fast-with-mistake.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/88-lilies-zero-mistakes-slow.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/34-ios-install.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/board-5x5.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/board-6x6.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/board-7x7.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/end-normal.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/end-boss.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/end-boss30.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/end-daily.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/40-power-ready-jun.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/41-first-use-jun.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/42-power-used-jun.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/40-power-ready-bloom.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/41-first-use-bloom.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/42-power-used-bloom.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/40-power-ready-remy.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/41-first-use-remy.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/42-power-used-remy.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/50-boss10-locked.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/50-boss10-next.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/50-boss10-beaten.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/50-boss20-locked.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/50-boss20-next.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/50-boss20-beaten.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/50-boss30-locked.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/50-boss30-next.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/50-boss30-beaten.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/60-bloom-chooser.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/61-bloom-map.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/62-bloom-hud.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/63-bloom-power-button.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/64-bloom-first-use.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/65-bloom-switch.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/66-bloom-spring.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/67-bloom-celebration.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/22-spring-stage-0.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/23-spring-stage-1.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/24-spring-stage-2.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/25-spring-stage-3.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/80-nickname-empty.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/81-nickname-filled.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/82-lily-map-47.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/83-replay-two-lilies.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/84-settings-version.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/85-progress-47.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/86-progress-expanded.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/87-music-northumberland.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/88-lilies-gentle-one.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/88-lilies-perfect-three.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/88-lilies-fast-with-mistake.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/88-lilies-zero-mistakes-slow.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      }
+    }
+  ]
+}

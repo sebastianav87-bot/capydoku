@@ -1,0 +1,21 @@
+# v4.1 progress (local only, not published) — updated 2026-11-14 22:45 EST
+
+- [x] v4 backup integrity re-verified vs capydoku-v4-runtime.tar.gz (94/94 runtime files byte-equal; 1493 manifest hashes match; tar sha256 ac12261b…)
+- [x] Locks: correct capy locked vs tap/double-tap/drag/clear-conflicts/Second chance/Undo; immediate bump (one per double-tap), light haptic, no penalty; glow moved to cell box-shadow (capy filter untouched)
+- [x] Haptics: single HAPTIC_CONFIG in config.js (markX 30, clearTap 26, dragTick 22 @70ms throttle, correct 70, mistake [110,80,110], solve [90,60,120,60,220], landing 40, locked 18); iOS note
+- [x] Orange rule kept from v4 (rule-breaking placement costs 1 even if the new capy is correct; it still locks)
+- [x] Difficulty: verify-v41.py re-run OK (760 boards / 5840 daily outputs); DIFFICULTY-v4.1.md regenerated (scripts/difficulty-report-v41.py)
+- [x] Rocks: audit of 986 unique rock boards OK; fixes: rock cells no longer `disabled` (drag can start on a rock), pointerup fallback for the lost first tap after a drag; clearer rock intro + rules copy
+- [x] Map removed: home = Continue + Daily + plain pond list; solved → "Next pond" transition (normal/boss/breather/all-clear); Settings › Progress → "Replay a pond"
+- [x] Tests updated for approved behavior changes; new tests/v41-flow.spec.js (23 tests)
+- [x] Full E2E run2: 295/298; fixed updates.spec:11 (current-code label "Back to home") and v2.spec:21 (home list fits at 412, no scroll room)
+- [x] Unit 137/137; v4 backup re-verified 22:55 EST (reports/v4.1/backup-v4-reverify.json); rock audit 986 boards, 0 issues (reports/v4.1/rock-audit.json)
+- [x] map-painted.jpg dropped from precache (file kept on disk); final cache capydoku-v4.1-923843f2cc02 (91 URLs)
+- [x] Final E2E attempt 1: 294/298; the 4 failures passed in isolation (56/56, then 80/80); reports/v4.1/e2e-final-attempt1.log
+- [x] Runtime tar built + verified: 94 files, sha256 53e11568…
+- [x] ROUND-v4.1.md, README, KNOWN-ISSUES v4.1 written
+- [x] Clean full E2E rerun (23:55 EST): 297 passed, 1 failed (mobile.spec:22 Daily @360, a different test than attempt 1) — reports/e2e-v4.1-final.log
+- [x] Isolation rerun mobile.spec:22: 10/10 passed
+- [x] Screenshots: 256 in reports/screenshots-v4.1/regression (from the final run); contact sheets built and key shots viewed
+- [x] Counts filled into ROUND-v4.1.md + TEST-SUMMARY-v4.1.json; runtime files unchanged since the tar (hashes re-checked)
+- [x] DONE

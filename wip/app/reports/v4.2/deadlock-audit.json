@@ -1,0 +1,26 @@
+[
+  {
+    "level": "Crate Cove 1",
+    "reachable": 28800,
+    "unsolvableReachable": 21990,
+    "flagged": 18028,
+    "falsePositives": 0,
+    "recall": 0.82
+  },
+  {
+    "level": "Crate Cove 3",
+    "reachable": 44814,
+    "unsolvableReachable": 37772,
+    "flagged": 33271,
+    "falsePositives": 0,
+    "recall": 0.881
+  },
+  {
+    "level": "Crate Cove 5",
+    "reachable": 379701,
+    "unsolvableReachable": 276616,
+    "flagged": 270218,
+    "falsePositives": 0,
+    "recall": 0.977
+  }
+]

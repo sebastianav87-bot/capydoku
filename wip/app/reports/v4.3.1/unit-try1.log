@@ -1,0 +1,318 @@
+✔ Peek uses exactly one random valid unsolved cell; never places or returns a solution (10.181341ms)
+✔ Peek excludes Xs, rocks, fixed clues, already placed; last eligible cell allowed, zero disabled (3.631478ms)
+✔ Peek last unsolved target works, all targets placed or X disables without spend (1.317895ms)
+✔ Second chance disabled without a lost orange and at full lives (0.139678ms)
+✔ Second chance after a rejected wrong capy restores exactly its orange; the mistake still counts (v4.3 rev b) (0.455226ms)
+✔ Second chance cannot bypass game over; must be used before zero oranges (0.152004ms)
+✔ Second chance never removes a locked capy (v4.3 rev b) (0.170838ms)
+✔ Nap protects exactly three actual placements/new marks, including safe moves; a wrong capy under Nap is still rejected and counted (0.377373ms)
+✔ Nap clears, no-ops, rocks and capy removal do not consume charges (0.44539ms)
+✔ One drag is one board undo but three new Xs spend all three Nap charges (0.670778ms)
+✔ Undo does not refund lives, activation or charges; Peek is also spent after undo (1.819401ms)
+✔ Unused switch changes ready power; used switch stays spent and active Nap survives (0.155569ms)
+✔ Retry creates a fresh attempt; reload preserves spent power and Nap state (9.667733ms)
+✔ Golden lilies awarded once only for a power-free boss, including replay after a powered clear (0.799623ms)
+✔ v2 migration preserves all compatible progress/boards/streak/settings and defaults mapped chosen starter (0.871134ms)
+✔ Starter selection persists independent of earned bosses and does not change streak or sessions (0.980835ms)
+✔ Fresh state requires chooser, migrations choose Jun by default, invalid power data is bounded (0.184056ms)
+✔ iPhone and iPadOS UA detection; standalone supports both Safari property and display-mode (0.242308ms)
+✔ v4.3: Pond 5 is a crate pond; Pond 1 (7×7) is unique, no-guess solvable and its solution has no violations (1.903784ms)
+✔ all 754 boards: Jun Peek only ghosts true solution cells, no placement or lives change (1254.65028ms)
+✔ Peek never asks to place against an existing capy or spends on an ineligible target (0.230371ms)
+✔ clear-conflicts clears local wrong cells, preserves confirmed locks, is undoable without resource refunds (0.421684ms)
+✔ nickname is NFC, trimmed, 2–16 graphemes, emoji ZWJ/flags, controls rejected, fallback agrees (31.640743ms)
+✔ all three lilies independently OR; strict boundary, best kept, power-independent, separate golden (0.881339ms)
+✔ old completed boards migrate cleared only; unknown historical attempt cannot invent timed/perfect awards (0.759728ms)
+✔ Bloom refunds life but not historical mistake; Nap protects orange but not mistake; undo no metric refund (0.884191ms)
+✔ active clock starts on gesture, pauses without drift, resumes cumulative metrics (1.167004ms)
+✔ nickname hero honors the top safe area as well as all other sides (0.325084ms)
+✔ 30 ponds (v4.3): 24 logic + 6 crate slots, 7→8→9 ramp, boss 29 10×10, connected zones, rocks only from pond 21 (8.262194ms)
+✔ 754 source boards (24 ponds + 730 daily) independently unique; every no-guessing step agrees with full enumerator (292.352421ms)
+✔ generator repeatability: same seed produces byte-identical puzzle and proof (39.496668ms)
+✔ verification report has every board, exact counts, techniques and logic flags (0.367131ms)
+✔ daily: all 365 consecutive local dates deterministic, unique, logic-solvable (104.557587ms)
+✔ daily transform all 8 cycles preserves uniqueness and pure logic (9.981494ms)
+✔ local date, midnight and DST calendar days do not use UTC slice or 24h duration (0.228001ms)
+✔ row conflict flags both capys (0.154319ms)
+✔ column conflict flags both capys (0.10032ms)
+✔ zone conflict flags both even without same row/column or adjacency (0.13931ms)
+✔ diagonal conflict flags both (0.075995ms)
+✔ rock blocked, no move or lost life (0.154093ms)
+✔ only new rule-breaking placement loses exactly one orange (0.146115ms)
+✔ game over locks moves even with a protection argument (0.057416ms)
+✔ v4.3 rev b: a non-solution capy, even a locally legal first one, costs an orange and is rejected (cell unchanged) (0.294535ms)
+✔ win requires n valid capys; Xs irrelevant (0.269335ms)
+✔ Hint gives one forced cell with reason/unit, never mutates board or returns a solution (0.665486ms)
+✔ Hint on conflicts repairs without placing (0.093932ms)
+✔ tap window fixed 280ms, delayed single tap avoids transient X (0.047504ms)
+✔ storage round-trip, progression and collection selection (19.313274ms)
+✔ storage malformed, invalid sessions, locked selection and future schema safely handled (0.332596ms)
+✔ storage unavailable/quota failure is safe (0.202818ms)
+✔ daily streak same day idempotent, consecutive +1, missed day resets, backdating safe (0.104761ms)
+✔ Hint refuses an inconsistent but locally legal partial board (0.247878ms)
+✔ v4.3 pick report agrees with scoreBoard on every logic pond; first four ponds give a capy within 3 deductions (13.59084ms)
+✔ both daily eligibility states: 365 dates deterministic, unique and no-guessing; safe has no rocks (191.53223ms)
+✔ rock eligibility unlocks at 21, not before; intro flag persists (0.466075ms)
+✔ v1 migration keeps path/collection/streak and compatible 21–30 boards, clears changed/daily boards (0.577684ms)
+✔ all preserved v1 boards really match snapshot and signatures distinguish changed content (3.708149ms)
+✔ paint is idempotent, never changes capys/rocks, mark and erase only (0.115799ms)
+✔ haptics exact distinct patterns, off/missing/throwing APIs safe (0.193658ms)
+✔ one swappable cast map covers every character/pose and every file is local (1.310347ms)
+✔ v6 flat zone values exactly match the approved supplied notes palette (1.632317ms)
+✖ all active v5 starter sprites are precached for offline use (8.031291ms)
+✔ v2 gentle generator repeats puzzle and proof from the same seed (37.650632ms)
+✔ all 754 region maps, including both daily banks, are connected (21.136521ms)
+✔ running BUILD label and automatic SW have one generated digest; old-cache affinity is persisted (2.505058ms)
+✔ initial activation announces the running build but never reloads (0.349667ms)
+✔ automatic controller change saves and reloads once on map, duplicate events do not loop (0.403706ms)
+✔ active pond saves immediately, defers and saves latest state on finish/map before its one reload (0.298215ms)
+✔ failed storage blocks a safe reload instead of discarding progress (0.179619ms)
+✔ launch, visible and focus checks share one-minute throttle; hidden never checks (0.23335ms)
+✔ unchanged, offline and rejected update checks never reload or retry-loop (0.40201ms)
+✖ Updated to running version is shown once per changed build, never fresh install or repeated reload (0.900186ms)
+✖ first legacy-progress jump gets its one v4 notification, corrupt/unavailable tracking is safe (0.248933ms)
+✖ completed v4 batch has a prepared LOCAL cache, shipped v3 stays frozen, accidental rebuilds guarded (3.883174ms)
+✔ v3.1 preview removes baked steam only, starter cutout PNGs are byte-identical to shipped v3 (30.114515ms)
+✔ music is enabled quietly by default, its own persisted toggle survives existing v3 records (10.961556ms)
+✔ music never allocates or plays before a genuine user gesture; synthetic gestures ignored (0.70078ms)
+✔ music pauses immediately hidden, resumes only after activation, loops one track and supports explicit mute (0.428862ms)
+✔ music fades at a low fixed volume; toggle off fades then pauses (1150.805425ms)
+✔ older Safari chooses MP3; a decoder failure falls back once; rejected autoplay remains silent (0.664579ms)
+✔ one independently verified CC0 arrangement have both formats, complete decode checks and ≤5 MB total (5.088211ms)
+✔ board caps target identical 52px cells; 360px 7×7 retains >44px touch targets; concurrent launches use v1 timing (0.255055ms)
+✔ B is the single-config default: constant reference width across grids, both modes preserve ≥44px targets (0.545766ms)
+✔ v4 boss landmarks only next after ALL previous ponds, beaten remains beaten (0.935823ms)
+✔ v4 map coordinates reproduce approved source, all 30 nodes, pictograms without Hint (2.775836ms)
+✔ tutorial has safe actual-player targets; no fake persisted moves; gates each action (0.551252ms)
+✔ tutorialSeen safe optional-field v3/v3.1 migration: completed players not nagged, fresh first run taught (10.324145ms)
+✔ one per-capy power-icon map feeds all icon and first-use toast slots, local files and safe text (0.348243ms)
+✔ approved v6.1 phrases, colors, icons and faces are exact local source assets (10.843723ms)
+✔ first-use persistence is per companion/effective power, never a resource refill; legacy defaults unseen (0.388173ms)
+✔ first-use card uses canonical identity, player-confirmed use / dismiss controls, no automatic placement or Hint (0.306819ms)
+✔ approved v6.2 illustrated board, counter and Peek share one embedded unchanged source asset; celebration art untouched (6.059906ms)
+✔ all legacy mode preferences are dropped, only old no-lives partial attempts reset; progress and native flags retained (1.131146ms)
+✔ canonical spring next upgrade uses existing names and bosses, disappears at three clears (0.214087ms)
+✔ actual v1/v2 no-lives migration drops legacy partial attempts but keeps earned progress and date streak (0.926227ms)
+✔ v6.3 uses exact source centers,120px boss SVG bodies, dark/next/gold assets with no remote links (23.712058ms)
+✔ all Bloom bodies,face,preview and density files use approved v6.4; no obsolete runtime reference or precache alias (7.980137ms)
+✔ approved chooser and switch CSS is not swallowed by a dangling comment (0.276221ms)
+✔ Pond 1: each true capy locks, cannot clear/mark/remove, and wrong first placement remains provisional (2.902024ms)
+✔ Pond 2: each true capy locks, cannot clear/mark/remove, and wrong first placement remains provisional (0.905036ms)
+✔ Pond 3: each true capy locks, cannot clear/mark/remove, and wrong first placement remains provisional (0.742441ms)
+✔ Pond 4: each true capy locks, cannot clear/mark/remove, and wrong first placement remains provisional (0.915616ms)
+✔ Pond 6: each true capy locks, cannot clear/mark/remove, and wrong first placement remains provisional (0.896021ms)
+✔ Pond 7: each true capy locks, cannot clear/mark/remove, and wrong first placement remains provisional (1.007808ms)
+✔ Pond 8: each true capy locks, cannot clear/mark/remove, and wrong first placement remains provisional (6.76081ms)
+✔ Pond 9: each true capy locks, cannot clear/mark/remove, and wrong first placement remains provisional (0.244616ms)
+✔ Pond 11: each true capy locks, cannot clear/mark/remove, and wrong first placement remains provisional (0.71143ms)
+✔ Pond 12: each true capy locks, cannot clear/mark/remove, and wrong first placement remains provisional (4.189257ms)
+✔ Pond 13: each true capy locks, cannot clear/mark/remove, and wrong first placement remains provisional (5.09654ms)
+✔ Pond 14: each true capy locks, cannot clear/mark/remove, and wrong first placement remains provisional (1.022453ms)
+✔ Pond 16: each true capy locks, cannot clear/mark/remove, and wrong first placement remains provisional (2.566147ms)
+✔ Pond 17: each true capy locks, cannot clear/mark/remove, and wrong first placement remains provisional (3.635961ms)
+✔ Pond 18: each true capy locks, cannot clear/mark/remove, and wrong first placement remains provisional (0.282424ms)
+✔ Pond 19: each true capy locks, cannot clear/mark/remove, and wrong first placement remains provisional (0.445843ms)
+✔ Pond 21: each true capy locks, cannot clear/mark/remove, and wrong first placement remains provisional (0.395847ms)
+✔ Pond 22: each true capy locks, cannot clear/mark/remove, and wrong first placement remains provisional (0.577703ms)
+✔ Pond 23: each true capy locks, cannot clear/mark/remove, and wrong first placement remains provisional (0.82237ms)
+✔ Pond 24: each true capy locks, cannot clear/mark/remove, and wrong first placement remains provisional (1.45826ms)
+✔ Pond 26: each true capy locks, cannot clear/mark/remove, and wrong first placement remains provisional (0.254407ms)
+✔ Pond 27: each true capy locks, cannot clear/mark/remove, and wrong first placement remains provisional (0.311376ms)
+✔ Pond 28: each true capy locks, cannot clear/mark/remove, and wrong first placement remains provisional (0.490119ms)
+✔ Pond 29: each true capy locks, cannot clear/mark/remove, and wrong first placement remains provisional (0.209641ms)
+✔ Undo protects every confirmed lock, skips lock-only history, preserves other edits and spent resources (0.325471ms)
+✔ locked bump is a no-op for Nap charges, oranges, metrics and activation; Peek excludes locks (0.282395ms)
+✔ v4.3 rev b: a wrong capy is rejected at once (orange, mistake, lastMistake, cell unchanged); the correct capy then locks for free; Second chance restores only the orange (0.142649ms)
+✔ v4.3 rev b: after a rejected wrong capy nothing is left to clear (Clear conflicts helper is a no-op) and Bloom keeps locks (0.124205ms)
+✔ old v4 partials gain validated locks on load; malicious saved lock IDs never lock wrong cells; reload/retry semantics (9.726113ms)
+✔ v4 level18 migration preserves all earned lilies, gold, spring progress, identity and streak; only changed partial boards drop (1.276815ms)
+✔ haptics: one frozen config in config.js; every case stronger than v4; correct vs mistake clearly different; switchable; iOS-safe (0.789814ms)
+✔ v4.3 difficulty audit: every logic pond matches the pick report; no guessing; worlds rise and post-gate breathers dip; boss 29 is the hardest (31.636301ms)
+✔ difficulty classification really identifies pointing/claiming from trace premises, never a hidden solution (13.693648ms)
+✔ v4.3: six crate ponds (5/10/15/20/25/30) ramping by size and by optimal moves/pushes; pond 10 = Crate Cove 3 (4.081369ms)
+✔ every level is re-verified by the Designer's solver.py and by the app's own BFS (same optimum, replayable) (4930.839031ms)
+✔ Sokoban rules: walk, push one crate, never two, never into rocks or the frame; landing flags only on a fruit (0.329511ms)
+✔ tap to walk finds a shortest path that never pushes; unreachable or blocked targets return null (0.771235ms)
+✔ deadlock detector is SOUND on every reachable state of all six crate ponds (no false 'Undo?'), and catches a corner (18850.226327ms)
+✔ spare orange: absorbs the first lost orange, mistake still counts (no 0-mistakes lily), undo never refunds (1.526011ms)
+✔ reward bookkeeping: next pond only, never stacks, other ponds/Daily leave it waiting; legacy bonus record gives no lilies (0.242656ms)
+✔ saves: v4.1 save (no bonus) loads with bonus defaults (v4.3: layout-migrated once); v4.3 bonus round-trips; garbage bounded (10.48748ms)
+✔ rollback: the frozen v4.1 and v4.2.1 code read a v4.3 save without losing completions or lilies (12.819997ms)
+✔ haptics: crate patterns live in the one shared HAPTIC_CONFIG and are distinct from correct/mistake/solve (0.556164ms)
+✖ v4.3 build: new cache name, every crate file precached, crate art is valid standalone SVG (1.12983ms)
+✔ v4.3 roles: crate 5/10/15/20/25/30, gates 10/20/30, bosses 9/19/29, breathers 11/21 (1.811922ms)
+✔ v4.3 levels.json: 24 logic ponds on the PLAN ramp, all no-guess + unique, boss 29 10×10 near 1000 (37.554172ms)
+✔ v4.3 Daily pools: 365 + 365 at 7×7/8×8, rocks only in the eligible pool, all no-guess + unique (12.68322ms)
+✔ v4.3 crate ramp (Designer-reviewed): 6 ponds keyed 5..30, sizes 7/6/7/7/8/8, one par rule, stored solutions solve (1.370735ms)
+✔ v4.3 crate lilies: Packed / Clean run / Par; Show me gives Packed only; never removes a lily (0.558504ms)
+✔ v4.3 spare orange: only from Par, for the next pond, never stacks, none from the finale (0.435004ms)
+✔ v4.3 golden lily: pure boss solve on 9/19/29 only (0.988819ms)
+✔ v4.3 lily targets for 8×8/9×9/10×10 (0.147704ms)
+✔ v4.3 migration from a v4.2.1 save: no lily lost, goldens 10/20/30 → 9/19/29, crate solves carry, sessions dropped once (15.165183ms)
+✔ v4.3 migration from a v4.2 save: no lily lost, goldens 10/20/30 → 9/19/29, crate solves carry, sessions dropped once (1.033286ms)
+✔ v4.3 migration from a v4.1 save: no lily lost, goldens 10/20/30 → 9/19/29, crate solves carry, sessions dropped once (0.934808ms)
+✔ v4.3 migration: Crate Cove 3/5 solves clear gate ponds 10/20 for a mid-game player (Par only when best ≤ par) (0.814108ms)
+✔ v4.3 migration: a golden lily on 10 also marks boss 9 cleared when it was not (0.307895ms)
+✔ v4.3 migration: fresh v4.3 saves are layout 2 and untouched; layout-2 goldens survive sanitize (0.231141ms)
+✔ v4.3 migration: 10×10 / 9×9 / 8×8 sessions survive sanitize and resume when the board matches (1.287214ms)
+✔ v4.3 migration fuzz: 400 random v4.1/v4.2 saves — no lily lost, golden count kept, idempotent (75.440807ms)
+✖ v4.3 build labels (0.856742ms)
+✔ Designer v4.3 check: zone colours 8–10, open-square zone-8 pattern, 10×10 ≥33 px at 360 (2.417214ms)
+✔ v4.2 pond 23: the reported position really was a dead end under the old rule (orange zone 6 has no legal cell) (1.653808ms)
+✔ v4.2 pond 23 replayed under the new rule: both wrong capys are rejected at once, and the pond stays solvable (0.718754ms)
+✔ an old save holding the pond 23 dead end is repaired on resume (wrong capys dropped, oranges/mistakes untouched) (0.235282ms)
+✔ property: no sequence of moves on any v4.3 pond or Daily Pond can leave a wrong capy or a dead-end zone (396.46044ms)
+✔ orange accounting: wrong capy costs 1 (spare absorbs it first, Nap prevents it), correct capy costs 0, all wrong capys count as mistakes (0.367724ms)
+✔ powers: Peek still points at a solution cell; Nap makes wrong capys free but counted and spends a charge; Second chance restores the orange only (5.860711ms)
+✔ lilies: any wrong capy (even under Nap or absorbed by the spare) loses the No-mistakes lily; Golden lily still only requires no power use (1.028118ms)
+✔ move(): a correct capy never costs an orange, even next to nothing; X and clear are free (0.439964ms)
+✔ Undo never rebuilds a board where an unlocked capy touches a later-locked capy (pond 1, orthogonal) (2.625962ms)
+✔ Undo never rebuilds a board where an unlocked capy touches a later-locked capy (pond 9, orthogonal) (0.868985ms)
+✔ Undo never rebuilds a board where an unlocked capy touches a later-locked capy (pond 21, orthogonal) (0.534974ms)
+✔ Undo never rebuilds a board where an unlocked capy touches a later-locked capy (pond 29, orthogonal) (0.388414ms)
+✔ Undo never rebuilds a board where an unlocked capy touches a later-locked capy (pond 1, diagonal) (0.171467ms)
+✔ Undo never rebuilds a board where an unlocked capy touches a later-locked capy (pond 9, diagonal) (0.144168ms)
+✔ Undo never rebuilds a board where an unlocked capy touches a later-locked capy (pond 21, diagonal) (0.182385ms)
+✔ Undo never rebuilds a board where an unlocked capy touches a later-locked capy (pond 29, diagonal) (0.191494ms)
+✔ Second chance then Undo does not bring the cleared clashing capy back next to the locked one (0.492726ms)
+✔ v4.3 rev b: a rejected capy leaves no Undo step; Undo walks back marks only and never refunds (0.440096ms)
+✔ fuzz: 6000 random games (place/clear/mark/undo/Clear conflicts/powers) never create an uncharged new touching pair (1193.966773ms)
+✔ Undo fuzz specifically: a restored board never pairs an unlocked capy with a lock the snapshot did not have (108.599725ms)
+✔ haptics v4.3: every pattern a clear step stronger than v4.2 (>=1.4x buzz time), shapes kept, still distinct and throttle-safe (0.58546ms)
+ℹ tests 181
+ℹ suites 0
+ℹ pass 175
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 23992.506209
+
+✖ failing tests:
+
+test at tests/unit.test.js:46:1
+✖ all active v5 starter sprites are precached for offline use (8.031291ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(precache.cache.startsWith('capydoku-v4.3-'))
+  
+      at TestContext.<anonymous> (file:///workspace/capydoku/app/tests/unit.test.js:46:308)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/updates.test.js:10:1
+✖ Updated to running version is shown once per changed build, never fresh install or repeated reload (0.900186ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'Updated to v4.3.1'
+  - 'Updated to v4.3'
+                    ^
+  
+      at TestContext.<anonymous> (file:///workspace/capydoku/app/tests/updates.test.js:10:266)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Updated to v4.3.1',
+    expected: 'Updated to v4.3',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/updates.test.js:11:1
+✖ first legacy-progress jump gets its one v4 notification, corrupt/unavailable tracking is safe (0.248933ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'Updated to v4.3.1'
+  - 'Updated to v4.3'
+                    ^
+  
+      at TestContext.<anonymous> (file:///workspace/capydoku/app/tests/updates.test.js:11:179)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Updated to v4.3.1',
+    expected: 'Updated to v4.3',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/v31.test.js:3:1
+✖ completed v4 batch has a prepared LOCAL cache, shipped v3 stays frozen, accidental rebuilds guarded (3.883174ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /^capydoku-v4\.3-/. Input:
+  
+  'capydoku-v4.3.1-6bc138e4dee2'
+  
+      at TestContext.<anonymous> (file:///workspace/capydoku/app/tests/v31.test.js:3:759)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'capydoku-v4.3.1-6bc138e4dee2',
+    expected: /^capydoku-v4\.3-/,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/v42.test.js:184:1
+✖ v4.3 build: new cache name, every crate file precached, crate art is valid standalone SVG (1.12983ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  '4.3.1' !== '4.3'
+  
+      at TestContext.<anonymous> (file:///workspace/capydoku/app/tests/v42.test.js:186:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '4.3.1',
+    expected: '4.3',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/v43-build.test.js:233:1
+✖ v4.3 build labels (0.856742ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  '4.3.1' !== '4.3'
+  
+      at TestContext.<anonymous> (file:///workspace/capydoku/app/tests/v43-build.test.js:234:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '4.3.1',
+    expected: '4.3',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+EXIT 1

@@ -1,0 +1,18 @@
+{
+  "timezone": "America/New_York (EST)",
+  "backups": [
+    {
+      "snapshot": "/workspace/capydoku/app-v1-backup",
+      "checked_files": 74,
+      "mismatches": [],
+      "all_original_hashes_match": true
+    },
+    {
+      "snapshot": "/workspace/capydoku/app-v2-backup",
+      "checked_files": 226,
+      "mismatches": [],
+      "all_original_hashes_match": true
+    }
+  ],
+  "scope": "All originally snapshotted non-node_modules files"
+}

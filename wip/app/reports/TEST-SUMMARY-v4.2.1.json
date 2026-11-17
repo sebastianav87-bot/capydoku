@@ -1,0 +1,12 @@
+{
+ "version": "4.2.1 (v4.3 phase 1: items 3+4 only)",
+ "cache": "capydoku-v4.2.1-bc0fb084a94b",
+ "published": false,
+ "built_on": {"live": "v4.2 commit c202415, cache capydoku-v4.2-3c7ece12bb6d", "backup": "/workspace/capydoku/app-v4.2-backup (106/106 files byte-identical to capydoku-v4.2-runtime.tar.gz)"},
+ "runtime_tar": {"path": "/workspace/capydoku/capydoku-v4.2.1-runtime.tar.gz", "files": 106, "sha256": "caf263f040fb75936454ecda94e7bb508cb4a91a3f1be08f28bb42c6b71a6c06"},
+ "unit": {"tests": 162, "passed": 162, "failed": 0, "new": 14, "log": "reports/v4.3/unit.log"},
+ "unit_new_against_v4.2": {"tests": 14, "failed_on_v4.2": 12},
+ "e2e_new": {"spec": "tests/v43.spec.js", "tests": 18, "passed": 18, "log": "reports/v4.3/e2e-v43-dev.log", "against_v4.2_at_412": "8 of 9 fail (the 'real double-tap still works' control passes)", "against_log": "reports/v4.3/e2e-v43-against-v4.2.log"},
+ "e2e_full": {"tests": 340, "first_run": {"passed": 333, "failed": 7, "log": "reports/v4.3/e2e-full.log"}, "failures": "6 = stale 'v4.2 · build' label literals (tests fixed during the run); 1 = v31-extension flight timing under CPU load (known flaky in v4.2)", "rerun_of_failed": {"tests": 12, "passed": 12, "log": "reports/v4.3/e2e-rerun-failed.log"}, "result": "340/340 after rerun"},
+ "screenshots": ["reports/screenshots-v4.3/undo-no-phantom.png", "reports/screenshots-v4.3/locked-conflict-ring.png", "reports/screenshots-v4.3/360x780/", "reports/screenshots-v4.3/regression/ (152)"]
+}

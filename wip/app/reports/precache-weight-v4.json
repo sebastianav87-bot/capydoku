@@ -1,0 +1,57 @@
+{
+  "cache": "capydoku-v4-9d6ebe4d0481",
+  "urls": 91,
+  "unique_files": 90,
+  "raw_bytes": 13689567,
+  "music_bytes": 4186008,
+  "top_files": [
+    {
+      "path": "assets/music/northumberland.mp3",
+      "bytes": 2500797
+    },
+    {
+      "path": "assets/music/northumberland.ogg",
+      "bytes": 1685211
+    },
+    {
+      "path": "assets/starters/remy.png",
+      "bytes": 891412
+    },
+    {
+      "path": "assets/starters/jun.png",
+      "bytes": 800601
+    },
+    {
+      "path": "assets/v64/starters/bloom.png",
+      "bytes": 703442
+    },
+    {
+      "path": "assets/v6/map-painted.jpg",
+      "bytes": 630695
+    },
+    {
+      "path": "assets/starters/doze.png",
+      "bytes": 436794
+    },
+    {
+      "path": "assets/v6/hotspring.jpg",
+      "bytes": 431870
+    },
+    {
+      "path": "assets/map-bg.jpg",
+      "bytes": 303981
+    },
+    {
+      "path": "assets/hotspring-bg.jpg",
+      "bytes": 286971
+    },
+    {
+      "path": "assets/v63/boss-cave-beaten.svg",
+      "bytes": 247059
+    },
+    {
+      "path": "assets/v63/boss-waterfall-beaten.svg",
+      "bytes": 243421
+    }
+  ]
+}

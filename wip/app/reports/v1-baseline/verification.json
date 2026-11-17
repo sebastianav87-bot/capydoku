@@ -1,0 +1,6617 @@
+{
+  "schema": 1,
+  "generated_at": "2026-11-09T17:58:00.160335-05:00",
+  "deduction_set": {
+    "house-single": "The sole candidate in a row, column or zone is forced; remove all its row/column/zone/king-neighbor peers.",
+    "shared-conflict": "A house must contain one capy. A cell conflicting with EVERY remaining candidate of that house is impossible. Includes locked row/zone intersections and common adjacency exclusion. No branching, no search, no solution lookup."
+  },
+  "independent_oracle": "Enumerates ALL column permutations; independently checks adjacent rows, zones and rocks. Generation and logic trace do not constrain this enumeration. Runtime JS backtracker cross-checks all 395 boards in unit tests.",
+  "mockup_independent": {
+    "solution_count": 1,
+    "agrees_with_original": true,
+    "logic_solvable": false
+  },
+  "levels": [
+    {
+      "id": "pond-01",
+      "size": 5,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 7,
+      "shared_conflict_steps": 2,
+      "attempts": 119,
+      "puzzle_sha256": "1388cc747cf86246c569092eeca59fd75e35ed07875dd970e4e0a3e59b5d85b9"
+    },
+    {
+      "id": "pond-02",
+      "size": 5,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 7,
+      "shared_conflict_steps": 2,
+      "attempts": 37,
+      "puzzle_sha256": "e3895d3905e3605f66b11cd9eb9dbf3929d864639d8c756d0c6b203966d726c4"
+    },
+    {
+      "id": "pond-03",
+      "size": 5,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 10,
+      "shared_conflict_steps": 5,
+      "attempts": 88,
+      "puzzle_sha256": "6e87d8ad71b1f2dd2522d30cf674e57bcccae37a0d4f147841fa62def25c7f4c"
+    },
+    {
+      "id": "pond-04",
+      "size": 5,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 6,
+      "attempts": 24,
+      "puzzle_sha256": "a8842ae19e86f30c951911fe930c6c2a8a726f546b8a6c267a5f4b5c7654bd5e"
+    },
+    {
+      "id": "pond-05",
+      "size": 5,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 6,
+      "attempts": 726,
+      "puzzle_sha256": "6a343e174170e7cdb98043eb19d68641dd81d99f38dd5a5388998cd1ecde9f97"
+    },
+    {
+      "id": "pond-06",
+      "size": 5,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 6,
+      "attempts": 261,
+      "puzzle_sha256": "12945279ea5586477f890071281323ce29a4e2a47ebe89abc4a5bce7486a3727"
+    },
+    {
+      "id": "pond-07",
+      "size": 5,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 7,
+      "attempts": 102,
+      "puzzle_sha256": "10a07a9fadb64bd968b195e2d558564702641fd495346c833e16cb7b85d34c24"
+    },
+    {
+      "id": "pond-08",
+      "size": 5,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 7,
+      "attempts": 410,
+      "puzzle_sha256": "d3da6de3762cd15e2a308ac971822e9f59745bf761673a96a03c55fb22862bb9"
+    },
+    {
+      "id": "pond-09",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 9,
+      "shared_conflict_steps": 3,
+      "attempts": 1231,
+      "puzzle_sha256": "debc76f2d4674f58cbe6ac08c1d8db7fa63303d32e3a2b4c4c890ab462a19878"
+    },
+    {
+      "id": "pond-10",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 9,
+      "shared_conflict_steps": 3,
+      "attempts": 653,
+      "puzzle_sha256": "44c50839eabce00d9032f85d82092f4425c1818dbc0856be610414125335550c"
+    },
+    {
+      "id": "pond-11",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 10,
+      "shared_conflict_steps": 4,
+      "attempts": 119,
+      "puzzle_sha256": "43d98853b59a1faf9c22bb49e8337f1fd5754326ee2fe0d9b9a30b90d69481ba"
+    },
+    {
+      "id": "pond-12",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 10,
+      "shared_conflict_steps": 4,
+      "attempts": 71,
+      "puzzle_sha256": "7fbf921a3539b1fcedfb3253b2e4c9d10ba29d208c8282c2b355ce716afc6271"
+    },
+    {
+      "id": "pond-13",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 102,
+      "puzzle_sha256": "4363cce315856733970dfb574e141c10f47598da6a703b1d34f8411c0760f881"
+    },
+    {
+      "id": "pond-14",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 899,
+      "puzzle_sha256": "6521ef1151d242bc3944d9e37bdcd988a2b2595da92fb07e8ae949a95f05c309"
+    },
+    {
+      "id": "pond-15",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 1731,
+      "puzzle_sha256": "8c4461546e2691a35d00ff4f913fbc352116fd6b92078732ef72e5589a12e059"
+    },
+    {
+      "id": "pond-16",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 2043,
+      "puzzle_sha256": "c440e4dc939949b7525029ff61e238dd167fcdbd39473dfae722b8d64b1f988c"
+    },
+    {
+      "id": "pond-17",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 2897,
+      "puzzle_sha256": "1cf95ac6ef260ef8d29509fc6fb63200263a1787cea512ee9e3ef000bb684a7f"
+    },
+    {
+      "id": "pond-18",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 9,
+      "attempts": 140,
+      "puzzle_sha256": "2ab3b15f5f4ff08a970e5370b30b88d0deb58d9e8bd111e6b2da701b144b2dfb"
+    },
+    {
+      "id": "pond-19",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 9,
+      "attempts": 473,
+      "puzzle_sha256": "633ee2af9ef2d7635543c5c50dd5e4cf89e741238d0be06595ee201a34b8487c"
+    },
+    {
+      "id": "pond-20",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 9,
+      "attempts": 1690,
+      "puzzle_sha256": "646a40a7ee1fd3e9bbf0347682a0de66c821410ae0c7aa059eff33fd76b0a59a"
+    },
+    {
+      "id": "pond-21",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        28
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 10,
+      "shared_conflict_steps": 3,
+      "attempts": 694,
+      "puzzle_sha256": "c25edec4fb8c7abde3ea6d9ef56664e4aadacc3b07134fe522a9fac4f043039e"
+    },
+    {
+      "id": "pond-22",
+      "size": 7,
+      "rocks": 3,
+      "rock_cells": [
+        14,
+        36,
+        38
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 5,
+      "attempts": 3463,
+      "puzzle_sha256": "969607a23aa70b9ef82d5bf8edbbec552db7cdbf0882913fef816c561410b2f0"
+    },
+    {
+      "id": "pond-23",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        37
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 6,
+      "attempts": 10461,
+      "puzzle_sha256": "292ae0451c01f26035f7ecb4abd70e08404e3faf376c748b1f35787fbcd2a640"
+    },
+    {
+      "id": "pond-24",
+      "size": 7,
+      "rocks": 2,
+      "rock_cells": [
+        13,
+        27
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 6,
+      "attempts": 381,
+      "puzzle_sha256": "68a25135d442759333457b661342d3b8a4656dce4394f4beed9cef461d3a8c62"
+    },
+    {
+      "id": "pond-25",
+      "size": 7,
+      "rocks": 2,
+      "rock_cells": [
+        21,
+        46
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 6,
+      "attempts": 180,
+      "puzzle_sha256": "2f58bc116fc217fbf2fdedbbbfed7aa74064540472505a01d55ffbe46f46e011"
+    },
+    {
+      "id": "pond-26",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        6
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 7,
+      "attempts": 27126,
+      "puzzle_sha256": "4fe38ac391ee90a8248535f70e0cd5e0f81ed815a2d47b03bf174b4b1e34b394"
+    },
+    {
+      "id": "pond-27",
+      "size": 7,
+      "rocks": 2,
+      "rock_cells": [
+        4,
+        38
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 8,
+      "attempts": 128,
+      "puzzle_sha256": "a8180df0bf0c6b923f24644d161a62ca645b61d32a4870a13bb7e769c26283dd"
+    },
+    {
+      "id": "pond-28",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        24
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 16,
+      "shared_conflict_steps": 9,
+      "attempts": 10709,
+      "puzzle_sha256": "9dd96fc6b10de38d3abf6075bc7da22e325515930cc83db84b3458a1aec05f74"
+    },
+    {
+      "id": "pond-29",
+      "size": 7,
+      "rocks": 2,
+      "rock_cells": [
+        22,
+        23
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 19,
+      "shared_conflict_steps": 12,
+      "attempts": 5036,
+      "puzzle_sha256": "f46d254accf70015dfb852c81e8ef044e741c7f96c2c87b333e71e2e127d1e72"
+    },
+    {
+      "id": "pond-30",
+      "size": 7,
+      "rocks": 3,
+      "rock_cells": [
+        13,
+        39,
+        45
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 19,
+      "shared_conflict_steps": 12,
+      "attempts": 1175,
+      "puzzle_sha256": "b5c9eaea2380cd0e2c4938404b4437321524ea899428b812b389c408723c3794"
+    }
+  ],
+  "daily_sample": [
+    {
+      "id": "2026-01-01",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        15
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 6,
+      "attempts": 12160,
+      "puzzle_sha256": "88adeae677386db75657e1682fa4be32e4359e789dcd5f2b6a10869b13a36197"
+    },
+    {
+      "id": "2026-01-02",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 9,
+      "attempts": 328,
+      "puzzle_sha256": "ed4187cd50290cbfdc91810f1a28724c9c1e1f3e14f1f88122a12eb9f282faa2"
+    },
+    {
+      "id": "2026-01-03",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 9,
+      "attempts": 2820,
+      "puzzle_sha256": "af5e5f2316db248eee76b26a4a57ef44c777dc6a84a720105a34f1588fa2e6f1"
+    },
+    {
+      "id": "2026-01-04",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        10
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 6,
+      "attempts": 5321,
+      "puzzle_sha256": "8495b2c8d2866039c7778c1ea1a9ed35bd76b5ad503d51d11462c4ca2355a880"
+    },
+    {
+      "id": "2026-01-05",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 10,
+      "shared_conflict_steps": 4,
+      "attempts": 157,
+      "puzzle_sha256": "d09f6bbd772e1c0f7f414a2fab6bc02875ea333416677b59bdab88dd31e8ec5a"
+    },
+    {
+      "id": "2026-01-06",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 8,
+      "attempts": 312,
+      "puzzle_sha256": "13d2ce47d2751ae2ae72f9e98f55326cbed62897eb9d593fee683062c9c33bc2"
+    },
+    {
+      "id": "2026-01-07",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        17
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 7,
+      "attempts": 6469,
+      "puzzle_sha256": "77203bfc743ed210a4cd51ec3ad8361b3cbf3b27c585b8a7096432247dddd79e"
+    },
+    {
+      "id": "2026-01-08",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 1376,
+      "puzzle_sha256": "1d0fca83f60b3c3391b6af60404b65e7468a72dd54b0ef1c98010a60662f343c"
+    },
+    {
+      "id": "2026-01-09",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 153,
+      "puzzle_sha256": "209c44f1e0764d2eaa62b8dd4d7fc1bd6666331789bfa25af2bc6e19a8d7389e"
+    },
+    {
+      "id": "2026-01-10",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        0
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 6,
+      "attempts": 9,
+      "puzzle_sha256": "234342aa8ea9efc90e7826c7cae99958f1a721b178d41f8cd6b9cce97817406b"
+    },
+    {
+      "id": "2026-01-11",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 9,
+      "shared_conflict_steps": 3,
+      "attempts": 1199,
+      "puzzle_sha256": "1f8dc30f85fb1bd59811937ea300456bc4ae853d3fd6735a2fdbbbd21465eda1"
+    },
+    {
+      "id": "2026-01-12",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 1206,
+      "puzzle_sha256": "9c6847e09d3d6ed8c7750d2e368164e4c7ed655798c3111cb44742c93588aece"
+    },
+    {
+      "id": "2026-01-13",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        41
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 18,
+      "shared_conflict_steps": 11,
+      "attempts": 10786,
+      "puzzle_sha256": "6bb0835e105e4d62b0c426e7a2eaa7c0ae81fabcd6e1111f1f8dd371bd820be2"
+    },
+    {
+      "id": "2026-01-14",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 8,
+      "attempts": 14,
+      "puzzle_sha256": "8631e1468fc7d240f0a52e9dce20a804ff879a33a798d0f1484fdf1030423bd1"
+    },
+    {
+      "id": "2026-01-15",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 8,
+      "shared_conflict_steps": 2,
+      "attempts": 951,
+      "puzzle_sha256": "c6e81eeb77463008181be648bc9108bae3beb043ec2dd15b8efcadac7e035204"
+    },
+    {
+      "id": "2026-01-16",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        0
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 6,
+      "attempts": 975,
+      "puzzle_sha256": "f857b03dc00d10b5a5bd972f4b8ab4b81480a2bc325d3b27b5c96afa50500447"
+    },
+    {
+      "id": "2026-01-17",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 8,
+      "attempts": 493,
+      "puzzle_sha256": "00845e43d49a7174e8c3982136e8d5809b5633b8064692cfdfda0d2b2c1a0870"
+    },
+    {
+      "id": "2026-01-18",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 9,
+      "shared_conflict_steps": 3,
+      "attempts": 1285,
+      "puzzle_sha256": "677fb19b2f677c484f533eea13a842eb2fd70ab10c1192ebd772cd6803bc0338"
+    },
+    {
+      "id": "2026-01-19",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        31
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 17,
+      "shared_conflict_steps": 10,
+      "attempts": 4682,
+      "puzzle_sha256": "1bf70b7a6d519655ffade8cdda2ea636c7dd5e13b49a70ef24cf28be01c90d16"
+    },
+    {
+      "id": "2026-01-20",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 277,
+      "puzzle_sha256": "54c5c09c8a00d0cf653889d9d1ff7dfe702abc1fc0d5f70c8cc012ae808d9011"
+    },
+    {
+      "id": "2026-01-21",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 295,
+      "puzzle_sha256": "bd1aa9b9c16dfe35f37a8a39b7bba8a73f033c1f6a45275fb5206828247e4d60"
+    },
+    {
+      "id": "2026-01-22",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        37
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 8,
+      "attempts": 4271,
+      "puzzle_sha256": "f5739baf47611f55e4969049dd77cb74d908f2b960fa138b1d76180831603f16"
+    },
+    {
+      "id": "2026-01-23",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 9,
+      "shared_conflict_steps": 3,
+      "attempts": 844,
+      "puzzle_sha256": "029201bb1e804a5f2ac614008d369c2c40154f438fca1e7f7285b79f58fe04e8"
+    },
+    {
+      "id": "2026-01-24",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 9,
+      "shared_conflict_steps": 3,
+      "attempts": 271,
+      "puzzle_sha256": "835e58bcb5b45416dc9173a57037fb0c332ba4819a3cde30cd77f18cb7e454f7"
+    },
+    {
+      "id": "2026-01-25",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        15
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 16,
+      "shared_conflict_steps": 9,
+      "attempts": 3422,
+      "puzzle_sha256": "7cd34441edd4ed73c3d6411bff473bc77bcdaf7a131b7a32cf8f20a1102631c0"
+    },
+    {
+      "id": "2026-01-26",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 5023,
+      "puzzle_sha256": "1e172b30cedb021a4debdce9cc9dab9ca559f8020371353e03178c30e8c5e5ca"
+    },
+    {
+      "id": "2026-01-27",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 1642,
+      "puzzle_sha256": "ad01173db5c9a735ac679ebacfd1efdbf9f333ee277352c0b5c3973fe5dab21d"
+    },
+    {
+      "id": "2026-01-28",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        20
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 6,
+      "attempts": 6808,
+      "puzzle_sha256": "735036f2e8e556bbb8b67ad244d8cad6c3e2a3654842ce51c6bfc3ede9b5b408"
+    },
+    {
+      "id": "2026-01-29",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 8,
+      "attempts": 30,
+      "puzzle_sha256": "9ecfc153d0f2d2551bbe559118d0ec4f30ac4ea717f0d03ceea2b24ea2b0c878"
+    },
+    {
+      "id": "2026-01-30",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 264,
+      "puzzle_sha256": "286e516767452d4dd70c120ae7ce88dabc161de543c948d2440ea85b56b56a8b"
+    },
+    {
+      "id": "2026-01-31",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        9
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 8,
+      "attempts": 5568,
+      "puzzle_sha256": "ea2b37b3436b81f960851540d72baec8cf5d85b6a5607b49f1d69204519a07b3"
+    },
+    {
+      "id": "2026-02-01",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 1792,
+      "puzzle_sha256": "0c1dcfda04a4c40c036084c88aba9938f3e9dd001675006685ac1cbb2c38233b"
+    },
+    {
+      "id": "2026-02-02",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 471,
+      "puzzle_sha256": "2f3231d0ecd00d159b72231391437f32610aa3d35d4ac4ecc2710a010b55ea03"
+    },
+    {
+      "id": "2026-02-03",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        40
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 18,
+      "shared_conflict_steps": 11,
+      "attempts": 7282,
+      "puzzle_sha256": "2806f8e3e301c7cbe3aba904264abfff8db3d596675d038a5d524aea8472de9b"
+    },
+    {
+      "id": "2026-02-04",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 8,
+      "attempts": 4721,
+      "puzzle_sha256": "6086cb1770fa76107073883c1c7662787d3332870ab83d7a0111d1895944a984"
+    },
+    {
+      "id": "2026-02-05",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 1829,
+      "puzzle_sha256": "0dbd4e76c36997bd2d4f1b39e053d56165f76725bb500ffad4386630089002fb"
+    },
+    {
+      "id": "2026-02-06",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        37
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 8,
+      "attempts": 15145,
+      "puzzle_sha256": "fffe5c45bdebc2be08d970412716b594dd020312326b1b5adff40599f5b16d13"
+    },
+    {
+      "id": "2026-02-07",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 17,
+      "shared_conflict_steps": 11,
+      "attempts": 185,
+      "puzzle_sha256": "a9c1effd7e66a84bd36dfbf66d0f8a7d0bc9a69c1b18ea5cc309f28cdb23189b"
+    },
+    {
+      "id": "2026-02-08",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 9,
+      "attempts": 99,
+      "puzzle_sha256": "bfc1069d02593c4cd95113d6acbf47a2052d5f7ac87fb636bb18b8fd5aeca142"
+    },
+    {
+      "id": "2026-02-09",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        47
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 18,
+      "shared_conflict_steps": 11,
+      "attempts": 11592,
+      "puzzle_sha256": "49e7e799c88e808c4d02ce8cadf50e5eb77449504c4fe306b27062ab97c92a1b"
+    },
+    {
+      "id": "2026-02-10",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 10,
+      "shared_conflict_steps": 4,
+      "attempts": 1711,
+      "puzzle_sha256": "b91b2aad2d6ac739484c932c2794bb2b0cea1bbff3d8dbee986fb2be6d153b40"
+    },
+    {
+      "id": "2026-02-11",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 1034,
+      "puzzle_sha256": "088445c9b07705734fcb005ff74dbd1c8644f418a66593474a66946e85614c43"
+    },
+    {
+      "id": "2026-02-12",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        42
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 4,
+      "attempts": 1479,
+      "puzzle_sha256": "57984421737325ef115539ba6810c618f40e490ff8fc67065fb22f0745503b92"
+    },
+    {
+      "id": "2026-02-13",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 2,
+      "puzzle_sha256": "c61cecdd13f3ff06f9c5d7ecf64e94dcb894075b0d3c1883560a25cad670a1a8"
+    },
+    {
+      "id": "2026-02-14",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 97,
+      "puzzle_sha256": "316fbfcc1f480ce5164786a6bfe5e68b1b1aa9dc63f82a0435a49e638ab7f57d"
+    },
+    {
+      "id": "2026-02-15",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        45
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 20,
+      "shared_conflict_steps": 13,
+      "attempts": 1937,
+      "puzzle_sha256": "a91582118c5faff87fd10935a9b2d0ec122f31d478132e37ae7e56b21308be08"
+    },
+    {
+      "id": "2026-02-16",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 686,
+      "puzzle_sha256": "f6829daf7e1fafdc3119de69b27ccf05d019dbcc27f435c864172541c7044a5c"
+    },
+    {
+      "id": "2026-02-17",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 8,
+      "attempts": 18,
+      "puzzle_sha256": "d6a1fcd6af94b98c910886f0592f0bfef8b6737df77f09dde48afa1d82b3958f"
+    },
+    {
+      "id": "2026-02-18",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        4
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 8,
+      "attempts": 16527,
+      "puzzle_sha256": "f4a468ef3127d54ae2c96c39b6668313d5175b0f9de75965b1c4793af9a8b65e"
+    },
+    {
+      "id": "2026-02-19",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 2308,
+      "puzzle_sha256": "0810b958ebc1e5929b199cf22104299c9af4479faf1cf2e2d3165fa0d10e6ea6"
+    },
+    {
+      "id": "2026-02-20",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 380,
+      "puzzle_sha256": "91062adfd213ebff5a1532284ebd09801f67a3616ad3e8cd9dad529f1556b4a2"
+    },
+    {
+      "id": "2026-02-21",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        8
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 17,
+      "shared_conflict_steps": 10,
+      "attempts": 13412,
+      "puzzle_sha256": "e0c9c4f6bdaaa24974d5c723fafe7302bd1428ad48c41924b2b0f94ba4de801d"
+    },
+    {
+      "id": "2026-02-22",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 17,
+      "shared_conflict_steps": 11,
+      "attempts": 8,
+      "puzzle_sha256": "25b46745b63e37d39860d03e1554b800e4f0b0f84b647b0879b238b514c9f9d2"
+    },
+    {
+      "id": "2026-02-23",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 9,
+      "attempts": 5244,
+      "puzzle_sha256": "b896e40bbb918884d1c645c484f37b6b4b1b27e9146f75417c78271f36c40ec2"
+    },
+    {
+      "id": "2026-02-24",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        11
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 16,
+      "shared_conflict_steps": 9,
+      "attempts": 26629,
+      "puzzle_sha256": "d8aaae173b1fe4712b15f120c40523cd24e920d6701ca56656befd93618cde16"
+    },
+    {
+      "id": "2026-02-25",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 1082,
+      "puzzle_sha256": "5a318a01971d4c52e617adfb851dc6ff7e59988bf45c0bb7ba1d56ec5caa841a"
+    },
+    {
+      "id": "2026-02-26",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 131,
+      "puzzle_sha256": "34bb159c8abe4140e627eaa7aedfe91f44d4e076c4519d01fc2e151203469358"
+    },
+    {
+      "id": "2026-02-27",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        28
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 18,
+      "shared_conflict_steps": 11,
+      "attempts": 187,
+      "puzzle_sha256": "ad0704e9f82b9efb0439cbcdb0db7ffffee63ad2c46dd7645ca92379aa65beaf"
+    },
+    {
+      "id": "2026-02-28",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 10,
+      "shared_conflict_steps": 4,
+      "attempts": 123,
+      "puzzle_sha256": "d5859964c078080bbdb28266fa45efed988049416d78c82c10d8001ba77d269f"
+    },
+    {
+      "id": "2026-03-01",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 1170,
+      "puzzle_sha256": "a6e437f39914f1b748840d09a1bb2b134242092ec8ceaa9e844a8cac3da49d9a"
+    },
+    {
+      "id": "2026-03-02",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        35
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 8,
+      "attempts": 10250,
+      "puzzle_sha256": "18950587a892e6d0ac4a5f8e96bcf85a9c0b83a5a5bf2085530df30d6235b561"
+    },
+    {
+      "id": "2026-03-03",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 679,
+      "puzzle_sha256": "d2c52da80a4518de007b1e120f069d46daf46addd9967e80fea53285be656fd5"
+    },
+    {
+      "id": "2026-03-04",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 451,
+      "puzzle_sha256": "538b2ea96049fa05cd812af55920b8409ae0554b880f20043804533cd218c0bd"
+    },
+    {
+      "id": "2026-03-05",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        20
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 6,
+      "attempts": 18391,
+      "puzzle_sha256": "99bc2aa5c75fbb41a401aeccd1bae80b2b2df06f6f48f534105238dad4ad00c9"
+    },
+    {
+      "id": "2026-03-06",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 351,
+      "puzzle_sha256": "64279fda2c2a4552c3c98a3f80c7e1dcfc459fd4295b4b41835c2ca0e9d787a7"
+    },
+    {
+      "id": "2026-03-07",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 1839,
+      "puzzle_sha256": "90d78f4b4ee02f6aff14dc7407955d79f4474b1e958d98adf284eb703e4423d0"
+    },
+    {
+      "id": "2026-03-08",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        41
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 5,
+      "attempts": 2594,
+      "puzzle_sha256": "c84c9685fb64bce9c0e013fae86925ddae85aaf802a0b1e1fb2ee2d2f455d747"
+    },
+    {
+      "id": "2026-03-09",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 8,
+      "attempts": 2126,
+      "puzzle_sha256": "3fcf329e3c7443a4f247e51ac30bab513389284735ab3a3806332e8a61bbcb7c"
+    },
+    {
+      "id": "2026-03-10",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 951,
+      "puzzle_sha256": "3cb404f86c08142d61e6367c3879b2eab046a277e9b3c26f3c4207c43a9bdc46"
+    },
+    {
+      "id": "2026-03-11",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        13
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 4,
+      "attempts": 1404,
+      "puzzle_sha256": "1aa45f1dc476c527c6303f55e6631236273f77882e0f09e05539743d14ee5019"
+    },
+    {
+      "id": "2026-03-12",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 3629,
+      "puzzle_sha256": "edd73a70ceee5abda2c7e070a7add26453f5f1194ab494f79e3a230cff7b80cf"
+    },
+    {
+      "id": "2026-03-13",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 10,
+      "shared_conflict_steps": 4,
+      "attempts": 1053,
+      "puzzle_sha256": "523e62f78ca86f2c9a49ccf0487574e64f297d773fd4d39571fa68ac0644845d"
+    },
+    {
+      "id": "2026-03-14",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        8
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 8,
+      "attempts": 7893,
+      "puzzle_sha256": "0a1e0ad410f80ab0a9559993574fc524e2ed352897830566ca30da38b4adbb6a"
+    },
+    {
+      "id": "2026-03-15",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 9,
+      "shared_conflict_steps": 3,
+      "attempts": 1095,
+      "puzzle_sha256": "66d8bccaca096ad570dfe12d6856f6f88ca1fa42acca6f78245e751e2106d47f"
+    },
+    {
+      "id": "2026-03-16",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 173,
+      "puzzle_sha256": "898b359426a2ac3df702a972bb515b7d7f106f46f24efe1e801667b2a0789a58"
+    },
+    {
+      "id": "2026-03-17",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        7
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 4,
+      "attempts": 3112,
+      "puzzle_sha256": "7eac83dcade573837b9fec05310a072b2c19d8f18950b37c7bdd4060219b4a36"
+    },
+    {
+      "id": "2026-03-18",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 10,
+      "shared_conflict_steps": 4,
+      "attempts": 114,
+      "puzzle_sha256": "5e3c056dc7199f76b1ab73f4faad6168d49916cd1b1f3b383ff1e2b59e041b17"
+    },
+    {
+      "id": "2026-03-19",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 183,
+      "puzzle_sha256": "773c74bfc471cfc817977593aa310c01219e9660f25f69c31077752cfbfb4e50"
+    },
+    {
+      "id": "2026-03-20",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        18
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 7,
+      "attempts": 9961,
+      "puzzle_sha256": "562fbfdff1c7af21632bd3df7fbe94dcdb3c87ef91998556a12da5fe688c8e97"
+    },
+    {
+      "id": "2026-03-21",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 9,
+      "attempts": 815,
+      "puzzle_sha256": "82cd392490d9fae5bfedc41ddf4e6cc8ce35c2fa88b1dca3ec3cbb1f9d44eeaf"
+    },
+    {
+      "id": "2026-03-22",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 18,
+      "shared_conflict_steps": 12,
+      "attempts": 880,
+      "puzzle_sha256": "b1048b84d49430adaca0776da50f96e4a510a0f2d87b762ea3e519c28827f8eb"
+    },
+    {
+      "id": "2026-03-23",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        13
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 7,
+      "attempts": 4560,
+      "puzzle_sha256": "92f06ab7dd227394178bd62649d0d7d6a0d94beb55b654fe81f0d6a1d2a248b4"
+    },
+    {
+      "id": "2026-03-24",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 8,
+      "attempts": 1244,
+      "puzzle_sha256": "c349331d7e946c3a8394cda0b4e651f6fec78225e92b66b91ab4ca7853f11a71"
+    },
+    {
+      "id": "2026-03-25",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 10,
+      "shared_conflict_steps": 4,
+      "attempts": 668,
+      "puzzle_sha256": "6fc7850c80d7478135ed92d2ac1ab19e7312cc0c1234176a710f4d1d853b8197"
+    },
+    {
+      "id": "2026-03-26",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        19
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 7,
+      "attempts": 22621,
+      "puzzle_sha256": "db988503f48c8a2e49abadf57507c98829e51268c806aa428ca2a0b9b393536a"
+    },
+    {
+      "id": "2026-03-27",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 8,
+      "attempts": 938,
+      "puzzle_sha256": "59f8c3dc2cd76f549807a6eef09f9b2e9d7f2b93678eba39f83f94a39d907373"
+    },
+    {
+      "id": "2026-03-28",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 1614,
+      "puzzle_sha256": "1dd4902d9d5679eedc70c68e4d6e84b3e31a1d879fa1110d77eccb3eacb2520c"
+    },
+    {
+      "id": "2026-03-29",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        33
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 16,
+      "shared_conflict_steps": 9,
+      "attempts": 3405,
+      "puzzle_sha256": "2fbbd243b25b4b2d26d42380b65cbc529c7952bb65c730cf007907fa101b5c4c"
+    },
+    {
+      "id": "2026-03-30",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 9,
+      "shared_conflict_steps": 3,
+      "attempts": 1222,
+      "puzzle_sha256": "431f0066eda75631c179b833044bc81e7839de6524227dbfcd1d88e1f5adb285"
+    },
+    {
+      "id": "2026-03-31",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 1535,
+      "puzzle_sha256": "716d0c7f34957c1c78bdb965bc99e4668c4c956236103d23ade4db2c9767eb7f"
+    },
+    {
+      "id": "2026-04-01",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        2
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 16,
+      "shared_conflict_steps": 9,
+      "attempts": 1427,
+      "puzzle_sha256": "70cfcbb58e61d9a34ac3c80d66ec4647c849ab799ba12bd70e18dde14cc92a70"
+    },
+    {
+      "id": "2026-04-02",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 1116,
+      "puzzle_sha256": "70a931a78ae4b2015935e2047dd8ed03e2ec0ef7b6617946a791f458220a8e6e"
+    },
+    {
+      "id": "2026-04-03",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 17,
+      "shared_conflict_steps": 11,
+      "attempts": 126,
+      "puzzle_sha256": "6e29c348012e2bdbd8eddc305d4caa3f416831c629c7682b2f0cc36e5c7a431f"
+    },
+    {
+      "id": "2026-04-04",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        39
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 16,
+      "shared_conflict_steps": 9,
+      "attempts": 4235,
+      "puzzle_sha256": "ad2934d19e8532da060b52871ecc96a12b8af5552fb21421f1ed04b66124d5a5"
+    },
+    {
+      "id": "2026-04-05",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 252,
+      "puzzle_sha256": "844f650d39483af4836a33d192e02ac38767d26d801ae3c5c5a5dd7d4c87969b"
+    },
+    {
+      "id": "2026-04-06",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 9,
+      "attempts": 3804,
+      "puzzle_sha256": "9a1688c3b60bd2a51c9982d5e4bb9b9a322708c897e868fb1287eaf83f28a6c4"
+    },
+    {
+      "id": "2026-04-07",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        21
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 7,
+      "attempts": 2972,
+      "puzzle_sha256": "eafe7d286088f64b0ee86ac2b3e6041bde8b9f32f9fbf9542950ac438c69225b"
+    },
+    {
+      "id": "2026-04-08",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 505,
+      "puzzle_sha256": "d6bb18df3370d0ae3b1e06bd488ee55b5f085933b64061065d4ff68afd43c5a9"
+    },
+    {
+      "id": "2026-04-09",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 8,
+      "attempts": 721,
+      "puzzle_sha256": "815b2cfe98d81c5fbfb6f51279cc3ea5b95897f6b624e6b031fe6defcf4377b9"
+    },
+    {
+      "id": "2026-04-10",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        33
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 7,
+      "attempts": 5145,
+      "puzzle_sha256": "d1d4a4c4e441cf56a7f2cf47c53dbf797451d90f7f149fe0f14b3469704e0a20"
+    },
+    {
+      "id": "2026-04-11",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 273,
+      "puzzle_sha256": "11a92de54c5b5f478389beb1a7f6faf42b1d8d3b2a757dcf638f60c6705e1699"
+    },
+    {
+      "id": "2026-04-12",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 100,
+      "puzzle_sha256": "336adee74e1e6743e182b37315abbc48e900e90cf13fbacfe0ab15e128a757db"
+    },
+    {
+      "id": "2026-04-13",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        0
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 6,
+      "attempts": 834,
+      "puzzle_sha256": "1472a172ae5cb2e7d62056c19e5b03ee68ddd05af65e5aed517782c891e3da3e"
+    },
+    {
+      "id": "2026-04-14",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 9,
+      "shared_conflict_steps": 3,
+      "attempts": 420,
+      "puzzle_sha256": "215e635dcc63b5134d61fc67d83474ffac299ec7cd84d96283ad819e7dac5957"
+    },
+    {
+      "id": "2026-04-15",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 423,
+      "puzzle_sha256": "9506902e48f3a5333c7c2af1cdd7ec1487f0bae554aab7392836c50e9b5047e9"
+    },
+    {
+      "id": "2026-04-16",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        35
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 5,
+      "attempts": 7557,
+      "puzzle_sha256": "2aba92fd37efb1cc466d4c4c3dd34dc9b99c748166e82769e38acf835a715c9c"
+    },
+    {
+      "id": "2026-04-17",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 184,
+      "puzzle_sha256": "265ca01e5d1c675162f3a7ddd50b58399318e01c44d047bd94074be7d36b6c0a"
+    },
+    {
+      "id": "2026-04-18",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 953,
+      "puzzle_sha256": "725dde46af9ba04af54e0d1a065ce78de3c183133be1d74b2abc822a68ae5fd6"
+    },
+    {
+      "id": "2026-04-19",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        43
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 8,
+      "attempts": 383,
+      "puzzle_sha256": "3a4770d97d15f02021e8906a16e4fa79e45e69c8f0082cf4ec661fdcb0449db7"
+    },
+    {
+      "id": "2026-04-20",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 522,
+      "puzzle_sha256": "3c6bdacf9756c65907e8edde0cc8aec95ccb233dcc4b53d4431c67e1f7ba517c"
+    },
+    {
+      "id": "2026-04-21",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 1591,
+      "puzzle_sha256": "6959a12a2e5a17bd875dee0d7963ef924fd8d4fed0752dd66504a3efb228db4f"
+    },
+    {
+      "id": "2026-04-22",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        40
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 16,
+      "shared_conflict_steps": 9,
+      "attempts": 7978,
+      "puzzle_sha256": "196185cd8de1031e17e324be56dced96c76e7b0be2abb187191e81f9df9329e4"
+    },
+    {
+      "id": "2026-04-23",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 1033,
+      "puzzle_sha256": "839865b7dcf5024b58a50891394998a249b0e59fce741ef6fde8ce14ff338b98"
+    },
+    {
+      "id": "2026-04-24",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 9,
+      "attempts": 19,
+      "puzzle_sha256": "72353584380e65e0c81df10b9fda3718d13754613d60bfda9c4f53d1a7e93342"
+    },
+    {
+      "id": "2026-04-25",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        37
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 4,
+      "attempts": 1294,
+      "puzzle_sha256": "46d6b99b44c27b3602f0d067b5d1549c235e3e71a6f189d6e603bd605102b7b0"
+    },
+    {
+      "id": "2026-04-26",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 95,
+      "puzzle_sha256": "565c9c9e98b9cb354aed61b959dcf7f394f13271f6b7db9057f3d44567b15659"
+    },
+    {
+      "id": "2026-04-27",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 1018,
+      "puzzle_sha256": "bf6f927eb3c9f430a2d0cca34b68bdb8289729d69248c5ef7ace0ca7d8378155"
+    },
+    {
+      "id": "2026-04-28",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        22
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 17,
+      "shared_conflict_steps": 10,
+      "attempts": 2625,
+      "puzzle_sha256": "6e695ff4acba8e3035140ae2c8f1f7a76685edd9fa7f9c8ca8ec80165eb9ed32"
+    },
+    {
+      "id": "2026-04-29",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 3598,
+      "puzzle_sha256": "6e9231d5ed0c49d51e08e204a96847f7c1ed558523619bdc08fcec0b1e1f0f8e"
+    },
+    {
+      "id": "2026-04-30",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 523,
+      "puzzle_sha256": "27c7789d83df67f47fca18de62094316ed3938961b5dd5253843337f8474a0f6"
+    },
+    {
+      "id": "2026-05-01",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        3
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 5,
+      "attempts": 3417,
+      "puzzle_sha256": "df61e7e91cbd59d33b86462494e7ceeede0dbc7263ab0c5a2f827af425d79566"
+    },
+    {
+      "id": "2026-05-02",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 521,
+      "puzzle_sha256": "e104e58e456a8c62bd145879f90fc3f84dd91aecf24adac448ed7c84e5787d14"
+    },
+    {
+      "id": "2026-05-03",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 17,
+      "shared_conflict_steps": 11,
+      "attempts": 39,
+      "puzzle_sha256": "a3284f4f4e27741e8ade93407c971fd3a45a1e82d5a600ef15c4225edac899a4"
+    },
+    {
+      "id": "2026-05-04",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        48
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 6,
+      "attempts": 3028,
+      "puzzle_sha256": "0fbe3d05e8920bde738a98c31304912a15fd2a9d114f96041e3d311cdc74e4fa"
+    },
+    {
+      "id": "2026-05-05",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 926,
+      "puzzle_sha256": "f2e0430e298423b5f01a6061c27166158fc3ff6008c88ab1eea404aa7807c4e6"
+    },
+    {
+      "id": "2026-05-06",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 1230,
+      "puzzle_sha256": "eb4c030302ae47db72e1a47d771e62e4f17a2a2c8b4982b76733bb6daec5c8e0"
+    },
+    {
+      "id": "2026-05-07",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        1
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 5,
+      "attempts": 35653,
+      "puzzle_sha256": "0bbc184cfe8780dfbaf7d74070ec30084c62e9cf5204dd067b94efdd1c34ac1a"
+    },
+    {
+      "id": "2026-05-08",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 1455,
+      "puzzle_sha256": "ce02ee2e536f5ce2099695cf27a3a82b50cb456a8a6385c5502b36d49b7ae0f4"
+    },
+    {
+      "id": "2026-05-09",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 143,
+      "puzzle_sha256": "5dea51037947722afcdcad086c1ab0c153c02ffe2c445c70c53bdda02ce46b06"
+    },
+    {
+      "id": "2026-05-10",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        0
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 7,
+      "attempts": 151,
+      "puzzle_sha256": "6371e911af67c606f52ee482f2a8cfc61ccfaed79cb15228a7cfe7523ab8ba42"
+    },
+    {
+      "id": "2026-05-11",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 8,
+      "attempts": 601,
+      "puzzle_sha256": "00efe016d6a3c024398550a7c208c02827496ea472c474b05a06c7f221ee58be"
+    },
+    {
+      "id": "2026-05-12",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 10,
+      "shared_conflict_steps": 4,
+      "attempts": 2993,
+      "puzzle_sha256": "018d8835ba16279816afd469de25244fd5fdb0db0a9f12565ee94147fa19b0ce"
+    },
+    {
+      "id": "2026-05-13",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        28
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 7,
+      "attempts": 10121,
+      "puzzle_sha256": "619d7b70e65801644b2ef4b43b16a289d3409d3f657d9904456bae4c36f16398"
+    },
+    {
+      "id": "2026-05-14",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 16,
+      "shared_conflict_steps": 10,
+      "attempts": 554,
+      "puzzle_sha256": "417acbdbcef6f34d9cf1e594e941e56b78a6e3ec8ba23a94cf0ff4e715b324e8"
+    },
+    {
+      "id": "2026-05-15",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 351,
+      "puzzle_sha256": "5c0cb645422232d842dd67b21570078916d88179bebf34f86acfc9d3b74b612f"
+    },
+    {
+      "id": "2026-05-16",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        28
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 8,
+      "attempts": 8650,
+      "puzzle_sha256": "c0a29142a2e4beeb7344e1de7f290b4253b3037ef43aee0dc4c05996d650a5c5"
+    },
+    {
+      "id": "2026-05-17",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 264,
+      "puzzle_sha256": "0b094caaebfade8bcf88a54dc757132a03ad28dc530e779f006c97ec66cd28f7"
+    },
+    {
+      "id": "2026-05-18",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 10,
+      "shared_conflict_steps": 4,
+      "attempts": 339,
+      "puzzle_sha256": "4b7d46bde38e360f9455a0b33321e9593951418031e49667324d5eddfd0e830a"
+    },
+    {
+      "id": "2026-05-19",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        22
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 16,
+      "shared_conflict_steps": 9,
+      "attempts": 3917,
+      "puzzle_sha256": "b819f22fb236d2b4f455c23e5fab5683d3f12bfdcd358b583931c91fdda09903"
+    },
+    {
+      "id": "2026-05-20",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 761,
+      "puzzle_sha256": "eb5a80a5e1b48e51b5d92bc50d79c445953f45a0f915908b792c638027c4647b"
+    },
+    {
+      "id": "2026-05-21",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 8,
+      "attempts": 507,
+      "puzzle_sha256": "db0e3cf0e8e241293dc3ae279d034814496723bb3aef6ef71f68279ad24b4ad8"
+    },
+    {
+      "id": "2026-05-22",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        27
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 8,
+      "attempts": 5849,
+      "puzzle_sha256": "9fb37abcb7f938ba60093b5e03cbf6510748cfb6b0c2efd2628fe50e1dd4921d"
+    },
+    {
+      "id": "2026-05-23",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 10,
+      "shared_conflict_steps": 4,
+      "attempts": 1562,
+      "puzzle_sha256": "f32372d0055352af62de11028bbb460f530e865c2859aaf26651470883c3acba"
+    },
+    {
+      "id": "2026-05-24",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 547,
+      "puzzle_sha256": "124bd8184187281957d2a660e791b494b9cb74c2426ce23d68a0a2ca9de54d07"
+    },
+    {
+      "id": "2026-05-25",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        38
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 5,
+      "attempts": 2894,
+      "puzzle_sha256": "42226c52381d3efa8e767935207799ebef0853759fc1f1eb1b225997e4cffbe9"
+    },
+    {
+      "id": "2026-05-26",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 756,
+      "puzzle_sha256": "9be2f1d872331e84e8bf709532695f51bb5f88ea7011f2be0900ceed064ba29d"
+    },
+    {
+      "id": "2026-05-27",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 10,
+      "shared_conflict_steps": 4,
+      "attempts": 454,
+      "puzzle_sha256": "34ec7c30b359124713c7e606bfb3b75cd854008859d4d0daf2d8aa3077a9a742"
+    },
+    {
+      "id": "2026-05-28",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        38
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 8,
+      "attempts": 540,
+      "puzzle_sha256": "ec5b2392733fc0806bb2677d75b43dd48b4e179ea6a3b98e6957dd64adada7b0"
+    },
+    {
+      "id": "2026-05-29",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 54,
+      "puzzle_sha256": "87762537f21a273f540deb0cad824f53f0bfdcf30bcf0f3aae07ae7439dbe4ef"
+    },
+    {
+      "id": "2026-05-30",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 33,
+      "puzzle_sha256": "dc51e3ee882f774446694fde8b9d96e41d5e270b4eb328d4248485f097504b0e"
+    },
+    {
+      "id": "2026-05-31",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        25
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 8,
+      "attempts": 1945,
+      "puzzle_sha256": "2f05796014ffed63bc944e47650f01f3c33c8a3e101f8decc782b9372e5b9f56"
+    },
+    {
+      "id": "2026-06-01",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 199,
+      "puzzle_sha256": "d21931f58c3a7f41d2c45285f61208b5b1bd7fa622cdf7c4097acebd9d3c4579"
+    },
+    {
+      "id": "2026-06-02",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 2504,
+      "puzzle_sha256": "66fac89d83eea61b8145a6582500e45bd21f361e1673943f23caeacd2c841083"
+    },
+    {
+      "id": "2026-06-03",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        45
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 5,
+      "attempts": 3266,
+      "puzzle_sha256": "fca1d72e5da8944b8bdd8efe48174a4a2bc6eb4fef26304e9e5754a168ee8b53"
+    },
+    {
+      "id": "2026-06-04",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 9,
+      "attempts": 1780,
+      "puzzle_sha256": "970a0ba562198c180887cf62cc09148afe2c0b1c1bd5a6d2691090d3083742c6"
+    },
+    {
+      "id": "2026-06-05",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 16,
+      "shared_conflict_steps": 10,
+      "attempts": 572,
+      "puzzle_sha256": "789ef3f8700f9d671ef0c7e9af55da54da38ecc7108454c52541599dcef2ded9"
+    },
+    {
+      "id": "2026-06-06",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        7
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 4,
+      "attempts": 3345,
+      "puzzle_sha256": "29767a7d72ecb64a09816e484842d057b17c3508c57c0477648e324517aede94"
+    },
+    {
+      "id": "2026-06-07",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 119,
+      "puzzle_sha256": "f51a2c091ad54feac72fd9ee12cff1f0c0cdee3bd2eede6fd48750d3d808c402"
+    },
+    {
+      "id": "2026-06-08",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 364,
+      "puzzle_sha256": "1c50198591f57a3d5e5f278851cd67281921a606b7d0124e4adca171df9487ec"
+    },
+    {
+      "id": "2026-06-09",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        34
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 8,
+      "attempts": 4719,
+      "puzzle_sha256": "47478e41292b667a243ccc206a4e70bf0b573d150948af224d7bbe6c8dea49a3"
+    },
+    {
+      "id": "2026-06-10",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 10,
+      "shared_conflict_steps": 4,
+      "attempts": 65,
+      "puzzle_sha256": "3ce44f14c18f873ef026ba418e545791cd62d3e78cd549af644ab8137c5d9dd6"
+    },
+    {
+      "id": "2026-06-11",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 8,
+      "attempts": 488,
+      "puzzle_sha256": "cfdc36023f8eb449cba7a22a4424f28900dc8347fa078209d584cc1224d13f4e"
+    },
+    {
+      "id": "2026-06-12",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        16
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 4,
+      "attempts": 11064,
+      "puzzle_sha256": "8633bab7a6508512d70a75ecb292da38c50f1ef3d7e1179e9c09eb08423118f8"
+    },
+    {
+      "id": "2026-06-13",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 8,
+      "attempts": 496,
+      "puzzle_sha256": "9bf5b377878411aec0dbad583314e3f3f3f25a7fd6cb9c84ef09b861e9e3d5bf"
+    },
+    {
+      "id": "2026-06-14",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 219,
+      "puzzle_sha256": "832ff70ccb743dff4c3da1d20eaebb0b31e6709739487fc556cf0a831fe7878c"
+    },
+    {
+      "id": "2026-06-15",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        11
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 5,
+      "attempts": 11496,
+      "puzzle_sha256": "dc30355024a27f80fa344a60014be6b10db0778fa62d5b026a8f8659f856b881"
+    },
+    {
+      "id": "2026-06-16",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 531,
+      "puzzle_sha256": "2b84a5ecfa6ee4f75d039190c6e2c60e7c3f634d01a5ff1b9c198a512d79e554"
+    },
+    {
+      "id": "2026-06-17",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 10,
+      "shared_conflict_steps": 4,
+      "attempts": 657,
+      "puzzle_sha256": "3f55b623a1f9faaa1a41c1e3a65e46d56cfd7a59eee49c5eb825b02f1547d2b1"
+    },
+    {
+      "id": "2026-06-18",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        9
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 7,
+      "attempts": 9528,
+      "puzzle_sha256": "0419578cf3a2a567d2fd58e97288d484c2d413c9058bc66df88b2cbf4485bbbb"
+    },
+    {
+      "id": "2026-06-19",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 8,
+      "attempts": 679,
+      "puzzle_sha256": "c5326ba72b4cd886dd193f1e6c37a90d551968c2cf554119acc63cb2c0bbe7f3"
+    },
+    {
+      "id": "2026-06-20",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 291,
+      "puzzle_sha256": "249223f4f9cb341e4f0175dc11f108cfeb3a7915f21cc6c439dd047a8d845318"
+    },
+    {
+      "id": "2026-06-21",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        40
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 6,
+      "attempts": 601,
+      "puzzle_sha256": "6f0e5ebc5aa69323fb80942df5bfb19375dd75182e0580eea5c74af7044c525d"
+    },
+    {
+      "id": "2026-06-22",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 232,
+      "puzzle_sha256": "c0024f76987f1ce72001c09adb50beb3252874918c687cd7a6dcb28fae6309b1"
+    },
+    {
+      "id": "2026-06-23",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 8,
+      "attempts": 3656,
+      "puzzle_sha256": "d2f705451a8be93af07b6f384737a6713a2c1471daa4a3ad71654a5c46bd7572"
+    },
+    {
+      "id": "2026-06-24",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        29
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 8,
+      "attempts": 8725,
+      "puzzle_sha256": "5c279b4fd79dd9b0853c89535aff6d1396200ed487d3e3eac39f587d5bca41ec"
+    },
+    {
+      "id": "2026-06-25",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 37,
+      "puzzle_sha256": "821b4d365f354c83d5db7d1fb4fdd74c96ba4effebd5a037823cf83638ee1ee6"
+    },
+    {
+      "id": "2026-06-26",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 9,
+      "attempts": 853,
+      "puzzle_sha256": "54819d8990cce4907f38636f67d6dfd8ab7bbc62577a8e10db45f4c68766b9eb"
+    },
+    {
+      "id": "2026-06-27",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        15
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 6,
+      "attempts": 2800,
+      "puzzle_sha256": "b2ec0cf3058850895362347944a86186ce073872c3ae0aef3d9b30e63f5ac52b"
+    },
+    {
+      "id": "2026-06-28",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 865,
+      "puzzle_sha256": "156b59349a5125be38fd2c5559d8f8e4a105018dd45efe9df50f555d4eeeac98"
+    },
+    {
+      "id": "2026-06-29",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 10,
+      "shared_conflict_steps": 4,
+      "attempts": 1342,
+      "puzzle_sha256": "57966a63299f541365c5ef18807c9ea4e3943f413f198780ecb33876b805266f"
+    },
+    {
+      "id": "2026-06-30",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        34
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 8,
+      "attempts": 10239,
+      "puzzle_sha256": "4d7b3f8bc5950cf98f4b97ba9e24ada4d490648038d6ab3d2e36667a4935c566"
+    },
+    {
+      "id": "2026-07-01",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 1987,
+      "puzzle_sha256": "d0559c8af0c1e9ab73715e80b9c9dd094b7b5bc64e9447a2d699c82bba50e0d9"
+    },
+    {
+      "id": "2026-07-02",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 1137,
+      "puzzle_sha256": "4805e60466da02b23e615cf7869e28ea6af4939982744deb7b93c14d5649f229"
+    },
+    {
+      "id": "2026-07-03",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        3
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 7,
+      "attempts": 9959,
+      "puzzle_sha256": "5e145602c76167e1304cbea1d2967244a6e4ba59c2da10296c4f73fd800e199f"
+    },
+    {
+      "id": "2026-07-04",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 9,
+      "attempts": 645,
+      "puzzle_sha256": "5c6834497579be4c6ef593da94cac3aad8825b5dd0660224b461e3c694b5126c"
+    },
+    {
+      "id": "2026-07-05",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 40,
+      "puzzle_sha256": "0a1f00002dd8c733c9d66b1d38fc47158d6b4a8ad3baa4b63678e843bdeb455a"
+    },
+    {
+      "id": "2026-07-06",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        2
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 6,
+      "attempts": 5725,
+      "puzzle_sha256": "c7f35734d212a03c7e3ec332915766e91e734df88a69e0f024c0e544df62dcf0"
+    },
+    {
+      "id": "2026-07-07",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 2936,
+      "puzzle_sha256": "62b1b2cbeeffe17b818bf5cf28f8d4b1773027834440802569deb7a53578ca31"
+    },
+    {
+      "id": "2026-07-08",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 9,
+      "shared_conflict_steps": 3,
+      "attempts": 434,
+      "puzzle_sha256": "72edf94896009f51b6f0a655e5472cef27ea1a219d56133d53dba207a074f4cf"
+    },
+    {
+      "id": "2026-07-09",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        47
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 18,
+      "shared_conflict_steps": 11,
+      "attempts": 3133,
+      "puzzle_sha256": "3ed23a6a2018299fa48a2e063881d385d8763f3f578758d0e887cbd703dd178a"
+    },
+    {
+      "id": "2026-07-10",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 34,
+      "puzzle_sha256": "80d815a52b6f7d9ad603acf22d88a9151a1253ea729faa1f423533b43bfb89dd"
+    },
+    {
+      "id": "2026-07-11",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 17,
+      "shared_conflict_steps": 11,
+      "attempts": 1164,
+      "puzzle_sha256": "68eb22c2d3223e57778def64618360df49a64b5088320170cf08920e744a56e2"
+    },
+    {
+      "id": "2026-07-12",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        26
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 8,
+      "attempts": 1294,
+      "puzzle_sha256": "11acdceaec7a5aef1a6d0c223563bac748625cb71f7274df3a8151979e4e197f"
+    },
+    {
+      "id": "2026-07-13",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 8,
+      "attempts": 299,
+      "puzzle_sha256": "d54c2ca98bdc9786ba6862839fd3983dadba9cf91de4eb85a86460238bd447b4"
+    },
+    {
+      "id": "2026-07-14",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 240,
+      "puzzle_sha256": "70b852372f109fd06321dba800d967ea2665016d923c879565387596e48790c5"
+    },
+    {
+      "id": "2026-07-15",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        7
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 17,
+      "shared_conflict_steps": 10,
+      "attempts": 4686,
+      "puzzle_sha256": "861a8c432017befaa4509e0585df98b01fb0e06ba825f72088f3cc4e73ae908d"
+    },
+    {
+      "id": "2026-07-16",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 551,
+      "puzzle_sha256": "ba970d671209d13ce313d0e0839cd4f58c46e34d39627b021feb807074c1aa84"
+    },
+    {
+      "id": "2026-07-17",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 122,
+      "puzzle_sha256": "776979bb3a4037c6dfb60738f9851912d304a0dcd6ee1e5f9a5936c17366abd5"
+    },
+    {
+      "id": "2026-07-18",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        14
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 7,
+      "attempts": 2140,
+      "puzzle_sha256": "85067abf5c75c1d97ae13642a3bc29f940af3c90c94e0b05c62ff7d5a78bf2f0"
+    },
+    {
+      "id": "2026-07-19",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 1802,
+      "puzzle_sha256": "efe5561db16ec8d3e53616e98876a38465f88cd91bc17f2ae19246a55e3e2f76"
+    },
+    {
+      "id": "2026-07-20",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 1014,
+      "puzzle_sha256": "75ba3263007bdd611b03594a229844d05231e65f20eb8da76f3b5170238914b3"
+    },
+    {
+      "id": "2026-07-21",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        5
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 18,
+      "shared_conflict_steps": 11,
+      "attempts": 8179,
+      "puzzle_sha256": "f98cd0820281f99e78502ddc9aeee2d21b7a9cd199bf87955b06d862acdcb199"
+    },
+    {
+      "id": "2026-07-22",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 9,
+      "attempts": 112,
+      "puzzle_sha256": "421a7cf1e4a27f6cf165727554a621c7931212c3280def9a14219e7d309647b5"
+    },
+    {
+      "id": "2026-07-23",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 504,
+      "puzzle_sha256": "66d8bb09beaf70f59f8a860aa4aacff075319a8e794c08a1420df65bc2c08d8d"
+    },
+    {
+      "id": "2026-07-24",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        5
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 8,
+      "attempts": 4289,
+      "puzzle_sha256": "84f526e0e521c5185810d4b1482be4cf20346a086c55b7590758c50a430954d3"
+    },
+    {
+      "id": "2026-07-25",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 67,
+      "puzzle_sha256": "9503df345d451c61a17ea43a8b0fa2dc28ef3ff51f8fef5f09eeec87e8fdaba1"
+    },
+    {
+      "id": "2026-07-26",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 10,
+      "shared_conflict_steps": 4,
+      "attempts": 225,
+      "puzzle_sha256": "1e36547582b580f8e091d45257821554f7961ba5eae23f23ac9ee0828bc268fa"
+    },
+    {
+      "id": "2026-07-27",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        9
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 22,
+      "shared_conflict_steps": 15,
+      "attempts": 4141,
+      "puzzle_sha256": "6abcbd0504d71e02770981511a6cfa68533e2791ff6741e8f192194bbf55397b"
+    },
+    {
+      "id": "2026-07-28",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 1309,
+      "puzzle_sha256": "10fea9407a948f7d97c0f4e1ab124ed4d42041bc2d53892249724a579704f213"
+    },
+    {
+      "id": "2026-07-29",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 8,
+      "attempts": 2893,
+      "puzzle_sha256": "676e855d75b222e684700cfea2353f690946a8a6a38dc049f78964056053eb04"
+    },
+    {
+      "id": "2026-07-30",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        28
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 7,
+      "attempts": 22200,
+      "puzzle_sha256": "d767e9f5f4f4e386381a8d355b3bd9f7ffaacff057efca8f866fd75315274f0d"
+    },
+    {
+      "id": "2026-07-31",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 103,
+      "puzzle_sha256": "d13a0bfe3ad0136f185e2932619acd4a311047ba8d076049c2ace7353fb31a00"
+    },
+    {
+      "id": "2026-08-01",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 8,
+      "attempts": 1375,
+      "puzzle_sha256": "5942d024f9a8a5862089207c6ad51432ad8ca6dc9e00b031e470278ce40d4b4f"
+    },
+    {
+      "id": "2026-08-02",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        36
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 4,
+      "attempts": 11386,
+      "puzzle_sha256": "4e2f4944f64b889f05c6f3fbf74825fa22415e7f103a6b1e358e0d0eab3cd6e4"
+    },
+    {
+      "id": "2026-08-03",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 1396,
+      "puzzle_sha256": "d137bdb307ce5ddf99a30e37b1804638e6f5c75e400dee55faf12c9f1430b71b"
+    },
+    {
+      "id": "2026-08-04",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 10,
+      "shared_conflict_steps": 4,
+      "attempts": 730,
+      "puzzle_sha256": "ce85c8cf192b1316edc4f6e9b423ddb45b16648592b3345d1cef3a3634b72aa2"
+    },
+    {
+      "id": "2026-08-05",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        17
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 5,
+      "attempts": 937,
+      "puzzle_sha256": "ee55e0396744b0e1d21472933cb45d36be1c641985ad9537d846c1ea8ddb9586"
+    },
+    {
+      "id": "2026-08-06",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 9,
+      "shared_conflict_steps": 3,
+      "attempts": 2965,
+      "puzzle_sha256": "45fcac441b053b4461c22ea0c956fa70b0413442500d303c425c254e7bfa8b8b"
+    },
+    {
+      "id": "2026-08-07",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 457,
+      "puzzle_sha256": "79c3629d65187c151f23808c49aebdd6c5fb78924393404580636160cf190d4e"
+    },
+    {
+      "id": "2026-08-08",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        48
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 6,
+      "attempts": 8495,
+      "puzzle_sha256": "77c7f92ce44c722624bc2e04f2690502763e7d3a08f54d7434a360b8fd82f29d"
+    },
+    {
+      "id": "2026-08-09",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 8,
+      "attempts": 328,
+      "puzzle_sha256": "a03168c84b213d2be6373512ca35c82fe8043949f931376965739ee4d3a40489"
+    },
+    {
+      "id": "2026-08-10",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 850,
+      "puzzle_sha256": "9f3231c1f6b1a6e47cdb4551104334efa52daa41de9814b813366f914e87a56e"
+    },
+    {
+      "id": "2026-08-11",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        21
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 8,
+      "attempts": 13713,
+      "puzzle_sha256": "3b6a36bcb712811228bcdf4a6e6502f7fb50405c824c81561da13aa2b045109c"
+    },
+    {
+      "id": "2026-08-12",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 8,
+      "attempts": 205,
+      "puzzle_sha256": "f69be4b072b383dd0e0b267090de8948bbf937459e0d1abfa654363b7fa407a4"
+    },
+    {
+      "id": "2026-08-13",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 9,
+      "attempts": 139,
+      "puzzle_sha256": "735d556bfebd1230f55583c5b8c6097b1c04995862c8258c2f0e9fe64d528243"
+    },
+    {
+      "id": "2026-08-14",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        47
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 17,
+      "shared_conflict_steps": 10,
+      "attempts": 7365,
+      "puzzle_sha256": "1c7fe08e99860e21e092871e1c90103abcc3b254621a1ec60f43a2c8a9368250"
+    },
+    {
+      "id": "2026-08-15",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 241,
+      "puzzle_sha256": "5cc285ed4c872d3ea732a50054b2297624819a8dd9fd96805f2b7f607081931c"
+    },
+    {
+      "id": "2026-08-16",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 159,
+      "puzzle_sha256": "3ab4aa3df3b7d7592f459339db5c5b5b313bace89f77bc76e31e93a6c9f6f778"
+    },
+    {
+      "id": "2026-08-17",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        5
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 6,
+      "attempts": 4886,
+      "puzzle_sha256": "4503c6f7c826053b2fcbfff066f3d4c3642029d702abb864ac4396c91cd491b5"
+    },
+    {
+      "id": "2026-08-18",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 17,
+      "shared_conflict_steps": 11,
+      "attempts": 1289,
+      "puzzle_sha256": "db58e40a75d8fdd7bfbbe62a96cfaa7bd4897d8cab36e0c8f2519e0a1cc16346"
+    },
+    {
+      "id": "2026-08-19",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 3558,
+      "puzzle_sha256": "d3bc4f7762f777937d6894d26c8409e23540d2ead2419c54d0b03b1118a33ddb"
+    },
+    {
+      "id": "2026-08-20",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        43
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 5,
+      "attempts": 6102,
+      "puzzle_sha256": "d37ee8dfde1be55d249b0ea0e590b37795907770a01480066f61147218703944"
+    },
+    {
+      "id": "2026-08-21",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 37,
+      "puzzle_sha256": "5c2c295d4ac963540cf94a55134583a0aa4f82cafece1ee9d273441ad5678c0d"
+    },
+    {
+      "id": "2026-08-22",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 1597,
+      "puzzle_sha256": "8fdc3deafe95291d56b717e8b7e1933c0f077cd80b90207f784d04c335a8e9c2"
+    },
+    {
+      "id": "2026-08-23",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        21
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 8,
+      "attempts": 1125,
+      "puzzle_sha256": "abec7b019e53b5af82f6e2a18b920b1dee9d303f3fd5166b1ccf18bbfaf56353"
+    },
+    {
+      "id": "2026-08-24",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 312,
+      "puzzle_sha256": "0310a6d36f1c51465e4544100bb4ddae9ca8310f6732c2fbc4da566b97c8a7bf"
+    },
+    {
+      "id": "2026-08-25",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 22,
+      "puzzle_sha256": "f21cff0342aa3d395b0c40201f85ecf03ae201113a31138e3d2ebb8caf95ed8b"
+    },
+    {
+      "id": "2026-08-26",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        47
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 7,
+      "attempts": 695,
+      "puzzle_sha256": "d5b819335b101194d5dc5b1cc88296606c26f0d4ff9865f4ea889ef01486f5d9"
+    },
+    {
+      "id": "2026-08-27",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 9,
+      "attempts": 942,
+      "puzzle_sha256": "86083d57203209e453c670f576b6e1054530d362069a4b93f693a5e57db9e427"
+    },
+    {
+      "id": "2026-08-28",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 16,
+      "shared_conflict_steps": 10,
+      "attempts": 2077,
+      "puzzle_sha256": "051277dcc4bc5c72626af442204727399261bd6a0346323fd79fc1674f0e01ce"
+    },
+    {
+      "id": "2026-08-29",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        16
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 19,
+      "shared_conflict_steps": 12,
+      "attempts": 1773,
+      "puzzle_sha256": "5d02a33b09865d2aca028731d4f3551f7abc9cc9c29c1f09e00db682322e4a3e"
+    },
+    {
+      "id": "2026-08-30",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 9,
+      "attempts": 1486,
+      "puzzle_sha256": "91be2974b6e73975e08b564ba2f8b012335a94564c06d51beb5c7f8acc97fe4c"
+    },
+    {
+      "id": "2026-08-31",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 2344,
+      "puzzle_sha256": "5703d2fcdf0fd63efb229563a1827f221752f942212a963823c22d2075c9ff92"
+    },
+    {
+      "id": "2026-09-01",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        25
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 4,
+      "attempts": 14388,
+      "puzzle_sha256": "118e831fe8cfcefd72a505c4b9b4f3af29f299d6483fd2c231b08412bc5bb78f"
+    },
+    {
+      "id": "2026-09-02",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 8,
+      "attempts": 656,
+      "puzzle_sha256": "36d4376cb59baa8f079341669e01f8bcd27b9110c496062c3fc642918a8c4326"
+    },
+    {
+      "id": "2026-09-03",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 9,
+      "attempts": 1126,
+      "puzzle_sha256": "31fb6012c6b05b0bc0adbb5007d897baadf6b0cd486a3d696d8c4d8d8c5409b5"
+    },
+    {
+      "id": "2026-09-04",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        4
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 16,
+      "shared_conflict_steps": 9,
+      "attempts": 15279,
+      "puzzle_sha256": "f23c3e359837aa2f70d7b68b6603e535901d095141b220425c1f864c499c5859"
+    },
+    {
+      "id": "2026-09-05",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 8,
+      "attempts": 1969,
+      "puzzle_sha256": "e089b5086f51ba86c0b530b6aeb68f71d1acc2cacbf98760e6f85d321d52c15e"
+    },
+    {
+      "id": "2026-09-06",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 368,
+      "puzzle_sha256": "84a2c894ad525583828758cd6cc70f17c1666610fe0d39344e87d168ecb1e399"
+    },
+    {
+      "id": "2026-09-07",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        44
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 8,
+      "attempts": 1951,
+      "puzzle_sha256": "f43ab2195478ffad4b863415212e840fd75304a1f7f1bb827ef0e2383ce1dad7"
+    },
+    {
+      "id": "2026-09-08",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 16,
+      "shared_conflict_steps": 10,
+      "attempts": 737,
+      "puzzle_sha256": "9550899a94a376b3a079afe257867fdd318de32a62b10c9a4ff3ef738813b23e"
+    },
+    {
+      "id": "2026-09-09",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 8,
+      "attempts": 78,
+      "puzzle_sha256": "3ce81baf115426d1682b918cb7a8bc2f98c3d73b1dbe5fbc7b1db1c724a8b9ac"
+    },
+    {
+      "id": "2026-09-10",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        24
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 10,
+      "shared_conflict_steps": 3,
+      "attempts": 23494,
+      "puzzle_sha256": "72d706c24f330562941a8254df8333302ca3ea4fbe3a504ac8e82faccbb42f69"
+    },
+    {
+      "id": "2026-09-11",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 9,
+      "attempts": 742,
+      "puzzle_sha256": "e37650c65cfb88b013b665bd83939d52d4d7b57a4e0ad051ac7d0629389b6d62"
+    },
+    {
+      "id": "2026-09-12",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 3998,
+      "puzzle_sha256": "b3245ea5c2e51a1cf4b94e7d47db783d0a2165e1032c5f8f9fb3a072f4cd8ec8"
+    },
+    {
+      "id": "2026-09-13",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        18
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 7,
+      "attempts": 5818,
+      "puzzle_sha256": "c9a8552387de85b40fc63b4f719f649e2b2532889bf45826243368f287aa485f"
+    },
+    {
+      "id": "2026-09-14",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 258,
+      "puzzle_sha256": "4ecd696d028acf9c547580558edbbd910113b32370644b973122255f664961b0"
+    },
+    {
+      "id": "2026-09-15",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 163,
+      "puzzle_sha256": "61da48d71dde75ad8e12e78bab638b9e964c3501c1ceec4f1cb259a4f41534ef"
+    },
+    {
+      "id": "2026-09-16",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        9
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 7,
+      "attempts": 4039,
+      "puzzle_sha256": "b410121c0f120fb38b8b3bc177ac997117ce4d6d32eebc598cf88d2a63fb71df"
+    },
+    {
+      "id": "2026-09-17",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 1135,
+      "puzzle_sha256": "9e3d2d8cde4094f0266f31d4afde2c5eb568dfb934e90f8863bfcd972f7784d8"
+    },
+    {
+      "id": "2026-09-18",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 17,
+      "shared_conflict_steps": 11,
+      "attempts": 4872,
+      "puzzle_sha256": "05fce790302e8a1819379605e00fe5d189c92ec9c5e32e6d2eb380383b6d6b6a"
+    },
+    {
+      "id": "2026-09-19",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        20
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 6,
+      "attempts": 725,
+      "puzzle_sha256": "c30559dd06bd977fd275f1c28a046b866e53387cdf414318d1b3242bd9af8e8d"
+    },
+    {
+      "id": "2026-09-20",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 552,
+      "puzzle_sha256": "a4ff5132ab63b59d6410e3b2a4d51102c6b64ebf34e0a366d736ca27a72e895e"
+    },
+    {
+      "id": "2026-09-21",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 8,
+      "attempts": 1930,
+      "puzzle_sha256": "9d7fee5c72f65c722e60d722e5e78c81124fecd29491f692e90c67e30f22170f"
+    },
+    {
+      "id": "2026-09-22",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        15
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 8,
+      "attempts": 3750,
+      "puzzle_sha256": "e009f4c864bdbab90fff6e67421ab6b938d22aaf8ebb93588333d1edd73b01b5"
+    },
+    {
+      "id": "2026-09-23",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 9,
+      "attempts": 78,
+      "puzzle_sha256": "ab447ab91aa98b921215099127bbeaa9c8e7d674e48cadcab37fa094f9109fa4"
+    },
+    {
+      "id": "2026-09-24",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 1321,
+      "puzzle_sha256": "2298c1181bdff8ea138530d88c7566e6dbd59a7d9dcbda79aec58885068bb008"
+    },
+    {
+      "id": "2026-09-25",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        37
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 8,
+      "attempts": 4731,
+      "puzzle_sha256": "fd40e3c9568c340965ba6f3fc5611e24708081c506c7974a16dba429a4775a2a"
+    },
+    {
+      "id": "2026-09-26",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 9,
+      "shared_conflict_steps": 3,
+      "attempts": 1577,
+      "puzzle_sha256": "2ff4c754241f974e78c3bd1b75b245e66bebffb2281cbf9cde1f47eedbafeaec"
+    },
+    {
+      "id": "2026-09-27",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 8,
+      "attempts": 1228,
+      "puzzle_sha256": "22e88a20b8a42d0753af5f0cab4cbb1596d4b5426db2c857543ce23e7a093d02"
+    },
+    {
+      "id": "2026-09-28",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        48
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 5,
+      "attempts": 15310,
+      "puzzle_sha256": "be1d0f34c23ac5bcbdfdef28376a395c6c44729ac1107708aaebeb45dec67aa1"
+    },
+    {
+      "id": "2026-09-29",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 9,
+      "shared_conflict_steps": 3,
+      "attempts": 2983,
+      "puzzle_sha256": "d961ab1d4ba9c4d22150cca578de4302c3a2a3b04be3ce5fac0f0c702d1ad159"
+    },
+    {
+      "id": "2026-09-30",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 1068,
+      "puzzle_sha256": "6a0c505251b8a8dfac87f32fe51d380e84741816d7be34bdece9c068867cc05a"
+    },
+    {
+      "id": "2026-10-01",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        9
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 6,
+      "attempts": 13507,
+      "puzzle_sha256": "585be62fc6f0566e0b61d50c1f737f44823dddceaff40ce2d3a68133aeaa86fa"
+    },
+    {
+      "id": "2026-10-02",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 16,
+      "shared_conflict_steps": 10,
+      "attempts": 1647,
+      "puzzle_sha256": "526d35cc691044bb0c1746443f90412bf918b9717e3f9c589b26ff595597ab29"
+    },
+    {
+      "id": "2026-10-03",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 2668,
+      "puzzle_sha256": "656eab9915cc698efbd1e842b710cac96ee98da31fdecc22b4f24b57380508bc"
+    },
+    {
+      "id": "2026-10-04",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        24
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 16,
+      "shared_conflict_steps": 9,
+      "attempts": 3182,
+      "puzzle_sha256": "cc1ab14aa309ab82604d6615eac3ec6300c2145bb6bb147c7586cf8b2dd93de5"
+    },
+    {
+      "id": "2026-10-05",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 16,
+      "shared_conflict_steps": 10,
+      "attempts": 863,
+      "puzzle_sha256": "9bcb80cc13a67dc8992a249198005acb16f80309b46045551b7fded8b0c002c2"
+    },
+    {
+      "id": "2026-10-06",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 372,
+      "puzzle_sha256": "4e9c4a9a2933c4e22483cdd7164e7f901b1f410bb6dac4b719c604b473b15752"
+    },
+    {
+      "id": "2026-10-07",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        48
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 17,
+      "shared_conflict_steps": 10,
+      "attempts": 10974,
+      "puzzle_sha256": "59e72335e30fa12bcecd8f51ec06515852b729a601ba9e1dff8bf791e6c1b52c"
+    },
+    {
+      "id": "2026-10-08",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 8,
+      "attempts": 442,
+      "puzzle_sha256": "69d3f79605fd06eda28dc438406e8bd79ac0aaa8ff025563a37e9d5e694907ab"
+    },
+    {
+      "id": "2026-10-09",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 963,
+      "puzzle_sha256": "f7ff10850f67fb8ad8309b933f2d122819242af3f830cc9fb3fa2d7c26fd4c9d"
+    },
+    {
+      "id": "2026-10-10",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        14
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 8,
+      "attempts": 9728,
+      "puzzle_sha256": "5c38596ee32d5ad3929d28452ceab010441149b0a1d32455c7b76745d06d2e40"
+    },
+    {
+      "id": "2026-10-11",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 2014,
+      "puzzle_sha256": "7405cedb5aca34eb8f96b39fa0950b012bfe5e04b861870f1a3c42f76c868926"
+    },
+    {
+      "id": "2026-10-12",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 2327,
+      "puzzle_sha256": "960017da74c7c284044d24c75894bdaf18f2adf7bab66c358f64339447deadca"
+    },
+    {
+      "id": "2026-10-13",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        10
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 6,
+      "attempts": 1994,
+      "puzzle_sha256": "1c10f29d8565a9f31aad9fb29ec8cb701c007b62c14401daf8ac900264842b56"
+    },
+    {
+      "id": "2026-10-14",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 17,
+      "shared_conflict_steps": 11,
+      "attempts": 1645,
+      "puzzle_sha256": "9851f3c845460dd47495e0eed8ffb23bfaee42e28d6431408361ff3783065017"
+    },
+    {
+      "id": "2026-10-15",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 1371,
+      "puzzle_sha256": "e5e48b9017b13218efcebd077d4518c1e3c1ee526abe63e75d003e9d41eee662"
+    },
+    {
+      "id": "2026-10-16",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        1
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 18,
+      "shared_conflict_steps": 11,
+      "attempts": 15146,
+      "puzzle_sha256": "6a0747afcbf5e13244b169ae532ee090dd27a81322618264f425fcbd2e610329"
+    },
+    {
+      "id": "2026-10-17",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 17,
+      "shared_conflict_steps": 11,
+      "attempts": 443,
+      "puzzle_sha256": "6d34d1072f6ae4d768c35d989dbb74740bdf19cf5d69a01a50a47825fbac6274"
+    },
+    {
+      "id": "2026-10-18",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 2112,
+      "puzzle_sha256": "76c4f6112362b308636597c71e47a601111997f0f32ae53195dffee2c436d261"
+    },
+    {
+      "id": "2026-10-19",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        8
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 10,
+      "shared_conflict_steps": 3,
+      "attempts": 565,
+      "puzzle_sha256": "8b01be1bbfdbd602f5155b72dd88010e0c94f3a454bb473dbe97c135413cda6f"
+    },
+    {
+      "id": "2026-10-20",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 8,
+      "attempts": 1779,
+      "puzzle_sha256": "5503b0519269d729bc2262912f5d54dc75c675be48993f785cdcb472c2e99480"
+    },
+    {
+      "id": "2026-10-21",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 324,
+      "puzzle_sha256": "7a5108f8c1ada42d807f05d8868b1836687a529b275a021eb7c76272cb7c1648"
+    },
+    {
+      "id": "2026-10-22",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        13
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 7,
+      "attempts": 8975,
+      "puzzle_sha256": "96d9d8ee278e8c868343de2fba87134442d4bf547379ae095cbb7e9756773cd8"
+    },
+    {
+      "id": "2026-10-23",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 16,
+      "shared_conflict_steps": 10,
+      "attempts": 689,
+      "puzzle_sha256": "3a96a92cc548df78b58d5c83dd584b9c76a4b53a20da453776e9d43c588d3520"
+    },
+    {
+      "id": "2026-10-24",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 10,
+      "shared_conflict_steps": 4,
+      "attempts": 856,
+      "puzzle_sha256": "4dcad5eed3d4cb77f0778cc9b43db3c11c3eb6b94a4e475d046b5dabe5c97d3f"
+    },
+    {
+      "id": "2026-10-25",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        24
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 6,
+      "attempts": 843,
+      "puzzle_sha256": "6e44797a93d297e3e5ad408ee5b1eb8518cf557e60b521ed066cfbac58439c19"
+    },
+    {
+      "id": "2026-10-26",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 9,
+      "attempts": 83,
+      "puzzle_sha256": "23af08a5761e7889b66d46e49492b8e2e9e0a7af1efdf576836c9b6b0360c007"
+    },
+    {
+      "id": "2026-10-27",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 8,
+      "attempts": 453,
+      "puzzle_sha256": "fc30892151d0f96e96dd2dd7d4c2ad3842295a99c88851f5f0a0b2920f778002"
+    },
+    {
+      "id": "2026-10-28",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        15
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 18,
+      "shared_conflict_steps": 11,
+      "attempts": 689,
+      "puzzle_sha256": "950c4d37a44a10baa920c425e422545b18934798333f213aa7888fcddd328395"
+    },
+    {
+      "id": "2026-10-29",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 9,
+      "attempts": 15,
+      "puzzle_sha256": "9a2f8f4b230d4042420b6967b6d4e92f8d349d28471bcfefc89cdab8de0ae2b8"
+    },
+    {
+      "id": "2026-10-30",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 133,
+      "puzzle_sha256": "6d2d4df5dbd29be8cd5628d12b1ded760d5508f250209884b29948f3c43727cb"
+    },
+    {
+      "id": "2026-10-31",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        18
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 7,
+      "attempts": 1176,
+      "puzzle_sha256": "a097d40dc67cb28cb51b64fc0d43b6d9b0f4b7ba0e5b8fb4414bd974d24a6a63"
+    },
+    {
+      "id": "2026-11-01",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 236,
+      "puzzle_sha256": "357235e2f7d721e4e4253389e8b05ced502dfd518abe986b14277cd1f0d94698"
+    },
+    {
+      "id": "2026-11-02",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 1819,
+      "puzzle_sha256": "75cfc08100c6ac5e9937f240d7a35567863905a873eab8c047311ca0e1305749"
+    },
+    {
+      "id": "2026-11-03",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        40
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 17,
+      "shared_conflict_steps": 10,
+      "attempts": 1990,
+      "puzzle_sha256": "c97e551b346c853e233622cc1849849914a3c49746d9f66b0390545f02687af8"
+    },
+    {
+      "id": "2026-11-04",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 2,
+      "puzzle_sha256": "7a114bd36f800081fe49d7cf16b7226a764161dc9daec7c2a549885648358911"
+    },
+    {
+      "id": "2026-11-05",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 16,
+      "shared_conflict_steps": 10,
+      "attempts": 262,
+      "puzzle_sha256": "45753f81efd62af91a06a267e8e1748da9626ab9f9f83edcc6a761fa82823978"
+    },
+    {
+      "id": "2026-11-06",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        7
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 8,
+      "attempts": 9267,
+      "puzzle_sha256": "67093a3463f2b3f96347fedd37c3bc984d03c94263560d73fd787f050085eb0d"
+    },
+    {
+      "id": "2026-11-07",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 160,
+      "puzzle_sha256": "53a4e99c5bc84695b9b258cf4f140075e89918ef96c823fa5d4499acac98f2e9"
+    },
+    {
+      "id": "2026-11-08",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 90,
+      "puzzle_sha256": "fd0ae29971dd52659b24bc152eaa58af2b1121fedfb9020825c317ff6ce45fc8"
+    },
+    {
+      "id": "2026-11-09",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        41
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 7,
+      "attempts": 1051,
+      "puzzle_sha256": "8ee0bd6c849a8be9e2ce4d4bb3812e11bc0ce68bd1260638baf0c44262d5fa77"
+    },
+    {
+      "id": "2026-11-10",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 8,
+      "attempts": 382,
+      "puzzle_sha256": "88e9e57995b07d9e6e9984cb3059644f619ff368a4a7ffa2a33ae7af8ccf7cf3"
+    },
+    {
+      "id": "2026-11-11",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 9,
+      "shared_conflict_steps": 3,
+      "attempts": 1362,
+      "puzzle_sha256": "568347dbc74a67eb4ce2d44a56f24a4c700bb776fb97713a149b36d131c32831"
+    },
+    {
+      "id": "2026-11-12",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        24
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 6,
+      "attempts": 4176,
+      "puzzle_sha256": "d181bc2e8fdc2e8d0307720db45f1dabf21217f0562e79e7143cd520a8f454eb"
+    },
+    {
+      "id": "2026-11-13",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 3553,
+      "puzzle_sha256": "94b664d586212d790066a60fa287576fd1328a0127e2a126ab82b774d7c55ac7"
+    },
+    {
+      "id": "2026-11-14",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 177,
+      "puzzle_sha256": "5ec4235147ea01fc170f42e4e5956675073020533e5bc59ca122354c1d58671e"
+    },
+    {
+      "id": "2026-11-15",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        46
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 17,
+      "shared_conflict_steps": 10,
+      "attempts": 835,
+      "puzzle_sha256": "cdeba17d537a32747bf87edaf3d9ee9bbcf5f94773504611d985bb86eb915986"
+    },
+    {
+      "id": "2026-11-16",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 304,
+      "puzzle_sha256": "5290131f29fc69539285f03038dec7099a207484d6021f1587f84315260c5620"
+    },
+    {
+      "id": "2026-11-17",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 211,
+      "puzzle_sha256": "c1525ff66fbde99b333b44e4d1fcc96f94501f4157923bc124868c98fb4cde9c"
+    },
+    {
+      "id": "2026-11-18",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        20
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 7,
+      "attempts": 11283,
+      "puzzle_sha256": "a80b06c20dcc42b126e1b510621a7f25c282fd135cdae604c29687d7ab3dbd48"
+    },
+    {
+      "id": "2026-11-19",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 1003,
+      "puzzle_sha256": "953a5ab88491e648b7088bd5706c03efe77d081c7e8400dc11ad1ac39fc0e42b"
+    },
+    {
+      "id": "2026-11-20",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 798,
+      "puzzle_sha256": "38802fe8c1667e01b8b3e7bb13f9c125864cf08e1f9f33f4acda5d1242b21f57"
+    },
+    {
+      "id": "2026-11-21",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        14
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 6,
+      "attempts": 852,
+      "puzzle_sha256": "c107abaee5abc10a1b127182fa778dee3ec0e694ff2285d133dfbdadf7821d35"
+    },
+    {
+      "id": "2026-11-22",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 10,
+      "shared_conflict_steps": 4,
+      "attempts": 1093,
+      "puzzle_sha256": "740ed1e286b26a8cebb110d2106ea62e0cf8aa1a40ff50d0177c29499ff61b62"
+    },
+    {
+      "id": "2026-11-23",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 1239,
+      "puzzle_sha256": "41672d5ed241b5c1d6afe5138d192f1e03bc1e5654dcc997ebf132c3a4b2ee63"
+    },
+    {
+      "id": "2026-11-24",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        43
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 8,
+      "attempts": 2110,
+      "puzzle_sha256": "098c80c2359efc59778045adad027e688617fdecb2a40283b4d5378c9aba8a7a"
+    },
+    {
+      "id": "2026-11-25",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 8,
+      "attempts": 188,
+      "puzzle_sha256": "b6a894bb0aebc18fc54aa3e001d71b0f37dad1d9d2547742c717834be23bc456"
+    },
+    {
+      "id": "2026-11-26",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 2075,
+      "puzzle_sha256": "de439524e98be2f6d6ec3be66c6583066523d170d2958ac219eaf5b001a04b94"
+    },
+    {
+      "id": "2026-11-27",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        30
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 7,
+      "attempts": 349,
+      "puzzle_sha256": "88642abe5f4c6989235d73c0ec871f483d98469f95e641624f737d6e9e429e0b"
+    },
+    {
+      "id": "2026-11-28",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 340,
+      "puzzle_sha256": "c22d505a6723061dd3c2e5cf53716584791b023dbed9e9f4fdc0c2f02f203729"
+    },
+    {
+      "id": "2026-11-29",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 9,
+      "attempts": 977,
+      "puzzle_sha256": "49eac81f7726ece7dac4d2cd7843c1504af73aa76646ee2eb25133355ed29e8d"
+    },
+    {
+      "id": "2026-11-30",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        40
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 7,
+      "attempts": 110,
+      "puzzle_sha256": "7d7ad8ea85909ec451d0767b0e864a938089b5330074c9981c6b3530f329a112"
+    },
+    {
+      "id": "2026-12-01",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 10,
+      "shared_conflict_steps": 4,
+      "attempts": 420,
+      "puzzle_sha256": "a5c33c097fcf2e5fe98308116d73238125cf4ae77a10002487d44079dbf5b78a"
+    },
+    {
+      "id": "2026-12-02",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 192,
+      "puzzle_sha256": "798a45c3b8a2e610400f55536c31f7e70f9c873c9ba04e8f61377fd9deecf31e"
+    },
+    {
+      "id": "2026-12-03",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        11
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 16,
+      "shared_conflict_steps": 9,
+      "attempts": 2152,
+      "puzzle_sha256": "c0c9f240db41831f91e5de8a94b56a9b329a087d6cfee1215985eb07c0c28a47"
+    },
+    {
+      "id": "2026-12-04",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 9,
+      "attempts": 681,
+      "puzzle_sha256": "56b0e0125198e0cdea5112775d488572adaddfc14e31f319d1e9650238b1fd55"
+    },
+    {
+      "id": "2026-12-05",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 881,
+      "puzzle_sha256": "a11a15f9193df02731cc7c8be675d59683930cc240a1571193f0d39543524878"
+    },
+    {
+      "id": "2026-12-06",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        20
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 6,
+      "attempts": 2783,
+      "puzzle_sha256": "d1eeb0bb1470ab9084462869619dcc50ab678bda4f3ae2b645772a2dbc827ded"
+    },
+    {
+      "id": "2026-12-07",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 16,
+      "shared_conflict_steps": 10,
+      "attempts": 202,
+      "puzzle_sha256": "e8f52ebadfb525d6012cc76ef944c14f723362e9fb7d9f1693d447ddf8fc56f1"
+    },
+    {
+      "id": "2026-12-08",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 8,
+      "attempts": 152,
+      "puzzle_sha256": "947dfbf423b04e65330257b38e835b833bc6365fc33bf05bdd1fafa46847a6a7"
+    },
+    {
+      "id": "2026-12-09",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        40
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 8,
+      "attempts": 3821,
+      "puzzle_sha256": "1aa8cb95ff46e7901540c5e2be6d9bdabfe5578d926655e01791ba9a782661d6"
+    },
+    {
+      "id": "2026-12-10",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 1610,
+      "puzzle_sha256": "8bbb891f7b52f64e1a07cc3913ec1ad24accee9ce3a505cd042022e04c50921b"
+    },
+    {
+      "id": "2026-12-11",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 9,
+      "attempts": 756,
+      "puzzle_sha256": "4af8c116f6f10719ae62c324a49fdc09bd51d8986f6b5d4994191347254669d1"
+    },
+    {
+      "id": "2026-12-12",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        37
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 7,
+      "attempts": 5980,
+      "puzzle_sha256": "5dff185f7371e0fe3d32a829a7a7b5d64393980dafa52625f59e30719044264d"
+    },
+    {
+      "id": "2026-12-13",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 11,
+      "shared_conflict_steps": 5,
+      "attempts": 953,
+      "puzzle_sha256": "896b3ad3ec3d522e9726f3a4430396dee9eb046faa040dfa6583b30e45bbcff2"
+    },
+    {
+      "id": "2026-12-14",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 2169,
+      "puzzle_sha256": "f5b98d9b516d96649bfdaea246bfcdd3ec946b950e533c1fac5f7bee01f0812c"
+    },
+    {
+      "id": "2026-12-15",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        37
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 7,
+      "attempts": 369,
+      "puzzle_sha256": "c22c9f4c41a995047a73e81f232a6b54ab302f183786f4d30e78c9e882b7335c"
+    },
+    {
+      "id": "2026-12-16",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 16,
+      "shared_conflict_steps": 10,
+      "attempts": 6236,
+      "puzzle_sha256": "d889d4be1b2ea185af96014a214aae91edfd28999cb4f3245fc324145c768f0e"
+    },
+    {
+      "id": "2026-12-17",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 9,
+      "attempts": 158,
+      "puzzle_sha256": "e438f1643d2e052b279250624e7fcb4fd935585184a42d9b314ed22c1241791c"
+    },
+    {
+      "id": "2026-12-18",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        42
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 17,
+      "shared_conflict_steps": 10,
+      "attempts": 17272,
+      "puzzle_sha256": "70a482d7c78d335474badd4b7cf7f29f12b36a9be3f31f62776566227593035b"
+    },
+    {
+      "id": "2026-12-19",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 8,
+      "attempts": 1698,
+      "puzzle_sha256": "3e5a84632ee6da1841aac7e059f3411e3c40f6ecfc7a2f1df19d38cf5bf66a67"
+    },
+    {
+      "id": "2026-12-20",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 1237,
+      "puzzle_sha256": "57150b28fc88e38508133034f87fb33d436794a120a88451365fa942dba95a30"
+    },
+    {
+      "id": "2026-12-21",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        3
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 16,
+      "shared_conflict_steps": 9,
+      "attempts": 5889,
+      "puzzle_sha256": "d8b5cd05427ba1eadcb21d39e1be8ac4dddba78e4fda8de1da81660164c3f66a"
+    },
+    {
+      "id": "2026-12-22",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 532,
+      "puzzle_sha256": "5754911532624dcd4ccc54cd373fae08a7510668861b9fbcfa4a9ac9b11d6d56"
+    },
+    {
+      "id": "2026-12-23",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 12,
+      "shared_conflict_steps": 6,
+      "attempts": 258,
+      "puzzle_sha256": "7c3dce2b48e6ba51009efaedbe88862f70956d3d1d799d7941b2c2e8eaa5771b"
+    },
+    {
+      "id": "2026-12-24",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        28
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 8,
+      "attempts": 4712,
+      "puzzle_sha256": "6a4e6f9965f287d5bcc290e0f176ef4d36e52ad3d476925275ea1e6f7824f6ac"
+    },
+    {
+      "id": "2026-12-25",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 14,
+      "shared_conflict_steps": 8,
+      "attempts": 1145,
+      "puzzle_sha256": "b1dd8b5d7c95a1d431291e9b01e193c366402210c3409283d052ae8dd5da01cc"
+    },
+    {
+      "id": "2026-12-26",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 102,
+      "puzzle_sha256": "dea534bd28b6fddf5bbc7e73fa1c85a6eabf3b885b140d6b0cf0c4a81585e596"
+    },
+    {
+      "id": "2026-12-27",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        11
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 6,
+      "attempts": 420,
+      "puzzle_sha256": "ce344c18f88c1a764a406b29ed9b49908b7df10f2aab4baa370dfec01cca36c4"
+    },
+    {
+      "id": "2026-12-28",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 17,
+      "shared_conflict_steps": 11,
+      "attempts": 872,
+      "puzzle_sha256": "b968a9ad9161372e0670547438043f24264e133c76368b772a9c87856cee265b"
+    },
+    {
+      "id": "2026-12-29",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 10,
+      "shared_conflict_steps": 4,
+      "attempts": 682,
+      "puzzle_sha256": "ae88c45145c3a138acea48829de5e6b597449c75aa8d65dd3ef7b7fc36d99eb2"
+    },
+    {
+      "id": "2026-12-30",
+      "size": 7,
+      "rocks": 1,
+      "rock_cells": [
+        18
+      ],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 15,
+      "shared_conflict_steps": 8,
+      "attempts": 589,
+      "puzzle_sha256": "a1c5613733301446079b940e7212d228a68f260f14c3876d2f756b1245c7e740"
+    },
+    {
+      "id": "2026-12-31",
+      "size": 6,
+      "rocks": 0,
+      "rock_cells": [],
+      "solution_count": 1,
+      "logic_solvable": true,
+      "techniques": [
+        "house-single",
+        "shared-conflict"
+      ],
+      "deductions": 13,
+      "shared_conflict_steps": 7,
+      "attempts": 162,
+      "puzzle_sha256": "85f88dd191e5ecc211f3401bc0d2756679a5c1dd126d72c89538dd7de7fc3d99"
+    }
+  ],
+  "summary": {
+    "levels": 30,
+    "daily_dates": 365,
+    "all_unique": true,
+    "all_logic": true,
+    "elapsed_seconds": 138.83
+  }
+}

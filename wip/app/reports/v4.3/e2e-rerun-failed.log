@@ -1,0 +1,21 @@
+
+Running 12 tests using 1 worker
+
+(node:1590451) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [mobile-412] › tests/updates.spec.js:10:1 › map automatically updates once; running label, post-reload toast once, throttled focus/visibility, unchanged/offline/failing checks have no loop (4.2s)
+  ✓   2 [mobile-412] › tests/upgrade-v42.spec.js:55:1 › real v4.1 → v4.2 on Home: one automatic reload, 'Updated to v4.2.1', all progress and lilies kept, bonus defaults, offline 200s (3.1s)
+  ✓   3 [mobile-412] › tests/v31-extension.spec.js:13:41 › restored v1 concurrent upward launch uses Jun, visible 1.5s flight then matched soaking (3.8s)
+  ✓   4 [mobile-412] › tests/v31-extension.spec.js:13:41 › restored v1 concurrent upward launch uses Bloom, visible 1.5s flight then matched soaking (3.8s)
+  ✓   5 [mobile-412] › tests/v31-extension.spec.js:13:41 › restored v1 concurrent upward launch uses Remy, visible 1.5s flight then matched soaking (3.8s)
+  ✓   6 [mobile-412] › tests/v42.spec.js:269:1 › Settings: D-pad toggle persists and swaps the capy chip for a D-pad that steps (1.5s)
+(node:1591830) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   7 [mobile-360] › tests/updates.spec.js:10:1 › map automatically updates once; running label, post-reload toast once, throttled focus/visibility, unchanged/offline/failing checks have no loop (3.9s)
+  ✓   8 [mobile-360] › tests/upgrade-v42.spec.js:55:1 › real v4.1 → v4.2 on Home: one automatic reload, 'Updated to v4.2.1', all progress and lilies kept, bonus defaults, offline 200s (3.2s)
+  ✓   9 [mobile-360] › tests/v31-extension.spec.js:13:41 › restored v1 concurrent upward launch uses Jun, visible 1.5s flight then matched soaking (3.8s)
+  ✓  10 [mobile-360] › tests/v31-extension.spec.js:13:41 › restored v1 concurrent upward launch uses Bloom, visible 1.5s flight then matched soaking (3.8s)
+  ✓  11 [mobile-360] › tests/v31-extension.spec.js:13:41 › restored v1 concurrent upward launch uses Remy, visible 1.5s flight then matched soaking (3.8s)
+  ✓  12 [mobile-360] › tests/v42.spec.js:269:1 › Settings: D-pad toggle persists and swaps the capy chip for a D-pad that steps (1.6s)
+
+  12 passed (41.5s)

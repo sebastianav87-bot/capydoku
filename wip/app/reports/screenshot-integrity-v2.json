@@ -1,0 +1,258 @@
+{
+  "count": 42,
+  "all_exact_412x915": true,
+  "screenshots": [
+    {
+      "file": "01-pond-path.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "df7e5578c610256322d6acbf3199eb2f98d9f89f060af91a19a30f9355dcf2c0"
+    },
+    {
+      "file": "02-level-progress.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "9abaab38de8607c1cefd4ca0b5433df3dabbe7c08cca48b0697419e36cc477f1"
+    },
+    {
+      "file": "03-hint.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "53fd57af18bbad89667d8f0b9f1bea390ef8be23098941b8ace5e80a2038f2c1"
+    },
+    {
+      "file": "04-violation.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "b6f431662117477339766d0bb93b7f3c5446b56bec7d1baacd2231dfe53ffafe"
+    },
+    {
+      "file": "05-game-over.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "c68d3ace65f045557cecd8022c7040861bc2a3310e986633a2b7acd1a1f4874d"
+    },
+    {
+      "file": "06-chill.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "eba47a3d0f75c4a37217cf1cd549cdeb557fe24686ef062d50006e9b278fea94"
+    },
+    {
+      "file": "07-boss-pond.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "d2a9343962bc159abddbc8427095e4fd0ffb5130761bb61fc0dfedebc0bdbc6a"
+    },
+    {
+      "file": "08-solved-start.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "dfb7e4f33e3f7ac1e8f748072c50d4d2b6e581b7fe9f38c00ddcffcfc19d0326"
+    },
+    {
+      "file": "09-solved-mid-jump.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "43c83a94c73a0bbb763f2d5464a78756bb2a0e35e58768f95d8c5c2d671569fc"
+    },
+    {
+      "file": "10-solved-in-spring.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "7b860d5203f3240fb6b934f934740a07ac5eefd658f2915e58a8b684e19b0770"
+    },
+    {
+      "file": "11-daily-pond.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "c4c85bf9bf7adf1dc4e6e7f7e055a196bd9a65f16de2ebc28f220c2bb29d14f0"
+    },
+    {
+      "file": "12-hot-spring.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "cdeca3be7933ce84dc755333653426595c045c7b8b2f062ae43ddf2791779114"
+    },
+    {
+      "file": "13-rocks-7x7.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "1d65266cb107093c30455957fea02037d2820952992ddd8e0c18862f3ecc0f8c"
+    },
+    {
+      "file": "14-offline.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "9d008395dea934bb75c97ba1c98d760c7b1e784b116305ba3ad3af351ad70548"
+    },
+    {
+      "file": "15-drag-mid-gesture.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "59f38b99b0c313d949e4d36b4f92162927ed604ff778d2e2659ffd17f9a12e0f"
+    },
+    {
+      "file": "16-haptics-on.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "331935a9d443ab0aca8bfe557ff91684ba9b11060d0602a2a225e68bcaebbabd"
+    },
+    {
+      "file": "17-haptics-off.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "03a777e05a6c77e030268ea292ce24bb33879f438ad16d69db2dfcb2ef816cb6"
+    },
+    {
+      "file": "18-rules-sheet.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "6133f14e139cdfcc5086034cceb716bef7f239434bf4772f9f5ef124d0610885"
+    },
+    {
+      "file": "19-hot-spring-tier1.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "06170cad275f64f2b8a157ad6bbfb7dcec7b6444034ac66faa67f448312de78f"
+    },
+    {
+      "file": "20-daily-without-rocks.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "6959cfbb5058ffef2f636458979c96338750f6101637f27225eadf064f491535"
+    },
+    {
+      "file": "21-daily-first-rock-intro.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "ad60c6fdfeec0b6c320818d9ec8499bd19110f6c67fa3b3a98033e66520c6c16"
+    },
+    {
+      "file": "22-daily-with-rocks.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "955a36ed59f62af150a3a960b4ab96faf1dea4e73313ce4c712db9fb1c42b6d7"
+    },
+    {
+      "file": "23-campaign-rock-intro.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "7cd6971fcf03467e6db8f094fde04ca63df0e2ff4d89dac747857a8fc3eba797"
+    },
+    {
+      "file": "24-migrated-spring-tier3.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "bfd7d56ed4c3c25882571ba0b51cbc945eff514fc0b433dc1554a3c943f04a40"
+    },
+    {
+      "file": "25-offline-after-v1-v2-update.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "c5829955b56589ef6b01f33ce6b2a44a78a1c7e616664b9fd42e5ed8cac42085"
+    },
+    {
+      "file": "boss-new-buddy-soak.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "b480e2b68810b2f73344373f42a7c021c44492d68642d5cc09420c686e1d0ab1"
+    },
+    {
+      "file": "celebration-01-anticipation.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "3d7bacd74fe0edfc615db7b110775aa21c6f7740c0dd885b7117843070dbe35d"
+    },
+    {
+      "file": "celebration-02-first-jump.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "1b7a096b8d2f3ca36c3f70b0b4ae9457559adc6756e1d8a244f01402eab48526"
+    },
+    {
+      "file": "celebration-03-first-splash.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "9cb9b762de12d9a722430281ecd0dfb9c2a737807960d0daf93f708d58098e3e"
+    },
+    {
+      "file": "celebration-04-second-splash.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "57f314ec75a0483eca31c0de304f64f04f8c2e9b1c55097f8a02a93d1c3d0d79"
+    },
+    {
+      "file": "celebration-05-soaking.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "492f94007ac9be0695064ed63af4c67c7e6d7222d45b85ec5f9fb480d1360247"
+    },
+    {
+      "file": "celebration-06-reaction.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "27609199ea6bf34356c9e8ea43117b4fd8a27edf9b60e7c52138bb355bf25eea"
+    },
+    {
+      "file": "celebration-reduced-motion.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "a67d48734554611460b0c4796f317b4b611b22894f364080b82c0e2b39c0bbe0"
+    },
+    {
+      "file": "early-1.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "2d4912720db5c03034d2a32f516012d206fd4cef5dd183e23c6642293739b699"
+    },
+    {
+      "file": "early-2.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "1acdd7ab8013637b6fb48f0c265288bbf2ca2345374108799a237b7c6948e547"
+    },
+    {
+      "file": "early-3.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "c5829955b56589ef6b01f33ce6b2a44a78a1c7e616664b9fd42e5ed8cac42085"
+    },
+    {
+      "file": "spring-stage-0-bosses.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "26a970b2d55ee2e94116bfc3a885b74ae1b6e8791ded0f6172bfa7e931f3de4b"
+    },
+    {
+      "file": "spring-stage-1-bosses.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "f7735c469dff45173b5342c80143443ac7ccfbd5adf8eaf7d142717070dda5e9"
+    },
+    {
+      "file": "spring-stage-2-bosses.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "b0d300d69f5aeb6ce37cee5e4e9fa4764d474635bd52b3ae1fea6419dfa1d17a"
+    },
+    {
+      "file": "spring-stage-3-bosses.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "d869e97f30089a7d2da3b3203b9d85f2cd39857b75b547cae38d72a7e7eb96c7"
+    },
+    {
+      "file": "v3-relax-off.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "f89664976aa7f8938bd6ddb05b88c1ccf2ec6b17892fb20ce47033856adfdacb"
+    },
+    {
+      "file": "v3-relax-on.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "8fdd632dff0646696d2062b81818f5784086468f0acbe66f77071d2c88edd717"
+    }
+  ]
+}

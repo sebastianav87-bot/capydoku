@@ -1,0 +1,8 @@
+{
+  "holdCache": true,
+  "preparedLocalOnly": true,
+  "published": false,
+  "cache": "capydoku-v4.3.1-6bc138e4dee2",
+  "sw_sha256": "da41743711d4bbe68fffc83b83e860d97964b5a933d8f65271284c4cb513eb33",
+  "precache_sha256": "9e86eb74c93034b595586fd13ef47a6a246ee4d5e8f33b50dcaada891acf8a35"
+}

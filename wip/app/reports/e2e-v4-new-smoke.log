@@ -1,0 +1,14 @@
+
+Running 7 tests using 1 worker
+
+(node:417263) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/v4.spec.js:9:1 › tutorial appears on first Level 1, ghosts do NOT mutate, skip survives navigation and reload (3.3s)
+  ✓  2 tests/v4.spec.js:10:1 › tutorial completion preserves only real marks/capy, no lives/power spent, never auto-reappears (2.6s)
+  ✓  3 tests/v4.spec.js:11:1 › question-mark sheet replays tutorial in sandbox and restores board, Nap charges, streak and companion (2.4s)
+  ✓  4 tests/v4.spec.js:12:1 › all three world bosses have locked / next / beaten art; every map node is connected (2.4s)
+  ✓  5 tests/v4.spec.js:13:1 › Hot Spring growth is in-scene, earned objects and golden lilies persist; wood sheet switches cosmetic companion (1.9s)
+  ✓  6 tests/v4.spec.js:14:1 › generic SVG pieces for EVERY starter; companion retained; Peek manual placement, use badge, Relax Peek, no Hint (1.6s)
+  ✓  7 tests/v4.spec.js:15:1 › actual shipped v3.1 SW → v4, same-schema migration preserves attempt and settings; all assets 200 offline (3.5s)
+
+  7 passed (18.3s)

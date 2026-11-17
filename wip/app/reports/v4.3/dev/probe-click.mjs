@@ -1,0 +1,11 @@
+import { chromium } from "@playwright/test";
+const b = await chromium.launch({ args: ["--no-sandbox"] });
+const ctx = await b.newContext({ viewport: { width: 412, height: 915 }, isMobile: true, hasTouch: true });
+const page = await ctx.newPage();
+await page.setContent(`<button id=a style="width:200px;height:200px">A</button><button id=c style="width:200px;height:200px">C</button><script>window.log=[];for(const t of ['pointerdown','pointerup','click'])document.addEventListener(t,e=>log.push(t+':'+e.pointerId+':'+(e.pointerType||'')+':d'+e.detail+':'+Math.round(performance.now())));</script>`);
+await page.tap("#a"); await page.tap("#c"); await page.tap("#a");
+const cdp = await ctx.newCDPSession(page);
+for (const type of ["touchStart", "touchEnd"]) await cdp.send("Input.dispatchTouchEvent", { type, touchPoints: type === "touchEnd" ? [] : [{ x: 50, y: 50 }] });
+await page.waitForTimeout(300);
+console.log((await page.evaluate(() => log)).join("\n"));
+await b.close();

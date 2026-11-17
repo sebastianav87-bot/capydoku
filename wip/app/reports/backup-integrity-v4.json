@@ -1,0 +1,49 @@
+{
+  "checked_at": "2026-11-10T02:01:49.928624-05:00",
+  "timezone": "America/New_York (EST)",
+  "step0_passed_before_app_edits": true,
+  "snapshots": [
+    {
+      "snapshot": "/workspace/capydoku/app-v1-backup",
+      "original_files_checked": 74,
+      "all_original_hashes_match": true
+    },
+    {
+      "snapshot": "/workspace/capydoku/app-v2-backup",
+      "original_files_checked": 226,
+      "all_original_hashes_match": true
+    },
+    {
+      "snapshot": "/workspace/capydoku/app-v3-backup",
+      "original_files_checked": 345,
+      "all_original_hashes_match": true
+    },
+    {
+      "snapshot": "/workspace/capydoku/app-v31-ui-backup",
+      "original_files_checked": 445,
+      "all_original_hashes_match": true
+    },
+    {
+      "snapshot": "/workspace/capydoku/app-v3.1-backup",
+      "original_files_checked": 867,
+      "same_file_list": true,
+      "all_original_hashes_match": true
+    }
+  ],
+  "archives": [
+    {
+      "path": "/workspace/capydoku/capydoku-v3-runtime.tar.gz",
+      "sha256": "60c7ce33b1e3452d361a68e69e9521c1d969dccb93c07467862e317d3a365288",
+      "unchanged": true,
+      "all_archive_members_match_backup": true,
+      "file_count": 36
+    },
+    {
+      "path": "/workspace/capydoku/capydoku-v3.1-runtime.tar.gz",
+      "sha256": "d577dc5d44fda28e2957e3db1e77dbed3aab839d638f8a4d40fd269fce686d8e",
+      "unchanged": true,
+      "all_archive_members_match_backup": true,
+      "file_count": 45
+    }
+  ]
+}

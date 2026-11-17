@@ -1,0 +1,5 @@
+let audio;
+export function warmAudio(enabled){if(!enabled)return;try{const C=globalThis.AudioContext||globalThis.webkitAudioContext;if(!C)return;audio??=new C();audio.resume()?.catch(()=>{})}catch{}}
+export function sound(kind,enabled){if(!enabled)return;try{warmAudio(true);if(!audio||audio.state!=='running')return;const t=audio.currentTime,g=audio.createGain();g.connect(audio.destination);g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.025,t+.012);g.gain.exponentialRampToValueAtTime(.0001,t+.1);
+ if(kind==='splash'){const b=audio.createBuffer(1,Math.ceil(audio.sampleRate*.1),audio.sampleRate),d=b.getChannelData(0);for(let i=0;i<d.length;i++)d[i]=(Math.random()*2-1)*(1-i/d.length);const n=audio.createBufferSource(),f=audio.createBiquadFilter();n.buffer=b;f.type='lowpass';f.frequency.value=850;n.connect(f);f.connect(g);n.start(t);n.stop(t+.1)}else{const o=audio.createOscillator();o.type='sine';o.frequency.setValueAtTime(330,t);o.frequency.exponentialRampToValueAtTime(480,t+.05);o.frequency.exponentialRampToValueAtTime(360,t+.11);o.connect(g);o.start(t);o.stop(t+.12)}
+}catch{}}

@@ -1,0 +1,23 @@
+[
+  {
+    "viewport": "360x780",
+    "grid": 5,
+    "board_px": 350,
+    "grid_px": 334,
+    "cell_px": 63.1875
+  },
+  {
+    "viewport": "360x780",
+    "grid": 6,
+    "board_px": 350,
+    "grid_px": 334,
+    "cell_px": 52.15625
+  },
+  {
+    "viewport": "360x780",
+    "grid": 7,
+    "board_px": 350,
+    "grid_px": 334,
+    "cell_px": 44.28125
+  }
+]

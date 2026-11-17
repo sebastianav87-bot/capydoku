@@ -1,0 +1,119 @@
+/* v5.0 Capybara Calm: five worlds (light season tints on the Fresh Leaf theme), scores, world top 10, leaderboard.
+   Tints only change the light page gradient; text colours are unchanged. Every tint's darkest stop keeps
+   --ink-sub ≥ 4.5:1 (W1 Fresh Leaf is unchanged); accents carry white or ink text at ≥ 4.5:1. */
+.screen[data-world]{--world-accent:var(--green-550)}
+.screen[data-world="2"]{--world-accent:#5A6B1F;--world-a:#F8F4DA;--world-b:#E7ECCB}
+.screen[data-world="3"]{--world-accent:#8A4B1C;--world-a:#FCF1E4;--world-b:#F4E6D4}
+.screen[data-world="4"]{--world-accent:#3D5E78;--world-a:#F3F6F8;--world-b:#E2EAF0}
+.screen[data-world="5"]{--world-accent:#5C4B86;--world-a:#F5F1FA;--world-b:#EBE6F4}
+.screen.transition:not([data-world="1"]),.screen.game:not(.solved):not([data-world="1"]),.screen.crate-screen:not([data-world="1"]),.screen.world-top:not([data-world="1"]){background:linear-gradient(var(--world-a),var(--world-b))}
+.transition-world{color:var(--world-accent)}
+/* solved summary / crate reward score */
+.pond-score{display:flex;align-items:baseline;justify-content:center;gap:8px;flex-wrap:wrap;margin:6px 16px 4px;padding:6px 14px;border-radius:14px;background:#FCF6E7;border:1px solid #AFCAA2;color:var(--ink-header)}
+.pond-score span{font-size:13px;font-weight:800;color:var(--ink-sub)}
+.pond-score strong{font-size:22px;font-weight:900}
+.pond-score small{flex-basis:100%;text-align:center;font-size:12px;font-weight:700;color:var(--ink-sub)}
+/* Hot Spring world badges */
+.world-badges{position:absolute;left:50%;transform:translateX(-50%);bottom:max(14px,calc(env(safe-area-inset-bottom) + 8px));display:flex;gap:6px;margin:0;padding:5px 8px;list-style:none;background:#FBF5E5E6;border-radius:999px;z-index:5}
+.world-badge{display:flex;flex-direction:column;align-items:center;min-width:44px;padding:2px 4px;border-radius:12px;opacity:.6;color:var(--ink-header)}
+.world-badge span{font-size:18px;line-height:22px;filter:grayscale(1)}
+.world-badge small{font-size:11px;font-weight:800;color:var(--ink-header)}
+.world-badge.earned{opacity:1;background:var(--green-soft)}
+.world-badge.earned span{filter:none}
+/* Settings › Progress grouped by world */
+.replay-world{margin:6px 0;border:1px solid #AFCAA2;border-radius:14px;background:#FCF6E7;overflow:hidden}
+.replay-world>summary{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 12px;cursor:pointer;list-style:none;min-height:44px}
+.replay-world>summary::-webkit-details-marker{display:none}
+.replay-world>summary span{display:flex;flex-direction:column}
+.replay-world>summary small{font-size:12px;color:var(--ink-sub);font-weight:700}
+.world-score{align-items:flex-end;text-align:right}
+.world-score b{font-size:18px;color:var(--ink-header)}
+.world-top-btn{display:block;margin:0 12px 6px;min-height:44px;width:calc(100% - 24px)}
+.replay-world .replay-list{margin:0;padding:0 8px 8px}
+.unscored{font-style:italic}
+/* world complete / top 10 */
+.screen.world-top{display:flex;flex-direction:column;justify-content:center;padding:max(16px,env(safe-area-inset-top)) 18px max(16px,calc(env(safe-area-inset-bottom) + 12px));overflow-y:auto}
+.world-top-card{display:flex;flex-direction:column;gap:10px;text-align:center}
+.world-top-card h1{margin:0;font-size:26px;color:var(--ink-header)}
+.world-top-score{display:flex;flex-direction:column;padding:10px;border-radius:16px;background:#FFFDF5;border:1px solid #AFCAA2}
+.world-top-score span,.world-top-score small{font-size:13px;font-weight:700;color:var(--ink-sub)}
+.world-top-score strong{font-size:30px;color:var(--ink-header)}
+.top10{padding:8px 10px;border-radius:16px;background:#FFFDF5;border:1px solid #AFCAA2;text-align:left}
+.top10 h2{margin:2px 4px 6px;font-size:16px;color:var(--ink-header)}
+.top10-list{margin:0;padding:0;list-style:none}
+.top10-row{display:grid;grid-template-columns:34px 1fr auto;align-items:center;gap:6px;padding:5px 6px;border-radius:10px;font-size:15px;color:var(--ink-header)}
+.top10-row:nth-child(odd){background:#F4EFDD}
+.top10-row.me{background:var(--green-soft);font-weight:900}
+.top10-row b{text-align:center;color:var(--ink-sub)}
+.top10-local,.top10-rank{margin:6px 4px;font-size:13px;font-weight:700;color:var(--ink-sub)}
+/* leaderboard dialog */
+.leaderboard-dialog .lb-privacy{text-align:left;font-size:13px;line-height:1.35;background:#FCF6E7;border:1px solid #AFCAA2;border-radius:12px;padding:10px 12px;color:var(--ink-header)}
+.leaderboard-dialog .lb-privacy strong{display:block;margin-bottom:3px}
+.leaderboard-dialog .lb-label{display:block;text-align:left;font-weight:800;font-size:14px;margin-top:6px;color:var(--ink-header)}
+.leaderboard-dialog input{width:100%;min-height:44px;border-radius:12px;border:1px solid #AFCAA2;padding:8px 12px;font:inherit;background:#FFFDF5;color:var(--ink-header)}
+.leaderboard-dialog .lb-error{color:#9B2C1E;font-weight:800;font-size:13px}
+.leaderboard-dialog .lb-note{color:var(--green-550);font-weight:800;font-size:13px}
+.leaderboard-dialog .lb-leave{color:#9B2C1E}
+.leaderboard-dialog button{min-height:44px}
+
+/* ===== v5.0 bigger board: compact chrome after pond 1 (.chrome-v5) ===== */
+.screen.game.chrome-v5:not(.solved){padding-bottom:max(8px,calc(env(safe-area-inset-bottom) + 4px))}
+.screen.game.chrome-v5>.topbar.topline{position:relative;display:flex!important;align-items:center!important;gap:8px!important;height:52px!important;min-height:52px!important;padding:max(4px,env(safe-area-inset-top)) 10px 0!important;flex-shrink:0}
+.screen.game.chrome-v5>.topbar.topline h2{position:static!important;flex:1 1 auto;min-width:0;margin:0;text-align:left;font-size:18px!important;line-height:22px!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.screen.game.chrome-v5>.topbar.topline .level-pill,.screen.game.chrome-v5>.topbar.topline .help-btn{width:44px!important;height:44px!important;min-width:44px!important;min-height:44px!important;margin:0!important;flex:0 0 44px}
+.screen.game.chrome-v5>.topbar.topline .top-counter{position:static!important;height:32px;gap:4px;font-size:15px;flex:0 0 auto}
+.screen.game.chrome-v5>.topbar.topline .top-counter img{width:28px;height:28px}
+.screen.game.chrome-v5>.topbar.topline>.life-area{position:static!important;height:auto!important;flex:0 0 auto}
+.screen.game.chrome-v5>.topbar.topline .lives{gap:3px!important}
+.screen.game.chrome-v5>.topbar.topline .orange{width:22px!important;height:24px!important}
+.screen.game.chrome-v5>.pond-wrap{margin-top:4px!important;position:relative}
+.screen.game.chrome-v5>.lower{flex:1 1 auto!important;min-height:0!important;margin:4px 8px 0!important;gap:4px!important;justify-content:flex-end!important;display:flex;flex-direction:column}
+.screen.game.chrome-v5 .tool-hint{margin:0;text-align:center;font-size:12px;font-weight:800;color:var(--ink-sub,#4a5548);min-height:16px}
+.screen.game.chrome-v5 .tool-hint[data-tool="x"],.screen.game.chrome-v5 .tool-hint[data-tool="capy"]{color:#2F5A2A}
+.screen.game.chrome-v5 .controls.thumbbar{order:3;display:grid!important;grid-template-columns:repeat(4,1fr);gap:6px!important;width:100%!important;min-height:64px!important;height:64px!important;margin:0!important;align-items:stretch!important}
+.screen.game.chrome-v5 .controls.thumbbar>button{min-width:0!important;max-width:none!important;height:64px!important;min-height:64px!important;padding:4px 2px!important;border:1.5px solid #A7C599!important;border-radius:18px!important;background:#FCF7E7!important;box-shadow:0 2px 0 #C9DABD!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:2px!important;color:var(--ink-header,#2E3D2D);flex:none!important}
+.screen.game.chrome-v5 .thumbbar strong{font-size:12px!important;line-height:14px!important}
+.screen.game.chrome-v5 .thumbbar .tool-icon{width:30px;height:30px;display:grid;place-items:center;object-fit:contain}
+.screen.game.chrome-v5 .thumbbar .x-icon{font-size:30px;font-weight:900;line-height:30px;color:#4B5A47}
+.screen.game.chrome-v5 .thumbbar .tool-btn[aria-pressed="true"]{background:#3F6B36!important;border-color:#2E5228!important;color:#FFFBEA!important;box-shadow:0 0 0 3px #F6C344,0 2px 0 #2E5228!important}
+.screen.game.chrome-v5 .thumbbar .tool-btn[aria-pressed="true"] .x-icon{color:#FFFBEA}
+.screen.game.chrome-v5 .thumbbar .undo-round .round-icon{width:30px!important;height:30px!important;min-height:0;border:0!important;background:none!important;box-shadow:none!important}
+.screen.game.chrome-v5 .thumbbar .undo-round .round-icon svg{width:26px;height:26px}
+.screen.game.chrome-v5 .thumbbar .undo-round:disabled{opacity:.5}
+.screen.game.chrome-v5 .thumbbar .power-tool{background:var(--identity-light,#F3EEDB)!important;border-color:var(--identity,#7A8F5E)!important}
+.screen.game.chrome-v5 .thumbbar .power-tool .round-icon{width:30px!important;height:30px!important;position:relative;background:none!important;border:0!important;box-shadow:none!important}
+.screen.game.chrome-v5 .thumbbar .power-tool .round-icon>svg{display:none}
+.screen.game.chrome-v5 .thumbbar .power-tool .power-face{width:30px!important;height:30px!important;position:static!important}
+.screen.game.chrome-v5 .thumbbar .power-tool .power-use-badge{position:absolute;right:-8px;top:-4px;width:16px;height:16px;font-size:10px}
+.screen.game.chrome-v5 .thumbbar .power-tool span{display:flex;flex-direction:column;align-items:center;line-height:1}
+.screen.game.chrome-v5 .thumbbar .power-tool small{display:block!important;font-size:9.5px!important;line-height:11px!important;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.screen.game.chrome-v5 .thumbbar .power-tool.power-feedback-on{box-shadow:0 0 0 3px var(--identity,#7A8F5E)!important}
+.screen.game.chrome-v5 .spare-hint{margin:0!important;font-size:11px}
+/* fit.js tiers on the compact chrome: the chrome is already small, keep it */
+.screen.game.chrome-v5.fit-tight .controls.thumbbar,.screen.game.chrome-v5.fit-compact .controls.thumbbar{height:56px!important;min-height:56px!important}
+.screen.game.chrome-v5.fit-tight .controls.thumbbar>button,.screen.game.chrome-v5.fit-compact .controls.thumbbar>button{height:56px!important;min-height:56px!important}
+.screen.game.chrome-v5.fit-tight .tool-hint{display:none}
+/* last move + region border emphasis */
+.cell.last-move{box-shadow:inset 0 0 0 3px #F6C344!important}
+/* ===== v5.0 explanatory errors ===== */
+.cell.break-band{position:relative}
+.cell.break-band::after{content:"";position:absolute;inset:0;border-radius:inherit;background:#D6453D33;box-shadow:inset 0 0 0 2px #C0392B;pointer-events:none;animation:v5-band 1.8s ease-out forwards}
+.cell.break-capy{box-shadow:0 0 0 3px #C0392B,inset 0 0 0 3px #fff!important;z-index:2}
+.cell.break-origin{box-shadow:inset 0 0 0 3px #C0392B!important}
+.cell.off-solution{position:relative}
+.cell.off-solution::after{content:"";position:absolute;inset:2px;border-radius:inherit;border:3px dashed #B7791F;background:#F6C34440;pointer-events:none;animation:v5-band 1.8s ease-out forwards}
+@keyframes v5-band{0%,70%{opacity:1}100%{opacity:0}}
+.move-note{position:absolute;left:50%;top:-6px;transform:translate(-50%,-100%);margin:0;z-index:20;min-width:200px;max-width:92%;padding:6px 12px;border-radius:14px;text-align:center;font-size:13px;line-height:16px;display:flex;flex-direction:column;gap:1px;pointer-events:none;box-shadow:0 4px 12px #0002}
+.pond-wrap>.move-note{top:6px;transform:translate(-50%,0)}
+.move-note.rule-note{background:#FFF1EE;border:1.5px solid #C0392B;color:#7A1F17}
+.move-note.off-note{background:#FFF8E6;border:1.5px dashed #B7791F;color:#6B4A0F}
+.move-note small{font-size:12px;font-weight:700}
+/* ===== v5.0 success feedback ===== */
+.cell.ripple{animation:v5-ripple .45s ease-out var(--ripple-delay,0ms) both}
+@keyframes v5-ripple{0%{filter:none;transform:scale(1)}40%{filter:brightness(1.18);transform:scale(.94)}100%{filter:none;transform:scale(1)}}
+.cell.zone-solved{position:relative}
+.cell.zone-solved::before{content:"";position:absolute;inset:0;border-radius:inherit;background:#FFFFFF2E;pointer-events:none}
+.cell .zone-mark{position:absolute;left:2px;top:2px;width:13px;height:13px;border-radius:50%;background:#FFFBEAE6;display:grid;place-items:center;z-index:1;pointer-events:none}
+.cell .zone-mark svg{width:9px;height:9px;fill:none;stroke:#2F6B2A;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+@media (prefers-reduced-motion:reduce){.cell.ripple{animation:none}.cell.break-band::after,.cell.off-solution::after{animation:none}}
+.tutorial-tools{font-size:13px}

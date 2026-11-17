@@ -1,0 +1,13 @@
+{
+  "from": "capydoku-v4-9d6ebe4d0481",
+  "to": "capydoku-v4.1-923843f2cc02",
+  "deferredUntil": "map",
+  "oldCodePinnedOffline": true,
+  "affinitySurvivesWorkerRestart": true,
+  "automaticReloads": 1,
+  "unchangedBoardKept": true,
+  "derivedLocks": [
+    3
+  ],
+  "consoleErrors": []
+}

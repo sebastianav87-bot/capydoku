@@ -1,0 +1,8 @@
+{
+  "from": "capydoku-v4.1-923843f2cc02",
+  "to": "capydoku-v4.2.1-bc0fb084a94b",
+  "deferredUntil": "finish",
+  "oldCodePinnedOffline": true,
+  "automaticReloads": 1,
+  "consoleErrors": []
+}

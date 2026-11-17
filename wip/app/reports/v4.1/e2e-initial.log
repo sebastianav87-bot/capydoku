@@ -1,0 +1,31 @@
+[WebServer] Traceback (most recent call last):
+[WebServer]   File "<frozen runpy>", line 198, in _run_module_as_main
+[WebServer]   File "<frozen runpy>", line 88, in _run_code
+[WebServer]   File "/usr/lib/python3.13/http/server.py", line 1323, in <module>
+[WebServer]     test(
+[WebServer]     ~~~~^
+[WebServer]         HandlerClass=handler_class,
+[WebServer]         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[WebServer]     ...<3 lines>...
+[WebServer]         protocol=args.protocol,
+[WebServer]         ^^^^^^^^^^^^^^^^^^^^^^^
+[WebServer]     )
+[WebServer]     ^
+[WebServer]   File "/usr/lib/python3.13/http/server.py", line 1270, in test
+[WebServer]     with ServerClass(addr, HandlerClass) as httpd:
+[WebServer]          ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+[WebServer]   File "/usr/lib/python3.13/socketserver.py", line 457, in __init__
+[WebServer]     self.server_bind()
+[WebServer]     ~~~~~~~~~~~~~~~~^^
+[WebServer]   File "/usr/lib/python3.13/http/server.py", line 1317, in server_bind
+[WebServer]     return super().server_bind()
+[WebServer]            ~~~~~~~~~~~~~~~~~~~^^
+[WebServer]   File "/usr/lib/python3.13/http/server.py", line 136, in server_bind
+[WebServer]     socketserver.TCPServer.server_bind(self)
+[WebServer]     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+[WebServer]   File "/usr/lib/python3.13/socketserver.py", line 478, in server_bind
+[WebServer]     self.socket.bind(self.server_address)
+[WebServer]     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+[WebServer] OSError: [Errno 98] Address already in use
+Error: Process from config.webServer was not able to start. Exit code: 1
+

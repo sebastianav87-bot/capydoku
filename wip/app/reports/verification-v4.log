@@ -1,0 +1,22 @@
+{'campaign': 30, 'daily_dates_per_state': 365, 'daily_states': 2, 'source_boards_checked': 760, 'all_unique': True, 'all_logic': True, 'all_regions_connected': True, 'elapsed_seconds': 2.07}
+{
+  dateStateOutputs: 5840,
+  cycles: 8,
+  consecutiveDatesPerCycle: 365,
+  eligibilityStates: 2,
+  unique: true,
+  pureLogic: true,
+  deterministicByLocalDate: true,
+  timezone: 'America/New_York'
+}
+{
+  "date_state_outputs": 5840,
+  "consecutive_dates_per_state": 2920,
+  "eligibility_states": 2,
+  "cycles": 8,
+  "all_unique": true,
+  "all_pure_logic": true,
+  "every_python_oracle_agrees_with_js": true,
+  "timezone": "America/New_York",
+  "elapsed_seconds": 11.08
+}

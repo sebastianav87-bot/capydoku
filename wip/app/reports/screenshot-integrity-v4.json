@@ -1,0 +1,1403 @@
+{
+  "cache": "capydoku-v4-9d6ebe4d0481",
+  "main_count": 139,
+  "by_viewport": {
+    "412x915": 90,
+    "360x780": 49
+  },
+  "all_exact": true,
+  "all_documents_fit": true,
+  "browser_errors": [],
+  "records": [
+    {
+      "file": "reports/screenshots-v4/00a-nickname-empty.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "6c80b47b2f01a96bda0285c298bc5d4d04cd0e04ce84c301f3894d3621188c6d"
+    },
+    {
+      "file": "reports/screenshots-v4/00b-nickname-filled.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "3b97cb0da69e1d8b86c04b694d1b247cb90f5ee4ca8f49c43bc1c6e79a928481"
+    },
+    {
+      "file": "reports/screenshots-v4/00-choose-capy.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "fd5be5cc5d5891bd54d87544013bebbfdab760b565ced086c68a44811b0afba7"
+    },
+    {
+      "file": "reports/screenshots-v4/01-home-world1.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "051ff8f66d8b175632878ab8b38d4c54cc79f88124e81898e779fe96f3717707"
+    },
+    {
+      "file": "reports/screenshots-v4/02-home-world2.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "32dcea8e0b4e5cbe3a174fb41bf813207cdd30b9c01f1f276e8cb689beeea163"
+    },
+    {
+      "file": "reports/screenshots-v4/03-home-world3.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "e91d62e7de45dbbedd873c7f7de20a260f70ef2e5c326d5a52526fec5ab8c32f"
+    },
+    {
+      "file": "reports/screenshots-v4/04-boss10-next.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "acf5f9ff78c05850392afea3ec9e243bf94e2819d1d226f98a7cbaaf94c88b19"
+    },
+    {
+      "file": "reports/screenshots-v4/05-boss20-next.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "aa1f38c4e35979328a0b96bc0638c9b4fc59df655dc516eb9148b1d94a75e48c"
+    },
+    {
+      "file": "reports/screenshots-v4/06-boss30-next.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "d91329b77f7bef8972d28d2f066a65ebcb3e8095be37fa3688963925dd69e4ed"
+    },
+    {
+      "file": "reports/screenshots-v4/07-boss30-beaten.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "cf2cfd048643d7d3b00ded3374296e00b6566f9cdb2b045ce15913362097b9d3"
+    },
+    {
+      "file": "reports/screenshots-v4/08-pond3-5x5.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "92a55585507e474a746ecd24b0aca9b4691d127fbc7ff4e4d98914bb50c90288"
+    },
+    {
+      "file": "reports/screenshots-v4/09-pond11-6x6.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "139b108a2400d1cb46f827cec5b422588f1f7a601a4337bfcb0fc8b5f3ee1e3c"
+    },
+    {
+      "file": "reports/screenshots-v4/10-pond21-7x7.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "11bb1685570217aca0098b48e91a8e5fb4a5fec4fec6cf6f0468c4cf1029bf22"
+    },
+    {
+      "file": "reports/screenshots-v4/11-rules-sheet.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "893d27dc88c510c6c65c8734ab37437d4dc5f8fce678bcf7680f0a4cd78c429e"
+    },
+    {
+      "file": "reports/screenshots-v4/12-switch-sheet.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "f272892ff60cc4db4bbf19ccc05b3075d0b41395c4d281951398e3ac7666a095"
+    },
+    {
+      "file": "reports/screenshots-v4/13-peek-ghost.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "2794908821c325531e3f46602a91987dc21a93119cfec2e276fce7b16306b06b"
+    },
+    {
+      "file": "reports/screenshots-v4/14-nap-protected.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "f90627a69986ca97831462dcd972aed0d2496b3501b7800c1c8515aad777b2d7"
+    },
+    {
+      "file": "reports/screenshots-v4/14b-drag-mid-gesture.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "2ebf49c7663ca5bb2da3864cd3c7b285b1c03a87a0f33324db9db6d84e748e58"
+    },
+    {
+      "file": "reports/screenshots-v4/15-conflict-orange-lost.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "6ff88d93d1d02d289cbd253b124d9743babcc9dac2a85e8e943b02ada3c4dd91"
+    },
+    {
+      "file": "reports/screenshots-v4/16-second-chance-restored.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "3828eb3c7d8efdc318fd56dc3c4ccd782c89a8987fa201c7b7b822e55e04cac9"
+    },
+    {
+      "file": "reports/screenshots-v4/17-game-over.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "d25574326f7b2a37b67a883192c42fca5881084fb2cdba5937629e2105c5b167"
+    },
+    {
+      "file": "reports/screenshots-v4/18-native-bloom-ready.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "3e8584c06ed872e03fd74b3e5d0b5f537add15d50d47f6fdc6bb536ba4b4ce86"
+    },
+    {
+      "file": "reports/screenshots-v4/19-rock-intro.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "9bf0e55558443085f92ab3895e3efc77133de467d62e38e69b515c1008abe9b1"
+    },
+    {
+      "file": "reports/screenshots-v4/20-daily-no-rocks.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "d35fb1624cc0554b9f81fb117b6d2afc3920a2ea13c6ca671cecc1ee5b4329d0"
+    },
+    {
+      "file": "reports/screenshots-v4/21-daily-with-rocks.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "afde7a37e6119c19792b2bfa46a89900189fecdd25e1a18d8eb9dda8d77451dc"
+    },
+    {
+      "file": "reports/screenshots-v4/22-spring-stage-0.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "677968fb37c45c342db108087d9fc7b45606b8db62443473831383f944fd52ef"
+    },
+    {
+      "file": "reports/screenshots-v4/23-spring-stage-1.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "69df0a7019eb00f7d98e975ee796443e3bd3391c2285d06bc43a0eafb25f5243"
+    },
+    {
+      "file": "reports/screenshots-v4/24-spring-stage-2.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "bf2e43e7c3dbfdd81e809f8276bac6c4c3624d586db2ad7df64411822541d176"
+    },
+    {
+      "file": "reports/screenshots-v4/25-spring-stage-3.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "7421c01200dbb74e0374d061d6e21b7999ec5e04313148a82f91cec31ad4f8a3"
+    },
+    {
+      "file": "reports/screenshots-v4/26-spring-switch.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "7db6dec7e3cb74215dcee8a20552fc8777ef6be6b29a0e0738215d82b27ee11e"
+    },
+    {
+      "file": "reports/screenshots-v4/70-map-lilies.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "a7cb42adff91efb832a11c407c856d3d52765906b31b88514f7a9adb9c9715cf"
+    },
+    {
+      "file": "reports/screenshots-v4/71-pond-replay.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "bbece8e1389ec3ee61920517d5e00f413ee87bd7c59102e4e4b956feb3d829f5"
+    },
+    {
+      "file": "reports/screenshots-v4/27-settings-music.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "e74701a0638550f6448f3f75b89e5da285ba24a980e42d774c401f81170e397d"
+    },
+    {
+      "file": "reports/screenshots-v4/72-progress-collection.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "e004c2c3fb1a9503d6e5448fa88bb00c288916b2d1f60e2d0813887f4e9d5fe3"
+    },
+    {
+      "file": "reports/screenshots-v4/73-progress-detail.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "0566665b55c4888281e929fb01c1659b9caed600bacc93c9cb38d003783feae0"
+    },
+    {
+      "file": "reports/screenshots-v4/74-edit-nickname.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "ec48f2c57320544c94ecd7becb630b79d613b0182df6bad883be63a021b2da62"
+    },
+    {
+      "file": "reports/screenshots-v4/28-tutorial-tap.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "08ad680589870f383cf5f0c31385e16d5c8397705c33f2e7cf1bc3566686f66b"
+    },
+    {
+      "file": "reports/screenshots-v4/29-tutorial-double-tap.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "e5bf472bea5f84913e7d8d72bb8f9990ac82ce383bc99efbda97b4dd05d94d16"
+    },
+    {
+      "file": "reports/screenshots-v4/30-tutorial-drag.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "7408004e7152a96eee7f3eb61cb3c9ecdc91db90d7cb6232f1f72ca362fea71d"
+    },
+    {
+      "file": "reports/screenshots-v4/31-tutorial-done.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "11a6d22b1c99bd21e7ed55ce9119d169089090227439ac275e87fabdae15cf30"
+    },
+    {
+      "file": "reports/screenshots-v4/32-solved-0150ms.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "9162f01729a631e321ddd0adca5d79e190c819849a21bbd8f937e548c659c2e7"
+    },
+    {
+      "file": "reports/screenshots-v4/32-solved-0550ms.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "81c8602dd88cb7c44d649ee1362715fc4d6b400ea564fe59ce79eb8571ff02c6"
+    },
+    {
+      "file": "reports/screenshots-v4/32-solved-0950ms.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "923890b6c330a57c9b592962ede661d77d18e9d21782ae8eca96f7ae73bf23d2"
+    },
+    {
+      "file": "reports/screenshots-v4/32-solved-1350ms.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "de73104e6778ba4214ce1e31b132a4592d51f508fde4aa0efcf6b9052cc542ab"
+    },
+    {
+      "file": "reports/screenshots-v4/32-solved-1750ms.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "170129431206dce16a904f2ca102cc86a04eb6db9fe41f59f79818bac8094ff6"
+    },
+    {
+      "file": "reports/screenshots-v4/32-solved-2300ms.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "ba4fa6f742cea96bcc7bfab744e21bccc6567f786e8c68181c1fb96bb000a4a7"
+    },
+    {
+      "file": "reports/screenshots-v4/32-solved-3200ms.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "f62c9b163a5603c84ce5e037bcce2dbb98f4f4b72dc5323f0c2cb8e2fdf3efa2"
+    },
+    {
+      "file": "reports/screenshots-v4/33-end-normal.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "771253f82e15c173b78855cd82bc8b32d06abf87dbe20f168acc3add37134b55"
+    },
+    {
+      "file": "reports/screenshots-v4/33-end-boss.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "83ae541d8cc929e70f568f67dc2967817be4fe69782eb73b9442cfb82b0207f3"
+    },
+    {
+      "file": "reports/screenshots-v4/33-end-boss30.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "a06a2380e1abd939396763a73ddf3e9f4cd6f0da6a096f49c2cd0fedaa21dcac"
+    },
+    {
+      "file": "reports/screenshots-v4/33-end-daily.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "acf5990e7488c66f92ffb4bee7c148da5b15be2a7c7ef52620f76cad5e82e846"
+    },
+    {
+      "file": "reports/screenshots-v4/40-power-ready-jun.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "7532225d70f9decf72ecda21f2a0b20b49b2420948ffbfa80d80ec8f1f81eadd"
+    },
+    {
+      "file": "reports/screenshots-v4/41-first-use-jun.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "e5b7facb5a1a4b00cdbc2bc041998e3d4985f7621b551f75a3337bc53e644d03"
+    },
+    {
+      "file": "reports/screenshots-v4/42-power-used-jun.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "8739127cdec5ebfc802ccd68707159cfad8eeee27bc943d57121add88a0adf18"
+    },
+    {
+      "file": "reports/screenshots-v4/40-power-ready-bloom.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "3e8584c06ed872e03fd74b3e5d0b5f537add15d50d47f6fdc6bb536ba4b4ce86"
+    },
+    {
+      "file": "reports/screenshots-v4/41-first-use-bloom.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "f2f1607d34335178850906d0ec452dde3ea6c6c0ef7f2a9232f3844bc89274c7"
+    },
+    {
+      "file": "reports/screenshots-v4/42-power-used-bloom.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "3828eb3c7d8efdc318fd56dc3c4ccd782c89a8987fa201c7b7b822e55e04cac9"
+    },
+    {
+      "file": "reports/screenshots-v4/40-power-ready-remy.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "684dc1bc051a68479f61f5d45518964f315ff987d3504c9561043ed4d9266b4f"
+    },
+    {
+      "file": "reports/screenshots-v4/41-first-use-remy.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "c8a6193b8fd28a6681ccc4ebc03d910b00b87b584a4135c9b21082cfec367f01"
+    },
+    {
+      "file": "reports/screenshots-v4/42-power-used-remy.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "527f9efed94e9c693b26565dbe9f5ded758cb342ee68a0f296584b09a3dcb8b6"
+    },
+    {
+      "file": "reports/screenshots-v4/50-boss10-locked.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "1020c8bc84cd2e99aeebeeb519b072efa5087664b9ca2a0912c90b578393ae75"
+    },
+    {
+      "file": "reports/screenshots-v4/50-boss10-next.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "acf5f9ff78c05850392afea3ec9e243bf94e2819d1d226f98a7cbaaf94c88b19"
+    },
+    {
+      "file": "reports/screenshots-v4/50-boss10-beaten.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "32dcea8e0b4e5cbe3a174fb41bf813207cdd30b9c01f1f276e8cb689beeea163"
+    },
+    {
+      "file": "reports/screenshots-v4/50-boss20-locked.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "3b3df15f070ae993e4ba58c4a61b6bf7cbf0dd77dd2962c2d4c49ec67d08c297"
+    },
+    {
+      "file": "reports/screenshots-v4/50-boss20-next.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "aa1f38c4e35979328a0b96bc0638c9b4fc59df655dc516eb9148b1d94a75e48c"
+    },
+    {
+      "file": "reports/screenshots-v4/50-boss20-beaten.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "e91d62e7de45dbbedd873c7f7de20a260f70ef2e5c326d5a52526fec5ab8c32f"
+    },
+    {
+      "file": "reports/screenshots-v4/50-boss30-locked.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "b839c82ab8d218d09bf6215a3465fd0c0bcc0d0461a22ef3dccad589eb64fbd5"
+    },
+    {
+      "file": "reports/screenshots-v4/50-boss30-next.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "d91329b77f7bef8972d28d2f066a65ebcb3e8095be37fa3688963925dd69e4ed"
+    },
+    {
+      "file": "reports/screenshots-v4/50-boss30-beaten.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "cf2cfd048643d7d3b00ded3374296e00b6566f9cdb2b045ce15913362097b9d3"
+    },
+    {
+      "file": "reports/screenshots-v4/60-bloom-chooser.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "8275bc15204cfaf0c105db2d0707936f41cf1e6f300d24707300a5d9b9e7eb92"
+    },
+    {
+      "file": "reports/screenshots-v4/61-bloom-map.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "9e24098728d02245d0ac59f9d7c3a46a7e15ebcbf8ad3cac7e60062028469077"
+    },
+    {
+      "file": "reports/screenshots-v4/62-bloom-hud.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "3e8584c06ed872e03fd74b3e5d0b5f537add15d50d47f6fdc6bb536ba4b4ce86"
+    },
+    {
+      "file": "reports/screenshots-v4/63-bloom-power-button.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "6ff88d93d1d02d289cbd253b124d9743babcc9dac2a85e8e943b02ada3c4dd91"
+    },
+    {
+      "file": "reports/screenshots-v4/64-bloom-first-use.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "f2f1607d34335178850906d0ec452dde3ea6c6c0ef7f2a9232f3844bc89274c7"
+    },
+    {
+      "file": "reports/screenshots-v4/65-bloom-switch.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "d95b4eddf947dafc5ab2d4d1ecb7181359b5b20c4c6b862a036bbb840c259d38"
+    },
+    {
+      "file": "reports/screenshots-v4/66-bloom-spring.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "198a234cd55fbe9d36aad9a59696316636480ac3bfb174f6bcd18e4baa3b54de"
+    },
+    {
+      "file": "reports/screenshots-v4/67-bloom-celebration.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "017fda008034c8ef869fcf6205b1037f4b98b891b9076b6a11025009462fc52e"
+    },
+    {
+      "file": "reports/screenshots-v4/80-nickname-empty.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "6c80b47b2f01a96bda0285c298bc5d4d04cd0e04ce84c301f3894d3621188c6d"
+    },
+    {
+      "file": "reports/screenshots-v4/81-nickname-filled.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "3b97cb0da69e1d8b86c04b694d1b247cb90f5ee4ca8f49c43bc1c6e79a928481"
+    },
+    {
+      "file": "reports/screenshots-v4/82-lily-map-47.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "4eecec96aa8b2c7450ac07a7637cd4e9bb5868359d02b8f720bc1146e87e08cb"
+    },
+    {
+      "file": "reports/screenshots-v4/83-replay-two-lilies.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "1da39b08ec75ba965b8ed8ac3ece158a9ced2003c01bee103b74c0e7cb1021c6"
+    },
+    {
+      "file": "reports/screenshots-v4/84-settings-version.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "204e8b60b93898a43b2143e8ed9fba7230142f1a4ea13188c6fff7f5278deab2"
+    },
+    {
+      "file": "reports/screenshots-v4/85-progress-47.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "746a97129cb146a77f99af8cc731f8cc8cb0e8812c02f126e91efc0d030838d6"
+    },
+    {
+      "file": "reports/screenshots-v4/86-progress-expanded.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "404ab12e8e35c83a0521b58cb9642145a0da5dfac61276d2e10bfcee19bccccd"
+    },
+    {
+      "file": "reports/screenshots-v4/87-music-northumberland.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "cd27bb4d03cb3ca30a6f59134e145a61bfb59d8b116152a87bb0a0b1f11750ff"
+    },
+    {
+      "file": "reports/screenshots-v4/88-lilies-gentle-one.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "607f9518cd0909ea6afc6d64cbf681fd34d5ca333010fb1e4b1526ea9ee9b141"
+    },
+    {
+      "file": "reports/screenshots-v4/88-lilies-perfect-three.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "2c1652998e4f44df2adfa195171e26e4e58ca2cbfde52d35dde5b3f612b52765"
+    },
+    {
+      "file": "reports/screenshots-v4/88-lilies-fast-with-mistake.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "75423bd64d74a6e525c60c4f6449a5f09c72aaeb47cdd8419f846a8c3828c486"
+    },
+    {
+      "file": "reports/screenshots-v4/88-lilies-zero-mistakes-slow.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "51ee6c37ea65feda570d32bfd50387e29a816a3e5ea3c6d394d6b2651aca9d01"
+    },
+    {
+      "file": "reports/screenshots-v4/34-ios-install.png",
+      "width": 412,
+      "height": 915,
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "sha256": "f3310b243801e6990f5614353b1b83f32150a312822cd4eef77d73c431e99344"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/board-5x5.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "9f78467f97d505d27f5abae5990b762c951637fd8bffefd5031dac4bb690a958"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/board-6x6.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "020c6046a0765c3a796e97bd9b1d4affb593b286a5881c2c985b7f99bf07fc65"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/board-7x7.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "e47fa5459ad53d4d0b1702bcbba9a32922ab9e695614441101845e618d6b3558"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/end-normal.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "41f5278555aa7f706021769a68e0629568e6f8d3b7bee3ba07349370839978c6"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/end-boss.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "a79589759b6b5ab2d9218f0798c52d0b8891ab13becf6768a64a276ad27e7c61"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/end-boss30.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "cad77580e70c9e15566ce5ad1a0e06deefe111732f5d1897689bbfc635a874ba"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/end-daily.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "85e5f008fb68a6b62542916610c179b963098e85b15c81a2da4329d0fa4e154e"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/40-power-ready-jun.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "5aa9fc1c9bf786990056a2e5a1b1225a271229a335cff6b6cbb71c04522e9667"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/41-first-use-jun.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "032598e32a43cf6e2957485385b15e8ac48a9d25c384b83b66b9b244929523ea"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/42-power-used-jun.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "3fa76f9552fa6e46ccbab17e3f494680d46eb43c4600fc63b47fc328c1460467"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/40-power-ready-bloom.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "c5cc5cff812084cb76e57bead6bc8a50a8c2ff53e2cf9b98d799edf9ffd906ed"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/41-first-use-bloom.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "f0c93066ad731de78273d9402b5c1f1a91a57ba83c46e69e37d5eb5e8546c60e"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/42-power-used-bloom.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "9e4804af7874cb4ba09b9ffd880be5fec94535a63fcd4758a77fd5204c0d107c"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/40-power-ready-remy.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "125876ddbfd9fff0ae51e2a186bd4d6bef91ce9a6a6d553d4d1d83bbb6d47444"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/41-first-use-remy.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "eeee943fa69ecb828d1d969a039e67faf90f932ea09ea0140165861aeab821a7"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/42-power-used-remy.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "8c6e616208c7052a6fe40dae2fc40d1204ec501d18d5995c1ca275249e06083a"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/50-boss10-locked.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "2abbaae99cbf6e60bf2a89c9615c0497a02a4e7fcee2963d9d1f1df35a03adf4"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/50-boss10-next.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "4c0f7f4e9bd2420108e615052d7e7d99db1c83583d61b1fdbd93fd41f666eb02"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/50-boss10-beaten.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "2cf326f9e4578586ce881a31048590215149a4abaf2c24423b6fac62ebefd34b"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/50-boss20-locked.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "1e15b664b14c056900193b827958ca68b32de71d502b9a5512d8d97fb4dc0259"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/50-boss20-next.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "9944421732e697d772d0c74387ed98a8e12f0f1893b7ba54168390248f8a44f1"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/50-boss20-beaten.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "d14f873633f62a49d27e13d739559388b27ac0af7ef803564f63f41ce757cd69"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/50-boss30-locked.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "b4cf1804f892b053005a5db7219e30421e4afcb14e9b76763678ab195797a9f7"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/50-boss30-next.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "be8bb6a3ce0a1522b4d52f69ed35a70b1ba161a9bcec98cbbdec021c4b39979d"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/50-boss30-beaten.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "ed9f9121d89ebcd3e10b31a56abf19686c57711b9de42c91f4c25b61a46adbb0"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/60-bloom-chooser.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "6b93923a1461a6dee5671a254547ec572c52bda6e91e8680be242f33c9d8787b"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/61-bloom-map.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "db1f85d8abd4e39991fffc340443eeff68408c768316f7e5748743b163187d23"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/62-bloom-hud.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "c5cc5cff812084cb76e57bead6bc8a50a8c2ff53e2cf9b98d799edf9ffd906ed"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/63-bloom-power-button.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "5908dbeda41af2fcf961d28a17efaf3adc27e528098b31a4c6a11ce366bd125f"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/64-bloom-first-use.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "f0c93066ad731de78273d9402b5c1f1a91a57ba83c46e69e37d5eb5e8546c60e"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/65-bloom-switch.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "b5c66cdb6189fe1491415a0e8b3a027badc983f24e2f772dd749698d7d0a09b8"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/66-bloom-spring.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "83738761b390c47f2b066480ec8c34b69184beadd705209f63cf68bcc02a1d5e"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/67-bloom-celebration.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "4bd29530e2376e569afec1728d6121f0dee95545312fe39a08269e0eb2af2b9e"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/22-spring-stage-0.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "07ae8bdc1bf43e135ceb07b1df46fe5c69e6afa546daeabfa50c2dd19a0caa70"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/23-spring-stage-1.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "87e41b2a6f18181e8854ca77cc0c0977697e8176cd05b688407471a831f4649f"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/24-spring-stage-2.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "a30c551ba6a1f5252ccaef8364bf16d1c9a547bb75b3a7e0a063dd465118c27f"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/25-spring-stage-3.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "12622332ff00efc5169e47f354237e583314885abbc1e8487f900b69ff736f58"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/80-nickname-empty.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "f423de6201ceda119d8de4c876b2a711e1e4c28b6f2adbc008944c01e554c3c4"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/81-nickname-filled.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "a5797e7743e5671896c8b2704329890e9ad54329d6d804e0bcf40e776b3a1da8"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/82-lily-map-47.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "f1ccf777a8faa5d7c5f2b086a443262c032777b5c83e93b495d1259099bf7819"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/83-replay-two-lilies.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "8709e86cbdfad2e8cfc969502bce2a3b19400006341650845c51fc1f68c8e870"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/84-settings-version.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "bba7be905d4192bba069068544ef3770d853a31c07feca39d582ce4d80bfb92d"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/85-progress-47.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "5a7f045bbe89742fe134a3962b7b22c604f4122357559e85613851a1b38498b5"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/86-progress-expanded.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "422f58fb94e8d35d8807c631065601abcbae58483458a85ff94e8af9080c16be"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/87-music-northumberland.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "c972c8a68f67d88cd8e5f1c37ddf783f1cdcceea0716cf5752df25a9b7410ca3"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/88-lilies-gentle-one.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "e85a8c206d17530f1aa344b7235edb0d90915ec4705a96b6449a1d03a6ee67d9"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/88-lilies-perfect-three.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "ff93332622d01c252ce70aadb20c2cf4875052fbf17d2f4a7a6a777776f64adb"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/88-lilies-fast-with-mistake.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "735df550e38347ef32dd35b58eeb6359ad4bf1b1e3382dcecd999730725be57d"
+    },
+    {
+      "file": "reports/screenshots-v4/360x780/88-lilies-zero-mistakes-slow.png",
+      "width": 360,
+      "height": 780,
+      "document": {
+        "width": 360,
+        "height": 780
+      },
+      "sha256": "6c70053c77ec0e77421df9b3987508afaad5621ef8ac7de3dcdde626da834a62"
+    }
+  ]
+}

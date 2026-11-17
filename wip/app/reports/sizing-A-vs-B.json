@@ -1,0 +1,181 @@
+{
+  "default": "B",
+  "single_switch": "GAME_CONFIG.boardSizingMode in config.js",
+  "source_reference": {
+    "reference": "/workspace/capydoku/reference/meowdoku-level29.jpg",
+    "reference_sha256": "26245fda0227134436a10d3b5eafd51674a72f7932526c24dcc0fa34ad3c8cb6",
+    "image_px": [
+      1080,
+      2340
+    ],
+    "method": "Solid white outer frame straight edges, sampled at six rows; JPEG threshold min RGB>248 and channel spread<6. Excludes rounded corners/shadow. Edge uncertainty about \u00b11 px per side. Physical screenshot pixels are not CSS pixels.",
+    "outer_board_bounds_inclusive": {
+      "left": 15,
+      "right": 1064
+    },
+    "outer_board_width_px": 1050,
+    "outer_board_screen_ratio": 0.9722222222222222,
+    "outer_board_screen_percent": 97.22222222222221,
+    "colored_grid_bounds_inclusive_at_row800": {
+      "left": 32,
+      "right": 1047
+    },
+    "colored_grid_screen_ratio": 0.9407407407407408,
+    "samples": [
+      {
+        "row": 730,
+        "left_solid_white_edge": 15,
+        "right_solid_white_edge": 1064
+      },
+      {
+        "row": 800,
+        "left_solid_white_edge": 15,
+        "right_solid_white_edge": 1064
+      },
+      {
+        "row": 1000,
+        "left_solid_white_edge": 15,
+        "right_solid_white_edge": 1064
+      },
+      {
+        "row": 1200,
+        "left_solid_white_edge": 15,
+        "right_solid_white_edge": 1064
+      },
+      {
+        "row": 1500,
+        "left_solid_white_edge": 15,
+        "right_solid_white_edge": 1064
+      },
+      {
+        "row": 1700,
+        "left_solid_white_edge": 15,
+        "right_solid_white_edge": 1064
+      }
+    ],
+    "chosen_mode_B_ratio": 0.9722222222222222
+  },
+  "measurements": [
+    {
+      "mode": "A",
+      "viewport": "412x915",
+      "level": 3,
+      "n": 5,
+      "board_px": 294,
+      "cell_px": 52,
+      "minimum_cell_px": 52,
+      "board_screen_ratio": 0.7135922330097088
+    },
+    {
+      "mode": "A",
+      "viewport": "412x915",
+      "level": 9,
+      "n": 6,
+      "board_px": 349,
+      "cell_px": 52,
+      "minimum_cell_px": 52,
+      "board_screen_ratio": 0.8470873786407767
+    },
+    {
+      "mode": "A",
+      "viewport": "412x915",
+      "level": 21,
+      "n": 7,
+      "board_px": 404,
+      "cell_px": 52,
+      "minimum_cell_px": 52,
+      "board_screen_ratio": 0.9805825242718447
+    },
+    {
+      "mode": "A",
+      "viewport": "360x780",
+      "level": 3,
+      "n": 5,
+      "board_px": 294,
+      "cell_px": 52,
+      "minimum_cell_px": 52,
+      "board_screen_ratio": 0.8166666666666667
+    },
+    {
+      "mode": "A",
+      "viewport": "360x780",
+      "level": 9,
+      "n": 6,
+      "board_px": 349,
+      "cell_px": 52,
+      "minimum_cell_px": 52,
+      "board_screen_ratio": 0.9694444444444444
+    },
+    {
+      "mode": "A",
+      "viewport": "360x780",
+      "level": 21,
+      "n": 7,
+      "board_px": 352,
+      "cell_px": 44.5625,
+      "minimum_cell_px": 44.5625,
+      "board_screen_ratio": 0.9777777777777777
+    },
+    {
+      "mode": "B",
+      "viewport": "412x915",
+      "level": 3,
+      "n": 5,
+      "board_px": 400.546875,
+      "cell_px": 73.296875,
+      "minimum_cell_px": 73.296875,
+      "board_screen_ratio": 0.9722011529126213
+    },
+    {
+      "mode": "B",
+      "viewport": "412x915",
+      "level": 9,
+      "n": 6,
+      "board_px": 400.546875,
+      "cell_px": 60.578125,
+      "minimum_cell_px": 60.578125,
+      "board_screen_ratio": 0.9722011529126213
+    },
+    {
+      "mode": "B",
+      "viewport": "412x915",
+      "level": 21,
+      "n": 7,
+      "board_px": 400.546875,
+      "cell_px": 51.5,
+      "minimum_cell_px": 51.5,
+      "board_screen_ratio": 0.9722011529126213
+    },
+    {
+      "mode": "B",
+      "viewport": "360x780",
+      "level": 3,
+      "n": 5,
+      "board_px": 350,
+      "cell_px": 63.1875,
+      "minimum_cell_px": 63.1875,
+      "board_screen_ratio": 0.9722222222222222
+    },
+    {
+      "mode": "B",
+      "viewport": "360x780",
+      "level": 9,
+      "n": 6,
+      "board_px": 350,
+      "cell_px": 52.15625,
+      "minimum_cell_px": 52.15625,
+      "board_screen_ratio": 0.9722222222222222
+    },
+    {
+      "mode": "B",
+      "viewport": "360x780",
+      "level": 21,
+      "n": 7,
+      "board_px": 350,
+      "cell_px": 44.28125,
+      "minimum_cell_px": 44.28125,
+      "board_screen_ratio": 0.9722222222222222
+    }
+  ],
+  "measurement_notes": "Chromium getBoundingClientRect CSS pixels; cell column is the minimum across all button rects (subpixel grid rounding). Board includes frame and padding, not shadow. No reference raster pixel is treated as a CSS tap target."
+}

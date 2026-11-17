@@ -1,0 +1,10 @@
+{
+  "dateStateOutputs": 5840,
+  "cycles": 8,
+  "consecutiveDatesPerCycle": 365,
+  "eligibilityStates": 2,
+  "unique": true,
+  "pureLogic": true,
+  "deterministicByLocalDate": true,
+  "timezone": "America/New_York"
+}

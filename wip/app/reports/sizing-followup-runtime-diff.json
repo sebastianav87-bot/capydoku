@@ -1,0 +1,41 @@
+{
+  "snapshot_files": 45,
+  "snapshot_all_hashes_match": true,
+  "changed_files": [
+    {
+      "file": "KNOWN-ISSUES.md",
+      "before_sha256": "3670e0c5158e9859de69fda40485ae4cf09793b75cce251f29ca8e14817801a0",
+      "after_sha256": "295d02da6ad41eb6f4419902a0a84d99d6ca6163cbca3afb7d6788f8068d45bb"
+    },
+    {
+      "file": "README.md",
+      "before_sha256": "277cd356ddffe1e1f874baeda5840f378db02f172fe2fc69bf8944410668a324",
+      "after_sha256": "66c01c6eb8f98322bc347212439894624415f4d9e480e44e8774ebdd94c36550"
+    },
+    {
+      "file": "app.js",
+      "before_sha256": "2f68b30d5f4ae2a66cf5f1eff5436bc1f788aab6ab691fea6b2f930f884062ab",
+      "after_sha256": "b17ca83cd6bfa773ce34271593f035e717d306f44e3fd3fbbf44ac1fd869c24c"
+    },
+    {
+      "file": "config.js",
+      "before_sha256": "6312b8fb69d710f14099da60e96e3d44616787c61197f194fa3cbbc5454e3ff6",
+      "after_sha256": "6eb8985f00947e389e9816f39b5f50356789299676270899ecb7bf266770b4bc"
+    },
+    {
+      "file": "layout.js",
+      "before_sha256": "5f1d4e3a2d8069395a9e95176c16e3e505a408ecc0bd92fc01261e69c75ff6eb",
+      "after_sha256": "ba291d9a9f4789715033c69174350b3f2febf1590c11a61900b9844e0be1dd80"
+    },
+    {
+      "file": "starters-v3.css",
+      "before_sha256": "ec16b575df45e1bcf4a5b14d05b34c7eed2d05c3749fa4479eee8ee80b11809d",
+      "after_sha256": "1e4b96548956b2b7b611a051f32d432067ec0319c9a13eb7a9944a812256e7b2"
+    },
+    {
+      "file": "sw.js",
+      "before_sha256": "cfabfa9d184df80cc54c2c22d9a0630fa6c925c6a21b6bbb997268e1bd1e463a",
+      "after_sha256": "4a7df698500cdd64afb106a586233526dbe2858e929b3184cb59bd186ed9eacc"
+    }
+  ]
+}

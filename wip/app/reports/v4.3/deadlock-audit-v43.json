@@ -1,0 +1,50 @@
+[
+  {
+    "level": "Reed Crates",
+    "reachable": 594712,
+    "unsolvableReachable": 530244,
+    "flagged": 530244,
+    "falsePositives": 0,
+    "recall": 1
+  },
+  {
+    "level": "Reedwater Gate",
+    "reachable": 44814,
+    "unsolvableReachable": 37772,
+    "flagged": 33271,
+    "falsePositives": 0,
+    "recall": 0.881
+  },
+  {
+    "level": "Bamboo Crates",
+    "reachable": 492665,
+    "unsolvableReachable": 368246,
+    "flagged": 366147,
+    "falsePositives": 0,
+    "recall": 0.994
+  },
+  {
+    "level": "Bamboo Gate",
+    "reachable": 379701,
+    "unsolvableReachable": 276616,
+    "flagged": 270218,
+    "falsePositives": 0,
+    "recall": 0.977
+  },
+  {
+    "level": "Summit Crates",
+    "reachable": 1239330,
+    "unsolvableReachable": 1077656,
+    "flagged": 1071920,
+    "falsePositives": 0,
+    "recall": 0.995
+  },
+  {
+    "level": "Cloudwater Finale",
+    "reachable": 912436,
+    "unsolvableReachable": 790385,
+    "flagged": 787829,
+    "falsePositives": 0,
+    "recall": 0.997
+  }
+]

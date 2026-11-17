@@ -1,0 +1,17 @@
+
+Running 8 tests using 1 worker
+
+(node:746368) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [mobile-412] › tests/updates.spec.js:9:1 › map automatically updates once; running label, post-reload toast once, throttled focus/visibility, unchanged/offline/failing checks have no loop (4.0s)
+  ✓  2 [mobile-412] › tests/updates.spec.js:10:35 › mid-pond auto update defers until map; old asset bytes survive SW restart/offline, then latest board/progress retained (3.1s)
+  ✓  3 [mobile-412] › tests/updates.spec.js:10:35 › mid-pond auto update defers until finish; old asset bytes survive SW restart/offline, then latest board/progress retained (3.6s)
+  ✓  4 [mobile-412] › tests/updates.spec.js:11:1 › LIVE v3.1.3 first takeover is passive, never reloads its old pond; old cache pinned offline; one safe manual relaunch reaches v4 without loss (3.2s)
+(node:747438) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  5 [mobile-360] › tests/updates.spec.js:9:1 › map automatically updates once; running label, post-reload toast once, throttled focus/visibility, unchanged/offline/failing checks have no loop (4.0s)
+  ✓  6 [mobile-360] › tests/updates.spec.js:10:35 › mid-pond auto update defers until map; old asset bytes survive SW restart/offline, then latest board/progress retained (3.1s)
+  ✓  7 [mobile-360] › tests/updates.spec.js:10:35 › mid-pond auto update defers until finish; old asset bytes survive SW restart/offline, then latest board/progress retained (3.6s)
+  ✓  8 [mobile-360] › tests/updates.spec.js:11:1 › LIVE v3.1.3 first takeover is passive, never reloads its old pond; old cache pinned offline; one safe manual relaunch reaches v4 without loss (3.1s)
+
+  8 passed (28.8s)

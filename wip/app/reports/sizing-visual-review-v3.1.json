@@ -1,0 +1,27 @@
+{
+  "reviewed_at": "2026-11-09 21:37:00 EST",
+  "reviewed_exact_412x915": [
+    "screenshots-v3.1/sizing/A-level-21-7x7.png",
+    "screenshots-v3.1/sizing/A-level-3-5x5.png",
+    "screenshots-v3.1/sizing/A-level-9-6x6.png",
+    "screenshots-v3.1/sizing/B-level-21-7x7.png",
+    "screenshots-v3.1/sizing/B-level-3-5x5.png",
+    "screenshots-v3.1/sizing/B-level-9-6x6.png"
+  ],
+  "reviewed_sheets": [
+    "sizing-A-vs-B.png",
+    "sizing-end-fit-review.png"
+  ],
+  "additional_native_review": [
+    "screenshots-v3.1/360x780/after-end-daily-360.png",
+    "screenshots-v3.1/after-end-boss30-412.png"
+  ],
+  "findings": [
+    "A/B image proportions visibly differ on 5\u00d75 and 6\u00d76 as intended; B outer frame stays constant through all three rows.",
+    "No board or header/counter/Relax clipping or overlap in the six 412\u00d7915 captures.",
+    "Both-size solved sheets show all three controls and no overlap; native 360 daily and 412 boss30 were additionally inspected.",
+    "B 5\u00d75 capy/cells are intentionally larger; this is the explicit latest-priority tradeoff, not an unnoticed mismatch."
+  ],
+  "minimum_tested_cell_css_px": 44.28125,
+  "real_device_tested": false
+}

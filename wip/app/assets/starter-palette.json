@@ -1,0 +1,154 @@
+{
+  "accessories": {
+    "navy": "#32417B",
+    "gold": "#E2AD32",
+    "rust": "#A65430"
+  },
+  "rgb": {
+    "navy": [
+      50,
+      65,
+      123
+    ],
+    "gold": [
+      226,
+      173,
+      50
+    ],
+    "rust": [
+      166,
+      84,
+      48
+    ]
+  },
+  "pairwise_dE": {
+    "normal": {
+      "navy-gold": 67.3,
+      "navy-rust": 40.4,
+      "gold-rust": 33.7
+    },
+    "deuteranopia": {
+      "navy-gold": 69.8,
+      "navy-rust": 45.8,
+      "gold-rust": 28.7
+    },
+    "protanopia": {
+      "navy-gold": 64.6,
+      "navy-rust": 41.1,
+      "gold-rust": 32.5
+    },
+    "tritanopia": {
+      "navy-gold": 59.7,
+      "navy-rust": 45.7,
+      "gold-rust": 22.7
+    }
+  },
+  "zone_contrast": {
+    "navy": {
+      "A": {
+        "acc": 3.99,
+        "outline": 5.94,
+        "mark": "OK"
+      },
+      "B": {
+        "acc": 6.15,
+        "outline": 9.15,
+        "mark": "OK"
+      },
+      "C": {
+        "acc": 6.4,
+        "outline": 9.52,
+        "mark": "OK"
+      },
+      "D": {
+        "acc": 2.57,
+        "outline": 3.82,
+        "mark": "OK*"
+      },
+      "E": {
+        "acc": 3.7,
+        "outline": 5.51,
+        "mark": "OK"
+      },
+      "F": {
+        "acc": 4.06,
+        "outline": 6.04,
+        "mark": "OK"
+      }
+    },
+    "gold": {
+      "A": {
+        "acc": 1.18,
+        "outline": 5.94,
+        "mark": "OK*"
+      },
+      "B": {
+        "acc": 1.31,
+        "outline": 9.15,
+        "mark": "OK*"
+      },
+      "C": {
+        "acc": 1.36,
+        "outline": 9.52,
+        "mark": "OK*"
+      },
+      "D": {
+        "acc": 1.83,
+        "outline": 3.82,
+        "mark": "OK*"
+      },
+      "E": {
+        "acc": 1.27,
+        "outline": 5.51,
+        "mark": "OK*"
+      },
+      "F": {
+        "acc": 1.16,
+        "outline": 6.04,
+        "mark": "OK*"
+      }
+    },
+    "rust": {
+      "A": {
+        "acc": 2.21,
+        "outline": 5.94,
+        "mark": "OK*"
+      },
+      "B": {
+        "acc": 3.41,
+        "outline": 9.15,
+        "mark": "OK"
+      },
+      "C": {
+        "acc": 3.54,
+        "outline": 9.52,
+        "mark": "OK"
+      },
+      "D": {
+        "acc": 1.42,
+        "outline": 3.82,
+        "mark": "OK*"
+      },
+      "E": {
+        "acc": 2.05,
+        "outline": 5.51,
+        "mark": "OK*"
+      },
+      "F": {
+        "acc": 2.25,
+        "outline": 6.04,
+        "mark": "OK*"
+      }
+    }
+  },
+  "mapping": {
+    "jun": "navy",
+    "bloom": "gold",
+    "remy": "rust"
+  },
+  "accessory_names": {
+    "navy": "Navy scarf",
+    "gold": "Sunflower",
+    "rust": "Rust beanie"
+  }
+}

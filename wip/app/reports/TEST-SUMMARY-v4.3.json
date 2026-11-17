@@ -1,0 +1,183 @@
+{
+ "version": "4.3 rev b",
+ "cache": "capydoku-v4.3-e6d18440f44c",
+ "precache_urls": 105,
+ "published": false,
+ "built_on": "v4.2.1 local (backup /workspace/capydoku/app-v4.2.1-backup); v4.2.1 folded in, not shipped separately",
+ "runtime_tar": {
+  "path": "/workspace/capydoku/capydoku-v4.3-runtime.tar.gz",
+  "files": 108,
+  "bytes": 12192076,
+  "sha256": "4d5cb5fd2365f164f67294a49e51f28155f18bf33ca7385f3d9839ce1d3adb16",
+  "smoke": "archive-only server: 105/105 online, 105/105 offline, offline reload, unseen query, progress persisted, 0 browser errors (reports/v4.3/runtime-archive-smoke-v4.3.json)"
+ },
+ "crate_levels": {
+  "file": "/workspace/capydoku/app/crate-levels.json",
+  "sha256": "dee88a6e8c79d47a2a994a3d39b5c280199ebb01107d475b3f4f293703538b8b",
+  "rules": "/workspace/capydoku/app/crates.js",
+  "rules_sha256": "37acdb0f3fc4756926337fbd04d73d70aa87a8cd284dcbc4e468fdcb481b955f",
+  "source": "/workspace/capydoku/mockup/boxworld-concept/v4.3-review/crate-ramp-edited.json",
+  "ponds": [
+   5,
+   10,
+   15,
+   20,
+   25,
+   30
+  ],
+  "optimal_moves": [
+   26,
+   30,
+   39,
+   57,
+   66,
+   80
+  ],
+  "pars": [
+   40,
+   45,
+   55,
+   85,
+   95,
+   115
+  ],
+  "par_rule": "optimal moves x 1.45, nearest 5",
+  "verification": [
+   "reports/v4.3/crate-levels-solver-v43.json",
+   "reports/v4.3/deadlock-audit-v43.json (0 false positives)",
+   "reports/v4.3/crate-analysis-final.json (Designer analyze.py; hint rules unchanged)"
+  ]
+ },
+ "unit": {
+  "tests": 181,
+  "passed": 181,
+  "failed": 0,
+  "log": "reports/v4.3/unit-revb-final.log",
+  "new": "tests/v43-wrongcapy.test.js (8)"
+ },
+ "e2e_full": {
+  "tests": 346,
+  "projects": [
+   "mobile-412 (412x915)",
+   "mobile-360 (360x780)"
+  ],
+  "first_run": {
+   "passed": 341,
+   "failed": 5,
+   "log": "reports/v4.3/e2e-build-try2.log",
+   "json": "reports/playwright-v4.3-try2.json"
+  },
+  "failures": {
+   "starters real v2 SW upgrade (x2 viewports)": "stale assertion: refreshed v4.3 board makes Peek available; test updated, rerun pass",
+   "v31-extension solved boss/boss30 fit (2)": "45 s timeout under full-suite load; rerun pass (no change)",
+   "power-identity Bloom @360": "pond timer flushed elapsedMs while the first-use card was open; comparison now ignores the clock field; rerun pass"
+  },
+  "rerun": {
+   "logs": [
+    "reports/v4.3/e2e-build-rerun.log (23/24)",
+    "reports/v4.3/e2e-build-rerun2.log (6/6)"
+   ]
+  },
+  "result": "346/346 after rerun; 2 load flakes reported as flaky"
+ },
+ "e2e_v43_specs_second_run": {
+  "specs": [
+   "v43-crates.spec.js",
+   "upgrade-v43.spec.js",
+   "v43.spec.js"
+  ],
+  "tests": 52,
+  "passed": 52,
+  "log": "reports/v4.3/e2e-v43-new.log"
+ },
+ "triage_try1": "reports/v4.3/e2e-build-try1.log: stopped early; old specs assumed the v4.2 layout and were adapted (see KNOWN-ISSUES.md v4.3 list)",
+ "retired_specs": [
+  "tests/v42.spec.js",
+  "tests/upgrade-v42.spec.js"
+ ],
+ "boss29": {
+  "n": 10,
+  "logic_score": 1001,
+  "rocks": [
+   35,
+   64
+  ],
+  "cell_px_412x915": 35.14,
+  "cell_px_360x780": 30.09,
+  "no_scroll": true,
+  "corner_taps": "ok",
+  "reports": [
+   "reports/v4.3/boss29-fit-412.json",
+   "reports/v4.3/boss29-fit-360.json"
+  ]
+ },
+ "cell_px_360": {
+  "7x7": 44.28,
+  "8x8": 38.38,
+  "9x9": 33.77,
+  "10x10": 30.09
+ },
+ "screenshots": {
+  "dir": "reports/screenshots-v4.3/",
+  "new_v43": 60,
+  "regression": 436,
+  "contact_sheet_key": "reports/contact-sheet-v4.3-key.png",
+  "contact_sheet_all": "reports/contact-sheet-v4.3.png",
+  "contact_sheet_regression": "reports/contact-sheet-v4.3-regression.png"
+ },
+ "e2e": {
+  "tests": 398,
+  "projects": [
+   "mobile-412",
+   "mobile-360"
+  ],
+  "first_full_run": {
+   "passed": 396,
+   "failed": 2,
+   "log": "reports/v4.3/e2e-revb-final.log"
+  },
+  "flaky_reruns": {
+   "tests": [
+    "v41-flow rocks: tapping a rock does nothing (412)",
+    "v43-revb WCAG AA audit (412)"
+   ],
+   "result": "8/8 passed unchanged (1x + 3x repeat)",
+   "log": "reports/v4.3/e2e-revb-final-rerun.log"
+  },
+  "final": "398/398",
+  "v43_specs_separate_run": {
+   "passed": 104,
+   "failed": 0,
+   "log": "reports/v4.3/e2e-revb-v43-specs.log"
+  }
+ },
+ "boss29_cells_px": {
+  "360x780": 33.0,
+  "412x915": 35.14
+ },
+ "contrast": {
+  "white_on_primary_gradient": [
+   4.78,
+   4.96
+  ],
+  "white_on_green_700": 6.38,
+  "ink_header_on_cream": 9.12,
+  "ink_sub_on_cream": 5.47,
+  "ink_sub_on_page_bg": 4.92,
+  "browser_audit": "hub (ponds 7/9/10/31), Progress, summary: no small text under 4.5:1 at 412 and 360",
+  "note": "#4B904C with white is 3.89, used only for large text / non-text"
+ },
+ "revb": {
+  "zone_colours": {
+   "8": "#A6A5E7 (open squares)",
+   "9": "#E8A0BF",
+   "10": "#BCD49E"
+  },
+  "no_level_screen": true,
+  "fresh_leaf": true,
+  "wrong_capy_rule": true,
+  "clear_conflicts": "removed from UI (helper kept, unused)",
+  "pond23_v42_regression": "unit + E2E; screenshot file not on box, position rebuilt from app-v4.2.1-backup/levels.json"
+ },
+ "smoke": "archive-only server: 105/105 online, 105/105 offline, offline reload, unseen query, progress persisted, 0 browser errors"
+}

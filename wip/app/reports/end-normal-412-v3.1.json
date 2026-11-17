@@ -1,0 +1,52 @@
+{
+  "viewport": {
+    "width": 412,
+    "height": 915
+  },
+  "document": {
+    "h": 915,
+    "w": 412,
+    "inner": 915
+  },
+  "buttons": [
+    {
+      "text": "♨ Hot Spring",
+      "rect": {
+        "x": 55.5,
+        "y": 845,
+        "width": 109,
+        "height": 46,
+        "top": 845,
+        "right": 164.5,
+        "bottom": 891,
+        "left": 55.5
+      }
+    },
+    {
+      "text": "Replay",
+      "rect": {
+        "x": 172.5,
+        "y": 845,
+        "width": 68,
+        "height": 46,
+        "top": 845,
+        "right": 240.5,
+        "bottom": 891,
+        "left": 172.5
+      }
+    },
+    {
+      "text": "Next pond →",
+      "rect": {
+        "x": 248.5,
+        "y": 845,
+        "width": 108,
+        "height": 46,
+        "top": 845,
+        "right": 356.5,
+        "bottom": 891,
+        "left": 248.5
+      }
+    }
+  ]
+}

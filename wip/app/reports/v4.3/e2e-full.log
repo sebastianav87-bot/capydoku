@@ -1,0 +1,648 @@
+
+Running 340 tests using 1 worker
+
+(node:1522245) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓    1 [mobile-412] › tests/design-latest.spec.js:6:1 › v4.1 (illustrated map removed): boss tiles keep locked/next/beaten state; all 30 pond tiles ≥44px, in order, no overlap or clipping (2.6s)
+  ✓    2 [mobile-412] › tests/design-latest.spec.js:8:1 › every Bloom reference is v6.4 across chooser,map,HUD,power,first-use,switch,Spring,celebration; density3 uses supplied files (6.7s)
+  ✓    3 [mobile-412] › tests/mobile.spec.js:14:1 › home, marks/capy/clear and undo; double tap no X flash; mobile targets (3.1s)
+  ✓    4 [mobile-412] › tests/mobile.spec.js:16:1 › Peek ghosts one unsolved spot, never places; Hint is gone and power stays spent (1.4s)
+  ✓    5 [mobile-412] › tests/mobile.spec.js:17:54 › row violation red and costs exactly one orange; clear repairs (1.2s)
+  ✓    6 [mobile-412] › tests/mobile.spec.js:17:54 › column violation red and costs exactly one orange; clear repairs (1.3s)
+  ✓    7 [mobile-412] › tests/mobile.spec.js:17:54 › zone violation red and costs exactly one orange; clear repairs (1.2s)
+  ✓    8 [mobile-412] › tests/mobile.spec.js:17:54 › diagonal violation red and costs exactly one orange; clear repairs (1.3s)
+  ✓    9 [mobile-412] › tests/mobile.spec.js:18:1 › game over, input locked, retry resets oranges and board (1.9s)
+  ✓   10 [mobile-412] › tests/mobile.spec.js:19:1 › solve, actual jump frames, unlock + persistence after reload (5.0s)
+  ✓   11 [mobile-412] › tests/mobile.spec.js:20:1 › boss 10 grows spring and grants persistent pure-solve golden lily (5.6s)
+  ✓   12 [mobile-412] › tests/mobile.spec.js:21:1 › boss 20/30 rewards and blocked rocks; 7×7 tap targets (3.2s)
+  ✓   13 [mobile-412] › tests/mobile.spec.js:22:1 › Daily Pond deterministic reload + same-day streak, consecutive +1, missed-day reset (4.0s)
+  ✓   14 [mobile-412] › tests/mobile.spec.js:24:1 › PWA precache 200 + offline startup/reload, unseen query, essential resources (2.2s)
+  ✓   15 [mobile-412] › tests/mobile.spec.js:25:1 › settings have no mode; corrupt and future storage cannot crash or overwrite (2.1s)
+  ✓   16 [mobile-412] › tests/no-mode.spec.js:10:1 › no Relax or Chill UI on map, settings, Hot Spring, chooser, puzzle, rules or tutorial; every starter has its native power (2.5s)
+  ✓   17 [mobile-412] › tests/no-mode.spec.js:11:1 › v3.1.x no-lives attempt restarts normal with three oranges; explicit normal attempt, path, streak and settings preserved (1.5s)
+  ✓   18 [mobile-412] › tests/no-mode.spec.js:12:1 › game over only offers retry and map for all companions; retry starts a full normal attempt (5.7s)
+  ✓   19 [mobile-412] › tests/no-mode.spec.js:13:1 › Hot Spring next-tier silhouette and exact real upgrade copy at tiers 0/1/2; hidden at max tier (2.1s)
+  ✓   20 [mobile-412] › tests/no-mode.spec.js:14:1 › single-tap X/clear/capy-clear each emit one deferred tick (v4.1 markX/clearTap); doubles only capy pattern; toggle off silences all (4.9s)
+  ✓   21 [mobile-412] › tests/no-mode.spec.js:15:1 › pending tap on a different cell resolves once; held second contact upgrades without a tick or X flash (1.5s)
+  ✓   22 [mobile-412] › tests/power-identity.spec.js:12:1 › v6.1 chooser, crafted switch rows and all three Hot Spring tags repeat exact power identity; switching preserves progress (1.7s)
+  ✓   23 [mobile-412] › tests/power-identity.spec.js:13:41 › Jun: 72px face/icon power, first-use Not now / Use, once-only persistence, 1→0 badge (2.1s)
+  ✓   24 [mobile-412] › tests/power-identity.spec.js:13:41 › Bloom: 72px face/icon power, first-use Not now / Use, once-only persistence, 1→0 badge (2.6s)
+  ✓   25 [mobile-412] › tests/power-identity.spec.js:13:41 › Remy: 72px face/icon power, first-use Not now / Use, once-only persistence, 1→0 badge (2.1s)
+  ✓   26 [mobile-412] › tests/power-identity.spec.js:14:106 › actual read-only v311 hotfix tree → v4 SW upgrade, old no-lives attempt reset, progress preserved, offline recovery (3.9s)
+  ✓   27 [mobile-412] › tests/power-identity.spec.js:14:106 › actual read-only v312 hotfix tree → v4 SW upgrade, old no-lives attempt reset, progress preserved, offline recovery (3.7s)
+  ✓   28 [mobile-412] › tests/power-identity.spec.js:14:106 › actual read-only v313 hotfix tree → v4 SW upgrade, old no-lives attempt reset, progress preserved, offline recovery (3.5s)
+  ✓   29 [mobile-412] › tests/relax-bug.spec.js:14:2 › 412×915 priority regression › late native click after control fallback cannot become a phantom board tap (1.4s)
+  ✓   30 [mobile-412] › tests/relax-bug.spec.js:19:1 › 412×915 priority regression › purple Peek keeps its zone and hides only while obstructed; real generic capy stays untinted (1.8s)
+  ✓   31 [mobile-412] › tests/relax-bug.spec.js:20:1 › 412×915 priority regression › normal legacy overfill shows honest counts; Clear conflicts is one undo with no refunds (851ms)
+  ✓   32 [mobile-412] › tests/relax-bug.spec.js:14:2 › 360×780 priority regression › late native click after control fallback cannot become a phantom board tap (1.3s)
+  ✓   33 [mobile-412] › tests/relax-bug.spec.js:19:1 › 360×780 priority regression › purple Peek keeps its zone and hides only while obstructed; real generic capy stays untinted (1.7s)
+  ✓   34 [mobile-412] › tests/relax-bug.spec.js:20:1 › 360×780 priority regression › normal legacy overfill shows honest counts; Clear conflicts is one undo with no refunds (893ms)
+  ✓   35 [mobile-412] › tests/rewards.spec.js:8:1 › nickname first, local emoji validation, chooser second, tutorial third; persists and Settings edit preserves identity/progress (1.8s)
+  ✓   36 [mobile-412] › tests/rewards.spec.js:9:1 › existing players asked nickname once; completed-only lilies migration preserves path/streak and normal partial board (1.2s)
+  ✓   37 [mobile-412] › tests/rewards.spec.js:10:1 › independent lilies earned across attempts, strict target, best retained, never lost, map/replay/ledger agree and result fits (2.3s)
+  ✓   38 [mobile-412] › tests/rewards.spec.js:11:1 › active timer excludes rules and hidden app; resumes cumulative elapsed on reload; no countdown (1.0s)
+  ✓   39 [mobile-412] › tests/rewards.spec.js:12:1 › only same-origin static GETs/SW update check; no consent, analytics, telemetry or nickname sending (1.3s)
+  ✓   40 [mobile-412] › tests/rewards.spec.js:13:1 › one Northumberland loop crosses the seam offline; voluntary credit and native loop, no old playlist (3.8s)
+  ✓   41 [mobile-412] › tests/rewards.spec.js:14:1 › Bloom refund and Remy protection do not erase the historical mistake metric; Replay resets attempt only (2.5s)
+  ✓   42 [mobile-412] › tests/rewards.spec.js:15:1 › v4.1: for every next pond the Continue card names it and all lily rows fit inside their tiles (5.4s)
+  ✓   43 [mobile-412] › tests/rewards.spec.js:17:146 › fresh independent lily conditions: mistakes 1, time 300000; Replay resets metrics, not awards (780ms)
+  ✓   44 [mobile-412] › tests/rewards.spec.js:17:146 › fresh independent lily conditions: mistakes 0, time 120000; Replay resets metrics, not awards (771ms)
+  ✓   45 [mobile-412] › tests/rewards.spec.js:17:146 › fresh independent lily conditions: mistakes 1, time 1000; Replay resets metrics, not awards (728ms)
+  ✓   46 [mobile-412] › tests/rewards.spec.js:17:146 › fresh independent lily conditions: mistakes 0, time 1000; Replay resets metrics, not awards (741ms)
+  ✓   47 [mobile-412] › tests/sizing.spec.js:6:76 › single-config sizing A/B comparison › A: 5/6/7 grids and targets at 412×915 (2.7s)
+  ✓   48 [mobile-412] › tests/sizing.spec.js:6:76 › single-config sizing A/B comparison › A: 5/6/7 grids and targets at 360×780 (2.5s)
+  ✓   49 [mobile-412] › tests/sizing.spec.js:6:76 › single-config sizing A/B comparison › B: 5/6/7 grids and targets at 412×915 (2.7s)
+  ✓   50 [mobile-412] › tests/sizing.spec.js:6:76 › single-config sizing A/B comparison › B: 5/6/7 grids and targets at 360×780 (2.5s)
+  ✓   51 [mobile-412] › tests/starters.spec.js:16:1 › first-run chooser matches supplied starters; selected state, preview, persistence and Home badge (933ms)
+  ✓   52 [mobile-412] › tests/starters.spec.js:17:1 › Home / Hot Spring switching is cosmetic and preserves progress, streak and board; other two are friends (1.3s)
+  ✓   53 [mobile-412] › tests/starters.spec.js:18:1 › v4.1 (trail removed): pond list keeps reading order 1–30, tiles never overlap and lilies stay inside each tile (594ms)
+  ✓   54 [mobile-412] › tests/starters.spec.js:19:1 › mid-level unused switch gives new power; spent stays spent; Nap charges survive switch, Undo and reload (2.6s)
+  ✓   55 [mobile-412] › tests/starters.spec.js:20:1 › Nap protects three moves including correct / X; fourth illegal placement costs orange; retry resets attempt (2.7s)
+  ✓   56 [mobile-412] › tests/starters.spec.js:21:1 › Nap drag spends one charge per new X, one Undo never refunds charges (1.3s)
+  ✓   57 [mobile-412] › tests/starters.spec.js:22:1 › Peek last target is allowed, all remaining targets X disables, no auto-place and no Hint anywhere (1.6s)
+  ✓   58 [mobile-412] › tests/starters.spec.js:23:1 › Bloom disabled without mistake; Second chance removes last offender, restores one life, stays spent on reload (1.8s)
+  ✓   59 [mobile-412] › tests/starters.spec.js:24:1 › Second chance at one remaining orange restores one, not a full refill (1.9s)
+  ✓   60 [mobile-412] › tests/starters.spec.js:25:1 › Powered boss gets no lily; Replay is fresh attempt and a subsequent pure solve earns persistent lily (3.5s)
+  ✓   61 [mobile-412] › tests/starters.spec.js:27:1 › iOS platform emulation › iPhone emulated UA: missing vibration silent, install instruction, safe-area viewport metadata (2.9s)
+  ✓   62 [mobile-412] › tests/starters.spec.js:28:1 › iOS platform emulation › iOS standalone is detected without beforeinstallprompt (783ms)
+  ✓   63 [mobile-412] › tests/starters.spec.js:30:1 › v2→v3 migration preserves board / progression / streak / settings; v2 key untouched (997ms)
+  ✓   64 [mobile-412] › tests/starters.spec.js:31:1 › real v2 service worker → v3 upgrade, old cache removed, migration and strict offline reload (4.0s)
+  ✘   65 [mobile-412] › tests/updates.spec.js:10:1 › map automatically updates once; running label, post-reload toast once, throttled focus/visibility, unchanged/offline/failing checks have no loop (10.9s)
+(node:1534902) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   66 [mobile-412] › tests/updates.spec.js:11:35 › mid-pond auto update defers until map; old asset bytes survive SW restart/offline, then latest board/progress retained (3.9s)
+  ✓   67 [mobile-412] › tests/updates.spec.js:11:35 › mid-pond auto update defers until finish; old asset bytes survive SW restart/offline, then latest board/progress retained (4.1s)
+  ✓   68 [mobile-412] › tests/updates.spec.js:12:1 › LIVE v3.1.3 first takeover is passive, never reloads its old pond; old cache pinned offline; one safe manual relaunch reaches v4 without loss (3.8s)
+  ✓   69 [mobile-412] › tests/upgrade-v41.spec.js:10:1 › real shipped v4 → v4.1 on map automatically reloads once, keeps level18 rewards, matches cache label, works offline (3.7s)
+  ✓   70 [mobile-412] › tests/upgrade-v41.spec.js:11:35 › real shipped v4 → v4.1 defers mid-pond until map, pins old code offline, preserves unchanged board and gains locks (4.3s)
+  ✓   71 [mobile-412] › tests/upgrade-v41.spec.js:11:35 › real shipped v4 → v4.1 defers mid-pond until finish, pins old code offline, preserves unchanged board and gains locks (3.7s)
+  ✘   72 [mobile-412] › tests/upgrade-v42.spec.js:55:1 › real v4.1 → v4.2 on Home: one automatic reload, 'Updated to v4.2.1', all progress and lilies kept, bonus defaults, offline 200s (10.6s)
+(node:1537058) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   73 [mobile-412] › tests/upgrade-v42.spec.js:90:1 › real v4.1 → v4.2 defers mid-pond until the pond is finished, pins old code offline, then the next transition offers the bonus (3.0s)
+  ✓   74 [mobile-412] › tests/upgrade-v42.spec.js:124:1 › v4.2 → later build: no reload while a crate bonus is in progress; reload happens once on leaving it (2.9s)
+  ✓   75 [mobile-412] › tests/v2.spec.js:20:1 › drag paints/clears, skips capys, interpolates fast paths; each gesture is ONE undo; tap cycle survives (2.4s)
+  ✓   76 [mobile-412] › tests/v2.spec.js:21:1 › 10px threshold preserves taps; board drag never scrolls/reloads; native map scroll still works (1.9s)
+  ✓   77 [mobile-412] › tests/v2.spec.js:22:1 › mocked haptics: correct 75ms, illegal double buzz, solve celebration; toggle persists and suppresses all (4.3s)
+  ✓   78 [mobile-412] › tests/v2.spec.js:25:1 › drag haptic ticks: new cells only, clearing too, 70ms throttle on fast drag, toggle off (3.5s)
+  ✓   79 [mobile-412] › tests/v2.spec.js:30:1 › early 1–3 screenshots, obvious first starts, rules sheet and collection purpose (2.5s)
+  ✓   80 [mobile-412] › tests/v2.spec.js:31:1 › daily rocks gated until campaign 21; campaign-first and daily-first intros are one-time (2.2s)
+  ✓   81 [mobile-412] › tests/v2.spec.js:34:1 › date-only streak remains idempotent when daily eligibility changes (3.1s)
+  ✓   82 [mobile-412] › tests/v2.spec.js:35:1 › v1→v3 migration retains earned progress and compatible board; legacy key untouched (1.3s)
+  ✓   83 [mobile-412] › tests/v2.spec.js:36:1 › missing/throwing vibration API never errors; real-device feedback not claimed (1.3s)
+  ✓   84 [mobile-412] › tests/v2.spec.js:37:1 › real v1 SW→v3 update, effective JS, migrated progress, strict offline reload and unseen query (3.8s)
+  ✓   85 [mobile-412] › tests/v3.spec.js:10:1 › pictogram rules, true 5px outlines, counters and no-mode flex layout (1.6s)
+  ✓   86 [mobile-412] › tests/v3.spec.js:11:1 › Hot Spring option A stages at zero/one/two/three bosses, earned slots and decorations (2.1s)
+  ✓   87 [mobile-412] › tests/v3.spec.js:12:1 › enhanced solve: six live frames, solve-order jumps, timed splash haptics, optional local sound (5.2s)
+  ✓   88 [mobile-412] › tests/v3.spec.js:13:1 › reduced motion crossfades straight to soaking with no jumps or splash haptics (4.0s)
+  ✓   89 [mobile-412] › tests/v3.spec.js:14:1 › mouse pointer ID reuse after drag still permits mark, clear and one-click controls (2.3s)
+  ✓   90 [mobile-412] › tests/v31-extension.spec.js:10:2 › default B constant-width 5/6/7 boards and all cells ≥44px at 412×915 (1.4s)
+  ✓   91 [mobile-412] › tests/v31-extension.spec.js:11:54 › solved normal: Replay / Next pond / Hot Spring fit with NO scroll at 412×915 (4.1s)
+  ✓   92 [mobile-412] › tests/v31-extension.spec.js:11:54 › solved boss: Replay / Next pond / Hot Spring fit with NO scroll at 412×915 (4.1s)
+  ✓   93 [mobile-412] › tests/v31-extension.spec.js:11:54 › solved boss30: Replay / Next pond / Hot Spring fit with NO scroll at 412×915 (4.1s)
+  ✓   94 [mobile-412] › tests/v31-extension.spec.js:11:54 › solved daily: Replay / Next pond / Hot Spring fit with NO scroll at 412×915 (4.0s)
+  ✓   95 [mobile-412] › tests/v31-extension.spec.js:10:2 › default B constant-width 5/6/7 boards and all cells ≥44px at 360×780 (1.3s)
+  ✓   96 [mobile-412] › tests/v31-extension.spec.js:11:54 › solved normal: Replay / Next pond / Hot Spring fit with NO scroll at 360×780 (4.0s)
+  ✓   97 [mobile-412] › tests/v31-extension.spec.js:11:54 › solved boss: Replay / Next pond / Hot Spring fit with NO scroll at 360×780 (4.0s)
+  ✓   98 [mobile-412] › tests/v31-extension.spec.js:11:54 › solved boss30: Replay / Next pond / Hot Spring fit with NO scroll at 360×780 (4.1s)
+  ✓   99 [mobile-412] › tests/v31-extension.spec.js:11:54 › solved daily: Replay / Next pond / Hot Spring fit with NO scroll at 360×780 (4.0s)
+  ✓  100 [mobile-412] › tests/v31-extension.spec.js:13:41 › restored v1 concurrent upward launch uses Jun, visible 1.5s flight then matched soaking (3.9s)
+  ✓  101 [mobile-412] › tests/v31-extension.spec.js:13:41 › restored v1 concurrent upward launch uses Bloom, visible 1.5s flight then matched soaking (3.9s)
+  ✘  102 [mobile-412] › tests/v31-extension.spec.js:13:41 › restored v1 concurrent upward launch uses Remy, visible 1.5s flight then matched soaking (32.3s)
+(node:1543241) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  103 [mobile-412] › tests/v31-extension.spec.js:15:1 › music: NO playback before interaction, own toggle persists separately from effects, off really pauses (2.9s)
+  ✓  104 [mobile-412] › tests/v31-extension.spec.js:16:1 › music: hidden tab pauses immediately, visible resumes, native loop and ended fallback repeat only Northumberland (1.8s)
+  ✓  105 [mobile-412] › tests/v31-extension.spec.js:17:1 › music: older-iPhone MP3 path and actual local Opus/MP3 metadata decode without console errors (490ms)
+  ✓  106 [mobile-412] › tests/v31-extension.spec.js:18:1 › music plays actual local audio only after touch, then pauses on hidden tab without mocks (2.5s)
+  ✓  107 [mobile-412] › tests/v31-extension.spec.js:19:1 › real shipped v3 → local v3.1 service-worker upgrade, new music cached, all URLs 200 offline and MP3 Range supported (3.2s)
+  ✓  108 [mobile-412] › tests/v31.spec.js:8:1 › v3.1 Peek has ONE message, compact card never flex-grows; empty content collapses without shifting board/counters (4.4s)
+  ✓  109 [mobile-412] › tests/v31.spec.js:11:1 › v3.1 Nap and Second chance also have one card-only message, no duplicate power toast (3.2s)
+  ✓  110 [mobile-412] › tests/v31.spec.js:13:1 › v3.1 clean Bloom preview at first run AND switch; source steam pixels absent and other starters still decode (1.2s)
+  ✓  111 [mobile-412] › tests/v4.spec.js:12:1 › tutorial appears on first Level 1, ghosts do NOT mutate, skip survives navigation and reload (3.6s)
+  ✓  112 [mobile-412] › tests/v4.spec.js:13:1 › tutorial completion preserves only real marks/capy, no lives/power spent, never auto-reappears (3.0s)
+  ✓  113 [mobile-412] › tests/v4.spec.js:14:1 › question-mark sheet replays tutorial in sandbox and restores board, Nap charges, streak and companion (2.8s)
+  ✓  114 [mobile-412] › tests/v4.spec.js:15:1 › v4.1: boss tiles locked/next/beaten; the boss transition shows the world boss art (map removed) (1.8s)
+  ✓  115 [mobile-412] › tests/v4.spec.js:16:1 › Hot Spring growth is in-scene, earned objects and golden lilies persist; wood sheet switches cosmetic companion (2.3s)
+  ✓  116 [mobile-412] › tests/v4.spec.js:17:1 › illustrated generic pieces and counter for every starter; native powers, manual Peek, no Hint (2.4s)
+  ✓  117 [mobile-412] › tests/v4.spec.js:18:1 › actual shipped v3.1 SW → v4, same-schema migration preserves attempt and settings; all assets 200 offline (3.3s)
+  ✓  118 [mobile-412] › tests/v4.spec.js:20:1 › centrally mapped power art is visible in chooser, switch sheet, power button/card and Hot Spring (3.8s)
+  ✓  119 [mobile-412] › tests/v41-flow.spec.js:18:48 › rock pond 21: solves by double-tap with three oranges; rocks stay empty, need no X and never count as a capy (1.7s)
+  ✓  120 [mobile-412] › tests/v41-flow.spec.js:18:48 › rock pond 22: solves by double-tap with three oranges; rocks stay empty, need no X and never count as a capy (1.6s)
+  ✓  121 [mobile-412] › tests/v41-flow.spec.js:18:48 › rock pond 23: solves by double-tap with three oranges; rocks stay empty, need no X and never count as a capy (1.5s)
+  ✓  122 [mobile-412] › tests/v41-flow.spec.js:18:48 › rock pond 24: solves by double-tap with three oranges; rocks stay empty, need no X and never count as a capy (1.6s)
+  ✓  123 [mobile-412] › tests/v41-flow.spec.js:18:48 › rock pond 25: solves by double-tap with three oranges; rocks stay empty, need no X and never count as a capy (1.6s)
+  ✓  124 [mobile-412] › tests/v41-flow.spec.js:18:48 › rock pond 26: solves by double-tap with three oranges; rocks stay empty, need no X and never count as a capy (1.6s)
+  ✓  125 [mobile-412] › tests/v41-flow.spec.js:18:48 › rock pond 27: solves by double-tap with three oranges; rocks stay empty, need no X and never count as a capy (1.6s)
+  ✓  126 [mobile-412] › tests/v41-flow.spec.js:18:48 › rock pond 28: solves by double-tap with three oranges; rocks stay empty, need no X and never count as a capy (1.6s)
+  ✓  127 [mobile-412] › tests/v41-flow.spec.js:18:48 › rock pond 29: solves by double-tap with three oranges; rocks stay empty, need no X and never count as a capy (1.6s)
+  ✓  128 [mobile-412] › tests/v41-flow.spec.js:18:48 › rock pond 30: solves by double-tap with three oranges; rocks stay empty, need no X and never count as a capy (1.6s)
+  ✓  129 [mobile-412] › tests/v41-flow.spec.js:20:33 › rock pond 21: drag-X every row (including rows that START on a rock), then double-tap the capys; first tap after a drag is never lost (3.3s)
+  ✓  130 [mobile-412] › tests/v41-flow.spec.js:20:33 › rock pond 22: drag-X every row (including rows that START on a rock), then double-tap the capys; first tap after a drag is never lost (3.2s)
+  ✓  131 [mobile-412] › tests/v41-flow.spec.js:20:33 › rock pond 24: drag-X every row (including rows that START on a rock), then double-tap the capys; first tap after a drag is never lost (3.6s)
+  ✓  132 [mobile-412] › tests/v41-flow.spec.js:20:33 › rock pond 28: drag-X every row (including rows that START on a rock), then double-tap the capys; first tap after a drag is never lost (3.4s)
+  ✓  133 [mobile-412] › tests/v41-flow.spec.js:20:33 › rock pond 30: drag-X every row (including rows that START on a rock), then double-tap the capys; first tap after a drag is never lost (3.5s)
+  ✓  134 [mobile-412] › tests/v41-flow.spec.js:22:1 › regression: a tap right after a drag still counts (double-tap after drag places a capy, single tap after drag marks once) (1.4s)
+  ✓  135 [mobile-412] › tests/v41-flow.spec.js:24:1 › rocks: tapping a rock does nothing (no X, no orange, no buzz); clearer rock explanation in the intro and the rules (1.7s)
+  ✓  136 [mobile-412] › tests/v41-flow.spec.js:26:1 › Daily Pond with rocks (rocks unlocked) solves normally on a fixed rock date (1.5s)
+  ✓  137 [mobile-412] › tests/v41-flow.spec.js:28:1 › home has no illustrated Pond Path: Continue, Daily, Hot Spring, Settings and a plain pond list with lilies (1.1s)
+  ✓  138 [mobile-412] › tests/v41-flow.spec.js:30:1 › Continue resumes an in-progress next pond; Settings › Progress offers per-pond replay (826ms)
+  ✓  139 [mobile-412] › tests/v41-flow.spec.js:32:1 › solved → lilies summary → "Next pond" transition (normal) → next pond starts; no map in between (916ms)
+  ✓  140 [mobile-412] › tests/v41-flow.spec.js:34:1 › transition before a boss explains the boss; transition after a boss is a "New world" breather (1.7s)
+  ✓  141 [mobile-412] › tests/v41-flow.spec.js:36:1 › after Boss 30 the transition celebrates all 30 ponds and returns Home (968ms)
+  ✓  142 [mobile-412] › tests/v41.spec.js:11:1 › correct capy locks visibly; single and double taps bump exactly once with no orange loss (1.4s)
+  ✓  143 [mobile-412] › tests/v41.spec.js:12:1 › Undo skips a lock-only entry and undoes the earlier X without removing the lock (1.2s)
+  ✓  144 [mobile-412] › tests/v41.spec.js:13:1 › drag X and clear-drag pass over locks; one undo restores only marks; fast haptics stay throttled (1.0s)
+  ✓  145 [mobile-412] › tests/v41.spec.js:14:1 › clear conflicts only removes wrong capys; correct locks survive and Undo never refunds oranges (1.0s)
+  ✓  146 [mobile-412] › tests/v41.spec.js:15:1 › Jun Peek never targets an existing lock and remains a ghost, not a placement (1.2s)
+  ✓  147 [mobile-412] › tests/v41.spec.js:16:1 › Bloom repairs the actual wrong offender without clearing the neighboring correct lock (1.4s)
+  ✓  148 [mobile-412] › tests/v41.spec.js:17:1 › Remy Nap charges count actual moves, not locked bumps; Undo never restores charges (2.1s)
+  ✓  149 [mobile-412] › tests/v41.spec.js:18:1 › strong haptics: one single X tick, one clear tick, no double-tap tick, firm correct, double wrong, light lock; off suppresses all (7.1s)
+  ✓  150 [mobile-412] › tests/v41.spec.js:19:1 › v4 saves acquire locks on unchanged boards and keep them after reload and resume (1.7s)
+  ✓  151 [mobile-412] › tests/v41.spec.js:20:1 › v4 level18 save retains lilies, gold, spring, nickname, starter and streak; changed partial alone restarts safely (1.0s)
+  ✓  152 [mobile-412] › tests/v41.spec.js:21:1 › new difficulty boards retain board B, touch targets and solved actions fit for normal/boss/daily (6.5s)
+  ✓  153 [mobile-412] › tests/v42.spec.js:57:1 › offer appears only on the transition after ponds 5/15/25: Continue stays primary, 'Skipping costs nothing', lilies kept, no scroll (2.5s)
+  ✓  154 [mobile-412] › tests/v42.spec.js:78:1 › skipping really costs nothing: Start pond 6 → normal three oranges, no spare, progress untouched (913ms)
+  ✓  155 [mobile-412] › tests/v42.spec.js:88:1 › first entry shows 'Move your way'; swipe steps, tap walks without pushing, undo is free, restart, leave → back to Pond 6 (3.2s)
+  ✓  156 [mobile-412] › tests/v42.spec.js:132:1 › level 1 solved with real swipes: tick per pushed cell, distinct landing haptic, fruit pops golden, reward → Pond 6 with spare orange that absorbs one mistake but costs the 0-mistakes lily (7.1s)
+  ✓  157 [mobile-412] › tests/v42.spec.js:202:1 › deadlock: a crate pushed into a corner is flagged with 'That crate is stuck · Undo?' and Undo clears it (1.6s)
+  ✓  158 [mobile-412] › tests/v42.spec.js:221:1 › no stacking: replaying the bonus keeps exactly one spare for Pond 6; Daily and other ponds leave it waiting (2.7s)
+  ✓  159 [mobile-412] › tests/v42.spec.js:241:3 › bonus level 2 (Crate Cove 3, 6×6) is offered after pond 15 and solvable in 30 moves with the D-pad (5.6s)
+  ✓  160 [mobile-412] › tests/v42.spec.js:241:3 › bonus level 3 (Crate Cove 5, 7×7) is offered after pond 25 and solvable in 57 moves (3.9s)
+  ✘  161 [mobile-412] › tests/v42.spec.js:269:1 › Settings: D-pad toggle persists and swaps the capy chip for a D-pad that steps (8.2s)
+(node:1554417) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  162 [mobile-412] › tests/v43.spec.js:14:57 › pond 1: Undo after (wrong capy, remove it, correct capy diagonally next to it) never puts a capy next to another (1.9s)
+  ✓  163 [mobile-412] › tests/v43.spec.js:14:57 › pond 1: Undo after (wrong capy, remove it, correct capy orthogonally next to it) never puts a capy next to another (1.7s)
+  ✓  164 [mobile-412] › tests/v43.spec.js:14:57 › pond 21: Undo after (wrong capy, remove it, correct capy diagonally next to it) never puts a capy next to another (1.8s)
+  ✓  165 [mobile-412] › tests/v43.spec.js:14:57 › pond 21: Undo after (wrong capy, remove it, correct capy orthogonally next to it) never puts a capy next to another (1.7s)
+  ✓  166 [mobile-412] › tests/v43.spec.js:16:60 › a late click never turns "tap A, tap B" into a capy on A (chromium-pointer-id) (1.1s)
+  ✓  167 [mobile-412] › tests/v43.spec.js:16:60 › a late click never turns "tap A, tap B" into a capy on A (no-pointer-id) (1.1s)
+  ✓  168 [mobile-412] › tests/v43.spec.js:17:1 › a real touch double-tap still places exactly one capy and taps on other cells still mark × (943ms)
+  ✓  169 [mobile-412] › tests/v43.spec.js:18:1 › a locked capy in a conflict shows the red conflict ring, not only the gold lock glow (816ms)
+  ✓  170 [mobile-412] › tests/v43.spec.js:19:1 › haptics v4.3 reach the Vibration API: × 50, clear 42, correct capy 110, rule-break [170,90,170], locked bump 30 (1.9s)
+(node:1556023) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  171 [mobile-360] › tests/design-latest.spec.js:6:1 › v4.1 (illustrated map removed): boss tiles keep locked/next/beaten state; all 30 pond tiles ≥44px, in order, no overlap or clipping (2.0s)
+  ✓  172 [mobile-360] › tests/design-latest.spec.js:8:1 › every Bloom reference is v6.4 across chooser,map,HUD,power,first-use,switch,Spring,celebration; density3 uses supplied files (6.7s)
+  ✓  173 [mobile-360] › tests/mobile.spec.js:14:1 › home, marks/capy/clear and undo; double tap no X flash; mobile targets (3.0s)
+  ✓  174 [mobile-360] › tests/mobile.spec.js:16:1 › Peek ghosts one unsolved spot, never places; Hint is gone and power stays spent (1.3s)
+  ✓  175 [mobile-360] › tests/mobile.spec.js:17:54 › row violation red and costs exactly one orange; clear repairs (1.2s)
+  ✓  176 [mobile-360] › tests/mobile.spec.js:17:54 › column violation red and costs exactly one orange; clear repairs (1.2s)
+  ✓  177 [mobile-360] › tests/mobile.spec.js:17:54 › zone violation red and costs exactly one orange; clear repairs (1.2s)
+  ✓  178 [mobile-360] › tests/mobile.spec.js:17:54 › diagonal violation red and costs exactly one orange; clear repairs (1.2s)
+  ✓  179 [mobile-360] › tests/mobile.spec.js:18:1 › game over, input locked, retry resets oranges and board (2.0s)
+  ✓  180 [mobile-360] › tests/mobile.spec.js:19:1 › solve, actual jump frames, unlock + persistence after reload (5.7s)
+  ✓  181 [mobile-360] › tests/mobile.spec.js:20:1 › boss 10 grows spring and grants persistent pure-solve golden lily (6.0s)
+  ✓  182 [mobile-360] › tests/mobile.spec.js:21:1 › boss 20/30 rewards and blocked rocks; 7×7 tap targets (3.0s)
+  ✓  183 [mobile-360] › tests/mobile.spec.js:22:1 › Daily Pond deterministic reload + same-day streak, consecutive +1, missed-day reset (4.3s)
+  ✓  184 [mobile-360] › tests/mobile.spec.js:24:1 › PWA precache 200 + offline startup/reload, unseen query, essential resources (2.2s)
+  ✓  185 [mobile-360] › tests/mobile.spec.js:25:1 › settings have no mode; corrupt and future storage cannot crash or overwrite (2.1s)
+  ✓  186 [mobile-360] › tests/no-mode.spec.js:10:1 › no Relax or Chill UI on map, settings, Hot Spring, chooser, puzzle, rules or tutorial; every starter has its native power (2.8s)
+  ✓  187 [mobile-360] › tests/no-mode.spec.js:11:1 › v3.1.x no-lives attempt restarts normal with three oranges; explicit normal attempt, path, streak and settings preserved (1.5s)
+  ✓  188 [mobile-360] › tests/no-mode.spec.js:12:1 › game over only offers retry and map for all companions; retry starts a full normal attempt (5.5s)
+  ✓  189 [mobile-360] › tests/no-mode.spec.js:13:1 › Hot Spring next-tier silhouette and exact real upgrade copy at tiers 0/1/2; hidden at max tier (2.0s)
+  ✓  190 [mobile-360] › tests/no-mode.spec.js:14:1 › single-tap X/clear/capy-clear each emit one deferred tick (v4.1 markX/clearTap); doubles only capy pattern; toggle off silences all (5.0s)
+  ✓  191 [mobile-360] › tests/no-mode.spec.js:15:1 › pending tap on a different cell resolves once; held second contact upgrades without a tick or X flash (1.6s)
+  ✓  192 [mobile-360] › tests/power-identity.spec.js:12:1 › v6.1 chooser, crafted switch rows and all three Hot Spring tags repeat exact power identity; switching preserves progress (1.6s)
+  ✓  193 [mobile-360] › tests/power-identity.spec.js:13:41 › Jun: 72px face/icon power, first-use Not now / Use, once-only persistence, 1→0 badge (2.2s)
+  ✓  194 [mobile-360] › tests/power-identity.spec.js:13:41 › Bloom: 72px face/icon power, first-use Not now / Use, once-only persistence, 1→0 badge (2.6s)
+  ✓  195 [mobile-360] › tests/power-identity.spec.js:13:41 › Remy: 72px face/icon power, first-use Not now / Use, once-only persistence, 1→0 badge (2.1s)
+  ✓  196 [mobile-360] › tests/power-identity.spec.js:14:106 › actual read-only v311 hotfix tree → v4 SW upgrade, old no-lives attempt reset, progress preserved, offline recovery (3.9s)
+  ✓  197 [mobile-360] › tests/power-identity.spec.js:14:106 › actual read-only v312 hotfix tree → v4 SW upgrade, old no-lives attempt reset, progress preserved, offline recovery (3.7s)
+  ✓  198 [mobile-360] › tests/power-identity.spec.js:14:106 › actual read-only v313 hotfix tree → v4 SW upgrade, old no-lives attempt reset, progress preserved, offline recovery (3.7s)
+  ✓  199 [mobile-360] › tests/relax-bug.spec.js:14:2 › 412×915 priority regression › late native click after control fallback cannot become a phantom board tap (1.4s)
+  ✓  200 [mobile-360] › tests/relax-bug.spec.js:19:1 › 412×915 priority regression › purple Peek keeps its zone and hides only while obstructed; real generic capy stays untinted (1.9s)
+  ✓  201 [mobile-360] › tests/relax-bug.spec.js:20:1 › 412×915 priority regression › normal legacy overfill shows honest counts; Clear conflicts is one undo with no refunds (1.0s)
+  ✓  202 [mobile-360] › tests/relax-bug.spec.js:14:2 › 360×780 priority regression › late native click after control fallback cannot become a phantom board tap (1.4s)
+  ✓  203 [mobile-360] › tests/relax-bug.spec.js:19:1 › 360×780 priority regression › purple Peek keeps its zone and hides only while obstructed; real generic capy stays untinted (1.9s)
+  ✓  204 [mobile-360] › tests/relax-bug.spec.js:20:1 › 360×780 priority regression › normal legacy overfill shows honest counts; Clear conflicts is one undo with no refunds (892ms)
+  ✓  205 [mobile-360] › tests/rewards.spec.js:8:1 › nickname first, local emoji validation, chooser second, tutorial third; persists and Settings edit preserves identity/progress (1.7s)
+  ✓  206 [mobile-360] › tests/rewards.spec.js:9:1 › existing players asked nickname once; completed-only lilies migration preserves path/streak and normal partial board (1.2s)
+  ✓  207 [mobile-360] › tests/rewards.spec.js:10:1 › independent lilies earned across attempts, strict target, best retained, never lost, map/replay/ledger agree and result fits (2.1s)
+  ✓  208 [mobile-360] › tests/rewards.spec.js:11:1 › active timer excludes rules and hidden app; resumes cumulative elapsed on reload; no countdown (1.1s)
+  ✓  209 [mobile-360] › tests/rewards.spec.js:12:1 › only same-origin static GETs/SW update check; no consent, analytics, telemetry or nickname sending (1.3s)
+  ✓  210 [mobile-360] › tests/rewards.spec.js:13:1 › one Northumberland loop crosses the seam offline; voluntary credit and native loop, no old playlist (3.0s)
+  ✓  211 [mobile-360] › tests/rewards.spec.js:14:1 › Bloom refund and Remy protection do not erase the historical mistake metric; Replay resets attempt only (2.7s)
+  ✓  212 [mobile-360] › tests/rewards.spec.js:15:1 › v4.1: for every next pond the Continue card names it and all lily rows fit inside their tiles (6.3s)
+  ✓  213 [mobile-360] › tests/rewards.spec.js:17:146 › fresh independent lily conditions: mistakes 1, time 300000; Replay resets metrics, not awards (972ms)
+  ✓  214 [mobile-360] › tests/rewards.spec.js:17:146 › fresh independent lily conditions: mistakes 0, time 120000; Replay resets metrics, not awards (805ms)
+  ✓  215 [mobile-360] › tests/rewards.spec.js:17:146 › fresh independent lily conditions: mistakes 1, time 1000; Replay resets metrics, not awards (905ms)
+  ✓  216 [mobile-360] › tests/rewards.spec.js:17:146 › fresh independent lily conditions: mistakes 0, time 1000; Replay resets metrics, not awards (788ms)
+  ✓  217 [mobile-360] › tests/sizing.spec.js:6:76 › single-config sizing A/B comparison › A: 5/6/7 grids and targets at 412×915 (2.8s)
+  ✓  218 [mobile-360] › tests/sizing.spec.js:6:76 › single-config sizing A/B comparison › A: 5/6/7 grids and targets at 360×780 (2.6s)
+  ✓  219 [mobile-360] › tests/sizing.spec.js:6:76 › single-config sizing A/B comparison › B: 5/6/7 grids and targets at 412×915 (2.8s)
+  ✓  220 [mobile-360] › tests/sizing.spec.js:6:76 › single-config sizing A/B comparison › B: 5/6/7 grids and targets at 360×780 (2.6s)
+  ✓  221 [mobile-360] › tests/starters.spec.js:16:1 › first-run chooser matches supplied starters; selected state, preview, persistence and Home badge (1.0s)
+  ✓  222 [mobile-360] › tests/starters.spec.js:17:1 › Home / Hot Spring switching is cosmetic and preserves progress, streak and board; other two are friends (1.4s)
+  ✓  223 [mobile-360] › tests/starters.spec.js:18:1 › v4.1 (trail removed): pond list keeps reading order 1–30, tiles never overlap and lilies stay inside each tile (695ms)
+  ✓  224 [mobile-360] › tests/starters.spec.js:19:1 › mid-level unused switch gives new power; spent stays spent; Nap charges survive switch, Undo and reload (2.8s)
+  ✓  225 [mobile-360] › tests/starters.spec.js:20:1 › Nap protects three moves including correct / X; fourth illegal placement costs orange; retry resets attempt (2.9s)
+  ✓  226 [mobile-360] › tests/starters.spec.js:21:1 › Nap drag spends one charge per new X, one Undo never refunds charges (1.5s)
+  ✓  227 [mobile-360] › tests/starters.spec.js:22:1 › Peek last target is allowed, all remaining targets X disables, no auto-place and no Hint anywhere (1.7s)
+  ✓  228 [mobile-360] › tests/starters.spec.js:23:1 › Bloom disabled without mistake; Second chance removes last offender, restores one life, stays spent on reload (2.1s)
+  ✓  229 [mobile-360] › tests/starters.spec.js:24:1 › Second chance at one remaining orange restores one, not a full refill (1.9s)
+  ✓  230 [mobile-360] › tests/starters.spec.js:25:1 › Powered boss gets no lily; Replay is fresh attempt and a subsequent pure solve earns persistent lily (3.9s)
+  ✓  231 [mobile-360] › tests/starters.spec.js:27:1 › iOS platform emulation › iPhone emulated UA: missing vibration silent, install instruction, safe-area viewport metadata (2.9s)
+  ✓  232 [mobile-360] › tests/starters.spec.js:28:1 › iOS platform emulation › iOS standalone is detected without beforeinstallprompt (743ms)
+  ✓  233 [mobile-360] › tests/starters.spec.js:30:1 › v2→v3 migration preserves board / progression / streak / settings; v2 key untouched (1.1s)
+  ✓  234 [mobile-360] › tests/starters.spec.js:31:1 › real v2 service worker → v3 upgrade, old cache removed, migration and strict offline reload (4.3s)
+  ✘  235 [mobile-360] › tests/updates.spec.js:10:1 › map automatically updates once; running label, post-reload toast once, throttled focus/visibility, unchanged/offline/failing checks have no loop (11.1s)
+(node:1568728) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  236 [mobile-360] › tests/updates.spec.js:11:35 › mid-pond auto update defers until map; old asset bytes survive SW restart/offline, then latest board/progress retained (4.3s)
+  ✓  237 [mobile-360] › tests/updates.spec.js:11:35 › mid-pond auto update defers until finish; old asset bytes survive SW restart/offline, then latest board/progress retained (4.7s)
+  ✓  238 [mobile-360] › tests/updates.spec.js:12:1 › LIVE v3.1.3 first takeover is passive, never reloads its old pond; old cache pinned offline; one safe manual relaunch reaches v4 without loss (4.1s)
+  ✓  239 [mobile-360] › tests/upgrade-v41.spec.js:10:1 › real shipped v4 → v4.1 on map automatically reloads once, keeps level18 rewards, matches cache label, works offline (4.2s)
+  ✓  240 [mobile-360] › tests/upgrade-v41.spec.js:11:35 › real shipped v4 → v4.1 defers mid-pond until map, pins old code offline, preserves unchanged board and gains locks (4.6s)
+  ✓  241 [mobile-360] › tests/upgrade-v41.spec.js:11:35 › real shipped v4 → v4.1 defers mid-pond until finish, pins old code offline, preserves unchanged board and gains locks (4.1s)
+  ✘  242 [mobile-360] › tests/upgrade-v42.spec.js:55:1 › real v4.1 → v4.2 on Home: one automatic reload, 'Updated to v4.2.1', all progress and lilies kept, bonus defaults, offline 200s (50.0s)
+(node:1570999) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  243 [mobile-360] › tests/upgrade-v42.spec.js:90:1 › real v4.1 → v4.2 defers mid-pond until the pond is finished, pins old code offline, then the next transition offers the bonus (3.2s)
+  ✓  244 [mobile-360] › tests/upgrade-v42.spec.js:124:1 › v4.2 → later build: no reload while a crate bonus is in progress; reload happens once on leaving it (3.2s)
+  ✓  245 [mobile-360] › tests/v2.spec.js:20:1 › drag paints/clears, skips capys, interpolates fast paths; each gesture is ONE undo; tap cycle survives (2.7s)
+  ✓  246 [mobile-360] › tests/v2.spec.js:21:1 › 10px threshold preserves taps; board drag never scrolls/reloads; native map scroll still works (2.0s)
+  ✓  247 [mobile-360] › tests/v2.spec.js:22:1 › mocked haptics: correct 75ms, illegal double buzz, solve celebration; toggle persists and suppresses all (4.4s)
+  ✓  248 [mobile-360] › tests/v2.spec.js:25:1 › drag haptic ticks: new cells only, clearing too, 70ms throttle on fast drag, toggle off (3.6s)
+  ✓  249 [mobile-360] › tests/v2.spec.js:30:1 › early 1–3 screenshots, obvious first starts, rules sheet and collection purpose (2.6s)
+  ✓  250 [mobile-360] › tests/v2.spec.js:31:1 › daily rocks gated until campaign 21; campaign-first and daily-first intros are one-time (2.5s)
+  ✓  251 [mobile-360] › tests/v2.spec.js:34:1 › date-only streak remains idempotent when daily eligibility changes (3.2s)
+  ✓  252 [mobile-360] › tests/v2.spec.js:35:1 › v1→v3 migration retains earned progress and compatible board; legacy key untouched (1.5s)
+  ✓  253 [mobile-360] › tests/v2.spec.js:36:1 › missing/throwing vibration API never errors; real-device feedback not claimed (1.4s)
+  ✓  254 [mobile-360] › tests/v2.spec.js:37:1 › real v1 SW→v3 update, effective JS, migrated progress, strict offline reload and unseen query (4.1s)
+  ✓  255 [mobile-360] › tests/v3.spec.js:10:1 › pictogram rules, true 5px outlines, counters and no-mode flex layout (1.8s)
+  ✓  256 [mobile-360] › tests/v3.spec.js:11:1 › Hot Spring option A stages at zero/one/two/three bosses, earned slots and decorations (2.4s)
+  ✓  257 [mobile-360] › tests/v3.spec.js:12:1 › enhanced solve: six live frames, solve-order jumps, timed splash haptics, optional local sound (5.3s)
+  ✓  258 [mobile-360] › tests/v3.spec.js:13:1 › reduced motion crossfades straight to soaking with no jumps or splash haptics (4.2s)
+  ✓  259 [mobile-360] › tests/v3.spec.js:14:1 › mouse pointer ID reuse after drag still permits mark, clear and one-click controls (2.4s)
+  ✓  260 [mobile-360] › tests/v31-extension.spec.js:10:2 › default B constant-width 5/6/7 boards and all cells ≥44px at 412×915 (1.5s)
+  ✓  261 [mobile-360] › tests/v31-extension.spec.js:11:54 › solved normal: Replay / Next pond / Hot Spring fit with NO scroll at 412×915 (4.2s)
+  ✓  262 [mobile-360] › tests/v31-extension.spec.js:11:54 › solved boss: Replay / Next pond / Hot Spring fit with NO scroll at 412×915 (4.1s)
+  ✓  263 [mobile-360] › tests/v31-extension.spec.js:11:54 › solved boss30: Replay / Next pond / Hot Spring fit with NO scroll at 412×915 (4.2s)
+  ✓  264 [mobile-360] › tests/v31-extension.spec.js:11:54 › solved daily: Replay / Next pond / Hot Spring fit with NO scroll at 412×915 (4.2s)
+  ✓  265 [mobile-360] › tests/v31-extension.spec.js:10:2 › default B constant-width 5/6/7 boards and all cells ≥44px at 360×780 (1.5s)
+  ✓  266 [mobile-360] › tests/v31-extension.spec.js:11:54 › solved normal: Replay / Next pond / Hot Spring fit with NO scroll at 360×780 (4.2s)
+  ✓  267 [mobile-360] › tests/v31-extension.spec.js:11:54 › solved boss: Replay / Next pond / Hot Spring fit with NO scroll at 360×780 (4.3s)
+  ✓  268 [mobile-360] › tests/v31-extension.spec.js:11:54 › solved boss30: Replay / Next pond / Hot Spring fit with NO scroll at 360×780 (4.3s)
+  ✓  269 [mobile-360] › tests/v31-extension.spec.js:11:54 › solved daily: Replay / Next pond / Hot Spring fit with NO scroll at 360×780 (4.2s)
+  ✓  270 [mobile-360] › tests/v31-extension.spec.js:13:41 › restored v1 concurrent upward launch uses Jun, visible 1.5s flight then matched soaking (4.1s)
+  ✓  271 [mobile-360] › tests/v31-extension.spec.js:13:41 › restored v1 concurrent upward launch uses Bloom, visible 1.5s flight then matched soaking (4.1s)
+  ✓  272 [mobile-360] › tests/v31-extension.spec.js:13:41 › restored v1 concurrent upward launch uses Remy, visible 1.5s flight then matched soaking (4.2s)
+  ✓  273 [mobile-360] › tests/v31-extension.spec.js:15:1 › music: NO playback before interaction, own toggle persists separately from effects, off really pauses (2.8s)
+  ✓  274 [mobile-360] › tests/v31-extension.spec.js:16:1 › music: hidden tab pauses immediately, visible resumes, native loop and ended fallback repeat only Northumberland (2.0s)
+  ✓  275 [mobile-360] › tests/v31-extension.spec.js:17:1 › music: older-iPhone MP3 path and actual local Opus/MP3 metadata decode without console errors (616ms)
+  ✓  276 [mobile-360] › tests/v31-extension.spec.js:18:1 › music plays actual local audio only after touch, then pauses on hidden tab without mocks (2.5s)
+  ✓  277 [mobile-360] › tests/v31-extension.spec.js:19:1 › real shipped v3 → local v3.1 service-worker upgrade, new music cached, all URLs 200 offline and MP3 Range supported (3.5s)
+  ✓  278 [mobile-360] › tests/v31.spec.js:8:1 › v3.1 Peek has ONE message, compact card never flex-grows; empty content collapses without shifting board/counters (4.7s)
+  ✓  279 [mobile-360] › tests/v31.spec.js:11:1 › v3.1 Nap and Second chance also have one card-only message, no duplicate power toast (3.7s)
+  ✓  280 [mobile-360] › tests/v31.spec.js:13:1 › v3.1 clean Bloom preview at first run AND switch; source steam pixels absent and other starters still decode (1.2s)
+  ✓  281 [mobile-360] › tests/v4.spec.js:12:1 › tutorial appears on first Level 1, ghosts do NOT mutate, skip survives navigation and reload (3.6s)
+  ✓  282 [mobile-360] › tests/v4.spec.js:13:1 › tutorial completion preserves only real marks/capy, no lives/power spent, never auto-reappears (3.2s)
+  ✓  283 [mobile-360] › tests/v4.spec.js:14:1 › question-mark sheet replays tutorial in sandbox and restores board, Nap charges, streak and companion (2.8s)
+  ✓  284 [mobile-360] › tests/v4.spec.js:15:1 › v4.1: boss tiles locked/next/beaten; the boss transition shows the world boss art (map removed) (2.3s)
+  ✓  285 [mobile-360] › tests/v4.spec.js:16:1 › Hot Spring growth is in-scene, earned objects and golden lilies persist; wood sheet switches cosmetic companion (2.4s)
+  ✓  286 [mobile-360] › tests/v4.spec.js:17:1 › illustrated generic pieces and counter for every starter; native powers, manual Peek, no Hint (2.3s)
+  ✓  287 [mobile-360] › tests/v4.spec.js:18:1 › actual shipped v3.1 SW → v4, same-schema migration preserves attempt and settings; all assets 200 offline (2.9s)
+  ✓  288 [mobile-360] › tests/v4.spec.js:20:1 › centrally mapped power art is visible in chooser, switch sheet, power button/card and Hot Spring (2.9s)
+  ✓  289 [mobile-360] › tests/v41-flow.spec.js:18:48 › rock pond 21: solves by double-tap with three oranges; rocks stay empty, need no X and never count as a capy (1.3s)
+  ✓  290 [mobile-360] › tests/v41-flow.spec.js:18:48 › rock pond 22: solves by double-tap with three oranges; rocks stay empty, need no X and never count as a capy (1.2s)
+  ✓  291 [mobile-360] › tests/v41-flow.spec.js:18:48 › rock pond 23: solves by double-tap with three oranges; rocks stay empty, need no X and never count as a capy (1.1s)
+  ✓  292 [mobile-360] › tests/v41-flow.spec.js:18:48 › rock pond 24: solves by double-tap with three oranges; rocks stay empty, need no X and never count as a capy (1.2s)
+  ✓  293 [mobile-360] › tests/v41-flow.spec.js:18:48 › rock pond 25: solves by double-tap with three oranges; rocks stay empty, need no X and never count as a capy (1.1s)
+  ✓  294 [mobile-360] › tests/v41-flow.spec.js:18:48 › rock pond 26: solves by double-tap with three oranges; rocks stay empty, need no X and never count as a capy (1.2s)
+  ✓  295 [mobile-360] › tests/v41-flow.spec.js:18:48 › rock pond 27: solves by double-tap with three oranges; rocks stay empty, need no X and never count as a capy (1.2s)
+  ✓  296 [mobile-360] › tests/v41-flow.spec.js:18:48 › rock pond 28: solves by double-tap with three oranges; rocks stay empty, need no X and never count as a capy (1.3s)
+  ✓  297 [mobile-360] › tests/v41-flow.spec.js:18:48 › rock pond 29: solves by double-tap with three oranges; rocks stay empty, need no X and never count as a capy (1.3s)
+  ✓  298 [mobile-360] › tests/v41-flow.spec.js:18:48 › rock pond 30: solves by double-tap with three oranges; rocks stay empty, need no X and never count as a capy (1.3s)
+  ✓  299 [mobile-360] › tests/v41-flow.spec.js:20:33 › rock pond 21: drag-X every row (including rows that START on a rock), then double-tap the capys; first tap after a drag is never lost (2.8s)
+  ✓  300 [mobile-360] › tests/v41-flow.spec.js:20:33 › rock pond 22: drag-X every row (including rows that START on a rock), then double-tap the capys; first tap after a drag is never lost (2.8s)
+  ✓  301 [mobile-360] › tests/v41-flow.spec.js:20:33 › rock pond 24: drag-X every row (including rows that START on a rock), then double-tap the capys; first tap after a drag is never lost (2.8s)
+  ✓  302 [mobile-360] › tests/v41-flow.spec.js:20:33 › rock pond 28: drag-X every row (including rows that START on a rock), then double-tap the capys; first tap after a drag is never lost (2.8s)
+  ✓  303 [mobile-360] › tests/v41-flow.spec.js:20:33 › rock pond 30: drag-X every row (including rows that START on a rock), then double-tap the capys; first tap after a drag is never lost (2.9s)
+  ✓  304 [mobile-360] › tests/v41-flow.spec.js:22:1 › regression: a tap right after a drag still counts (double-tap after drag places a capy, single tap after drag marks once) (1.2s)
+  ✓  305 [mobile-360] › tests/v41-flow.spec.js:24:1 › rocks: tapping a rock does nothing (no X, no orange, no buzz); clearer rock explanation in the intro and the rules (1.4s)
+  ✓  306 [mobile-360] › tests/v41-flow.spec.js:26:1 › Daily Pond with rocks (rocks unlocked) solves normally on a fixed rock date (1.1s)
+  ✓  307 [mobile-360] › tests/v41-flow.spec.js:28:1 › home has no illustrated Pond Path: Continue, Daily, Hot Spring, Settings and a plain pond list with lilies (786ms)
+  ✓  308 [mobile-360] › tests/v41-flow.spec.js:30:1 › Continue resumes an in-progress next pond; Settings › Progress offers per-pond replay (565ms)
+  ✓  309 [mobile-360] › tests/v41-flow.spec.js:32:1 › solved → lilies summary → "Next pond" transition (normal) → next pond starts; no map in between (680ms)
+  ✓  310 [mobile-360] › tests/v41-flow.spec.js:34:1 › transition before a boss explains the boss; transition after a boss is a "New world" breather (1.3s)
+  ✓  311 [mobile-360] › tests/v41-flow.spec.js:36:1 › after Boss 30 the transition celebrates all 30 ponds and returns Home (686ms)
+  ✓  312 [mobile-360] › tests/v41.spec.js:11:1 › correct capy locks visibly; single and double taps bump exactly once with no orange loss (1.2s)
+  ✓  313 [mobile-360] › tests/v41.spec.js:12:1 › Undo skips a lock-only entry and undoes the earlier X without removing the lock (1.1s)
+  ✓  314 [mobile-360] › tests/v41.spec.js:13:1 › drag X and clear-drag pass over locks; one undo restores only marks; fast haptics stay throttled (792ms)
+  ✓  315 [mobile-360] › tests/v41.spec.js:14:1 › clear conflicts only removes wrong capys; correct locks survive and Undo never refunds oranges (826ms)
+  ✓  316 [mobile-360] › tests/v41.spec.js:15:1 › Jun Peek never targets an existing lock and remains a ghost, not a placement (994ms)
+  ✓  317 [mobile-360] › tests/v41.spec.js:16:1 › Bloom repairs the actual wrong offender without clearing the neighboring correct lock (1.1s)
+  ✓  318 [mobile-360] › tests/v41.spec.js:17:1 › Remy Nap charges count actual moves, not locked bumps; Undo never restores charges (1.9s)
+  ✓  319 [mobile-360] › tests/v41.spec.js:18:1 › strong haptics: one single X tick, one clear tick, no double-tap tick, firm correct, double wrong, light lock; off suppresses all (6.7s)
+  ✓  320 [mobile-360] › tests/v41.spec.js:19:1 › v4 saves acquire locks on unchanged boards and keep them after reload and resume (1.4s)
+  ✓  321 [mobile-360] › tests/v41.spec.js:20:1 › v4 level18 save retains lilies, gold, spring, nickname, starter and streak; changed partial alone restarts safely (745ms)
+  ✓  322 [mobile-360] › tests/v41.spec.js:21:1 › new difficulty boards retain board B, touch targets and solved actions fit for normal/boss/daily (5.2s)
+  ✓  323 [mobile-360] › tests/v42.spec.js:57:1 › offer appears only on the transition after ponds 5/15/25: Continue stays primary, 'Skipping costs nothing', lilies kept, no scroll (1.8s)
+  ✓  324 [mobile-360] › tests/v42.spec.js:78:1 › skipping really costs nothing: Start pond 6 → normal three oranges, no spare, progress untouched (640ms)
+  ✓  325 [mobile-360] › tests/v42.spec.js:88:1 › first entry shows 'Move your way'; swipe steps, tap walks without pushing, undo is free, restart, leave → back to Pond 6 (2.7s)
+  ✓  326 [mobile-360] › tests/v42.spec.js:132:1 › level 1 solved with real swipes: tick per pushed cell, distinct landing haptic, fruit pops golden, reward → Pond 6 with spare orange that absorbs one mistake but costs the 0-mistakes lily (6.5s)
+  ✓  327 [mobile-360] › tests/v42.spec.js:202:1 › deadlock: a crate pushed into a corner is flagged with 'That crate is stuck · Undo?' and Undo clears it (1.3s)
+  ✓  328 [mobile-360] › tests/v42.spec.js:221:1 › no stacking: replaying the bonus keeps exactly one spare for Pond 6; Daily and other ponds leave it waiting (2.3s)
+  ✓  329 [mobile-360] › tests/v42.spec.js:241:3 › bonus level 2 (Crate Cove 3, 6×6) is offered after pond 15 and solvable in 30 moves with the D-pad (5.2s)
+  ✓  330 [mobile-360] › tests/v42.spec.js:241:3 › bonus level 3 (Crate Cove 5, 7×7) is offered after pond 25 and solvable in 57 moves (3.9s)
+  ✘  331 [mobile-360] › tests/v42.spec.js:269:1 › Settings: D-pad toggle persists and swaps the capy chip for a D-pad that steps (8.2s)
+(node:1588429) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  332 [mobile-360] › tests/v43.spec.js:14:57 › pond 1: Undo after (wrong capy, remove it, correct capy diagonally next to it) never puts a capy next to another (2.0s)
+  ✓  333 [mobile-360] › tests/v43.spec.js:14:57 › pond 1: Undo after (wrong capy, remove it, correct capy orthogonally next to it) never puts a capy next to another (1.8s)
+  ✓  334 [mobile-360] › tests/v43.spec.js:14:57 › pond 21: Undo after (wrong capy, remove it, correct capy diagonally next to it) never puts a capy next to another (1.8s)
+  ✓  335 [mobile-360] › tests/v43.spec.js:14:57 › pond 21: Undo after (wrong capy, remove it, correct capy orthogonally next to it) never puts a capy next to another (1.8s)
+  ✓  336 [mobile-360] › tests/v43.spec.js:16:60 › a late click never turns "tap A, tap B" into a capy on A (chromium-pointer-id) (1.1s)
+  ✓  337 [mobile-360] › tests/v43.spec.js:16:60 › a late click never turns "tap A, tap B" into a capy on A (no-pointer-id) (1.1s)
+  ✓  338 [mobile-360] › tests/v43.spec.js:17:1 › a real touch double-tap still places exactly one capy and taps on other cells still mark × (967ms)
+  ✓  339 [mobile-360] › tests/v43.spec.js:18:1 › a locked capy in a conflict shows the red conflict ring, not only the gold lock glow (819ms)
+  ✓  340 [mobile-360] › tests/v43.spec.js:19:1 › haptics v4.3 reach the Vibration API: × 50, clear 42, correct capy 110, rule-break [170,90,170], locked bump 30 (1.9s)
+
+
+  1) [mobile-412] › tests/updates.spec.js:10:1 › map automatically updates once; running label, post-reload toast once, throttled focus/visibility, unchanged/offline/failing checks have no loop 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  locator('.build-label')
+    Expected: "v4.2 · build ab4d8658ac6c"
+    Received: "v4.2.1 · build ab4d8658ac6c"
+    Timeout:  7000ms
+
+    Call log:
+      - Expect "toHaveText" locator('.build-label') with timeout 7000ms
+      - waiting for locator('.build-label')
+        18 × locator resolved to <p class="build-label" data-build="ab4d8658ac6c" aria-label="Running version">v4.2.1 · build ab4d8658ac6c</p>
+           - unexpected value "v4.2.1 · build ab4d8658ac6c"
+
+
+       8 | async function activate(page){await page.evaluate(async()=>{const r=await navigator.serviceWorker.getRegistration();await new Promise((resolve,reject)=>{const t=setTimeout(()=>reject(Error('auto update timeout')),15000);navigator.serviceWorker.addEventListener('controllerchange',()=>{clearTimeout(t);resolve()},{once:true});r.update().catch(reject)})})}
+       9 | async function checkStored(page,old){const p=await page.evaluate(k=>JSON.parse(localStorage.getItem(k)),KEY);expect(p.daily).toEqual(old.daily);expect(p.selected).toBe(old.selected);return p}
+    > 10 | test('map automatically updates once; running label, post-reload toast once, throttled focus/visibility, unchanged/offline/failing checks have no loop',async({page,context})=>{const f=await fixture(page);try{await page.getByRole('button',{name:'Settings',exact:true}).tap();await expect(page.locator('.build-label')).toHaveText(`v${BUILD.version} · build ${BUILD.build}`);await shot(page,'running-build-label');await page.getByRole('button',{name:'Done',exact:true}).tap();const before=await loads(page),calls=await page.evaluate(()=>window.autoChecks);await page.evaluate(()=>{window.dispatchEvent(new Event('focus'));document.dispatchEvent(new Event('visibilitychange'))});expect(await page.evaluate(()=>window.autoChecks)).toBe(calls);await page.clock.install();f.switch();await page.clock.fastForward(61001);await Promise.all([page.waitForEvent('load'),page.evaluate(()=>window.dispatchEvent(new Event('focus')))]);await expect(page.locator('.home')).toBeVisible();await expect(page.locator('.version-toast')).toHaveText('Updated to v4.2.1');expect(await loads(page)).toBe(before+1);await page.waitForTimeout(250);expect(await loads(page)).toBe(before+1);await checkStored(page,f.old);await expect(page.getByRole('button',{name:/tap to refresh/i})).toHaveCount(0);await expect.poll(()=>page.evaluate(()=>caches.keys())).toEqual([f.next.cache]);await page.getByRole('button',{name:'Settings',exact:true}).tap();await expect(page.locator('.build-label')).toHaveText(`v4.2 · build ${f.next.cache.split('-').at(-1)}`);await page.getByRole('button',{name:'Done',exact:true}).tap();const stable=await loads(page);await page.clock.fastForward(61001);await page.evaluate(()=>window.dispatchEvent(new Event('focus')));await page.waitForTimeout(200);expect(await loads(page)).toBe(stable);await context.setOffline(true);await page.clock.fastForward(61001);await page.evaluate(()=>window.dispatchEvent(new Event('focus')));await page.waitForTimeout(200);expect(await loads(page)).toBe(stable);await page.reload();await expect(page.locator('.home')).toBeVisible();await expect(page.locator('.version-toast')).toHaveCount(0);const offline=await page.evaluate(async urls=>Promise.all(urls.map(async u=>({url:u,status:(await fetch(u)).status}))),f.next.urls);expect(offline.every(r=>r.status===200)).toBe(true);await context.setOffline(false);const stable2=await loads(page);await page.evaluate(()=>{ServiceWorkerRegistration.prototype.update=function(){return Promise.reject(Error('simulated failed update check'))}});await page.clock.fastForward(61001);await page.evaluate(()=>window.dispatchEvent(new Event('focus')));await page.waitForTimeout(200);expect(await loads(page)).toBe(stable2);fs.writeFileSync(`reports/auto-update-map-${page.viewportSize().width}.json`,JSON.stringify({from:manifest.cache,toTestFixture:f.next.cache,automaticReloads:1,toastOnce:true,unchangedNoLoop:true,offlineNoLoop:true,rejectedCheckMockNoLoop:true,offline,browserErrors:errors},null,2))}finally{try{await context.setOffline(false)}finally{await f.close()}}});
+         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ^
+      11 | for(const exit of['map','finish'])test(`mid-pond auto update defers until ${exit}; old asset bytes survive SW restart/offline, then latest board/progress retained`,async({page,context})=>{const f=await fixture(page);try{await tapAndEnter(page,()=>page.locator('[data-pond="3"]').tap());await page.locator('[data-cell="0"]').tap();await expect(page.locator('[data-cell="0"]')).toHaveAttribute('data-value','1');const before=await loads(page);f.switch();await activate(page);await page.waitForTimeout(250);expect(await loads(page)).toBe(before);await expect(page.locator('.version-toast')).toHaveCount(0);await expect(page.getByRole('button',{name:/tap to refresh/i})).toHaveCount(0);expect(await digest(page,f.png)).toBe(f.oldPNG);expect(f.oldPNG).not.toBe(f.newPNG);const text=await page.evaluate(async()=> (await fetch('build-info.js')).text());expect(text).toContain(BUILD.build);expect(text).not.toContain(f.next.cache);await context.setOffline(true);const cdp=await context.newCDPSession(page);await cdp.send('ServiceWorker.enable');await cdp.send('ServiceWorker.stopAllWorkers');await cdp.detach();expect(await digest(page,f.png)).toBe(f.oldPNG);expect(await page.evaluate(async()=> (await fetch('build-info.js')).text())).toContain(BUILD.build);expect(await loads(page)).toBe(before);await shot(page,'auto-deferred-old-pond-'+exit);if(exit==='map')await Promise.all([page.waitForEvent('load'),page.getByRole('button',{name:'Back to home'}).tap()]);else await Promise.all([page.waitForEvent('load'),(async()=>{for(const i of enumerate(data.levels[2])[0])await double(page,i)})()]);await expect(page.locator('.home')).toBeVisible();expect(await loads(page)).toBe(before+1);await expect(page.locator('.version-toast')).toHaveText('Updated to v4.2.1');const p=await checkStored(page,f.old);if(exit==='map')expect(p.sessions['pond-3'].cells[0]).toBe(1);else{expect(p.completed).toContain(3);expect(p.sessions['pond-3'].cells.filter(v=>v===2)).toHaveLength(5)}await expect.poll(()=>page.evaluate(()=>caches.keys())).toEqual([f.next.cache]);expect(await digest(page,f.png)).toBe(f.newPNG);await page.reload();await expect(page.locator('.version-toast')).toHaveCount(0);fs.writeFileSync(`reports/auto-update-deferred-${exit}-${page.viewportSize().width}.json`,JSON.stringify({from:manifest.cache,toTestFixture:f.next.cache,deferredUntil:exit,noMidPondReload:true,pinnedOldAssetSHA:f.oldPNG,newAssetSHA:f.newPNG,cacheAffinitySurvivesWorkerRestart:true,cacheAffinityWorksOffline:true,automaticReloads:1,latestStatePreserved:true,browserErrors:errors},null,2))}finally{try{await context.setOffline(false)}finally{await f.close()}}});
+      12 | test('LIVE v3.1.3 first takeover is passive, never reloads its old pond; old cache pinned offline; one safe manual relaunch reaches v4 without loss',async({page,context})=>{const f=await fixture(page,true);try{expect(fs.readFileSync(path.join(f.source,'app.js'),'utf8')).toContain("if(controlled)toast('A fresh pond is ready. Reload when you like.')");await tapAndEnter(page,()=>page.locator('[data-pond="3"]').tap());await page.locator('[data-cell="0"]').tap();await expect(page.locator('[data-cell="0"]')).toHaveAttribute('data-value','1');const before=await loads(page),oldApp=sha(path.join(f.source,'app.js')),oldBloom=sha(path.join(f.source,'assets/starters/bloom.png'));f.switch();await activate(page);await page.waitForTimeout(250);expect(await loads(page)).toBe(before);await expect(page.locator('[data-cell="0"]')).toHaveAttribute('data-value','1');await context.setOffline(true);expect(await digest(page,'app.js')).toBe(oldApp);expect(await digest(page,'assets/starters/bloom.png')).toBe(oldBloom);await tapAndEnter(page,()=>page.getByRole('button',{name:'Back to Pond Path'}).tap());expect(await loads(page)).toBe(before);await page.reload();await expect(page.locator('.home')).toBeVisible();await expect(page.locator('.version-toast')).toHaveText('Updated to v'+BUILD.version);await shot(page,'updated-to-v4-legacy-handoff');const p=await checkStored(page,f.old);expect(p.sessions['pond-3'].cells[0]).toBe(1);expect('relax'in p.sessions['pond-3']).toBe(false);await expect.poll(()=>page.evaluate(()=>caches.keys())).toEqual([manifest.cache]);const offline=await page.evaluate(async urls=>Promise.all(urls.map(async u=>({url:u,status:(await fetch(u)).status}))),manifest.urls);expect(offline.every(r=>r.status===200)).toBe(true);await page.reload();await expect(page.locator('.version-toast')).toHaveCount(0);fs.writeFileSync(`reports/auto-update-legacy-v313-${page.viewportSize().width}.json`,JSON.stringify({sourceTree:f.source,sourceCache:'capydoku-v3.1.3-629a865674bd',targetCache:manifest.cache,sourceReadOnly:true,oneTimeException:'Already-running v3.1.3 has only a passive controllerchange toast, no automatic reload code. One manual safe reload/relaunch is required; v4 updates itself thereafter.',legacyAutomaticReloads:0,noMidPondReload:true,oldCodeAndAssetsPinnedOffline:true,progressAndStreakPreserved:true,updatedToastOnce:true,offline,browserErrors:errors},null,2))}finally{try{await context.setOffline(false)}finally{await f.close()}}});
+      13 |
+        at /workspace/capydoku/app/tests/updates.spec.js:10:1458
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-v4.3-phase1/updates-map-automatically--d36a8-failing-checks-have-no-loop-mobile-412/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-v4.3-phase1/updates-map-automatically--d36a8-failing-checks-have-no-loop-mobile-412/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-v4.3-phase1/updates-map-automatically--d36a8-failing-checks-have-no-loop-mobile-412/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results-v4.3-phase1/updates-map-automatically--d36a8-failing-checks-have-no-loop-mobile-412/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [mobile-412] › tests/upgrade-v42.spec.js:55:1 › real v4.1 → v4.2 on Home: one automatic reload, 'Updated to v4.2.1', all progress and lilies kept, bonus defaults, offline 200s 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  locator('.build-label')
+    Expected: "v4.2 · build bc0fb084a94b"
+    Received: "v4.2.1 · build bc0fb084a94b"
+    Timeout:  7000ms
+
+    Call log:
+      - Expect "toHaveText" locator('.build-label') with timeout 7000ms
+      - waiting for locator('.build-label')
+        18 × locator resolved to <p class="build-label" data-build="bc0fb084a94b" aria-label="Running version">v4.2.1 · build bc0fb084a94b</p>
+           - unexpected value "v4.2.1 · build bc0fb084a94b"
+
+
+      72 |     expect(next.bonus).toEqual({ v: 1, solved: [], best: {}, spare: null, dpad: false, controlsSeen: false });
+      73 |     await page.getByRole("button", { name: "Settings", exact: true }).tap();
+    > 74 |     await expect(page.locator(".build-label")).toHaveText(`v4.2 · build ${BUILD.build}`);
+         |                                                ^
+      75 |     await shot(page, "v41-to-v42-build-label");
+      76 |     await page.getByRole("button", { name: "Done", exact: true }).tap();
+      77 |     const stable = await loads(page);
+        at /workspace/capydoku/app/tests/upgrade-v42.spec.js:74:48
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-v4.3-phase1/upgrade-v42-real-v4-1-→-v4-03c8d-bonus-defaults-offline-200s-mobile-412/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-v4.3-phase1/upgrade-v42-real-v4-1-→-v4-03c8d-bonus-defaults-offline-200s-mobile-412/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-v4.3-phase1/upgrade-v42-real-v4-1-→-v4-03c8d-bonus-defaults-offline-200s-mobile-412/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results-v4.3-phase1/upgrade-v42-real-v4-1-→-v4-03c8d-bonus-defaults-offline-200s-mobile-412/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [mobile-412] › tests/v31-extension.spec.js:13:41 › restored v1 concurrent upward launch uses Remy, visible 1.5s flight then matched soaking 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('.flyer')
+    Expected: 0
+    Received: 5
+    Timeout:  4000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('.flyer') with timeout 4000ms
+      - waiting for locator('.flyer')
+        5 × locator resolved to 5 elements
+          - unexpected value "5"
+
+
+      11 |  for(const kind of['normal','boss','boss30','daily'])test(`solved ${kind}: Replay / Next pond / Hot Spring fit with NO scroll at ${width}×${height}`,async({page})=>{await page.setViewportSize({width,height});let day=new Date(2026,0,1,12);while(dailyPuzzle(data,day,true).n!==7)day.setDate(day.getDate()+1);await page.clock.setFixedTime(day);const id=kind==='normal'?3:kind==='boss'?10:30,q=kind==='daily'?dailyPuzzle(data,day,true):data.levels[id-1],k=kind==='daily'?q.id:`pond-${id}`;await seed(page,{sessions:{[k]:partial(q)}});if(kind==='daily')await tapAndEnter(page,()=>page.getByRole('button',{name:/Daily Pond/}).tap());else await tapAndEnter(page,()=>page.locator(`[data-pond="${id}"]`).tap());await double(page,enumerate(q)[0].at(-1));await expect(page.locator('.banner')).toBeVisible();await expect(page.getByRole('button',{name:'Back to home'})).toBeVisible();await expect(page.locator('.solved-counter')).toHaveText(`${q.n}/${q.n}`);for(const name of['Replay','Next pond →','♨ Hot Spring']){const b=page.getByRole('button',{name,exact:true}),r=await b.boundingBox();expect(r.x).toBeGreaterThanOrEqual(0);expect(r.y).toBeGreaterThanOrEqual(0);expect(r.x+r.width).toBeLessThanOrEqual(width);expect(r.y+r.height).toBeLessThanOrEqual(height);expect(r.height).toBeGreaterThanOrEqual(44)}const z=await page.evaluate(()=>({h:document.documentElement.scrollHeight,w:document.documentElement.scrollWidth,inner:innerHeight}));expect(z.h).toBe(height);expect(z.w).toBe(width);await page.mouse.wheel(0,800);expect(await page.evaluate(()=>scrollY)).toBe(0);await page.waitForTimeout(3150);await capture(page,`after-end-${kind}-${width}`);fs.writeFileSync(`reports/v4-end-${kind}-${width}-v3.1.json`,JSON.stringify({viewport:{width,height},document:z,buttons:await page.locator('.chips button').evaluateAll(es=>es.map(e=>({text:e.textContent,rect:e.getBoundingClientRect().toJSON()})))},null,2))})
+      12 | }
+    > 13 | for(const name of['Jun','Bloom','Remy'])test(`restored v1 concurrent upward launch uses ${name}, visible 1.5s flight then matched soaking`,async({page})=>{await seed(page,{selected:name,sessions:{'pond-3':partial(data.levels[2])}});await tapAndEnter(page,()=>page.locator('[data-pond="3"]').tap());await double(page,enumerate(data.levels[2])[0].at(-1));await expect(page.locator('.flyer')).toHaveCount(5);const motion=await page.locator('.flyer').evaluateAll(es=>es.map((e,i)=>({src:e.getAttribute('src'),...e.getAnimations()[0].effect.getTiming()})));expect(motion.map(m=>Math.round(m.delay))).toEqual([0,100,200,300,400]);expect(motion.every(m=>m.duration===1500&&m.src==='assets/v6/capy-jump.png')).toBe(true);const before=await page.locator('.flyer').first().boundingBox();await page.waitForTimeout(420);const up=await page.locator('.flyer').first().boundingBox();expect(up.y).toBeLessThan(before.y-10);await capture(page,`after-launch-${name.toLowerCase()}-airborne`);if(name==='Jun'){const anchor=await page.evaluate(()=>performance.now());for(const ms of[0,300,650,950,1250,1650,2450]){await page.waitForTimeout(Math.max(0,ms-(await page.evaluate(()=>performance.now())-anchor)));await capture(page,`after-v31-flight-${String(ms+450).padStart(4,'0')}ms`)}}await expect(page.locator('.flyer')).toHaveCount(0,{timeout:4000});await expect.poll(()=>page.locator('.soaking-capy').evaluateAll(es=>es.every(e=>getComputedStyle(e).opacity==='1'))).toBe(true);await expect(page.locator('.celebration')).toHaveAttribute('data-phase','reaction');await capture(page,`after-launch-${name.toLowerCase()}-soaked`)});
+         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ^
+      14 | async function mockMusic(p,fallback=false){await p.addInitScript(fallback=>{window.__music={plays:[],pauses:0,gain:0};const play=HTMLMediaElement.prototype.play,pause=HTMLMediaElement.prototype.pause,desc=Object.getOwnPropertyDescriptor(HTMLMediaElement.prototype,'paused'),can=HTMLMediaElement.prototype.canPlayType;HTMLMediaElement.prototype.play=function(){if(this.id!=='pond-music')return play.call(this);this.__playing=true;window.__music.plays.push(this.src);return Promise.resolve()};HTMLMediaElement.prototype.pause=function(){if(this.id!=='pond-music')return pause.call(this);this.__playing=false;window.__music.pauses++};Object.defineProperty(HTMLMediaElement.prototype,'paused',{configurable:true,get(){return this.id==='pond-music'?!this.__playing:desc.get.call(this)}});HTMLMediaElement.prototype.canPlayType=function(t){return fallback&&t.includes('ogg')?'':can.call(this,t)};window.AudioContext=class{constructor(){this.destination={}}createMediaElementSource(){return{connect(){}}}createGain(){return{gain:{set value(v){window.__music.gain=v},get value(){return window.__music.gain}},connect(){}}}resume(){return Promise.resolve()}suspend(){return Promise.resolve()}close(){return Promise.resolve()}}},fallback)}
+      15 | test('music: NO playback before interaction, own toggle persists separately from effects, off really pauses',async({page})=>{await mockMusic(page);await seed(page);expect(await page.evaluate(()=>window.__music.plays)).toEqual([]);await expect(page.locator('#pond-music')).toHaveCount(0);await page.waitForTimeout(350);expect(await page.evaluate(()=>window.__music.plays)).toEqual([]);await page.getByRole('button',{name:'Settings',exact:true}).tap();await expect.poll(()=>page.evaluate(()=>window.__music.plays.length)).toBe(1);await expect.poll(()=>page.evaluate(()=>window.__music.gain)).toBe(.14);await capture(page,'after-settings-music-on');await page.getByRole('button',{name:'Music',exact:true}).tap();await expect(page.getByRole('button',{name:'Music',exact:true})).toHaveAttribute('aria-pressed','false');await expect.poll(()=>page.evaluate(()=>document.querySelector('#pond-music').paused)).toBe(true);await capture(page,'after-settings-music-off');await page.reload();await page.getByRole('button',{name:'Settings',exact:true}).tap();await expect(page.getByRole('button',{name:'Music',exact:true})).toHaveAttribute('aria-pressed','false');expect(await page.evaluate(()=>window.__music.plays)).toEqual([]);const p=await page.evaluate(k=>JSON.parse(localStorage.getItem(k)),KEY);expect(p.music).toBe(false);expect(p.audio).toBe(false);await page.getByRole('button',{name:'Music credits · CC0',exact:true}).tap();for(const name of['Northumberland','Spring Spring'])await expect(page.getByRole('dialog',{name:'Music credits'})).toContainText(name);await capture(page,'after-music-credits')});
+      16 | test('music: hidden tab pauses immediately, visible resumes, native loop and ended fallback repeat only Northumberland',async({page})=>{await mockMusic(page);await seed(page);await tapAndEnter(page,()=>page.locator('[data-pond="3"]').tap());await expect.poll(()=>page.evaluate(()=>window.__music.gain)).toBe(.14);await page.evaluate(()=>{Object.defineProperty(document,'hidden',{configurable:true,get:()=>true});document.dispatchEvent(new Event('visibilitychange'))});expect(await page.locator('#pond-music').evaluate(a=>a.paused)).toBe(true);expect(await page.evaluate(()=>window.__music.gain)).toBe(0);const calls=await page.evaluate(()=>window.__music.plays.length);await page.waitForTimeout(300);expect(await page.evaluate(()=>window.__music.plays.length)).toBe(calls);await page.evaluate(()=>{Object.defineProperty(document,'hidden',{configurable:true,get:()=>false});document.dispatchEvent(new Event('visibilitychange'))});await expect.poll(()=>page.evaluate(()=>window.__music.plays.length)).toBe(calls+1);for(const id of['northumberland','northumberland','northumberland']){await page.locator('#pond-music').evaluate(a=>{a.__playing=false;a.dispatchEvent(new Event('ended'))});await expect(page.locator('#pond-music')).toHaveAttribute('data-track',id)}});
+        at /workspace/capydoku/app/tests/v31-extension.spec.js:13:1301
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-v4.3-phase1/v31-extension-restored-v1--09099-flight-then-matched-soaking-mobile-412/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-v4.3-phase1/v31-extension-restored-v1--09099-flight-then-matched-soaking-mobile-412/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-v4.3-phase1/v31-extension-restored-v1--09099-flight-then-matched-soaking-mobile-412/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results-v4.3-phase1/v31-extension-restored-v1--09099-flight-then-matched-soaking-mobile-412/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [mobile-412] › tests/v42.spec.js:269:1 › Settings: D-pad toggle persists and swaps the capy chip for a D-pad that steps 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('.build-label')
+    Expected substring: "v4.2 · build"
+    Received string:    "v4.2.1 · build bc0fb084a94b"
+    Timeout: 7000ms
+
+    Call log:
+      - Expect "toContainText" locator('.build-label') with timeout 7000ms
+      - waiting for locator('.build-label')
+        18 × locator resolved to <p class="build-label" data-build="bc0fb084a94b" aria-label="Running version">v4.2.1 · build bc0fb084a94b</p>
+           - unexpected value "v4.2.1 · build bc0fb084a94b"
+
+
+      275 |   await t.tap();
+      276 |   await expect(page.getByRole("button", { name: "Crate bonus D-pad" })).toHaveText("On");
+    > 277 |   await expect(page.locator(".build-label")).toContainText("v4.2 · build");
+          |                                              ^
+      278 |   await shot(page, "settings-dpad");
+      279 |   expect((await stored(page)).bonus.dpad).toBe(true);
+      280 |   await page.getByRole("button", { name: "Done", exact: true }).tap();
+        at /workspace/capydoku/app/tests/v42.spec.js:277:46
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-v4.3-phase1/v42-Settings-D-pad-toggle--c5666-chip-for-a-D-pad-that-steps-mobile-412/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-v4.3-phase1/v42-Settings-D-pad-toggle--c5666-chip-for-a-D-pad-that-steps-mobile-412/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-v4.3-phase1/v42-Settings-D-pad-toggle--c5666-chip-for-a-D-pad-that-steps-mobile-412/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results-v4.3-phase1/v42-Settings-D-pad-toggle--c5666-chip-for-a-D-pad-that-steps-mobile-412/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [mobile-360] › tests/updates.spec.js:10:1 › map automatically updates once; running label, post-reload toast once, throttled focus/visibility, unchanged/offline/failing checks have no loop 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  locator('.build-label')
+    Expected: "v4.2 · build ab4d8658ac6c"
+    Received: "v4.2.1 · build ab4d8658ac6c"
+    Timeout:  7000ms
+
+    Call log:
+      - Expect "toHaveText" locator('.build-label') with timeout 7000ms
+      - waiting for locator('.build-label')
+        18 × locator resolved to <p class="build-label" data-build="ab4d8658ac6c" aria-label="Running version">v4.2.1 · build ab4d8658ac6c</p>
+           - unexpected value "v4.2.1 · build ab4d8658ac6c"
+
+
+       8 | async function activate(page){await page.evaluate(async()=>{const r=await navigator.serviceWorker.getRegistration();await new Promise((resolve,reject)=>{const t=setTimeout(()=>reject(Error('auto update timeout')),15000);navigator.serviceWorker.addEventListener('controllerchange',()=>{clearTimeout(t);resolve()},{once:true});r.update().catch(reject)})})}
+       9 | async function checkStored(page,old){const p=await page.evaluate(k=>JSON.parse(localStorage.getItem(k)),KEY);expect(p.daily).toEqual(old.daily);expect(p.selected).toBe(old.selected);return p}
+    > 10 | test('map automatically updates once; running label, post-reload toast once, throttled focus/visibility, unchanged/offline/failing checks have no loop',async({page,context})=>{const f=await fixture(page);try{await page.getByRole('button',{name:'Settings',exact:true}).tap();await expect(page.locator('.build-label')).toHaveText(`v${BUILD.version} · build ${BUILD.build}`);await shot(page,'running-build-label');await page.getByRole('button',{name:'Done',exact:true}).tap();const before=await loads(page),calls=await page.evaluate(()=>window.autoChecks);await page.evaluate(()=>{window.dispatchEvent(new Event('focus'));document.dispatchEvent(new Event('visibilitychange'))});expect(await page.evaluate(()=>window.autoChecks)).toBe(calls);await page.clock.install();f.switch();await page.clock.fastForward(61001);await Promise.all([page.waitForEvent('load'),page.evaluate(()=>window.dispatchEvent(new Event('focus')))]);await expect(page.locator('.home')).toBeVisible();await expect(page.locator('.version-toast')).toHaveText('Updated to v4.2.1');expect(await loads(page)).toBe(before+1);await page.waitForTimeout(250);expect(await loads(page)).toBe(before+1);await checkStored(page,f.old);await expect(page.getByRole('button',{name:/tap to refresh/i})).toHaveCount(0);await expect.poll(()=>page.evaluate(()=>caches.keys())).toEqual([f.next.cache]);await page.getByRole('button',{name:'Settings',exact:true}).tap();await expect(page.locator('.build-label')).toHaveText(`v4.2 · build ${f.next.cache.split('-').at(-1)}`);await page.getByRole('button',{name:'Done',exact:true}).tap();const stable=await loads(page);await page.clock.fastForward(61001);await page.evaluate(()=>window.dispatchEvent(new Event('focus')));await page.waitForTimeout(200);expect(await loads(page)).toBe(stable);await context.setOffline(true);await page.clock.fastForward(61001);await page.evaluate(()=>window.dispatchEvent(new Event('focus')));await page.waitForTimeout(200);expect(await loads(page)).toBe(stable);await page.reload();await expect(page.locator('.home')).toBeVisible();await expect(page.locator('.version-toast')).toHaveCount(0);const offline=await page.evaluate(async urls=>Promise.all(urls.map(async u=>({url:u,status:(await fetch(u)).status}))),f.next.urls);expect(offline.every(r=>r.status===200)).toBe(true);await context.setOffline(false);const stable2=await loads(page);await page.evaluate(()=>{ServiceWorkerRegistration.prototype.update=function(){return Promise.reject(Error('simulated failed update check'))}});await page.clock.fastForward(61001);await page.evaluate(()=>window.dispatchEvent(new Event('focus')));await page.waitForTimeout(200);expect(await loads(page)).toBe(stable2);fs.writeFileSync(`reports/auto-update-map-${page.viewportSize().width}.json`,JSON.stringify({from:manifest.cache,toTestFixture:f.next.cache,automaticReloads:1,toastOnce:true,unchangedNoLoop:true,offlineNoLoop:true,rejectedCheckMockNoLoop:true,offline,browserErrors:errors},null,2))}finally{try{await context.setOffline(false)}finally{await f.close()}}});
+         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ^
+      11 | for(const exit of['map','finish'])test(`mid-pond auto update defers until ${exit}; old asset bytes survive SW restart/offline, then latest board/progress retained`,async({page,context})=>{const f=await fixture(page);try{await tapAndEnter(page,()=>page.locator('[data-pond="3"]').tap());await page.locator('[data-cell="0"]').tap();await expect(page.locator('[data-cell="0"]')).toHaveAttribute('data-value','1');const before=await loads(page);f.switch();await activate(page);await page.waitForTimeout(250);expect(await loads(page)).toBe(before);await expect(page.locator('.version-toast')).toHaveCount(0);await expect(page.getByRole('button',{name:/tap to refresh/i})).toHaveCount(0);expect(await digest(page,f.png)).toBe(f.oldPNG);expect(f.oldPNG).not.toBe(f.newPNG);const text=await page.evaluate(async()=> (await fetch('build-info.js')).text());expect(text).toContain(BUILD.build);expect(text).not.toContain(f.next.cache);await context.setOffline(true);const cdp=await context.newCDPSession(page);await cdp.send('ServiceWorker.enable');await cdp.send('ServiceWorker.stopAllWorkers');await cdp.detach();expect(await digest(page,f.png)).toBe(f.oldPNG);expect(await page.evaluate(async()=> (await fetch('build-info.js')).text())).toContain(BUILD.build);expect(await loads(page)).toBe(before);await shot(page,'auto-deferred-old-pond-'+exit);if(exit==='map')await Promise.all([page.waitForEvent('load'),page.getByRole('button',{name:'Back to home'}).tap()]);else await Promise.all([page.waitForEvent('load'),(async()=>{for(const i of enumerate(data.levels[2])[0])await double(page,i)})()]);await expect(page.locator('.home')).toBeVisible();expect(await loads(page)).toBe(before+1);await expect(page.locator('.version-toast')).toHaveText('Updated to v4.2.1');const p=await checkStored(page,f.old);if(exit==='map')expect(p.sessions['pond-3'].cells[0]).toBe(1);else{expect(p.completed).toContain(3);expect(p.sessions['pond-3'].cells.filter(v=>v===2)).toHaveLength(5)}await expect.poll(()=>page.evaluate(()=>caches.keys())).toEqual([f.next.cache]);expect(await digest(page,f.png)).toBe(f.newPNG);await page.reload();await expect(page.locator('.version-toast')).toHaveCount(0);fs.writeFileSync(`reports/auto-update-deferred-${exit}-${page.viewportSize().width}.json`,JSON.stringify({from:manifest.cache,toTestFixture:f.next.cache,deferredUntil:exit,noMidPondReload:true,pinnedOldAssetSHA:f.oldPNG,newAssetSHA:f.newPNG,cacheAffinitySurvivesWorkerRestart:true,cacheAffinityWorksOffline:true,automaticReloads:1,latestStatePreserved:true,browserErrors:errors},null,2))}finally{try{await context.setOffline(false)}finally{await f.close()}}});
+      12 | test('LIVE v3.1.3 first takeover is passive, never reloads its old pond; old cache pinned offline; one safe manual relaunch reaches v4 without loss',async({page,context})=>{const f=await fixture(page,true);try{expect(fs.readFileSync(path.join(f.source,'app.js'),'utf8')).toContain("if(controlled)toast('A fresh pond is ready. Reload when you like.')");await tapAndEnter(page,()=>page.locator('[data-pond="3"]').tap());await page.locator('[data-cell="0"]').tap();await expect(page.locator('[data-cell="0"]')).toHaveAttribute('data-value','1');const before=await loads(page),oldApp=sha(path.join(f.source,'app.js')),oldBloom=sha(path.join(f.source,'assets/starters/bloom.png'));f.switch();await activate(page);await page.waitForTimeout(250);expect(await loads(page)).toBe(before);await expect(page.locator('[data-cell="0"]')).toHaveAttribute('data-value','1');await context.setOffline(true);expect(await digest(page,'app.js')).toBe(oldApp);expect(await digest(page,'assets/starters/bloom.png')).toBe(oldBloom);await tapAndEnter(page,()=>page.getByRole('button',{name:'Back to Pond Path'}).tap());expect(await loads(page)).toBe(before);await page.reload();await expect(page.locator('.home')).toBeVisible();await expect(page.locator('.version-toast')).toHaveText('Updated to v'+BUILD.version);await shot(page,'updated-to-v4-legacy-handoff');const p=await checkStored(page,f.old);expect(p.sessions['pond-3'].cells[0]).toBe(1);expect('relax'in p.sessions['pond-3']).toBe(false);await expect.poll(()=>page.evaluate(()=>caches.keys())).toEqual([manifest.cache]);const offline=await page.evaluate(async urls=>Promise.all(urls.map(async u=>({url:u,status:(await fetch(u)).status}))),manifest.urls);expect(offline.every(r=>r.status===200)).toBe(true);await page.reload();await expect(page.locator('.version-toast')).toHaveCount(0);fs.writeFileSync(`reports/auto-update-legacy-v313-${page.viewportSize().width}.json`,JSON.stringify({sourceTree:f.source,sourceCache:'capydoku-v3.1.3-629a865674bd',targetCache:manifest.cache,sourceReadOnly:true,oneTimeException:'Already-running v3.1.3 has only a passive controllerchange toast, no automatic reload code. One manual safe reload/relaunch is required; v4 updates itself thereafter.',legacyAutomaticReloads:0,noMidPondReload:true,oldCodeAndAssetsPinnedOffline:true,progressAndStreakPreserved:true,updatedToastOnce:true,offline,browserErrors:errors},null,2))}finally{try{await context.setOffline(false)}finally{await f.close()}}});
+      13 |
+        at /workspace/capydoku/app/tests/updates.spec.js:10:1458
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-v4.3-phase1/updates-map-automatically--d36a8-failing-checks-have-no-loop-mobile-360/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-v4.3-phase1/updates-map-automatically--d36a8-failing-checks-have-no-loop-mobile-360/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-v4.3-phase1/updates-map-automatically--d36a8-failing-checks-have-no-loop-mobile-360/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results-v4.3-phase1/updates-map-automatically--d36a8-failing-checks-have-no-loop-mobile-360/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [mobile-360] › tests/upgrade-v42.spec.js:55:1 › real v4.1 → v4.2 on Home: one automatic reload, 'Updated to v4.2.1', all progress and lilies kept, bonus defaults, offline 200s 
+
+    Test timeout of 45000ms exceeded.
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  locator('.build-label')
+    Expected: "v4.2 · build bc0fb084a94b"
+    Received: "v4.2.1 · build bc0fb084a94b"
+    Timeout:  7000ms
+
+    Call log:
+      - Expect "toHaveText" locator('.build-label') with timeout 7000ms
+      - waiting for locator('.build-label')
+        8 × locator resolved to <p class="build-label" data-build="bc0fb084a94b" aria-label="Running version">v4.2.1 · build bc0fb084a94b</p>
+          - unexpected value "v4.2.1 · build bc0fb084a94b"
+
+
+      72 |     expect(next.bonus).toEqual({ v: 1, solved: [], best: {}, spare: null, dpad: false, controlsSeen: false });
+      73 |     await page.getByRole("button", { name: "Settings", exact: true }).tap();
+    > 74 |     await expect(page.locator(".build-label")).toHaveText(`v4.2 · build ${BUILD.build}`);
+         |                                                ^
+      75 |     await shot(page, "v41-to-v42-build-label");
+      76 |     await page.getByRole("button", { name: "Done", exact: true }).tap();
+      77 |     const stable = await loads(page);
+        at /workspace/capydoku/app/tests/upgrade-v42.spec.js:74:48
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-v4.3-phase1/upgrade-v42-real-v4-1-→-v4-03c8d-bonus-defaults-offline-200s-mobile-360/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-v4.3-phase1/upgrade-v42-real-v4-1-→-v4-03c8d-bonus-defaults-offline-200s-mobile-360/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-v4.3-phase1/upgrade-v42-real-v4-1-→-v4-03c8d-bonus-defaults-offline-200s-mobile-360/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results-v4.3-phase1/upgrade-v42-real-v4-1-→-v4-03c8d-bonus-defaults-offline-200s-mobile-360/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7) [mobile-360] › tests/v42.spec.js:269:1 › Settings: D-pad toggle persists and swaps the capy chip for a D-pad that steps 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('.build-label')
+    Expected substring: "v4.2 · build"
+    Received string:    "v4.2.1 · build bc0fb084a94b"
+    Timeout: 7000ms
+
+    Call log:
+      - Expect "toContainText" locator('.build-label') with timeout 7000ms
+      - waiting for locator('.build-label')
+        18 × locator resolved to <p class="build-label" data-build="bc0fb084a94b" aria-label="Running version">v4.2.1 · build bc0fb084a94b</p>
+           - unexpected value "v4.2.1 · build bc0fb084a94b"
+
+
+      275 |   await t.tap();
+      276 |   await expect(page.getByRole("button", { name: "Crate bonus D-pad" })).toHaveText("On");
+    > 277 |   await expect(page.locator(".build-label")).toContainText("v4.2.1 · build");
+          |                                              ^
+      278 |   await shot(page, "settings-dpad");
+      279 |   expect((await stored(page)).bonus.dpad).toBe(true);
+      280 |   await page.getByRole("button", { name: "Done", exact: true }).tap();
+        at /workspace/capydoku/app/tests/v42.spec.js:277:46
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-v4.3-phase1/v42-Settings-D-pad-toggle--c5666-chip-for-a-D-pad-that-steps-mobile-360/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-v4.3-phase1/v42-Settings-D-pad-toggle--c5666-chip-for-a-D-pad-that-steps-mobile-360/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-v4.3-phase1/v42-Settings-D-pad-toggle--c5666-chip-for-a-D-pad-that-steps-mobile-360/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results-v4.3-phase1/v42-Settings-D-pad-toggle--c5666-chip-for-a-D-pad-that-steps-mobile-360/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7 failed
+    [mobile-412] › tests/updates.spec.js:10:1 › map automatically updates once; running label, post-reload toast once, throttled focus/visibility, unchanged/offline/failing checks have no loop 
+    [mobile-412] › tests/upgrade-v42.spec.js:55:1 › real v4.1 → v4.2 on Home: one automatic reload, 'Updated to v4.2.1', all progress and lilies kept, bonus defaults, offline 200s 
+    [mobile-412] › tests/v31-extension.spec.js:13:41 › restored v1 concurrent upward launch uses Remy, visible 1.5s flight then matched soaking 
+    [mobile-412] › tests/v42.spec.js:269:1 › Settings: D-pad toggle persists and swaps the capy chip for a D-pad that steps 
+    [mobile-360] › tests/updates.spec.js:10:1 › map automatically updates once; running label, post-reload toast once, throttled focus/visibility, unchanged/offline/failing checks have no loop 
+    [mobile-360] › tests/upgrade-v42.spec.js:55:1 › real v4.1 → v4.2 on Home: one automatic reload, 'Updated to v4.2.1', all progress and lilies kept, bonus defaults, offline 200s 
+    [mobile-360] › tests/v42.spec.js:269:1 › Settings: D-pad toggle persists and swaps the capy chip for a D-pad that steps 
+  333 passed (16.2m)
+EXIT 1

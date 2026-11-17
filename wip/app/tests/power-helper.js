@@ -1,0 +1,3 @@
+import{expect}from'@playwright/test';
+// Exercise the real confirmation path when unseen; never pre-spend or seed around it.
+export async function activatePowerUI(page,name){const button=name?page.getByRole('button',{name,exact:true}):page.locator('.power-btn');await button.tap();await page.waitForFunction(()=>document.querySelector('[data-action="confirmPower"]')||document.querySelector('.power-btn[data-used="true"]'));const confirm=page.locator('[data-action="confirmPower"]');if(await confirm.isVisible())await confirm.tap();await expect(page.locator('.power-btn')).toHaveAttribute('data-used','true')}

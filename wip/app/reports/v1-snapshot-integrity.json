@@ -1,0 +1,376 @@
+{
+  "all_unchanged": true,
+  "original_files_checked": 74,
+  "files": [
+    {
+      "path": "package-lock.json",
+      "sha256": "c33ad810415ae35d8cc3acfcac85bb0b6e2c28b381572cdae3aa6291038e4939",
+      "unchanged": true
+    },
+    {
+      "path": "style.css",
+      "sha256": "51a681549d8c47ca2adab7662303f66c8373d9588360f07eef97799679c1251b",
+      "unchanged": true
+    },
+    {
+      "path": "app.js",
+      "sha256": "695b729529bf6635b97cbe82acead232099c159df8ed02a4e309f28e5e5423c6",
+      "unchanged": true
+    },
+    {
+      "path": "README.md",
+      "sha256": "7d424b57fe15be64e4287e4112c4ad7eff52b298577edc441ae16f3599af519d",
+      "unchanged": true
+    },
+    {
+      "path": "package.json",
+      "sha256": "b3ff3bde5927d0f6170e11bbcde478a2dd9bf38ecda176aaf5df8e16b971f0cd",
+      "unchanged": true
+    },
+    {
+      "path": "levels.json",
+      "sha256": "b5eecaa1f35987ada4d836fd0fceeb5ce383a98051685797ddb6602802fae0f7",
+      "unchanged": true
+    },
+    {
+      "path": "sw.js",
+      "sha256": "9ef3759ae169d811036d91340ec593b827340ee92801017b09319afc5305d1f8",
+      "unchanged": true
+    },
+    {
+      "path": "core.js",
+      "sha256": "98e49d39762c0c3d3d4b02e92469fb804f38900582142598a4d9fab536468917",
+      "unchanged": true
+    },
+    {
+      "path": "index.html",
+      "sha256": "1d047f588f1000233fefed0edcd0d1fca47c3f280378554ecd47b3c4a1f94d82",
+      "unchanged": true
+    },
+    {
+      "path": "manifest.webmanifest",
+      "sha256": "fde4bcbd60f0614d79ede667a95336a784508037b86c9bc192f6be6d52d6845a",
+      "unchanged": true
+    },
+    {
+      "path": "KNOWN-ISSUES.md",
+      "sha256": "33169648fbdaf83fc6f9a9c49edb9409b0045d524c904a64e52282e66c7a9458",
+      "unchanged": true
+    },
+    {
+      "path": "playwright.config.js",
+      "sha256": "d4db2efcaf290d7bd2bdd8ecef54c89d0f491d8bcbe39772fd9d066b0c0516d3",
+      "unchanged": true
+    },
+    {
+      "path": "reports/unit.log",
+      "sha256": "4b2a95ddebfa998b8339042d34b61343a28e2421d7c77c7daa913d467fd0378f",
+      "unchanged": true
+    },
+    {
+      "path": "reports/offline.json",
+      "sha256": "9ea600e29379566b5aa66a1aa8c87383b8fa1ad198d184b9f438d877df192904",
+      "unchanged": true
+    },
+    {
+      "path": "reports/runtime-package.json",
+      "sha256": "91cda10617701a2dc3909f9fc106a89fe1b2fe592e8facd6935d431a83be3959",
+      "unchanged": true
+    },
+    {
+      "path": "reports/e2e.log",
+      "sha256": "eb863a4d77a87a57786165e8e4c74bca7e8809f8eea8a399c8f3949523fcd07b",
+      "unchanged": true
+    },
+    {
+      "path": "reports/verification.md",
+      "sha256": "3120d81564f3c3cece37d19418de5409adb00e609b47c419160f590cb40452c6",
+      "unchanged": true
+    },
+    {
+      "path": "reports/verification.json",
+      "sha256": "7950d340f2bde21515026b491d8d8d90b3033976c6935ce67de27b268698cf11",
+      "unchanged": true
+    },
+    {
+      "path": "reports/unit-initial-failure.log",
+      "sha256": "e58b7ca0979faca65c209ce610c889310b392f52504a43d58a7ec1297e14c9ea",
+      "unchanged": true
+    },
+    {
+      "path": "reports/e2e-first-pass.log",
+      "sha256": "59d5f594539dbaa97c9d025b127f5ab9275c05736b86e943681afb40cb9b3406",
+      "unchanged": true
+    },
+    {
+      "path": "reports/visual-review.md",
+      "sha256": "47ff8f68732ffbaefba334f39e98a6c801b0e4688b38d4b4c9babfb14ddf493e",
+      "unchanged": true
+    },
+    {
+      "path": "reports/font-source.css",
+      "sha256": "a876b0619bf87892784179b6be3c7b821f40150b3420e0ce32cc1610b3ce0002",
+      "unchanged": true
+    },
+    {
+      "path": "reports/precache-status.json",
+      "sha256": "5a4e8ce2623af0af7ca6129cadb323e7bb125c6f540a14782ba3478c1ad71e42",
+      "unchanged": true
+    },
+    {
+      "path": "reports/test-summary.json",
+      "sha256": "4a529e80bcd92096f361a0c77117861f05a2d9704ff35e62ae0ca10e1906cbcb",
+      "unchanged": true
+    },
+    {
+      "path": "reports/contact-sheet.png",
+      "sha256": "678b078cb67a1bd1442bbe102f7b1a73969698aa05c5675297f9fcbfa16ef796",
+      "unchanged": true
+    },
+    {
+      "path": "reports/precache.json",
+      "sha256": "a57b6cce57f86fad957f136004358c2ac7d6da81d2bd09acdf0ce156dbdec928",
+      "unchanged": true
+    },
+    {
+      "path": "reports/generator.log",
+      "sha256": "41f1998c389beda34b64a5a2659f50e540cbd792286d985e8734acebcfefc007",
+      "unchanged": true
+    },
+    {
+      "path": "reports/test-summary.md",
+      "sha256": "6b0ffe97bf2f86f077163670204aa331962abc583068d4240b3ebeae5ce6a061",
+      "unchanged": true
+    },
+    {
+      "path": "reports/playwright.json",
+      "sha256": "33257f4eb367bbfca694dcbc91dd4332b5bcc0345f1722840e88baf18b52f4ac",
+      "unchanged": true
+    },
+    {
+      "path": "tests/mobile.spec.js",
+      "sha256": "803d423bbbdd39042fb7cdae10455926a6033a27fe63a921424a87f7d84e8d97",
+      "unchanged": true
+    },
+    {
+      "path": "tests/unit.test.js",
+      "sha256": "181410d6ecb948cf108a054779e21169d9135726cad262ea2617327e047d22f3",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/contact-sheet.py",
+      "sha256": "df5fa5db422ebfd103b671a3b38f70e063f744bf5526cdbc612fb4d8a7ef045e",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/mockup-board-reference.txt",
+      "sha256": "95010a9f547589fbead3c6684db35def130bddce9edbaf261076d5bf081f6455",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/generate.py",
+      "sha256": "13b9e747136b121d3203399e5d9bcef2df057c5e15f4164408b0c319bd55b822",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/build-sw.py",
+      "sha256": "bb2db87a540631e0193ac1940b4f6e61c9738aeab0206c685c458ad537314fc5",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/preview.mjs",
+      "sha256": "bd3e4a016dcfcc4e90ffa117240ce5e64f2c93c40a47c42bf7327e08acbde86b",
+      "unchanged": true
+    },
+    {
+      "path": "assets/palette.json",
+      "sha256": "2f54bd4f82204a48a03e6b3934f67f1b29106b121bee70495fe5eb4124b3dba5",
+      "unchanged": true
+    },
+    {
+      "path": "assets/nunito-800.ttf",
+      "sha256": "c5776505c7b3df3c3ca763477b795d6bbc6517760bede0462ab77d1fb44954a6",
+      "unchanged": true
+    },
+    {
+      "path": "assets/capy-hat.png",
+      "sha256": "e64b46d8ac0ff31e9794d995c074b67d2cb1bb7e09c1203b90cb1f9070b61bc6",
+      "unchanged": true
+    },
+    {
+      "path": "assets/map-bg.jpg",
+      "sha256": "7f2e3ca8aa9c032b84adddd4fcd4845f87cdb37c39a287293ec6c5ccb2313c39",
+      "unchanged": true
+    },
+    {
+      "path": "assets/capy-jump.png",
+      "sha256": "2dde41ffa38576f9571b1c6dd559126d0454c0603c3900b876ec3992e5c63157",
+      "unchanged": true
+    },
+    {
+      "path": "assets/icon-192.png",
+      "sha256": "c72f5bd519065fb5464f685a6ca8544523b4b2a4d036d6bf7e03608fbb86183a",
+      "unchanged": true
+    },
+    {
+      "path": "assets/icon-512.png",
+      "sha256": "371099d405e676384a54cea86878ecb7753b3cb4cbebebb21b12880e44f1fa24",
+      "unchanged": true
+    },
+    {
+      "path": "assets/capy-plain.png",
+      "sha256": "5e422e7c763ed5ce7ab00a1b886e6c256252920a1ca1a3ac6895660aa4faab9d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/nunito-700.ttf",
+      "sha256": "1a025dfce6e6e03bbe31ba82277ec5ed96df8b8dd58b3df6267269490b90b1dc",
+      "unchanged": true
+    },
+    {
+      "path": "assets/Nunito-OFL.txt",
+      "sha256": "580df76c95a1ec5ab878ceb25bb3d85c6a076804e9c970c8c6972aea775fdf65",
+      "unchanged": true
+    },
+    {
+      "path": "assets/nunito-500.ttf",
+      "sha256": "ceb6eec0a584cae83e8f3ab868e2f03977b38ff6e78632bc8a7ec69dcf9f7c18",
+      "unchanged": true
+    },
+    {
+      "path": "assets/hotspring-bg.jpg",
+      "sha256": "03e15c38adb09761e259222876f361a11b4e4337fe736ca3a984e9db3865d8bd",
+      "unchanged": true
+    },
+    {
+      "path": "assets/capy-orange.png",
+      "sha256": "6ca832efc12b8db0f8aec52ecaf6ceb78ccfcd96bb310cc3bc6a46c11c062622",
+      "unchanged": true
+    },
+    {
+      "path": "assets/capy-swim.png",
+      "sha256": "ba417a15878c81333b9a8c8f624ff36e95ca2bb62b9ae60454b61428ac5608df",
+      "unchanged": true
+    },
+    {
+      "path": "assets/capy-duck.png",
+      "sha256": "730d706dd805ed19cd687c63cb004e1a21f71cdbc4b37f144655a91e47b8b2a0",
+      "unchanged": true
+    },
+    {
+      "path": "assets/capy-sleep.png",
+      "sha256": "768c1d7384f25015cba62c11356d764235911ab4807f4c5ce1d8db0eb93fcba2",
+      "unchanged": true
+    },
+    {
+      "path": "assets/capy-sit.png",
+      "sha256": "fec2c94df838e87cb3a330d9b589e53e382cba0f851a3d3d77afa3336a9ccae2",
+      "unchanged": true
+    },
+    {
+      "path": "test-results/.last-run.json",
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/__pycache__/generate.cpython-313.pyc",
+      "sha256": "280411a9159c79c90d1a188e945dc06176af9ab5d22e4582cbd07431e6c4bc4e",
+      "unchanged": true
+    },
+    {
+      "path": "reports/visual-iterations/03-collection-preview.png",
+      "sha256": "459a5791f156111a715feb8e79826421f8ca609756d109333e2f698f3cbef78c",
+      "unchanged": true
+    },
+    {
+      "path": "reports/visual-iterations/02-hint-preview.png",
+      "sha256": "ff40be364bab4707ad02704dc8b63e1616dbf19931c4406683d81f4ddc5405e9",
+      "unchanged": true
+    },
+    {
+      "path": "reports/visual-iterations/00-home-initial.png",
+      "sha256": "0bd8d85d8ba9629c7d5d3c333da7d8853da285da2d03b873b9c70167628f468e",
+      "unchanged": true
+    },
+    {
+      "path": "reports/visual-iterations/01-empty-preview.png",
+      "sha256": "3f1789bfd8a33d08e7f9c5876e7e612da838d7a8203eff59c4c776b83eac6579",
+      "unchanged": true
+    },
+    {
+      "path": "reports/playwright-html/index.html",
+      "sha256": "749eb1034afe947dd1c8ad52af8a1f753860680f39d426578bd38d4f124e7545",
+      "unchanged": true
+    },
+    {
+      "path": "reports/screenshots/07-boss-pond.png",
+      "sha256": "714d5b5782ecab79d254b2135775992f02b8bd28c8bb581c91b58240cd2601fe",
+      "unchanged": true
+    },
+    {
+      "path": "reports/screenshots/05-game-over.png",
+      "sha256": "901e476dd10d0df06920f6944a09a0f5f4bd067a4e7986110757b366c13fe25f",
+      "unchanged": true
+    },
+    {
+      "path": "reports/screenshots/02-level-progress.png",
+      "sha256": "55b60d848bdf7200171569fe9f96bfb1c57954c7921f80b0ea2fd3e3fb856def",
+      "unchanged": true
+    },
+    {
+      "path": "reports/screenshots/13-rocks-7x7.png",
+      "sha256": "3414cf53da476da8d32b4efea0f3298dc9a5a30d80cff4b948b94832eac35da3",
+      "unchanged": true
+    },
+    {
+      "path": "reports/screenshots/10-solved-in-spring.png",
+      "sha256": "b28b81e2c27a57c34932a12b0e523b0da914f47e0e6dbc9fa9bdda81917081bd",
+      "unchanged": true
+    },
+    {
+      "path": "reports/screenshots/12-hot-spring.png",
+      "sha256": "58fe540ee54f52066a464c3c09128f9ea5e49d13057ea07dc8cf5d1e5298b5f5",
+      "unchanged": true
+    },
+    {
+      "path": "reports/screenshots/08-solved-start.png",
+      "sha256": "897761e6d586579cbaaf656b76e0accab2b23b1d6443698cf0cec0ed49bfff95",
+      "unchanged": true
+    },
+    {
+      "path": "reports/screenshots/09-solved-mid-jump.png",
+      "sha256": "af4fa979848adb9154d79c1c8918350aac89c8ee465eacb693d5732ecd1e60f6",
+      "unchanged": true
+    },
+    {
+      "path": "reports/screenshots/01-pond-path.png",
+      "sha256": "0bd8d85d8ba9629c7d5d3c333da7d8853da285da2d03b873b9c70167628f468e",
+      "unchanged": true
+    },
+    {
+      "path": "reports/screenshots/04-violation.png",
+      "sha256": "25a67fa027bb540d1a064b64eb1eb244e627d27e039e0e886a53078b6a837a51",
+      "unchanged": true
+    },
+    {
+      "path": "reports/screenshots/11-daily-pond.png",
+      "sha256": "8b3a6ec00e263e9eddda408d17259db464d82cd222ac31127f021bab3e94585f",
+      "unchanged": true
+    },
+    {
+      "path": "reports/screenshots/14-offline.png",
+      "sha256": "d7888b898f72860403ae6968a0a963913cde0e8574c7bf004de1667e39559f2e",
+      "unchanged": true
+    },
+    {
+      "path": "reports/screenshots/06-chill.png",
+      "sha256": "5fba26a01dca24174e57f4dae1678d645bb2c7579f2bcd3dcf402a8156fe6c60",
+      "unchanged": true
+    },
+    {
+      "path": "reports/screenshots/03-hint.png",
+      "sha256": "4c8a0d957902005eb11c2427da309ea5346915ba88138e1b0b9db5f56416585a",
+      "unchanged": true
+    }
+  ]
+}

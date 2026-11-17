@@ -1,0 +1,35 @@
+{
+  "root_cause": "Opaque near-white steam is baked into the RGB JPEG; portrait object-fit:cover crops its columns at the frame edges. No PNG alpha fringe or CSS mask defect.",
+  "source": "/workspace/capydoku/app-v3-backup/assets/starters/bloom-hello-pond.jpg",
+  "output": "/workspace/capydoku/app/assets/starters/bloom-hello-pond.jpg",
+  "original_mode": "RGB (no alpha)",
+  "edit_mask_bbox": [
+    183,
+    241,
+    736,
+    425
+  ],
+  "character_region_unmodified_before_encoding": true,
+  "character_roi": [
+    270,
+    70,
+    650,
+    500
+  ],
+  "jpeg_rounding_only_character_mean_absolute_rgb_error": [
+    0.08509179926560588,
+    0.0711689106487148,
+    0.09511015911872706
+  ],
+  "jpeg_rounding_only_character_max_channel_error": 3,
+  "near_white_steam_pixels_before": 8282,
+  "near_white_steam_pixels_after": 0,
+  "source_sha256": "3df609579f676f510b692691b4cd4e1e634c0518549ef8d388fa24e53d8800a4",
+  "clean_sha256": "2183903d2cdb68c9044be9d459795620684bb462f5f1a50a22f884f8f2794377",
+  "rim_aligned_background_reconstruction": true,
+  "same_url_used_in": [
+    "first-run Bloom preview",
+    "switch-selector Bloom preview"
+  ],
+  "character_pngs_modified": false
+}

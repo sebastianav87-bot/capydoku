@@ -1,0 +1,12 @@
+{
+  "from": "capydoku-v4.2.1-bc0fb084a94b",
+  "to": "capydoku-v4.3.1-6bc138e4dee2",
+  "fromFrozenBackup": true,
+  "automaticReloads": 1,
+  "progressPreserved": true,
+  "goldens": [
+    9
+  ],
+  "offlineAll200": 106,
+  "consoleErrors": []
+}

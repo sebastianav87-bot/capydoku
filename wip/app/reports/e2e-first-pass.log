@@ -1,0 +1,25 @@
+
+> capydoku-local-prototype@1.0.0 test:e2e
+> playwright test
+
+
+Running 14 tests using 1 worker
+
+(node:182850) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/mobile.spec.js:11:1 › home, marks/capy/clear and undo; double tap no X flash; mobile targets (2.8s)
+  ✓   2 tests/mobile.spec.js:13:1 › hint highlights one forced spot + reason, never places or reveals full solution (468ms)
+  ✓   3 tests/mobile.spec.js:14:54 › row violation red and costs exactly one orange; clear repairs (907ms)
+  ✓   4 tests/mobile.spec.js:14:54 › column violation red and costs exactly one orange; clear repairs (868ms)
+  ✓   5 tests/mobile.spec.js:14:54 › zone violation red and costs exactly one orange; clear repairs (813ms)
+  ✓   6 tests/mobile.spec.js:14:54 › diagonal violation red and costs exactly one orange; clear repairs (808ms)
+  ✓   7 tests/mobile.spec.js:15:1 › game over, input locked, retry resets oranges and board (1.5s)
+  ✓   8 tests/mobile.spec.js:16:1 › Chill never loses oranges; no game over and mode persists (2.6s)
+  ✓   9 tests/mobile.spec.js:17:1 › solve, actual jump frames, unlock + persistence after reload (4.0s)
+  ✓  10 tests/mobile.spec.js:18:1 › boss 10 grants Beanie, selectable in Hot Spring and persists (1.3s)
+  ✓  11 tests/mobile.spec.js:19:1 › boss 20/30 rewards and blocked rocks; 7×7 tap targets (1.8s)
+  ✓  12 tests/mobile.spec.js:20:1 › Daily Pond deterministic reload + same-day streak, consecutive +1, missed-day reset (2.8s)
+  ✓  13 tests/mobile.spec.js:22:1 › PWA precache 200 + offline startup/reload, unseen query, essential resources (1.1s)
+  ✓  14 tests/mobile.spec.js:23:1 › settings toggles Chill; corrupt and future storage cannot crash or overwrite (927ms)
+
+  14 passed (23.4s)

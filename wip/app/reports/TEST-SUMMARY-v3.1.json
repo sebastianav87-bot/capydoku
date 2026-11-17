@@ -1,0 +1,60 @@
+{
+  "round": "v3.1",
+  "local_only": true,
+  "published": false,
+  "unit": {
+    "passed": 66,
+    "failed": 0
+  },
+  "e2e": {
+    "passed": 69,
+    "failed": 0,
+    "skipped": 0,
+    "flaky": 0,
+    "browser_console_or_page_errors": 0,
+    "started": "2026-11-09 21:33:58 EST",
+    "duration_seconds": 151.73,
+    "primary_viewport": "412x915 mobile touch, scale 1",
+    "additional_viewport": "360x780 sizing, header/status bounds and eight total solved-control cases"
+  },
+  "precache": {
+    "cache": "capydoku-v3.1-1b654e8bec8d",
+    "urls": 42,
+    "online_all_200": true,
+    "offline_all_200": true,
+    "audio_range": {
+      "status": 206,
+      "bytes": 32,
+      "contentRange": "bytes 0-31/610263"
+    },
+    "prepared_locally_only": true
+  },
+  "verification": {
+    "source_boards": 760,
+    "all_unique": true,
+    "all_no_guess": true,
+    "daily_transformed_outputs": 5840
+  },
+  "music": {
+    "tracks": 3,
+    "license": "CC0 1.0 Universal",
+    "cost_usd": 0,
+    "audio_bytes": 4987618,
+    "audio_and_license_bytes": 4990327
+  },
+  "screenshots": {
+    "count": 140,
+    "native_412x915": 127,
+    "additional_native_360x780": 13,
+    "reviewed": true
+  },
+  "real_iphone_s24_verified": false,
+  "sizing": {
+    "default": "B",
+    "switch": "GAME_CONFIG.boardSizingMode",
+    "reference_ratio": 0.9722222222222222,
+    "report": "sizing-A-vs-B.json",
+    "comparison": "sizing-A-vs-B.png",
+    "minimum_tested_cell_px": 44.28125
+  }
+}

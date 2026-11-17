@@ -1,0 +1,109 @@
+
+Running 14 tests using 1 worker
+
+(node:453055) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [mobile-412] › tests/relax-bug.spec.js:13:2 › 412×915 touch Relax regression › Pond 5 purple Peek preserves zone, only ghosts; overfill recovery is clear, generic and undoable (2.9s)
+  ✓   2 [mobile-412] › tests/relax-bug.spec.js:20:2 › 412×915 touch Relax regression › mode locks on entry before first move, persisted attempt cannot be switched via Home/reload/forged control (986ms)
+  ✘   3 [mobile-412] › tests/relax-bug.spec.js:24:2 › 412×915 touch Relax regression › solved mode setting is enabled, next/replay adopt it; completed attempt and celebration remain intact (9.0s)
+(node:453658) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   4 [mobile-412] › tests/relax-bug.spec.js:28:2 › 412×915 touch Relax regression › daily and boss use the same entry lock, end control, stored mode and no-scroll layout (3.7s)
+  ✓   5 [mobile-412] › tests/relax-bug.spec.js:13:2 › 360×780 touch Relax regression › Pond 5 purple Peek preserves zone, only ghosts; overfill recovery is clear, generic and undoable (2.7s)
+  ✓   6 [mobile-412] › tests/relax-bug.spec.js:20:2 › 360×780 touch Relax regression › mode locks on entry before first move, persisted attempt cannot be switched via Home/reload/forged control (888ms)
+  ✘   7 [mobile-412] › tests/relax-bug.spec.js:24:2 › 360×780 touch Relax regression › solved mode setting is enabled, next/replay adopt it; completed attempt and celebration remain intact (8.9s)
+(node:454440) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   8 [mobile-412] › tests/relax-bug.spec.js:28:2 › 360×780 touch Relax regression › daily and boss use the same entry lock, end control, stored mode and no-scroll layout (3.5s)
+  ✓   9 [mobile-412] › tests/v2.spec.js:34:1 › missing/throwing vibration API never errors; real-device feedback not claimed (946ms)
+  ✓  10 [mobile-412] › tests/v4.spec.js:9:1 › tutorial appears on first Level 1, ghosts do NOT mutate, skip survives navigation and reload (3.0s)
+  ✓  11 [mobile-412] › tests/v4.spec.js:10:1 › tutorial completion preserves only real marks/capy, no lives/power spent, never auto-reappears (2.5s)
+  ✓  12 [mobile-412] › tests/v4.spec.js:11:1 › question-mark sheet replays tutorial in sandbox and restores board, Nap charges, streak and companion (2.3s)
+  ✓  13 [mobile-412] › tests/v4.spec.js:14:1 › generic SVG pieces for EVERY starter; companion retained; Peek manual placement, use badge, Relax Peek, no Hint (1.6s)
+  ✓  14 [mobile-412] › tests/v4.spec.js:15:1 › actual shipped v3.1 SW → v4, same-schema migration preserves attempt and settings; all assets 200 offline (3.4s)
+
+
+  1) [mobile-412] › tests/relax-bug.spec.js:24:2 › 412×915 touch Relax regression › solved mode setting is enabled, next/replay adopt it; completed attempt and celebration remain intact 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  locator('.cell').first()
+    Expected: visible
+    Received: hidden
+    Timeout:  7000ms
+
+    Call log:
+      - Expect "toBeVisible" locator('.cell').first() with timeout 7000ms
+      - waiting for locator('.cell').first()
+        18 × locator resolved to <button disabled data-cell="0" data-value="2" class="cell vacated" aria-label="Row 1, column 1, zone 1, capy">…</button>
+           - unexpected value "hidden"
+
+
+      3 | const data=JSON.parse(fs.readFileSync(new URL('../levels.json',import.meta.url))),out='reports/screenshots-v4/priority';
+      4 | async function seed(page,extra={}){await page.goto('/');await page.evaluate(({k,v})=>localStorage.setItem(k,JSON.stringify(v)),{k:KEY,v:{...fresh(),starterChosen:true,tutorialSeen:true,selected:'Remy',music:false,rockIntroSeen:true,completed:Array.from({length:30},(_,i)=>i+1),...extra}});await page.reload();await expect(page.locator('.home')).toBeVisible()}
+    > 5 | async function open(page,id){await page.getByRole('button',{name:id==='daily'?/Daily Pond/:new RegExp(`^${id%10===0?'Boss ':''}Pond ${id}(, cleared)?$`)}).tap();await expect(page.locator('.cell').first()).toBeVisible()}
+        |                                                                                                                                                                                                              ^
+      6 | async function double(page,i){const r=await page.locator(`[data-cell="${i}"]`).boundingBox();await page.touchscreen.tap(r.x+r.width/2,r.y+r.height/2);await page.waitForTimeout(65);await page.touchscreen.tap(r.x+r.width/2,r.y+r.height/2)}
+      7 | const prog=page=>page.evaluate(k=>JSON.parse(localStorage.getItem(k)),KEY);
+      8 | const cells=page=>page.locator('.cell').evaluateAll(es=>es.map(e=>+e.dataset.value));
+        at open (/workspace/capydoku/app/tests/relax-bug.spec.js:5:206)
+        at /workspace/capydoku/app/tests/relax-bug.spec.js:26:389
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/relax-bug-412×915-touch-Re-073db-d-celebration-remain-intact-mobile-412/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/relax-bug-412×915-touch-Re-073db-d-celebration-remain-intact-mobile-412/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/relax-bug-412×915-touch-Re-073db-d-celebration-remain-intact-mobile-412/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/relax-bug-412×915-touch-Re-073db-d-celebration-remain-intact-mobile-412/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [mobile-412] › tests/relax-bug.spec.js:24:2 › 360×780 touch Relax regression › solved mode setting is enabled, next/replay adopt it; completed attempt and celebration remain intact 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  locator('.cell').first()
+    Expected: visible
+    Received: hidden
+    Timeout:  7000ms
+
+    Call log:
+      - Expect "toBeVisible" locator('.cell').first() with timeout 7000ms
+      - waiting for locator('.cell').first()
+        18 × locator resolved to <button disabled data-cell="0" data-value="2" class="cell vacated" aria-label="Row 1, column 1, zone 1, capy">…</button>
+           - unexpected value "hidden"
+
+
+      3 | const data=JSON.parse(fs.readFileSync(new URL('../levels.json',import.meta.url))),out='reports/screenshots-v4/priority';
+      4 | async function seed(page,extra={}){await page.goto('/');await page.evaluate(({k,v})=>localStorage.setItem(k,JSON.stringify(v)),{k:KEY,v:{...fresh(),starterChosen:true,tutorialSeen:true,selected:'Remy',music:false,rockIntroSeen:true,completed:Array.from({length:30},(_,i)=>i+1),...extra}});await page.reload();await expect(page.locator('.home')).toBeVisible()}
+    > 5 | async function open(page,id){await page.getByRole('button',{name:id==='daily'?/Daily Pond/:new RegExp(`^${id%10===0?'Boss ':''}Pond ${id}(, cleared)?$`)}).tap();await expect(page.locator('.cell').first()).toBeVisible()}
+        |                                                                                                                                                                                                              ^
+      6 | async function double(page,i){const r=await page.locator(`[data-cell="${i}"]`).boundingBox();await page.touchscreen.tap(r.x+r.width/2,r.y+r.height/2);await page.waitForTimeout(65);await page.touchscreen.tap(r.x+r.width/2,r.y+r.height/2)}
+      7 | const prog=page=>page.evaluate(k=>JSON.parse(localStorage.getItem(k)),KEY);
+      8 | const cells=page=>page.locator('.cell').evaluateAll(es=>es.map(e=>+e.dataset.value));
+        at open (/workspace/capydoku/app/tests/relax-bug.spec.js:5:206)
+        at /workspace/capydoku/app/tests/relax-bug.spec.js:26:389
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/relax-bug-360×780-touch-Re-99b9c-d-celebration-remain-intact-mobile-412/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/relax-bug-360×780-touch-Re-99b9c-d-celebration-remain-intact-mobile-412/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/relax-bug-360×780-touch-Re-99b9c-d-celebration-remain-intact-mobile-412/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/relax-bug-360×780-touch-Re-99b9c-d-celebration-remain-intact-mobile-412/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [mobile-412] › tests/relax-bug.spec.js:24:2 › 412×915 touch Relax regression › solved mode setting is enabled, next/replay adopt it; completed attempt and celebration remain intact 
+    [mobile-412] › tests/relax-bug.spec.js:24:2 › 360×780 touch Relax regression › solved mode setting is enabled, next/replay adopt it; completed attempt and celebration remain intact 
+  12 passed (49.3s)

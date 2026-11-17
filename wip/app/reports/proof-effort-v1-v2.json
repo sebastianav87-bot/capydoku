@@ -1,0 +1,817 @@
+{
+  "schema": 2,
+  "generated_at": "2026-11-09T19:42:40.595300-05:00",
+  "metric": "weighted_effort = n + 2\u00d7shared-conflict steps; also report hardest technique, total deductions, and eliminations before first forced capy. Deterministic scan order, no search in proof. Not human-rated difficulty.",
+  "levels": [
+    {
+      "level": 1,
+      "size": 5,
+      "before": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 6,
+        "steps_before_first_capy": 1,
+        "shared_conflict_steps": 1,
+        "weighted_effort": 7,
+        "difficulty_score": 29,
+        "first_capy_cell": 7,
+        "singleton_zones": 0
+      },
+      "after": {
+        "hardest_technique": "house-single",
+        "technique_rank": 1,
+        "deduction_steps": 5,
+        "steps_before_first_capy": 0,
+        "shared_conflict_steps": 0,
+        "weighted_effort": 5,
+        "difficulty_score": 25,
+        "first_capy_cell": 10,
+        "singleton_zones": 2
+      },
+      "changed": true
+    },
+    {
+      "level": 2,
+      "size": 5,
+      "before": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 7,
+        "steps_before_first_capy": 1,
+        "shared_conflict_steps": 2,
+        "weighted_effort": 9,
+        "difficulty_score": 33,
+        "first_capy_cell": 9,
+        "singleton_zones": 0
+      },
+      "after": {
+        "hardest_technique": "house-single",
+        "technique_rank": 1,
+        "deduction_steps": 5,
+        "steps_before_first_capy": 0,
+        "shared_conflict_steps": 0,
+        "weighted_effort": 5,
+        "difficulty_score": 25,
+        "first_capy_cell": 20,
+        "singleton_zones": 1
+      },
+      "changed": true
+    },
+    {
+      "level": 3,
+      "size": 5,
+      "before": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 10,
+        "steps_before_first_capy": 5,
+        "shared_conflict_steps": 5,
+        "weighted_effort": 15,
+        "difficulty_score": 45,
+        "first_capy_cell": 7,
+        "singleton_zones": 0
+      },
+      "after": {
+        "hardest_technique": "house-single",
+        "technique_rank": 1,
+        "deduction_steps": 5,
+        "steps_before_first_capy": 0,
+        "shared_conflict_steps": 0,
+        "weighted_effort": 5,
+        "difficulty_score": 25,
+        "first_capy_cell": 3,
+        "singleton_zones": 2
+      },
+      "changed": true
+    },
+    {
+      "level": 4,
+      "size": 5,
+      "before": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 9,
+        "steps_before_first_capy": 4,
+        "shared_conflict_steps": 4,
+        "weighted_effort": 13,
+        "difficulty_score": 41,
+        "first_capy_cell": 21,
+        "singleton_zones": 0
+      },
+      "after": {
+        "hardest_technique": "house-single",
+        "technique_rank": 1,
+        "deduction_steps": 5,
+        "steps_before_first_capy": 0,
+        "shared_conflict_steps": 0,
+        "weighted_effort": 5,
+        "difficulty_score": 25,
+        "first_capy_cell": 9,
+        "singleton_zones": 1
+      },
+      "changed": true
+    },
+    {
+      "level": 5,
+      "size": 5,
+      "before": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 10,
+        "steps_before_first_capy": 5,
+        "shared_conflict_steps": 5,
+        "weighted_effort": 15,
+        "difficulty_score": 45,
+        "first_capy_cell": 14,
+        "singleton_zones": 0
+      },
+      "after": {
+        "hardest_technique": "house-single",
+        "technique_rank": 1,
+        "deduction_steps": 5,
+        "steps_before_first_capy": 0,
+        "shared_conflict_steps": 0,
+        "weighted_effort": 5,
+        "difficulty_score": 25,
+        "first_capy_cell": 0,
+        "singleton_zones": 2
+      },
+      "changed": true
+    },
+    {
+      "level": 6,
+      "size": 5,
+      "before": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 11,
+        "steps_before_first_capy": 6,
+        "shared_conflict_steps": 6,
+        "weighted_effort": 17,
+        "difficulty_score": 49,
+        "first_capy_cell": 10,
+        "singleton_zones": 0
+      },
+      "after": {
+        "hardest_technique": "house-single",
+        "technique_rank": 1,
+        "deduction_steps": 5,
+        "steps_before_first_capy": 0,
+        "shared_conflict_steps": 0,
+        "weighted_effort": 5,
+        "difficulty_score": 25,
+        "first_capy_cell": 12,
+        "singleton_zones": 1
+      },
+      "changed": true
+    },
+    {
+      "level": 7,
+      "size": 5,
+      "before": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 11,
+        "steps_before_first_capy": 6,
+        "shared_conflict_steps": 6,
+        "weighted_effort": 17,
+        "difficulty_score": 49,
+        "first_capy_cell": 20,
+        "singleton_zones": 0
+      },
+      "after": {
+        "hardest_technique": "house-single",
+        "technique_rank": 1,
+        "deduction_steps": 5,
+        "steps_before_first_capy": 0,
+        "shared_conflict_steps": 0,
+        "weighted_effort": 5,
+        "difficulty_score": 25,
+        "first_capy_cell": 16,
+        "singleton_zones": 1
+      },
+      "changed": true
+    },
+    {
+      "level": 8,
+      "size": 5,
+      "before": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 8,
+        "steps_before_first_capy": 3,
+        "shared_conflict_steps": 3,
+        "weighted_effort": 11,
+        "difficulty_score": 37,
+        "first_capy_cell": 20,
+        "singleton_zones": 0
+      },
+      "after": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 7,
+        "steps_before_first_capy": 0,
+        "shared_conflict_steps": 2,
+        "weighted_effort": 9,
+        "difficulty_score": 33,
+        "first_capy_cell": 19,
+        "singleton_zones": 1
+      },
+      "changed": true
+    },
+    {
+      "level": 9,
+      "size": 6,
+      "before": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 7,
+        "steps_before_first_capy": 1,
+        "shared_conflict_steps": 1,
+        "weighted_effort": 8,
+        "difficulty_score": 40,
+        "first_capy_cell": 20,
+        "singleton_zones": 0
+      },
+      "after": {
+        "hardest_technique": "house-single",
+        "technique_rank": 1,
+        "deduction_steps": 6,
+        "steps_before_first_capy": 0,
+        "shared_conflict_steps": 0,
+        "weighted_effort": 6,
+        "difficulty_score": 36,
+        "first_capy_cell": 1,
+        "singleton_zones": 2
+      },
+      "changed": true
+    },
+    {
+      "level": 10,
+      "size": 6,
+      "before": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 7,
+        "steps_before_first_capy": 1,
+        "shared_conflict_steps": 1,
+        "weighted_effort": 8,
+        "difficulty_score": 40,
+        "first_capy_cell": 9,
+        "singleton_zones": 0
+      },
+      "after": {
+        "hardest_technique": "house-single",
+        "technique_rank": 1,
+        "deduction_steps": 6,
+        "steps_before_first_capy": 0,
+        "shared_conflict_steps": 0,
+        "weighted_effort": 6,
+        "difficulty_score": 36,
+        "first_capy_cell": 7,
+        "singleton_zones": 2
+      },
+      "changed": true
+    },
+    {
+      "level": 11,
+      "size": 6,
+      "before": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 9,
+        "steps_before_first_capy": 2,
+        "shared_conflict_steps": 3,
+        "weighted_effort": 12,
+        "difficulty_score": 48,
+        "first_capy_cell": 17,
+        "singleton_zones": 0
+      },
+      "after": {
+        "hardest_technique": "house-single",
+        "technique_rank": 1,
+        "deduction_steps": 6,
+        "steps_before_first_capy": 0,
+        "shared_conflict_steps": 0,
+        "weighted_effort": 6,
+        "difficulty_score": 36,
+        "first_capy_cell": 10,
+        "singleton_zones": 2
+      },
+      "changed": true
+    },
+    {
+      "level": 12,
+      "size": 6,
+      "before": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 10,
+        "steps_before_first_capy": 3,
+        "shared_conflict_steps": 4,
+        "weighted_effort": 14,
+        "difficulty_score": 52,
+        "first_capy_cell": 31,
+        "singleton_zones": 0
+      },
+      "after": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 7,
+        "steps_before_first_capy": 0,
+        "shared_conflict_steps": 1,
+        "weighted_effort": 8,
+        "difficulty_score": 40,
+        "first_capy_cell": 22,
+        "singleton_zones": 1
+      },
+      "changed": true
+    },
+    {
+      "level": 13,
+      "size": 6,
+      "before": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 10,
+        "steps_before_first_capy": 3,
+        "shared_conflict_steps": 4,
+        "weighted_effort": 14,
+        "difficulty_score": 52,
+        "first_capy_cell": 16,
+        "singleton_zones": 0
+      },
+      "after": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 8,
+        "steps_before_first_capy": 0,
+        "shared_conflict_steps": 2,
+        "weighted_effort": 10,
+        "difficulty_score": 44,
+        "first_capy_cell": 5,
+        "singleton_zones": 1
+      },
+      "changed": true
+    },
+    {
+      "level": 14,
+      "size": 6,
+      "before": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 10,
+        "steps_before_first_capy": 4,
+        "shared_conflict_steps": 4,
+        "weighted_effort": 14,
+        "difficulty_score": 52,
+        "first_capy_cell": 14,
+        "singleton_zones": 0
+      },
+      "after": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 8,
+        "steps_before_first_capy": 0,
+        "shared_conflict_steps": 2,
+        "weighted_effort": 10,
+        "difficulty_score": 44,
+        "first_capy_cell": 3,
+        "singleton_zones": 2
+      },
+      "changed": true
+    },
+    {
+      "level": 15,
+      "size": 6,
+      "before": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 12,
+        "steps_before_first_capy": 5,
+        "shared_conflict_steps": 6,
+        "weighted_effort": 18,
+        "difficulty_score": 60,
+        "first_capy_cell": 29,
+        "singleton_zones": 0
+      },
+      "after": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 8,
+        "steps_before_first_capy": 0,
+        "shared_conflict_steps": 2,
+        "weighted_effort": 10,
+        "difficulty_score": 44,
+        "first_capy_cell": 2,
+        "singleton_zones": 1
+      },
+      "changed": true
+    },
+    {
+      "level": 16,
+      "size": 6,
+      "before": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 11,
+        "steps_before_first_capy": 3,
+        "shared_conflict_steps": 5,
+        "weighted_effort": 16,
+        "difficulty_score": 56,
+        "first_capy_cell": 22,
+        "singleton_zones": 0
+      },
+      "after": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 8,
+        "steps_before_first_capy": 0,
+        "shared_conflict_steps": 2,
+        "weighted_effort": 10,
+        "difficulty_score": 44,
+        "first_capy_cell": 12,
+        "singleton_zones": 1
+      },
+      "changed": true
+    },
+    {
+      "level": 17,
+      "size": 6,
+      "before": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 8,
+        "steps_before_first_capy": 2,
+        "shared_conflict_steps": 2,
+        "weighted_effort": 10,
+        "difficulty_score": 44,
+        "first_capy_cell": 31,
+        "singleton_zones": 0
+      },
+      "after": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 9,
+        "steps_before_first_capy": 1,
+        "shared_conflict_steps": 3,
+        "weighted_effort": 12,
+        "difficulty_score": 48,
+        "first_capy_cell": 13,
+        "singleton_zones": 0
+      },
+      "changed": true
+    },
+    {
+      "level": 18,
+      "size": 6,
+      "before": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 13,
+        "steps_before_first_capy": 5,
+        "shared_conflict_steps": 7,
+        "weighted_effort": 20,
+        "difficulty_score": 64,
+        "first_capy_cell": 6,
+        "singleton_zones": 0
+      },
+      "after": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 9,
+        "steps_before_first_capy": 2,
+        "shared_conflict_steps": 3,
+        "weighted_effort": 12,
+        "difficulty_score": 48,
+        "first_capy_cell": 20,
+        "singleton_zones": 0
+      },
+      "changed": true
+    },
+    {
+      "level": 19,
+      "size": 6,
+      "before": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 15,
+        "steps_before_first_capy": 6,
+        "shared_conflict_steps": 9,
+        "weighted_effort": 24,
+        "difficulty_score": 72,
+        "first_capy_cell": 17,
+        "singleton_zones": 0
+      },
+      "after": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 10,
+        "steps_before_first_capy": 2,
+        "shared_conflict_steps": 4,
+        "weighted_effort": 14,
+        "difficulty_score": 52,
+        "first_capy_cell": 9,
+        "singleton_zones": 0
+      },
+      "changed": true
+    },
+    {
+      "level": 20,
+      "size": 6,
+      "before": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 14,
+        "steps_before_first_capy": 7,
+        "shared_conflict_steps": 8,
+        "weighted_effort": 22,
+        "difficulty_score": 68,
+        "first_capy_cell": 9,
+        "singleton_zones": 0
+      },
+      "after": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 12,
+        "steps_before_first_capy": 2,
+        "shared_conflict_steps": 6,
+        "weighted_effort": 18,
+        "difficulty_score": 60,
+        "first_capy_cell": 22,
+        "singleton_zones": 0
+      },
+      "changed": true
+    },
+    {
+      "level": 21,
+      "size": 7,
+      "before": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 9,
+        "steps_before_first_capy": 2,
+        "shared_conflict_steps": 2,
+        "weighted_effort": 11,
+        "difficulty_score": 57,
+        "first_capy_cell": 29,
+        "singleton_zones": 0
+      },
+      "after": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 9,
+        "steps_before_first_capy": 2,
+        "shared_conflict_steps": 2,
+        "weighted_effort": 11,
+        "difficulty_score": 57,
+        "first_capy_cell": 29,
+        "singleton_zones": 0
+      },
+      "changed": false
+    },
+    {
+      "level": 22,
+      "size": 7,
+      "before": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 11,
+        "steps_before_first_capy": 4,
+        "shared_conflict_steps": 4,
+        "weighted_effort": 15,
+        "difficulty_score": 65,
+        "first_capy_cell": 25,
+        "singleton_zones": 0
+      },
+      "after": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 11,
+        "steps_before_first_capy": 4,
+        "shared_conflict_steps": 4,
+        "weighted_effort": 15,
+        "difficulty_score": 65,
+        "first_capy_cell": 25,
+        "singleton_zones": 0
+      },
+      "changed": false
+    },
+    {
+      "level": 23,
+      "size": 7,
+      "before": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 12,
+        "steps_before_first_capy": 1,
+        "shared_conflict_steps": 5,
+        "weighted_effort": 17,
+        "difficulty_score": 69,
+        "first_capy_cell": 35,
+        "singleton_zones": 0
+      },
+      "after": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 12,
+        "steps_before_first_capy": 1,
+        "shared_conflict_steps": 5,
+        "weighted_effort": 17,
+        "difficulty_score": 69,
+        "first_capy_cell": 35,
+        "singleton_zones": 0
+      },
+      "changed": false
+    },
+    {
+      "level": 24,
+      "size": 7,
+      "before": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 9,
+        "steps_before_first_capy": 0,
+        "shared_conflict_steps": 2,
+        "weighted_effort": 11,
+        "difficulty_score": 57,
+        "first_capy_cell": 20,
+        "singleton_zones": 0
+      },
+      "after": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 9,
+        "steps_before_first_capy": 0,
+        "shared_conflict_steps": 2,
+        "weighted_effort": 11,
+        "difficulty_score": 57,
+        "first_capy_cell": 20,
+        "singleton_zones": 0
+      },
+      "changed": false
+    },
+    {
+      "level": 25,
+      "size": 7,
+      "before": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 11,
+        "steps_before_first_capy": 3,
+        "shared_conflict_steps": 4,
+        "weighted_effort": 15,
+        "difficulty_score": 65,
+        "first_capy_cell": 37,
+        "singleton_zones": 0
+      },
+      "after": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 11,
+        "steps_before_first_capy": 3,
+        "shared_conflict_steps": 4,
+        "weighted_effort": 15,
+        "difficulty_score": 65,
+        "first_capy_cell": 37,
+        "singleton_zones": 0
+      },
+      "changed": false
+    },
+    {
+      "level": 26,
+      "size": 7,
+      "before": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 11,
+        "steps_before_first_capy": 3,
+        "shared_conflict_steps": 4,
+        "weighted_effort": 15,
+        "difficulty_score": 65,
+        "first_capy_cell": 7,
+        "singleton_zones": 0
+      },
+      "after": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 11,
+        "steps_before_first_capy": 3,
+        "shared_conflict_steps": 4,
+        "weighted_effort": 15,
+        "difficulty_score": 65,
+        "first_capy_cell": 7,
+        "singleton_zones": 0
+      },
+      "changed": false
+    },
+    {
+      "level": 27,
+      "size": 7,
+      "before": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 12,
+        "steps_before_first_capy": 2,
+        "shared_conflict_steps": 5,
+        "weighted_effort": 17,
+        "difficulty_score": 69,
+        "first_capy_cell": 11,
+        "singleton_zones": 0
+      },
+      "after": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 12,
+        "steps_before_first_capy": 2,
+        "shared_conflict_steps": 5,
+        "weighted_effort": 17,
+        "difficulty_score": 69,
+        "first_capy_cell": 11,
+        "singleton_zones": 0
+      },
+      "changed": false
+    },
+    {
+      "level": 28,
+      "size": 7,
+      "before": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 13,
+        "steps_before_first_capy": 6,
+        "shared_conflict_steps": 6,
+        "weighted_effort": 19,
+        "difficulty_score": 73,
+        "first_capy_cell": 33,
+        "singleton_zones": 0
+      },
+      "after": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 13,
+        "steps_before_first_capy": 6,
+        "shared_conflict_steps": 6,
+        "weighted_effort": 19,
+        "difficulty_score": 73,
+        "first_capy_cell": 33,
+        "singleton_zones": 0
+      },
+      "changed": false
+    },
+    {
+      "level": 29,
+      "size": 7,
+      "before": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 19,
+        "steps_before_first_capy": 12,
+        "shared_conflict_steps": 12,
+        "weighted_effort": 31,
+        "difficulty_score": 97,
+        "first_capy_cell": 35,
+        "singleton_zones": 0
+      },
+      "after": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 19,
+        "steps_before_first_capy": 12,
+        "shared_conflict_steps": 12,
+        "weighted_effort": 31,
+        "difficulty_score": 97,
+        "first_capy_cell": 35,
+        "singleton_zones": 0
+      },
+      "changed": false
+    },
+    {
+      "level": 30,
+      "size": 7,
+      "before": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 15,
+        "steps_before_first_capy": 8,
+        "shared_conflict_steps": 8,
+        "weighted_effort": 23,
+        "difficulty_score": 81,
+        "first_capy_cell": 48,
+        "singleton_zones": 0
+      },
+      "after": {
+        "hardest_technique": "shared-conflict",
+        "technique_rank": 2,
+        "deduction_steps": 15,
+        "steps_before_first_capy": 8,
+        "shared_conflict_steps": 8,
+        "weighted_effort": 23,
+        "difficulty_score": 81,
+        "first_capy_cell": 48,
+        "singleton_zones": 0
+      },
+      "changed": false
+    }
+  ]
+}

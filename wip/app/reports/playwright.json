@@ -1,0 +1,441 @@
+{
+  "config": {
+    "argv": [
+      "/usr/local/lib/nodejs/node",
+      "/workspace/capydoku/app/node_modules/.bin/playwright",
+      "test",
+      "tests/v2.spec.js:21",
+      "tests/updates.spec.js:11"
+    ],
+    "configFile": "/workspace/capydoku/app/playwright.config.js",
+    "rootDir": "/workspace/capydoku/app/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/workspace/capydoku/app/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "mobile-412",
+        "name": "mobile-412",
+        "testDir": "/workspace/capydoku/app/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "mobile.spec.js",
+          "v2.spec.js",
+          "v3.spec.js",
+          "starters.spec.js",
+          "v31.spec.js",
+          "v31-extension.spec.js",
+          "sizing.spec.js",
+          "v4.spec.js",
+          "relax-bug.spec.js",
+          "power-identity.spec.js",
+          "no-mode.spec.js",
+          "design-latest.spec.js",
+          "updates.spec.js",
+          "rewards.spec.js",
+          "v41.spec.js",
+          "upgrade-v41.spec.js",
+          "v41-flow.spec.js"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "/workspace/capydoku/app/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "mobile-360",
+        "name": "mobile-360",
+        "testDir": "/workspace/capydoku/app/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "mobile.spec.js",
+          "v2.spec.js",
+          "v3.spec.js",
+          "starters.spec.js",
+          "v31.spec.js",
+          "v31-extension.spec.js",
+          "sizing.spec.js",
+          "v4.spec.js",
+          "relax-bug.spec.js",
+          "power-identity.spec.js",
+          "no-mode.spec.js",
+          "design-latest.spec.js",
+          "updates.spec.js",
+          "rewards.spec.js",
+          "v41.spec.js",
+          "upgrade-v41.spec.js",
+          "v41-flow.spec.js"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/workspace/capydoku/app/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "mobile-412",
+        "testDir": "/workspace/capydoku/app/tests",
+        "snapshotDir": "/workspace/capydoku/app/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "mobile.spec.js",
+          "v2.spec.js",
+          "v3.spec.js",
+          "starters.spec.js",
+          "v31.spec.js",
+          "v31-extension.spec.js",
+          "sizing.spec.js",
+          "v4.spec.js",
+          "relax-bug.spec.js",
+          "power-identity.spec.js",
+          "no-mode.spec.js",
+          "design-latest.spec.js",
+          "updates.spec.js",
+          "rewards.spec.js",
+          "v41.spec.js",
+          "upgrade-v41.spec.js",
+          "v41-flow.spec.js"
+        ],
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://127.0.0.1:8765",
+          "viewport": {
+            "width": 412,
+            "height": 915
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": true,
+          "hasTouch": true,
+          "timezoneId": "America/New_York",
+          "locale": "en-US",
+          "headless": true,
+          "launchOptions": {
+            "args": [
+              "--no-sandbox"
+            ]
+          },
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "mobile-412"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/workspace/capydoku/app/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "mobile-360",
+        "testDir": "/workspace/capydoku/app/tests",
+        "snapshotDir": "/workspace/capydoku/app/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "mobile.spec.js",
+          "v2.spec.js",
+          "v3.spec.js",
+          "starters.spec.js",
+          "v31.spec.js",
+          "v31-extension.spec.js",
+          "sizing.spec.js",
+          "v4.spec.js",
+          "relax-bug.spec.js",
+          "power-identity.spec.js",
+          "no-mode.spec.js",
+          "design-latest.spec.js",
+          "updates.spec.js",
+          "rewards.spec.js",
+          "v41.spec.js",
+          "upgrade-v41.spec.js",
+          "v41-flow.spec.js"
+        ],
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://127.0.0.1:8765",
+          "viewport": {
+            "width": 360,
+            "height": 780
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": true,
+          "hasTouch": true,
+          "timezoneId": "America/New_York",
+          "locale": "en-US",
+          "headless": true,
+          "launchOptions": {
+            "args": [
+              "--no-sandbox"
+            ]
+          },
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "mobile-360"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/playwright.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "reports/playwright-html",
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "command": "python3 -m http.server 8765 --bind 127.0.0.1",
+      "url": "http://127.0.0.1:8765",
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "updates.spec.js",
+      "file": "updates.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "mid-pond auto update defers until map; old asset bytes survive SW restart/offline, then latest board/progress retained",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-412",
+              "projectName": "mobile-412",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3233,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T03:54:17.769Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-360",
+              "projectName": "mobile-360",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3350,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T03:54:26.923Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "be2365e2433a8ff79f48-2ca99cdbde9508127d60",
+          "file": "updates.spec.js",
+          "line": 11,
+          "column": 35
+        },
+        {
+          "title": "mid-pond auto update defers until finish; old asset bytes survive SW restart/offline, then latest board/progress retained",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-412",
+              "projectName": "mobile-412",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3638,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T03:54:21.108Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-360",
+              "projectName": "mobile-360",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3638,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T03:54:30.370Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "be2365e2433a8ff79f48-465af69a588dab66ea89",
+          "file": "updates.spec.js",
+          "line": 11,
+          "column": 35
+        }
+      ]
+    },
+    {
+      "title": "v2.spec.js",
+      "file": "v2.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "10px threshold preserves taps; board drag never scrolls/reloads; native map scroll still works",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-412",
+              "projectName": "mobile-412",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1768,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T03:54:24.766Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-360",
+              "projectName": "mobile-360",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1739,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T03:54:34.027Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fe8e25e0817ed2c6ece7-39f22ac7daf497b9b49f",
+          "file": "v2.spec.js",
+          "line": 21,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-15T03:54:17.304Z",
+    "duration": 18544.575,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

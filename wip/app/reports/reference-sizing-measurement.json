@@ -1,0 +1,54 @@
+{
+  "reference": "/workspace/capydoku/reference/meowdoku-level29.jpg",
+  "reference_sha256": "26245fda0227134436a10d3b5eafd51674a72f7932526c24dcc0fa34ad3c8cb6",
+  "image_px": [
+    1080,
+    2340
+  ],
+  "method": "Solid white outer frame straight edges, sampled at six rows; JPEG threshold min RGB>248 and channel spread<6. Excludes rounded corners/shadow. Edge uncertainty about \u00b11 px per side. Physical screenshot pixels are not CSS pixels.",
+  "outer_board_bounds_inclusive": {
+    "left": 15,
+    "right": 1064
+  },
+  "outer_board_width_px": 1050,
+  "outer_board_screen_ratio": 0.9722222222222222,
+  "outer_board_screen_percent": 97.22222222222221,
+  "colored_grid_bounds_inclusive_at_row800": {
+    "left": 32,
+    "right": 1047
+  },
+  "colored_grid_screen_ratio": 0.9407407407407408,
+  "samples": [
+    {
+      "row": 730,
+      "left_solid_white_edge": 15,
+      "right_solid_white_edge": 1064
+    },
+    {
+      "row": 800,
+      "left_solid_white_edge": 15,
+      "right_solid_white_edge": 1064
+    },
+    {
+      "row": 1000,
+      "left_solid_white_edge": 15,
+      "right_solid_white_edge": 1064
+    },
+    {
+      "row": 1200,
+      "left_solid_white_edge": 15,
+      "right_solid_white_edge": 1064
+    },
+    {
+      "row": 1500,
+      "left_solid_white_edge": 15,
+      "right_solid_white_edge": 1064
+    },
+    {
+      "row": 1700,
+      "left_solid_white_edge": 15,
+      "right_solid_white_edge": 1064
+    }
+  ],
+  "chosen_mode_B_ratio": 0.9722222222222222
+}

@@ -1,0 +1,290 @@
+[
+ {
+  "id": 1,
+  "role": "normal",
+  "n": 7,
+  "rocks": 0,
+  "target": 55,
+  "picked": 55,
+  "devPct": 0,
+  "noGuessUnique": true,
+  "candidatesWithin10pct": 3
+ },
+ {
+  "id": 2,
+  "role": "normal",
+  "n": 7,
+  "rocks": 0,
+  "target": 110,
+  "picked": 116,
+  "devPct": 5.5,
+  "noGuessUnique": true,
+  "candidatesWithin10pct": 12
+ },
+ {
+  "id": 3,
+  "role": "normal",
+  "n": 7,
+  "rocks": 0,
+  "target": 150,
+  "picked": 151,
+  "devPct": 0.7,
+  "noGuessUnique": true,
+  "candidatesWithin10pct": 27
+ },
+ {
+  "id": 4,
+  "role": "normal",
+  "n": 7,
+  "rocks": 0,
+  "target": 210,
+  "picked": 209,
+  "devPct": -0.5,
+  "noGuessUnique": true,
+  "candidatesWithin10pct": 68
+ },
+ {
+  "id": 5,
+  "role": "crate"
+ },
+ {
+  "id": 6,
+  "role": "normal",
+  "n": 8,
+  "rocks": 0,
+  "target": 260,
+  "picked": 259,
+  "devPct": -0.4,
+  "noGuessUnique": true,
+  "candidatesWithin10pct": 32
+ },
+ {
+  "id": 7,
+  "role": "normal",
+  "n": 8,
+  "rocks": 0,
+  "target": 320,
+  "picked": 320,
+  "devPct": 0,
+  "noGuessUnique": true,
+  "candidatesWithin10pct": 49
+ },
+ {
+  "id": 8,
+  "role": "normal",
+  "n": 8,
+  "rocks": 0,
+  "target": 380,
+  "picked": 380,
+  "devPct": 0,
+  "noGuessUnique": true,
+  "candidatesWithin10pct": 50
+ },
+ {
+  "id": 9,
+  "role": "boss",
+  "n": 8,
+  "rocks": 0,
+  "target": 450,
+  "picked": 451,
+  "devPct": 0.2,
+  "noGuessUnique": true,
+  "candidatesWithin10pct": 85
+ },
+ {
+  "id": 10,
+  "role": "crate"
+ },
+ {
+  "id": 11,
+  "role": "breather",
+  "n": 8,
+  "rocks": 0,
+  "target": 250,
+  "picked": 253,
+  "devPct": 1.2,
+  "noGuessUnique": true,
+  "candidatesWithin10pct": 25
+ },
+ {
+  "id": 12,
+  "role": "normal",
+  "n": 8,
+  "rocks": 0,
+  "target": 350,
+  "picked": 351,
+  "devPct": 0.3,
+  "noGuessUnique": true,
+  "candidatesWithin10pct": 49
+ },
+ {
+  "id": 13,
+  "role": "normal",
+  "n": 8,
+  "rocks": 0,
+  "target": 420,
+  "picked": 420,
+  "devPct": 0,
+  "noGuessUnique": true,
+  "candidatesWithin10pct": 67
+ },
+ {
+  "id": 14,
+  "role": "normal",
+  "n": 9,
+  "rocks": 0,
+  "target": 480,
+  "picked": 481,
+  "devPct": 0.2,
+  "noGuessUnique": true,
+  "candidatesWithin10pct": 53
+ },
+ {
+  "id": 15,
+  "role": "crate"
+ },
+ {
+  "id": 16,
+  "role": "normal",
+  "n": 9,
+  "rocks": 0,
+  "target": 530,
+  "picked": 529,
+  "devPct": -0.2,
+  "noGuessUnique": true,
+  "candidatesWithin10pct": 46
+ },
+ {
+  "id": 17,
+  "role": "normal",
+  "n": 9,
+  "rocks": 0,
+  "target": 590,
+  "picked": 594,
+  "devPct": 0.7,
+  "noGuessUnique": true,
+  "candidatesWithin10pct": 42
+ },
+ {
+  "id": 18,
+  "role": "normal",
+  "n": 9,
+  "rocks": 0,
+  "target": 650,
+  "picked": 650,
+  "devPct": 0,
+  "noGuessUnique": true,
+  "candidatesWithin10pct": 48
+ },
+ {
+  "id": 19,
+  "role": "boss",
+  "n": 9,
+  "rocks": 0,
+  "target": 720,
+  "picked": 720,
+  "devPct": 0,
+  "noGuessUnique": true,
+  "candidatesWithin10pct": 48
+ },
+ {
+  "id": 20,
+  "role": "crate"
+ },
+ {
+  "id": 21,
+  "role": "breather",
+  "n": 9,
+  "rocks": 2,
+  "target": 450,
+  "picked": 447,
+  "devPct": -0.7,
+  "noGuessUnique": true,
+  "candidatesWithin10pct": 28
+ },
+ {
+  "id": 22,
+  "role": "normal",
+  "n": 9,
+  "rocks": 2,
+  "target": 560,
+  "picked": 559,
+  "devPct": -0.2,
+  "noGuessUnique": true,
+  "candidatesWithin10pct": 58
+ },
+ {
+  "id": 23,
+  "role": "normal",
+  "n": 9,
+  "rocks": 2,
+  "target": 640,
+  "picked": 639,
+  "devPct": -0.2,
+  "noGuessUnique": true,
+  "candidatesWithin10pct": 52
+ },
+ {
+  "id": 24,
+  "role": "normal",
+  "n": 9,
+  "rocks": 2,
+  "target": 720,
+  "picked": 714,
+  "devPct": -0.8,
+  "noGuessUnique": true,
+  "candidatesWithin10pct": 51
+ },
+ {
+  "id": 25,
+  "role": "crate"
+ },
+ {
+  "id": 26,
+  "role": "normal",
+  "n": 9,
+  "rocks": 2,
+  "target": 780,
+  "picked": 778,
+  "devPct": -0.3,
+  "noGuessUnique": true,
+  "candidatesWithin10pct": 50
+ },
+ {
+  "id": 27,
+  "role": "normal",
+  "n": 9,
+  "rocks": 2,
+  "target": 840,
+  "picked": 844,
+  "devPct": 0.5,
+  "noGuessUnique": true,
+  "candidatesWithin10pct": 48
+ },
+ {
+  "id": 28,
+  "role": "normal",
+  "n": 9,
+  "rocks": 2,
+  "target": 900,
+  "picked": 901,
+  "devPct": 0.1,
+  "noGuessUnique": true,
+  "candidatesWithin10pct": 29
+ },
+ {
+  "id": 29,
+  "role": "boss",
+  "n": 9,
+  "rocks": 2,
+  "target": 1000,
+  "picked": 1020,
+  "devPct": 2,
+  "noGuessUnique": true,
+  "candidatesWithin10pct": 12
+ },
+ {
+  "id": 30,
+  "role": "crate"
+ }
+]

@@ -1,0 +1,162 @@
+{
+  "archive": "/workspace/capydoku/capydoku-v2-runtime.tar.gz",
+  "generated_at": "2026-11-09T19:53:55.331917-05:00",
+  "timezone": "America/New_York (EST)",
+  "bytes": 4324478,
+  "sha256": "3696728bf6dfef2a1247a823eabcc41063af7896f9ebbb980c9034d192f445db",
+  "file_count": 30,
+  "all_extracted_hashes_match": true,
+  "archive_smoke_verified": true,
+  "files": [
+    {
+      "path": "ASSET-NOTES.md",
+      "bytes": 912,
+      "sha256": "761b83f44d76a8ba52e34bc115cc3984cb3542df6a06b0d11fbfb400e800cc3b"
+    },
+    {
+      "path": "KNOWN-ISSUES.md",
+      "bytes": 2731,
+      "sha256": "5535d56b28916936270e043d3fde94ae8f13a3a404f86e56752b72151e65020b"
+    },
+    {
+      "path": "README.md",
+      "bytes": 10539,
+      "sha256": "6e9b310380e4e3b2abc8f056e08c766b82635480bbebb26ab9f85fd7d7df37fc"
+    },
+    {
+      "path": "app.js",
+      "bytes": 29065,
+      "sha256": "04ccdc812576c10a730ce1b3f6804314ee7345f2f0adfcfc36daf41726e22c99"
+    },
+    {
+      "path": "assets/Nunito-OFL.txt",
+      "bytes": 4385,
+      "sha256": "580df76c95a1ec5ab878ceb25bb3d85c6a076804e9c970c8c6972aea775fdf65"
+    },
+    {
+      "path": "assets/cast/doze.png",
+      "bytes": 327468,
+      "sha256": "4ca14bbc19b672fddad4a9d652b5cf74c5cd6e8f334e478ece31a3cbd5f7722c"
+    },
+    {
+      "path": "assets/cast/nib.png",
+      "bytes": 598832,
+      "sha256": "7635cf918c525a9075eeaf5fffd70d6e02533c7d39148d9b3d5de843cd35c871"
+    },
+    {
+      "path": "assets/cast/pebble.png",
+      "bytes": 788028,
+      "sha256": "b9814a28468cb31e300f5a511cc6c3071195ab9ff0436a3e2bf93f30799fc067"
+    },
+    {
+      "path": "assets/cast/pip.png",
+      "bytes": 417355,
+      "sha256": "d777c4f189aab4b9881588bf8e81ef1643fd33df77541d5cbc4e0062d1321faa"
+    },
+    {
+      "path": "assets/cast/ring.png",
+      "bytes": 638095,
+      "sha256": "61e03b3657b515cbd38a1f554a0f2c1072d31061f18a3f5544a9f860e4f569ae"
+    },
+    {
+      "path": "assets/cast/tuff.png",
+      "bytes": 437989,
+      "sha256": "077ea745f2efd31ce021e98c369a69b83158d15f8236c2aa67e115b2513bdc93"
+    },
+    {
+      "path": "assets/hotspring-bg.jpg",
+      "bytes": 286971,
+      "sha256": "03e15c38adb09761e259222876f361a11b4e4337fe736ca3a984e9db3865d8bd"
+    },
+    {
+      "path": "assets/icon-192.png",
+      "bytes": 34621,
+      "sha256": "192a96c57cffb5388d71343d433bb8a1aab31c418455b6a5ffdbb1329fe99ab0"
+    },
+    {
+      "path": "assets/icon-512.png",
+      "bytes": 232419,
+      "sha256": "7aacea624e14143f671cefe0930cc08be01b951e4b391bfb8f04967fd582623f"
+    },
+    {
+      "path": "assets/map-bg.jpg",
+      "bytes": 303981,
+      "sha256": "7f2e3ca8aa9c032b84adddd4fcd4845f87cdb37c39a287293ec6c5ccb2313c39"
+    },
+    {
+      "path": "assets/nunito-500.ttf",
+      "bytes": 125652,
+      "sha256": "ceb6eec0a584cae83e8f3ab868e2f03977b38ff6e78632bc8a7ec69dcf9f7c18"
+    },
+    {
+      "path": "assets/nunito-700.ttf",
+      "bytes": 125464,
+      "sha256": "1a025dfce6e6e03bbe31ba82277ec5ed96df8b8dd58b3df6267269490b90b1dc"
+    },
+    {
+      "path": "assets/nunito-800.ttf",
+      "bytes": 125416,
+      "sha256": "c5776505c7b3df3c3ca763477b795d6bbc6517760bede0462ab77d1fb44954a6"
+    },
+    {
+      "path": "assets/palette.json",
+      "bytes": 465,
+      "sha256": "0d73aab8ed5382f69c2605bd0d9530a3ddc241f1988f84a8525ea926dca6a3c3"
+    },
+    {
+      "path": "assets/rock.png",
+      "bytes": 79875,
+      "sha256": "83a24ec2b860512a2a947f456a2dd29c4530390b106b97314dd6bcb778121296"
+    },
+    {
+      "path": "audio.js",
+      "bytes": 1113,
+      "sha256": "9ef259459acfa34735044109b7a7bea3c1e48dae0cd44335eef62f875ee715c9"
+    },
+    {
+      "path": "characters.js",
+      "bytes": 1021,
+      "sha256": "0eefb7af1fb85f2d9ccd8e5b801a8a751a3fc04f9af99bf51861cd2545ec20cb"
+    },
+    {
+      "path": "core.js",
+      "bytes": 9863,
+      "sha256": "cba19e4f8465c5b377114e44f10f47d76fb1d08728bae8dee9ea22aec5d41ae2"
+    },
+    {
+      "path": "index.html",
+      "bytes": 655,
+      "sha256": "0cdac4cc81b12979c0ac7d7ce5f20dc61fdee6cf77886d044baed42a06bb7b46"
+    },
+    {
+      "path": "levels.json",
+      "bytes": 90120,
+      "sha256": "5172f714ae8f2c293719b9fca75ebf0a465e163b9bc687b5bc94c30738773d2a"
+    },
+    {
+      "path": "manifest.webmanifest",
+      "bytes": 413,
+      "sha256": "fde4bcbd60f0614d79ede667a95336a784508037b86c9bc192f6be6d52d6845a"
+    },
+    {
+      "path": "style.css",
+      "bytes": 12368,
+      "sha256": "c773ab0e5020e50674820966e7ebd4477c052aee12111733b6858bcbe80f0c0d"
+    },
+    {
+      "path": "sw.js",
+      "bytes": 1885,
+      "sha256": "c694130fe45c2de4a0fc9efd9b9c64fdd3a54046f82371a3f390a20680442b67"
+    },
+    {
+      "path": "theme-v3.css",
+      "bytes": 12166,
+      "sha256": "31bb36335ae5507ae3392a2ddfc7426c3fd53e0f864a7b2686136154ffc3a6b4"
+    },
+    {
+      "path": "theme.js",
+      "bytes": 265,
+      "sha256": "e61b74d1d901df2133f6e3097fe34b037e4489ec6427ffa4ebbc39da645cd4a8"
+    }
+  ]
+}

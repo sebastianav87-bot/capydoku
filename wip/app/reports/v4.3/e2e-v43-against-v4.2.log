@@ -1,0 +1,1620 @@
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:41] "GET / HTTP/1.1" 200 -
+
+Running 9 tests using 1 worker
+
+(node:1508156) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /starters-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /power-identity-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /rewards-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /style.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /visuals-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /theme-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /home-v41.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /bonus-v42.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /app.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /profile.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /updates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /build-info.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /visuals-v4.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /rewards.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /tutorial.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /theme.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /audio.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /layout.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /characters.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /music.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /core.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /powers.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /platform.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /bonus-ui.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /crates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /config.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /crate-levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v6/hotspring.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/starters/jun.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/starters/remy.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v64/starters/bloom.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /style.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /index.html HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /theme-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /starters-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /powers.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /platform.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /config.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /app.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /core.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /rewards.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /profile.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /characters.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /rewards-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /theme.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /music.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /layout.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /audio.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /manifest.webmanifest HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /visuals-v4.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /visuals-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /tutorial.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /power-identity-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /updates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /build-info.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /home-v41.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /bonus-ui.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /crates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /bonus-v42.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /crate-levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/Nunito-OFL.txt HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/crates/banana-target.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/crates/banana.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/crates/crate.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/crates/crate-packed.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/crates/pear-target.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/crates/watermelon-target.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/crates/pear.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/crates/watermelon.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/hotspring-bg.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/icon-192.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/icon-512.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/map-bg.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/music/LICENSES.md HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/music/northumberland.mp3 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/music/northumberland.ogg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/nunito-500.ttf HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/nunito-700.ttf HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/nunito-800.ttf HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/palette.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/power-icons/jun-face.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/power-icons/nap.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/power-icons/peek.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/power-icons/remy-face.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/rock.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/power-icons/second-chance.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/starter-palette.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/starters/doze.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/starters/jun.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v6/capy-jump.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/starters/remy.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v6/capy-sit.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v6/cave-beaten.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v6/cave-ready.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v6/cave-locked.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v6/celebration-pool.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v6/generic-capy.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v6/geyser-beaten.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v6/geyser-locked.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v6/geyser-ready.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v6/hotspring.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v6/tutorial-hand.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v6/waterfall-beaten.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v6/waterfall-locked.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v6/waterfall-ready.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v63/boss-cave-beaten.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v63/boss-cave-locked.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET / HTTP/1.1" 304 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v63/boss-cave-next.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v63/boss-geyser-beaten.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v63/boss-geyser-locked.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v63/boss-geyser-next.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v63/boss-waterfall-beaten.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v63/boss-waterfall-locked.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v63/boss-waterfall-next.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v64/power-icons/bloom-face.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v64/starters/bloom-32@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v64/starters/bloom-32@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v64/starters/bloom-44@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v64/starters/bloom-32@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v64/starters/bloom-44@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v65/lily-earned.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v65/lily-outline.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v64/starters/bloom-51@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v64/starters/bloom-44@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v64/starters/bloom-51@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v64/starters/bloom-51@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v64/starters/bloom-64@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v64/starters/bloom-64@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v64/starters/bloom-64@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v64/starters/bloom.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v64/starters/bloom-hello-pond.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v65/lily-earned.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v65/lily-golden.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /assets/v65/lily-outline.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /sw.js HTTP/1.1" 304 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:42] "GET /sw.js HTTP/1.1" 304 -
+  ✘  1 [mobile-412] › tests/v43.spec.js:14:57 › pond 1: Undo after (wrong capy, remove it, correct capy diagonally next to it) never puts a capy next to another (9.3s)
+(node:1508464) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /style.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /rewards-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /visuals-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /power-identity-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /starters-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /theme-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /home-v41.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /bonus-v42.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /app.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /profile.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /visuals-v4.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /rewards.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /updates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /tutorial.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /theme.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /build-info.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /characters.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /layout.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /core.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /powers.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /music.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /audio.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /platform.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /crates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /bonus-ui.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /config.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /crate-levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/starters/jun.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v64/starters/bloom.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/starters/remy.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v6/hotspring.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /style.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /index.html HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /theme-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /powers.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /starters-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /platform.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /config.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /core.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /app.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /rewards.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /profile.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /theme.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /rewards-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /characters.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /audio.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /music.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /manifest.webmanifest HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /layout.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /visuals-v4.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /visuals-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /tutorial.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /power-identity-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /updates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /build-info.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /home-v41.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /bonus-v42.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /crates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /bonus-ui.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /crate-levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/Nunito-OFL.txt HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/crates/banana.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/crates/banana-target.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/crates/crate-packed.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/crates/crate.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/crates/pear-target.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/crates/pear.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/crates/watermelon-target.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/crates/watermelon.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/hotspring-bg.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/map-bg.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/icon-512.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/icon-192.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/music/LICENSES.md HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/music/northumberland.mp3 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/music/northumberland.ogg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/nunito-500.ttf HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/nunito-700.ttf HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/nunito-800.ttf HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/palette.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/power-icons/jun-face.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/power-icons/nap.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/power-icons/peek.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/power-icons/remy-face.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/power-icons/second-chance.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/rock.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/starter-palette.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/starters/doze.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/starters/jun.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v6/capy-jump.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/starters/remy.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v6/capy-sit.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v6/cave-beaten.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v6/cave-locked.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v6/cave-ready.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v6/celebration-pool.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v6/generic-capy.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v6/geyser-beaten.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v6/geyser-locked.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v6/geyser-ready.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v6/hotspring.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v6/waterfall-beaten.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v6/tutorial-hand.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v6/waterfall-locked.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v6/waterfall-ready.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v63/boss-cave-beaten.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v63/boss-cave-locked.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v63/boss-cave-next.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET / HTTP/1.1" 304 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v63/boss-geyser-beaten.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v63/boss-geyser-locked.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v63/boss-geyser-next.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v63/boss-waterfall-beaten.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v63/boss-waterfall-locked.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v63/boss-waterfall-next.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v64/power-icons/bloom-face.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v65/lily-outline.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v65/lily-earned.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v64/starters/bloom-32@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v64/starters/bloom-32@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v64/starters/bloom-32@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v64/starters/bloom-44@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v64/starters/bloom-44@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v64/starters/bloom-44@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v64/starters/bloom-51@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v64/starters/bloom-51@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v64/starters/bloom-51@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v64/starters/bloom-64@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v64/starters/bloom-64@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v64/starters/bloom-64@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v64/starters/bloom.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v64/starters/bloom-hello-pond.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v65/lily-earned.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v65/lily-golden.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /assets/v65/lily-outline.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /sw.js HTTP/1.1" 304 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:03:52] "GET /sw.js HTTP/1.1" 304 -
+  ✘  2 [mobile-412] › tests/v43.spec.js:14:57 › pond 1: Undo after (wrong capy, remove it, correct capy orthogonally next to it) never puts a capy next to another (9.3s)
+(node:1508768) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /style.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /theme-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /rewards-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /power-identity-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /starters-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /home-v41.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /bonus-v42.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /visuals-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /app.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /profile.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /build-info.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /updates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /tutorial.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /rewards.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /visuals-v4.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /theme.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /audio.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /characters.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /core.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /layout.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /powers.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /platform.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /bonus-ui.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /music.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /crates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /config.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /crate-levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/starters/jun.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/v64/starters/bloom.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/starters/remy.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/v6/hotspring.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /style.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /index.html HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /starters-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /powers.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /theme-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /platform.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /config.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /app.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /core.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /rewards.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /profile.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /theme.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /rewards-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /audio.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /characters.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /music.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /layout.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /manifest.webmanifest HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /visuals-v4.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /visuals-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /tutorial.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /power-identity-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /updates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /build-info.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /home-v41.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /bonus-v42.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /bonus-ui.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /crates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /crate-levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/Nunito-OFL.txt HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/crates/crate-packed.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/crates/banana-target.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/crates/banana.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/crates/crate.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/crates/pear.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/crates/pear-target.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/crates/watermelon-target.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/hotspring-bg.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/crates/watermelon.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/icon-192.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/icon-512.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/map-bg.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/music/LICENSES.md HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/music/northumberland.mp3 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/music/northumberland.ogg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/nunito-500.ttf HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/nunito-700.ttf HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/nunito-800.ttf HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/palette.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/power-icons/jun-face.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/power-icons/nap.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/power-icons/peek.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/power-icons/remy-face.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/power-icons/second-chance.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/rock.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/starter-palette.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/starters/doze.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/starters/jun.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/starters/remy.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/v6/capy-jump.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/v6/capy-sit.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/v6/cave-beaten.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/v6/cave-locked.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/v6/cave-ready.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/v6/celebration-pool.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/v6/generic-capy.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/v6/geyser-beaten.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/v6/geyser-locked.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/v6/geyser-ready.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/v6/hotspring.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/v6/tutorial-hand.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/v6/waterfall-beaten.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/v6/waterfall-locked.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/v6/waterfall-ready.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/v63/boss-cave-beaten.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/v63/boss-cave-locked.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/v63/boss-cave-next.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:02] "GET /assets/v63/boss-geyser-beaten.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:03] "GET /assets/v63/boss-geyser-locked.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:03] "GET /assets/v63/boss-geyser-next.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:03] "GET /assets/v63/boss-waterfall-beaten.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:03] "GET / HTTP/1.1" 304 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:03] "GET /assets/v63/boss-waterfall-locked.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:03] "GET /assets/v63/boss-waterfall-next.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:03] "GET /assets/v64/power-icons/bloom-face.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:03] "GET /assets/v64/starters/bloom-32@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:03] "GET /assets/v64/starters/bloom-32@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:03] "GET /assets/v64/starters/bloom-32@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:03] "GET /assets/v64/starters/bloom-44@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:03] "GET /assets/v65/lily-earned.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:03] "GET /assets/v65/lily-outline.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:03] "GET /assets/v64/starters/bloom-44@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:03] "GET /assets/v64/starters/bloom-44@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:03] "GET /assets/v64/starters/bloom-51@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:03] "GET /assets/v64/starters/bloom-51@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:03] "GET /assets/v64/starters/bloom-51@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:03] "GET /assets/v64/starters/bloom-64@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:03] "GET /assets/v64/starters/bloom-64@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:03] "GET /assets/v64/starters/bloom-hello-pond.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:03] "GET /assets/v64/starters/bloom-64@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:03] "GET /assets/v64/starters/bloom.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:03] "GET /assets/v65/lily-golden.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:03] "GET /assets/v65/lily-earned.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:03] "GET /assets/v65/lily-outline.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:03] "GET /sw.js HTTP/1.1" 304 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:03] "GET /sw.js HTTP/1.1" 304 -
+  ✘  3 [mobile-412] › tests/v43.spec.js:14:57 › pond 21: Undo after (wrong capy, remove it, correct capy diagonally next to it) never puts a capy next to another (9.4s)
+(node:1509062) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /style.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /starters-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /theme-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /power-identity-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /home-v41.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /visuals-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /rewards-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /app.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /bonus-v42.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /rewards.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /profile.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /build-info.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /updates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /visuals-v4.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /tutorial.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /theme.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /audio.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /characters.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /music.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /layout.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /core.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /powers.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /platform.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /bonus-ui.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /crates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /config.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /crate-levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/starters/jun.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v6/hotspring.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/starters/remy.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v64/starters/bloom.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /index.html HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /style.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /theme-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /starters-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /powers.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /platform.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /config.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /app.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /core.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /rewards.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /profile.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /rewards-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /theme.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /characters.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /audio.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /music.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /layout.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /visuals-v4.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /manifest.webmanifest HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /visuals-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /tutorial.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /power-identity-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /updates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /bonus-v42.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /home-v41.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /build-info.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /bonus-ui.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /crates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /crate-levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/Nunito-OFL.txt HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/crates/banana-target.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/crates/banana.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/crates/crate-packed.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/crates/crate.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/crates/pear-target.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/crates/pear.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/crates/watermelon-target.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/crates/watermelon.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/hotspring-bg.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/icon-192.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/map-bg.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/icon-512.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/music/LICENSES.md HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/music/northumberland.mp3 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/nunito-500.ttf HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/music/northumberland.ogg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/nunito-700.ttf HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/nunito-800.ttf HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/palette.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/power-icons/jun-face.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/power-icons/nap.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/power-icons/peek.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/power-icons/remy-face.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/power-icons/second-chance.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/rock.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/starter-palette.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/starters/doze.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/starters/remy.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/starters/jun.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v6/capy-jump.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v6/capy-sit.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v6/cave-beaten.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v6/cave-locked.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v6/cave-ready.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v6/celebration-pool.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v6/generic-capy.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v6/geyser-beaten.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v6/geyser-locked.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v6/geyser-ready.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v6/hotspring.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v6/tutorial-hand.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v6/waterfall-beaten.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v6/waterfall-locked.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v6/waterfall-ready.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v63/boss-cave-beaten.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v63/boss-cave-locked.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v63/boss-cave-next.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v63/boss-geyser-beaten.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v63/boss-geyser-locked.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v63/boss-geyser-next.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v63/boss-waterfall-beaten.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v63/boss-waterfall-locked.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v63/boss-waterfall-next.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET / HTTP/1.1" 304 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v64/power-icons/bloom-face.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v64/starters/bloom-32@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v64/starters/bloom-32@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v64/starters/bloom-32@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v64/starters/bloom-44@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v64/starters/bloom-44@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v64/starters/bloom-44@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v64/starters/bloom-51@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v65/lily-earned.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v65/lily-outline.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v64/starters/bloom-51@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v64/starters/bloom-51@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v64/starters/bloom-64@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v64/starters/bloom-64@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v64/starters/bloom-64@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v64/starters/bloom-hello-pond.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v65/lily-earned.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v65/lily-golden.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v64/starters/bloom.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /assets/v65/lily-outline.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /sw.js HTTP/1.1" 304 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:13] "GET /sw.js HTTP/1.1" 304 -
+  ✘  4 [mobile-412] › tests/v43.spec.js:14:57 › pond 21: Undo after (wrong capy, remove it, correct capy orthogonally next to it) never puts a capy next to another (9.3s)
+(node:1509356) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /style.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /visuals-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /rewards-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /power-identity-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /starters-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /theme-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /home-v41.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /app.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /bonus-v42.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /profile.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /build-info.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /rewards.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /updates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /visuals-v4.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /tutorial.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /characters.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /audio.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /music.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /layout.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /core.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /powers.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /platform.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /theme.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /crates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /bonus-ui.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /config.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /crate-levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/starters/remy.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v6/hotspring.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v64/starters/bloom.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/starters/jun.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /index.html HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /style.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /starters-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /theme-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /powers.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /platform.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /config.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /app.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /rewards.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /core.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /profile.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /rewards-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /characters.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /theme.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /audio.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /music.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /layout.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /manifest.webmanifest HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /visuals-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /visuals-v4.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /power-identity-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /tutorial.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /updates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /build-info.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /bonus-v42.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /home-v41.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /bonus-ui.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /crates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /crate-levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/Nunito-OFL.txt HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/crates/banana-target.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/crates/crate.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/crates/banana.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/crates/crate-packed.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/crates/watermelon-target.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/crates/pear-target.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/crates/pear.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/crates/watermelon.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/hotspring-bg.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/icon-192.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/icon-512.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/map-bg.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/music/LICENSES.md HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/music/northumberland.mp3 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/music/northumberland.ogg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/nunito-500.ttf HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/nunito-700.ttf HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/nunito-800.ttf HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/palette.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/power-icons/jun-face.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/power-icons/nap.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/power-icons/remy-face.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/power-icons/peek.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/power-icons/second-chance.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/rock.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/starter-palette.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/starters/doze.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/starters/jun.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/starters/remy.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v6/capy-jump.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v6/capy-sit.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v6/cave-beaten.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v6/cave-locked.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v6/cave-ready.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v6/celebration-pool.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v6/generic-capy.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v6/geyser-beaten.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v6/geyser-locked.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v6/geyser-ready.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v6/hotspring.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v6/tutorial-hand.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v6/waterfall-beaten.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v6/waterfall-locked.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v6/waterfall-ready.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v63/boss-cave-beaten.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v63/boss-cave-locked.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v63/boss-cave-next.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET / HTTP/1.1" 304 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v63/boss-geyser-beaten.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v63/boss-geyser-locked.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v63/boss-geyser-next.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v63/boss-waterfall-beaten.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v63/boss-waterfall-locked.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v63/boss-waterfall-next.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v64/power-icons/bloom-face.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v64/starters/bloom-32@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v64/starters/bloom-32@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v64/starters/bloom-32@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v64/starters/bloom-44@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v65/lily-earned.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v65/lily-outline.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v64/starters/bloom-44@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v64/starters/bloom-44@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v64/starters/bloom-51@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v64/starters/bloom-51@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v64/starters/bloom-64@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v64/starters/bloom-51@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v64/starters/bloom-64@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v64/starters/bloom-64@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v64/starters/bloom-hello-pond.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v64/starters/bloom.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v65/lily-earned.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v65/lily-golden.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /assets/v65/lily-outline.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /sw.js HTTP/1.1" 304 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:23] "GET /sw.js HTTP/1.1" 304 -
+  ✘  5 [mobile-412] › tests/v43.spec.js:16:60 › a late click never turns "tap A, tap B" into a capy on A (chromium-pointer-id) (8.7s)
+(node:1509738) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /style.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /theme-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /starters-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /visuals-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /rewards-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /power-identity-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /home-v41.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /bonus-v42.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /app.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /profile.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /build-info.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /visuals-v4.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /updates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /tutorial.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /theme.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /rewards.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /characters.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /audio.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /music.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /core.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /powers.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /platform.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /layout.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /bonus-ui.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /crates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /config.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /crate-levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /assets/v64/starters/bloom.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /assets/starters/jun.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /assets/v6/hotspring.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /assets/starters/remy.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /index.html HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /style.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /theme-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /starters-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /powers.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /platform.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /config.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /app.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /core.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /rewards.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /profile.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /rewards-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /theme.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /characters.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /audio.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /music.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /layout.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /visuals-v4.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /manifest.webmanifest HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /visuals-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /power-identity-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /tutorial.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /updates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /home-v41.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /build-info.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /bonus-v42.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /crates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /crate-levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /bonus-ui.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /assets/Nunito-OFL.txt HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /assets/crates/banana-target.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /assets/crates/banana.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /assets/crates/crate-packed.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /assets/crates/pear-target.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /assets/crates/crate.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /assets/crates/pear.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /assets/crates/watermelon-target.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /assets/crates/watermelon.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /assets/icon-512.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /assets/hotspring-bg.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /assets/icon-192.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /assets/map-bg.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /assets/music/northumberland.mp3 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /assets/music/LICENSES.md HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /assets/music/northumberland.ogg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /assets/nunito-500.ttf HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /assets/nunito-700.ttf HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /assets/nunito-800.ttf HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /assets/palette.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /assets/power-icons/jun-face.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /assets/power-icons/nap.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /assets/power-icons/peek.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:32] "GET /assets/power-icons/remy-face.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/power-icons/second-chance.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/starter-palette.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/rock.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/starters/doze.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/starters/jun.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v6/capy-jump.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/starters/remy.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v6/capy-sit.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v6/cave-beaten.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v6/cave-locked.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v6/cave-ready.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v6/celebration-pool.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v6/generic-capy.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v6/geyser-beaten.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v6/geyser-locked.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v6/geyser-ready.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v6/hotspring.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v6/tutorial-hand.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v6/waterfall-beaten.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v6/waterfall-locked.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v63/boss-cave-locked.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v6/waterfall-ready.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v63/boss-cave-beaten.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v63/boss-cave-next.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v63/boss-geyser-beaten.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v63/boss-geyser-locked.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v63/boss-geyser-next.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v63/boss-waterfall-beaten.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v63/boss-waterfall-locked.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v63/boss-waterfall-next.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET / HTTP/1.1" 304 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v64/power-icons/bloom-face.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v64/starters/bloom-32@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v64/starters/bloom-32@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v64/starters/bloom-32@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v64/starters/bloom-44@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v64/starters/bloom-44@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v64/starters/bloom-44@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v64/starters/bloom-51@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v64/starters/bloom-51@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v64/starters/bloom-51@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v64/starters/bloom-64@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v64/starters/bloom-64@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v64/starters/bloom-64@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v64/starters/bloom-hello-pond.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v65/lily-earned.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v64/starters/bloom.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v65/lily-outline.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v65/lily-earned.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v65/lily-golden.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /assets/v65/lily-outline.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /sw.js HTTP/1.1" 304 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:33] "GET /sw.js HTTP/1.1" 304 -
+  ✘  6 [mobile-412] › tests/v43.spec.js:16:60 › a late click never turns "tap A, tap B" into a capy on A (no-pointer-id) (1.7s)
+(node:1509991) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /style.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /theme-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /visuals-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /power-identity-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /starters-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /rewards-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /home-v41.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /bonus-v42.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /app.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /build-info.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /visuals-v4.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /updates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /rewards.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /profile.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /tutorial.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /theme.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /characters.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /audio.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /music.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /layout.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /core.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /powers.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /bonus-ui.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /crates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /config.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /platform.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /crate-levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v64/starters/bloom.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/starters/jun.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/starters/remy.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v6/hotspring.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /index.html HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /style.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /theme-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /starters-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /powers.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /app.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /platform.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /config.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /profile.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /core.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /rewards.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /rewards-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /theme.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /characters.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /audio.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /layout.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /music.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /manifest.webmanifest HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /visuals-v4.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /visuals-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /tutorial.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /power-identity-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /build-info.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /updates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /home-v41.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /bonus-ui.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /crates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /bonus-v42.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/crates/banana-target.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /crate-levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/Nunito-OFL.txt HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/crates/crate-packed.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/crates/banana.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/crates/crate.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/crates/pear.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/crates/watermelon-target.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/crates/pear-target.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/crates/watermelon.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/icon-192.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/hotspring-bg.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/icon-512.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/map-bg.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/music/LICENSES.md HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/music/northumberland.mp3 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/music/northumberland.ogg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/nunito-500.ttf HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/nunito-700.ttf HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/nunito-800.ttf HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/palette.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/power-icons/jun-face.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/power-icons/nap.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/power-icons/peek.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/power-icons/remy-face.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/starter-palette.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/power-icons/second-chance.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/rock.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/starters/doze.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/starters/jun.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/starters/remy.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v6/capy-jump.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v6/capy-sit.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v6/cave-beaten.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v6/cave-locked.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v6/cave-ready.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v6/celebration-pool.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v6/generic-capy.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v6/geyser-beaten.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v6/geyser-locked.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v6/geyser-ready.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v6/hotspring.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v6/tutorial-hand.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v6/waterfall-beaten.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v6/waterfall-locked.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v6/waterfall-ready.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v63/boss-cave-beaten.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v63/boss-cave-locked.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v63/boss-cave-next.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v63/boss-geyser-beaten.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v63/boss-geyser-locked.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET / HTTP/1.1" 304 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v63/boss-geyser-next.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v63/boss-waterfall-beaten.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v63/boss-waterfall-locked.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v63/boss-waterfall-next.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v64/power-icons/bloom-face.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v64/starters/bloom-32@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v64/starters/bloom-32@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v65/lily-earned.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v64/starters/bloom-32@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v64/starters/bloom-44@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v65/lily-outline.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v64/starters/bloom-44@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v64/starters/bloom-44@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v64/starters/bloom-51@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v64/starters/bloom-51@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v64/starters/bloom-51@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v64/starters/bloom-64@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v64/starters/bloom-64@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v64/starters/bloom-64@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v65/lily-earned.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v64/starters/bloom-hello-pond.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v64/starters/bloom.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v65/lily-golden.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /assets/v65/lily-outline.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /sw.js HTTP/1.1" 304 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:35] "GET /sw.js HTTP/1.1" 304 -
+  ✓  7 [mobile-412] › tests/v43.spec.js:17:1 › a real touch double-tap still places exactly one capy and taps on other cells still mark × (1.2s)
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /style.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /theme-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /starters-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /visuals-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /power-identity-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /home-v41.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /rewards-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /bonus-v42.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /app.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /profile.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /updates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /rewards.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /build-info.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /visuals-v4.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /tutorial.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /music.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /theme.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /characters.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /layout.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /audio.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /core.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /powers.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /platform.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /bonus-ui.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /config.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /crates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /crate-levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v64/starters/bloom.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/starters/jun.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/starters/remy.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v6/hotspring.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /index.html HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/nunito-800.ttf HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/nunito-500.ttf HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/nunito-700.ttf HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /style.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /starters-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /theme-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /powers.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /platform.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /core.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /app.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /config.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /rewards.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /profile.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /theme.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /characters.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /rewards-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /music.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /layout.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /audio.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /visuals-v4.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /manifest.webmanifest HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /visuals-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /tutorial.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /updates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /power-identity-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /build-info.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /home-v41.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /bonus-v42.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /bonus-ui.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET / HTTP/1.1" 304 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /crates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /crate-levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/Nunito-OFL.txt HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/crates/banana-target.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/crates/crate-packed.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/crates/banana.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/crates/crate.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/crates/pear-target.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/crates/pear.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/crates/watermelon-target.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/crates/watermelon.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/hotspring-bg.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/icon-192.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/icon-512.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/map-bg.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/music/LICENSES.md HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/music/northumberland.mp3 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/music/northumberland.ogg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v65/lily-earned.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v65/lily-outline.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/nunito-700.ttf HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/nunito-500.ttf HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/nunito-800.ttf HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/palette.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/power-icons/jun-face.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/power-icons/nap.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/power-icons/peek.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/power-icons/second-chance.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/rock.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/power-icons/remy-face.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/starters/doze.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/starters/jun.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/starter-palette.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v6/capy-jump.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/starters/remy.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v6/capy-sit.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v6/cave-beaten.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v6/cave-locked.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v6/cave-ready.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v6/celebration-pool.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v6/generic-capy.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v6/geyser-beaten.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v6/geyser-locked.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v6/geyser-ready.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v6/hotspring.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v6/tutorial-hand.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v6/waterfall-beaten.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v6/waterfall-locked.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v6/waterfall-ready.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v63/boss-cave-beaten.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v63/boss-cave-locked.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v63/boss-cave-next.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v63/boss-geyser-beaten.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v63/boss-geyser-locked.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v63/boss-geyser-next.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v63/boss-waterfall-beaten.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v63/boss-waterfall-next.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v63/boss-waterfall-locked.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v64/power-icons/bloom-face.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v64/starters/bloom-32@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v64/starters/bloom-32@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v64/starters/bloom-32@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v64/starters/bloom-44@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v64/starters/bloom-44@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v64/starters/bloom-44@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v64/starters/bloom-51@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v64/starters/bloom-51@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v64/starters/bloom-51@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v64/starters/bloom-64@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v64/starters/bloom-64@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v64/starters/bloom-64@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v64/starters/bloom-hello-pond.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v65/lily-earned.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v64/starters/bloom.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v65/lily-golden.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /assets/v65/lily-outline.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /sw.js HTTP/1.1" 304 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:36] "GET /sw.js HTTP/1.1" 304 -
+  ✘  8 [mobile-412] › tests/v43.spec.js:18:1 › a locked capy in a conflict shows the red conflict ring, not only the gold lock glow (1.2s)
+(node:1510410) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /style.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /theme-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /power-identity-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /starters-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /home-v41.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /visuals-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /rewards-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /bonus-v42.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /app.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /profile.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /visuals-v4.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /updates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /tutorial.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /build-info.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /rewards.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /theme.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /characters.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /audio.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /layout.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /music.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /core.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /platform.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /bonus-ui.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /powers.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /crates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /config.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /crate-levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/v64/starters/bloom.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/starters/remy.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/starters/jun.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/v6/hotspring.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /sw.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET / HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /style.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /index.html HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /starters-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /powers.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /theme-v3.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /config.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /app.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /platform.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /core.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /profile.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /rewards.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /rewards-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /theme.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /characters.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /audio.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /music.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /layout.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /visuals-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /visuals-v4.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /manifest.webmanifest HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /power-identity-v4.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /updates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /tutorial.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /build-info.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /home-v41.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /bonus-v42.css HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /bonus-ui.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /crates.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /crate-levels.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/Nunito-OFL.txt HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/crates/banana-target.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/crates/banana.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/crates/crate.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/crates/pear-target.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/crates/crate-packed.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/crates/pear.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/crates/watermelon.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/crates/watermelon-target.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/hotspring-bg.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/icon-512.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/map-bg.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/icon-192.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/music/LICENSES.md HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/music/northumberland.ogg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/music/northumberland.mp3 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/nunito-500.ttf HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/nunito-700.ttf HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/nunito-800.ttf HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/palette.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/power-icons/jun-face.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/power-icons/nap.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/power-icons/peek.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/power-icons/remy-face.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/power-icons/second-chance.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/starter-palette.json HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/rock.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/starters/doze.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/starters/jun.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/starters/remy.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/v6/capy-jump.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/v6/capy-sit.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/v6/cave-beaten.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/v6/cave-locked.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/v6/cave-ready.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/v6/celebration-pool.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/v6/generic-capy.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/v6/geyser-beaten.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/v6/geyser-locked.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/v6/geyser-ready.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/v6/hotspring.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/v6/tutorial-hand.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/v6/waterfall-beaten.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/v6/waterfall-locked.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/v6/waterfall-ready.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/v63/boss-cave-beaten.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/v63/boss-cave-locked.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/v63/boss-cave-next.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/v63/boss-geyser-beaten.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/v63/boss-geyser-locked.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/v63/boss-geyser-next.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/v63/boss-waterfall-beaten.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET /assets/v63/boss-waterfall-locked.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:38] "GET / HTTP/1.1" 304 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:39] "GET /assets/v63/boss-waterfall-next.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:39] "GET /assets/v64/power-icons/bloom-face.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:39] "GET /assets/v64/starters/bloom-32@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:39] "GET /assets/v64/starters/bloom-32@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:39] "GET /assets/v64/starters/bloom-32@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:39] "GET /assets/v64/starters/bloom-44@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:39] "GET /assets/v65/lily-earned.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:39] "GET /assets/v65/lily-outline.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:39] "GET /assets/v64/starters/bloom-44@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:39] "GET /assets/v64/starters/bloom-51@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:39] "GET /assets/v64/starters/bloom-44@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:39] "GET /assets/v64/starters/bloom-51@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:39] "GET /assets/v64/starters/bloom-51@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:39] "GET /assets/v64/starters/bloom-64@1x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:39] "GET /assets/v64/starters/bloom-64@2x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:39] "GET /assets/v64/starters/bloom-64@3x.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:39] "GET /assets/v64/starters/bloom-hello-pond.jpg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:39] "GET /assets/v64/starters/bloom.png HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:39] "GET /assets/v65/lily-golden.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:39] "GET /assets/v65/lily-earned.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:39] "GET /assets/v65/lily-outline.svg HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:39] "GET /sw.js HTTP/1.1" 304 -
+[WebServer] 127.0.0.1 - - [15/Nov/2026 08:04:39] "GET /sw.js HTTP/1.1" 304 -
+  ✘  9 [mobile-412] › tests/v43.spec.js:19:1 › haptics v4.3 reach the Vibration API: × 50, clear 42, correct capy 110, rule-break [170,90,170], locked bump 30 (2.5s)
+
+
+  1) [mobile-412] › tests/v43.spec.js:14:57 › pond 1: Undo after (wrong capy, remove it, correct capy diagonally next to it) never puts a capy next to another 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('[data-cell="5"]')
+    Expected: "0"
+    Received: "2"
+    Timeout:  7000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('[data-cell="5"]') with timeout 7000ms
+      - waiting for locator('[data-cell="5"]')
+        18 × locator resolved to <button data-cell="5" data-value="2" class="cell  bad " aria-label="Row 2, column 1, zone 1, capy, conflict">…</button>
+           - unexpected value "2"
+
+
+      12 | function pair(id,diagonal){const p=data.levels[id-1],sol=solutionCells(p),n=p.n;for(const s of sol)for(let w=0;w<n*n;w++){const dr=Math.abs(Math.floor(w/n)-Math.floor(s/n)),dc=Math.abs(w%n-s%n);if(sol.includes(w)||p.rocks.includes(w)||Math.max(dr,dc)!==1||diagonal!==(dr===1&&dc===1))continue;return{s,w}}}
+      13 | const levels=[{id:1,completed:[]},{id:21,completed:Array.from({length:20},(_,i)=>i+1)}];
+    > 14 | for(const L of levels)for(const diagonal of[true,false])test(`pond ${L.id}: Undo after (wrong capy, remove it, correct capy ${diagonal?'diagonally':'orthogonally'} next to it) never puts a capy next to another`,async({page})=>{const{s,w}=pair(L.id,diagonal);await seed(page,{completed:L.completed,rocksReached:L.id>20});await open(page,L.id);const q=data.levels[L.id-1],far=Array.from({length:q.n**2},(_,i)=>i).find(i=>i!==s&&i!==w&&!q.rocks.includes(i)&&!peers(q,i,s)&&!peers(q,i,w));await single(page,far);await expect(page.locator(`[data-cell="${far}"]`)).toHaveAttribute('data-value','1');await double(page,w);await expect(page.locator(`[data-cell="${w}"]`)).toHaveAttribute('data-value','2');await single(page,w);await expect(page.locator(`[data-cell="${w}"]`)).toHaveAttribute('data-value','0');await double(page,s);await expect(page.locator(`[data-cell="${s}"]`)).toHaveClass(/capy-locked/);await page.getByRole('button',{name:'Undo',exact:true}).tap();await page.waitForTimeout(120);await expect(page.locator(`[data-cell="${w}"]`)).toHaveAttribute('data-value','0');await expect(page.locator(`[data-cell="${far}"]`)).toHaveAttribute('data-value','0');await expect(page.getByRole('button',{name:'Undo',exact:true})).toBeDisabled();await expect(page.locator(`[data-cell="${s}"]`)).toHaveAttribute('data-value','2');await expect(page.locator('.cell.bad')).toHaveCount(0);await expect(page.locator('.lives')).toHaveAttribute('data-lives','3');const saved=await page.evaluate(k=>JSON.parse(localStorage.getItem(k)),KEY);expect(saved.sessions[`pond-${L.id}`].cells[w]).toBe(0);if(L.id===1&&diagonal)await shot(page,'undo-no-phantom')});
+         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ^
+      15 | // Late native click of tap A arriving after tap B's pointerup (a busy phone): v4.2 delivered A twice = double-tap = capy.
+      16 | for(const engine of['chromium-pointer-id','no-pointer-id'])test(`a late click never turns "tap A, tap B" into a capy on A (${engine})`,async({page})=>{await seed(page);await open(page,1);const{s,w}=pair(1,true),p=data.levels[0],b=Array.from({length:25},(_,i)=>i).find(i=>i!==w&&i!==s&&!peers(p,i,w)&&!solutionCells(p).includes(i));await double(page,s);await expect(page.locator(`[data-cell="${s}"]`)).toHaveClass(/capy-locked/);await reset(page);await page.evaluate(async({w,b,engine})=>{const cell=i=>document.querySelector(`[data-cell="${i}"]`),frame=()=>new Promise(r=>requestAnimationFrame(()=>setTimeout(r,0)));const at=i=>{const r=cell(i).getBoundingClientRect();return{clientX:r.x+r.width/2,clientY:r.y+r.height/2}};const touch=(type,i,id)=>cell(i).dispatchEvent(new PointerEvent(type,{pointerId:id,isPrimary:true,pointerType:'touch',button:0,bubbles:true,cancelable:true,...at(i)}));const click=(i,id)=>cell(i).dispatchEvent(engine==='no-pointer-id'?new MouseEvent('click',{detail:1,bubbles:true,cancelable:true,...at(i)}):new PointerEvent('click',{pointerId:id,pointerType:'touch',detail:1,bubbles:true,cancelable:true,...at(i)}));touch('pointerdown',w,901);touch('pointerup',w,901);await frame();await frame();touch('pointerdown',b,902);touch('pointerup',b,902);click(w,901);click(b,902);await frame();await frame()},{w,b,engine});await page.waitForTimeout(450);await expect(page.locator(`[data-cell="${w}"]`)).toHaveAttribute('data-value','1');await expect(page.locator(`[data-cell="${b}"]`)).toHaveAttribute('data-value','1');await expect(page.locator('.lives')).toHaveAttribute('data-lives','3');await expect(page.locator('.cell.bad')).toHaveCount(0);expect(await buzz(page)).toEqual([HAPTIC_CONFIG.patterns.markX,HAPTIC_CONFIG.patterns.markX])});
+      17 | test('a real touch double-tap still places exactly one capy and taps on other cells still mark ×',async({page})=>{await seed(page);await open(page,1);const sol=solutionCells(data.levels[0]);await double(page,sol[0]);await expect(page.locator(`[data-cell="${sol[0]}"]`)).toHaveAttribute('data-value','2');const other=Array.from({length:25},(_,i)=>i).find(i=>i!==sol[0]&&!sol.includes(i)&&!peers(data.levels[0],i,sol[0]));await single(page,other);await expect(page.locator(`[data-cell="${other}"]`)).toHaveAttribute('data-value','1');await expect(page.locator('.cell[data-value="2"]')).toHaveCount(1)});
+        at /tmp/v42run/tests/v43.spec.js:14:1041
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/v43-pond-1-Undo-after-wron-4032e-puts-a-capy-next-to-another-mobile-412/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/v43-pond-1-Undo-after-wron-4032e-puts-a-capy-next-to-another-mobile-412/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/v43-pond-1-Undo-after-wron-4032e-puts-a-capy-next-to-another-mobile-412/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/v43-pond-1-Undo-after-wron-4032e-puts-a-capy-next-to-another-mobile-412/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [mobile-412] › tests/v43.spec.js:14:57 › pond 1: Undo after (wrong capy, remove it, correct capy orthogonally next to it) never puts a capy next to another 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('[data-cell="0"]')
+    Expected: "0"
+    Received: "2"
+    Timeout:  7000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('[data-cell="0"]') with timeout 7000ms
+      - waiting for locator('[data-cell="0"]')
+        18 × locator resolved to <button data-cell="0" data-value="2" class="cell  bad " aria-label="Row 1, column 1, zone 1, capy, conflict">…</button>
+           - unexpected value "2"
+
+
+      12 | function pair(id,diagonal){const p=data.levels[id-1],sol=solutionCells(p),n=p.n;for(const s of sol)for(let w=0;w<n*n;w++){const dr=Math.abs(Math.floor(w/n)-Math.floor(s/n)),dc=Math.abs(w%n-s%n);if(sol.includes(w)||p.rocks.includes(w)||Math.max(dr,dc)!==1||diagonal!==(dr===1&&dc===1))continue;return{s,w}}}
+      13 | const levels=[{id:1,completed:[]},{id:21,completed:Array.from({length:20},(_,i)=>i+1)}];
+    > 14 | for(const L of levels)for(const diagonal of[true,false])test(`pond ${L.id}: Undo after (wrong capy, remove it, correct capy ${diagonal?'diagonally':'orthogonally'} next to it) never puts a capy next to another`,async({page})=>{const{s,w}=pair(L.id,diagonal);await seed(page,{completed:L.completed,rocksReached:L.id>20});await open(page,L.id);const q=data.levels[L.id-1],far=Array.from({length:q.n**2},(_,i)=>i).find(i=>i!==s&&i!==w&&!q.rocks.includes(i)&&!peers(q,i,s)&&!peers(q,i,w));await single(page,far);await expect(page.locator(`[data-cell="${far}"]`)).toHaveAttribute('data-value','1');await double(page,w);await expect(page.locator(`[data-cell="${w}"]`)).toHaveAttribute('data-value','2');await single(page,w);await expect(page.locator(`[data-cell="${w}"]`)).toHaveAttribute('data-value','0');await double(page,s);await expect(page.locator(`[data-cell="${s}"]`)).toHaveClass(/capy-locked/);await page.getByRole('button',{name:'Undo',exact:true}).tap();await page.waitForTimeout(120);await expect(page.locator(`[data-cell="${w}"]`)).toHaveAttribute('data-value','0');await expect(page.locator(`[data-cell="${far}"]`)).toHaveAttribute('data-value','0');await expect(page.getByRole('button',{name:'Undo',exact:true})).toBeDisabled();await expect(page.locator(`[data-cell="${s}"]`)).toHaveAttribute('data-value','2');await expect(page.locator('.cell.bad')).toHaveCount(0);await expect(page.locator('.lives')).toHaveAttribute('data-lives','3');const saved=await page.evaluate(k=>JSON.parse(localStorage.getItem(k)),KEY);expect(saved.sessions[`pond-${L.id}`].cells[w]).toBe(0);if(L.id===1&&diagonal)await shot(page,'undo-no-phantom')});
+         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ^
+      15 | // Late native click of tap A arriving after tap B's pointerup (a busy phone): v4.2 delivered A twice = double-tap = capy.
+      16 | for(const engine of['chromium-pointer-id','no-pointer-id'])test(`a late click never turns "tap A, tap B" into a capy on A (${engine})`,async({page})=>{await seed(page);await open(page,1);const{s,w}=pair(1,true),p=data.levels[0],b=Array.from({length:25},(_,i)=>i).find(i=>i!==w&&i!==s&&!peers(p,i,w)&&!solutionCells(p).includes(i));await double(page,s);await expect(page.locator(`[data-cell="${s}"]`)).toHaveClass(/capy-locked/);await reset(page);await page.evaluate(async({w,b,engine})=>{const cell=i=>document.querySelector(`[data-cell="${i}"]`),frame=()=>new Promise(r=>requestAnimationFrame(()=>setTimeout(r,0)));const at=i=>{const r=cell(i).getBoundingClientRect();return{clientX:r.x+r.width/2,clientY:r.y+r.height/2}};const touch=(type,i,id)=>cell(i).dispatchEvent(new PointerEvent(type,{pointerId:id,isPrimary:true,pointerType:'touch',button:0,bubbles:true,cancelable:true,...at(i)}));const click=(i,id)=>cell(i).dispatchEvent(engine==='no-pointer-id'?new MouseEvent('click',{detail:1,bubbles:true,cancelable:true,...at(i)}):new PointerEvent('click',{pointerId:id,pointerType:'touch',detail:1,bubbles:true,cancelable:true,...at(i)}));touch('pointerdown',w,901);touch('pointerup',w,901);await frame();await frame();touch('pointerdown',b,902);touch('pointerup',b,902);click(w,901);click(b,902);await frame();await frame()},{w,b,engine});await page.waitForTimeout(450);await expect(page.locator(`[data-cell="${w}"]`)).toHaveAttribute('data-value','1');await expect(page.locator(`[data-cell="${b}"]`)).toHaveAttribute('data-value','1');await expect(page.locator('.lives')).toHaveAttribute('data-lives','3');await expect(page.locator('.cell.bad')).toHaveCount(0);expect(await buzz(page)).toEqual([HAPTIC_CONFIG.patterns.markX,HAPTIC_CONFIG.patterns.markX])});
+      17 | test('a real touch double-tap still places exactly one capy and taps on other cells still mark ×',async({page})=>{await seed(page);await open(page,1);const sol=solutionCells(data.levels[0]);await double(page,sol[0]);await expect(page.locator(`[data-cell="${sol[0]}"]`)).toHaveAttribute('data-value','2');const other=Array.from({length:25},(_,i)=>i).find(i=>i!==sol[0]&&!sol.includes(i)&&!peers(data.levels[0],i,sol[0]));await single(page,other);await expect(page.locator(`[data-cell="${other}"]`)).toHaveAttribute('data-value','1');await expect(page.locator('.cell[data-value="2"]')).toHaveCount(1)});
+        at /tmp/v42run/tests/v43.spec.js:14:1041
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/v43-pond-1-Undo-after-wron-3c20f-puts-a-capy-next-to-another-mobile-412/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/v43-pond-1-Undo-after-wron-3c20f-puts-a-capy-next-to-another-mobile-412/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/v43-pond-1-Undo-after-wron-3c20f-puts-a-capy-next-to-another-mobile-412/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/v43-pond-1-Undo-after-wron-3c20f-puts-a-capy-next-to-another-mobile-412/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [mobile-412] › tests/v43.spec.js:14:57 › pond 21: Undo after (wrong capy, remove it, correct capy diagonally next to it) never puts a capy next to another 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('[data-cell="12"]')
+    Expected: "0"
+    Received: "2"
+    Timeout:  7000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('[data-cell="12"]') with timeout 7000ms
+      - waiting for locator('[data-cell="12"]')
+        18 × locator resolved to <button data-cell="12" data-value="2" class="cell  bad " aria-label="Row 2, column 6, zone 3, capy, conflict">…</button>
+           - unexpected value "2"
+
+
+      12 | function pair(id,diagonal){const p=data.levels[id-1],sol=solutionCells(p),n=p.n;for(const s of sol)for(let w=0;w<n*n;w++){const dr=Math.abs(Math.floor(w/n)-Math.floor(s/n)),dc=Math.abs(w%n-s%n);if(sol.includes(w)||p.rocks.includes(w)||Math.max(dr,dc)!==1||diagonal!==(dr===1&&dc===1))continue;return{s,w}}}
+      13 | const levels=[{id:1,completed:[]},{id:21,completed:Array.from({length:20},(_,i)=>i+1)}];
+    > 14 | for(const L of levels)for(const diagonal of[true,false])test(`pond ${L.id}: Undo after (wrong capy, remove it, correct capy ${diagonal?'diagonally':'orthogonally'} next to it) never puts a capy next to another`,async({page})=>{const{s,w}=pair(L.id,diagonal);await seed(page,{completed:L.completed,rocksReached:L.id>20});await open(page,L.id);const q=data.levels[L.id-1],far=Array.from({length:q.n**2},(_,i)=>i).find(i=>i!==s&&i!==w&&!q.rocks.includes(i)&&!peers(q,i,s)&&!peers(q,i,w));await single(page,far);await expect(page.locator(`[data-cell="${far}"]`)).toHaveAttribute('data-value','1');await double(page,w);await expect(page.locator(`[data-cell="${w}"]`)).toHaveAttribute('data-value','2');await single(page,w);await expect(page.locator(`[data-cell="${w}"]`)).toHaveAttribute('data-value','0');await double(page,s);await expect(page.locator(`[data-cell="${s}"]`)).toHaveClass(/capy-locked/);await page.getByRole('button',{name:'Undo',exact:true}).tap();await page.waitForTimeout(120);await expect(page.locator(`[data-cell="${w}"]`)).toHaveAttribute('data-value','0');await expect(page.locator(`[data-cell="${far}"]`)).toHaveAttribute('data-value','0');await expect(page.getByRole('button',{name:'Undo',exact:true})).toBeDisabled();await expect(page.locator(`[data-cell="${s}"]`)).toHaveAttribute('data-value','2');await expect(page.locator('.cell.bad')).toHaveCount(0);await expect(page.locator('.lives')).toHaveAttribute('data-lives','3');const saved=await page.evaluate(k=>JSON.parse(localStorage.getItem(k)),KEY);expect(saved.sessions[`pond-${L.id}`].cells[w]).toBe(0);if(L.id===1&&diagonal)await shot(page,'undo-no-phantom')});
+         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ^
+      15 | // Late native click of tap A arriving after tap B's pointerup (a busy phone): v4.2 delivered A twice = double-tap = capy.
+      16 | for(const engine of['chromium-pointer-id','no-pointer-id'])test(`a late click never turns "tap A, tap B" into a capy on A (${engine})`,async({page})=>{await seed(page);await open(page,1);const{s,w}=pair(1,true),p=data.levels[0],b=Array.from({length:25},(_,i)=>i).find(i=>i!==w&&i!==s&&!peers(p,i,w)&&!solutionCells(p).includes(i));await double(page,s);await expect(page.locator(`[data-cell="${s}"]`)).toHaveClass(/capy-locked/);await reset(page);await page.evaluate(async({w,b,engine})=>{const cell=i=>document.querySelector(`[data-cell="${i}"]`),frame=()=>new Promise(r=>requestAnimationFrame(()=>setTimeout(r,0)));const at=i=>{const r=cell(i).getBoundingClientRect();return{clientX:r.x+r.width/2,clientY:r.y+r.height/2}};const touch=(type,i,id)=>cell(i).dispatchEvent(new PointerEvent(type,{pointerId:id,isPrimary:true,pointerType:'touch',button:0,bubbles:true,cancelable:true,...at(i)}));const click=(i,id)=>cell(i).dispatchEvent(engine==='no-pointer-id'?new MouseEvent('click',{detail:1,bubbles:true,cancelable:true,...at(i)}):new PointerEvent('click',{pointerId:id,pointerType:'touch',detail:1,bubbles:true,cancelable:true,...at(i)}));touch('pointerdown',w,901);touch('pointerup',w,901);await frame();await frame();touch('pointerdown',b,902);touch('pointerup',b,902);click(w,901);click(b,902);await frame();await frame()},{w,b,engine});await page.waitForTimeout(450);await expect(page.locator(`[data-cell="${w}"]`)).toHaveAttribute('data-value','1');await expect(page.locator(`[data-cell="${b}"]`)).toHaveAttribute('data-value','1');await expect(page.locator('.lives')).toHaveAttribute('data-lives','3');await expect(page.locator('.cell.bad')).toHaveCount(0);expect(await buzz(page)).toEqual([HAPTIC_CONFIG.patterns.markX,HAPTIC_CONFIG.patterns.markX])});
+      17 | test('a real touch double-tap still places exactly one capy and taps on other cells still mark ×',async({page})=>{await seed(page);await open(page,1);const sol=solutionCells(data.levels[0]);await double(page,sol[0]);await expect(page.locator(`[data-cell="${sol[0]}"]`)).toHaveAttribute('data-value','2');const other=Array.from({length:25},(_,i)=>i).find(i=>i!==sol[0]&&!sol.includes(i)&&!peers(data.levels[0],i,sol[0]));await single(page,other);await expect(page.locator(`[data-cell="${other}"]`)).toHaveAttribute('data-value','1');await expect(page.locator('.cell[data-value="2"]')).toHaveCount(1)});
+        at /tmp/v42run/tests/v43.spec.js:14:1041
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/v43-pond-21-Undo-after-wro-8c1d5-puts-a-capy-next-to-another-mobile-412/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/v43-pond-21-Undo-after-wro-8c1d5-puts-a-capy-next-to-another-mobile-412/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/v43-pond-21-Undo-after-wro-8c1d5-puts-a-capy-next-to-another-mobile-412/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/v43-pond-21-Undo-after-wro-8c1d5-puts-a-capy-next-to-another-mobile-412/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [mobile-412] › tests/v43.spec.js:14:57 › pond 21: Undo after (wrong capy, remove it, correct capy orthogonally next to it) never puts a capy next to another 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('[data-cell="5"]')
+    Expected: "0"
+    Received: "2"
+    Timeout:  7000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('[data-cell="5"]') with timeout 7000ms
+      - waiting for locator('[data-cell="5"]')
+        18 × locator resolved to <button data-cell="5" data-value="2" class="cell  bad " aria-label="Row 1, column 6, zone 3, capy, conflict">…</button>
+           - unexpected value "2"
+
+
+      12 | function pair(id,diagonal){const p=data.levels[id-1],sol=solutionCells(p),n=p.n;for(const s of sol)for(let w=0;w<n*n;w++){const dr=Math.abs(Math.floor(w/n)-Math.floor(s/n)),dc=Math.abs(w%n-s%n);if(sol.includes(w)||p.rocks.includes(w)||Math.max(dr,dc)!==1||diagonal!==(dr===1&&dc===1))continue;return{s,w}}}
+      13 | const levels=[{id:1,completed:[]},{id:21,completed:Array.from({length:20},(_,i)=>i+1)}];
+    > 14 | for(const L of levels)for(const diagonal of[true,false])test(`pond ${L.id}: Undo after (wrong capy, remove it, correct capy ${diagonal?'diagonally':'orthogonally'} next to it) never puts a capy next to another`,async({page})=>{const{s,w}=pair(L.id,diagonal);await seed(page,{completed:L.completed,rocksReached:L.id>20});await open(page,L.id);const q=data.levels[L.id-1],far=Array.from({length:q.n**2},(_,i)=>i).find(i=>i!==s&&i!==w&&!q.rocks.includes(i)&&!peers(q,i,s)&&!peers(q,i,w));await single(page,far);await expect(page.locator(`[data-cell="${far}"]`)).toHaveAttribute('data-value','1');await double(page,w);await expect(page.locator(`[data-cell="${w}"]`)).toHaveAttribute('data-value','2');await single(page,w);await expect(page.locator(`[data-cell="${w}"]`)).toHaveAttribute('data-value','0');await double(page,s);await expect(page.locator(`[data-cell="${s}"]`)).toHaveClass(/capy-locked/);await page.getByRole('button',{name:'Undo',exact:true}).tap();await page.waitForTimeout(120);await expect(page.locator(`[data-cell="${w}"]`)).toHaveAttribute('data-value','0');await expect(page.locator(`[data-cell="${far}"]`)).toHaveAttribute('data-value','0');await expect(page.getByRole('button',{name:'Undo',exact:true})).toBeDisabled();await expect(page.locator(`[data-cell="${s}"]`)).toHaveAttribute('data-value','2');await expect(page.locator('.cell.bad')).toHaveCount(0);await expect(page.locator('.lives')).toHaveAttribute('data-lives','3');const saved=await page.evaluate(k=>JSON.parse(localStorage.getItem(k)),KEY);expect(saved.sessions[`pond-${L.id}`].cells[w]).toBe(0);if(L.id===1&&diagonal)await shot(page,'undo-no-phantom')});
+         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ^
+      15 | // Late native click of tap A arriving after tap B's pointerup (a busy phone): v4.2 delivered A twice = double-tap = capy.
+      16 | for(const engine of['chromium-pointer-id','no-pointer-id'])test(`a late click never turns "tap A, tap B" into a capy on A (${engine})`,async({page})=>{await seed(page);await open(page,1);const{s,w}=pair(1,true),p=data.levels[0],b=Array.from({length:25},(_,i)=>i).find(i=>i!==w&&i!==s&&!peers(p,i,w)&&!solutionCells(p).includes(i));await double(page,s);await expect(page.locator(`[data-cell="${s}"]`)).toHaveClass(/capy-locked/);await reset(page);await page.evaluate(async({w,b,engine})=>{const cell=i=>document.querySelector(`[data-cell="${i}"]`),frame=()=>new Promise(r=>requestAnimationFrame(()=>setTimeout(r,0)));const at=i=>{const r=cell(i).getBoundingClientRect();return{clientX:r.x+r.width/2,clientY:r.y+r.height/2}};const touch=(type,i,id)=>cell(i).dispatchEvent(new PointerEvent(type,{pointerId:id,isPrimary:true,pointerType:'touch',button:0,bubbles:true,cancelable:true,...at(i)}));const click=(i,id)=>cell(i).dispatchEvent(engine==='no-pointer-id'?new MouseEvent('click',{detail:1,bubbles:true,cancelable:true,...at(i)}):new PointerEvent('click',{pointerId:id,pointerType:'touch',detail:1,bubbles:true,cancelable:true,...at(i)}));touch('pointerdown',w,901);touch('pointerup',w,901);await frame();await frame();touch('pointerdown',b,902);touch('pointerup',b,902);click(w,901);click(b,902);await frame();await frame()},{w,b,engine});await page.waitForTimeout(450);await expect(page.locator(`[data-cell="${w}"]`)).toHaveAttribute('data-value','1');await expect(page.locator(`[data-cell="${b}"]`)).toHaveAttribute('data-value','1');await expect(page.locator('.lives')).toHaveAttribute('data-lives','3');await expect(page.locator('.cell.bad')).toHaveCount(0);expect(await buzz(page)).toEqual([HAPTIC_CONFIG.patterns.markX,HAPTIC_CONFIG.patterns.markX])});
+      17 | test('a real touch double-tap still places exactly one capy and taps on other cells still mark ×',async({page})=>{await seed(page);await open(page,1);const sol=solutionCells(data.levels[0]);await double(page,sol[0]);await expect(page.locator(`[data-cell="${sol[0]}"]`)).toHaveAttribute('data-value','2');const other=Array.from({length:25},(_,i)=>i).find(i=>i!==sol[0]&&!sol.includes(i)&&!peers(data.levels[0],i,sol[0]));await single(page,other);await expect(page.locator(`[data-cell="${other}"]`)).toHaveAttribute('data-value','1');await expect(page.locator('.cell[data-value="2"]')).toHaveCount(1)});
+        at /tmp/v42run/tests/v43.spec.js:14:1041
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/v43-pond-21-Undo-after-wro-a3105-puts-a-capy-next-to-another-mobile-412/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/v43-pond-21-Undo-after-wro-a3105-puts-a-capy-next-to-another-mobile-412/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/v43-pond-21-Undo-after-wro-a3105-puts-a-capy-next-to-another-mobile-412/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/v43-pond-21-Undo-after-wro-a3105-puts-a-capy-next-to-another-mobile-412/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [mobile-412] › tests/v43.spec.js:16:60 › a late click never turns "tap A, tap B" into a capy on A (chromium-pointer-id) 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('[data-cell="5"]')
+    Expected: "1"
+    Received: "2"
+    Timeout:  7000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('[data-cell="5"]') with timeout 7000ms
+      - waiting for locator('[data-cell="5"]')
+        18 × locator resolved to <button data-cell="5" data-value="2" class="cell  bad " aria-label="Row 2, column 1, zone 1, capy, conflict">…</button>
+           - unexpected value "2"
+
+
+      14 | for(const L of levels)for(const diagonal of[true,false])test(`pond ${L.id}: Undo after (wrong capy, remove it, correct capy ${diagonal?'diagonally':'orthogonally'} next to it) never puts a capy next to another`,async({page})=>{const{s,w}=pair(L.id,diagonal);await seed(page,{completed:L.completed,rocksReached:L.id>20});await open(page,L.id);const q=data.levels[L.id-1],far=Array.from({length:q.n**2},(_,i)=>i).find(i=>i!==s&&i!==w&&!q.rocks.includes(i)&&!peers(q,i,s)&&!peers(q,i,w));await single(page,far);await expect(page.locator(`[data-cell="${far}"]`)).toHaveAttribute('data-value','1');await double(page,w);await expect(page.locator(`[data-cell="${w}"]`)).toHaveAttribute('data-value','2');await single(page,w);await expect(page.locator(`[data-cell="${w}"]`)).toHaveAttribute('data-value','0');await double(page,s);await expect(page.locator(`[data-cell="${s}"]`)).toHaveClass(/capy-locked/);await page.getByRole('button',{name:'Undo',exact:true}).tap();await page.waitForTimeout(120);await expect(page.locator(`[data-cell="${w}"]`)).toHaveAttribute('data-value','0');await expect(page.locator(`[data-cell="${far}"]`)).toHaveAttribute('data-value','0');await expect(page.getByRole('button',{name:'Undo',exact:true})).toBeDisabled();await expect(page.locator(`[data-cell="${s}"]`)).toHaveAttribute('data-value','2');await expect(page.locator('.cell.bad')).toHaveCount(0);await expect(page.locator('.lives')).toHaveAttribute('data-lives','3');const saved=await page.evaluate(k=>JSON.parse(localStorage.getItem(k)),KEY);expect(saved.sessions[`pond-${L.id}`].cells[w]).toBe(0);if(L.id===1&&diagonal)await shot(page,'undo-no-phantom')});
+      15 | // Late native click of tap A arriving after tap B's pointerup (a busy phone): v4.2 delivered A twice = double-tap = capy.
+    > 16 | for(const engine of['chromium-pointer-id','no-pointer-id'])test(`a late click never turns "tap A, tap B" into a capy on A (${engine})`,async({page})=>{await seed(page);await open(page,1);const{s,w}=pair(1,true),p=data.levels[0],b=Array.from({length:25},(_,i)=>i).find(i=>i!==w&&i!==s&&!peers(p,i,w)&&!solutionCells(p).includes(i));await double(page,s);await expect(page.locator(`[data-cell="${s}"]`)).toHaveClass(/capy-locked/);await reset(page);await page.evaluate(async({w,b,engine})=>{const cell=i=>document.querySelector(`[data-cell="${i}"]`),frame=()=>new Promise(r=>requestAnimationFrame(()=>setTimeout(r,0)));const at=i=>{const r=cell(i).getBoundingClientRect();return{clientX:r.x+r.width/2,clientY:r.y+r.height/2}};const touch=(type,i,id)=>cell(i).dispatchEvent(new PointerEvent(type,{pointerId:id,isPrimary:true,pointerType:'touch',button:0,bubbles:true,cancelable:true,...at(i)}));const click=(i,id)=>cell(i).dispatchEvent(engine==='no-pointer-id'?new MouseEvent('click',{detail:1,bubbles:true,cancelable:true,...at(i)}):new PointerEvent('click',{pointerId:id,pointerType:'touch',detail:1,bubbles:true,cancelable:true,...at(i)}));touch('pointerdown',w,901);touch('pointerup',w,901);await frame();await frame();touch('pointerdown',b,902);touch('pointerup',b,902);click(w,901);click(b,902);await frame();await frame()},{w,b,engine});await page.waitForTimeout(450);await expect(page.locator(`[data-cell="${w}"]`)).toHaveAttribute('data-value','1');await expect(page.locator(`[data-cell="${b}"]`)).toHaveAttribute('data-value','1');await expect(page.locator('.lives')).toHaveAttribute('data-lives','3');await expect(page.locator('.cell.bad')).toHaveCount(0);expect(await buzz(page)).toEqual([HAPTIC_CONFIG.patterns.markX,HAPTIC_CONFIG.patterns.markX])});
+         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ^
+      17 | test('a real touch double-tap still places exactly one capy and taps on other cells still mark ×',async({page})=>{await seed(page);await open(page,1);const sol=solutionCells(data.levels[0]);await double(page,sol[0]);await expect(page.locator(`[data-cell="${sol[0]}"]`)).toHaveAttribute('data-value','2');const other=Array.from({length:25},(_,i)=>i).find(i=>i!==sol[0]&&!sol.includes(i)&&!peers(data.levels[0],i,sol[0]));await single(page,other);await expect(page.locator(`[data-cell="${other}"]`)).toHaveAttribute('data-value','1');await expect(page.locator('.cell[data-value="2"]')).toHaveCount(1)});
+      18 | test('a locked capy in a conflict shows the red conflict ring, not only the gold lock glow',async({page})=>{await seed(page);await open(page,1);const{s,w}=pair(1,false);await double(page,w);await double(page,s);const cell=page.locator(`[data-cell="${s}"]`);await expect(cell).toHaveClass(/capy-locked/);await expect(cell).toHaveClass(/bad/);expect(await cell.evaluate(e=>getComputedStyle(e).boxShadow)).toContain('rgb(166, 46, 61)');await shot(page,'locked-conflict-ring')});
+      19 | test('haptics v4.3 reach the Vibration API: × 50, clear 42, correct capy 110, rule-break [170,90,170], locked bump 30',async({page})=>{await seed(page);await open(page,1);const P=HAPTIC_CONFIG.patterns,p=data.levels[0],sol=solutionCells(p),{s,w}=pair(1,false),far=Array.from({length:25},(_,i)=>i).find(i=>!peers(p,i,s)&&!peers(p,i,w)&&i!==s&&i!==w&&!sol.includes(i));await reset(page);await single(page,far);await single(page,far);await double(page,s);await single(page,s);await double(page,w);expect(await buzz(page)).toEqual([P.markX,P.clearTap,P.correct,P.locked,P.mistake]);expect([P.markX,P.clearTap,P.correct,P.locked]).toEqual([50,42,110,30]);expect(P.mistake).toEqual([170,90,170])});
+        at /tmp/v42run/tests/v43.spec.js:16:1422
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/v43-a-late-click-never-tur-13358-y-on-A-chromium-pointer-id--mobile-412/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/v43-a-late-click-never-tur-13358-y-on-A-chromium-pointer-id--mobile-412/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/v43-a-late-click-never-tur-13358-y-on-A-chromium-pointer-id--mobile-412/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/v43-a-late-click-never-tur-13358-y-on-A-chromium-pointer-id--mobile-412/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [mobile-412] › tests/v43.spec.js:16:60 › a late click never turns "tap A, tap B" into a capy on A (no-pointer-id) 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 4
+
+    - Array []
+    + Array [
+    +   "Cannot read properties of null (reading 'handled')",
+    +   "Cannot read properties of null (reading 'handled')",
+    + ]
+
+      2 | import{test,expect,enterReplay}from'./legacy-ui.js';import fs from'node:fs';import{fresh,KEY,solutionCells,peers}from'../core.js';import{HAPTIC_CONFIG}from'../config.js';import{shot}from'./screenshot-helper.js';
+      3 | const data=JSON.parse(fs.readFileSync('levels.json'));let errors;
+    > 4 | test.beforeEach(async({page})=>{errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text())});await page.addInitScript(()=>{window.__buzz=[];Object.defineProperty(navigator,'vibrate',{configurable:true,value:p=>(window.__buzz.push(structuredClone(p)),true)})})});test.afterEach(()=>expect(errors).toEqual([]));
+        |                                                                                                                                                                                                                                                                                                                                                                         ^
+      5 | async function seed(page,extra={}){await page.goto('/');await page.evaluate(({k,p})=>localStorage.setItem(k,JSON.stringify(p)),{k:KEY,p:{...fresh(),nickname:'Seba',starterChosen:true,tutorialSeen:true,rockIntroSeen:true,music:false,completed:[],...extra}});await page.reload();await expect(page.locator('.home')).toBeVisible()}
+      6 | async function open(page,id=1){await page.locator(`[data-pond="${id}"]`).tap();await enterReplay(page);await expect(page.locator('.cell')).toHaveCount(data.levels[id-1].n**2);if(await page.getByRole('button',{name:'Got it',exact:true}).isVisible())await page.getByRole('button',{name:'Got it',exact:true}).tap()}
+      7 | async function point(page,i){const r=await page.locator(`[data-cell="${i}"]`).boundingBox();return{x:r.x+r.width/2,y:r.y+r.height/2}}
+        at /tmp/v42run/tests/v43.spec.js:4:361
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/v43-a-late-click-never-tur-a8d96--a-capy-on-A-no-pointer-id--mobile-412/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/v43-a-late-click-never-tur-a8d96--a-capy-on-A-no-pointer-id--mobile-412/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/v43-a-late-click-never-tur-a8d96--a-capy-on-A-no-pointer-id--mobile-412/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/v43-a-late-click-never-tur-a8d96--a-capy-on-A-no-pointer-id--mobile-412/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7) [mobile-412] › tests/v43.spec.js:18:1 › a locked capy in a conflict shows the red conflict ring, not only the gold lock glow 
+
+    Error: expect(received).toContain(expected) // indexOf
+
+    Expected substring: "rgb(166, 46, 61)"
+    Received string:    "rgb(255, 241, 168) 0px 0px 0px 2px inset, rgba(255, 229, 138, 0.8) 0px 0px 12px 1px inset"
+
+      16 | for(const engine of['chromium-pointer-id','no-pointer-id'])test(`a late click never turns "tap A, tap B" into a capy on A (${engine})`,async({page})=>{await seed(page);await open(page,1);const{s,w}=pair(1,true),p=data.levels[0],b=Array.from({length:25},(_,i)=>i).find(i=>i!==w&&i!==s&&!peers(p,i,w)&&!solutionCells(p).includes(i));await double(page,s);await expect(page.locator(`[data-cell="${s}"]`)).toHaveClass(/capy-locked/);await reset(page);await page.evaluate(async({w,b,engine})=>{const cell=i=>document.querySelector(`[data-cell="${i}"]`),frame=()=>new Promise(r=>requestAnimationFrame(()=>setTimeout(r,0)));const at=i=>{const r=cell(i).getBoundingClientRect();return{clientX:r.x+r.width/2,clientY:r.y+r.height/2}};const touch=(type,i,id)=>cell(i).dispatchEvent(new PointerEvent(type,{pointerId:id,isPrimary:true,pointerType:'touch',button:0,bubbles:true,cancelable:true,...at(i)}));const click=(i,id)=>cell(i).dispatchEvent(engine==='no-pointer-id'?new MouseEvent('click',{detail:1,bubbles:true,cancelable:true,...at(i)}):new PointerEvent('click',{pointerId:id,pointerType:'touch',detail:1,bubbles:true,cancelable:true,...at(i)}));touch('pointerdown',w,901);touch('pointerup',w,901);await frame();await frame();touch('pointerdown',b,902);touch('pointerup',b,902);click(w,901);click(b,902);await frame();await frame()},{w,b,engine});await page.waitForTimeout(450);await expect(page.locator(`[data-cell="${w}"]`)).toHaveAttribute('data-value','1');await expect(page.locator(`[data-cell="${b}"]`)).toHaveAttribute('data-value','1');await expect(page.locator('.lives')).toHaveAttribute('data-lives','3');await expect(page.locator('.cell.bad')).toHaveCount(0);expect(await buzz(page)).toEqual([HAPTIC_CONFIG.patterns.markX,HAPTIC_CONFIG.patterns.markX])});
+      17 | test('a real touch double-tap still places exactly one capy and taps on other cells still mark ×',async({page})=>{await seed(page);await open(page,1);const sol=solutionCells(data.levels[0]);await double(page,sol[0]);await expect(page.locator(`[data-cell="${sol[0]}"]`)).toHaveAttribute('data-value','2');const other=Array.from({length:25},(_,i)=>i).find(i=>i!==sol[0]&&!sol.includes(i)&&!peers(data.levels[0],i,sol[0]));await single(page,other);await expect(page.locator(`[data-cell="${other}"]`)).toHaveAttribute('data-value','1');await expect(page.locator('.cell[data-value="2"]')).toHaveCount(1)});
+    > 18 | test('a locked capy in a conflict shows the red conflict ring, not only the gold lock glow',async({page})=>{await seed(page);await open(page,1);const{s,w}=pair(1,false);await double(page,w);await double(page,s);const cell=page.locator(`[data-cell="${s}"]`);await expect(cell).toHaveClass(/capy-locked/);await expect(cell).toHaveClass(/bad/);expect(await cell.evaluate(e=>getComputedStyle(e).boxShadow)).toContain('rgb(166, 46, 61)');await shot(page,'locked-conflict-ring')});
+         |                                                                                                                                                                                                                                                                                                                                                                                                                    ^
+      19 | test('haptics v4.3 reach the Vibration API: × 50, clear 42, correct capy 110, rule-break [170,90,170], locked bump 30',async({page})=>{await seed(page);await open(page,1);const P=HAPTIC_CONFIG.patterns,p=data.levels[0],sol=solutionCells(p),{s,w}=pair(1,false),far=Array.from({length:25},(_,i)=>i).find(i=>!peers(p,i,s)&&!peers(p,i,w)&&i!==s&&i!==w&&!sol.includes(i));await reset(page);await single(page,far);await single(page,far);await double(page,s);await single(page,s);await double(page,w);expect(await buzz(page)).toEqual([P.markX,P.clearTap,P.correct,P.locked,P.mistake]);expect([P.markX,P.clearTap,P.correct,P.locked]).toEqual([50,42,110,30]);expect(P.mistake).toEqual([170,90,170])});
+      20 |
+        at /tmp/v42run/tests/v43.spec.js:18:404
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/v43-a-locked-capy-in-a-con-32b8e-not-only-the-gold-lock-glow-mobile-412/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/v43-a-locked-capy-in-a-con-32b8e-not-only-the-gold-lock-glow-mobile-412/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/v43-a-locked-capy-in-a-con-32b8e-not-only-the-gold-lock-glow-mobile-412/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/v43-a-locked-capy-in-a-con-32b8e-not-only-the-gold-lock-glow-mobile-412/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  8) [mobile-412] › tests/v43.spec.js:19:1 › haptics v4.3 reach the Vibration API: × 50, clear 42, correct capy 110, rule-break [170,90,170], locked bump 30 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 3
+
+      Array [
+    -   50,
+    -   42,
+    -   110,
+        30,
+    +   26,
+    +   70,
+    +   18,
+      ]
+
+      17 | test('a real touch double-tap still places exactly one capy and taps on other cells still mark ×',async({page})=>{await seed(page);await open(page,1);const sol=solutionCells(data.levels[0]);await double(page,sol[0]);await expect(page.locator(`[data-cell="${sol[0]}"]`)).toHaveAttribute('data-value','2');const other=Array.from({length:25},(_,i)=>i).find(i=>i!==sol[0]&&!sol.includes(i)&&!peers(data.levels[0],i,sol[0]));await single(page,other);await expect(page.locator(`[data-cell="${other}"]`)).toHaveAttribute('data-value','1');await expect(page.locator('.cell[data-value="2"]')).toHaveCount(1)});
+      18 | test('a locked capy in a conflict shows the red conflict ring, not only the gold lock glow',async({page})=>{await seed(page);await open(page,1);const{s,w}=pair(1,false);await double(page,w);await double(page,s);const cell=page.locator(`[data-cell="${s}"]`);await expect(cell).toHaveClass(/capy-locked/);await expect(cell).toHaveClass(/bad/);expect(await cell.evaluate(e=>getComputedStyle(e).boxShadow)).toContain('rgb(166, 46, 61)');await shot(page,'locked-conflict-ring')});
+    > 19 | test('haptics v4.3 reach the Vibration API: × 50, clear 42, correct capy 110, rule-break [170,90,170], locked bump 30',async({page})=>{await seed(page);await open(page,1);const P=HAPTIC_CONFIG.patterns,p=data.levels[0],sol=solutionCells(p),{s,w}=pair(1,false),far=Array.from({length:25},(_,i)=>i).find(i=>!peers(p,i,s)&&!peers(p,i,w)&&i!==s&&i!==w&&!sol.includes(i));await reset(page);await single(page,far);await single(page,far);await double(page,s);await single(page,s);await double(page,w);expect(await buzz(page)).toEqual([P.markX,P.clearTap,P.correct,P.locked,P.mistake]);expect([P.markX,P.clearTap,P.correct,P.locked]).toEqual([50,42,110,30]);expect(P.mistake).toEqual([170,90,170])});
+         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+      20 |
+        at /tmp/v42run/tests/v43.spec.js:19:627
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/v43-haptics-v4-3-reach-the-b44e4-k-170-90-170-locked-bump-30-mobile-412/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/v43-haptics-v4-3-reach-the-b44e4-k-170-90-170-locked-bump-30-mobile-412/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/v43-haptics-v4-3-reach-the-b44e4-k-170-90-170-locked-bump-30-mobile-412/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/v43-haptics-v4-3-reach-the-b44e4-k-170-90-170-locked-bump-30-mobile-412/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  8 failed
+    [mobile-412] › tests/v43.spec.js:14:57 › pond 1: Undo after (wrong capy, remove it, correct capy diagonally next to it) never puts a capy next to another 
+    [mobile-412] › tests/v43.spec.js:14:57 › pond 1: Undo after (wrong capy, remove it, correct capy orthogonally next to it) never puts a capy next to another 
+    [mobile-412] › tests/v43.spec.js:14:57 › pond 21: Undo after (wrong capy, remove it, correct capy diagonally next to it) never puts a capy next to another 
+    [mobile-412] › tests/v43.spec.js:14:57 › pond 21: Undo after (wrong capy, remove it, correct capy orthogonally next to it) never puts a capy next to another 
+    [mobile-412] › tests/v43.spec.js:16:60 › a late click never turns "tap A, tap B" into a capy on A (chromium-pointer-id) 
+    [mobile-412] › tests/v43.spec.js:16:60 › a late click never turns "tap A, tap B" into a capy on A (no-pointer-id) 
+    [mobile-412] › tests/v43.spec.js:18:1 › a locked capy in a conflict shows the red conflict ring, not only the gold lock glow 
+    [mobile-412] › tests/v43.spec.js:19:1 › haptics v4.3 reach the Vibration API: × 50, clear 42, correct capy 110, rule-break [170,90,170], locked bump 30 
+  1 passed (1.0m)

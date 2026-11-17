@@ -1,0 +1,54 @@
+[
+  {
+    viewport: '412x915',
+    grid: 5,
+    board_px: 400,
+    grid_px: 384,
+    cell_px: 73.1875
+  },
+  {
+    viewport: '412x915',
+    grid: 6,
+    board_px: 400,
+    grid_px: 384,
+    cell_px: 60.5
+  },
+  {
+    viewport: '412x915',
+    grid: 7,
+    board_px: 400,
+    grid_px: 384,
+    cell_px: 51.421875
+  },
+  {
+    viewport: '412x915',
+    endButtons: [ [Object], [Object], [Object] ],
+    documentHeight: 915
+  },
+  {
+    viewport: '360x780',
+    grid: 5,
+    board_px: 348,
+    grid_px: 332,
+    cell_px: 62.796875
+  },
+  {
+    viewport: '360x780',
+    grid: 6,
+    board_px: 348,
+    grid_px: 332,
+    cell_px: 51.828125
+  },
+  {
+    viewport: '360x780',
+    grid: 7,
+    board_px: 348,
+    grid_px: 332,
+    cell_px: 44
+  },
+  {
+    viewport: '360x780',
+    endButtons: [ [Object], [Object], [Object] ],
+    documentHeight: 784
+  }
+]

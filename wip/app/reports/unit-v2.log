@@ -1,0 +1,48 @@
+
+> capydoku-local-prototype@2.0.0 test:unit
+> node --test tests/unit.test.js
+
+✔ 30 ponds: sizes, connected zones, rocks appear only from pond 21 (3.410863ms)
+✔ 760 source boards independently unique; every no-guessing step agrees with full enumerator (110.980885ms)
+✔ generator repeatability: same seed produces byte-identical puzzle and proof (40.39529ms)
+✔ verification report has every board, exact counts, techniques and logic flags (1.088778ms)
+✔ daily: all 365 consecutive local dates deterministic, unique, logic-solvable (77.486749ms)
+✔ daily transform all 8 cycles preserves uniqueness and pure logic (3.765507ms)
+✔ local date, midnight and DST calendar days do not use UTC slice or 24h duration (0.387335ms)
+✔ row conflict flags both capys (0.303328ms)
+✔ column conflict flags both capys (0.227582ms)
+✔ zone conflict flags both even without same row/column or adjacency (0.268911ms)
+✔ diagonal conflict flags both (0.15811ms)
+✔ rock blocked, no move or lost life (0.219184ms)
+✔ only new rule-breaking placement loses exactly one orange (0.125786ms)
+✔ game over locks moves; Chill allows same moves without losing oranges (0.082138ms)
+✔ local legality only: a non-solution but locally legal first capy does not lose life (0.182658ms)
+✔ win requires n valid capys; Xs irrelevant (0.21427ms)
+✔ Hint gives one forced cell with reason/unit, never mutates board or returns a solution (0.374404ms)
+✔ Hint on conflicts repairs without placing (0.119066ms)
+✔ tap window fixed 280ms, delayed single tap avoids transient X (0.065224ms)
+✔ storage round-trip, progression and collection selection (0.748147ms)
+✔ storage malformed, invalid sessions, locked selection and future schema safely handled (0.296925ms)
+✔ storage unavailable/quota failure is safe (0.178628ms)
+✔ daily streak same day idempotent, consecutive +1, missed day resets, backdating safe (0.149732ms)
+✔ Hint refuses an inconsistent but locally legal partial board (0.310858ms)
+✔ all 30 before/after effort rows agree; first five have obvious single-cell starts (5.793268ms)
+✔ both daily eligibility states: 365 dates deterministic, unique and no-guessing; safe has no rocks (156.681464ms)
+✔ rock eligibility unlocks at 21, not before; intro flag persists (0.510063ms)
+✔ v1 migration keeps path/collection/streak and compatible 21–30 boards, clears changed/daily boards (1.120946ms)
+✔ all preserved v1 boards really match snapshot and signatures distinguish changed content (1.587115ms)
+✔ paint is idempotent, never changes capys/rocks, mark and erase only (0.347618ms)
+✔ haptics exact distinct patterns, off/missing/throwing APIs safe (0.451865ms)
+✔ one swappable cast map covers every character/pose and every file is local (2.035707ms)
+✔ v3 gradient values exactly match the approved supplied spec palette (1.041541ms)
+✔ all active nested v4 cast sprites are precached for offline use (0.48298ms)
+✔ v2 gentle generator repeats puzzle and proof from the same seed (55.162313ms)
+✔ all 760 region maps, including both daily banks, are connected (13.338535ms)
+ℹ tests 36
+ℹ suites 0
+ℹ pass 36
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 537.884589

@@ -1,0 +1,50 @@
+[
+  {
+    "viewport": "412x915",
+    "n": 5,
+    "before_board_px": 400,
+    "before_cell_px": 73.1875,
+    "after_board_px": 294,
+    "after_cell_px": 52
+  },
+  {
+    "viewport": "412x915",
+    "n": 6,
+    "before_board_px": 400,
+    "before_cell_px": 60.5,
+    "after_board_px": 349,
+    "after_cell_px": 52
+  },
+  {
+    "viewport": "412x915",
+    "n": 7,
+    "before_board_px": 400,
+    "before_cell_px": 51.421875,
+    "after_board_px": 404,
+    "after_cell_px": 52
+  },
+  {
+    "viewport": "360x780",
+    "n": 5,
+    "before_board_px": 348,
+    "before_cell_px": 62.796875,
+    "after_board_px": 294,
+    "after_cell_px": 52
+  },
+  {
+    "viewport": "360x780",
+    "n": 6,
+    "before_board_px": 348,
+    "before_cell_px": 51.828125,
+    "after_board_px": 349,
+    "after_cell_px": 52
+  },
+  {
+    "viewport": "360x780",
+    "n": 7,
+    "before_board_px": 348,
+    "before_cell_px": 44,
+    "after_board_px": 352,
+    "after_cell_px": 44.5625
+  }
+]

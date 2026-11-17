@@ -1,0 +1,13 @@
+{
+  "from": "capydoku-v4.3.1-6bc138e4dee2",
+  "toTestFixture": "capydoku-v4.3.1-e7f2101d6a87",
+  "deferredUntil": "map",
+  "noMidPondReload": true,
+  "pinnedOldAssetSHA": "6471871028c154968ed1e5a1ea25b915f3346b216e26fec37fcb7842ad3208b1",
+  "newAssetSHA": "a7af7d66c78304988c3275bb8e9b8c2a68bcfe487ec6e4ac49b83f7743286e21",
+  "cacheAffinitySurvivesWorkerRestart": true,
+  "cacheAffinityWorksOffline": true,
+  "automaticReloads": 1,
+  "latestStatePreserved": true,
+  "browserErrors": []
+}

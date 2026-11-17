@@ -1,0 +1,8 @@
+{
+  "holdCache": true,
+  "round": "v3.1 local look-and-feel batch",
+  "cache": "capydoku-v3-5288463b8ae5",
+  "sw_sha256": "74174b43aeae7eaba841fcc8d39d8e1fd91ade0ac0fbe798dd76f7c5208893e4",
+  "precache_sha256": "e476088c66717162c4111b3027ac5d4400d96400e860e81c377963c11928f1a6",
+  "reason": "User explicitly deferred the cache bump; no v3\u2192v3.1 rollout attempted."
+}

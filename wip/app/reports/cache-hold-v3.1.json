@@ -1,0 +1,11 @@
+{
+  "holdCache": true,
+  "preparedLocalOnly": true,
+  "published": false,
+  "previousCache": "capydoku-v3-5288463b8ae5",
+  "cache": "capydoku-v3.1-1b654e8bec8d",
+  "reason": "Local-only constant-width sizing follow-up. One A/B config switch; B default, new reference-proportioned runtime cache prepared as requested.",
+  "sw_sha256": "4a7df698500cdd64afb106a586233526dbe2858e929b3184cb59bd186ed9eacc",
+  "precache_sha256": "ed4d85aa8bdc6b258bf642679db7a8957d86442165b62776cde9d45486ce476f",
+  "previousLocalCandidate": "capydoku-v3.1-63e8bdeebfd7"
+}

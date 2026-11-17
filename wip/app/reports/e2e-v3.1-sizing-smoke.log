@@ -1,0 +1,21 @@
+
+Running 14 tests using 1 worker
+
+(node:374519) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/sizing.spec.js:5:76 › single-config sizing A/B comparison › A: 5/6/7 grids and targets at 412×915 (2.7s)
+  ✓   2 tests/sizing.spec.js:5:76 › single-config sizing A/B comparison › A: 5/6/7 grids and targets at 360×780 (2.3s)
+  ✓   3 tests/sizing.spec.js:5:76 › single-config sizing A/B comparison › B: 5/6/7 grids and targets at 412×915 (2.5s)
+  ✓   4 tests/sizing.spec.js:5:76 › single-config sizing A/B comparison › B: 5/6/7 grids and targets at 360×780 (2.2s)
+  ✓   5 tests/v31-extension.spec.js:8:2 › default B constant-width 5/6/7 boards and all cells ≥44px at 412×915 (951ms)
+  ✓   6 tests/v31-extension.spec.js:9:54 › solved normal: Replay / Next pond / Hot Spring fit with NO scroll at 412×915 (3.7s)
+  ✓   7 tests/v31-extension.spec.js:9:54 › solved boss: Replay / Next pond / Hot Spring fit with NO scroll at 412×915 (3.7s)
+  ✓   8 tests/v31-extension.spec.js:9:54 › solved boss30: Replay / Next pond / Hot Spring fit with NO scroll at 412×915 (3.7s)
+  ✓   9 tests/v31-extension.spec.js:9:54 › solved daily: Replay / Next pond / Hot Spring fit with NO scroll at 412×915 (3.7s)
+  ✓  10 tests/v31-extension.spec.js:8:2 › default B constant-width 5/6/7 boards and all cells ≥44px at 360×780 (870ms)
+  ✓  11 tests/v31-extension.spec.js:9:54 › solved normal: Replay / Next pond / Hot Spring fit with NO scroll at 360×780 (3.7s)
+  ✓  12 tests/v31-extension.spec.js:9:54 › solved boss: Replay / Next pond / Hot Spring fit with NO scroll at 360×780 (3.7s)
+  ✓  13 tests/v31-extension.spec.js:9:54 › solved boss30: Replay / Next pond / Hot Spring fit with NO scroll at 360×780 (3.7s)
+  ✓  14 tests/v31-extension.spec.js:9:54 › solved daily: Replay / Next pond / Hot Spring fit with NO scroll at 360×780 (3.7s)
+
+  14 passed (41.8s)

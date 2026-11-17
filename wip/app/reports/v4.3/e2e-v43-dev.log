@@ -1,0 +1,27 @@
+
+Running 18 tests using 1 worker
+
+(node:1504660) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [mobile-412] › tests/v43.spec.js:14:57 › pond 1: Undo after (wrong capy, remove it, correct capy diagonally next to it) never puts a capy next to another (2.0s)
+  ✓   2 [mobile-412] › tests/v43.spec.js:14:57 › pond 1: Undo after (wrong capy, remove it, correct capy orthogonally next to it) never puts a capy next to another (1.7s)
+  ✓   3 [mobile-412] › tests/v43.spec.js:14:57 › pond 21: Undo after (wrong capy, remove it, correct capy diagonally next to it) never puts a capy next to another (1.8s)
+  ✓   4 [mobile-412] › tests/v43.spec.js:14:57 › pond 21: Undo after (wrong capy, remove it, correct capy orthogonally next to it) never puts a capy next to another (1.8s)
+  ✓   5 [mobile-412] › tests/v43.spec.js:16:60 › a late click never turns "tap A, tap B" into a capy on A (chromium-pointer-id) (1.2s)
+  ✓   6 [mobile-412] › tests/v43.spec.js:16:60 › a late click never turns "tap A, tap B" into a capy on A (no-pointer-id) (1.1s)
+  ✓   7 [mobile-412] › tests/v43.spec.js:17:1 › a real touch double-tap still places exactly one capy and taps on other cells still mark × (981ms)
+  ✓   8 [mobile-412] › tests/v43.spec.js:18:1 › a locked capy in a conflict shows the red conflict ring, not only the gold lock glow (852ms)
+  ✓   9 [mobile-412] › tests/v43.spec.js:19:1 › haptics v4.3 reach the Vibration API: × 50, clear 42, correct capy 110, rule-break [170,90,170], locked bump 30 (1.9s)
+(node:1506277) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  10 [mobile-360] › tests/v43.spec.js:14:57 › pond 1: Undo after (wrong capy, remove it, correct capy diagonally next to it) never puts a capy next to another (2.0s)
+  ✓  11 [mobile-360] › tests/v43.spec.js:14:57 › pond 1: Undo after (wrong capy, remove it, correct capy orthogonally next to it) never puts a capy next to another (1.8s)
+  ✓  12 [mobile-360] › tests/v43.spec.js:14:57 › pond 21: Undo after (wrong capy, remove it, correct capy diagonally next to it) never puts a capy next to another (1.8s)
+  ✓  13 [mobile-360] › tests/v43.spec.js:14:57 › pond 21: Undo after (wrong capy, remove it, correct capy orthogonally next to it) never puts a capy next to another (1.8s)
+  ✓  14 [mobile-360] › tests/v43.spec.js:16:60 › a late click never turns "tap A, tap B" into a capy on A (chromium-pointer-id) (1.2s)
+  ✓  15 [mobile-360] › tests/v43.spec.js:16:60 › a late click never turns "tap A, tap B" into a capy on A (no-pointer-id) (1.1s)
+  ✓  16 [mobile-360] › tests/v43.spec.js:17:1 › a real touch double-tap still places exactly one capy and taps on other cells still mark × (946ms)
+  ✓  17 [mobile-360] › tests/v43.spec.js:18:1 › a locked capy in a conflict shows the red conflict ring, not only the gold lock glow (839ms)
+  ✓  18 [mobile-360] › tests/v43.spec.js:19:1 › haptics v4.3 reach the Vibration API: × 50, clear 42, correct capy 110, rule-break [170,90,170], locked bump 30 (1.9s)
+
+  18 passed (27.8s)

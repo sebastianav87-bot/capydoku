@@ -1,0 +1,26 @@
+{
+  "snapshots": [
+    {
+      "snapshot": "/workspace/capydoku/app-v1-backup",
+      "original_files_checked": 74,
+      "all_original_hashes_match": true
+    },
+    {
+      "snapshot": "/workspace/capydoku/app-v2-backup",
+      "original_files_checked": 226,
+      "all_original_hashes_match": true
+    },
+    {
+      "snapshot": "/workspace/capydoku/app-v3-backup",
+      "original_files_checked": 345,
+      "all_original_hashes_match": true
+    },
+    {
+      "snapshot": "/workspace/capydoku/app-v31-ui-backup",
+      "original_files_checked": 445,
+      "all_original_hashes_match": true
+    }
+  ],
+  "shipped_v3_tar_sha256": "60c7ce33b1e3452d361a68e69e9521c1d969dccb93c07467862e317d3a365288",
+  "shipped_runtime_files_matching_backup": 36
+}

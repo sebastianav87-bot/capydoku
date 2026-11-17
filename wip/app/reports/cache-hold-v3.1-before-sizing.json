@@ -1,0 +1,10 @@
+{
+  "holdCache": true,
+  "preparedLocalOnly": true,
+  "published": false,
+  "previousCache": "capydoku-v3-5288463b8ae5",
+  "cache": "capydoku-v3.1-63e8bdeebfd7",
+  "reason": "Completed local batch, including final screenshot-QA narrow-phone Relax/header fix. Conditional permission used to prepare the local cache; no publication. Further accidental rebuilds stay guarded.",
+  "sw_sha256": "cfabfa9d184df80cc54c2c22d9a0630fa6c925c6a21b6bbb997268e1bd1e463a",
+  "precache_sha256": "63f054c9fa2c98276d2c4f9970c8b1e72fd128dfd43214341ab15bb172aa83c6"
+}

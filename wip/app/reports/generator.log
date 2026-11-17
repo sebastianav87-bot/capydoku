@@ -1,0 +1,9 @@
+daily 0
+daily 50
+daily 100
+daily 150
+daily 200
+daily 250
+daily 300
+daily 350
+{'levels': 30, 'daily_dates': 365, 'all_unique': True, 'all_logic': True, 'elapsed_seconds': 138.83}

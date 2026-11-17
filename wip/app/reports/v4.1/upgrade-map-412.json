@@ -1,0 +1,376 @@
+{
+  "from": "capydoku-v4-9d6ebe4d0481",
+  "to": "capydoku-v4.1-923843f2cc02",
+  "fromFrozenBackup": true,
+  "automaticReloads": 1,
+  "level18RewardsPreserved": true,
+  "changedAttemptSafelyDropped": true,
+  "updatedToastOnce": true,
+  "offlineAll200": [
+    {
+      "url": "./",
+      "status": 200
+    },
+    {
+      "url": "index.html",
+      "status": 200
+    },
+    {
+      "url": "style.css",
+      "status": 200
+    },
+    {
+      "url": "theme-v3.css",
+      "status": 200
+    },
+    {
+      "url": "starters-v3.css",
+      "status": 200
+    },
+    {
+      "url": "powers.js",
+      "status": 200
+    },
+    {
+      "url": "platform.js",
+      "status": 200
+    },
+    {
+      "url": "config.js",
+      "status": 200
+    },
+    {
+      "url": "app.js",
+      "status": 200
+    },
+    {
+      "url": "core.js",
+      "status": 200
+    },
+    {
+      "url": "rewards.js",
+      "status": 200
+    },
+    {
+      "url": "profile.js",
+      "status": 200
+    },
+    {
+      "url": "rewards-v4.css",
+      "status": 200
+    },
+    {
+      "url": "theme.js",
+      "status": 200
+    },
+    {
+      "url": "characters.js",
+      "status": 200
+    },
+    {
+      "url": "audio.js",
+      "status": 200
+    },
+    {
+      "url": "music.js",
+      "status": 200
+    },
+    {
+      "url": "layout.js",
+      "status": 200
+    },
+    {
+      "url": "levels.json",
+      "status": 200
+    },
+    {
+      "url": "manifest.webmanifest",
+      "status": 200
+    },
+    {
+      "url": "visuals-v4.js",
+      "status": 200
+    },
+    {
+      "url": "visuals-v4.css",
+      "status": 200
+    },
+    {
+      "url": "tutorial.js",
+      "status": 200
+    },
+    {
+      "url": "power-identity-v4.css",
+      "status": 200
+    },
+    {
+      "url": "updates.js",
+      "status": 200
+    },
+    {
+      "url": "build-info.js",
+      "status": 200
+    },
+    {
+      "url": "home-v41.css",
+      "status": 200
+    },
+    {
+      "url": "assets/Nunito-OFL.txt",
+      "status": 200
+    },
+    {
+      "url": "assets/hotspring-bg.jpg",
+      "status": 200
+    },
+    {
+      "url": "assets/icon-192.png",
+      "status": 200
+    },
+    {
+      "url": "assets/icon-512.png",
+      "status": 200
+    },
+    {
+      "url": "assets/map-bg.jpg",
+      "status": 200
+    },
+    {
+      "url": "assets/music/LICENSES.md",
+      "status": 200
+    },
+    {
+      "url": "assets/music/northumberland.mp3",
+      "status": 200
+    },
+    {
+      "url": "assets/music/northumberland.ogg",
+      "status": 200
+    },
+    {
+      "url": "assets/nunito-500.ttf",
+      "status": 200
+    },
+    {
+      "url": "assets/nunito-700.ttf",
+      "status": 200
+    },
+    {
+      "url": "assets/nunito-800.ttf",
+      "status": 200
+    },
+    {
+      "url": "assets/palette.json",
+      "status": 200
+    },
+    {
+      "url": "assets/power-icons/jun-face.png",
+      "status": 200
+    },
+    {
+      "url": "assets/power-icons/nap.svg",
+      "status": 200
+    },
+    {
+      "url": "assets/power-icons/peek.svg",
+      "status": 200
+    },
+    {
+      "url": "assets/power-icons/remy-face.png",
+      "status": 200
+    },
+    {
+      "url": "assets/power-icons/second-chance.svg",
+      "status": 200
+    },
+    {
+      "url": "assets/rock.png",
+      "status": 200
+    },
+    {
+      "url": "assets/starter-palette.json",
+      "status": 200
+    },
+    {
+      "url": "assets/starters/doze.png",
+      "status": 200
+    },
+    {
+      "url": "assets/starters/jun.png",
+      "status": 200
+    },
+    {
+      "url": "assets/starters/remy.png",
+      "status": 200
+    },
+    {
+      "url": "assets/v6/capy-jump.png",
+      "status": 200
+    },
+    {
+      "url": "assets/v6/capy-sit.png",
+      "status": 200
+    },
+    {
+      "url": "assets/v6/cave-beaten.png",
+      "status": 200
+    },
+    {
+      "url": "assets/v6/cave-locked.png",
+      "status": 200
+    },
+    {
+      "url": "assets/v6/cave-ready.png",
+      "status": 200
+    },
+    {
+      "url": "assets/v6/celebration-pool.jpg",
+      "status": 200
+    },
+    {
+      "url": "assets/v6/generic-capy.svg",
+      "status": 200
+    },
+    {
+      "url": "assets/v6/geyser-beaten.png",
+      "status": 200
+    },
+    {
+      "url": "assets/v6/geyser-locked.png",
+      "status": 200
+    },
+    {
+      "url": "assets/v6/geyser-ready.png",
+      "status": 200
+    },
+    {
+      "url": "assets/v6/hotspring.jpg",
+      "status": 200
+    },
+    {
+      "url": "assets/v6/tutorial-hand.svg",
+      "status": 200
+    },
+    {
+      "url": "assets/v6/waterfall-beaten.png",
+      "status": 200
+    },
+    {
+      "url": "assets/v6/waterfall-locked.png",
+      "status": 200
+    },
+    {
+      "url": "assets/v6/waterfall-ready.png",
+      "status": 200
+    },
+    {
+      "url": "assets/v63/boss-cave-beaten.svg",
+      "status": 200
+    },
+    {
+      "url": "assets/v63/boss-cave-locked.svg",
+      "status": 200
+    },
+    {
+      "url": "assets/v63/boss-cave-next.svg",
+      "status": 200
+    },
+    {
+      "url": "assets/v63/boss-geyser-beaten.svg",
+      "status": 200
+    },
+    {
+      "url": "assets/v63/boss-geyser-locked.svg",
+      "status": 200
+    },
+    {
+      "url": "assets/v63/boss-geyser-next.svg",
+      "status": 200
+    },
+    {
+      "url": "assets/v63/boss-waterfall-beaten.svg",
+      "status": 200
+    },
+    {
+      "url": "assets/v63/boss-waterfall-locked.svg",
+      "status": 200
+    },
+    {
+      "url": "assets/v63/boss-waterfall-next.svg",
+      "status": 200
+    },
+    {
+      "url": "assets/v64/power-icons/bloom-face.png",
+      "status": 200
+    },
+    {
+      "url": "assets/v64/starters/bloom-32@1x.png",
+      "status": 200
+    },
+    {
+      "url": "assets/v64/starters/bloom-32@2x.png",
+      "status": 200
+    },
+    {
+      "url": "assets/v64/starters/bloom-32@3x.png",
+      "status": 200
+    },
+    {
+      "url": "assets/v64/starters/bloom-44@1x.png",
+      "status": 200
+    },
+    {
+      "url": "assets/v64/starters/bloom-44@2x.png",
+      "status": 200
+    },
+    {
+      "url": "assets/v64/starters/bloom-44@3x.png",
+      "status": 200
+    },
+    {
+      "url": "assets/v64/starters/bloom-51@1x.png",
+      "status": 200
+    },
+    {
+      "url": "assets/v64/starters/bloom-51@2x.png",
+      "status": 200
+    },
+    {
+      "url": "assets/v64/starters/bloom-51@3x.png",
+      "status": 200
+    },
+    {
+      "url": "assets/v64/starters/bloom-64@1x.png",
+      "status": 200
+    },
+    {
+      "url": "assets/v64/starters/bloom-64@2x.png",
+      "status": 200
+    },
+    {
+      "url": "assets/v64/starters/bloom-64@3x.png",
+      "status": 200
+    },
+    {
+      "url": "assets/v64/starters/bloom-hello-pond.jpg",
+      "status": 200
+    },
+    {
+      "url": "assets/v64/starters/bloom.png",
+      "status": 200
+    },
+    {
+      "url": "assets/v65/lily-earned.svg",
+      "status": 200
+    },
+    {
+      "url": "assets/v65/lily-golden.svg",
+      "status": 200
+    },
+    {
+      "url": "assets/v65/lily-outline.svg",
+      "status": 200
+    }
+  ],
+  "consoleErrors": []
+}

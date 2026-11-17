@@ -1,0 +1,104 @@
+# Runtime package
+
+/workspace/capydoku/capydoku-v4-runtime.tar.gz
+
+94 files; 12780974 bytes. All extracted hashes match.
+
+SHA256: `ac12261b2c0dfb086f612b92f380fc508f60c37857e99abe3b33c61d81444f0b`
+
+Extracted-archive localhost/offline smoke passed.
+
+- ASSET-NOTES.md
+- KNOWN-ISSUES.md
+- README.md
+- app.js
+- assets/Nunito-OFL.txt
+- assets/hotspring-bg.jpg
+- assets/icon-192.png
+- assets/icon-512.png
+- assets/map-bg.jpg
+- assets/music/LICENSES.md
+- assets/music/northumberland.mp3
+- assets/music/northumberland.ogg
+- assets/nunito-500.ttf
+- assets/nunito-700.ttf
+- assets/nunito-800.ttf
+- assets/palette.json
+- assets/power-icons/jun-face.png
+- assets/power-icons/nap.svg
+- assets/power-icons/peek.svg
+- assets/power-icons/remy-face.png
+- assets/power-icons/second-chance.svg
+- assets/rock.png
+- assets/starter-palette.json
+- assets/starters/doze.png
+- assets/starters/jun.png
+- assets/starters/remy.png
+- assets/v6/capy-jump.png
+- assets/v6/capy-sit.png
+- assets/v6/cave-beaten.png
+- assets/v6/cave-locked.png
+- assets/v6/cave-ready.png
+- assets/v6/celebration-pool.jpg
+- assets/v6/generic-capy.svg
+- assets/v6/geyser-beaten.png
+- assets/v6/geyser-locked.png
+- assets/v6/geyser-ready.png
+- assets/v6/hotspring.jpg
+- assets/v6/map-painted.jpg
+- assets/v6/tutorial-hand.svg
+- assets/v6/waterfall-beaten.png
+- assets/v6/waterfall-locked.png
+- assets/v6/waterfall-ready.png
+- assets/v63/boss-cave-beaten.svg
+- assets/v63/boss-cave-locked.svg
+- assets/v63/boss-cave-next.svg
+- assets/v63/boss-geyser-beaten.svg
+- assets/v63/boss-geyser-locked.svg
+- assets/v63/boss-geyser-next.svg
+- assets/v63/boss-waterfall-beaten.svg
+- assets/v63/boss-waterfall-locked.svg
+- assets/v63/boss-waterfall-next.svg
+- assets/v64/power-icons/bloom-face.png
+- assets/v64/starters/bloom-32@1x.png
+- assets/v64/starters/bloom-32@2x.png
+- assets/v64/starters/bloom-32@3x.png
+- assets/v64/starters/bloom-44@1x.png
+- assets/v64/starters/bloom-44@2x.png
+- assets/v64/starters/bloom-44@3x.png
+- assets/v64/starters/bloom-51@1x.png
+- assets/v64/starters/bloom-51@2x.png
+- assets/v64/starters/bloom-51@3x.png
+- assets/v64/starters/bloom-64@1x.png
+- assets/v64/starters/bloom-64@2x.png
+- assets/v64/starters/bloom-64@3x.png
+- assets/v64/starters/bloom-hello-pond.jpg
+- assets/v64/starters/bloom.png
+- assets/v65/lily-earned.svg
+- assets/v65/lily-golden.svg
+- assets/v65/lily-outline.svg
+- audio.js
+- build-info.js
+- characters.js
+- config.js
+- core.js
+- index.html
+- layout.js
+- levels.json
+- manifest.webmanifest
+- music.js
+- platform.js
+- power-identity-v4.css
+- powers.js
+- profile.js
+- rewards-v4.css
+- rewards.js
+- starters-v3.css
+- style.css
+- sw.js
+- theme-v3.css
+- theme.js
+- tutorial.js
+- updates.js
+- visuals-v4.css
+- visuals-v4.js

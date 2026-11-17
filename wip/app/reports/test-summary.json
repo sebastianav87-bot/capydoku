@@ -1,0 +1,139 @@
+{
+  "version": "2.0.0-local",
+  "generated_at": "2026-11-09T19:51:40.076755-05:00",
+  "timezone": "America/New_York (EST)",
+  "local_only": true,
+  "published_or_pushed": false,
+  "v1_backup": "/workspace/capydoku/app-v1-backup/",
+  "v1_snapshot_files_unchanged": 74,
+  "commands": {
+    "generate": "python3 scripts/retune-v2.py",
+    "unit": "npm run test:unit",
+    "e2e": "npm run test:e2e",
+    "cache": "python3 scripts/build-sw.py",
+    "screenshots": "python3 scripts/contact-sheet-v2.py"
+  },
+  "results": {
+    "unit": {
+      "passed": 36,
+      "failed": 0
+    },
+    "mobile_e2e": {
+      "passed": 29,
+      "failed": 0,
+      "flaky": 0,
+      "skipped": 0,
+      "retries": 0,
+      "duration_ms": 59444.962999999996,
+      "viewport": "412x915",
+      "touch": true,
+      "device_scale": 1,
+      "timezone": "America/New_York",
+      "browser": "Chromium 158 mobile emulation"
+    },
+    "browser_console_or_page_errors": 0,
+    "all_760_exactly_one_solution": true,
+    "all_760_no_guessing": true,
+    "all_760_connected": true,
+    "campaign": 30,
+    "daily_dates_per_eligibility_state": 365,
+    "daily_states": 2,
+    "precache_urls": 27,
+    "precache_all_http_200": true,
+    "offline_reload": true,
+    "real_v1_sw_upgrade_and_offline": true,
+    "old_cache_retired": true,
+    "same_origin_progress_migration": true,
+    "screenshots": 42,
+    "screenshots_all_exact_412x915": true
+  },
+  "cache": "capydoku-v2-3613aaa30778",
+  "drag": {
+    "threshold_css_px": 10,
+    "interpolation_css_px": 6,
+    "one_undo_per_gesture": true,
+    "board_only_touch_action_none": true
+  },
+  "haptics_ms": {
+    "drag_tick": 8,
+    "minimum_tick_gap": 70,
+    "legal": 24,
+    "illegal": [
+      35,
+      55,
+      35
+    ],
+    "solve": [
+      35,
+      55,
+      55,
+      55,
+      85
+    ],
+    "splash": 12,
+    "default_on": true
+  },
+  "effort_first_five": {
+    "v1_before_first": [
+      1,
+      1,
+      5,
+      4,
+      5
+    ],
+    "v2_before_first": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "v1_deductions": [
+      6,
+      7,
+      10,
+      9,
+      10
+    ],
+    "v2_deductions": [
+      5,
+      5,
+      5,
+      5,
+      5
+    ],
+    "v2_hardest": "house-single"
+  },
+  "visuals": {
+    "v3_approved": true,
+    "v4_final_core_art_integrated": true,
+    "cast_module": "characters.js",
+    "core_art_copied_unchanged": 6,
+    "spring_option": "A",
+    "spring_stages_checked": 4,
+    "celebration_beats_captured": 6,
+    "reduced_motion_checked": true,
+    "unshipped_rule_variants": [
+      "Sleepy fixed clues",
+      "Duck corner-touch exception"
+    ],
+    "future_cast_unlocks_added": false
+  },
+  "limits": [
+    "No physical Galaxy S24, actual vibration, audio listening or Android install test",
+    "Migration applies only on same origin; published-site/phone storage was not accessed",
+    "Finite 365-source banks plus transforms",
+    "7x7 cells about 51px rather than impossible 60px at 412px viewport",
+    "Static mockup board is unique but not logic-solvable under shipped deduction set; not shipped as a level",
+    "Human balancing, clinical CVD and broad accessibility not verified"
+  ],
+  "previous_failures": "Retained in separate initial/superseded/cast-name logs and trace folders; fixed in final run",
+  "runtime_archive": {
+    "archive": "/workspace/capydoku/capydoku-v2-runtime.tar.gz",
+    "bytes": 4324478,
+    "sha256": "3696728bf6dfef2a1247a823eabcc41063af7896f9ebbb980c9034d192f445db",
+    "file_count": 30,
+    "all_extracted_hashes_match": true,
+    "archive_smoke_verified": true
+  }
+}

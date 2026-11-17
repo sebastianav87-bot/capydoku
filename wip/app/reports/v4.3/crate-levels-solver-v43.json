@@ -1,0 +1,62 @@
+[
+ {
+  "pond": 5,
+  "name": "Reed Crates",
+  "n": 7,
+  "optimal_moves": 26,
+  "pushes": 9,
+  "par": 40,
+  "explored": 180870,
+  "seconds": 0.32
+ },
+ {
+  "pond": 10,
+  "name": "Reedwater Gate",
+  "n": 6,
+  "optimal_moves": 30,
+  "pushes": 13,
+  "par": 45,
+  "explored": 9465,
+  "seconds": 0.01
+ },
+ {
+  "pond": 15,
+  "name": "Bamboo Crates",
+  "n": 7,
+  "optimal_moves": 39,
+  "pushes": 17,
+  "par": 55,
+  "explored": 235507,
+  "seconds": 0.55
+ },
+ {
+  "pond": 20,
+  "name": "Bamboo Gate",
+  "n": 7,
+  "optimal_moves": 57,
+  "pushes": 22,
+  "par": 85,
+  "explored": 170521,
+  "seconds": 0.31
+ },
+ {
+  "pond": 25,
+  "name": "Summit Crates",
+  "n": 8,
+  "optimal_moves": 66,
+  "pushes": 25,
+  "par": 95,
+  "explored": 696036,
+  "seconds": 1.61
+ },
+ {
+  "pond": 30,
+  "name": "Cloudwater Finale",
+  "n": 8,
+  "optimal_moves": 80,
+  "pushes": 28,
+  "par": 115,
+  "explored": 403991,
+  "seconds": 0.79
+ }
+]

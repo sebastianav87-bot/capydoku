@@ -1,0 +1,17 @@
+# Capybara Calm leaderboard — TEMPLATE. Nothing here is deployed. Replace the placeholders only after
+# Sebastián's Cloudflare account exists (Workers Free, no payment method). See README.md.
+name = "capybara-calm-leaderboard"
+main = "src/index.js"
+compatibility_date = "2026-08-01"
+workers_dev = true
+
+[vars]
+# Comma-separated game origins allowed by CORS (e.g. "https://<user>.github.io").
+ALLOWED_ORIGIN = "https://REPLACE-WITH-GAME-ORIGIN"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "capybara-calm-leaderboard"
+database_id = "00000000-0000-0000-0000-000000000000" # placeholder: from `wrangler d1 create`
+
+# Secret (not in this file): RATE_SALT — set with `wrangler secret put RATE_SALT`.

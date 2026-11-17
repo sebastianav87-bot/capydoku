@@ -1,0 +1,27 @@
+
+Running 20 tests using 1 worker
+
+(node:341671) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/v31-extension.spec.js:8:2 › consistent 5/6/7 boards and all cells ≥44px at 412×915 (1.1s)
+  ✓   2 tests/v31-extension.spec.js:9:54 › solved normal: Replay / Next pond / Hot Spring fit with NO scroll at 412×915 (3.8s)
+  ✓   3 tests/v31-extension.spec.js:9:54 › solved boss: Replay / Next pond / Hot Spring fit with NO scroll at 412×915 (3.9s)
+  ✓   4 tests/v31-extension.spec.js:9:54 › solved boss30: Replay / Next pond / Hot Spring fit with NO scroll at 412×915 (3.7s)
+  ✓   5 tests/v31-extension.spec.js:9:54 › solved daily: Replay / Next pond / Hot Spring fit with NO scroll at 412×915 (3.7s)
+  ✓   6 tests/v31-extension.spec.js:8:2 › consistent 5/6/7 boards and all cells ≥44px at 360×780 (785ms)
+  ✓   7 tests/v31-extension.spec.js:9:54 › solved normal: Replay / Next pond / Hot Spring fit with NO scroll at 360×780 (3.6s)
+  ✓   8 tests/v31-extension.spec.js:9:54 › solved boss: Replay / Next pond / Hot Spring fit with NO scroll at 360×780 (3.7s)
+  ✓   9 tests/v31-extension.spec.js:9:54 › solved boss30: Replay / Next pond / Hot Spring fit with NO scroll at 360×780 (3.7s)
+  ✓  10 tests/v31-extension.spec.js:9:54 › solved daily: Replay / Next pond / Hot Spring fit with NO scroll at 360×780 (3.6s)
+  ✓  11 tests/v31-extension.spec.js:11:41 › restored v1 concurrent upward launch uses Jun, visible 1.5s flight then matched soaking (3.7s)
+  ✓  12 tests/v31-extension.spec.js:11:41 › restored v1 concurrent upward launch uses Bloom, visible 1.5s flight then matched soaking (3.7s)
+  ✓  13 tests/v31-extension.spec.js:11:41 › restored v1 concurrent upward launch uses Remy, visible 1.5s flight then matched soaking (3.6s)
+  ✓  14 tests/v31-extension.spec.js:13:1 › music: NO playback before interaction, own toggle persists separately from effects, off really pauses (2.4s)
+  ✓  15 tests/v31-extension.spec.js:14:1 › music: hidden tab pauses immediately, visible resumes, Relax lowers volume, ended rotates all three (2.4s)
+  ✓  16 tests/v31-extension.spec.js:15:1 › music: older-iPhone MP3 path and actual local Opus/MP3 metadata decode without console errors (260ms)
+  ✓  17 tests/v31-extension.spec.js:16:1 › music plays actual local audio only after touch, then pauses on hidden tab without mocks (2.2s)
+  ✓  18 tests/v31.spec.js:6:1 › v3.1 Peek has ONE message, compact card never flex-grows; empty content collapses without shifting board/counters (3.8s)
+  ✓  19 tests/v31.spec.js:9:1 › v3.1 Nap and Second chance also have one card-only message, no duplicate power toast (1.7s)
+  ✓  20 tests/v31.spec.js:11:1 › v3.1 clean Bloom preview at first run AND switch; source steam pixels absent and other starters still decode (893ms)
+
+  20 passed (56.9s)

@@ -1,0 +1,13 @@
+{
+  "name": "capybara-calm-leaderboard",
+  "private": true,
+  "type": "module",
+  "description": "Capybara Calm optional leaderboard Worker (Cloudflare Workers Free + D1). Not deployed.",
+  "scripts": {
+    "test": "node --test test/worker.test.js test/miniflare.test.js",
+    "test:miniflare": "node --test test/miniflare.test.js"
+  },
+  "devDependencies": {
+    "miniflare": "^4.20260730.0"
+  }
+}

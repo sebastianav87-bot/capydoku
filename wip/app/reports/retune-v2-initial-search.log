@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/workspace/capydoku/app/scripts/retune-v2.py", line 82, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/workspace/capydoku/app/scripts/retune-v2.py", line 45, in main
+    chunk=[gentle(n,seed+k,limit,first_limit,singles)for k in range(count)]
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/capydoku/app/scripts/retune-v2.py", line 38, in gentle
+    raise RuntimeError((n,seed,limit,'not found'))
+RuntimeError: (5, 81000, 0, 'not found')

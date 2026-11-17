@@ -1,0 +1,15 @@
+{
+  "viewport": "360x780",
+  "n": 10,
+  "rocks": [
+    35,
+    64
+  ],
+  "cellPx": 33,
+  "cellPxH": 33,
+  "gapPx": 2,
+  "boardRight": 354,
+  "boardBottom": 515,
+  "noScroll": true,
+  "cornerTaps": "ok"
+}

@@ -1,0 +1,113 @@
+{
+  "runtime_files": 45,
+  "changed_or_added": [
+    {
+      "file": "ASSET-NOTES.md",
+      "change": "modified",
+      "before_sha256": "ad782313ce84c3c445725bb03e3a38d209ee1783f1e6ca541eb649c87a616611",
+      "after_sha256": "5666dc012c037f7ed0c26947f4c16a48889a3d884455b7768ac8a41300170f2e"
+    },
+    {
+      "file": "KNOWN-ISSUES.md",
+      "change": "modified",
+      "before_sha256": "6bc95be60f06d6b566f95ab0c4b9300da0f61d2c0dfd3fe143b58dd221fb640d",
+      "after_sha256": "295d02da6ad41eb6f4419902a0a84d99d6ca6163cbca3afb7d6788f8068d45bb"
+    },
+    {
+      "file": "README.md",
+      "change": "modified",
+      "before_sha256": "b7e411b711a4a98d153c2660d79da706adca8585c9c76215523e8e2414447aa8",
+      "after_sha256": "66c01c6eb8f98322bc347212439894624415f4d9e480e44e8774ebdd94c36550"
+    },
+    {
+      "file": "app.js",
+      "change": "modified",
+      "before_sha256": "de3adc5f4ac4dc18ee1d6128c573142aa9bd943c1dc646fcafd7cef74fcc2259",
+      "after_sha256": "b17ca83cd6bfa773ce34271593f035e717d306f44e3fd3fbbf44ac1fd869c24c"
+    },
+    {
+      "file": "assets/music/LICENSES.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "b28e6f2879f9fe41c35ebb7411de43678d2b3cedea39ec1a567ef08530f7b526"
+    },
+    {
+      "file": "assets/music/flute-and-guitar.mp3",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "a5ca10cc1a54c04a27f5c315147d83e71eae08affb30516811288116ee9c88d8"
+    },
+    {
+      "file": "assets/music/flute-and-guitar.ogg",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "4e1500629fffb4c216d38f89bd6cbeafcb405296b8cedef79c7d042c87da8ce4"
+    },
+    {
+      "file": "assets/music/flute-strings.mp3",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "644723b5b23346aa2172ff21f293bfd2eb4d875c7e67f77cf24959b8b8a60b78"
+    },
+    {
+      "file": "assets/music/flute-strings.ogg",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "0ae69b37b06a755a8628af1ac3953ae4bcb287a64f4159777f1c115808382772"
+    },
+    {
+      "file": "assets/music/revelation.mp3",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "defc5db63fc50275ea39389fa6c4d53906ab6a061df13ebc7a1c6da29a392f1d"
+    },
+    {
+      "file": "assets/music/revelation.ogg",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "6ef84434dd20cbdaeb94d41fabf06bd1093dd39490464b262e8e6e8df69dff5f"
+    },
+    {
+      "file": "assets/starters/bloom-hello-pond.jpg",
+      "change": "modified",
+      "before_sha256": "3df609579f676f510b692691b4cd4e1e634c0518549ef8d388fa24e53d8800a4",
+      "after_sha256": "2183903d2cdb68c9044be9d459795620684bb462f5f1a50a22f884f8f2794377"
+    },
+    {
+      "file": "config.js",
+      "change": "modified",
+      "before_sha256": "6312b8fb69d710f14099da60e96e3d44616787c61197f194fa3cbbc5454e3ff6",
+      "after_sha256": "6eb8985f00947e389e9816f39b5f50356789299676270899ecb7bf266770b4bc"
+    },
+    {
+      "file": "core.js",
+      "change": "modified",
+      "before_sha256": "a4d40ee660d3853be9ee25a3f24030fc3192b77c274e78b33a5bbcb8eb9b7371",
+      "after_sha256": "6957476a0546c928df795ee24d8f7f0d538d9865ec7ff74a3c001412722c7a65"
+    },
+    {
+      "file": "layout.js",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "ba291d9a9f4789715033c69174350b3f2febf1590c11a61900b9844e0be1dd80"
+    },
+    {
+      "file": "music.js",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "3c8e1f3e97331592448937a1b8ccf76aca249502e9aeb8650aa73aa5014e7a4b"
+    },
+    {
+      "file": "starters-v3.css",
+      "change": "modified",
+      "before_sha256": "64063cfffba6ed8f134be431d61160a87fa3d57c57b4b252729fe2367992c01a",
+      "after_sha256": "1e4b96548956b2b7b611a051f32d432067ec0319c9a13eb7a9944a812256e7b2"
+    },
+    {
+      "file": "sw.js",
+      "change": "modified",
+      "before_sha256": "74174b43aeae7eaba841fcc8d39d8e1fd91ade0ac0fbe798dd76f7c5208893e4",
+      "after_sha256": "4a7df698500cdd64afb106a586233526dbe2858e929b3184cb59bd186ed9eacc"
+    }
+  ]
+}

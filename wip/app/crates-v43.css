@@ -1,0 +1,100 @@
+/* v4.3 crate ponds in the main path: transition, Show me, gate tags, reward lilies. */
+/* v4.3.1: this header comment had lost its closing mark when rev b pruned the Home-tile rules under it, which silently
+   disabled every rule down to the next comment close (Show me row, gate tag, transition art, replay lock, reward). */
+
+
+
+
+.bonus-tag.gate-tag{background:#E8C98A;border-color:#8E6A2C;color:#5A421B}
+.crate-transition-art{display:flex;justify-content:center;margin:10px 0 6px}
+.crate-transition-art .bonus-thumb{width:min(34vw,132px)}
+.transition-spare{display:flex;align-items:center;justify-content:center;gap:8px;font-size:13px;font-weight:800;color:#7A5320;margin:6px 0}
+.transition-spare .orange{width:20px;height:20px}
+.crate-showme{width:calc(100% - 28px);display:flex;align-items:center;justify-content:space-between;gap:10px;background:#EAF1DE;border:1.4px solid #6B9F62;border-radius:16px;padding:6px 8px 6px 14px}
+.crate-showme[hidden]{display:none}
+.crate-showme span{display:flex;flex-direction:column}
+.crate-showme strong{color:#2E5D2B;font-size:14px}
+.crate-showme small{font-size:11.5px;color:#4C6B47}
+.crate-showme button{min-height:44px;background:var(--green-600);color:#fff;border-radius:14px;padding:8px 14px;font-weight:850}
+.crate-screen.replaying .crate-board{pointer-events:none}
+.crate-screen.replaying .bonus-controls{opacity:.5;pointer-events:none}
+.crate-pond-reward .crate-reward-lilies{margin:8px 14px 0}
+.crate-pond-reward .reward-scene{max-height:28svh}
+.crate-lilies .lily-condition small{white-space:normal}
+.finale-reward h1{font-size:28px}
+.crate-showme button{white-space:nowrap;flex:0 0 auto}
+.crate-transition h1{font-size:clamp(26px,8vw,32px);line-height:1.1}
+/* v4.3 fix: the global button min-height (48px) forced every crate cell to ≥48px, so 8×8 boards overflowed
+   360px screens (and 7×7 touched the edges). Cells now shrink with the board, which keeps the logic-board width. */
+.crate-cell{min-height:0;min-width:0}
+.crate-screen .crate-wrap{width:min(var(--board-width,97.2222%),var(--board-max,427.78px));margin-left:auto;margin-right:auto;box-sizing:border-box}
+
+/* v4.3 Designer check: 10×10 (boss 29) at narrow widths. A slimmer frame (3px), a 1px grid inset and 2px gaps on a
+   viewport-wide board (2px side margins) lift 360px cells from 30.1px to 33px. 412px and boards ≤9×9 are unchanged. */
+@media (max-width:400px){
+  .game:not(.solved)>.pond-wrap[data-n="10"]{width:calc(100vw - 4px);max-width:none;padding:3px;border-radius:13px}
+  .pond-wrap[data-n="10"] .zone-grid{padding:1px;gap:2px;border-radius:9px}
+}
+
+/* v4.3.1 iPhone fit (fit.js). fit-measure: nothing squeezed, so overflow is measurable; fit-compact: short screens. */
+.screen.fit-measure>*{flex-shrink:0!important}
+.screen.fit-measure>.lower{flex:0 0 auto!important;min-height:auto!important}
+.crate-screen>.crate-wrap,.screen.game:not(.solved)>.pond-wrap{flex-shrink:0}
+.crate-screen.fit-compact{gap:3px;padding-top:max(6px,env(safe-area-inset-top))}
+.crate-screen.fit-compact .bonus-title h2{font-size:20px}
+.crate-screen.fit-compact .bonus-tag{padding-top:1px;padding-bottom:1px;font-size:11px}
+.crate-screen.fit-compact .bonus-stats span{padding:2px 10px}
+.crate-screen.fit-compact .bonus-stats b{font-size:17px}
+.crate-screen.fit-compact .crate-wrap{padding:5px}
+.crate-screen.fit-compact .crate-packed-pill{padding:1px 14px 1px 10px}
+.crate-screen.fit-compact .crate-packed-pill img{width:20px;height:20px}
+.crate-screen.fit-compact .bonus-hint{display:none}
+.crate-screen.fit-compact .crate-showme{padding:3px 5px 3px 12px;border-radius:14px}
+.crate-screen.fit-compact .crate-showme small{font-size:11px;line-height:1.2}
+.crate-screen.fit-compact .bonus-controls .undo-round{flex-direction:row;gap:6px;min-width:0}
+.crate-screen.fit-compact .bonus-controls .round-icon{width:44px;height:44px;box-shadow:0 2px 0 #BBD3AE}
+.crate-screen.fit-compact .bonus-controls .round-icon svg{width:22px;height:22px}
+.crate-screen.fit-compact .bonus-capy-chip{padding-top:2px;padding-bottom:2px}
+.crate-screen.fit-compact .bonus-capy-chip img{width:30px;height:30px}
+.crate-screen.fit-compact .bonus-dpad{grid-template-rows:repeat(3,34px)}
+.crate-screen.fit-compact .bonus-dpad button{height:34px}
+.crate-screen.fit-compact .bonus-leave-card{padding:3px 12px}
+.crate-screen.fit-compact .bonus-leave-card small{display:none}
+.screen.game.fit-compact .rule-card{height:38px;padding:4px 6px;gap:5px;align-items:center;min-height:0}
+.screen.game.fit-compact .rule-card svg{width:20px;height:20px}
+.screen.game.fit-compact .rule-card strong{line-height:12px;padding-top:0}
+.screen.game.fit-compact .rules-line{margin-top:1px;margin-bottom:4px}
+.screen.game.fit-compact .topbar .level-pill,.screen.game.fit-compact .topbar .help-btn{width:44px;height:44px;min-width:44px;min-height:44px}
+.screen.game.fit-compact .strip.companion-line{height:58px;min-height:58px;max-height:58px;flex-basis:58px!important;padding:3px 8px}
+.screen.game.fit-compact .strip.companion-line .capy-badge img,.screen.game.fit-compact .strip.companion-line>img{max-height:50px}
+.screen.game.fit-compact .controls{height:auto;min-height:0;margin-top:2px}
+.screen.game.fit-compact .controls .round-icon{width:52px;height:52px;min-width:52px;min-height:52px}
+.screen.game.fit-compact .controls .undo-round strong,.screen.game.fit-compact .controls .power-btn strong{font-size:12px}
+.screen.game.fit-compact .tap-hint{margin:2px 0;line-height:14px}
+.screen.game.fit-compact .lower{gap:4px}
+/* v4.3.1: viewport height — vh fallback, then small (toolbars shown), then dynamic where supported */
+@supports not (height:100svh){.screen,.screen.game:not(.solved),.screen.game.solved{height:100vh;min-height:100vh}.screen.game{height:auto}}
+@supports (height:100dvh){.screen{height:100dvh;min-height:100dvh}.screen.game{height:auto;min-height:100dvh}.screen.game:not(.solved),.screen.game.solved{height:100dvh;min-height:100dvh}}
+/* v4.3.1 fit-tight: very short screens (e.g. iPhone SE Safari tab, 375x525 usable) */
+.screen.game.fit-tight .tap-hint{display:none}
+.screen.game.fit-tight .strip.companion-line{height:46px;min-height:46px;max-height:46px;flex-basis:46px!important;padding:2px 8px}
+.screen.game.fit-tight .strip.companion-line .capy-badge img,.screen.game.fit-tight .strip.companion-line>img{max-height:40px}
+.screen.game.fit-tight .controls{margin-top:0;align-items:center}
+.screen.game.fit-tight .controls .undo-round,.screen.game.fit-tight .controls .power-btn{flex-direction:row;gap:6px}
+.screen.game.fit-tight .controls .round-icon{width:44px;height:44px;min-width:44px;min-height:44px}
+.screen.game.fit-tight .lower{padding-bottom:0}
+.screen.game.fit-tight .rules-line{margin-bottom:2px}
+.crate-screen.fit-tight .crate-packed-pill{display:none}
+.crate-screen.fit-tight .bonus-stats span{padding-top:0;padding-bottom:0}
+.crate-screen.fit-tight .bonus-dpad{grid-template-rows:repeat(3,30px)}
+.crate-screen.fit-tight .bonus-dpad button{height:30px}
+.crate-screen.fit-tight .crate-showme{padding-top:2px;padding-bottom:2px}
+.crate-screen.fit-tight .crate-showme b{font-size:14px}
+.screen.game.fit-compact .controls{height:80px;min-height:80px}
+.screen.game.fit-compact .controls>button{height:78px;min-height:78px;gap:2px}
+.screen.game.fit-compact .controls .undo-round{padding-top:2px!important}
+.screen.game.fit-compact .controls .power-btn .round-icon{width:52px;height:52px;min-width:52px;min-height:52px}
+.screen.game.fit-tight .controls{height:52px;min-height:52px;align-items:center}
+.screen.game.fit-tight .controls>button{height:50px;min-height:50px;flex-direction:row;justify-content:center;gap:8px}
+.screen.game.fit-tight .controls .undo-round{padding-top:0!important}
+.screen.game.fit-tight .controls .power-btn .round-icon{width:44px;height:44px;min-width:44px;min-height:44px}

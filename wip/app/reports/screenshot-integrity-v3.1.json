@@ -1,0 +1,848 @@
+{
+  "count": 140,
+  "native_412x915": 127,
+  "additional_native_360x780": 13,
+  "all_exact_requested_sizes": true,
+  "screenshots": [
+    {
+      "file": "360x780/after-daily-progress-360.png",
+      "width": 360,
+      "height": 780,
+      "sha256": "b8be138881514a81b9a986e66ecee203eb3487ff684f08c7c3e30688da5dcd8c"
+    },
+    {
+      "file": "360x780/after-end-boss-360.png",
+      "width": 360,
+      "height": 780,
+      "sha256": "b8bfbd5532dbd0b0d84248ac48ccda668e45c934b78c3bd348bb11d3e647efb1"
+    },
+    {
+      "file": "360x780/after-end-boss30-360.png",
+      "width": 360,
+      "height": 780,
+      "sha256": "cdef345f80336b48327454299ca3efc67eda3e4a08da7836bcca4f52bdd01c85"
+    },
+    {
+      "file": "360x780/after-end-daily-360.png",
+      "width": 360,
+      "height": 780,
+      "sha256": "5314a511c63b4cbb1b98bf230216f614c08adaef1826363ee78b13349872fe37"
+    },
+    {
+      "file": "360x780/after-end-normal-360.png",
+      "width": 360,
+      "height": 780,
+      "sha256": "403c99e5cb84dd63f048647626c2921db80741e819ec342411abd9b8a7bc4348"
+    },
+    {
+      "file": "360x780/after-sizing-360-5x5.png",
+      "width": 360,
+      "height": 780,
+      "sha256": "792ba986373d3379da330cc5549265798ff44c3037f0315fce3e0307ea14cd75"
+    },
+    {
+      "file": "360x780/after-sizing-360-6x6.png",
+      "width": 360,
+      "height": 780,
+      "sha256": "726dce9a7081e5984c7236168f1ba1dc5cc64ecb447a4a239b0505f594f7de9c"
+    },
+    {
+      "file": "360x780/after-sizing-360-7x7.png",
+      "width": 360,
+      "height": 780,
+      "sha256": "34d0eb976d642bacab8443304fc50c3b0707f3056e5bfce9c3e7f31c7d5a2950"
+    },
+    {
+      "file": "360x780/before-end-normal-360.png",
+      "width": 360,
+      "height": 780,
+      "sha256": "fbaa4db8a5f58932a4e5326a96ad33c6c2bb8f2954d9d6436eddbb770780ae3f"
+    },
+    {
+      "file": "360x780/before-narrow-status-360.png",
+      "width": 360,
+      "height": 780,
+      "sha256": "1c2b74af6cf7545894dc6abecc788065f7a3fcae610e101ada273817502ab1d9"
+    },
+    {
+      "file": "360x780/before-sizing-360-5x5.png",
+      "width": 360,
+      "height": 780,
+      "sha256": "9df213cd1bc78110e4b488b18d399549adfdf7451eeee604c31e86b17ad02d11"
+    },
+    {
+      "file": "360x780/before-sizing-360-6x6.png",
+      "width": 360,
+      "height": 780,
+      "sha256": "a9d316e513f4996c75455f23adcc3be709f700be9c845a2d9b194681620cbfa2"
+    },
+    {
+      "file": "360x780/before-sizing-360-7x7.png",
+      "width": 360,
+      "height": 780,
+      "sha256": "80347745b7d96ec8c4fbd4032ade3307b3e6eab20011e076abc10d3c908fcadb"
+    },
+    {
+      "file": "after-card-idle.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "717175d86c3532863cc65ccd7e5b657027a8179362aff92e7946cead49c84c5f"
+    },
+    {
+      "file": "after-chooser-bloom.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "7f711e5763d116b3b87720374a778da1cf8196105c13be16ccda60adffdeb272"
+    },
+    {
+      "file": "after-daily-progress-412.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "84939114287f514256fcef54a241baa7d89fb82dbcbfc37c656d9bbcb7a9eff6"
+    },
+    {
+      "file": "after-empty-message-guard.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "c8ab0a4d74ad66734a01e3649c33ce1feae633393e747aecc844ed3b250ff24d"
+    },
+    {
+      "file": "after-end-boss-412.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "a3cab73ffbe94879e90265b5cab57345ec476306152cbe337620907883bf390d"
+    },
+    {
+      "file": "after-end-boss30-412.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "dde663c584c3bf05bdb4c86f35f3e5c2a8b7f22ea06c475cc7a9f1c6eab12794"
+    },
+    {
+      "file": "after-end-daily-412.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "c8cacd99d91d75d0f37552f67883fe2bc811e6084cfb5a25736106ac74944d34"
+    },
+    {
+      "file": "after-end-normal-412.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "5c3df64d0326959b1d2f53e7b6f79ef0da3f06397be4dd4773dc6b94479abfc7"
+    },
+    {
+      "file": "after-launch-bloom-airborne.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "5ffb2db35c84d7415118c9e6758d2f41537dc8d5399eec54660c98178b6b6226"
+    },
+    {
+      "file": "after-launch-bloom-soaked.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "2a4089b08e2fdebe433214bb7d5c3fbf5ce64f21e07429293525dae997e3ed0c"
+    },
+    {
+      "file": "after-launch-jun-airborne.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "b2a621fafee407c628370aff2b0f19378e7e785a96b64eb02dd9690a750bd71a"
+    },
+    {
+      "file": "after-launch-jun-soaked.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "404ec285bbc6cf29c6768a29182f14a44a9a70f597cee7ec0499c3b31042678f"
+    },
+    {
+      "file": "after-launch-remy-airborne.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "ec4e8dafb688309543d3e7f08ac40dbcc1c71351f5e1a38193325c420ed6e840"
+    },
+    {
+      "file": "after-launch-remy-soaked.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "d717010f726302bc17c74ba12632fab5450ee2d32eee8e5926a9eba2ea66ac1d"
+    },
+    {
+      "file": "after-music-credits.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "1f53214eb1a1b90530772d6e79ad6b51297b50fe55bc719a740c6705cb6699f2"
+    },
+    {
+      "file": "after-nap-single-card.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "3f0d7c4dc4fbdcd7d4b57e898defd442cc616acac76b11427a61d5e60ddb68ad"
+    },
+    {
+      "file": "after-offline-upgrade.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "8806a37c3a7a76848a93993ba1becf5dbb9388ba654013feb3535e097499ad03"
+    },
+    {
+      "file": "after-peek-cleared-compact.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "d72ef73dc42e377dfa413849f255a5a368678a9864ddea76ec3edf75b96e079e"
+    },
+    {
+      "file": "after-peek-single-card.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "97146b5b2e8684a33a306070c1337cd58e311a67fc0e98d0bd39033af9aeff5c"
+    },
+    {
+      "file": "after-second-chance-single-card.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "e9e806d168ff0db515204ac2316e7d3f0667a851fb5d44ba7a8f23b01fbc777c"
+    },
+    {
+      "file": "after-settings-music-off.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "edc6bd2e0af4179df5dffc2e5a013079270217d6b48c8e08b2ac3a12f3e4d129"
+    },
+    {
+      "file": "after-settings-music-on.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "78d3f166d96a4104cb57703b76e952d1987b510912a37ca7808993734a85437a"
+    },
+    {
+      "file": "after-sizing-412-5x5.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "07eda3b8c067b970a48c9dd4c26561668a58ec03c3d5872b7002b15a388d22af"
+    },
+    {
+      "file": "after-sizing-412-6x6.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "ad4d02726d2c3e769c2ba7c4d6250cd8d32a8a79c5ae05519d69e9153059f1eb"
+    },
+    {
+      "file": "after-sizing-412-7x7.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "7b0379c4da666dd697bc4e02319558fe38a21af246f84f133a7026a9c58d939b"
+    },
+    {
+      "file": "after-switch-bloom.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "778ae6ef05a78ac989afcf3666c593fb846a522ed9567dec6af25bfcb95b4080"
+    },
+    {
+      "file": "after-switch-jun.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "7c738f3c26c8bbed162e53805cd92ba813857b54d956a5d82d1c214e8240326a"
+    },
+    {
+      "file": "after-switch-remy.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "897c473f749b68538d996cdc1fb41b4ffc9f62721ece9573da7da671547fd770"
+    },
+    {
+      "file": "after-v31-flight-0450ms.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "5ee35e0a7fb609d4a4ab748a75acc2a0a83fc6203f29f27987055f0f9caa0bd2"
+    },
+    {
+      "file": "after-v31-flight-0750ms.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "ebe1cfd8ec66af751d803f4fe2357798acadff718c7ff1c5ab36157c8e33ad90"
+    },
+    {
+      "file": "after-v31-flight-1100ms.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "b0945624c72c5b290e36d6a3c9f5d911a67b113c4eeaebb4f3cc22e5c6c38e25"
+    },
+    {
+      "file": "after-v31-flight-1400ms.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "223009126820620dcdaaa7cd0d2f55d70965340563c3005e78126402224f5efe"
+    },
+    {
+      "file": "after-v31-flight-1700ms.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "36b554dc6725ebb4092809a8df7e48eaab92d354aeb91b99467c1ea32eeb0e58"
+    },
+    {
+      "file": "after-v31-flight-2100ms.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "1ecb3ba0d5f4fdcc4996be95d4f9b70d0bcde8a72a975bc5474225d149fb7aa0"
+    },
+    {
+      "file": "after-v31-flight-2900ms.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "370996d2c9ef2887ece4f9f2c8f22b203108d87569b2d6d274946de11a7789f3"
+    },
+    {
+      "file": "before-card-idle.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "8e472c31a9a042b19d93fdcfa324d3f8be371433225f583c32488c9c312b7b45"
+    },
+    {
+      "file": "before-chooser-bloom.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "4eeea6feaf78005471e5f96b6695508822a28229ebc8a2da56b0b038cb91e005"
+    },
+    {
+      "file": "before-end-normal-412.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "2692ca09781d3d308d760e5a241ef577810a1f16729d0caa0d72499043ce5ace"
+    },
+    {
+      "file": "before-nap-duplicate.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "2bc6ddec01296ac4149be8584c86cab2c8014fac099561b5f2aa78399f1f816a"
+    },
+    {
+      "file": "before-peek-duplicate.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "032a482788124de8d16214f415aebef8baf872f31fc9b7016880834401a1c7ea"
+    },
+    {
+      "file": "before-second-chance.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "8d37841770a19f702ffab4e202e8a39954d44ba119c2a51fdbb8b3272978a674"
+    },
+    {
+      "file": "before-sizing-412-5x5.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "a65c3344cec8fc47effaf2df1a49b52bcefca6c6de19530222bb4a2d1478d3ff"
+    },
+    {
+      "file": "before-sizing-412-6x6.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "d3aee9a17c372b508db3571f90bf6c71fe1d38bb1ca236cfafe2dc74171a5272"
+    },
+    {
+      "file": "before-sizing-412-7x7.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "05e4e93008f4fb3f1f1d730a4d584c275fd5859fbc50cbe040458e978987e047"
+    },
+    {
+      "file": "before-switch-bloom.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "70d475e510109ae417a62de43cc3ed3f5c0af5ee56b6cba5c8b80432ea742b90"
+    },
+    {
+      "file": "before-v3-flight-0000ms.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "a098633363bbe5846bca1373b3cbb08d52303121d6e556065886f7abc0aa466e"
+    },
+    {
+      "file": "before-v3-flight-0300ms.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "0aad0040d230c11d5ab73382fb33f7772d85c12953d92d7649c3b7e1d4fc316e"
+    },
+    {
+      "file": "before-v3-flight-0600ms.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "3956a40a9738dba15c452bfd888e3356f9a7c884bf542c21c70774e4e6292ae8"
+    },
+    {
+      "file": "before-v3-flight-0900ms.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "d26471cd8b023011195642c89759c95f8bb0c7a61b5fc01c28b5599bf35d067f"
+    },
+    {
+      "file": "before-v3-flight-1200ms.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "c9b649183baaa8ec9cc54018f07fe84730ac997f5623eb8ea0ece294d02cd6f9"
+    },
+    {
+      "file": "before-v3-flight-1600ms.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "d0f0a02d500c876fcca647a53426a73d54133fb1ae95a4dc6de34ee7a5dd7513"
+    },
+    {
+      "file": "before-v3-flight-2200ms.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "a83e073d7fc605c9d9018e65750709bbfd518944b529017d30c4dfd2d65cd6b2"
+    },
+    {
+      "file": "before-v3-flight-3000ms.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "ac32ef6465661b68b976660233ab7daa2b0b301e2b273ff25366b5abd14c70e5"
+    },
+    {
+      "file": "reference-v1-flight-0000ms.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "6f15349845e68c883498467feab35da353f7c3b20ccbfee57dc78e46d122d6b3"
+    },
+    {
+      "file": "reference-v1-flight-0400ms.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "d4b089f0d885380510331fd4bda32ba4e96c86be88d614c1fc930121cfda0b99"
+    },
+    {
+      "file": "reference-v1-flight-0800ms.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "41f0d59743c72fc10f4eaf85d64354512ebdb94d875e0e31f8318593790b7616"
+    },
+    {
+      "file": "reference-v1-flight-1200ms.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "4e817a69b96097639744c2f38f5a86c90828539d2de750f38f65e54981da1a3f"
+    },
+    {
+      "file": "reference-v1-flight-1800ms.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "29adc6aeedf487f4aceed82152216ae6e2c9fe2d287a5f83b230db6e404eb5bc"
+    },
+    {
+      "file": "regression/00-first-run-chooser.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "7f711e5763d116b3b87720374a778da1cf8196105c13be16ccda60adffdeb272"
+    },
+    {
+      "file": "regression/01-pond-path.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "6ce7354cf96c85879e53e4b763c807c89df6db28790242e05e8b83f3de9c9619"
+    },
+    {
+      "file": "regression/02-level-progress.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "d81850b66c49159cf89f3809c1eab8748de2dd22b74cbc13050bd121cfbd635d"
+    },
+    {
+      "file": "regression/03-peek.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "5c7238f3dabd01f5a0863ed8b5e1cb04132951cd686aba1c541704ffcfdf38dc"
+    },
+    {
+      "file": "regression/04-violation.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "c86b756f1c5ea59d86f15dfd302a6825e18bd6c659232bef4a38768d33ed7a40"
+    },
+    {
+      "file": "regression/05-game-over.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "0753f99fd3fef2d1dca11dd65fd8d471b7c81f5af510af2728d61629068799e6"
+    },
+    {
+      "file": "regression/06-chill.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "7071bcc4e46d60a3ef778bb47281e8e42ac782a05e7158b29eac839560228845"
+    },
+    {
+      "file": "regression/07-boss-pond.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "218929fbd89ea5884bde43b8171bb9822d1702894c71b3be0b702938dfe7aff1"
+    },
+    {
+      "file": "regression/08-solved-start.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "edb368a6754783d00812b812c7dcc761cee69397618d21877f44f5e4043ba7d6"
+    },
+    {
+      "file": "regression/09-solved-mid-jump.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "a098f3f8217b44e94b52b6555fa86ecadb7de927c04989a8c61b553ded3a0b65"
+    },
+    {
+      "file": "regression/10-solved-in-spring.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "e04d4881073d97ec7ac3b4fd22e3b840fc15cf1736ea9a4594127afe564da95d"
+    },
+    {
+      "file": "regression/11-daily-pond.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "a45ae3956bba6d1cf8d5b7fd8585fceb17f3844dd4f4933a07a87eabbbe0c663"
+    },
+    {
+      "file": "regression/12-hot-spring.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "e63b5a4feb7712fffe7120a37971301b5969e415882d75d7570d7bf84bc75a9a"
+    },
+    {
+      "file": "regression/13-rocks-7x7.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "c2bdb748af7727a28efb84266f078c9366053a570942cbcafadca65d85ea0748"
+    },
+    {
+      "file": "regression/14-offline.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "063483bbbd643748690fe5a11dd2f6f1789ecb88db13f2b6163ea690efc0e20c"
+    },
+    {
+      "file": "regression/15-drag-mid-gesture.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "738a28129468df314ef4749c12c9c0b39464d62775b59a3c3fe089bec89f22c2"
+    },
+    {
+      "file": "regression/16-haptics-on.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "db0ed44fa414a6c11f9bab92d52efda8e0725ded91b7add9d07fc719ef760d98"
+    },
+    {
+      "file": "regression/17-haptics-off.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "d1eebf7c6c9417a47eae05d10266d5fa63b2769872265b8530c8df3234a45e74"
+    },
+    {
+      "file": "regression/18-rules-sheet.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "2be187092e9d666cc45cf22ee7c93c4c83d1cd8bfd87da3f8f9d1d61d4aa994c"
+    },
+    {
+      "file": "regression/19-hot-spring-tier1.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "1c9137753bc8154e4ae9894fdf61662ce4b4ddd6eaaf00ffe653ac8a7fa0b4d9"
+    },
+    {
+      "file": "regression/20-daily-without-rocks.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "b9b4abf191cd8a4eb0f46e20bfb82de3228eaf053024917657a9aba5268c6cf1"
+    },
+    {
+      "file": "regression/21-daily-first-rock-intro.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "1ce30b878d7a51156a839a1676ba29aa123ac4283d71ff032c1ebe17f5f23805"
+    },
+    {
+      "file": "regression/22-daily-with-rocks.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "735d05248e44b0a24392611b2a7b476d7c53457d1d274901a8e14c41ac379291"
+    },
+    {
+      "file": "regression/23-campaign-rock-intro.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "8e923a765b8ca38395aa59869298caa77c9456c3d22ce97452947a39be2c53e1"
+    },
+    {
+      "file": "regression/24-migrated-spring-tier3.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "00413b21e5761df9b7e040e31b5e81d2fc691143782d5494558cae7c4b3556fc"
+    },
+    {
+      "file": "regression/25-offline-after-v1-v3-update.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "07eda3b8c067b970a48c9dd4c26561668a58ec03c3d5872b7002b15a388d22af"
+    },
+    {
+      "file": "regression/boss-golden-lily-reward.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "a3284fb746689da118b5b26f205af6dd9c8ff4430ef51222acbcc646fef75b16"
+    },
+    {
+      "file": "regression/boss-pure-solve-soak.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "1d80101454301bd9898871426df800203d06185beffe83ef21d78ba88d8d7f4a"
+    },
+    {
+      "file": "regression/celebration-01-anticipation.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "edb368a6754783d00812b812c7dcc761cee69397618d21877f44f5e4043ba7d6"
+    },
+    {
+      "file": "regression/celebration-02-first-jump.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "d41779cdc431628fa5b1184a9f9f9af998c04f92f28a592858b5e4c8b173a47d"
+    },
+    {
+      "file": "regression/celebration-03-first-splash.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "caafddd05823effe15227ef899c4e7b7f6c61c0f4e4b6f5f53c3f49972dfd42a"
+    },
+    {
+      "file": "regression/celebration-04-second-splash.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "56829f97a8a8e0135781bc3bfa1b145dcf863d13c86619ca982f6af4a36f52e6"
+    },
+    {
+      "file": "regression/celebration-05-soaking.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "93b9c41b1d6fc1ef3c324053e5b3d10e9483695a156041959b3595e5a0e45922"
+    },
+    {
+      "file": "regression/celebration-06-reaction.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "f91cddcff7ff5cf498f1c55fb77e74291a01501a6c31112e1cf5ad985e2f1cea"
+    },
+    {
+      "file": "regression/celebration-reduced-motion.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "64b6ba25f9b0428d400b72227d780d39c5c7b48cde2c8b6956465f07247ec536"
+    },
+    {
+      "file": "regression/early-1.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "717175d86c3532863cc65ccd7e5b657027a8179362aff92e7946cead49c84c5f"
+    },
+    {
+      "file": "regression/early-2.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "d45179a755a4bdd742e329a2b01cf77b22e29d5309e12c08442a51f7015102bd"
+    },
+    {
+      "file": "regression/early-3.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "07eda3b8c067b970a48c9dd4c26561668a58ec03c3d5872b7002b15a388d22af"
+    },
+    {
+      "file": "regression/ios-install-instruction.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "c77fec549e4b8123cabe61c2a16a955620fa01a7d54624ff6ae102cd149bafc8"
+    },
+    {
+      "file": "regression/ios-standalone-detected.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "2653bacf7e36251ba80f19f244830300644968012d15f5d6803d3db382a7d2ac"
+    },
+    {
+      "file": "regression/migration-v2-v3-board.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "2876e937f62843663e829a3bcd0396c479709da1b6c98441678a835147224907"
+    },
+    {
+      "file": "regression/offline-v2-v3-upgrade.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "859d1da2026dcde0884e949a7f99843e3fc0d275df88226d12a6942cf6671d55"
+    },
+    {
+      "file": "regression/power-nap-active-1.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "11c88b5e47b7ba00bca2dc701d917353cfa38632cd400d8b3426cb73c72249f4"
+    },
+    {
+      "file": "regression/power-nap-active-3.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "3f0d7c4dc4fbdcd7d4b57e898defd442cc616acac76b11427a61d5e60ddb68ad"
+    },
+    {
+      "file": "regression/power-nap-drag.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "517b9108b566784a582a6b13972444033e6017677a33de135a6fe0120ffb8af9"
+    },
+    {
+      "file": "regression/power-peek-last-target.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "8d9e3255eec702b99900dabe639c0892ee413d430562e80317b0fc2a00d3b647"
+    },
+    {
+      "file": "regression/power-relax-peek-bloom.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "d2b54e7d86f5418bfec2749617d5ef826439b72313ba62ee64dafc06adea5149"
+    },
+    {
+      "file": "regression/power-second-chance-game-over.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "41643e240e8be72143c9c477a466c7fd388263d9a0e10ebc376948b523e51258"
+    },
+    {
+      "file": "regression/power-second-chance-ready.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "c637b3056bd015a40c3503b41c8a6124ec0e07256ef4131b79da5ad34c79c0c8"
+    },
+    {
+      "file": "regression/power-second-chance-restored.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "e9e806d168ff0db515204ac2316e7d3f0667a851fb5d44ba7a8f23b01fbc777c"
+    },
+    {
+      "file": "regression/spring-golden-lily.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "e63b5a4feb7712fffe7120a37971301b5969e415882d75d7570d7bf84bc75a9a"
+    },
+    {
+      "file": "regression/spring-stage-0-bosses.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "1c9137753bc8154e4ae9894fdf61662ce4b4ddd6eaaf00ffe653ac8a7fa0b4d9"
+    },
+    {
+      "file": "regression/spring-stage-1-bosses.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "aee7d4dbcd56423c3dd493eaa2a065ca0119b30f36b009640b78b0a45ccdd8a1"
+    },
+    {
+      "file": "regression/spring-stage-2-bosses.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "edbedd4b0fe62cfd4350e78645130e31f441116721b22ace18376105cbb8bcee"
+    },
+    {
+      "file": "regression/spring-stage-3-bosses.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "b6ed5eb5eda4b88ba9424358f16287d62203b2b5bd47b8e6db8990c660a9ec59"
+    },
+    {
+      "file": "regression/spring-three-golden-lilies.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "bdde27308b9e0c06f0a3a93d1501b86de878be8a23315b582b9daf0d1952c747"
+    },
+    {
+      "file": "regression/starter-connected-path.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "baca0a3a22890dce340d4684bcfc39f46db42aefe6eba76a6b76a9fce7374095"
+    },
+    {
+      "file": "regression/starter-home-badge.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "6ce7354cf96c85879e53e4b763c807c89df6db28790242e05e8b83f3de9c9619"
+    },
+    {
+      "file": "regression/starter-hotspring-friends.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "5774f185adc10501379d2039efebad80b4ac18cd66739047cf34556f9e6468f9"
+    },
+    {
+      "file": "regression/starter-hotspring-remy.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "6e749f655617a7c63eeaacd44c97e40eae4aa37f844a062fd548bb224c4dde22"
+    },
+    {
+      "file": "regression/starter-switch-sheet.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "fc1c04d544fe712ccccc63a97c2e4a728b671d2eb4c8188aeacb8ee27fec29f6"
+    },
+    {
+      "file": "regression/v3-relax-off.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "bb1b3dee2013fefc9a4c1005558c8cf013e3caaf0e37490c06fbeb02efc5f74e"
+    },
+    {
+      "file": "regression/v3-relax-on.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "0fe70ab61c39b6643af4adc59068da25ce5b4f91dc1a17b538899c9078cb82a0"
+    },
+    {
+      "file": "sizing/A-level-21-7x7.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "17908260e7fe16b2356521c5fe8efeb2316d2b6be68245daf14918182e80826f"
+    },
+    {
+      "file": "sizing/A-level-3-5x5.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "8850b93ff0ff65f4a112746a5d51819fc94a3b8ce691f95d54738fd7840bb3c4"
+    },
+    {
+      "file": "sizing/A-level-9-6x6.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "a194dee7a5fd8648e92e1b065dc9469f10803aaacc3a38232e420fd77f57a34b"
+    },
+    {
+      "file": "sizing/B-level-21-7x7.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "34588fdc5698ad0a5fea687938508b6e1c1966416883f8887c186ee54d4c9f94"
+    },
+    {
+      "file": "sizing/B-level-3-5x5.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "4abec2df63b07dc069781abc2ed05afa00f9b1793455a3718752597183622a07"
+    },
+    {
+      "file": "sizing/B-level-9-6x6.png",
+      "width": 412,
+      "height": 915,
+      "sha256": "7f61737742a4747ea9fc403f10973fa3923abbc9e848d3a71d1ffe62f5b65e93"
+    }
+  ]
+}

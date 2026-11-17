@@ -1,0 +1,72 @@
+[
+ {
+  "world": 1,
+  "logic": 24,
+  "sizes": "7/8/9/10",
+  "score": 492.292,
+  "bossScores": "450,720,1001",
+  "deepest3": 23,
+  "forcedShare": 0.513,
+  "rank3Steps": 7.75,
+  "firstCapy": 5.792,
+  "rocks": 0.667,
+  "twist": 0.413,
+  "crateMoves": "26,30,39,57,66,80"
+ },
+ {
+  "world": 2,
+  "logic": 24,
+  "sizes": "8/9/10",
+  "score": 716.5,
+  "bossScores": "841,950,1065",
+  "deepest3": 24,
+  "forcedShare": 0.393,
+  "rank3Steps": 11.042,
+  "firstCapy": 5.333,
+  "rocks": 2.167,
+  "twist": 0.439,
+  "crateMoves": ""
+ },
+ {
+  "world": 3,
+  "logic": 24,
+  "sizes": "9/10",
+  "score": 786.708,
+  "bossScores": "923,1036,1138",
+  "deepest3": 24,
+  "forcedShare": 0.388,
+  "rank3Steps": 12.667,
+  "firstCapy": 6.792,
+  "rocks": 2.75,
+  "twist": 0.448,
+  "crateMoves": ""
+ },
+ {
+  "world": 4,
+  "logic": 24,
+  "sizes": "9/10",
+  "score": 872.583,
+  "bossScores": "996,1153,1256",
+  "deepest3": 24,
+  "forcedShare": 0.355,
+  "rank3Steps": 13.375,
+  "firstCapy": 10.083,
+  "rocks": 3.708,
+  "twist": 0.451,
+  "crateMoves": ""
+ },
+ {
+  "world": 5,
+  "logic": 24,
+  "sizes": "10/9",
+  "score": 945.083,
+  "bossScores": "1093,1229,1310",
+  "deepest3": 24,
+  "forcedShare": 0.347,
+  "rank3Steps": 15.208,
+  "firstCapy": 9.583,
+  "rocks": 4.458,
+  "twist": 0.456,
+  "crateMoves": ""
+ }
+]

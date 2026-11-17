@@ -1,0 +1,270 @@
+{
+  "checked_at": "2026-11-10T00:22:51.323215-05:00",
+  "source_approval": "Latest explicit instruction overrides old pending header",
+  "all_copies_byte_identical": true,
+  "files": [
+    {
+      "file": "assets/v64/power-icons/bloom-face.png",
+      "source": "/workspace/capydoku/mockup/v6.4/assets/power-icons/bloom-face.png",
+      "bytes": 26927,
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "sha256": "092ded803ae9a5bd63c9d18d3d308ec932a59b3f1112ad9211f7d466eb0d4205",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true
+    },
+    {
+      "file": "assets/v64/starters/bloom-32@1x.png",
+      "source": "/workspace/capydoku/mockup/v6.4/assets/starters/bloom-32@1x.png",
+      "bytes": 1872,
+      "size": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "sha256": "8bc44ca232c733e2ef08ae0c8a9167469361b331bf5b13242c2b0cb9521883cf",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true
+    },
+    {
+      "file": "assets/v64/starters/bloom-32@2x.png",
+      "source": "/workspace/capydoku/mockup/v6.4/assets/starters/bloom-32@2x.png",
+      "bytes": 5665,
+      "size": [
+        64,
+        64
+      ],
+      "mode": "RGBA",
+      "sha256": "a0c56a01cee037d3f4c3444c7ff928045a4e7a284aa86485371579659dd16da2",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true
+    },
+    {
+      "file": "assets/v64/starters/bloom-32@3x.png",
+      "source": "/workspace/capydoku/mockup/v6.4/assets/starters/bloom-32@3x.png",
+      "bytes": 10435,
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "sha256": "3319d8da7de1d3f1c9fc08e14b68f3c9172f4c4e8966d266e2fae733b7d71875",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true
+    },
+    {
+      "file": "assets/v64/starters/bloom-44@1x.png",
+      "source": "/workspace/capydoku/mockup/v6.4/assets/starters/bloom-44@1x.png",
+      "bytes": 3110,
+      "size": [
+        44,
+        44
+      ],
+      "mode": "RGBA",
+      "sha256": "ba41edc0f74132beddc26fa0b850ee16c0d1d3f224b202ce74233c6cd7ac827e",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true
+    },
+    {
+      "file": "assets/v64/starters/bloom-44@2x.png",
+      "source": "/workspace/capydoku/mockup/v6.4/assets/starters/bloom-44@2x.png",
+      "bytes": 9502,
+      "size": [
+        88,
+        88
+      ],
+      "mode": "RGBA",
+      "sha256": "5d419fb8a881b6564e6c7254f76ba78e6a8336c72e430e16e0280b02dececbed",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true
+    },
+    {
+      "file": "assets/v64/starters/bloom-44@3x.png",
+      "source": "/workspace/capydoku/mockup/v6.4/assets/starters/bloom-44@3x.png",
+      "bytes": 18406,
+      "size": [
+        132,
+        132
+      ],
+      "mode": "RGBA",
+      "sha256": "37201167ce363c0404c991af2f0934e79e1e2068f2cb48465071f560f26524bb",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true
+    },
+    {
+      "file": "assets/v64/starters/bloom-51@1x.png",
+      "source": "/workspace/capydoku/mockup/v6.4/assets/starters/bloom-51@1x.png",
+      "bytes": 3864,
+      "size": [
+        51,
+        51
+      ],
+      "mode": "RGBA",
+      "sha256": "a7f6005b077764a973b9f4ec2fbebeb9eccb8d9674d9830611e76d4e745d4f04",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true
+    },
+    {
+      "file": "assets/v64/starters/bloom-51@2x.png",
+      "source": "/workspace/capydoku/mockup/v6.4/assets/starters/bloom-51@2x.png",
+      "bytes": 12197,
+      "size": [
+        102,
+        102
+      ],
+      "mode": "RGBA",
+      "sha256": "cc711f8c272c24f2b674bb799d5131942042a4751d76dfcebb74298d83add544",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true
+    },
+    {
+      "file": "assets/v64/starters/bloom-51@3x.png",
+      "source": "/workspace/capydoku/mockup/v6.4/assets/starters/bloom-51@3x.png",
+      "bytes": 24179,
+      "size": [
+        153,
+        153
+      ],
+      "mode": "RGBA",
+      "sha256": "993ad5f190e0eab32ecf1994c81b5b916335d2cf74d1639f110ae519adda024e",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true
+    },
+    {
+      "file": "assets/v64/starters/bloom-64@1x.png",
+      "source": "/workspace/capydoku/mockup/v6.4/assets/starters/bloom-64@1x.png",
+      "bytes": 5665,
+      "size": [
+        64,
+        64
+      ],
+      "mode": "RGBA",
+      "sha256": "a0c56a01cee037d3f4c3444c7ff928045a4e7a284aa86485371579659dd16da2",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true
+    },
+    {
+      "file": "assets/v64/starters/bloom-64@2x.png",
+      "source": "/workspace/capydoku/mockup/v6.4/assets/starters/bloom-64@2x.png",
+      "bytes": 18121,
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "sha256": "f8add0d350fac827202123095001a2486873e7474518b1ea6cc368862875169b",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true
+    },
+    {
+      "file": "assets/v64/starters/bloom-64@3x.png",
+      "source": "/workspace/capydoku/mockup/v6.4/assets/starters/bloom-64@3x.png",
+      "bytes": 36783,
+      "size": [
+        192,
+        192
+      ],
+      "mode": "RGBA",
+      "sha256": "67fc0a31837c048731f5fa27906b0f9361bacfdf509d186fb03254b46bc8524b",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true
+    },
+    {
+      "file": "assets/v64/starters/bloom-hello-pond.jpg",
+      "source": "/workspace/capydoku/mockup/v6.4/assets/starters/bloom-hello-pond.jpg",
+      "bytes": 110860,
+      "size": [
+        900,
+        700
+      ],
+      "mode": "RGB",
+      "sha256": "d42ca5e984904caea99aa24078f0704f7efcb5d84b045ab2d0635986ba9ba0eb"
+    },
+    {
+      "file": "assets/v64/starters/bloom-hello-pond.png",
+      "source": "/workspace/capydoku/mockup/v6.4/assets/starters/bloom-hello-pond.png",
+      "bytes": 192100,
+      "size": [
+        900,
+        700
+      ],
+      "mode": "RGBA",
+      "sha256": "21e0c78ee9d83b76e1aeda4d15a6f75769ba68e198626b7b57a97309e17f42cc",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true
+    },
+    {
+      "file": "assets/v64/starters/bloom.png",
+      "source": "/workspace/capydoku/mockup/v6.4/assets/starters/bloom.png",
+      "bytes": 703442,
+      "size": [
+        960,
+        960
+      ],
+      "mode": "RGBA",
+      "sha256": "6471871028c154968ed1e5a1ea25b915f3346b216e26fec37fcb7842ad3208b1",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true
+    }
+  ],
+  "old_aliases_excluded_from_precache": true,
+  "density_families": [
+    32,
+    44,
+    51,
+    64
+  ],
+  "densities": [
+    1,
+    2,
+    3
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "from": "capydoku-v4.3.1-6bc138e4dee2",
+  "to": "capydoku-v4.3.1-6bc138e4dee2-later",
+  "deferredDuring": "crate pond",
+  "reloadOn": "leave → Home",
+  "automaticReloads": 1,
+  "consoleErrors": []
+}

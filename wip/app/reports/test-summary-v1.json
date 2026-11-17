@@ -1,0 +1,65 @@
+{
+  "version": "1.0.0-local",
+  "cache": "capydoku-v1-8b4a6b4dd14b",
+  "completed_at": "2026-11-09T18:05:39.053852-05:00",
+  "timezone": "America/New_York",
+  "unit": {
+    "passed": 24,
+    "failed": 0,
+    "command": "npm run test:unit"
+  },
+  "playwright": {
+    "passed": 14,
+    "failed": 0,
+    "command": "npm run test:e2e",
+    "elapsed_seconds": 23.76,
+    "viewport": [
+      412,
+      915
+    ],
+    "mobile": true,
+    "touch": true,
+    "device_scale": 1,
+    "browser": "Chromium 158",
+    "console_errors": 0,
+    "real_S24": false
+  },
+  "verification": {
+    "campaign": 30,
+    "daily_consecutive_dates": 365,
+    "unique_solutions_each": 1,
+    "all_logic_solvable": true,
+    "independent_oracles": [
+      "Python all-permutation enumeration",
+      "JS row-by-row backtracker"
+    ]
+  },
+  "precache": {
+    "urls": 24,
+    "all_200": true
+  },
+  "offline": {
+    "browser_network_disconnected": true,
+    "navigator_onLine": false,
+    "reload": true,
+    "unvisited_query_navigation": true,
+    "saved_state": true,
+    "all_essential_200": true
+  },
+  "screenshots": {
+    "count": 14,
+    "each_size": [
+      412,
+      915
+    ],
+    "contact_sheet": "reports/contact-sheet.png"
+  },
+  "published": false,
+  "repositories_created": false,
+  "paid_services": false,
+  "fixes_and_history": [
+    "Initial unit fixture picked different zones; corrected to a genuinely same-zone nonadjacent pair. Original failure log preserved.",
+    "Audit caught possible misleading hint on locally legal but inconsistent board; now requires a complete monotone proof before pointing. Regression test added.",
+    "Visual review caught duplicated board capys during jump; source now becomes a faint cleared check while the single capy flies."
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "cost_usd": 0,
+  "account_required": false,
+  "tracks": [
+    {
+      "id": "flute-and-guitar",
+      "title": "Flute and Guitar",
+      "author": "Alex McCulloch (Pro Sensory)",
+      "source": "https://opengameart.org/content/flute-and-guitar",
+      "original": "flute-and-guitar.mp3",
+      "credit": "Music: Alex McCulloch \u2014 Flute and Guitar (CC0).",
+      "duration_seconds": 76.251,
+      "original_sha256": "4b5e1a658b972e89f5455a78c85b4fa5cede91ef77740400696eab56da167070",
+      "formats": {
+        "ogg": {
+          "bytes": 456542,
+          "sha256": "4e1500629fffb4c216d38f89bd6cbeafcb405296b8cedef79c7d042c87da8ce4",
+          "bitrate": "40k",
+          "decode_ok": true
+        },
+        "mp3": {
+          "bytes": 610263,
+          "sha256": "a5ca10cc1a54c04a27f5c315147d83e71eae08affb30516811288116ee9c88d8",
+          "bitrate": "64k",
+          "decode_ok": true
+        }
+      },
+      "license": "CC0 1.0 Universal",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "checked": "2026-11-09 EST"
+    },
+    {
+      "id": "flute-strings",
+      "title": "Minimalistic Flute & Strings Tune",
+      "author": "Spring Spring",
+      "source": "https://opengameart.org/content/minimalistic-flute-strings-tune",
+      "original": "flute-strings.ogg",
+      "credit": "Minimalistic Flute & Strings Tune \u2014 Spring Spring (CC0).",
+      "duration_seconds": 194.56,
+      "original_sha256": "42bc911a56867092a1d89c326ed755a0155cb468d1d8a2c22bf0139f2dd890dc",
+      "formats": {
+        "ogg": {
+          "bytes": 1215627,
+          "sha256": "0ae69b37b06a755a8628af1ac3953ae4bcb287a64f4159777f1c115808382772",
+          "bitrate": "40k",
+          "decode_ok": true
+        },
+        "mp3": {
+          "bytes": 1556940,
+          "sha256": "644723b5b23346aa2172ff21f293bfd2eb4d875c7e67f77cf24959b8b8a60b78",
+          "bitrate": "64k",
+          "decode_ok": true
+        }
+      },
+      "license": "CC0 1.0 Universal",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "checked": "2026-11-09 EST"
+    },
+    {
+      "id": "revelation",
+      "title": "Revelation",
+      "author": "Indieteur",
+      "source": "https://opengameart.org/content/revelation",
+      "original": "revelation.mp3",
+      "credit": "Revelation \u2014 Indieteur (CC0; attribution appreciated, not required).",
+      "duration_seconds": 84.846,
+      "original_sha256": "b6111a64fa948e76b01d08fc5de53177885a8d8db0dea65330946760892feb43",
+      "formats": {
+        "ogg": {
+          "bytes": 469229,
+          "sha256": "6ef84434dd20cbdaeb94d41fabf06bd1093dd39490464b262e8e6e8df69dff5f",
+          "bitrate": "40k",
+          "decode_ok": true
+        },
+        "mp3": {
+          "bytes": 679017,
+          "sha256": "defc5db63fc50275ea39389fa6c4d53906ab6a061df13ebc7a1c6da29a392f1d",
+          "bitrate": "64k",
+          "decode_ok": true
+        }
+      },
+      "license": "CC0 1.0 Universal",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "checked": "2026-11-09 EST"
+    }
+  ],
+  "total_audio_bytes": 4987618,
+  "codec_reference": "https://webkit.org/blog/16574/webkit-features-in-safari-18-4/",
+  "license_verified_from_live_source_pages": true
+}

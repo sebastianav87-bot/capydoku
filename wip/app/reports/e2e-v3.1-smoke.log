@@ -1,0 +1,15 @@
+
+Running 8 tests using 1 worker
+
+(node:325383) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/v3.spec.js:9:1 › v3 rules line, sheet, true 5px outlines, counters, Relax off/on, safe flex layout (1.6s)
+  ✓  2 tests/v3.spec.js:10:1 › Hot Spring option A stages at zero/one/two/three bosses, earned slots and decorations (1.5s)
+  ✓  3 tests/v3.spec.js:11:1 › enhanced solve: six live frames, solve-order jumps, timed splash haptics, optional local sound (4.8s)
+  ✓  4 tests/v3.spec.js:12:1 › reduced motion crossfades straight to soaking with no jumps or splash haptics (3.6s)
+  ✓  5 tests/v3.spec.js:13:1 › mouse pointer ID reuse after drag still permits mark, clear and one-click controls (2.0s)
+  ✓  6 tests/v31.spec.js:6:1 › v3.1 Peek has ONE message, compact card never flex-grows; empty content collapses without shifting board/counters (3.8s)
+  ✓  7 tests/v31.spec.js:9:1 › v3.1 Nap and Second chance also have one card-only message, no duplicate power toast (1.7s)
+  ✓  8 tests/v31.spec.js:11:1 › v3.1 clean Bloom preview at first run AND switch; source steam pixels absent and other starters still decode (930ms)
+
+  8 passed (20.7s)

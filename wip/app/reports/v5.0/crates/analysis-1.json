@@ -1,0 +1,3382 @@
+[
+ {
+  "rows": [
+   "##########",
+   "#  #    @#",
+   "#        #",
+   "#        #",
+   "# .   #  #",
+   "# # .$ # #",
+   "#     #  #",
+   "#.#  $$ ##",
+   "##       #",
+   "##########"
+  ],
+  "size": "8x8",
+  "rocks": 8,
+  "floor": 56,
+  "optimal_moves": 60,
+  "pushes_in_move_optimal": 26,
+  "optimal_pushes": 18,
+  "moves_in_push_optimal": 66,
+  "states_explored_bfs": 744182,
+  "solution": "DDLLLDLDDRUUURULULDDRDLLDDDDRRUUDDRRULLDLUURUUURULLLLULDDDDD",
+  "push_optimal_solution": "DDLLLDLDDRUDLDDRUDRRULLLDLURULLRURRDLDDRRULDLUURUULUURRDLLLULDLDDD",
+  "box_lines_move_opt": 10,
+  "box_lines_push_opt": 12,
+  "dead_squares": 23,
+  "dead_square_cells": [
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    4
+   ],
+   [
+    1,
+    5
+   ],
+   [
+    1,
+    6
+   ],
+   [
+    1,
+    7
+   ],
+   [
+    1,
+    8
+   ],
+   [
+    2,
+    8
+   ],
+   [
+    3,
+    8
+   ],
+   [
+    4,
+    7
+   ],
+   [
+    4,
+    8
+   ],
+   [
+    5,
+    6
+   ],
+   [
+    5,
+    8
+   ],
+   [
+    6,
+    7
+   ],
+   [
+    6,
+    8
+   ],
+   [
+    7,
+    7
+   ],
+   [
+    8,
+    2
+   ],
+   [
+    8,
+    3
+   ],
+   [
+    8,
+    4
+   ],
+   [
+    8,
+    5
+   ],
+   [
+    8,
+    6
+   ],
+   [
+    8,
+    7
+   ],
+   [
+    8,
+    8
+   ]
+  ],
+  "crates_on_fruit_at_start": [],
+  "crates_touching_wall_at_start": 1,
+  "par_suggested": 85,
+  "seconds": 9.89,
+  "push_states": 27730,
+  "solvable_states": 4913,
+  "dead_states": 22817,
+  "subtle_dead_states": 544,
+  "trap_push_rate": 0.17,
+  "branch_points": 4901,
+  "first_trap_at_push": 0,
+  "start_push_options": 5,
+  "silent_dead_states": 912,
+  "silent_trap_push_rate": 0.028,
+  "silent_first_at_push": 0,
+  "early_silent_trap_states_le3": 4,
+  "max_silent_region": 524,
+  "start_trap_options": 4,
+  "optimal_pushes_graph": 18,
+  "slot": "P35-1",
+  "pond": 35,
+  "par_draft": null
+ },
+ {
+  "rows": [
+   "##########",
+   "#        #",
+   "##$$     #",
+   "# $  #   #",
+   "#       ##",
+   "#    #   #",
+   "# #      #",
+   "#       ##",
+   "#. # # .+#",
+   "##########"
+  ],
+  "size": "8x8",
+  "rocks": 8,
+  "floor": 56,
+  "optimal_moves": 68,
+  "pushes_in_move_optimal": 28,
+  "optimal_pushes": 28,
+  "moves_in_push_optimal": 68,
+  "states_explored_bfs": 846771,
+  "solution": "LUUUUUUULLLLDDDDULLURRUULDDURRDDDLDUULULDDDDRRRRRURDLDRULLLLURRRURDD",
+  "push_optimal_solution": "LUUUUUUULLLLDDDLLURRUULDDDRDDULULDDDRRRRRURDLDRUUUUUULLLDLDRRRURDDDD",
+  "box_lines_move_opt": 12,
+  "box_lines_push_opt": 12,
+  "dead_squares": 16,
+  "dead_square_cells": [
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    1,
+    4
+   ],
+   [
+    1,
+    5
+   ],
+   [
+    1,
+    6
+   ],
+   [
+    1,
+    7
+   ],
+   [
+    1,
+    8
+   ],
+   [
+    2,
+    8
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    3,
+    8
+   ],
+   [
+    5,
+    8
+   ],
+   [
+    6,
+    8
+   ],
+   [
+    8,
+    2
+   ],
+   [
+    8,
+    4
+   ],
+   [
+    8,
+    6
+   ]
+  ],
+  "crates_on_fruit_at_start": [],
+  "crates_touching_wall_at_start": 1,
+  "par_suggested": 100,
+  "seconds": 11.13,
+  "push_states": 26238,
+  "solvable_states": 9354,
+  "dead_states": 16884,
+  "subtle_dead_states": 527,
+  "trap_push_rate": 0.135,
+  "branch_points": 9320,
+  "first_trap_at_push": 0,
+  "start_push_options": 4,
+  "silent_dead_states": 367,
+  "silent_trap_push_rate": 0.009,
+  "silent_first_at_push": 3,
+  "early_silent_trap_states_le3": 1,
+  "max_silent_region": 211,
+  "start_trap_options": 2,
+  "optimal_pushes_graph": 28,
+  "slot": "P40-6",
+  "pond": 40,
+  "par_draft": null
+ },
+ {
+  "rows": [
+   "##########",
+   "#.     $ #",
+   "#        #",
+   "# #   $$ #",
+   "###    # #",
+   "#  # ##. #",
+   "#.       #",
+   "#        #",
+   "##@#    ##",
+   "##########"
+  ],
+  "size": "8x8",
+  "rocks": 10,
+  "floor": 54,
+  "optimal_moves": 72,
+  "pushes_in_move_optimal": 30,
+  "optimal_pushes": 26,
+  "moves_in_push_optimal": 90,
+  "states_explored_bfs": 256233,
+  "solution": "UURRUUUURRRRULLLDDDRULUURRDLLULLLRRDDDDDLDRRRDRUURUUULLLULDDDDRDDLURULLL",
+  "push_optimal_solution": "UURRUURRUDLLDDRRRURUULLLULDDDUURRRRDDDDLLLLLURRRDRURUUUULLLRRRULLLLLLRRDDDDUURRRRDDDLLLLLL",
+  "box_lines_move_opt": 11,
+  "box_lines_push_opt": 9,
+  "dead_squares": 18,
+  "dead_square_cells": [
+   [
+    1,
+    8
+   ],
+   [
+    2,
+    8
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    3,
+    8
+   ],
+   [
+    4,
+    3
+   ],
+   [
+    4,
+    6
+   ],
+   [
+    4,
+    8
+   ],
+   [
+    5,
+    1
+   ],
+   [
+    5,
+    2
+   ],
+   [
+    5,
+    8
+   ],
+   [
+    6,
+    8
+   ],
+   [
+    7,
+    1
+   ],
+   [
+    7,
+    8
+   ],
+   [
+    8,
+    2
+   ],
+   [
+    8,
+    4
+   ],
+   [
+    8,
+    5
+   ],
+   [
+    8,
+    6
+   ],
+   [
+    8,
+    7
+   ]
+  ],
+  "crates_on_fruit_at_start": [],
+  "crates_touching_wall_at_start": 2,
+  "par_suggested": 105,
+  "seconds": 3.01,
+  "push_states": 9787,
+  "solvable_states": 2587,
+  "dead_states": 7200,
+  "subtle_dead_states": 967,
+  "trap_push_rate": 0.232,
+  "branch_points": 2562,
+  "first_trap_at_push": 0,
+  "start_push_options": 4,
+  "silent_dead_states": 727,
+  "silent_trap_push_rate": 0.041,
+  "silent_first_at_push": 2,
+  "early_silent_trap_states_le3": 3,
+  "max_silent_region": 442,
+  "start_trap_options": 2,
+  "optimal_pushes_graph": 26,
+  "slot": "P45-11",
+  "pond": 45,
+  "par_draft": null
+ },
+ {
+  "rows": [
+   "##########",
+   "#  . #   #",
+   "##    $# #",
+   "# #  # $@#",
+   "#    #  ##",
+   "#  #  $  #",
+   "#        #",
+   "#.     # #",
+   "#  # .  ##",
+   "##########"
+  ],
+  "size": "8x8",
+  "rocks": 11,
+  "floor": 53,
+  "optimal_moves": 78,
+  "pushes_in_move_optimal": 26,
+  "optimal_pushes": 24,
+  "moves_in_push_optimal": 80,
+  "states_explored_bfs": 359691,
+  "solution": "UULLDLLDDDRRLLUUURRDDRDLLDLUUUDDRRUUULLRRURRDDLDDRDLLLULDUUULURRRDDDRDLULDDLLL",
+  "push_optimal_solution": "UULLDLLDDDDRRRULLDLUULUURRRDDDRDLLULUUDDDURRUUUURRDDLRUULLDLLDLURRRDDDRDLULDDLLL",
+  "box_lines_move_opt": 15,
+  "box_lines_push_opt": 14,
+  "dead_squares": 16,
+  "dead_square_cells": [
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    4
+   ],
+   [
+    1,
+    6
+   ],
+   [
+    1,
+    7
+   ],
+   [
+    1,
+    8
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    2,
+    8
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    3,
+    8
+   ],
+   [
+    5,
+    8
+   ],
+   [
+    6,
+    8
+   ],
+   [
+    7,
+    8
+   ],
+   [
+    8,
+    1
+   ],
+   [
+    8,
+    2
+   ],
+   [
+    8,
+    4
+   ],
+   [
+    8,
+    7
+   ]
+  ],
+  "crates_on_fruit_at_start": [],
+  "crates_touching_wall_at_start": 2,
+  "par_suggested": 115,
+  "seconds": 6.4,
+  "push_states": 19644,
+  "solvable_states": 5547,
+  "dead_states": 14097,
+  "subtle_dead_states": 2271,
+  "trap_push_rate": 0.206,
+  "branch_points": 5492,
+  "first_trap_at_push": 0,
+  "start_push_options": 2,
+  "silent_dead_states": 2018,
+  "silent_trap_push_rate": 0.076,
+  "silent_first_at_push": 0,
+  "early_silent_trap_states_le3": 10,
+  "max_silent_region": 619,
+  "start_trap_options": 1,
+  "optimal_pushes_graph": 24,
+  "slot": "P50-16",
+  "pond": 50,
+  "par_draft": null
+ },
+ {
+  "rows": [
+   "##########",
+   "#    # #@#",
+   "#        #",
+   "#   # $# #",
+   "#    $ $ #",
+   "#.#   ## #",
+   "##   #.  #",
+   "#        #",
+   "#      . #",
+   "##########"
+  ],
+  "size": "8x8",
+  "rocks": 9,
+  "floor": 55,
+  "optimal_moves": 82,
+  "pushes_in_move_optimal": 34,
+  "optimal_pushes": 30,
+  "moves_in_push_optimal": 93,
+  "states_explored_bfs": 721155,
+  "solution": "DLLLLLDDDRRUDLDDRRURRUULLUDLLRRRRUULLLLLLULDDDURRDDDLDRRRLUUURURULLULDDDDDDLDRRRRU",
+  "push_optimal_solution": "DLLLLLDDDRRUDLDDRRURRUULLLLRRRRUULLDULLLDDDDLDRRRDRURURUULLLLLLULDUURRRRDRDLLRUULLDDDDDLDRRRR",
+  "box_lines_move_opt": 13,
+  "box_lines_push_opt": 12,
+  "dead_squares": 17,
+  "dead_square_cells": [
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    1,
+    4
+   ],
+   [
+    1,
+    6
+   ],
+   [
+    1,
+    8
+   ],
+   [
+    2,
+    8
+   ],
+   [
+    3,
+    8
+   ],
+   [
+    4,
+    8
+   ],
+   [
+    5,
+    5
+   ],
+   [
+    5,
+    8
+   ],
+   [
+    6,
+    2
+   ],
+   [
+    6,
+    8
+   ],
+   [
+    7,
+    1
+   ],
+   [
+    7,
+    8
+   ],
+   [
+    8,
+    1
+   ],
+   [
+    8,
+    8
+   ]
+  ],
+  "crates_on_fruit_at_start": [],
+  "crates_touching_wall_at_start": 2,
+  "par_suggested": 120,
+  "seconds": 9.28,
+  "push_states": 26352,
+  "solvable_states": 7549,
+  "dead_states": 18803,
+  "subtle_dead_states": 967,
+  "trap_push_rate": 0.189,
+  "branch_points": 7518,
+  "first_trap_at_push": 0,
+  "start_push_options": 5,
+  "silent_dead_states": 605,
+  "silent_trap_push_rate": 0.02,
+  "silent_first_at_push": 2,
+  "early_silent_trap_states_le3": 4,
+  "max_silent_region": 338,
+  "start_trap_options": 3,
+  "optimal_pushes_graph": 30,
+  "slot": "P55-21",
+  "pond": 55,
+  "par_draft": null
+ },
+ {
+  "rows": [
+   "##########",
+   "#     #  #",
+   "# $### # #",
+   "#  ##  . #",
+   "# $ $ #. #",
+   "#    #. ##",
+   "#        #",
+   "# # ##   #",
+   "##   # #@#",
+   "##########"
+  ],
+  "size": "8x8",
+  "rocks": 16,
+  "floor": 48,
+  "optimal_moves": 88,
+  "pushes_in_move_optimal": 32,
+  "optimal_pushes": 30,
+  "moves_in_push_optimal": 92,
+  "states_explored_bfs": 241223,
+  "solution": "UULUUULLDLDLLLUURDDUULUURDDDLDRLDRRRRRDRUUUDDLLLUULDLDRRRRDRRULDLULLULLLUURDDLDRRRRRDRUU",
+  "push_optimal_solution": "UULUUULLDLDLLLUURDDLDRRRRLUURURRDDDDLULLUULDLLUURDDLDRRRRRDRUUUDDLLLUULLULUURDDDDLDRRRRRDRUU",
+  "box_lines_move_opt": 14,
+  "box_lines_push_opt": 11,
+  "dead_squares": 26,
+  "dead_square_cells": [
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    1,
+    4
+   ],
+   [
+    1,
+    5
+   ],
+   [
+    1,
+    7
+   ],
+   [
+    1,
+    8
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    2,
+    6
+   ],
+   [
+    2,
+    8
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    3,
+    5
+   ],
+   [
+    3,
+    8
+   ],
+   [
+    4,
+    1
+   ],
+   [
+    4,
+    5
+   ],
+   [
+    4,
+    8
+   ],
+   [
+    5,
+    1
+   ],
+   [
+    6,
+    1
+   ],
+   [
+    6,
+    8
+   ],
+   [
+    7,
+    1
+   ],
+   [
+    7,
+    8
+   ],
+   [
+    8,
+    2
+   ],
+   [
+    8,
+    3
+   ],
+   [
+    8,
+    4
+   ],
+   [
+    8,
+    6
+   ],
+   [
+    8,
+    8
+   ]
+  ],
+  "crates_on_fruit_at_start": [],
+  "crates_touching_wall_at_start": 2,
+  "par_suggested": 130,
+  "seconds": 2.32,
+  "push_states": 13073,
+  "solvable_states": 907,
+  "dead_states": 12166,
+  "subtle_dead_states": 839,
+  "trap_push_rate": 0.315,
+  "branch_points": 832,
+  "first_trap_at_push": 0,
+  "start_push_options": 8,
+  "silent_dead_states": 765,
+  "silent_trap_push_rate": 0.121,
+  "silent_first_at_push": 0,
+  "early_silent_trap_states_le3": 3,
+  "max_silent_region": 224,
+  "start_trap_options": 6,
+  "optimal_pushes_graph": 30,
+  "slot": "P60-26",
+  "pond": 60,
+  "par_draft": null
+ },
+ {
+  "rows": [
+   "##########",
+   "##       #",
+   "# $   # @#",
+   "# $$ #.###",
+   "#  #     #",
+   "# ##   # #",
+   "#        #",
+   "#.       #",
+   "## # .#  #",
+   "##########"
+  ],
+  "size": "8x8",
+  "rocks": 12,
+  "floor": 52,
+  "optimal_moves": 66,
+  "pushes_in_move_optimal": 27,
+  "optimal_pushes": 25,
+  "moves_in_push_optimal": 66,
+  "states_explored_bfs": 285746,
+  "solution": "ULLLDLDDDDLLLUUUURRURDDDDDLDRULLLUURULURRURDDDDUULLULDDDDRRRRDRUUU",
+  "push_optimal_solution": "ULLLDLDDDDLLLUUUURRURDDDDDLDRULLLUURURUULDRRDDDUULLULDDDDRRRRDRUUU",
+  "box_lines_move_opt": 11,
+  "box_lines_push_opt": 12,
+  "dead_squares": 20,
+  "dead_square_cells": [
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    1,
+    4
+   ],
+   [
+    1,
+    5
+   ],
+   [
+    1,
+    6
+   ],
+   [
+    1,
+    7
+   ],
+   [
+    1,
+    8
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    2,
+    5
+   ],
+   [
+    2,
+    7
+   ],
+   [
+    2,
+    8
+   ],
+   [
+    4,
+    2
+   ],
+   [
+    4,
+    8
+   ],
+   [
+    5,
+    8
+   ],
+   [
+    6,
+    8
+   ],
+   [
+    7,
+    8
+   ],
+   [
+    8,
+    2
+   ],
+   [
+    8,
+    4
+   ],
+   [
+    8,
+    7
+   ],
+   [
+    8,
+    8
+   ]
+  ],
+  "crates_on_fruit_at_start": [],
+  "crates_touching_wall_at_start": 1,
+  "par_suggested": 95,
+  "seconds": 4.71,
+  "push_states": 19941,
+  "solvable_states": 4682,
+  "dead_states": 15259,
+  "subtle_dead_states": 498,
+  "trap_push_rate": 0.187,
+  "branch_points": 4627,
+  "first_trap_at_push": 0,
+  "start_push_options": 2,
+  "silent_dead_states": 302,
+  "silent_trap_push_rate": 0.015,
+  "silent_first_at_push": 2,
+  "early_silent_trap_states_le3": 1,
+  "max_silent_region": 173,
+  "start_trap_options": 1,
+  "optimal_pushes_graph": 25,
+  "slot": "P65-31",
+  "pond": 65,
+  "par_draft": null
+ },
+ {
+  "rows": [
+   "##########",
+   "#@      .#",
+   "##     # #",
+   "#  #     #",
+   "#      . #",
+   "##$ #    #",
+   "#  $ #   #",
+   "# #$     #",
+   "#      .##",
+   "##########"
+  ],
+  "size": "8x8",
+  "rocks": 8,
+  "floor": 56,
+  "optimal_moves": 74,
+  "pushes_in_move_optimal": 27,
+  "optimal_pushes": 25,
+  "moves_in_push_optimal": 88,
+  "states_explored_bfs": 535186,
+  "solution": "RDDDRRRDRDDLLULRDDLUUUDDDLLUURUURRLDDDULLDDRRRRRUUULUUULURRRLDLLLLDLDRRRRR",
+  "push_optimal_solution": "RDDDRRRDRDDDLLLLLUURURURUULLDLDRRRRRDDDLLULRDDLUUUDDDLLUURUURRLDDDULLDDRRRRRUUULUUULURRR",
+  "box_lines_move_opt": 11,
+  "box_lines_push_opt": 10,
+  "dead_squares": 9,
+  "dead_square_cells": [
+   [
+    1,
+    1
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    4,
+    1
+   ],
+   [
+    5,
+    5
+   ],
+   [
+    6,
+    1
+   ],
+   [
+    6,
+    4
+   ],
+   [
+    7,
+    1
+   ],
+   [
+    7,
+    8
+   ],
+   [
+    8,
+    1
+   ]
+  ],
+  "crates_on_fruit_at_start": [],
+  "crates_touching_wall_at_start": 2,
+  "par_suggested": 105,
+  "seconds": 13.98,
+  "push_states": 24806,
+  "solvable_states": 12161,
+  "dead_states": 12645,
+  "subtle_dead_states": 4056,
+  "trap_push_rate": 0.136,
+  "branch_points": 12125,
+  "first_trap_at_push": 0,
+  "start_push_options": 4,
+  "silent_dead_states": 3342,
+  "silent_trap_push_rate": 0.049,
+  "silent_first_at_push": 1,
+  "early_silent_trap_states_le3": 5,
+  "max_silent_region": 1480,
+  "start_trap_options": 2,
+  "optimal_pushes_graph": 25,
+  "slot": "P70-36",
+  "pond": 70,
+  "par_draft": null
+ },
+ {
+  "rows": [
+   "##########",
+   "### #    #",
+   "#      ###",
+   "#  $$    #",
+   "# ##    ##",
+   "#@#.# ####",
+   "##  #    #",
+   "# $ #  # #",
+   "#    ..# #",
+   "##########"
+  ],
+  "size": "8x8",
+  "rocks": 18,
+  "floor": 46,
+  "optimal_moves": 80,
+  "pushes_in_move_optimal": 29,
+  "optimal_pushes": 27,
+  "moves_in_push_optimal": 80,
+  "states_explored_bfs": 69103,
+  "solution": "UUURRRRDDDDDDLLLLURDRRRUUUULULULLDRRRLURRURDLDDDDDRDLLLUUDLLDRRRRUUUURRULULDDDDD",
+  "push_optimal_solution": "UUURRRRDDDDDDLLLLURDRRRUUUULULURDRRUULDDDDDDRDLLLUUDLLDRRRRUUUUUULLLLDRRRURDDDDD",
+  "box_lines_move_opt": 12,
+  "box_lines_push_opt": 10,
+  "dead_squares": 18,
+  "dead_square_cells": [
+   [
+    1,
+    3
+   ],
+   [
+    1,
+    5
+   ],
+   [
+    1,
+    6
+   ],
+   [
+    1,
+    7
+   ],
+   [
+    1,
+    8
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    3,
+    8
+   ],
+   [
+    4,
+    1
+   ],
+   [
+    4,
+    4
+   ],
+   [
+    4,
+    7
+   ],
+   [
+    5,
+    1
+   ],
+   [
+    6,
+    2
+   ],
+   [
+    6,
+    8
+   ],
+   [
+    7,
+    1
+   ],
+   [
+    7,
+    8
+   ],
+   [
+    8,
+    1
+   ],
+   [
+    8,
+    8
+   ]
+  ],
+  "crates_on_fruit_at_start": [],
+  "crates_touching_wall_at_start": 1,
+  "par_suggested": 115,
+  "seconds": 0.7,
+  "push_states": 6914,
+  "solvable_states": 841,
+  "dead_states": 6073,
+  "subtle_dead_states": 1000,
+  "trap_push_rate": 0.303,
+  "branch_points": 703,
+  "first_trap_at_push": 0,
+  "start_push_options": 6,
+  "silent_dead_states": 945,
+  "silent_trap_push_rate": 0.093,
+  "silent_first_at_push": 0,
+  "early_silent_trap_states_le3": 8,
+  "max_silent_region": 716,
+  "start_trap_options": 4,
+  "optimal_pushes_graph": 27,
+  "slot": "P75-41",
+  "pond": 75,
+  "par_draft": null
+ },
+ {
+  "rows": [
+   "###########",
+   "##      # #",
+   "#    #  $ #",
+   "## # #    #",
+   "# #     # #",
+   "#         #",
+   "#. ..#    #",
+   "#@ ##     #",
+   "### $ $   #",
+   "#     #   #",
+   "###########"
+  ],
+  "size": "9x9",
+  "rocks": 14,
+  "floor": 67,
+  "optimal_moves": 86,
+  "pushes_in_move_optimal": 34,
+  "optimal_pushes": 30,
+  "moves_in_push_optimal": 90,
+  "states_explored_bfs": 1024435,
+  "solution": "UURRURRRURRRULLULDDDRDLLLULDRDLLURRRRDDLDRRDRUUURULLLLULDRRDDDLDLLURRRRDRUUURULLLLLULD",
+  "push_optimal_solution": "UURRURRRURRRULLULDDDRDLLLULDRDLLURRRRDDLDRURRDDLUUURULLLULDRRDDDLDLLURRRURRDDLUUURULLLLULD",
+  "box_lines_move_opt": 13,
+  "box_lines_push_opt": 13,
+  "dead_squares": 30,
+  "dead_square_cells": [
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    1,
+    4
+   ],
+   [
+    1,
+    5
+   ],
+   [
+    1,
+    6
+   ],
+   [
+    1,
+    7
+   ],
+   [
+    1,
+    9
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    2,
+    9
+   ],
+   [
+    3,
+    2
+   ],
+   [
+    3,
+    9
+   ],
+   [
+    4,
+    1
+   ],
+   [
+    4,
+    3
+   ],
+   [
+    4,
+    9
+   ],
+   [
+    5,
+    9
+   ],
+   [
+    6,
+    9
+   ],
+   [
+    7,
+    1
+   ],
+   [
+    7,
+    2
+   ],
+   [
+    7,
+    5
+   ],
+   [
+    7,
+    9
+   ],
+   [
+    8,
+    3
+   ],
+   [
+    8,
+    9
+   ],
+   [
+    9,
+    1
+   ],
+   [
+    9,
+    2
+   ],
+   [
+    9,
+    3
+   ],
+   [
+    9,
+    4
+   ],
+   [
+    9,
+    5
+   ],
+   [
+    9,
+    7
+   ],
+   [
+    9,
+    8
+   ],
+   [
+    9,
+    9
+   ]
+  ],
+  "crates_on_fruit_at_start": [],
+  "crates_touching_wall_at_start": 3,
+  "par_suggested": 125,
+  "seconds": 15.55,
+  "push_states": 34864,
+  "solvable_states": 5858,
+  "dead_states": 29006,
+  "subtle_dead_states": 1461,
+  "trap_push_rate": 0.245,
+  "branch_points": 5316,
+  "first_trap_at_push": 0,
+  "start_push_options": 6,
+  "silent_dead_states": 1353,
+  "silent_trap_push_rate": 0.046,
+  "silent_first_at_push": 0,
+  "early_silent_trap_states_le3": 7,
+  "max_silent_region": 561,
+  "start_trap_options": 4,
+  "optimal_pushes_graph": 30,
+  "slot": "P80-46",
+  "pond": 80,
+  "par_draft": null
+ },
+ {
+  "rows": [
+   "##########",
+   "#  . $   #",
+   "##$ ## # #",
+   "# $ #  # #",
+   "#        #",
+   "#  #   # #",
+   "# #      #",
+   "#   #   .#",
+   "#  .    @#",
+   "##########"
+  ],
+  "size": "8x8",
+  "rocks": 10,
+  "floor": 54,
+  "optimal_moves": 90,
+  "pushes_in_move_optimal": 29,
+  "optimal_pushes": 27,
+  "moves_in_push_optimal": 92,
+  "states_explored_bfs": 219808,
+  "solution": "UUUULLLLLUUURRRDDDLLLLLURDRRRURUULLLDDLDRRRLLUUULDDLDRRRDRRURRUUULLLLRRDDDDDUUULDDDDRRDLLL",
+  "push_optimal_solution": "UUUULLLLLUUURRRDDDLLLLLURDRRRURUULLLDDLDRRRLLUUULDDLDRRRDDRRRRUUUUULLLLRRDDDDDUUULDDDDRRDLLL",
+  "box_lines_move_opt": 12,
+  "box_lines_push_opt": 11,
+  "dead_squares": 12,
+  "dead_square_cells": [
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    8
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    3,
+    5
+   ],
+   [
+    4,
+    1
+   ],
+   [
+    5,
+    1
+   ],
+   [
+    5,
+    2
+   ],
+   [
+    6,
+    1
+   ],
+   [
+    6,
+    3
+   ],
+   [
+    7,
+    1
+   ],
+   [
+    8,
+    1
+   ],
+   [
+    8,
+    8
+   ]
+  ],
+  "crates_on_fruit_at_start": [],
+  "crates_touching_wall_at_start": 2,
+  "par_suggested": 130,
+  "seconds": 2.71,
+  "push_states": 8883,
+  "solvable_states": 2401,
+  "dead_states": 6482,
+  "subtle_dead_states": 1498,
+  "trap_push_rate": 0.179,
+  "branch_points": 2400,
+  "first_trap_at_push": 0,
+  "start_push_options": 4,
+  "silent_dead_states": 1240,
+  "silent_trap_push_rate": 0.07,
+  "silent_first_at_push": 0,
+  "early_silent_trap_states_le3": 4,
+  "max_silent_region": 804,
+  "start_trap_options": 2,
+  "optimal_pushes_graph": 27,
+  "slot": "P85-51",
+  "pond": 85,
+  "par_draft": null
+ },
+ {
+  "rows": [
+   "###########",
+   "# # #     #",
+   "# # .$# $ #",
+   "#     #$# #",
+   "##        #",
+   "#     #   #",
+   "#    # # ##",
+   "## #      #",
+   "##.    #  #",
+   "##@ #.    #",
+   "###########"
+  ],
+  "size": "9x9",
+  "rocks": 17,
+  "floor": 64,
+  "optimal_moves": 96,
+  "pushes_in_move_optimal": 27,
+  "optimal_pushes": 27,
+  "moves_in_push_optimal": 96,
+  "states_explored_bfs": 667062,
+  "solution": "UUUUURRRRRRRUUULLDDUURRDDDLLLLRRRRUULULLLDDLDDDDULLDDRRURDURRRUUULLLDLUURUURRDDURRDDLLLLLLULDDDD",
+  "push_optimal_solution": "UUUUURRRRRRRUUULLDDUURRDDDLLLLRRRRUULULLLDDLDDDDULLDDRRURDURRRUUULLLDLUURUURRDDURRDDLLLLLLULDDDD",
+  "box_lines_move_opt": 12,
+  "box_lines_push_opt": 12,
+  "dead_squares": 23,
+  "dead_square_cells": [
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    1,
+    5
+   ],
+   [
+    1,
+    6
+   ],
+   [
+    1,
+    7
+   ],
+   [
+    1,
+    8
+   ],
+   [
+    1,
+    9
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    2,
+    9
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    3,
+    9
+   ],
+   [
+    4,
+    9
+   ],
+   [
+    5,
+    1
+   ],
+   [
+    5,
+    5
+   ],
+   [
+    5,
+    7
+   ],
+   [
+    5,
+    9
+   ],
+   [
+    6,
+    1
+   ],
+   [
+    6,
+    6
+   ],
+   [
+    7,
+    9
+   ],
+   [
+    8,
+    9
+   ],
+   [
+    9,
+    2
+   ],
+   [
+    9,
+    3
+   ],
+   [
+    9,
+    9
+   ]
+  ],
+  "crates_on_fruit_at_start": [],
+  "crates_touching_wall_at_start": 3,
+  "par_suggested": 140,
+  "seconds": 13.17,
+  "push_states": 34212,
+  "solvable_states": 8433,
+  "dead_states": 25779,
+  "subtle_dead_states": 2241,
+  "trap_push_rate": 0.211,
+  "branch_points": 8401,
+  "first_trap_at_push": 0,
+  "start_push_options": 6,
+  "silent_dead_states": 1995,
+  "silent_trap_push_rate": 0.057,
+  "silent_first_at_push": 4,
+  "early_silent_trap_states_le3": 0,
+  "max_silent_region": 772,
+  "start_trap_options": 3,
+  "optimal_pushes_graph": 27,
+  "slot": "P90-56",
+  "pond": 90,
+  "par_draft": null
+ },
+ {
+  "rows": [
+   "##########",
+   "#   #    #",
+   "#   . #$ #",
+   "# #  $ $ #",
+   "#    # #@#",
+   "#      ###",
+   "#   #    #",
+   "# . #   .#",
+   "#       ##",
+   "##########"
+  ],
+  "size": "8x8",
+  "rocks": 10,
+  "floor": 54,
+  "optimal_moves": 74,
+  "pushes_in_move_optimal": 25,
+  "optimal_pushes": 23,
+  "moves_in_push_optimal": 76,
+  "states_explored_bfs": 488649,
+  "solution": "UUULLLDLDDDRRUULLULDDRDLUUURRURRRDDLLLLURURRDRDLLLULLDDLDDURRRLUURRDDDLDRR",
+  "push_optimal_solution": "UUULLLDLDDDRRUULULDDLDRUUURURRRDDLLLLURURRDRDLLLULLDDRDLULDDURRRLUURRDDDLDRR",
+  "box_lines_move_opt": 12,
+  "box_lines_push_opt": 13,
+  "dead_squares": 24,
+  "dead_square_cells": [
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    1,
+    5
+   ],
+   [
+    1,
+    6
+   ],
+   [
+    1,
+    7
+   ],
+   [
+    1,
+    8
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    2,
+    8
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    3,
+    8
+   ],
+   [
+    4,
+    1
+   ],
+   [
+    4,
+    8
+   ],
+   [
+    5,
+    1
+   ],
+   [
+    6,
+    1
+   ],
+   [
+    6,
+    8
+   ],
+   [
+    7,
+    1
+   ],
+   [
+    8,
+    1
+   ],
+   [
+    8,
+    2
+   ],
+   [
+    8,
+    3
+   ],
+   [
+    8,
+    4
+   ],
+   [
+    8,
+    5
+   ],
+   [
+    8,
+    6
+   ],
+   [
+    8,
+    7
+   ]
+  ],
+  "crates_on_fruit_at_start": [],
+  "crates_touching_wall_at_start": 3,
+  "par_suggested": 105,
+  "seconds": 6.58,
+  "push_states": 22213,
+  "solvable_states": 3810,
+  "dead_states": 18403,
+  "subtle_dead_states": 315,
+  "trap_push_rate": 0.222,
+  "branch_points": 3764,
+  "first_trap_at_push": 0,
+  "start_push_options": 4,
+  "silent_dead_states": 220,
+  "silent_trap_push_rate": 0.017,
+  "silent_first_at_push": 0,
+  "early_silent_trap_states_le3": 6,
+  "max_silent_region": 53,
+  "start_trap_options": 3,
+  "optimal_pushes_graph": 23,
+  "slot": "P95-61",
+  "pond": 95,
+  "par_draft": null
+ },
+ {
+  "rows": [
+   "###########",
+   "# ###   ..#",
+   "#         #",
+   "# $  #    #",
+   "#@#$# #  ##",
+   "##    #   #",
+   "# #$     ##",
+   "#       # #",
+   "#  .      #",
+   "#   #     #",
+   "###########"
+  ],
+  "size": "9x9",
+  "rocks": 14,
+  "floor": 67,
+  "optimal_moves": 80,
+  "pushes_in_move_optimal": 33,
+  "optimal_pushes": 23,
+  "moves_in_push_optimal": 94,
+  "states_explored_bfs": 764413,
+  "solution": "UURRRRRDRDDDLLULLDDLDRRRRDRUUUUUUULURDLLLDLDDDDUUUUULLDRURDDDRDDLUUUULURRRRRRDRU",
+  "push_optimal_solution": "UURRRRRDRDDDLLULLDDURRRRUUUULLLDLDDUUULLDRURRRRDRDDDLLULLUULURRRRRDRUDDDDLDLLLLUUUULURRRRRRDRU",
+  "box_lines_move_opt": 10,
+  "box_lines_push_opt": 9,
+  "dead_squares": 25,
+  "dead_square_cells": [
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    5
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    3,
+    4
+   ],
+   [
+    3,
+    6
+   ],
+   [
+    3,
+    9
+   ],
+   [
+    4,
+    1
+   ],
+   [
+    4,
+    5
+   ],
+   [
+    5,
+    2
+   ],
+   [
+    5,
+    9
+   ],
+   [
+    6,
+    1
+   ],
+   [
+    6,
+    8
+   ],
+   [
+    7,
+    1
+   ],
+   [
+    7,
+    9
+   ],
+   [
+    8,
+    1
+   ],
+   [
+    8,
+    9
+   ],
+   [
+    9,
+    1
+   ],
+   [
+    9,
+    2
+   ],
+   [
+    9,
+    3
+   ],
+   [
+    9,
+    5
+   ],
+   [
+    9,
+    6
+   ],
+   [
+    9,
+    7
+   ],
+   [
+    9,
+    8
+   ],
+   [
+    9,
+    9
+   ]
+  ],
+  "crates_on_fruit_at_start": [],
+  "crates_touching_wall_at_start": 3,
+  "par_suggested": 115,
+  "seconds": 18.84,
+  "push_states": 48832,
+  "solvable_states": 10699,
+  "dead_states": 38133,
+  "subtle_dead_states": 1359,
+  "trap_push_rate": 0.205,
+  "branch_points": 10635,
+  "first_trap_at_push": 0,
+  "start_push_options": 6,
+  "silent_dead_states": 1114,
+  "silent_trap_push_rate": 0.025,
+  "silent_first_at_push": 0,
+  "early_silent_trap_states_le3": 9,
+  "max_silent_region": 828,
+  "start_trap_options": 3,
+  "optimal_pushes_graph": 23,
+  "slot": "P100-66",
+  "pond": 100,
+  "par_draft": null
+ },
+ {
+  "rows": [
+   "##########",
+   "# #   # @#",
+   "#       ##",
+   "#   ##$# #",
+   "#   # $  #",
+   "#. # .   #",
+   "##  $.#  #",
+   "#    #   #",
+   "#        #",
+   "##########"
+  ],
+  "size": "8x8",
+  "rocks": 11,
+  "floor": 53,
+  "optimal_moves": 88,
+  "pushes_in_move_optimal": 18,
+  "optimal_pushes": 14,
+  "moves_in_push_optimal": 94,
+  "states_explored_bfs": 103289,
+  "solution": "LDLLLLDDLDDDDRRRRURUULLURDLDLLDLUUURUURRRDDLDDLDDRRURUURULDLULDLDLLUURULULDDUURRRRRDDRDL",
+  "push_optimal_solution": "LDLLLLDDLDDDDRRRRURUULLURDLDLLDLUULUURRDLUURRRRDDLDDLDDRRURUULULDRRRULDLLLDLLUUULDUURRRRRDDRDL",
+  "box_lines_move_opt": 12,
+  "box_lines_push_opt": 11,
+  "dead_squares": 25,
+  "dead_square_cells": [
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    1,
+    4
+   ],
+   [
+    1,
+    5
+   ],
+   [
+    1,
+    7
+   ],
+   [
+    1,
+    8
+   ],
+   [
+    2,
+    7
+   ],
+   [
+    3,
+    8
+   ],
+   [
+    4,
+    3
+   ],
+   [
+    4,
+    5
+   ],
+   [
+    4,
+    8
+   ],
+   [
+    5,
+    4
+   ],
+   [
+    5,
+    8
+   ],
+   [
+    6,
+    8
+   ],
+   [
+    7,
+    1
+   ],
+   [
+    7,
+    6
+   ],
+   [
+    7,
+    8
+   ],
+   [
+    8,
+    1
+   ],
+   [
+    8,
+    2
+   ],
+   [
+    8,
+    3
+   ],
+   [
+    8,
+    4
+   ],
+   [
+    8,
+    5
+   ],
+   [
+    8,
+    6
+   ],
+   [
+    8,
+    7
+   ],
+   [
+    8,
+    8
+   ]
+  ],
+  "crates_on_fruit_at_start": [],
+  "crates_touching_wall_at_start": 1,
+  "par_suggested": 130,
+  "seconds": 1.77,
+  "push_states": 10476,
+  "solvable_states": 425,
+  "dead_states": 10051,
+  "subtle_dead_states": 521,
+  "trap_push_rate": 0.382,
+  "branch_points": 412,
+  "first_trap_at_push": 0,
+  "start_push_options": 6,
+  "silent_dead_states": 519,
+  "silent_trap_push_rate": 0.093,
+  "silent_first_at_push": 0,
+  "early_silent_trap_states_le3": 7,
+  "max_silent_region": 329,
+  "start_trap_options": 3,
+  "optimal_pushes_graph": 14,
+  "slot": "P105-71",
+  "pond": 105,
+  "par_draft": null
+ },
+ {
+  "rows": [
+   "###########",
+   "##        #",
+   "# $$      #",
+   "# $      ##",
+   "#    ##  .#",
+   "# ##   ## #",
+   "#        .#",
+   "#   #   # #",
+   "## # #   ##",
+   "#       .@#",
+   "###########"
+  ],
+  "size": "9x9",
+  "rocks": 14,
+  "floor": 67,
+  "optimal_moves": 94,
+  "pushes_in_move_optimal": 37,
+  "optimal_pushes": 31,
+  "moves_in_push_optimal": 94,
+  "states_explored_bfs": 1143725,
+  "solution": "LULUULULLULLLURRRUULLDLDRRLURRDDDULLLDDRRRRULUUURRRURDDLDRULLLULDDDRRDLDRULLLDLLURRRRRRRLDDLDR",
+  "push_optimal_solution": "LULUULULLULLLURRRUULLDRLDLDRRURDDULLLDDRRRRULUURRRURDLDRUUULLLLDDDDRRDLDRURDDLDRLLLLLUUURRRRRR",
+  "box_lines_move_opt": 17,
+  "box_lines_push_opt": 16,
+  "dead_squares": 24,
+  "dead_square_cells": [
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    1,
+    4
+   ],
+   [
+    1,
+    5
+   ],
+   [
+    1,
+    6
+   ],
+   [
+    1,
+    7
+   ],
+   [
+    1,
+    8
+   ],
+   [
+    1,
+    9
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    2,
+    9
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    4,
+    1
+   ],
+   [
+    4,
+    7
+   ],
+   [
+    5,
+    1
+   ],
+   [
+    5,
+    6
+   ],
+   [
+    6,
+    1
+   ],
+   [
+    7,
+    1
+   ],
+   [
+    7,
+    3
+   ],
+   [
+    7,
+    5
+   ],
+   [
+    7,
+    9
+   ],
+   [
+    8,
+    4
+   ],
+   [
+    8,
+    8
+   ],
+   [
+    9,
+    1
+   ],
+   [
+    9,
+    9
+   ]
+  ],
+  "crates_on_fruit_at_start": [],
+  "crates_touching_wall_at_start": 0,
+  "par_suggested": 135,
+  "seconds": 16.75,
+  "push_states": 37890,
+  "solvable_states": 8291,
+  "dead_states": 29599,
+  "subtle_dead_states": 1603,
+  "trap_push_rate": 0.233,
+  "branch_points": 8229,
+  "first_trap_at_push": 0,
+  "start_push_options": 4,
+  "silent_dead_states": 1223,
+  "silent_trap_push_rate": 0.017,
+  "silent_first_at_push": 6,
+  "early_silent_trap_states_le3": 0,
+  "max_silent_region": 698,
+  "start_trap_options": 2,
+  "optimal_pushes_graph": 31,
+  "slot": "P110-76",
+  "pond": 110,
+  "par_draft": null
+ },
+ {
+  "rows": [
+   "###########",
+   "#       #@#",
+   "#  # $ ## #",
+   "#. # $ #. #",
+   "#  ###$   #",
+   "#      # ##",
+   "#      # ##",
+   "#   .     #",
+   "#      #  #",
+   "#  #     ##",
+   "###########"
+  ],
+  "size": "9x9",
+  "rocks": 16,
+  "floor": 65,
+  "optimal_moves": 100,
+  "pushes_in_move_optimal": 31,
+  "optimal_pushes": 31,
+  "moves_in_push_optimal": 100,
+  "states_explored_bfs": 1013793,
+  "solution": "DDDLDDDLLUULLLLUUUURRRRDDDDDUURRDDDLLLLLLDLUUUURUUURRDRURDDDDDLDRRLUUUUULLDRURDDDDLDDDRRRUUUUUDDDLLL",
+  "push_optimal_solution": "DDDLDDDLLUULLLLUUUURRRRDDDDDUURRDDDLLLLLLDLUUUURUUURRDRURDDDDDLDRRLUUUUULLDRURDDDDLDDDRRRUULLLRRRUUU",
+  "box_lines_move_opt": 10,
+  "box_lines_push_opt": 11,
+  "dead_squares": 22,
+  "dead_square_cells": [
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    1,
+    4
+   ],
+   [
+    1,
+    5
+   ],
+   [
+    1,
+    6
+   ],
+   [
+    1,
+    7
+   ],
+   [
+    1,
+    9
+   ],
+   [
+    2,
+    4
+   ],
+   [
+    2,
+    9
+   ],
+   [
+    3,
+    4
+   ],
+   [
+    3,
+    9
+   ],
+   [
+    4,
+    9
+   ],
+   [
+    7,
+    9
+   ],
+   [
+    8,
+    9
+   ],
+   [
+    9,
+    1
+   ],
+   [
+    9,
+    2
+   ],
+   [
+    9,
+    4
+   ],
+   [
+    9,
+    5
+   ],
+   [
+    9,
+    6
+   ],
+   [
+    9,
+    7
+   ],
+   [
+    9,
+    8
+   ]
+  ],
+  "crates_on_fruit_at_start": [],
+  "crates_touching_wall_at_start": 2,
+  "par_suggested": 145,
+  "seconds": 16.53,
+  "push_states": 34386,
+  "solvable_states": 10035,
+  "dead_states": 24351,
+  "subtle_dead_states": 1351,
+  "trap_push_rate": 0.152,
+  "branch_points": 10018,
+  "first_trap_at_push": 0,
+  "start_push_options": 6,
+  "silent_dead_states": 1636,
+  "silent_trap_push_rate": 0.024,
+  "silent_first_at_push": 0,
+  "early_silent_trap_states_le3": 9,
+  "max_silent_region": 764,
+  "start_trap_options": 4,
+  "optimal_pushes_graph": 31,
+  "slot": "P115-81",
+  "pond": 115,
+  "par_draft": null
+ },
+ {
+  "rows": [
+   "###########",
+   "#@     #  #",
+   "#    #  # #",
+   "## #.#    #",
+   "# .##     #",
+   "#         #",
+   "##   ###  #",
+   "#  # #  .##",
+   "# $  $ $  #",
+   "### ##  ###",
+   "###########"
+  ],
+  "size": "9x9",
+  "rocks": 21,
+  "floor": 60,
+  "optimal_moves": 106,
+  "pushes_in_move_optimal": 36,
+  "optimal_pushes": 36,
+  "moves_in_push_optimal": 106,
+  "states_explored_bfs": 445491,
+  "solution": "DRDDDRRRRRRDDLLDDRULURDRUURULLLLLLDLUUUDDDRRDDRRDRULURDRUURULLLUUUULLLLLDRRURDURRDDDDLLLDLUDDLDRRRRRDRULUR",
+  "push_optimal_solution": "DRDDDRRRRRRDDLLDDRULURDRUURULLLLLLDLUUUDDDRRDDRRDRULURDRUURULLLUUUULLLLLDRRURDURRDDDDLLLDLUDDLDRRRRRDRULUR",
+  "box_lines_move_opt": 17,
+  "box_lines_push_opt": 17,
+  "dead_squares": 25,
+  "dead_square_cells": [
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    1,
+    4
+   ],
+   [
+    1,
+    5
+   ],
+   [
+    1,
+    6
+   ],
+   [
+    1,
+    8
+   ],
+   [
+    1,
+    9
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    2,
+    7
+   ],
+   [
+    2,
+    9
+   ],
+   [
+    3,
+    9
+   ],
+   [
+    4,
+    1
+   ],
+   [
+    4,
+    5
+   ],
+   [
+    4,
+    9
+   ],
+   [
+    5,
+    1
+   ],
+   [
+    5,
+    9
+   ],
+   [
+    6,
+    9
+   ],
+   [
+    7,
+    1
+   ],
+   [
+    7,
+    6
+   ],
+   [
+    8,
+    1
+   ],
+   [
+    8,
+    9
+   ],
+   [
+    9,
+    3
+   ],
+   [
+    9,
+    6
+   ],
+   [
+    9,
+    7
+   ]
+  ],
+  "crates_on_fruit_at_start": [],
+  "crates_touching_wall_at_start": 2,
+  "par_suggested": 155,
+  "seconds": 6.14,
+  "push_states": 24181,
+  "solvable_states": 3967,
+  "dead_states": 20214,
+  "subtle_dead_states": 1278,
+  "trap_push_rate": 0.249,
+  "branch_points": 3936,
+  "first_trap_at_push": 0,
+  "start_push_options": 8,
+  "silent_dead_states": 1058,
+  "silent_trap_push_rate": 0.054,
+  "silent_first_at_push": 0,
+  "early_silent_trap_states_le3": 9,
+  "max_silent_region": 466,
+  "start_trap_options": 6,
+  "optimal_pushes_graph": 36,
+  "slot": "P120-86",
+  "pond": 120,
+  "par_draft": null
+ },
+ {
+  "rows": [
+   "###########",
+   "#@.   # # #",
+   "#   .  .  #",
+   "#         #",
+   "##  #   # #",
+   "#    ##   #",
+   "##  #     #",
+   "#    #    #",
+   "#  # $$ $ #",
+   "##        #",
+   "###########"
+  ],
+  "size": "9x9",
+  "rocks": 12,
+  "floor": 69,
+  "optimal_moves": 84,
+  "pushes_in_move_optimal": 33,
+  "optimal_pushes": 33,
+  "moves_in_push_optimal": 84,
+  "states_explored_bfs": 1472521,
+  "solution": "DDRDDDDDDRRRRUDLLURRDRUUUUUUDDDLDRRRDLDLUUUUUDRRUULLRULLLDLLDDDDRDRRDRUUUUUULLLLDLUU",
+  "push_optimal_solution": "DDRRRRDRRDDDRRDLDLLUDRUUUUUURULLLLLDLUDDDDDRRDRRDRUUUUUURULLLDDRRDDLDRDDLLURDRUUUUUU",
+  "box_lines_move_opt": 12,
+  "box_lines_push_opt": 11,
+  "dead_squares": 29,
+  "dead_square_cells": [
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    5
+   ],
+   [
+    1,
+    7
+   ],
+   [
+    1,
+    9
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    2,
+    9
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    3,
+    9
+   ],
+   [
+    4,
+    5
+   ],
+   [
+    4,
+    9
+   ],
+   [
+    5,
+    1
+   ],
+   [
+    5,
+    4
+   ],
+   [
+    5,
+    9
+   ],
+   [
+    6,
+    5
+   ],
+   [
+    6,
+    9
+   ],
+   [
+    7,
+    1
+   ],
+   [
+    7,
+    4
+   ],
+   [
+    7,
+    9
+   ],
+   [
+    8,
+    1
+   ],
+   [
+    8,
+    4
+   ],
+   [
+    8,
+    9
+   ],
+   [
+    9,
+    2
+   ],
+   [
+    9,
+    3
+   ],
+   [
+    9,
+    4
+   ],
+   [
+    9,
+    5
+   ],
+   [
+    9,
+    6
+   ],
+   [
+    9,
+    7
+   ],
+   [
+    9,
+    8
+   ],
+   [
+    9,
+    9
+   ]
+  ],
+  "crates_on_fruit_at_start": [],
+  "crates_touching_wall_at_start": 1,
+  "par_suggested": 120,
+  "seconds": 25.72,
+  "push_states": 50120,
+  "solvable_states": 8725,
+  "dead_states": 41395,
+  "subtle_dead_states": 1157,
+  "trap_push_rate": 0.235,
+  "branch_points": 8720,
+  "first_trap_at_push": 0,
+  "start_push_options": 6,
+  "silent_dead_states": 1853,
+  "silent_trap_push_rate": 0.038,
+  "silent_first_at_push": 1,
+  "early_silent_trap_states_le3": 7,
+  "max_silent_region": 778,
+  "start_trap_options": 3,
+  "optimal_pushes_graph": 33,
+  "slot": "P125-91",
+  "pond": 125,
+  "par_draft": null
+ },
+ {
+  "rows": [
+   "###########",
+   "#   #     #",
+   "## #      #",
+   "#.   # $$ #",
+   "##   . $ ##",
+   "#     #   #",
+   "#  #   ## #",
+   "#   #  # ##",
+   "##     .  #",
+   "#@   # #  #",
+   "###########"
+  ],
+  "size": "9x9",
+  "rocks": 16,
+  "floor": 65,
+  "optimal_moves": 92,
+  "pushes_in_move_optimal": 32,
+  "optimal_pushes": 28,
+  "moves_in_push_optimal": 98,
+  "states_explored_bfs": 571161,
+  "solution": "RUUUUURRRRRULUURRDLULDDURRRDLLDDRULLLLULDLDRRUUURRDURRRDLLDLLLUURRDRDLLDDDUULLURULLDDDDDRRRR",
+  "push_optimal_solution": "RUUUUURRRRRULUURRDLULDDURRRDLLDDRULLLDLLUURDLDRUUURRDURRRDLLDLLDDDUUULDLURUURRDRDLUULLDLLDDDDDRRRR",
+  "box_lines_move_opt": 19,
+  "box_lines_push_opt": 19,
+  "dead_squares": 30,
+  "dead_square_cells": [
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    1,
+    5
+   ],
+   [
+    1,
+    6
+   ],
+   [
+    1,
+    7
+   ],
+   [
+    1,
+    8
+   ],
+   [
+    1,
+    9
+   ],
+   [
+    2,
+    4
+   ],
+   [
+    2,
+    9
+   ],
+   [
+    3,
+    9
+   ],
+   [
+    5,
+    1
+   ],
+   [
+    5,
+    7
+   ],
+   [
+    5,
+    8
+   ],
+   [
+    5,
+    9
+   ],
+   [
+    6,
+    1
+   ],
+   [
+    6,
+    4
+   ],
+   [
+    6,
+    6
+   ],
+   [
+    6,
+    9
+   ],
+   [
+    7,
+    1
+   ],
+   [
+    7,
+    3
+   ],
+   [
+    7,
+    8
+   ],
+   [
+    8,
+    9
+   ],
+   [
+    9,
+    1
+   ],
+   [
+    9,
+    2
+   ],
+   [
+    9,
+    3
+   ],
+   [
+    9,
+    4
+   ],
+   [
+    9,
+    6
+   ],
+   [
+    9,
+    8
+   ],
+   [
+    9,
+    9
+   ]
+  ],
+  "crates_on_fruit_at_start": [],
+  "crates_touching_wall_at_start": 0,
+  "par_suggested": 135,
+  "seconds": 9.07,
+  "push_states": 29993,
+  "solvable_states": 4872,
+  "dead_states": 25121,
+  "subtle_dead_states": 1466,
+  "trap_push_rate": 0.268,
+  "branch_points": 4748,
+  "first_trap_at_push": 0,
+  "start_push_options": 2,
+  "silent_dead_states": 2028,
+  "silent_trap_push_rate": 0.057,
+  "silent_first_at_push": 0,
+  "early_silent_trap_states_le3": 3,
+  "max_silent_region": 601,
+  "start_trap_options": 1,
+  "optimal_pushes_graph": 28,
+  "slot": "P130-96",
+  "pond": 130,
+  "par_draft": null
+ },
+ {
+  "rows": [
+   "###########",
+   "#@##      #",
+   "#  #$ ##  #",
+   "# $  #    #",
+   "# #   ##. #",
+   "#    #    #",
+   "#    ###  #",
+   "#         #",
+   "#  # ##$. #",
+   "###   #  .#",
+   "###########"
+  ],
+  "size": "9x9",
+  "rocks": 19,
+  "floor": 62,
+  "optimal_moves": 101,
+  "pushes_in_move_optimal": 36,
+  "optimal_pushes": 28,
+  "moves_in_push_optimal": 103,
+  "states_explored_bfs": 787095,
+  "solution": "DDDDDDRRRRRRRUUUUUULLLLDDDDDULLLUURRDDDDRRRRRURDDLDLURULLLLULLDRRRRRDRUUURUUUULLLLDLDDDDLDRRRRDRRUULD",
+  "push_optimal_solution": "DDDDDDRRRRRRRDDLURUUUUUUULLLLDDDLDDDRRRRDRUUDLLLLULULLUURRDRDDLDRRRRDRRUULDUURUUUULLLLDLDDDDLDRRRRRURDD",
+  "box_lines_move_opt": 11,
+  "box_lines_push_opt": 12,
+  "dead_squares": 24,
+  "dead_square_cells": [
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    4
+   ],
+   [
+    1,
+    5
+   ],
+   [
+    1,
+    6
+   ],
+   [
+    1,
+    7
+   ],
+   [
+    1,
+    8
+   ],
+   [
+    1,
+    9
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    2,
+    5
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    3,
+    6
+   ],
+   [
+    4,
+    1
+   ],
+   [
+    4,
+    5
+   ],
+   [
+    5,
+    1
+   ],
+   [
+    5,
+    6
+   ],
+   [
+    6,
+    1
+   ],
+   [
+    7,
+    1
+   ],
+   [
+    8,
+    1
+   ],
+   [
+    8,
+    2
+   ],
+   [
+    9,
+    3
+   ],
+   [
+    9,
+    4
+   ],
+   [
+    9,
+    5
+   ],
+   [
+    9,
+    7
+   ]
+  ],
+  "crates_on_fruit_at_start": [],
+  "crates_touching_wall_at_start": 3,
+  "par_suggested": 145,
+  "seconds": 12.3,
+  "push_states": 32271,
+  "solvable_states": 5294,
+  "dead_states": 26977,
+  "subtle_dead_states": 3518,
+  "trap_push_rate": 0.219,
+  "branch_points": 5202,
+  "first_trap_at_push": 0,
+  "start_push_options": 6,
+  "silent_dead_states": 3115,
+  "silent_trap_push_rate": 0.075,
+  "silent_first_at_push": 1,
+  "early_silent_trap_states_le3": 2,
+  "max_silent_region": 738,
+  "start_trap_options": 3,
+  "optimal_pushes_graph": 28,
+  "slot": "P135-101",
+  "pond": 135,
+  "par_draft": null
+ },
+ {
+  "rows": [
+   "###########",
+   "# ## ## ###",
+   "#         #",
+   "#  #   #  #",
+   "# .#$##   #",
+   "#     #$ ##",
+   "#   $#  . #",
+   "##   # # ##",
+   "#      # @#",
+   "#.  ## # ##",
+   "###########"
+  ],
+  "size": "9x9",
+  "rocks": 23,
+  "floor": 58,
+  "optimal_moves": 108,
+  "pushes_in_move_optimal": 18,
+  "optimal_pushes": 18,
+  "moves_in_push_optimal": 108,
+  "states_explored_bfs": 105911,
+  "solution": "LUUUULDURUULLLLLLDDDDDDRRRRUURLDDLLULUURDDUULLUUURRDDDUUURRRRDDDLDLDDLLLULDUUURRDDUUUUURRRRDDDLDLDDLLLDLUUUU",
+  "push_optimal_solution": "LUUUULDURUULLLLLLDDDDDDRRRRUURLDDLLULUURDDUULLUUURRRRRRDDDLDLDDLLLULDUUUUUURRDDDDDUUUUURRRRDDDLDLDDLLLDLUUUU",
+  "box_lines_move_opt": 10,
+  "box_lines_push_opt": 9,
+  "dead_squares": 23,
+  "dead_square_cells": [
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    4
+   ],
+   [
+    1,
+    7
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    2,
+    9
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    3,
+    6
+   ],
+   [
+    3,
+    9
+   ],
+   [
+    4,
+    1
+   ],
+   [
+    4,
+    7
+   ],
+   [
+    4,
+    9
+   ],
+   [
+    5,
+    1
+   ],
+   [
+    5,
+    5
+   ],
+   [
+    6,
+    1
+   ],
+   [
+    6,
+    6
+   ],
+   [
+    6,
+    9
+   ],
+   [
+    7,
+    6
+   ],
+   [
+    8,
+    1
+   ],
+   [
+    8,
+    6
+   ],
+   [
+    8,
+    9
+   ],
+   [
+    9,
+    3
+   ],
+   [
+    9,
+    6
+   ],
+   [
+    9,
+    8
+   ]
+  ],
+  "crates_on_fruit_at_start": [],
+  "crates_touching_wall_at_start": 3,
+  "par_suggested": 155,
+  "seconds": 1.51,
+  "push_states": 6902,
+  "solvable_states": 458,
+  "dead_states": 6444,
+  "subtle_dead_states": 1248,
+  "trap_push_rate": 0.365,
+  "branch_points": 445,
+  "first_trap_at_push": 0,
+  "start_push_options": 6,
+  "silent_dead_states": 1342,
+  "silent_trap_push_rate": 0.122,
+  "silent_first_at_push": 0,
+  "early_silent_trap_states_le3": 16,
+  "max_silent_region": 870,
+  "start_trap_options": 3,
+  "optimal_pushes_graph": 18,
+  "slot": "P140-106",
+  "pond": 140,
+  "par_draft": null
+ },
+ {
+  "rows": [
+   "###########",
+   "#         #",
+   "#         #",
+   "# . # ##  #",
+   "##    #  ##",
+   "#      #  #",
+   "#  # $ $  #",
+   "#  ## ##  #",
+   "#. . $#   #",
+   "# #     #@#",
+   "###########"
+  ],
+  "size": "9x9",
+  "rocks": 15,
+  "floor": 66,
+  "optimal_moves": 116,
+  "pushes_in_move_optimal": 34,
+  "optimal_pushes": 34,
+  "moves_in_push_optimal": 116,
+  "states_explored_bfs": 1225147,
+  "solution": "UUUULUUULLLDDDRDRLULLDRULLLDDDRDRRUUUDDDRRURUULLULLLULDDDLDRRDRRUUURULLLULDDDUURRDRDDDLLULRDRRULRUURRRUUURULLLLLLULD",
+  "push_optimal_solution": "UUUULUUULLLDDDRDRLULLDRULLLDDDRDRRUUUDDDRRURUULLULLLULDDDLDRRDRRUUURULLLULDDDUURRDRDDDLLULRDRRULRUURRRUUURULLLLLLULD",
+  "box_lines_move_opt": 16,
+  "box_lines_push_opt": 16,
+  "dead_squares": 30,
+  "dead_square_cells": [
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    1,
+    4
+   ],
+   [
+    1,
+    5
+   ],
+   [
+    1,
+    6
+   ],
+   [
+    1,
+    7
+   ],
+   [
+    1,
+    8
+   ],
+   [
+    1,
+    9
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    2,
+    9
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    3,
+    9
+   ],
+   [
+    4,
+    7
+   ],
+   [
+    5,
+    1
+   ],
+   [
+    5,
+    6
+   ],
+   [
+    5,
+    9
+   ],
+   [
+    6,
+    4
+   ],
+   [
+    6,
+    9
+   ],
+   [
+    7,
+    9
+   ],
+   [
+    8,
+    7
+   ],
+   [
+    8,
+    8
+   ],
+   [
+    8,
+    9
+   ],
+   [
+    9,
+    1
+   ],
+   [
+    9,
+    3
+   ],
+   [
+    9,
+    4
+   ],
+   [
+    9,
+    5
+   ],
+   [
+    9,
+    6
+   ],
+   [
+    9,
+    7
+   ],
+   [
+    9,
+    9
+   ]
+  ],
+  "crates_on_fruit_at_start": [],
+  "crates_touching_wall_at_start": 2,
+  "par_suggested": 170,
+  "seconds": 17.77,
+  "push_states": 39763,
+  "solvable_states": 5242,
+  "dead_states": 34521,
+  "subtle_dead_states": 802,
+  "trap_push_rate": 0.193,
+  "branch_points": 5228,
+  "first_trap_at_push": 0,
+  "start_push_options": 6,
+  "silent_dead_states": 1171,
+  "silent_trap_push_rate": 0.03,
+  "silent_first_at_push": 0,
+  "early_silent_trap_states_le3": 4,
+  "max_silent_region": 571,
+  "start_trap_options": 4,
+  "optimal_pushes_graph": 34,
+  "slot": "P145-111",
+  "pond": 145,
+  "par_draft": null
+ },
+ {
+  "rows": [
+   "###########",
+   "#    #    #",
+   "##      # #",
+   "#   #  #  #",
+   "###.#   # #",
+   "# # #    ##",
+   "#  . #   .#",
+   "#  #$     #",
+   "##  $$    #",
+   "#@ ##  # ##",
+   "###########"
+  ],
+  "size": "9x9",
+  "rocks": 19,
+  "floor": 62,
+  "optimal_moves": 124,
+  "pushes_in_move_optimal": 35,
+  "optimal_pushes": 35,
+  "moves_in_push_optimal": 124,
+  "states_explored_bfs": 396827,
+  "solution": "RUUURUUUURRDDDRDDDDLURUUUUUULLLDDDDLDDRRRDRUUUURULUULLLDDDDRDRRDRULLLULLDDRRRDRUUUULUURULLULDDDDUUURRDDDRDRRULULDLUURULLULDD",
+  "push_optimal_solution": "RUUURUUUURRDDDRDDDDLURUUUUUULLLDDDDLDDRRRDRUUUURULUULLLDDDDRDRRDRULLLULLDDRRRDRUUUULUURULLULDDDDUUURRDDDRDRRULULDLUURULLULDD",
+  "box_lines_move_opt": 17,
+  "box_lines_push_opt": 17,
+  "dead_squares": 27,
+  "dead_square_cells": [
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    1,
+    4
+   ],
+   [
+    1,
+    6
+   ],
+   [
+    1,
+    7
+   ],
+   [
+    1,
+    8
+   ],
+   [
+    1,
+    9
+   ],
+   [
+    2,
+    7
+   ],
+   [
+    2,
+    9
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    3,
+    8
+   ],
+   [
+    3,
+    9
+   ],
+   [
+    4,
+    7
+   ],
+   [
+    4,
+    9
+   ],
+   [
+    5,
+    1
+   ],
+   [
+    5,
+    5
+   ],
+   [
+    5,
+    8
+   ],
+   [
+    6,
+    1
+   ],
+   [
+    6,
+    4
+   ],
+   [
+    7,
+    1
+   ],
+   [
+    8,
+    9
+   ],
+   [
+    9,
+    1
+   ],
+   [
+    9,
+    2
+   ],
+   [
+    9,
+    5
+   ],
+   [
+    9,
+    6
+   ],
+   [
+    9,
+    8
+   ]
+  ],
+  "crates_on_fruit_at_start": [],
+  "crates_touching_wall_at_start": 2,
+  "par_suggested": 180,
+  "seconds": 6.36,
+  "push_states": 22544,
+  "solvable_states": 3453,
+  "dead_states": 19091,
+  "subtle_dead_states": 2839,
+  "trap_push_rate": 0.269,
+  "branch_points": 3414,
+  "first_trap_at_push": 0,
+  "start_push_options": 2,
+  "silent_dead_states": 2672,
+  "silent_trap_push_rate": 0.074,
+  "silent_first_at_push": 2,
+  "early_silent_trap_states_le3": 1,
+  "max_silent_region": 1056,
+  "start_trap_options": 1,
+  "optimal_pushes_graph": 35,
+  "slot": "P150-116",
+  "pond": 150,
+  "par_draft": null
+ }
+]

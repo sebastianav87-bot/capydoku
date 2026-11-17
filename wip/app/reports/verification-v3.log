@@ -1,0 +1,11 @@
+{'campaign': 30, 'daily_dates_per_state': 365, 'daily_states': 2, 'source_boards_checked': 760, 'all_unique': True, 'all_logic': True, 'all_regions_connected': True, 'elapsed_seconds': 2.02}
+{
+  dateStateOutputs: 5840,
+  cycles: 8,
+  consecutiveDatesPerCycle: 365,
+  eligibilityStates: 2,
+  unique: true,
+  pureLogic: true,
+  deterministicByLocalDate: true,
+  timezone: 'America/New_York'
+}

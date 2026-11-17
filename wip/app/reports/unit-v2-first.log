@@ -1,0 +1,80 @@
+
+> capydoku-local-prototype@1.0.0 test:unit
+> node --test tests/unit.test.js
+
+✔ 30 ponds: sizes, connected zones, rocks appear only from pond 21 (2.507838ms)
+✔ 395 boards independently unique; every no-guessing step agrees with full enumerator (59.378747ms)
+✔ generator repeatability: same seed produces byte-identical puzzle and proof (36.284112ms)
+✔ verification report has every board, exact counts, techniques and logic flags (0.240709ms)
+✔ daily: all 365 consecutive local dates deterministic, unique, logic-solvable (59.380596ms)
+✔ daily transform all 8 cycles preserves uniqueness and pure logic (2.486495ms)
+✔ local date, midnight and DST calendar days do not use UTC slice or 24h duration (0.188558ms)
+✔ row conflict flags both capys (0.161894ms)
+✔ column conflict flags both capys (0.096317ms)
+✔ zone conflict flags both even without same row/column or adjacency (0.168299ms)
+✔ diagonal conflict flags both (0.091534ms)
+✔ rock blocked, no move or lost life (0.116533ms)
+✔ only new rule-breaking placement loses exactly one orange (0.123156ms)
+✔ game over locks moves; Chill allows same moves without losing oranges (0.056657ms)
+✔ local legality only: a non-solution but locally legal first capy does not lose life (0.143043ms)
+✔ win requires n valid capys; Xs irrelevant (0.128269ms)
+✔ Hint gives one forced cell with reason/unit, never mutates board or returns a solution (0.275743ms)
+✔ Hint on conflicts repairs without placing (0.081162ms)
+✔ tap window fixed 280ms, delayed single tap avoids transient X (0.036541ms)
+✔ storage round-trip, progression and collection selection (0.569287ms)
+✖ storage malformed, invalid sessions, locked selection and future schema safely handled (0.804552ms)
+✔ storage unavailable/quota failure is safe (0.125913ms)
+✔ daily streak same day idempotent, consecutive +1, missed day resets, backdating safe (0.078572ms)
+✖ Hint refuses an inconsistent but locally legal partial board (0.296707ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 22
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 219.898942
+
+✖ failing tests:
+
+test at tests/unit.test.js:27:1
+✖ storage malformed, invalid sessions, locked selection and future schema safely handled (0.804552ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  2 !== 1
+  
+      at TestContext.<anonymous> (file:///workspace/capydoku/app/tests/unit.test.js:27:144)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/unit.test.js:31:1
+✖ Hint refuses an inconsistent but locally legal partial board (0.296707ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  'forced' !== 'repair'
+  
+      at TestContext.<anonymous> (file:///workspace/capydoku/app/tests/unit.test.js:31:168)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'forced',
+    expected: 'repair',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

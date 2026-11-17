@@ -1,0 +1,5137 @@
+{
+ "label": "after-probe",
+ "engine": "Playwright WebKit (iPhone emulation, DPR 3)",
+ "generated": "Sun Nov 15 2026 18:50:02 GMT-0500 (Eastern Standard Time)",
+ "results": [
+  {
+   "size": "se-tab",
+   "w": 375,
+   "h": 525,
+   "mode": "tab",
+   "pond": 5,
+   "state": "plain",
+   "W": 375,
+   "H": 525,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 7,
+   "cellPx": 39.56,
+   "noScroll": true,
+   "showmeLayout": null,
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 361,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 317,
+     "right": 361,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 87,
+     "left": 14,
+     "right": 361,
+     "h": 29,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 101,
+     "bottom": 402,
+     "left": 37,
+     "right": 338,
+     "h": 301,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "packed": {
+     "top": 410,
+     "bottom": 434,
+     "left": 98.5,
+     "right": 276.5,
+     "h": 24,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 437,
+     "bottom": 485,
+     "left": 15,
+     "right": 97.9,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 437,
+     "bottom": 485,
+     "left": 264.2,
+     "right": 360,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "capyChip": {
+     "top": 443,
+     "bottom": 479,
+     "left": 105.9,
+     "right": 256.3,
+     "h": 36,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "lilies": {
+     "top": 488,
+     "bottom": 515,
+     "left": 14,
+     "right": 361,
+     "h": 27,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "se-tab",
+   "w": 375,
+   "h": 525,
+   "mode": "tab",
+   "pond": 5,
+   "state": "showme",
+   "W": 375,
+   "H": 525,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 7,
+   "cellPx": 36.14,
+   "noScroll": true,
+   "showmeLayout": {
+    "display": "flex",
+    "padding": "12px",
+    "border": "1.333333px",
+    "sideBySide": true
+   },
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 361,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 317,
+     "right": 361,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 83,
+     "left": 14,
+     "right": 361,
+     "h": 25,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 97,
+     "bottom": 374,
+     "left": 49,
+     "right": 326,
+     "h": 277,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showme": {
+     "top": 382,
+     "bottom": 434,
+     "left": 14,
+     "right": 361,
+     "h": 52,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showmeBtn": {
+     "top": 386,
+     "bottom": 430,
+     "left": 258.1,
+     "right": 354.7,
+     "h": 44,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 437,
+     "bottom": 485,
+     "left": 15,
+     "right": 97.9,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 437,
+     "bottom": 485,
+     "left": 264.2,
+     "right": 360,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "capyChip": {
+     "top": 443,
+     "bottom": 479,
+     "left": 105.9,
+     "right": 256.3,
+     "h": 36,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "lilies": {
+     "top": 488,
+     "bottom": 515,
+     "left": 14,
+     "right": 361,
+     "h": 27,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "se-tab",
+   "w": 375,
+   "h": 525,
+   "mode": "tab",
+   "pond": 5,
+   "state": "dpad-showme",
+   "W": 375,
+   "H": 525,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 7,
+   "cellPx": 32.42,
+   "noScroll": true,
+   "showmeLayout": {
+    "display": "flex",
+    "padding": "12px",
+    "border": "1.333333px",
+    "sideBySide": true
+   },
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 361,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 317,
+     "right": 361,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 83,
+     "left": 14,
+     "right": 361,
+     "h": 25,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 97,
+     "bottom": 348,
+     "left": 62,
+     "right": 313,
+     "h": 251,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showme": {
+     "top": 356,
+     "bottom": 408,
+     "left": 14,
+     "right": 361,
+     "h": 52,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showmeBtn": {
+     "top": 360,
+     "bottom": 404,
+     "left": 258.1,
+     "right": 354.7,
+     "h": 44,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 434,
+     "bottom": 482,
+     "left": 17.4,
+     "right": 100.3,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 434,
+     "bottom": 482,
+     "left": 261.8,
+     "right": 357.6,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "dpad": {
+     "top": 411,
+     "bottom": 505,
+     "left": 113.1,
+     "right": 249.1,
+     "h": 94,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "se-tab",
+   "w": 375,
+   "h": 525,
+   "mode": "tab",
+   "pond": 10,
+   "state": "plain",
+   "W": 375,
+   "H": 525,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 6,
+   "cellPx": 46.66,
+   "noScroll": true,
+   "showmeLayout": null,
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 361,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 317,
+     "right": 361,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 87,
+     "left": 14,
+     "right": 361,
+     "h": 29,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 101,
+     "bottom": 402,
+     "left": 37,
+     "right": 338,
+     "h": 301,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "packed": {
+     "top": 410,
+     "bottom": 434,
+     "left": 98.5,
+     "right": 276.5,
+     "h": 24,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 437,
+     "bottom": 485,
+     "left": 15,
+     "right": 97.9,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 437,
+     "bottom": 485,
+     "left": 264.2,
+     "right": 360,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "capyChip": {
+     "top": 443,
+     "bottom": 479,
+     "left": 105.9,
+     "right": 256.3,
+     "h": 36,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "lilies": {
+     "top": 488,
+     "bottom": 515,
+     "left": 14,
+     "right": 361,
+     "h": 27,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "se-tab",
+   "w": 375,
+   "h": 525,
+   "mode": "tab",
+   "pond": 10,
+   "state": "showme",
+   "W": 375,
+   "H": 525,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 6,
+   "cellPx": 37.16,
+   "noScroll": true,
+   "showmeLayout": {
+    "display": "flex",
+    "padding": "12px",
+    "border": "1.333333px",
+    "sideBySide": true
+   },
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 361,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 317,
+     "right": 361,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 87,
+     "left": 14,
+     "right": 361,
+     "h": 29,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 101,
+     "bottom": 345,
+     "left": 65.5,
+     "right": 309.5,
+     "h": 244,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "packed": {
+     "top": 353,
+     "bottom": 377,
+     "left": 98.5,
+     "right": 276.5,
+     "h": 24,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showme": {
+     "top": 380,
+     "bottom": 434,
+     "left": 14,
+     "right": 361,
+     "h": 54,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showmeBtn": {
+     "top": 385,
+     "bottom": 429,
+     "left": 258.1,
+     "right": 354.7,
+     "h": 44,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 437,
+     "bottom": 485,
+     "left": 15,
+     "right": 97.9,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 437,
+     "bottom": 485,
+     "left": 264.2,
+     "right": 360,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "capyChip": {
+     "top": 443,
+     "bottom": 479,
+     "left": 105.9,
+     "right": 256.3,
+     "h": 36,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "lilies": {
+     "top": 488,
+     "bottom": 515,
+     "left": 14,
+     "right": 361,
+     "h": 27,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "se-tab",
+   "w": 375,
+   "h": 525,
+   "mode": "tab",
+   "pond": 10,
+   "state": "dpad-showme",
+   "W": 375,
+   "H": 525,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 6,
+   "cellPx": 38.33,
+   "noScroll": true,
+   "showmeLayout": {
+    "display": "flex",
+    "padding": "12px",
+    "border": "1.333333px",
+    "sideBySide": true
+   },
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 361,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 317,
+     "right": 361,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 83,
+     "left": 14,
+     "right": 361,
+     "h": 25,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 97,
+     "bottom": 348,
+     "left": 62,
+     "right": 313,
+     "h": 251,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showme": {
+     "top": 356,
+     "bottom": 408,
+     "left": 14,
+     "right": 361,
+     "h": 52,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showmeBtn": {
+     "top": 360,
+     "bottom": 404,
+     "left": 258.1,
+     "right": 354.7,
+     "h": 44,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 434,
+     "bottom": 482,
+     "left": 17.4,
+     "right": 100.3,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 434,
+     "bottom": 482,
+     "left": 261.8,
+     "right": 357.6,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "dpad": {
+     "top": 411,
+     "bottom": 505,
+     "left": 113.1,
+     "right": 249.1,
+     "h": 94,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "se-tab",
+   "w": 375,
+   "h": 525,
+   "mode": "tab",
+   "pond": 15,
+   "state": "plain",
+   "W": 375,
+   "H": 525,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 7,
+   "cellPx": 39.56,
+   "noScroll": true,
+   "showmeLayout": null,
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 361,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 317,
+     "right": 361,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 87,
+     "left": 14,
+     "right": 361,
+     "h": 29,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 101,
+     "bottom": 402,
+     "left": 37,
+     "right": 338,
+     "h": 301,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "packed": {
+     "top": 410,
+     "bottom": 434,
+     "left": 98.5,
+     "right": 276.5,
+     "h": 24,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 437,
+     "bottom": 485,
+     "left": 15,
+     "right": 97.9,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 437,
+     "bottom": 485,
+     "left": 264.2,
+     "right": 360,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "capyChip": {
+     "top": 443,
+     "bottom": 479,
+     "left": 105.9,
+     "right": 256.3,
+     "h": 36,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "lilies": {
+     "top": 488,
+     "bottom": 515,
+     "left": 14,
+     "right": 361,
+     "h": 27,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "se-tab",
+   "w": 375,
+   "h": 525,
+   "mode": "tab",
+   "pond": 15,
+   "state": "showme",
+   "W": 375,
+   "H": 525,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 7,
+   "cellPx": 36.14,
+   "noScroll": true,
+   "showmeLayout": {
+    "display": "flex",
+    "padding": "12px",
+    "border": "1.333333px",
+    "sideBySide": true
+   },
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 361,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 317,
+     "right": 361,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 83,
+     "left": 14,
+     "right": 361,
+     "h": 25,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 97,
+     "bottom": 374,
+     "left": 49,
+     "right": 326,
+     "h": 277,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showme": {
+     "top": 382,
+     "bottom": 434,
+     "left": 14,
+     "right": 361,
+     "h": 52,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showmeBtn": {
+     "top": 386,
+     "bottom": 430,
+     "left": 258.1,
+     "right": 354.7,
+     "h": 44,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 437,
+     "bottom": 485,
+     "left": 15,
+     "right": 97.9,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 437,
+     "bottom": 485,
+     "left": 264.2,
+     "right": 360,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "capyChip": {
+     "top": 443,
+     "bottom": 479,
+     "left": 105.9,
+     "right": 256.3,
+     "h": 36,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "lilies": {
+     "top": 488,
+     "bottom": 515,
+     "left": 14,
+     "right": 361,
+     "h": 27,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "se-tab",
+   "w": 375,
+   "h": 525,
+   "mode": "tab",
+   "pond": 15,
+   "state": "dpad-showme",
+   "W": 375,
+   "H": 525,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 7,
+   "cellPx": 32.42,
+   "noScroll": true,
+   "showmeLayout": {
+    "display": "flex",
+    "padding": "12px",
+    "border": "1.333333px",
+    "sideBySide": true
+   },
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 361,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 317,
+     "right": 361,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 83,
+     "left": 14,
+     "right": 361,
+     "h": 25,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 97,
+     "bottom": 348,
+     "left": 62,
+     "right": 313,
+     "h": 251,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showme": {
+     "top": 356,
+     "bottom": 408,
+     "left": 14,
+     "right": 361,
+     "h": 52,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showmeBtn": {
+     "top": 360,
+     "bottom": 404,
+     "left": 258.1,
+     "right": 354.7,
+     "h": 44,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 434,
+     "bottom": 482,
+     "left": 17.4,
+     "right": 100.3,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 434,
+     "bottom": 482,
+     "left": 261.8,
+     "right": 357.6,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "dpad": {
+     "top": 411,
+     "bottom": 505,
+     "left": 113.1,
+     "right": 249.1,
+     "h": 94,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "se-tab",
+   "w": 375,
+   "h": 525,
+   "mode": "tab",
+   "pond": 20,
+   "state": "plain",
+   "W": 375,
+   "H": 525,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 7,
+   "cellPx": 39.56,
+   "noScroll": true,
+   "showmeLayout": null,
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 361,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 317,
+     "right": 361,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 87,
+     "left": 14,
+     "right": 361,
+     "h": 29,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 101,
+     "bottom": 402,
+     "left": 37,
+     "right": 338,
+     "h": 301,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "packed": {
+     "top": 410,
+     "bottom": 434,
+     "left": 98.5,
+     "right": 276.5,
+     "h": 24,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 437,
+     "bottom": 485,
+     "left": 15,
+     "right": 97.9,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 437,
+     "bottom": 485,
+     "left": 264.2,
+     "right": 360,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "capyChip": {
+     "top": 443,
+     "bottom": 479,
+     "left": 105.9,
+     "right": 256.3,
+     "h": 36,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "lilies": {
+     "top": 488,
+     "bottom": 515,
+     "left": 14,
+     "right": 361,
+     "h": 27,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "se-tab",
+   "w": 375,
+   "h": 525,
+   "mode": "tab",
+   "pond": 20,
+   "state": "showme",
+   "W": 375,
+   "H": 525,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 7,
+   "cellPx": 36.14,
+   "noScroll": true,
+   "showmeLayout": {
+    "display": "flex",
+    "padding": "12px",
+    "border": "1.333333px",
+    "sideBySide": true
+   },
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 361,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 317,
+     "right": 361,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 83,
+     "left": 14,
+     "right": 361,
+     "h": 25,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 97,
+     "bottom": 374,
+     "left": 49,
+     "right": 326,
+     "h": 277,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showme": {
+     "top": 382,
+     "bottom": 434,
+     "left": 14,
+     "right": 361,
+     "h": 52,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showmeBtn": {
+     "top": 386,
+     "bottom": 430,
+     "left": 258.1,
+     "right": 354.7,
+     "h": 44,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 437,
+     "bottom": 485,
+     "left": 15,
+     "right": 97.9,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 437,
+     "bottom": 485,
+     "left": 264.2,
+     "right": 360,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "capyChip": {
+     "top": 443,
+     "bottom": 479,
+     "left": 105.9,
+     "right": 256.3,
+     "h": 36,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "lilies": {
+     "top": 488,
+     "bottom": 515,
+     "left": 14,
+     "right": 361,
+     "h": 27,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "se-tab",
+   "w": 375,
+   "h": 525,
+   "mode": "tab",
+   "pond": 20,
+   "state": "dpad-showme",
+   "W": 375,
+   "H": 525,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 7,
+   "cellPx": 32.42,
+   "noScroll": true,
+   "showmeLayout": {
+    "display": "flex",
+    "padding": "12px",
+    "border": "1.333333px",
+    "sideBySide": true
+   },
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 361,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 317,
+     "right": 361,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 83,
+     "left": 14,
+     "right": 361,
+     "h": 25,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 97,
+     "bottom": 348,
+     "left": 62,
+     "right": 313,
+     "h": 251,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showme": {
+     "top": 356,
+     "bottom": 408,
+     "left": 14,
+     "right": 361,
+     "h": 52,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showmeBtn": {
+     "top": 360,
+     "bottom": 404,
+     "left": 258.1,
+     "right": 354.7,
+     "h": 44,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 434,
+     "bottom": 482,
+     "left": 17.4,
+     "right": 100.3,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 434,
+     "bottom": 482,
+     "left": 261.8,
+     "right": 357.6,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "dpad": {
+     "top": 411,
+     "bottom": 505,
+     "left": 113.1,
+     "right": 249.1,
+     "h": 94,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "se-tab",
+   "w": 375,
+   "h": 525,
+   "mode": "tab",
+   "pond": 25,
+   "state": "plain",
+   "W": 375,
+   "H": 525,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 8,
+   "cellPx": 34.25,
+   "noScroll": true,
+   "showmeLayout": null,
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 361,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 317,
+     "right": 361,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 87,
+     "left": 14,
+     "right": 361,
+     "h": 29,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 101,
+     "bottom": 402,
+     "left": 37,
+     "right": 338,
+     "h": 301,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "packed": {
+     "top": 410,
+     "bottom": 434,
+     "left": 98.5,
+     "right": 276.5,
+     "h": 24,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 437,
+     "bottom": 485,
+     "left": 15,
+     "right": 97.9,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 437,
+     "bottom": 485,
+     "left": 264.2,
+     "right": 360,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "capyChip": {
+     "top": 443,
+     "bottom": 479,
+     "left": 105.9,
+     "right": 256.3,
+     "h": 36,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "lilies": {
+     "top": 488,
+     "bottom": 515,
+     "left": 14,
+     "right": 361,
+     "h": 27,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "se-tab",
+   "w": 375,
+   "h": 525,
+   "mode": "tab",
+   "pond": 25,
+   "state": "showme",
+   "W": 375,
+   "H": 525,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 8,
+   "cellPx": 31.25,
+   "noScroll": true,
+   "showmeLayout": {
+    "display": "flex",
+    "padding": "12px",
+    "border": "1.333333px",
+    "sideBySide": true
+   },
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 361,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 317,
+     "right": 361,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 83,
+     "left": 14,
+     "right": 361,
+     "h": 25,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 97,
+     "bottom": 374,
+     "left": 49,
+     "right": 326,
+     "h": 277,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showme": {
+     "top": 382,
+     "bottom": 434,
+     "left": 14,
+     "right": 361,
+     "h": 52,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showmeBtn": {
+     "top": 386,
+     "bottom": 430,
+     "left": 258.1,
+     "right": 354.7,
+     "h": 44,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 437,
+     "bottom": 485,
+     "left": 15,
+     "right": 97.9,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 437,
+     "bottom": 485,
+     "left": 264.2,
+     "right": 360,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "capyChip": {
+     "top": 443,
+     "bottom": 479,
+     "left": 105.9,
+     "right": 256.3,
+     "h": 36,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "lilies": {
+     "top": 488,
+     "bottom": 515,
+     "left": 14,
+     "right": 361,
+     "h": 27,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "se-tab",
+   "w": 375,
+   "h": 525,
+   "mode": "tab",
+   "pond": 25,
+   "state": "dpad-showme",
+   "W": 375,
+   "H": 525,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 8,
+   "cellPx": 28,
+   "noScroll": true,
+   "showmeLayout": {
+    "display": "flex",
+    "padding": "12px",
+    "border": "1.333333px",
+    "sideBySide": true
+   },
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 361,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 317,
+     "right": 361,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 83,
+     "left": 14,
+     "right": 361,
+     "h": 25,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 97,
+     "bottom": 348,
+     "left": 62,
+     "right": 313,
+     "h": 251,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showme": {
+     "top": 356,
+     "bottom": 408,
+     "left": 14,
+     "right": 361,
+     "h": 52,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showmeBtn": {
+     "top": 360,
+     "bottom": 404,
+     "left": 258.1,
+     "right": 354.7,
+     "h": 44,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 434,
+     "bottom": 482,
+     "left": 17.4,
+     "right": 100.3,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 434,
+     "bottom": 482,
+     "left": 261.8,
+     "right": 357.6,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "dpad": {
+     "top": 411,
+     "bottom": 505,
+     "left": 113.1,
+     "right": 249.1,
+     "h": 94,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "se-tab",
+   "w": 375,
+   "h": 525,
+   "mode": "tab",
+   "pond": 30,
+   "state": "plain",
+   "W": 375,
+   "H": 525,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 8,
+   "cellPx": 34.25,
+   "noScroll": true,
+   "showmeLayout": null,
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 361,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 317,
+     "right": 361,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 87,
+     "left": 14,
+     "right": 361,
+     "h": 29,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 101,
+     "bottom": 402,
+     "left": 37,
+     "right": 338,
+     "h": 301,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "packed": {
+     "top": 410,
+     "bottom": 434,
+     "left": 98.5,
+     "right": 276.5,
+     "h": 24,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 437,
+     "bottom": 485,
+     "left": 15,
+     "right": 97.9,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 437,
+     "bottom": 485,
+     "left": 264.2,
+     "right": 360,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "capyChip": {
+     "top": 443,
+     "bottom": 479,
+     "left": 105.9,
+     "right": 256.3,
+     "h": 36,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "lilies": {
+     "top": 488,
+     "bottom": 515,
+     "left": 14,
+     "right": 361,
+     "h": 27,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "se-tab",
+   "w": 375,
+   "h": 525,
+   "mode": "tab",
+   "pond": 30,
+   "state": "showme",
+   "W": 375,
+   "H": 525,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 8,
+   "cellPx": 31.25,
+   "noScroll": true,
+   "showmeLayout": {
+    "display": "flex",
+    "padding": "12px",
+    "border": "1.333333px",
+    "sideBySide": true
+   },
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 361,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 317,
+     "right": 361,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 83,
+     "left": 14,
+     "right": 361,
+     "h": 25,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 97,
+     "bottom": 374,
+     "left": 49,
+     "right": 326,
+     "h": 277,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showme": {
+     "top": 382,
+     "bottom": 434,
+     "left": 14,
+     "right": 361,
+     "h": 52,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showmeBtn": {
+     "top": 386,
+     "bottom": 430,
+     "left": 258.1,
+     "right": 354.7,
+     "h": 44,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 437,
+     "bottom": 485,
+     "left": 15,
+     "right": 97.9,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 437,
+     "bottom": 485,
+     "left": 264.2,
+     "right": 360,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "capyChip": {
+     "top": 443,
+     "bottom": 479,
+     "left": 105.9,
+     "right": 256.3,
+     "h": 36,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "lilies": {
+     "top": 488,
+     "bottom": 515,
+     "left": 14,
+     "right": 361,
+     "h": 27,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "se-tab",
+   "w": 375,
+   "h": 525,
+   "mode": "tab",
+   "pond": 30,
+   "state": "dpad-showme",
+   "W": 375,
+   "H": 525,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 8,
+   "cellPx": 28,
+   "noScroll": true,
+   "showmeLayout": {
+    "display": "flex",
+    "padding": "12px",
+    "border": "1.333333px",
+    "sideBySide": true
+   },
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 361,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 317,
+     "right": 361,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 83,
+     "left": 14,
+     "right": 361,
+     "h": 25,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 97,
+     "bottom": 348,
+     "left": 62,
+     "right": 313,
+     "h": 251,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showme": {
+     "top": 356,
+     "bottom": 408,
+     "left": 14,
+     "right": 361,
+     "h": 52,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showmeBtn": {
+     "top": 360,
+     "bottom": 404,
+     "left": 258.1,
+     "right": 354.7,
+     "h": 44,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 434,
+     "bottom": 482,
+     "left": 17.4,
+     "right": 100.3,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 434,
+     "bottom": 482,
+     "left": 261.8,
+     "right": 357.6,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "dpad": {
+     "top": 411,
+     "bottom": 505,
+     "left": 113.1,
+     "right": 249.1,
+     "h": 94,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "se-tab",
+   "w": 375,
+   "h": 525,
+   "mode": "tab",
+   "pond": 29,
+   "state": "plain",
+   "W": 375,
+   "H": 525,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 10,
+   "cellPx": 24,
+   "noScroll": true,
+   "showmeLayout": null,
+   "items": {
+    "header": {
+     "top": 0,
+     "bottom": 96,
+     "left": 0,
+     "right": 375,
+     "h": 96,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "back": {
+     "top": 8,
+     "bottom": 52,
+     "left": 18,
+     "right": 62,
+     "h": 44,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "lives": {
+     "top": 52,
+     "bottom": 96,
+     "left": 264,
+     "right": 357,
+     "h": 44,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 140,
+     "bottom": 400,
+     "left": 57.5,
+     "right": 317.5,
+     "h": 260,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "companion": {
+     "top": 403,
+     "bottom": 449,
+     "left": 15,
+     "right": 360,
+     "h": 46,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 454,
+     "bottom": 504,
+     "left": 40.9,
+     "right": 172.5,
+     "h": 50,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "power": {
+     "top": 454,
+     "bottom": 504,
+     "left": 202.5,
+     "right": 334.1,
+     "h": 50,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "se-tab",
+   "w": 375,
+   "h": 525,
+   "mode": "tab",
+   "pond": 7,
+   "state": "plain",
+   "W": 375,
+   "H": 525,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 8,
+   "cellPx": 27.38,
+   "noScroll": true,
+   "showmeLayout": null,
+   "items": {
+    "header": {
+     "top": 0,
+     "bottom": 96,
+     "left": 0,
+     "right": 375,
+     "h": 96,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "back": {
+     "top": 8,
+     "bottom": 52,
+     "left": 18,
+     "right": 62,
+     "h": 44,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "lives": {
+     "top": 52,
+     "bottom": 96,
+     "left": 264,
+     "right": 357,
+     "h": 44,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 145,
+     "bottom": 391,
+     "left": 64.5,
+     "right": 310.5,
+     "h": 246,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "companion": {
+     "top": 399.7,
+     "bottom": 445.7,
+     "left": 15,
+     "right": 360,
+     "h": 46,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 451.3,
+     "bottom": 501.3,
+     "left": 40.9,
+     "right": 172.5,
+     "h": 50,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "power": {
+     "top": 451.3,
+     "bottom": 501.3,
+     "left": 202.5,
+     "right": 334.1,
+     "h": 50,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "390-tab",
+   "w": 390,
+   "h": 664,
+   "mode": "tab",
+   "pond": 5,
+   "state": "plain",
+   "W": 390,
+   "H": 664,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 7,
+   "cellPx": 49.3,
+   "noScroll": true,
+   "showmeLayout": null,
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 376,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 332,
+     "right": 376,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 87,
+     "left": 14,
+     "right": 376,
+     "h": 29,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 101,
+     "bottom": 470.2,
+     "left": 10.4,
+     "right": 379.6,
+     "h": 369.2,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "packed": {
+     "top": 478.2,
+     "bottom": 502.2,
+     "left": 106,
+     "right": 284,
+     "h": 24,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 505.2,
+     "bottom": 553.2,
+     "left": 17.5,
+     "right": 100.4,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 505.2,
+     "bottom": 553.2,
+     "left": 276.7,
+     "right": 372.5,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "capyChip": {
+     "top": 511.2,
+     "bottom": 547.2,
+     "left": 113.4,
+     "right": 263.8,
+     "h": 36,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "lilies": {
+     "top": 556.2,
+     "bottom": 583.2,
+     "left": 14,
+     "right": 376,
+     "h": 27,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "390-tab",
+   "w": 390,
+   "h": 664,
+   "mode": "tab",
+   "pond": 5,
+   "state": "showme",
+   "W": 390,
+   "H": 664,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 7,
+   "cellPx": 49.3,
+   "noScroll": true,
+   "showmeLayout": {
+    "display": "flex",
+    "padding": "12px",
+    "border": "1.333333px",
+    "sideBySide": true
+   },
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 376,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 332,
+     "right": 376,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 87,
+     "left": 14,
+     "right": 376,
+     "h": 29,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 101,
+     "bottom": 470.2,
+     "left": 10.4,
+     "right": 379.6,
+     "h": 369.2,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "packed": {
+     "top": 478.2,
+     "bottom": 502.2,
+     "left": 106,
+     "right": 284,
+     "h": 24,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showme": {
+     "top": 505.2,
+     "bottom": 557.8,
+     "left": 14,
+     "right": 376,
+     "h": 52.7,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showmeBtn": {
+     "top": 509.5,
+     "bottom": 553.5,
+     "left": 273.1,
+     "right": 369.7,
+     "h": 44,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 560.8,
+     "bottom": 608.8,
+     "left": 17.5,
+     "right": 100.4,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 560.8,
+     "bottom": 608.8,
+     "left": 276.7,
+     "right": 372.5,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "capyChip": {
+     "top": 566.8,
+     "bottom": 602.8,
+     "left": 113.4,
+     "right": 263.8,
+     "h": 36,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "lilies": {
+     "top": 611.8,
+     "bottom": 638.8,
+     "left": 14,
+     "right": 376,
+     "h": 27,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "390-tab",
+   "w": 390,
+   "h": 664,
+   "mode": "tab",
+   "pond": 5,
+   "state": "dpad-showme",
+   "W": 390,
+   "H": 664,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 7,
+   "cellPx": 46.7,
+   "noScroll": true,
+   "showmeLayout": {
+    "display": "flex",
+    "padding": "12px",
+    "border": "1.333333px",
+    "sideBySide": true
+   },
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 376,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 332,
+     "right": 376,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 87,
+     "left": 14,
+     "right": 376,
+     "h": 29,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 101,
+     "bottom": 452,
+     "left": 19.5,
+     "right": 370.5,
+     "h": 351,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "packed": {
+     "top": 460,
+     "bottom": 484,
+     "left": 106,
+     "right": 284,
+     "h": 24,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showme": {
+     "top": 487,
+     "bottom": 539.7,
+     "left": 14,
+     "right": 376,
+     "h": 52.7,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showmeBtn": {
+     "top": 491.3,
+     "bottom": 535.3,
+     "left": 273.1,
+     "right": 369.7,
+     "h": 44,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 571.7,
+     "bottom": 619.7,
+     "left": 19.9,
+     "right": 102.8,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 571.7,
+     "bottom": 619.7,
+     "left": 274.3,
+     "right": 370.1,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "dpad": {
+     "top": 542.7,
+     "bottom": 648.7,
+     "left": 120.6,
+     "right": 256.6,
+     "h": 106,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "390-tab",
+   "w": 390,
+   "h": 664,
+   "mode": "tab",
+   "pond": 10,
+   "state": "plain",
+   "W": 390,
+   "H": 664,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 6,
+   "cellPx": 58.02,
+   "noScroll": true,
+   "showmeLayout": null,
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 376,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 332,
+     "right": 376,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 87,
+     "left": 14,
+     "right": 376,
+     "h": 29,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 101,
+     "bottom": 470.2,
+     "left": 10.4,
+     "right": 379.6,
+     "h": 369.2,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "packed": {
+     "top": 478.2,
+     "bottom": 502.2,
+     "left": 106,
+     "right": 284,
+     "h": 24,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 505.2,
+     "bottom": 553.2,
+     "left": 17.5,
+     "right": 100.4,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 505.2,
+     "bottom": 553.2,
+     "left": 276.7,
+     "right": 372.5,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "capyChip": {
+     "top": 511.2,
+     "bottom": 547.2,
+     "left": 113.4,
+     "right": 263.8,
+     "h": 36,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "lilies": {
+     "top": 556.2,
+     "bottom": 583.2,
+     "left": 14,
+     "right": 376,
+     "h": 27,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "390-tab",
+   "w": 390,
+   "h": 664,
+   "mode": "tab",
+   "pond": 10,
+   "state": "showme",
+   "W": 390,
+   "H": 664,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 6,
+   "cellPx": 58.02,
+   "noScroll": true,
+   "showmeLayout": {
+    "display": "flex",
+    "padding": "12px",
+    "border": "1.333333px",
+    "sideBySide": true
+   },
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 376,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 332,
+     "right": 376,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 87,
+     "left": 14,
+     "right": 376,
+     "h": 29,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 101,
+     "bottom": 470.2,
+     "left": 10.4,
+     "right": 379.6,
+     "h": 369.2,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "packed": {
+     "top": 478.2,
+     "bottom": 502.2,
+     "left": 106,
+     "right": 284,
+     "h": 24,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showme": {
+     "top": 505.2,
+     "bottom": 557.8,
+     "left": 14,
+     "right": 376,
+     "h": 52.7,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showmeBtn": {
+     "top": 509.5,
+     "bottom": 553.5,
+     "left": 273.1,
+     "right": 369.7,
+     "h": 44,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 560.8,
+     "bottom": 608.8,
+     "left": 17.5,
+     "right": 100.4,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 560.8,
+     "bottom": 608.8,
+     "left": 276.7,
+     "right": 372.5,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "capyChip": {
+     "top": 566.8,
+     "bottom": 602.8,
+     "left": 113.4,
+     "right": 263.8,
+     "h": 36,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "lilies": {
+     "top": 611.8,
+     "bottom": 638.8,
+     "left": 14,
+     "right": 376,
+     "h": 27,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "390-tab",
+   "w": 390,
+   "h": 664,
+   "mode": "tab",
+   "pond": 10,
+   "state": "dpad-showme",
+   "W": 390,
+   "H": 664,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 6,
+   "cellPx": 55,
+   "noScroll": true,
+   "showmeLayout": {
+    "display": "flex",
+    "padding": "12px",
+    "border": "1.333333px",
+    "sideBySide": true
+   },
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 376,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 332,
+     "right": 376,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 87,
+     "left": 14,
+     "right": 376,
+     "h": 29,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 101,
+     "bottom": 452,
+     "left": 19.5,
+     "right": 370.5,
+     "h": 351,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "packed": {
+     "top": 460,
+     "bottom": 484,
+     "left": 106,
+     "right": 284,
+     "h": 24,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showme": {
+     "top": 487,
+     "bottom": 539.7,
+     "left": 14,
+     "right": 376,
+     "h": 52.7,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showmeBtn": {
+     "top": 491.3,
+     "bottom": 535.3,
+     "left": 273.1,
+     "right": 369.7,
+     "h": 44,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 571.7,
+     "bottom": 619.7,
+     "left": 19.9,
+     "right": 102.8,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 571.7,
+     "bottom": 619.7,
+     "left": 274.3,
+     "right": 370.1,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "dpad": {
+     "top": 542.7,
+     "bottom": 648.7,
+     "left": 120.6,
+     "right": 256.6,
+     "h": 106,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "390-tab",
+   "w": 390,
+   "h": 664,
+   "mode": "tab",
+   "pond": 15,
+   "state": "plain",
+   "W": 390,
+   "H": 664,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 7,
+   "cellPx": 49.3,
+   "noScroll": true,
+   "showmeLayout": null,
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 376,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 332,
+     "right": 376,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 87,
+     "left": 14,
+     "right": 376,
+     "h": 29,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 101,
+     "bottom": 470.2,
+     "left": 10.4,
+     "right": 379.6,
+     "h": 369.2,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "packed": {
+     "top": 478.2,
+     "bottom": 502.2,
+     "left": 106,
+     "right": 284,
+     "h": 24,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 505.2,
+     "bottom": 553.2,
+     "left": 17.5,
+     "right": 100.4,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 505.2,
+     "bottom": 553.2,
+     "left": 276.7,
+     "right": 372.5,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "capyChip": {
+     "top": 511.2,
+     "bottom": 547.2,
+     "left": 113.4,
+     "right": 263.8,
+     "h": 36,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "lilies": {
+     "top": 556.2,
+     "bottom": 583.2,
+     "left": 14,
+     "right": 376,
+     "h": 27,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "390-tab",
+   "w": 390,
+   "h": 664,
+   "mode": "tab",
+   "pond": 15,
+   "state": "showme",
+   "W": 390,
+   "H": 664,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 7,
+   "cellPx": 49.3,
+   "noScroll": true,
+   "showmeLayout": {
+    "display": "flex",
+    "padding": "12px",
+    "border": "1.333333px",
+    "sideBySide": true
+   },
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 376,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 332,
+     "right": 376,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 87,
+     "left": 14,
+     "right": 376,
+     "h": 29,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 101,
+     "bottom": 470.2,
+     "left": 10.4,
+     "right": 379.6,
+     "h": 369.2,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "packed": {
+     "top": 478.2,
+     "bottom": 502.2,
+     "left": 106,
+     "right": 284,
+     "h": 24,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showme": {
+     "top": 505.2,
+     "bottom": 557.8,
+     "left": 14,
+     "right": 376,
+     "h": 52.7,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showmeBtn": {
+     "top": 509.5,
+     "bottom": 553.5,
+     "left": 273.1,
+     "right": 369.7,
+     "h": 44,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 560.8,
+     "bottom": 608.8,
+     "left": 17.5,
+     "right": 100.4,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 560.8,
+     "bottom": 608.8,
+     "left": 276.7,
+     "right": 372.5,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "capyChip": {
+     "top": 566.8,
+     "bottom": 602.8,
+     "left": 113.4,
+     "right": 263.8,
+     "h": 36,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "lilies": {
+     "top": 611.8,
+     "bottom": 638.8,
+     "left": 14,
+     "right": 376,
+     "h": 27,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "390-tab",
+   "w": 390,
+   "h": 664,
+   "mode": "tab",
+   "pond": 15,
+   "state": "dpad-showme",
+   "W": 390,
+   "H": 664,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 7,
+   "cellPx": 46.7,
+   "noScroll": true,
+   "showmeLayout": {
+    "display": "flex",
+    "padding": "12px",
+    "border": "1.333333px",
+    "sideBySide": true
+   },
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 376,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 332,
+     "right": 376,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 87,
+     "left": 14,
+     "right": 376,
+     "h": 29,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 101,
+     "bottom": 452,
+     "left": 19.5,
+     "right": 370.5,
+     "h": 351,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "packed": {
+     "top": 460,
+     "bottom": 484,
+     "left": 106,
+     "right": 284,
+     "h": 24,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showme": {
+     "top": 487,
+     "bottom": 539.7,
+     "left": 14,
+     "right": 376,
+     "h": 52.7,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showmeBtn": {
+     "top": 491.3,
+     "bottom": 535.3,
+     "left": 273.1,
+     "right": 369.7,
+     "h": 44,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 571.7,
+     "bottom": 619.7,
+     "left": 19.9,
+     "right": 102.8,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 571.7,
+     "bottom": 619.7,
+     "left": 274.3,
+     "right": 370.1,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "dpad": {
+     "top": 542.7,
+     "bottom": 648.7,
+     "left": 120.6,
+     "right": 256.6,
+     "h": 106,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "390-tab",
+   "w": 390,
+   "h": 664,
+   "mode": "tab",
+   "pond": 20,
+   "state": "plain",
+   "W": 390,
+   "H": 664,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 7,
+   "cellPx": 49.3,
+   "noScroll": true,
+   "showmeLayout": null,
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 376,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 332,
+     "right": 376,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 87,
+     "left": 14,
+     "right": 376,
+     "h": 29,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 101,
+     "bottom": 470.2,
+     "left": 10.4,
+     "right": 379.6,
+     "h": 369.2,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "packed": {
+     "top": 478.2,
+     "bottom": 502.2,
+     "left": 106,
+     "right": 284,
+     "h": 24,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 505.2,
+     "bottom": 553.2,
+     "left": 17.5,
+     "right": 100.4,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 505.2,
+     "bottom": 553.2,
+     "left": 276.7,
+     "right": 372.5,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "capyChip": {
+     "top": 511.2,
+     "bottom": 547.2,
+     "left": 113.4,
+     "right": 263.8,
+     "h": 36,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "lilies": {
+     "top": 556.2,
+     "bottom": 583.2,
+     "left": 14,
+     "right": 376,
+     "h": 27,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "390-tab",
+   "w": 390,
+   "h": 664,
+   "mode": "tab",
+   "pond": 20,
+   "state": "showme",
+   "W": 390,
+   "H": 664,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 7,
+   "cellPx": 49.3,
+   "noScroll": true,
+   "showmeLayout": {
+    "display": "flex",
+    "padding": "12px",
+    "border": "1.333333px",
+    "sideBySide": true
+   },
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 376,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 332,
+     "right": 376,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 87,
+     "left": 14,
+     "right": 376,
+     "h": 29,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 101,
+     "bottom": 470.2,
+     "left": 10.4,
+     "right": 379.6,
+     "h": 369.2,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "packed": {
+     "top": 478.2,
+     "bottom": 502.2,
+     "left": 106,
+     "right": 284,
+     "h": 24,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showme": {
+     "top": 505.2,
+     "bottom": 557.8,
+     "left": 14,
+     "right": 376,
+     "h": 52.7,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showmeBtn": {
+     "top": 509.5,
+     "bottom": 553.5,
+     "left": 273.1,
+     "right": 369.7,
+     "h": 44,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 560.8,
+     "bottom": 608.8,
+     "left": 17.5,
+     "right": 100.4,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 560.8,
+     "bottom": 608.8,
+     "left": 276.7,
+     "right": 372.5,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "capyChip": {
+     "top": 566.8,
+     "bottom": 602.8,
+     "left": 113.4,
+     "right": 263.8,
+     "h": 36,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "lilies": {
+     "top": 611.8,
+     "bottom": 638.8,
+     "left": 14,
+     "right": 376,
+     "h": 27,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "390-tab",
+   "w": 390,
+   "h": 664,
+   "mode": "tab",
+   "pond": 20,
+   "state": "dpad-showme",
+   "W": 390,
+   "H": 664,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 7,
+   "cellPx": 46.7,
+   "noScroll": true,
+   "showmeLayout": {
+    "display": "flex",
+    "padding": "12px",
+    "border": "1.333333px",
+    "sideBySide": true
+   },
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 376,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 332,
+     "right": 376,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 87,
+     "left": 14,
+     "right": 376,
+     "h": 29,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 101,
+     "bottom": 452,
+     "left": 19.5,
+     "right": 370.5,
+     "h": 351,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "packed": {
+     "top": 460,
+     "bottom": 484,
+     "left": 106,
+     "right": 284,
+     "h": 24,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showme": {
+     "top": 487,
+     "bottom": 539.7,
+     "left": 14,
+     "right": 376,
+     "h": 52.7,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showmeBtn": {
+     "top": 491.3,
+     "bottom": 535.3,
+     "left": 273.1,
+     "right": 369.7,
+     "h": 44,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 571.7,
+     "bottom": 619.7,
+     "left": 19.9,
+     "right": 102.8,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 571.7,
+     "bottom": 619.7,
+     "left": 274.3,
+     "right": 370.1,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "dpad": {
+     "top": 542.7,
+     "bottom": 648.7,
+     "left": 120.6,
+     "right": 256.6,
+     "h": 106,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "390-tab",
+   "w": 390,
+   "h": 664,
+   "mode": "tab",
+   "pond": 25,
+   "state": "plain",
+   "W": 390,
+   "H": 664,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 8,
+   "cellPx": 42.77,
+   "noScroll": true,
+   "showmeLayout": null,
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 376,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 332,
+     "right": 376,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 87,
+     "left": 14,
+     "right": 376,
+     "h": 29,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 101,
+     "bottom": 470.2,
+     "left": 10.4,
+     "right": 379.6,
+     "h": 369.2,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "packed": {
+     "top": 478.2,
+     "bottom": 502.2,
+     "left": 106,
+     "right": 284,
+     "h": 24,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 505.2,
+     "bottom": 553.2,
+     "left": 17.5,
+     "right": 100.4,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 505.2,
+     "bottom": 553.2,
+     "left": 276.7,
+     "right": 372.5,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "capyChip": {
+     "top": 511.2,
+     "bottom": 547.2,
+     "left": 113.4,
+     "right": 263.8,
+     "h": 36,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "lilies": {
+     "top": 556.2,
+     "bottom": 583.2,
+     "left": 14,
+     "right": 376,
+     "h": 27,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "390-tab",
+   "w": 390,
+   "h": 664,
+   "mode": "tab",
+   "pond": 25,
+   "state": "showme",
+   "W": 390,
+   "H": 664,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 8,
+   "cellPx": 42.77,
+   "noScroll": true,
+   "showmeLayout": {
+    "display": "flex",
+    "padding": "12px",
+    "border": "1.333333px",
+    "sideBySide": true
+   },
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 376,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 332,
+     "right": 376,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 87,
+     "left": 14,
+     "right": 376,
+     "h": 29,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 101,
+     "bottom": 470.2,
+     "left": 10.4,
+     "right": 379.6,
+     "h": 369.2,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "packed": {
+     "top": 478.2,
+     "bottom": 502.2,
+     "left": 106,
+     "right": 284,
+     "h": 24,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showme": {
+     "top": 505.2,
+     "bottom": 557.8,
+     "left": 14,
+     "right": 376,
+     "h": 52.7,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showmeBtn": {
+     "top": 509.5,
+     "bottom": 553.5,
+     "left": 273.1,
+     "right": 369.7,
+     "h": 44,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 560.8,
+     "bottom": 608.8,
+     "left": 17.5,
+     "right": 100.4,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 560.8,
+     "bottom": 608.8,
+     "left": 276.7,
+     "right": 372.5,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "capyChip": {
+     "top": 566.8,
+     "bottom": 602.8,
+     "left": 113.4,
+     "right": 263.8,
+     "h": 36,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "lilies": {
+     "top": 611.8,
+     "bottom": 638.8,
+     "left": 14,
+     "right": 376,
+     "h": 27,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "390-tab",
+   "w": 390,
+   "h": 664,
+   "mode": "tab",
+   "pond": 25,
+   "state": "dpad-showme",
+   "W": 390,
+   "H": 664,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 8,
+   "cellPx": 40.5,
+   "noScroll": true,
+   "showmeLayout": {
+    "display": "flex",
+    "padding": "12px",
+    "border": "1.333333px",
+    "sideBySide": true
+   },
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 376,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 332,
+     "right": 376,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 87,
+     "left": 14,
+     "right": 376,
+     "h": 29,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 101,
+     "bottom": 452,
+     "left": 19.5,
+     "right": 370.5,
+     "h": 351,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "packed": {
+     "top": 460,
+     "bottom": 484,
+     "left": 106,
+     "right": 284,
+     "h": 24,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showme": {
+     "top": 487,
+     "bottom": 539.7,
+     "left": 14,
+     "right": 376,
+     "h": 52.7,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showmeBtn": {
+     "top": 491.3,
+     "bottom": 535.3,
+     "left": 273.1,
+     "right": 369.7,
+     "h": 44,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 571.7,
+     "bottom": 619.7,
+     "left": 19.9,
+     "right": 102.8,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 571.7,
+     "bottom": 619.7,
+     "left": 274.3,
+     "right": 370.1,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "dpad": {
+     "top": 542.7,
+     "bottom": 648.7,
+     "left": 120.6,
+     "right": 256.6,
+     "h": 106,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "390-tab",
+   "w": 390,
+   "h": 664,
+   "mode": "tab",
+   "pond": 30,
+   "state": "plain",
+   "W": 390,
+   "H": 664,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 8,
+   "cellPx": 42.77,
+   "noScroll": true,
+   "showmeLayout": null,
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 376,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 332,
+     "right": 376,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 87,
+     "left": 14,
+     "right": 376,
+     "h": 29,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 101,
+     "bottom": 470.2,
+     "left": 10.4,
+     "right": 379.6,
+     "h": 369.2,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "packed": {
+     "top": 478.2,
+     "bottom": 502.2,
+     "left": 106,
+     "right": 284,
+     "h": 24,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 505.2,
+     "bottom": 553.2,
+     "left": 17.5,
+     "right": 100.4,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 505.2,
+     "bottom": 553.2,
+     "left": 276.7,
+     "right": 372.5,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "capyChip": {
+     "top": 511.2,
+     "bottom": 547.2,
+     "left": 113.4,
+     "right": 263.8,
+     "h": 36,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "lilies": {
+     "top": 556.2,
+     "bottom": 583.2,
+     "left": 14,
+     "right": 376,
+     "h": 27,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "390-tab",
+   "w": 390,
+   "h": 664,
+   "mode": "tab",
+   "pond": 30,
+   "state": "showme",
+   "W": 390,
+   "H": 664,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 8,
+   "cellPx": 42.77,
+   "noScroll": true,
+   "showmeLayout": {
+    "display": "flex",
+    "padding": "12px",
+    "border": "1.333333px",
+    "sideBySide": true
+   },
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 376,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 332,
+     "right": 376,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 87,
+     "left": 14,
+     "right": 376,
+     "h": 29,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 101,
+     "bottom": 470.2,
+     "left": 10.4,
+     "right": 379.6,
+     "h": 369.2,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "packed": {
+     "top": 478.2,
+     "bottom": 502.2,
+     "left": 106,
+     "right": 284,
+     "h": 24,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showme": {
+     "top": 505.2,
+     "bottom": 557.8,
+     "left": 14,
+     "right": 376,
+     "h": 52.7,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showmeBtn": {
+     "top": 509.5,
+     "bottom": 553.5,
+     "left": 273.1,
+     "right": 369.7,
+     "h": 44,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 560.8,
+     "bottom": 608.8,
+     "left": 17.5,
+     "right": 100.4,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 560.8,
+     "bottom": 608.8,
+     "left": 276.7,
+     "right": 372.5,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "capyChip": {
+     "top": 566.8,
+     "bottom": 602.8,
+     "left": 113.4,
+     "right": 263.8,
+     "h": 36,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "lilies": {
+     "top": 611.8,
+     "bottom": 638.8,
+     "left": 14,
+     "right": 376,
+     "h": 27,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "390-tab",
+   "w": 390,
+   "h": 664,
+   "mode": "tab",
+   "pond": 30,
+   "state": "dpad-showme",
+   "W": 390,
+   "H": 664,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 8,
+   "cellPx": 40.5,
+   "noScroll": true,
+   "showmeLayout": {
+    "display": "flex",
+    "padding": "12px",
+    "border": "1.333333px",
+    "sideBySide": true
+   },
+   "items": {
+    "header": {
+     "top": 6,
+     "bottom": 55,
+     "left": 14,
+     "right": 376,
+     "h": 49,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "leave": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 14,
+     "right": 58,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restartTop": {
+     "top": 6.5,
+     "bottom": 54.5,
+     "left": 332,
+     "right": 376,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "stats": {
+     "top": 58,
+     "bottom": 87,
+     "left": 14,
+     "right": 376,
+     "h": 29,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 101,
+     "bottom": 452,
+     "left": 19.5,
+     "right": 370.5,
+     "h": 351,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "packed": {
+     "top": 460,
+     "bottom": 484,
+     "left": 106,
+     "right": 284,
+     "h": 24,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showme": {
+     "top": 487,
+     "bottom": 539.7,
+     "left": 14,
+     "right": 376,
+     "h": 52.7,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "showmeBtn": {
+     "top": 491.3,
+     "bottom": 535.3,
+     "left": 273.1,
+     "right": 369.7,
+     "h": 44,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 571.7,
+     "bottom": 619.7,
+     "left": 19.9,
+     "right": 102.8,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "restart": {
+     "top": 571.7,
+     "bottom": 619.7,
+     "left": 274.3,
+     "right": 370.1,
+     "h": 48,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "dpad": {
+     "top": 542.7,
+     "bottom": 648.7,
+     "left": 120.6,
+     "right": 256.6,
+     "h": 106,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "390-tab",
+   "w": 390,
+   "h": 664,
+   "mode": "tab",
+   "pond": 29,
+   "state": "plain",
+   "W": 390,
+   "H": 664,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 10,
+   "cellPx": 36,
+   "noScroll": true,
+   "showmeLayout": null,
+   "items": {
+    "header": {
+     "top": 0,
+     "bottom": 96,
+     "left": 0,
+     "right": 390,
+     "h": 96,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "back": {
+     "top": 8,
+     "bottom": 52,
+     "left": 18,
+     "right": 62,
+     "h": 44,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "lives": {
+     "top": 52,
+     "bottom": 96,
+     "left": 279,
+     "right": 372,
+     "h": 44,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 140,
+     "bottom": 520,
+     "left": 5,
+     "right": 385,
+     "h": 380,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "companion": {
+     "top": 528.7,
+     "bottom": 574.7,
+     "left": 15,
+     "right": 375,
+     "h": 46,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 585.3,
+     "bottom": 635.3,
+     "left": 42,
+     "right": 180,
+     "h": 50,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "power": {
+     "top": 585.3,
+     "bottom": 635.3,
+     "left": 210,
+     "right": 348,
+     "h": 50,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  },
+  {
+   "size": "390-tab",
+   "w": 390,
+   "h": 664,
+   "mode": "tab",
+   "pond": 7,
+   "state": "plain",
+   "W": 390,
+   "H": 664,
+   "insets": [
+    0,
+    0
+   ],
+   "n": 8,
+   "cellPx": 36.63,
+   "noScroll": true,
+   "showmeLayout": null,
+   "items": {
+    "header": {
+     "top": 0,
+     "bottom": 96,
+     "left": 0,
+     "right": 390,
+     "h": 96,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "back": {
+     "top": 8,
+     "bottom": 52,
+     "left": 18,
+     "right": 62,
+     "h": 44,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "lives": {
+     "top": 52,
+     "bottom": 96,
+     "left": 279,
+     "right": 372,
+     "h": 44,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "board": {
+     "top": 147,
+     "bottom": 467,
+     "left": 35,
+     "right": 355,
+     "h": 320,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "companion": {
+     "top": 497.5,
+     "bottom": 555.5,
+     "left": 15,
+     "right": 375,
+     "h": 58,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "undo": {
+     "top": 563.8,
+     "bottom": 641.8,
+     "left": 42,
+     "right": 180,
+     "h": 78,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    },
+    "power": {
+     "top": 563.8,
+     "bottom": 641.8,
+     "left": 210,
+     "right": 348,
+     "h": 78,
+     "unclipped": true,
+     "inView": true,
+     "ok": true
+    }
+   },
+   "failed": [],
+   "fits": true
+  }
+ ]
+}

@@ -1,0 +1,6 @@
+# Local installs and secrets — never commit these if the WIP is updated later
+**/node_modules/
+**/.env
+**/.env.*
+**/.wrangler/
+**/__pycache__/

@@ -1,0 +1,59 @@
+{
+  "title": "Northumberland",
+  "author": "Spring Spring / Spring Enterprises",
+  "source": "https://opengameart.org/content/northumberland",
+  "license": "CC0 1.0 Universal",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "checked": "2026-11-10 EST",
+  "cost_usd": 0,
+  "account_required": false,
+  "original_sha256": "93cecfd3492531d8dff68ce8f5874040015de3cea7efc3df0ad515292cc0e8b7",
+  "formats": {
+    "mp3": {
+      "bytes": 2500797,
+      "sha256": "fdaed826c8eb474752c66d94fba2aaab0bea38b90d26b03277abfa65317bd307",
+      "duration_s": 178.56578231292517,
+      "decode_ok": true,
+      "seam_step_peak": 9.867009794106707e-06,
+      "first_last_10ms_peak": 0.0004093836178071797,
+      "bitrate": 112000
+    },
+    "ogg": {
+      "bytes": 1685211,
+      "sha256": "b98cbf1ff4519a7ab32b0f11bdfeae35f964fcface2a32444059076060d206f7",
+      "duration_s": 178.56580498866214,
+      "decode_ok": true,
+      "seam_step_peak": 7.291667429853987e-07,
+      "first_last_10ms_peak": 0.0004439742479007691,
+      "bitrate": 64000
+    }
+  },
+  "loop": "Native audio.loop; 40ms head fade / 500ms tail fade. One track, no rotation.",
+  "total_audio_bytes": 4186008,
+  "tracks": [
+    {
+      "id": "northumberland",
+      "license": "CC0 1.0 Universal",
+      "formats": {
+        "mp3": {
+          "bytes": 2500797,
+          "sha256": "fdaed826c8eb474752c66d94fba2aaab0bea38b90d26b03277abfa65317bd307",
+          "duration_s": 178.56578231292517,
+          "decode_ok": true,
+          "seam_step_peak": 9.867009794106707e-06,
+          "first_last_10ms_peak": 0.0004093836178071797,
+          "bitrate": 112000
+        },
+        "ogg": {
+          "bytes": 1685211,
+          "sha256": "b98cbf1ff4519a7ab32b0f11bdfeae35f964fcface2a32444059076060d206f7",
+          "duration_s": 178.56580498866214,
+          "decode_ok": true,
+          "seam_step_peak": 7.291667429853987e-07,
+          "first_last_10ms_peak": 0.0004439742479007691,
+          "bitrate": 64000
+        }
+      }
+    }
+  ]
+}

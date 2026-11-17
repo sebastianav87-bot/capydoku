@@ -1,0 +1,29 @@
+#!/usr/bin/env python3
+from pathlib import Path
+from collections import Counter
+from datetime import datetime,timedelta
+from zoneinfo import ZoneInfo
+import json,re,hashlib
+from PIL import Image
+R=Path(__file__).resolve().parents[1];D=R/'reports'
+def read(name):return json.loads((D/name).read_text())
+def save(name,obj):(D/name).write_text(json.dumps(obj,indent=2)+'\n')
+pre=read('precache.json');frozen=read('final-runtime-frozen-v4.json')
+assert pre['cache']==frozen['cache']
+assert all(hashlib.sha256((R/f).read_bytes()).hexdigest()==h for f,h in frozen['runtime'].items())
+unit=(D/'unit-v4-final.log').read_text();tests=int(re.search(r'ℹ tests (\d+)',unit)[1]);passed=int(re.search(r'ℹ pass (\d+)',unit)[1]);assert tests==passed==97 and 'ℹ fail 0'in unit
+pw=read('playwright-v4.json');stats=pw['stats'];assert stats['expected']==216 and all(stats[k]==0 for k in ['skipped','unexpected','flaky'])
+cap=read('capture-v4.json');assert cap['browser_errors']==[]
+rows=[]
+for r in cap['records']:
+ p=R/r['file'];size=Image.open(p).size;expected=(r['width'],r['height']);fit=r['document']['width']<=r['width'] and r['document']['height']<=r['height'];assert size==expected and fit,(r,size)
+ rows.append({**r,'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'exact_size':True,'document_fits':True})
+shots={'cache':pre['cache'],'main_count':len(rows),'by_viewport':dict(Counter(str((r['width'],r['height']))for r in rows)),'all_exact':True,'all_documents_fit':True,'browser_errors':[],'records':rows};save('screenshot-integrity-v4.json',shots)
+pkg=read('runtime-package-v4.json');assert pkg['all_extracted_hashes_match'] and pkg['archive_smoke_verified'];assert pkg['sha256']==hashlib.sha256(Path(pkg['archive']).read_bytes()).hexdigest()
+smoke=read('runtime-archive-smoke.json');assert smoke['cache']==pre['cache'] and not smoke['browser_errors'];assert all(r['status']==200 for r in smoke['online_resources']+smoke['offline_resources']);assert all(smoke[k] for k in ['offline_reload','unseen_query','progress_persisted'])
+v=read('verification-v4.json');proof=v['summary'];assert proof['all_unique'] and proof['all_logic'] and proof['all_regions_connected'];daily=v['actual_date_crosscheck'];assert daily['all_unique'] and daily['all_pure_logic'] and daily['every_python_oracle_agrees_with_js']
+files=sorted({f for f in pre['urls'] if f!='./'});weight={'cache':pre['cache'],'urls':len(pre['urls']),'unique_files':len(files),'raw_bytes':sum((R/f).stat().st_size for f in files),'music_bytes':read('music-v4.json')['total_audio_bytes'],'top_files':sorted([{'path':f,'bytes':(R/f).stat().st_size} for f in files],key=lambda r:-r['bytes'])[:12]};save('precache-weight-v4.json',weight)
+tz=ZoneInfo('America/New_York');start=datetime.fromisoformat(stats['startTime'].replace('Z','+00:00')).astimezone(tz)
+summary={'version':'4.0','cache':pre['cache'],'build':pre['cache'].split('-')[-1],'local_only':True,'published':False,'generated_at':datetime.now(tz).isoformat(),'timezone':'America/New_York (EST)','step0':{'passed_before_app_edits':read('step0-v4.json')['success'],'stable_snapshot_matches_shipped_tar':read('step0-v4.json')['tar_matches_backup'],'evidence':'step0-v4.json'},'unit':{'tests':tests,'passed':passed,'failed':0,'skipped':0,'log':'unit-v4-final.log'},'e2e':{'tests':stats['expected'],'passed':stats['expected'],'failed':0,'flaky':0,'skipped':0,'retries':0,'projects':['412x915','360x780'],'mobile_touch':True,'device_scale_factor':1,'start_at_est':start.isoformat(),'finished_at_est':(start+timedelta(milliseconds=stats['duration'])).isoformat(),'duration_ms':stats['duration'],'browser_console_errors':0,'page_errors':0,'report':'playwright-v4.json','log':'e2e-v4-full.log'},'verification':{'source_boards':proof['source_boards_checked'],'campaign':30,'daily_safe_bank':365,'daily_rocks_bank':365,'all_unique':True,'all_no_guess':True,'all_regions_connected':True,'independent_oracles':['Python exhaustive column permutations','JavaScript row DFS'],'actual_daily_date_state_outputs':daily['date_state_outputs'],'report':'verification-v4.json','proof_effort_table':'proof-effort-v1-v2-v3-v4.md','early_levels':{'ids':[1,2,3,4,5],'v1_weighted_effort':[7,9,15,13,15],'v4_weighted_effort':[5,5,5,5,5],'v4_deductions_before_first_forced':[0,0,0,0,0]}},'precache':{**weight,'all_online_status_200':True,'all_offline_status_200':True,'offline_reload_and_query_verified':True},'screenshots':{'authoritative_key_images':len(rows),'by_viewport':shots['by_viewport'],'all_exact_size':True,'all_documents_fit':True,'browser_errors':0,'folder':'screenshots-v4/','contact_sheet':'contact-sheet-v4.png','integrity':'screenshot-integrity-v4.json','native_images_reviewed':True,'fixture_values_are_fictional':True},'music':read('music-v4.json'),'archive':{k:pkg[k] for k in ['archive','bytes','sha256','file_count','all_extracted_hashes_match','archive_smoke_verified']},'approved_designs':['v6','v6.1','v6.2','v6.3','v6.4','v6.5'],'priority_fix_behaviorally_included':True,'relax_removed':True,'telemetry_built':False,'nickname_storage':'localStorage only','upgrade_from_versions':['v1','v2','v3','v3.1','v3.1.1','v3.1.2','v3.1.3'],'update_limit':'Already-running live v3.1.3 has only a passive controllerchange handler: one safe manual reload/relaunch needed after finishing/leaving; v4 onward updates automatically, once, at a safe boundary. Old-client cache affinity tested through worker restart and offline.','honest_limits':['No physical S24/iPhone or Safari/WebKit test','Real vibration feel, audio seam listening, iOS keyboard/install/notch unverified','Time targets need human playtesting; no cloud save','CC0 source verified, not independent legal certification of uploader rights','Static mockup example boards are outside the 760 runtime-board proof scope']}
+save('TEST-SUMMARY-v4.json',summary)
+print(json.dumps({k:summary[k] for k in ['version','cache','unit','e2e','screenshots','archive']},indent=2))

@@ -1,0 +1,374 @@
+{
+  "effectiveJS": "v2 beginGesture present",
+  "legacyProgressMigrated": true,
+  "navigatorOnline": false,
+  "oldCacheRemoved": true,
+  "unseenQuery": true,
+  "resources": [
+    {
+      "url": "./",
+      "status": 200
+    },
+    {
+      "url": "index.html",
+      "status": 200
+    },
+    {
+      "url": "style.css",
+      "status": 200
+    },
+    {
+      "url": "theme-v3.css",
+      "status": 200
+    },
+    {
+      "url": "app.js",
+      "status": 200
+    },
+    {
+      "url": "core.js",
+      "status": 200
+    },
+    {
+      "url": "theme.js",
+      "status": 200
+    },
+    {
+      "url": "characters.js",
+      "status": 200
+    },
+    {
+      "url": "audio.js",
+      "status": 200
+    },
+    {
+      "url": "levels.json",
+      "status": 200
+    },
+    {
+      "url": "manifest.webmanifest",
+      "status": 200
+    },
+    {
+      "url": "assets/Nunito-OFL.txt",
+      "status": 200
+    },
+    {
+      "url": "assets/cast/doze.png",
+      "status": 200
+    },
+    {
+      "url": "assets/cast/nib.png",
+      "status": 200
+    },
+    {
+      "url": "assets/cast/pebble.png",
+      "status": 200
+    },
+    {
+      "url": "assets/cast/pip.png",
+      "status": 200
+    },
+    {
+      "url": "assets/cast/ring.png",
+      "status": 200
+    },
+    {
+      "url": "assets/cast/tuff.png",
+      "status": 200
+    },
+    {
+      "url": "assets/hotspring-bg.jpg",
+      "status": 200
+    },
+    {
+      "url": "assets/icon-192.png",
+      "status": 200
+    },
+    {
+      "url": "assets/icon-512.png",
+      "status": 200
+    },
+    {
+      "url": "assets/map-bg.jpg",
+      "status": 200
+    },
+    {
+      "url": "assets/nunito-500.ttf",
+      "status": 200
+    },
+    {
+      "url": "assets/nunito-700.ttf",
+      "status": 200
+    },
+    {
+      "url": "assets/nunito-800.ttf",
+      "status": 200
+    },
+    {
+      "url": "assets/palette.json",
+      "status": 200
+    },
+    {
+      "url": "assets/rock.png",
+      "status": 200
+    }
+  ],
+  "served": [
+    {
+      "phase": "v1",
+      "url": "./",
+      "status": 200
+    },
+    {
+      "phase": "v1",
+      "url": "index.html",
+      "status": 200
+    },
+    {
+      "phase": "v1",
+      "url": "style.css",
+      "status": 200
+    },
+    {
+      "phase": "v1",
+      "url": "app.js",
+      "status": 200
+    },
+    {
+      "phase": "v1",
+      "url": "core.js",
+      "status": 200
+    },
+    {
+      "phase": "v1",
+      "url": "levels.json",
+      "status": 200
+    },
+    {
+      "phase": "v1",
+      "url": "manifest.webmanifest",
+      "status": 200
+    },
+    {
+      "phase": "v1",
+      "url": "assets/Nunito-OFL.txt",
+      "status": 200
+    },
+    {
+      "phase": "v1",
+      "url": "assets/capy-duck.png",
+      "status": 200
+    },
+    {
+      "phase": "v1",
+      "url": "assets/capy-hat.png",
+      "status": 200
+    },
+    {
+      "phase": "v1",
+      "url": "assets/capy-jump.png",
+      "status": 200
+    },
+    {
+      "phase": "v1",
+      "url": "assets/capy-orange.png",
+      "status": 200
+    },
+    {
+      "phase": "v1",
+      "url": "assets/capy-plain.png",
+      "status": 200
+    },
+    {
+      "phase": "v1",
+      "url": "assets/capy-sit.png",
+      "status": 200
+    },
+    {
+      "phase": "v1",
+      "url": "assets/capy-sleep.png",
+      "status": 200
+    },
+    {
+      "phase": "v1",
+      "url": "assets/capy-swim.png",
+      "status": 200
+    },
+    {
+      "phase": "v1",
+      "url": "assets/hotspring-bg.jpg",
+      "status": 200
+    },
+    {
+      "phase": "v1",
+      "url": "assets/icon-192.png",
+      "status": 200
+    },
+    {
+      "phase": "v1",
+      "url": "assets/icon-512.png",
+      "status": 200
+    },
+    {
+      "phase": "v1",
+      "url": "assets/map-bg.jpg",
+      "status": 200
+    },
+    {
+      "phase": "v1",
+      "url": "assets/nunito-500.ttf",
+      "status": 200
+    },
+    {
+      "phase": "v1",
+      "url": "assets/nunito-700.ttf",
+      "status": 200
+    },
+    {
+      "phase": "v1",
+      "url": "assets/nunito-800.ttf",
+      "status": 200
+    },
+    {
+      "phase": "v1",
+      "url": "assets/palette.json",
+      "status": 200
+    },
+    {
+      "phase": "v2",
+      "url": "./",
+      "status": 200
+    },
+    {
+      "phase": "v2",
+      "url": "index.html",
+      "status": 200
+    },
+    {
+      "phase": "v2",
+      "url": "style.css",
+      "status": 200
+    },
+    {
+      "phase": "v2",
+      "url": "theme-v3.css",
+      "status": 200
+    },
+    {
+      "phase": "v2",
+      "url": "app.js",
+      "status": 200
+    },
+    {
+      "phase": "v2",
+      "url": "core.js",
+      "status": 200
+    },
+    {
+      "phase": "v2",
+      "url": "theme.js",
+      "status": 200
+    },
+    {
+      "phase": "v2",
+      "url": "characters.js",
+      "status": 200
+    },
+    {
+      "phase": "v2",
+      "url": "audio.js",
+      "status": 200
+    },
+    {
+      "phase": "v2",
+      "url": "levels.json",
+      "status": 200
+    },
+    {
+      "phase": "v2",
+      "url": "manifest.webmanifest",
+      "status": 200
+    },
+    {
+      "phase": "v2",
+      "url": "assets/Nunito-OFL.txt",
+      "status": 200
+    },
+    {
+      "phase": "v2",
+      "url": "assets/cast/doze.png",
+      "status": 200
+    },
+    {
+      "phase": "v2",
+      "url": "assets/cast/nib.png",
+      "status": 200
+    },
+    {
+      "phase": "v2",
+      "url": "assets/cast/pebble.png",
+      "status": 200
+    },
+    {
+      "phase": "v2",
+      "url": "assets/cast/pip.png",
+      "status": 200
+    },
+    {
+      "phase": "v2",
+      "url": "assets/cast/ring.png",
+      "status": 200
+    },
+    {
+      "phase": "v2",
+      "url": "assets/cast/tuff.png",
+      "status": 200
+    },
+    {
+      "phase": "v2",
+      "url": "assets/hotspring-bg.jpg",
+      "status": 200
+    },
+    {
+      "phase": "v2",
+      "url": "assets/icon-192.png",
+      "status": 200
+    },
+    {
+      "phase": "v2",
+      "url": "assets/icon-512.png",
+      "status": 200
+    },
+    {
+      "phase": "v2",
+      "url": "assets/map-bg.jpg",
+      "status": 200
+    },
+    {
+      "phase": "v2",
+      "url": "assets/nunito-500.ttf",
+      "status": 200
+    },
+    {
+      "phase": "v2",
+      "url": "assets/nunito-700.ttf",
+      "status": 200
+    },
+    {
+      "phase": "v2",
+      "url": "assets/nunito-800.ttf",
+      "status": 200
+    },
+    {
+      "phase": "v2",
+      "url": "assets/palette.json",
+      "status": 200
+    },
+    {
+      "phase": "v2",
+      "url": "assets/rock.png",
+      "status": 200
+    }
+  ]
+}

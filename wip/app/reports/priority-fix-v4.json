@@ -1,0 +1,14 @@
+{
+  "source": "/workspace/capydoku/reports-bug-relax/fix.diff",
+  "sha256": "acd31873d2e90e4ad50f87746fabff98077bafe930956b8e966aa95677121257",
+  "included": true,
+  "integration": "Equivalent selective integration onto v6\u2013v6.4; regression cases adapted for normal-only play. The subsequently removed Relax entry lock is explicitly superseded by the user.",
+  "behaviors": [
+    "Relax entry lock was integrated, then intentionally removed with all Relax UI/config under the latest instruction; old Relax attempts restart normal with full lives.",
+    "Honest count, local-rule conflict recovery, one Undo step, no lives/power/charge refund",
+    "No body red tint; red conflict border and exclamation remain",
+    "Peek respects existing capys and retains zone palette; hidden stale ghost returns after obstruction repaired",
+    "Consume handled/cancelled control pointer click before routing into newly replaced board DOM",
+    "Single taps resolve after 280ms, emit exactly one 12ms mark/clear tick; doubles emit only the placement pattern. Drag ticks remain12ms/70ms."
+  ]
+}

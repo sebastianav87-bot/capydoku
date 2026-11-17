@@ -1,0 +1,162 @@
+
+> capydoku-local-prototype@2.0.0 test:e2e
+> playwright test
+
+
+Running 29 tests using 1 worker
+
+(node:233183) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/mobile.spec.js:11:1 › home, marks/capy/clear and undo; double tap no X flash; mobile targets (2.8s)
+  ✓   2 tests/mobile.spec.js:13:1 › hint highlights one forced spot + reason, never places or reveals full solution (433ms)
+  ✓   3 tests/mobile.spec.js:14:54 › row violation red and costs exactly one orange; clear repairs (922ms)
+  ✓   4 tests/mobile.spec.js:14:54 › column violation red and costs exactly one orange; clear repairs (868ms)
+  ✓   5 tests/mobile.spec.js:14:54 › zone violation red and costs exactly one orange; clear repairs (879ms)
+  ✓   6 tests/mobile.spec.js:14:54 › diagonal violation red and costs exactly one orange; clear repairs (873ms)
+  ✓   7 tests/mobile.spec.js:15:1 › game over, input locked, retry resets oranges and board (1.6s)
+  ✓   8 tests/mobile.spec.js:16:1 › Chill never loses oranges; no game over and mode persists (2.6s)
+  ✓   9 tests/mobile.spec.js:17:1 › solve, actual jump frames, unlock + persistence after reload (4.6s)
+  ✘  10 tests/mobile.spec.js:18:1 › boss 10 grants Beanie, selectable in Hot Spring and persists (8.1s)
+(node:234087) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  11 tests/mobile.spec.js:19:1 › boss 20/30 rewards and blocked rocks; 7×7 tap targets (8.2s)
+(node:234274) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  12 tests/mobile.spec.js:20:1 › Daily Pond deterministic reload + same-day streak, consecutive +1, missed-day reset (2.9s)
+  ✓  13 tests/mobile.spec.js:22:1 › PWA precache 200 + offline startup/reload, unseen query, essential resources (727ms)
+  ✓  14 tests/mobile.spec.js:23:1 › settings toggles Chill; corrupt and future storage cannot crash or overwrite (938ms)
+  ✓  15 tests/v2.spec.js:17:1 › drag paints/clears, skips capys, interpolates fast paths; each gesture is ONE undo; tap cycle survives (1.7s)
+  ✓  16 tests/v2.spec.js:18:1 › 10px threshold preserves taps; board drag never scrolls/reloads; native map scroll still works (1.7s)
+  ✓  17 tests/v2.spec.js:19:1 › mocked haptics: legal 24ms, illegal double buzz, solve celebration; toggle persists and suppresses all (2.9s)
+  ✓  18 tests/v2.spec.js:22:1 › drag haptic ticks: new cells only, clearing too, 70ms throttle on fast drag, toggle off (2.6s)
+  ✓  19 tests/v2.spec.js:27:1 › early 1–3 real screenshots, first five obvious start and v3 rules sheet; collection purpose (2.0s)
+  ✓  20 tests/v2.spec.js:28:1 › daily rocks gated until campaign 21; campaign-first and daily-first intros are one-time (1.2s)
+  ✓  21 tests/v2.spec.js:31:1 › date-only streak remains idempotent when daily eligibility changes (1.9s)
+  ✓  22 tests/v2.spec.js:32:1 › v1→v2 migration retains earned progress and compatible board; legacy key untouched (692ms)
+  ✓  23 tests/v2.spec.js:33:1 › missing/throwing vibration API never errors; real-device feedback not claimed (657ms)
+  ✓  24 tests/v2.spec.js:34:1 › real v1 SW→v2 update, effective JS, migrated progress, strict offline reload and unseen query (3.5s)
+  ✓  25 tests/v3.spec.js:9:1 › v3 rules line, sheet, true 5px outlines, counters, Relax off/on, safe flex layout (1.5s)
+  ✓  26 tests/v3.spec.js:10:1 › Hot Spring option A stages at zero/one/two/three bosses, earned slots and decorations (1.4s)
+  ✓  27 tests/v3.spec.js:11:1 › enhanced solve: six live frames, solve-order jumps, timed splash haptics, optional local sound (4.6s)
+  ✓  28 tests/v3.spec.js:12:1 › reduced motion crossfades straight to soaking with no jumps or splash haptics (3.5s)
+  ✓  29 tests/v3.spec.js:13:1 › mouse pointer ID reuse after drag still permits mark, clear and one-click controls (1.2s)
+
+
+  1) tests/mobile.spec.js:18:1 › boss 10 grants Beanie, selectable in Hot Spring and persists ──────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('Pond cleared', { exact: true })
+    Expected: visible
+    Timeout: 7000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByText('Pond cleared', { exact: true }) with timeout 7000ms
+      - waiting for getByText('Pond cleared', { exact: true })
+
+
+       7 | async function double(page,i){const b=await page.locator(`[data-cell="${i}"]`).boundingBox();await page.touchscreen.tap(b.x+b.width/2,b.y+b.height/2);await page.waitForTimeout(65);await page.touchscreen.tap(b.x+b.width/2,b.y+b.height/2)}
+       8 | async function single(page,i){await page.locator(`[data-cell="${i}"]`).tap();await page.waitForTimeout(330)}
+    >  9 | async function solve(page,p){for(const i of enumerate(p)[0])await double(page,i);await expect(page.getByText('Pond cleared',{exact:true})).toBeVisible()}
+         |                                                                                                                                            ^
+      10 | let errors;test.beforeEach(async({page})=>{errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text())})});test.afterEach(async()=>expect(errors).toEqual([]));
+      11 | test('home, marks/capy/clear and undo; double tap no X flash; mobile targets',async({page})=>{await home(page);await shot(page,'01-pond-path');await open(page);const p=data.levels[0],sol=enumerate(p)[0];await single(page,0);await expect(page.locator('[data-cell="0"]')).toHaveAttribute('data-value','1');await double(page,0);await expect(page.locator('[data-cell="0"]')).toHaveAttribute('data-value','2');await single(page,0);await expect(page.locator('[data-cell="0"]')).toHaveAttribute('data-value','0');await page.getByRole('button',{name:'↶ Undo'}).tap();await expect(page.locator('[data-cell="0"]')).toHaveAttribute('data-value','2');await single(page,0);
+      12 |  const cell=sol[0],bb=await page.locator(`[data-cell="${cell}"]`).boundingBox();await page.touchscreen.tap(bb.x+bb.width/2,bb.y+bb.height/2);await page.waitForTimeout(90);await expect(page.locator(`[data-cell="${cell}"]`)).toHaveAttribute('data-value','0');await page.touchscreen.tap(bb.x+bb.width/2,bb.y+bb.height/2);await expect(page.locator(`[data-cell="${cell}"]`)).toHaveAttribute('data-value','2');await page.waitForTimeout(350);await expect(page.locator(`[data-cell="${cell}"]`)).toHaveAttribute('data-value','2');await double(page,sol[2]);await single(page,(sol[0]+1)%5);await shot(page,'02-level-progress');const sizes=await page.locator('button:not(:disabled)').evaluateAll(es=>es.map(e=>e.getBoundingClientRect()).map(r=>({w:r.width,h:r.height})));expect(sizes.every(r=>r.w>=44&&r.h>=44)).toBeTruthy();expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(412)});
+        at solve (/workspace/capydoku/app/tests/mobile.spec.js:9:140)
+        at /workspace/capydoku/app/tests/mobile.spec.js:18:188
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 3
+
+    - Array []
+    + Array [
+    +   "label is not a function",
+    + ]
+
+       8 | async function single(page,i){await page.locator(`[data-cell="${i}"]`).tap();await page.waitForTimeout(330)}
+       9 | async function solve(page,p){for(const i of enumerate(p)[0])await double(page,i);await expect(page.getByText('Pond cleared',{exact:true})).toBeVisible()}
+    > 10 | let errors;test.beforeEach(async({page})=>{errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text())})});test.afterEach(async()=>expect(errors).toEqual([]));
+         |                                                                                                                                                                                                                  ^
+      11 | test('home, marks/capy/clear and undo; double tap no X flash; mobile targets',async({page})=>{await home(page);await shot(page,'01-pond-path');await open(page);const p=data.levels[0],sol=enumerate(p)[0];await single(page,0);await expect(page.locator('[data-cell="0"]')).toHaveAttribute('data-value','1');await double(page,0);await expect(page.locator('[data-cell="0"]')).toHaveAttribute('data-value','2');await single(page,0);await expect(page.locator('[data-cell="0"]')).toHaveAttribute('data-value','0');await page.getByRole('button',{name:'↶ Undo'}).tap();await expect(page.locator('[data-cell="0"]')).toHaveAttribute('data-value','2');await single(page,0);
+      12 |  const cell=sol[0],bb=await page.locator(`[data-cell="${cell}"]`).boundingBox();await page.touchscreen.tap(bb.x+bb.width/2,bb.y+bb.height/2);await page.waitForTimeout(90);await expect(page.locator(`[data-cell="${cell}"]`)).toHaveAttribute('data-value','0');await page.touchscreen.tap(bb.x+bb.width/2,bb.y+bb.height/2);await expect(page.locator(`[data-cell="${cell}"]`)).toHaveAttribute('data-value','2');await page.waitForTimeout(350);await expect(page.locator(`[data-cell="${cell}"]`)).toHaveAttribute('data-value','2');await double(page,sol[2]);await single(page,(sol[0]+1)%5);await shot(page,'02-level-progress');const sizes=await page.locator('button:not(:disabled)').evaluateAll(es=>es.map(e=>e.getBoundingClientRect()).map(r=>({w:r.width,h:r.height})));expect(sizes.every(r=>r.w>=44&&r.h>=44)).toBeTruthy();expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(412)});
+      13 | test('hint highlights one forced spot + reason, never places or reveals full solution',async({page})=>{await home(page);await open(page);const before=await page.locator('.cell').evaluateAll(es=>es.map(e=>e.dataset.value));await page.getByRole('button',{name:'💡 Hint'}).tap();await expect(page.locator('.hinted')).toHaveCount(1);await expect(page.locator('.reason,.hinted')).not.toHaveCount(0);expect(await page.locator('.cell').evaluateAll(es=>es.map(e=>e.dataset.value))).toEqual(before);await expect(page.getByText(/Only spot left/)).toBeVisible();await shot(page,'03-hint');await page.getByRole('button',{name:'💡 Hint'}).tap();expect(await page.locator('.cell').evaluateAll(es=>es.map(e=>e.dataset.value))).toEqual(before)});
+        at /workspace/capydoku/app/tests/mobile.spec.js:10:210
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/mobile-boss-10-grants-Bean-c7616--in-Hot-Spring-and-persists/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/mobile-boss-10-grants-Bean-c7616--in-Hot-Spring-and-persists/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/mobile-boss-10-grants-Bean-c7616--in-Hot-Spring-and-persists/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/mobile-boss-10-grants-Bean-c7616--in-Hot-Spring-and-persists/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/mobile.spec.js:19:1 › boss 20/30 rewards and blocked rocks; 7×7 tap targets ─────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('Pond cleared', { exact: true })
+    Expected: visible
+    Timeout: 7000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByText('Pond cleared', { exact: true }) with timeout 7000ms
+      - waiting for getByText('Pond cleared', { exact: true })
+
+
+       7 | async function double(page,i){const b=await page.locator(`[data-cell="${i}"]`).boundingBox();await page.touchscreen.tap(b.x+b.width/2,b.y+b.height/2);await page.waitForTimeout(65);await page.touchscreen.tap(b.x+b.width/2,b.y+b.height/2)}
+       8 | async function single(page,i){await page.locator(`[data-cell="${i}"]`).tap();await page.waitForTimeout(330)}
+    >  9 | async function solve(page,p){for(const i of enumerate(p)[0])await double(page,i);await expect(page.getByText('Pond cleared',{exact:true})).toBeVisible()}
+         |                                                                                                                                            ^
+      10 | let errors;test.beforeEach(async({page})=>{errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text())})});test.afterEach(async()=>expect(errors).toEqual([]));
+      11 | test('home, marks/capy/clear and undo; double tap no X flash; mobile targets',async({page})=>{await home(page);await shot(page,'01-pond-path');await open(page);const p=data.levels[0],sol=enumerate(p)[0];await single(page,0);await expect(page.locator('[data-cell="0"]')).toHaveAttribute('data-value','1');await double(page,0);await expect(page.locator('[data-cell="0"]')).toHaveAttribute('data-value','2');await single(page,0);await expect(page.locator('[data-cell="0"]')).toHaveAttribute('data-value','0');await page.getByRole('button',{name:'↶ Undo'}).tap();await expect(page.locator('[data-cell="0"]')).toHaveAttribute('data-value','2');await single(page,0);
+      12 |  const cell=sol[0],bb=await page.locator(`[data-cell="${cell}"]`).boundingBox();await page.touchscreen.tap(bb.x+bb.width/2,bb.y+bb.height/2);await page.waitForTimeout(90);await expect(page.locator(`[data-cell="${cell}"]`)).toHaveAttribute('data-value','0');await page.touchscreen.tap(bb.x+bb.width/2,bb.y+bb.height/2);await expect(page.locator(`[data-cell="${cell}"]`)).toHaveAttribute('data-value','2');await page.waitForTimeout(350);await expect(page.locator(`[data-cell="${cell}"]`)).toHaveAttribute('data-value','2');await double(page,sol[2]);await single(page,(sol[0]+1)%5);await shot(page,'02-level-progress');const sizes=await page.locator('button:not(:disabled)').evaluateAll(es=>es.map(e=>e.getBoundingClientRect()).map(r=>({w:r.width,h:r.height})));expect(sizes.every(r=>r.w>=44&&r.h>=44)).toBeTruthy();expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(412)});
+        at solve (/workspace/capydoku/app/tests/mobile.spec.js:9:140)
+        at /workspace/capydoku/app/tests/mobile.spec.js:19:429
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 3
+
+    - Array []
+    + Array [
+    +   "label is not a function",
+    + ]
+
+       8 | async function single(page,i){await page.locator(`[data-cell="${i}"]`).tap();await page.waitForTimeout(330)}
+       9 | async function solve(page,p){for(const i of enumerate(p)[0])await double(page,i);await expect(page.getByText('Pond cleared',{exact:true})).toBeVisible()}
+    > 10 | let errors;test.beforeEach(async({page})=>{errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text())})});test.afterEach(async()=>expect(errors).toEqual([]));
+         |                                                                                                                                                                                                                  ^
+      11 | test('home, marks/capy/clear and undo; double tap no X flash; mobile targets',async({page})=>{await home(page);await shot(page,'01-pond-path');await open(page);const p=data.levels[0],sol=enumerate(p)[0];await single(page,0);await expect(page.locator('[data-cell="0"]')).toHaveAttribute('data-value','1');await double(page,0);await expect(page.locator('[data-cell="0"]')).toHaveAttribute('data-value','2');await single(page,0);await expect(page.locator('[data-cell="0"]')).toHaveAttribute('data-value','0');await page.getByRole('button',{name:'↶ Undo'}).tap();await expect(page.locator('[data-cell="0"]')).toHaveAttribute('data-value','2');await single(page,0);
+      12 |  const cell=sol[0],bb=await page.locator(`[data-cell="${cell}"]`).boundingBox();await page.touchscreen.tap(bb.x+bb.width/2,bb.y+bb.height/2);await page.waitForTimeout(90);await expect(page.locator(`[data-cell="${cell}"]`)).toHaveAttribute('data-value','0');await page.touchscreen.tap(bb.x+bb.width/2,bb.y+bb.height/2);await expect(page.locator(`[data-cell="${cell}"]`)).toHaveAttribute('data-value','2');await page.waitForTimeout(350);await expect(page.locator(`[data-cell="${cell}"]`)).toHaveAttribute('data-value','2');await double(page,sol[2]);await single(page,(sol[0]+1)%5);await shot(page,'02-level-progress');const sizes=await page.locator('button:not(:disabled)').evaluateAll(es=>es.map(e=>e.getBoundingClientRect()).map(r=>({w:r.width,h:r.height})));expect(sizes.every(r=>r.w>=44&&r.h>=44)).toBeTruthy();expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(412)});
+      13 | test('hint highlights one forced spot + reason, never places or reveals full solution',async({page})=>{await home(page);await open(page);const before=await page.locator('.cell').evaluateAll(es=>es.map(e=>e.dataset.value));await page.getByRole('button',{name:'💡 Hint'}).tap();await expect(page.locator('.hinted')).toHaveCount(1);await expect(page.locator('.reason,.hinted')).not.toHaveCount(0);expect(await page.locator('.cell').evaluateAll(es=>es.map(e=>e.dataset.value))).toEqual(before);await expect(page.getByText(/Only spot left/)).toBeVisible();await shot(page,'03-hint');await page.getByRole('button',{name:'💡 Hint'}).tap();expect(await page.locator('.cell').evaluateAll(es=>es.map(e=>e.dataset.value))).toEqual(before)});
+        at /workspace/capydoku/app/tests/mobile.spec.js:10:210
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/mobile-boss-20-30-rewards-and-blocked-rocks-7×7-tap-targets/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/mobile-boss-20-30-rewards-and-blocked-rocks-7×7-tap-targets/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/mobile-boss-20-30-rewards-and-blocked-rocks-7×7-tap-targets/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/mobile-boss-20-30-rewards-and-blocked-rocks-7×7-tap-targets/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    tests/mobile.spec.js:18:1 › boss 10 grants Beanie, selectable in Hot Spring and persists ───────
+    tests/mobile.spec.js:19:1 › boss 20/30 rewards and blocked rocks; 7×7 tap targets ──────────────
+  27 passed (1.2m)
