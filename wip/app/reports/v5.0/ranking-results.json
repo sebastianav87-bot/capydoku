@@ -1,0 +1,3274 @@
+{
+  "config": {
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+      "/workspace/capydoku/wip/app/node_modules/.bin/playwright",
+      "test",
+      "--config",
+      "playwright.v50.config.js"
+    ],
+    "configFile": "/workspace/capydoku/wip/app/playwright.v50.config.js",
+    "rootDir": "/workspace/capydoku/wip/app/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/workspace/capydoku/wip/app/test-results-v50-ranking",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "chromium-360",
+        "name": "chromium-360",
+        "testDir": "/workspace/capydoku/wip/app/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "v50.spec.js"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "/workspace/capydoku/wip/app/test-results-v50-ranking",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "chromium-412",
+        "name": "chromium-412",
+        "testDir": "/workspace/capydoku/wip/app/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "v50.spec.js"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "/workspace/capydoku/wip/app/test-results-v50-ranking",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "chromium-short",
+        "name": "chromium-short",
+        "testDir": "/workspace/capydoku/wip/app/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "v50.spec.js"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "/workspace/capydoku/wip/app/test-results-v50-ranking",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "webkit-iphone",
+        "name": "webkit-iphone",
+        "testDir": "/workspace/capydoku/wip/app/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "v50.spec.js"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/workspace/capydoku/wip/app/test-results-v50-ranking",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "name": "chromium-360",
+        "testDir": "/workspace/capydoku/wip/app/tests",
+        "snapshotDir": "/workspace/capydoku/wip/app/tests",
+        "testIgnore": [],
+        "testMatch": "v50.spec.js",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://127.0.0.1:8765",
+          "isMobile": true,
+          "hasTouch": true,
+          "headless": true,
+          "launchOptions": {
+            "args": [
+              "--no-sandbox"
+            ]
+          },
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "browserName": "chromium",
+          "viewport": {
+            "width": 360,
+            "height": 780
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium-360"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/workspace/capydoku/wip/app/test-results-v50-ranking",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "name": "chromium-412",
+        "testDir": "/workspace/capydoku/wip/app/tests",
+        "snapshotDir": "/workspace/capydoku/wip/app/tests",
+        "testIgnore": [],
+        "testMatch": "v50.spec.js",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://127.0.0.1:8765",
+          "isMobile": true,
+          "hasTouch": true,
+          "headless": true,
+          "launchOptions": {
+            "args": [
+              "--no-sandbox"
+            ]
+          },
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "browserName": "chromium",
+          "viewport": {
+            "width": 412,
+            "height": 915
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium-412"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/workspace/capydoku/wip/app/test-results-v50-ranking",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "name": "chromium-short",
+        "testDir": "/workspace/capydoku/wip/app/tests",
+        "snapshotDir": "/workspace/capydoku/wip/app/tests",
+        "testIgnore": [],
+        "testMatch": "v50.spec.js",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://127.0.0.1:8765",
+          "isMobile": true,
+          "hasTouch": true,
+          "headless": true,
+          "launchOptions": {
+            "args": [
+              "--no-sandbox"
+            ]
+          },
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "browserName": "chromium",
+          "viewport": {
+            "width": 375,
+            "height": 525
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium-short"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/workspace/capydoku/wip/app/test-results-v50-ranking",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "name": "webkit-iphone",
+        "testDir": "/workspace/capydoku/wip/app/tests",
+        "snapshotDir": "/workspace/capydoku/wip/app/tests",
+        "testIgnore": [],
+        "testMatch": "v50.spec.js",
+        "timeout": 90000,
+        "use": {
+          "baseURL": "http://127.0.0.1:8765",
+          "isMobile": true,
+          "hasTouch": true,
+          "headless": true,
+          "launchOptions": {
+            "args": []
+          },
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "browserName": "webkit",
+          "viewport": {
+            "width": 390,
+            "height": 664
+          },
+          "deviceScaleFactor": 3
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "webkit-iphone"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/v5.0/ranking-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 2,
+    "webServer": {
+      "command": "python3 -m http.server 8765 --bind 127.0.0.1",
+      "url": "http://127.0.0.1:8765",
+      "reuseExistingServer": true,
+      "stdout": "ignore",
+      "stderr": "ignore"
+    }
+  },
+  "suites": [
+    {
+      "title": "v50.spec.js",
+      "file": "v50.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "pond 29: board and controls fit",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-360",
+              "projectName": "chromium-360",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3963,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [
+                    {
+                      "text": "Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:37:07.725Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-412",
+              "projectName": "chromium-412",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 5003,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [
+                    {
+                      "text": "Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:37:07.331Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-short",
+              "projectName": "chromium-short",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3628,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [
+                    {
+                      "text": "Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:39:09.413Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 13804,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [
+                    {
+                      "text": "Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:39:13.526Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0ec86a9edfc0ad2a2602-de84a4ee12b377b6b678",
+          "file": "v50.spec.js",
+          "line": 61,
+          "column": 3
+        },
+        {
+          "title": "pond 49: board and controls fit",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-360",
+              "projectName": "chromium-360",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2977,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:37:12.338Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-412",
+              "projectName": "chromium-412",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 3314,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:37:12.855Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-short",
+              "projectName": "chromium-short",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4126,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:39:13.627Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 8371,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:39:27.715Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0ec86a9edfc0ad2a2602-da2d9b527aae1949c55a",
+          "file": "v50.spec.js",
+          "line": 61,
+          "column": 3
+        },
+        {
+          "title": "pond 89: board and controls fit",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-360",
+              "projectName": "chromium-360",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3968,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:37:15.375Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-412",
+              "projectName": "chromium-412",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 4487,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:37:16.256Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-short",
+              "projectName": "chromium-short",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3091,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:39:17.810Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 11232,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:39:36.159Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0ec86a9edfc0ad2a2602-2c0b5593ce403870ec15",
+          "file": "v50.spec.js",
+          "line": 61,
+          "column": 3
+        },
+        {
+          "title": "pond 119: board and controls fit",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-360",
+              "projectName": "chromium-360",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4351,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:37:19.437Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-412",
+              "projectName": "chromium-412",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 3177,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:37:20.828Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-short",
+              "projectName": "chromium-short",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2497,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:39:20.928Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 5545,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:39:47.467Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0ec86a9edfc0ad2a2602-eb88e50bfa0266d1332f",
+          "file": "v50.spec.js",
+          "line": 61,
+          "column": 3
+        },
+        {
+          "title": "pond 149: board and controls fit",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-360",
+              "projectName": "chromium-360",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2653,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:37:23.847Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-412",
+              "projectName": "chromium-412",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 3631,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:37:24.049Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-short",
+              "projectName": "chromium-short",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4922,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:39:23.513Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 4895,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:39:53.148Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0ec86a9edfc0ad2a2602-be6da52b6c91ea658e76",
+          "file": "v50.spec.js",
+          "line": 61,
+          "column": 3
+        },
+        {
+          "title": "pond 35: board and controls fit",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-360",
+              "projectName": "chromium-360",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5924,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:37:26.535Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-412",
+              "projectName": "chromium-412",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 6796,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:37:27.714Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-short",
+              "projectName": "chromium-short",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4143,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:39:28.475Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 9943,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:39:58.062Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0ec86a9edfc0ad2a2602-a0c03e4378ce90d4ce48",
+          "file": "v50.spec.js",
+          "line": 61,
+          "column": 3
+        },
+        {
+          "title": "pond 60: board and controls fit",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-360",
+              "projectName": "chromium-360",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4870,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:37:32.531Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-412",
+              "projectName": "chromium-412",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 5850,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:37:34.563Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-short",
+              "projectName": "chromium-short",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4924,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:39:32.763Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 596,
+                  "error": {
+                    "message": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:62:11",
+                    "location": {
+                      "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": " \u001b[90m 17 |\u001b[39m test\u001b[33m.\u001b[39mafterEach(() \u001b[33m=>\u001b[39m { expect(errors \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m expect(external \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m seed(page\u001b[33m,\u001b[39m id\u001b[33m,\u001b[39m extra \u001b[33m=\u001b[39m {}) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/?lb=none'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   \u001b[36mconst\u001b[39m p \u001b[33m=\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m,\u001b[39m nickname\u001b[33m:\u001b[39m \u001b[32m'Test Capy'\u001b[39m\u001b[33m,\u001b[39m starterChosen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m tutorialSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 21 |\u001b[39m     music\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m audio\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m rockIntroSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m rocksReached\u001b[33m:\u001b[39m id \u001b[33m>\u001b[39m \u001b[35m20\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 22 |\u001b[39m     completed\u001b[33m:\u001b[39m completed(id)\u001b[33m,\u001b[39m bonus\u001b[33m:\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m.\u001b[39mbonus\u001b[33m,\u001b[39m controlsSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }\u001b[33m,\u001b[39m \u001b[33m...\u001b[39mextra }\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n\n  17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });\n  18 | async function seed(page, id, extra = {}) {\n> 19 |   await page.goto('/?lb=none');\n     |              ^\n  20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,\n  21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,\n  22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:62:11"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:40:08.038Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-pond-60-board-and-controls-fit-webkit-iphone/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-pond-60-board-and-controls-fit-webkit-iphone/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-pond-60-board-and-controls-fit-webkit-iphone/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                    "column": 14,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "0ec86a9edfc0ad2a2602-04a14dd924ca84725ec5",
+          "file": "v50.spec.js",
+          "line": 61,
+          "column": 3
+        },
+        {
+          "title": "pond 90: board and controls fit",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-360",
+              "projectName": "chromium-360",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4163,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:37:37.443Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-412",
+              "projectName": "chromium-412",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 5592,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:37:40.562Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-short",
+              "projectName": "chromium-short",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4176,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:39:37.746Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 1004,
+                  "error": {
+                    "message": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:62:11",
+                    "location": {
+                      "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": " \u001b[90m 17 |\u001b[39m test\u001b[33m.\u001b[39mafterEach(() \u001b[33m=>\u001b[39m { expect(errors \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m expect(external \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m seed(page\u001b[33m,\u001b[39m id\u001b[33m,\u001b[39m extra \u001b[33m=\u001b[39m {}) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/?lb=none'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   \u001b[36mconst\u001b[39m p \u001b[33m=\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m,\u001b[39m nickname\u001b[33m:\u001b[39m \u001b[32m'Test Capy'\u001b[39m\u001b[33m,\u001b[39m starterChosen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m tutorialSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 21 |\u001b[39m     music\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m audio\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m rockIntroSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m rocksReached\u001b[33m:\u001b[39m id \u001b[33m>\u001b[39m \u001b[35m20\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 22 |\u001b[39m     completed\u001b[33m:\u001b[39m completed(id)\u001b[33m,\u001b[39m bonus\u001b[33m:\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m.\u001b[39mbonus\u001b[33m,\u001b[39m controlsSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }\u001b[33m,\u001b[39m \u001b[33m...\u001b[39mextra }\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n\n  17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });\n  18 | async function seed(page, id, extra = {}) {\n> 19 |   await page.goto('/?lb=none');\n     |              ^\n  20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,\n  21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,\n  22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:62:11"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [
+                    {
+                      "text": "Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:40:09.317Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-pond-90-board-and-controls-fit-webkit-iphone/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-pond-90-board-and-controls-fit-webkit-iphone/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-pond-90-board-and-controls-fit-webkit-iphone/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                    "column": 14,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "0ec86a9edfc0ad2a2602-b4a4a668b6d1d4e638c2",
+          "file": "v50.spec.js",
+          "line": 61,
+          "column": 3
+        },
+        {
+          "title": "pond 120: board and controls fit",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-360",
+              "projectName": "chromium-360",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5386,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:37:41.744Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-412",
+              "projectName": "chromium-412",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 5191,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:37:46.218Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-short",
+              "projectName": "chromium-short",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2194,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:39:41.945Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 692,
+                  "error": {
+                    "message": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:62:11",
+                    "location": {
+                      "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": " \u001b[90m 17 |\u001b[39m test\u001b[33m.\u001b[39mafterEach(() \u001b[33m=>\u001b[39m { expect(errors \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m expect(external \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m seed(page\u001b[33m,\u001b[39m id\u001b[33m,\u001b[39m extra \u001b[33m=\u001b[39m {}) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/?lb=none'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   \u001b[36mconst\u001b[39m p \u001b[33m=\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m,\u001b[39m nickname\u001b[33m:\u001b[39m \u001b[32m'Test Capy'\u001b[39m\u001b[33m,\u001b[39m starterChosen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m tutorialSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 21 |\u001b[39m     music\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m audio\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m rockIntroSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m rocksReached\u001b[33m:\u001b[39m id \u001b[33m>\u001b[39m \u001b[35m20\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 22 |\u001b[39m     completed\u001b[33m:\u001b[39m completed(id)\u001b[33m,\u001b[39m bonus\u001b[33m:\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m.\u001b[39mbonus\u001b[33m,\u001b[39m controlsSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }\u001b[33m,\u001b[39m \u001b[33m...\u001b[39mextra }\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n\n  17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });\n  18 | async function seed(page, id, extra = {}) {\n> 19 |   await page.goto('/?lb=none');\n     |              ^\n  20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,\n  21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,\n  22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:62:11"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [
+                    {
+                      "text": "Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:40:10.936Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-pond-120-board-and-controls-fit-webkit-iphone/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-pond-120-board-and-controls-fit-webkit-iphone/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-pond-120-board-and-controls-fit-webkit-iphone/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                    "column": 14,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "0ec86a9edfc0ad2a2602-8860e4375e5a57b0b1d7",
+          "file": "v50.spec.js",
+          "line": 61,
+          "column": 3
+        },
+        {
+          "title": "pond 145: board and controls fit",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-360",
+              "projectName": "chromium-360",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7298,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:37:47.262Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-412",
+              "projectName": "chromium-412",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 6765,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:37:51.437Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-short",
+              "projectName": "chromium-short",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3154,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:39:44.152Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 601,
+                  "error": {
+                    "message": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:62:11",
+                    "location": {
+                      "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": " \u001b[90m 17 |\u001b[39m test\u001b[33m.\u001b[39mafterEach(() \u001b[33m=>\u001b[39m { expect(errors \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m expect(external \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m seed(page\u001b[33m,\u001b[39m id\u001b[33m,\u001b[39m extra \u001b[33m=\u001b[39m {}) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/?lb=none'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   \u001b[36mconst\u001b[39m p \u001b[33m=\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m,\u001b[39m nickname\u001b[33m:\u001b[39m \u001b[32m'Test Capy'\u001b[39m\u001b[33m,\u001b[39m starterChosen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m tutorialSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 21 |\u001b[39m     music\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m audio\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m rockIntroSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m rocksReached\u001b[33m:\u001b[39m id \u001b[33m>\u001b[39m \u001b[35m20\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 22 |\u001b[39m     completed\u001b[33m:\u001b[39m completed(id)\u001b[33m,\u001b[39m bonus\u001b[33m:\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m.\u001b[39mbonus\u001b[33m,\u001b[39m controlsSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }\u001b[33m,\u001b[39m \u001b[33m...\u001b[39mextra }\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n\n  17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });\n  18 | async function seed(page, id, extra = {}) {\n> 19 |   await page.goto('/?lb=none');\n     |              ^\n  20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,\n  21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,\n  22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:62:11"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [
+                    {
+                      "text": "Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:40:12.466Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-pond-145-board-and-controls-fit-webkit-iphone/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-pond-145-board-and-controls-fit-webkit-iphone/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-pond-145-board-and-controls-fit-webkit-iphone/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                    "column": 14,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "0ec86a9edfc0ad2a2602-f7bd33b795547b915b17",
+          "file": "v50.spec.js",
+          "line": 61,
+          "column": 3
+        },
+        {
+          "title": "pond 150: board and controls fit",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-360",
+              "projectName": "chromium-360",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5933,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:37:54.651Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-412",
+              "projectName": "chromium-412",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 5832,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:37:58.257Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-short",
+              "projectName": "chromium-short",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3505,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:39:47.317Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 384,
+                  "error": {
+                    "message": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:62:11",
+                    "location": {
+                      "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": " \u001b[90m 17 |\u001b[39m test\u001b[33m.\u001b[39mafterEach(() \u001b[33m=>\u001b[39m { expect(errors \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m expect(external \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m seed(page\u001b[33m,\u001b[39m id\u001b[33m,\u001b[39m extra \u001b[33m=\u001b[39m {}) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/?lb=none'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   \u001b[36mconst\u001b[39m p \u001b[33m=\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m,\u001b[39m nickname\u001b[33m:\u001b[39m \u001b[32m'Test Capy'\u001b[39m\u001b[33m,\u001b[39m starterChosen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m tutorialSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 21 |\u001b[39m     music\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m audio\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m rockIntroSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m rocksReached\u001b[33m:\u001b[39m id \u001b[33m>\u001b[39m \u001b[35m20\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 22 |\u001b[39m     completed\u001b[33m:\u001b[39m completed(id)\u001b[33m,\u001b[39m bonus\u001b[33m:\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m.\u001b[39mbonus\u001b[33m,\u001b[39m controlsSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }\u001b[33m,\u001b[39m \u001b[33m...\u001b[39mextra }\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n\n  17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });\n  18 | async function seed(page, id, extra = {}) {\n> 19 |   await page.goto('/?lb=none');\n     |              ^\n  20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,\n  21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,\n  22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:62:11"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [
+                    {
+                      "text": "Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:40:13.950Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-pond-150-board-and-controls-fit-webkit-iphone/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-pond-150-board-and-controls-fit-webkit-iphone/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-pond-150-board-and-controls-fit-webkit-iphone/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                    "column": 14,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "0ec86a9edfc0ad2a2602-59b299db0b95d18826c3",
+          "file": "v50.spec.js",
+          "line": 61,
+          "column": 3
+        },
+        {
+          "title": "v4.3.1 completed save continues at 31; lilies, daily and unscored history survive",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-360",
+              "projectName": "chromium-360",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4093,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:38:00.674Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-412",
+              "projectName": "chromium-412",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 4387,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:38:04.149Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-short",
+              "projectName": "chromium-short",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2312,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:39:50.846Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 369,
+                  "error": {
+                    "message": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:79:9",
+                    "location": {
+                      "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": " \u001b[90m 17 |\u001b[39m test\u001b[33m.\u001b[39mafterEach(() \u001b[33m=>\u001b[39m { expect(errors \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m expect(external \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m seed(page\u001b[33m,\u001b[39m id\u001b[33m,\u001b[39m extra \u001b[33m=\u001b[39m {}) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/?lb=none'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   \u001b[36mconst\u001b[39m p \u001b[33m=\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m,\u001b[39m nickname\u001b[33m:\u001b[39m \u001b[32m'Test Capy'\u001b[39m\u001b[33m,\u001b[39m starterChosen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m tutorialSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 21 |\u001b[39m     music\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m audio\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m rockIntroSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m rocksReached\u001b[33m:\u001b[39m id \u001b[33m>\u001b[39m \u001b[35m20\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 22 |\u001b[39m     completed\u001b[33m:\u001b[39m completed(id)\u001b[33m,\u001b[39m bonus\u001b[33m:\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m.\u001b[39mbonus\u001b[33m,\u001b[39m controlsSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }\u001b[33m,\u001b[39m \u001b[33m...\u001b[39mextra }\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n\n  17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });\n  18 | async function seed(page, id, extra = {}) {\n> 19 |   await page.goto('/?lb=none');\n     |              ^\n  20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,\n  21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,\n  22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:79:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [
+                    {
+                      "text": "Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:40:15.109Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-v4-3-1-completed-save--549dd-nd-unscored-history-survive-webkit-iphone/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-v4-3-1-completed-save--549dd-nd-unscored-history-survive-webkit-iphone/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-v4-3-1-completed-save--549dd-nd-unscored-history-survive-webkit-iphone/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                    "column": 14,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "0ec86a9edfc0ad2a2602-89977deee1b3149bb9b2",
+          "file": "v50.spec.js",
+          "line": 76,
+          "column": 1
+        },
+        {
+          "title": "published half-played pond 29 resumes with its locked capy and oranges",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-360",
+              "projectName": "chromium-360",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4659,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:38:04.877Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-412",
+              "projectName": "chromium-412",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 3356,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:38:08.709Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-short",
+              "projectName": "chromium-short",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1833,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:39:53.178Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 363,
+                  "error": {
+                    "message": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:93:9",
+                    "location": {
+                      "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": " \u001b[90m 17 |\u001b[39m test\u001b[33m.\u001b[39mafterEach(() \u001b[33m=>\u001b[39m { expect(errors \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m expect(external \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m seed(page\u001b[33m,\u001b[39m id\u001b[33m,\u001b[39m extra \u001b[33m=\u001b[39m {}) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/?lb=none'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   \u001b[36mconst\u001b[39m p \u001b[33m=\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m,\u001b[39m nickname\u001b[33m:\u001b[39m \u001b[32m'Test Capy'\u001b[39m\u001b[33m,\u001b[39m starterChosen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m tutorialSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 21 |\u001b[39m     music\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m audio\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m rockIntroSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m rocksReached\u001b[33m:\u001b[39m id \u001b[33m>\u001b[39m \u001b[35m20\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 22 |\u001b[39m     completed\u001b[33m:\u001b[39m completed(id)\u001b[33m,\u001b[39m bonus\u001b[33m:\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m.\u001b[39mbonus\u001b[33m,\u001b[39m controlsSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }\u001b[33m,\u001b[39m \u001b[33m...\u001b[39mextra }\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n\n  17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });\n  18 | async function seed(page, id, extra = {}) {\n> 19 |   await page.goto('/?lb=none');\n     |              ^\n  20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,\n  21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,\n  22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:93:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [
+                    {
+                      "text": "Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:40:16.028Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-published-half-played--af212-its-locked-capy-and-oranges-webkit-iphone/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-published-half-played--af212-its-locked-capy-and-oranges-webkit-iphone/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-published-half-played--af212-its-locked-capy-and-oranges-webkit-iphone/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                    "column": 14,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "0ec86a9edfc0ad2a2602-219374de28ed884c0025",
+          "file": "v50.spec.js",
+          "line": 90,
+          "column": 1
+        },
+        {
+          "title": "tools, explanations, locks, undo, rules and direct Next pond",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-360",
+              "projectName": "chromium-360",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9886,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:38:09.639Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-412",
+              "projectName": "chromium-412",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 8441,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:38:12.223Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-short",
+              "projectName": "chromium-short",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6452,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:39:55.058Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 14,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 371,
+                  "error": {
+                    "message": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:98:9",
+                    "location": {
+                      "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": " \u001b[90m 17 |\u001b[39m test\u001b[33m.\u001b[39mafterEach(() \u001b[33m=>\u001b[39m { expect(errors \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m expect(external \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m seed(page\u001b[33m,\u001b[39m id\u001b[33m,\u001b[39m extra \u001b[33m=\u001b[39m {}) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/?lb=none'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   \u001b[36mconst\u001b[39m p \u001b[33m=\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m,\u001b[39m nickname\u001b[33m:\u001b[39m \u001b[32m'Test Capy'\u001b[39m\u001b[33m,\u001b[39m starterChosen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m tutorialSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 21 |\u001b[39m     music\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m audio\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m rockIntroSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m rocksReached\u001b[33m:\u001b[39m id \u001b[33m>\u001b[39m \u001b[35m20\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 22 |\u001b[39m     completed\u001b[33m:\u001b[39m completed(id)\u001b[33m,\u001b[39m bonus\u001b[33m:\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m.\u001b[39mbonus\u001b[33m,\u001b[39m controlsSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }\u001b[33m,\u001b[39m \u001b[33m...\u001b[39mextra }\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n\n  17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });\n  18 | async function seed(page, id, extra = {}) {\n> 19 |   await page.goto('/?lb=none');\n     |              ^\n  20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,\n  21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,\n  22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:98:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [
+                    {
+                      "text": "Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:40:16.966Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-tools-explanations-locks-undo-rules-and-direct-Next-pond-webkit-iphone/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-tools-explanations-locks-undo-rules-and-direct-Next-pond-webkit-iphone/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-tools-explanations-locks-undo-rules-and-direct-Next-pond-webkit-iphone/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                    "column": 14,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "0ec86a9edfc0ad2a2602-e83a096b0cf358f2754a",
+          "file": "v50.spec.js",
+          "line": 97,
+          "column": 1
+        },
+        {
+          "title": "crate 60: solve, score, local world top and continue",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-360",
+              "projectName": "chromium-360",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11776,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:38:19.552Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-412",
+              "projectName": "chromium-412",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 9427,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:38:20.690Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-short",
+              "projectName": "chromium-short",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7411,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:40:01.531Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 15,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 383,
+                  "error": {
+                    "message": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:128:9",
+                    "location": {
+                      "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": " \u001b[90m 17 |\u001b[39m test\u001b[33m.\u001b[39mafterEach(() \u001b[33m=>\u001b[39m { expect(errors \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m expect(external \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m seed(page\u001b[33m,\u001b[39m id\u001b[33m,\u001b[39m extra \u001b[33m=\u001b[39m {}) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/?lb=none'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   \u001b[36mconst\u001b[39m p \u001b[33m=\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m,\u001b[39m nickname\u001b[33m:\u001b[39m \u001b[32m'Test Capy'\u001b[39m\u001b[33m,\u001b[39m starterChosen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m tutorialSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 21 |\u001b[39m     music\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m audio\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m rockIntroSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m rocksReached\u001b[33m:\u001b[39m id \u001b[33m>\u001b[39m \u001b[35m20\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 22 |\u001b[39m     completed\u001b[33m:\u001b[39m completed(id)\u001b[33m,\u001b[39m bonus\u001b[33m:\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m.\u001b[39mbonus\u001b[33m,\u001b[39m controlsSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }\u001b[33m,\u001b[39m \u001b[33m...\u001b[39mextra }\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n\n  17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });\n  18 | async function seed(page, id, extra = {}) {\n> 19 |   await page.goto('/?lb=none');\n     |              ^\n  20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,\n  21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,\n  22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:128:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [
+                    {
+                      "text": "Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:40:17.962Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-crate-60-solve-score-local-world-top-and-continue-webkit-iphone/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-crate-60-solve-score-local-world-top-and-continue-webkit-iphone/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-crate-60-solve-score-local-world-top-and-continue-webkit-iphone/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                    "column": 14,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "0ec86a9edfc0ad2a2602-d2856d45bce810282da5",
+          "file": "v50.spec.js",
+          "line": 127,
+          "column": 29
+        },
+        {
+          "title": "crate 150: solve, score, local world top and continue",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-360",
+              "projectName": "chromium-360",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 13182,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:38:31.433Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-412",
+              "projectName": "chromium-412",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 12797,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:38:30.158Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-short",
+              "projectName": "chromium-short",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 212,
+                  "error": {
+                    "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8765/?lb=none\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8765/?lb=none\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:128:9",
+                    "location": {
+                      "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": " \u001b[90m 17 |\u001b[39m test\u001b[33m.\u001b[39mafterEach(() \u001b[33m=>\u001b[39m { expect(errors \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m expect(external \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m seed(page\u001b[33m,\u001b[39m id\u001b[33m,\u001b[39m extra \u001b[33m=\u001b[39m {}) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/?lb=none'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   \u001b[36mconst\u001b[39m p \u001b[33m=\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m,\u001b[39m nickname\u001b[33m:\u001b[39m \u001b[32m'Test Capy'\u001b[39m\u001b[33m,\u001b[39m starterChosen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m tutorialSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 21 |\u001b[39m     music\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m audio\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m rockIntroSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m rocksReached\u001b[33m:\u001b[39m id \u001b[33m>\u001b[39m \u001b[35m20\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 22 |\u001b[39m     completed\u001b[33m:\u001b[39m completed(id)\u001b[33m,\u001b[39m bonus\u001b[33m:\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m.\u001b[39mbonus\u001b[33m,\u001b[39m controlsSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }\u001b[33m,\u001b[39m \u001b[33m...\u001b[39mextra }\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8765/?lb=none\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n\n  17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });\n  18 | async function seed(page, id, extra = {}) {\n> 19 |   await page.goto('/?lb=none');\n     |              ^\n  20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,\n  21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,\n  22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:128:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:40:08.960Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-crate-150-solve-score-local-world-top-and-continue-chromium-short/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-crate-150-solve-score-local-world-top-and-continue-chromium-short/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-crate-150-solve-score-local-world-top-and-continue-chromium-short/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                    "column": 14,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            },
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 16,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 600,
+                  "error": {
+                    "message": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:128:9",
+                    "location": {
+                      "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": " \u001b[90m 17 |\u001b[39m test\u001b[33m.\u001b[39mafterEach(() \u001b[33m=>\u001b[39m { expect(errors \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m expect(external \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m seed(page\u001b[33m,\u001b[39m id\u001b[33m,\u001b[39m extra \u001b[33m=\u001b[39m {}) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/?lb=none'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   \u001b[36mconst\u001b[39m p \u001b[33m=\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m,\u001b[39m nickname\u001b[33m:\u001b[39m \u001b[32m'Test Capy'\u001b[39m\u001b[33m,\u001b[39m starterChosen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m tutorialSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 21 |\u001b[39m     music\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m audio\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m rockIntroSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m rocksReached\u001b[33m:\u001b[39m id \u001b[33m>\u001b[39m \u001b[35m20\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 22 |\u001b[39m     completed\u001b[33m:\u001b[39m completed(id)\u001b[33m,\u001b[39m bonus\u001b[33m:\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m.\u001b[39mbonus\u001b[33m,\u001b[39m controlsSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }\u001b[33m,\u001b[39m \u001b[33m...\u001b[39mextra }\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n\n  17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });\n  18 | async function seed(page, id, extra = {}) {\n> 19 |   await page.goto('/?lb=none');\n     |              ^\n  20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,\n  21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,\n  22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:128:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [
+                    {
+                      "text": "Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:40:18.909Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-crate-150-solve-score-local-world-top-and-continue-webkit-iphone/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-crate-150-solve-score-local-world-top-and-continue-webkit-iphone/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-crate-150-solve-score-local-world-top-and-continue-webkit-iphone/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                    "column": 14,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "0ec86a9edfc0ad2a2602-db66d41846384a334608",
+          "file": "v50.spec.js",
+          "line": 127,
+          "column": 29
+        },
+        {
+          "title": "v5.0 cache contains every runtime dependency and reloads offline",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-360",
+              "projectName": "chromium-360",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3170,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:38:44.656Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-412",
+              "projectName": "chromium-412",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 4034,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:38:43.024Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-short",
+              "projectName": "chromium-short",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 558,
+                  "error": {
+                    "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8765/?lb=none\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8765/?lb=none\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:142:9",
+                    "location": {
+                      "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": " \u001b[90m 17 |\u001b[39m test\u001b[33m.\u001b[39mafterEach(() \u001b[33m=>\u001b[39m { expect(errors \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m expect(external \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m seed(page\u001b[33m,\u001b[39m id\u001b[33m,\u001b[39m extra \u001b[33m=\u001b[39m {}) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/?lb=none'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   \u001b[36mconst\u001b[39m p \u001b[33m=\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m,\u001b[39m nickname\u001b[33m:\u001b[39m \u001b[32m'Test Capy'\u001b[39m\u001b[33m,\u001b[39m starterChosen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m tutorialSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 21 |\u001b[39m     music\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m audio\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m rockIntroSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m rocksReached\u001b[33m:\u001b[39m id \u001b[33m>\u001b[39m \u001b[35m20\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 22 |\u001b[39m     completed\u001b[33m:\u001b[39m completed(id)\u001b[33m,\u001b[39m bonus\u001b[33m:\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m.\u001b[39mbonus\u001b[33m,\u001b[39m controlsSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }\u001b[33m,\u001b[39m \u001b[33m...\u001b[39mextra }\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8765/?lb=none\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n\n  17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });\n  18 | async function seed(page, id, extra = {}) {\n> 19 |   await page.goto('/?lb=none');\n     |              ^\n  20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,\n  21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,\n  22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:142:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [
+                    {
+                      "text": "Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:40:09.870Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-v5-0-cache-contains-ev-0cf6d-endency-and-reloads-offline-chromium-short/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-v5-0-cache-contains-ev-0cf6d-endency-and-reloads-offline-chromium-short/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-v5-0-cache-contains-ev-0cf6d-endency-and-reloads-offline-chromium-short/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                    "column": 14,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            },
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 17,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 400,
+                  "error": {
+                    "message": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:142:9",
+                    "location": {
+                      "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": " \u001b[90m 17 |\u001b[39m test\u001b[33m.\u001b[39mafterEach(() \u001b[33m=>\u001b[39m { expect(errors \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m expect(external \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m seed(page\u001b[33m,\u001b[39m id\u001b[33m,\u001b[39m extra \u001b[33m=\u001b[39m {}) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/?lb=none'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   \u001b[36mconst\u001b[39m p \u001b[33m=\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m,\u001b[39m nickname\u001b[33m:\u001b[39m \u001b[32m'Test Capy'\u001b[39m\u001b[33m,\u001b[39m starterChosen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m tutorialSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 21 |\u001b[39m     music\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m audio\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m rockIntroSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m rocksReached\u001b[33m:\u001b[39m id \u001b[33m>\u001b[39m \u001b[35m20\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 22 |\u001b[39m     completed\u001b[33m:\u001b[39m completed(id)\u001b[33m,\u001b[39m bonus\u001b[33m:\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m.\u001b[39mbonus\u001b[33m,\u001b[39m controlsSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }\u001b[33m,\u001b[39m \u001b[33m...\u001b[39mextra }\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n\n  17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });\n  18 | async function seed(page, id, extra = {}) {\n> 19 |   await page.goto('/?lb=none');\n     |              ^\n  20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,\n  21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,\n  22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:142:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [
+                    {
+                      "text": "Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:40:20.035Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-v5-0-cache-contains-ev-0cf6d-endency-and-reloads-offline-webkit-iphone/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-v5-0-cache-contains-ev-0cf6d-endency-and-reloads-offline-webkit-iphone/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-v5-0-cache-contains-ev-0cf6d-endency-and-reloads-offline-webkit-iphone/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                    "column": 14,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "0ec86a9edfc0ad2a2602-ae6ab28ae70198617313",
+          "file": "v50.spec.js",
+          "line": 141,
+          "column": 1
+        },
+        {
+          "title": "crate 145: D-pad and Show me fit and move",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-360",
+              "projectName": "chromium-360",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3716,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:38:47.851Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-412",
+              "projectName": "chromium-412",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 5329,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:38:47.068Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-short",
+              "projectName": "chromium-short",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 320,
+                  "error": {
+                    "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8765/?lb=none\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8765/?lb=none\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:158:9",
+                    "location": {
+                      "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": " \u001b[90m 17 |\u001b[39m test\u001b[33m.\u001b[39mafterEach(() \u001b[33m=>\u001b[39m { expect(errors \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m expect(external \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m seed(page\u001b[33m,\u001b[39m id\u001b[33m,\u001b[39m extra \u001b[33m=\u001b[39m {}) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/?lb=none'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   \u001b[36mconst\u001b[39m p \u001b[33m=\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m,\u001b[39m nickname\u001b[33m:\u001b[39m \u001b[32m'Test Capy'\u001b[39m\u001b[33m,\u001b[39m starterChosen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m tutorialSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 21 |\u001b[39m     music\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m audio\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m rockIntroSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m rocksReached\u001b[33m:\u001b[39m id \u001b[33m>\u001b[39m \u001b[35m20\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 22 |\u001b[39m     completed\u001b[33m:\u001b[39m completed(id)\u001b[33m,\u001b[39m bonus\u001b[33m:\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m.\u001b[39mbonus\u001b[33m,\u001b[39m controlsSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }\u001b[33m,\u001b[39m \u001b[33m...\u001b[39mextra }\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8765/?lb=none\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n\n  17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });\n  18 | async function seed(page, id, extra = {}) {\n> 19 |   await page.goto('/?lb=none');\n     |              ^\n  20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,\n  21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,\n  22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:158:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [
+                    {
+                      "text": "Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:40:11.078Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-crate-145-D-pad-and-Show-me-fit-and-move-chromium-short/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-crate-145-D-pad-and-Show-me-fit-and-move-chromium-short/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-crate-145-D-pad-and-Show-me-fit-and-move-chromium-short/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                    "column": 14,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            },
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 18,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 577,
+                  "error": {
+                    "message": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:158:9",
+                    "location": {
+                      "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": " \u001b[90m 17 |\u001b[39m test\u001b[33m.\u001b[39mafterEach(() \u001b[33m=>\u001b[39m { expect(errors \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m expect(external \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m seed(page\u001b[33m,\u001b[39m id\u001b[33m,\u001b[39m extra \u001b[33m=\u001b[39m {}) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/?lb=none'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   \u001b[36mconst\u001b[39m p \u001b[33m=\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m,\u001b[39m nickname\u001b[33m:\u001b[39m \u001b[32m'Test Capy'\u001b[39m\u001b[33m,\u001b[39m starterChosen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m tutorialSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 21 |\u001b[39m     music\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m audio\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m rockIntroSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m rocksReached\u001b[33m:\u001b[39m id \u001b[33m>\u001b[39m \u001b[35m20\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 22 |\u001b[39m     completed\u001b[33m:\u001b[39m completed(id)\u001b[33m,\u001b[39m bonus\u001b[33m:\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m.\u001b[39mbonus\u001b[33m,\u001b[39m controlsSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }\u001b[33m,\u001b[39m \u001b[33m...\u001b[39mextra }\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n\n  17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });\n  18 | async function seed(page, id, extra = {}) {\n> 19 |   await page.goto('/?lb=none');\n     |              ^\n  20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,\n  21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,\n  22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:158:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [
+                    {
+                      "text": "Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:40:20.987Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-crate-145-D-pad-and-Show-me-fit-and-move-webkit-iphone/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-crate-145-D-pad-and-Show-me-fit-and-move-webkit-iphone/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-crate-145-D-pad-and-Show-me-fit-and-move-webkit-iphone/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                    "column": 14,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "0ec86a9edfc0ad2a2602-675e2dca2516efd85cdb",
+          "file": "v50.spec.js",
+          "line": 157,
+          "column": 30
+        },
+        {
+          "title": "crate 150: D-pad and Show me fit and move",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-360",
+              "projectName": "chromium-360",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4118,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:38:51.611Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-412",
+              "projectName": "chromium-412",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 4964,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:38:52.434Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-short",
+              "projectName": "chromium-short",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 438,
+                  "error": {
+                    "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8765/?lb=none\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8765/?lb=none\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:158:9",
+                    "location": {
+                      "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": " \u001b[90m 17 |\u001b[39m test\u001b[33m.\u001b[39mafterEach(() \u001b[33m=>\u001b[39m { expect(errors \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m expect(external \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m seed(page\u001b[33m,\u001b[39m id\u001b[33m,\u001b[39m extra \u001b[33m=\u001b[39m {}) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/?lb=none'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   \u001b[36mconst\u001b[39m p \u001b[33m=\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m,\u001b[39m nickname\u001b[33m:\u001b[39m \u001b[32m'Test Capy'\u001b[39m\u001b[33m,\u001b[39m starterChosen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m tutorialSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 21 |\u001b[39m     music\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m audio\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m rockIntroSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m rocksReached\u001b[33m:\u001b[39m id \u001b[33m>\u001b[39m \u001b[35m20\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 22 |\u001b[39m     completed\u001b[33m:\u001b[39m completed(id)\u001b[33m,\u001b[39m bonus\u001b[33m:\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m.\u001b[39mbonus\u001b[33m,\u001b[39m controlsSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }\u001b[33m,\u001b[39m \u001b[33m...\u001b[39mextra }\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8765/?lb=none\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n\n  17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });\n  18 | async function seed(page, id, extra = {}) {\n> 19 |   await page.goto('/?lb=none');\n     |              ^\n  20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,\n  21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,\n  22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:158:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [
+                    {
+                      "text": "Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:40:12.130Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-crate-150-D-pad-and-Show-me-fit-and-move-chromium-short/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-crate-150-D-pad-and-Show-me-fit-and-move-chromium-short/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-crate-150-D-pad-and-Show-me-fit-and-move-chromium-short/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                    "column": 14,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            },
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 19,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 361,
+                  "error": {
+                    "message": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:158:9",
+                    "location": {
+                      "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": " \u001b[90m 17 |\u001b[39m test\u001b[33m.\u001b[39mafterEach(() \u001b[33m=>\u001b[39m { expect(errors \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m expect(external \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m seed(page\u001b[33m,\u001b[39m id\u001b[33m,\u001b[39m extra \u001b[33m=\u001b[39m {}) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/?lb=none'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   \u001b[36mconst\u001b[39m p \u001b[33m=\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m,\u001b[39m nickname\u001b[33m:\u001b[39m \u001b[32m'Test Capy'\u001b[39m\u001b[33m,\u001b[39m starterChosen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m tutorialSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 21 |\u001b[39m     music\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m audio\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m rockIntroSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m rocksReached\u001b[33m:\u001b[39m id \u001b[33m>\u001b[39m \u001b[35m20\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 22 |\u001b[39m     completed\u001b[33m:\u001b[39m completed(id)\u001b[33m,\u001b[39m bonus\u001b[33m:\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m.\u001b[39mbonus\u001b[33m,\u001b[39m controlsSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }\u001b[33m,\u001b[39m \u001b[33m...\u001b[39mextra }\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n\n  17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });\n  18 | async function seed(page, id, extra = {}) {\n> 19 |   await page.goto('/?lb=none');\n     |              ^\n  20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,\n  21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,\n  22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:158:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [
+                    {
+                      "text": "Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:40:22.085Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-crate-150-D-pad-and-Show-me-fit-and-move-webkit-iphone/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-crate-150-D-pad-and-Show-me-fit-and-move-webkit-iphone/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-crate-150-D-pad-and-Show-me-fit-and-move-webkit-iphone/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                    "column": 14,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "0ec86a9edfc0ad2a2602-900cc9c723fc3662afa5",
+          "file": "v50.spec.js",
+          "line": 157,
+          "column": 30
+        },
+        {
+          "title": "classic touch double-tap and keyboard activation each apply once",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-360",
+              "projectName": "chromium-360",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 9701,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[data-cell=\"6\"]')\nExpected: \u001b[32m\"2\"\u001b[39m\nReceived: \u001b[31m\"0\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('[data-cell=\"6\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-cell=\"6\"]')\u001b[22m\n\u001b[2m    3 × locator resolved to <button data-cell=\"6\" data-value=\"1\" class=\"cell     last-move \" aria-label=\"Row 1, column 7, zone 1, X, last move\">…</button>\u001b[22m\n\u001b[2m      - unexpected value \"1\"\u001b[22m\n\u001b[2m    10 × locator resolved to <button data-cell=\"6\" data-value=\"0\" class=\"cell     last-move \" aria-label=\"Row 1, column 7, zone 1, empty, last move\">…</button>\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[data-cell=\"6\"]')\nExpected: \u001b[32m\"2\"\u001b[39m\nReceived: \u001b[31m\"0\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('[data-cell=\"6\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-cell=\"6\"]')\u001b[22m\n\u001b[2m    3 × locator resolved to <button data-cell=\"6\" data-value=\"1\" class=\"cell     last-move \" aria-label=\"Row 1, column 7, zone 1, X, last move\">…</button>\u001b[22m\n\u001b[2m      - unexpected value \"1\"\u001b[22m\n\u001b[2m    10 × locator resolved to <button data-cell=\"6\" data-value=\"0\" class=\"cell     last-move \" aria-label=\"Row 1, column 7, zone 1, empty, last move\">…</button>\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:175:22",
+                    "location": {
+                      "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                      "column": 22,
+                      "line": 175
+                    },
+                    "snippet": " \u001b[90m 173 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m80\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 174 |\u001b[39m   \u001b[36mawait\u001b[39m cell\u001b[33m.\u001b[39mtap()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 175 |\u001b[39m   \u001b[36mawait\u001b[39m expect(cell)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-value'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'2'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 176 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.cell[data-value=\"2\"]'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m1\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 177 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.lives'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-lives'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'3'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 178 |\u001b[39m   \u001b[36mconst\u001b[39m wrong \u001b[33m=\u001b[39m \u001b[33mArray\u001b[39m\u001b[33m.\u001b[39mfrom({ length\u001b[33m:\u001b[39m q\u001b[33m.\u001b[39mn \u001b[33m*\u001b[39m q\u001b[33m.\u001b[39mn }\u001b[33m,\u001b[39m (_\u001b[33m,\u001b[39m i) \u001b[33m=>\u001b[39m i)\u001b[33m.\u001b[39mfind((i) \u001b[33m=>\u001b[39m \u001b[33m!\u001b[39msol\u001b[33m.\u001b[39mincludes(i))\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                        "column": 22,
+                        "line": 175
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[data-cell=\"6\"]')\nExpected: \u001b[32m\"2\"\u001b[39m\nReceived: \u001b[31m\"0\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('[data-cell=\"6\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-cell=\"6\"]')\u001b[22m\n\u001b[2m    3 × locator resolved to <button data-cell=\"6\" data-value=\"1\" class=\"cell     last-move \" aria-label=\"Row 1, column 7, zone 1, X, last move\">…</button>\u001b[22m\n\u001b[2m      - unexpected value \"1\"\u001b[22m\n\u001b[2m    10 × locator resolved to <button data-cell=\"6\" data-value=\"0\" class=\"cell     last-move \" aria-label=\"Row 1, column 7, zone 1, empty, last move\">…</button>\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n\n\n  173 |   await page.waitForTimeout(80);\n  174 |   await cell.tap();\n> 175 |   await expect(cell).toHaveAttribute('data-value', '2');\n      |                      ^\n  176 |   await expect(page.locator('.cell[data-value=\"2\"]')).toHaveCount(1);\n  177 |   await expect(page.locator('.lives')).toHaveAttribute('data-lives', '3');\n  178 |   const wrong = Array.from({ length: q.n * q.n }, (_, i) => i).find((i) => !sol.includes(i));\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:175:22"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:38:55.757Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-classic-touch-double-t-6cd3d--activation-each-apply-once-chromium-360/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-classic-touch-double-t-6cd3d--activation-each-apply-once-chromium-360/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-classic-touch-double-t-6cd3d--activation-each-apply-once-chromium-360/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                    "column": 22,
+                    "line": 175
+                  }
+                }
+              ],
+              "status": "unexpected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-412",
+              "projectName": "chromium-412",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 10406,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[data-cell=\"6\"]')\nExpected: \u001b[32m\"2\"\u001b[39m\nReceived: \u001b[31m\"0\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('[data-cell=\"6\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-cell=\"6\"]')\u001b[22m\n\u001b[2m    4 × locator resolved to <button data-cell=\"6\" data-value=\"1\" class=\"cell     last-move \" aria-label=\"Row 1, column 7, zone 1, X, last move\">…</button>\u001b[22m\n\u001b[2m      - unexpected value \"1\"\u001b[22m\n\u001b[2m    10 × locator resolved to <button data-cell=\"6\" data-value=\"0\" class=\"cell     last-move \" aria-label=\"Row 1, column 7, zone 1, empty, last move\">…</button>\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[data-cell=\"6\"]')\nExpected: \u001b[32m\"2\"\u001b[39m\nReceived: \u001b[31m\"0\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('[data-cell=\"6\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-cell=\"6\"]')\u001b[22m\n\u001b[2m    4 × locator resolved to <button data-cell=\"6\" data-value=\"1\" class=\"cell     last-move \" aria-label=\"Row 1, column 7, zone 1, X, last move\">…</button>\u001b[22m\n\u001b[2m      - unexpected value \"1\"\u001b[22m\n\u001b[2m    10 × locator resolved to <button data-cell=\"6\" data-value=\"0\" class=\"cell     last-move \" aria-label=\"Row 1, column 7, zone 1, empty, last move\">…</button>\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:175:22",
+                    "location": {
+                      "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                      "column": 22,
+                      "line": 175
+                    },
+                    "snippet": " \u001b[90m 173 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m80\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 174 |\u001b[39m   \u001b[36mawait\u001b[39m cell\u001b[33m.\u001b[39mtap()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 175 |\u001b[39m   \u001b[36mawait\u001b[39m expect(cell)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-value'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'2'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 176 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.cell[data-value=\"2\"]'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m1\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 177 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.lives'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-lives'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'3'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 178 |\u001b[39m   \u001b[36mconst\u001b[39m wrong \u001b[33m=\u001b[39m \u001b[33mArray\u001b[39m\u001b[33m.\u001b[39mfrom({ length\u001b[33m:\u001b[39m q\u001b[33m.\u001b[39mn \u001b[33m*\u001b[39m q\u001b[33m.\u001b[39mn }\u001b[33m,\u001b[39m (_\u001b[33m,\u001b[39m i) \u001b[33m=>\u001b[39m i)\u001b[33m.\u001b[39mfind((i) \u001b[33m=>\u001b[39m \u001b[33m!\u001b[39msol\u001b[33m.\u001b[39mincludes(i))\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                        "column": 22,
+                        "line": 175
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[data-cell=\"6\"]')\nExpected: \u001b[32m\"2\"\u001b[39m\nReceived: \u001b[31m\"0\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('[data-cell=\"6\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-cell=\"6\"]')\u001b[22m\n\u001b[2m    4 × locator resolved to <button data-cell=\"6\" data-value=\"1\" class=\"cell     last-move \" aria-label=\"Row 1, column 7, zone 1, X, last move\">…</button>\u001b[22m\n\u001b[2m      - unexpected value \"1\"\u001b[22m\n\u001b[2m    10 × locator resolved to <button data-cell=\"6\" data-value=\"0\" class=\"cell     last-move \" aria-label=\"Row 1, column 7, zone 1, empty, last move\">…</button>\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n\n\n  173 |   await page.waitForTimeout(80);\n  174 |   await cell.tap();\n> 175 |   await expect(cell).toHaveAttribute('data-value', '2');\n      |                      ^\n  176 |   await expect(page.locator('.cell[data-value=\"2\"]')).toHaveCount(1);\n  177 |   await expect(page.locator('.lives')).toHaveAttribute('data-lives', '3');\n  178 |   const wrong = Array.from({ length: q.n * q.n }, (_, i) => i).find((i) => !sol.includes(i));\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:175:22"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:38:57.449Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-classic-touch-double-t-6cd3d--activation-each-apply-once-chromium-412/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-classic-touch-double-t-6cd3d--activation-each-apply-once-chromium-412/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-classic-touch-double-t-6cd3d--activation-each-apply-once-chromium-412/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                    "column": 22,
+                    "line": 175
+                  }
+                }
+              ],
+              "status": "unexpected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-short",
+              "projectName": "chromium-short",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 280,
+                  "error": {
+                    "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8765/?lb=none\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8765/?lb=none\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:170:9",
+                    "location": {
+                      "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": " \u001b[90m 17 |\u001b[39m test\u001b[33m.\u001b[39mafterEach(() \u001b[33m=>\u001b[39m { expect(errors \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m expect(external \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m seed(page\u001b[33m,\u001b[39m id\u001b[33m,\u001b[39m extra \u001b[33m=\u001b[39m {}) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/?lb=none'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   \u001b[36mconst\u001b[39m p \u001b[33m=\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m,\u001b[39m nickname\u001b[33m:\u001b[39m \u001b[32m'Test Capy'\u001b[39m\u001b[33m,\u001b[39m starterChosen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m tutorialSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 21 |\u001b[39m     music\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m audio\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m rockIntroSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m rocksReached\u001b[33m:\u001b[39m id \u001b[33m>\u001b[39m \u001b[35m20\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 22 |\u001b[39m     completed\u001b[33m:\u001b[39m completed(id)\u001b[33m,\u001b[39m bonus\u001b[33m:\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m.\u001b[39mbonus\u001b[33m,\u001b[39m controlsSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }\u001b[33m,\u001b[39m \u001b[33m...\u001b[39mextra }\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8765/?lb=none\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n\n  17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });\n  18 | async function seed(page, id, extra = {}) {\n> 19 |   await page.goto('/?lb=none');\n     |              ^\n  20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,\n  21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,\n  22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:170:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [
+                    {
+                      "text": "Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:40:13.316Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-classic-touch-double-t-6cd3d--activation-each-apply-once-chromium-short/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-classic-touch-double-t-6cd3d--activation-each-apply-once-chromium-short/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-classic-touch-double-t-6cd3d--activation-each-apply-once-chromium-short/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                    "column": 14,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            },
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 20,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 353,
+                  "error": {
+                    "message": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:170:9",
+                    "location": {
+                      "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": " \u001b[90m 17 |\u001b[39m test\u001b[33m.\u001b[39mafterEach(() \u001b[33m=>\u001b[39m { expect(errors \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m expect(external \u001b[33m??\u001b[39m [])\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m seed(page\u001b[33m,\u001b[39m id\u001b[33m,\u001b[39m extra \u001b[33m=\u001b[39m {}) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/?lb=none'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   \u001b[36mconst\u001b[39m p \u001b[33m=\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m,\u001b[39m nickname\u001b[33m:\u001b[39m \u001b[32m'Test Capy'\u001b[39m\u001b[33m,\u001b[39m starterChosen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m tutorialSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 21 |\u001b[39m     music\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m audio\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m rockIntroSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m rocksReached\u001b[33m:\u001b[39m id \u001b[33m>\u001b[39m \u001b[35m20\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 22 |\u001b[39m     completed\u001b[33m:\u001b[39m completed(id)\u001b[33m,\u001b[39m bonus\u001b[33m:\u001b[39m { \u001b[33m...\u001b[39mfresh()\u001b[33m.\u001b[39mbonus\u001b[33m,\u001b[39m controlsSeen\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }\u001b[33m,\u001b[39m \u001b[33m...\u001b[39mextra }\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.goto: Could not connect to 127.0.0.1: Connection refused\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/?lb=none\", waiting until \"load\"\u001b[22m\n\n\n  17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });\n  18 | async function seed(page, id, extra = {}) {\n> 19 |   await page.goto('/?lb=none');\n     |              ^\n  20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,\n  21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,\n  22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };\n    at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)\n    at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)\n    at /workspace/capydoku/wip/app/tests/v50.spec.js:170:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [
+                    {
+                      "text": "Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2026-11-17T10:40:22.957Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-classic-touch-double-t-6cd3d--activation-each-apply-once-webkit-iphone/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-classic-touch-double-t-6cd3d--activation-each-apply-once-webkit-iphone/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/workspace/capydoku/wip/app/test-results-v50-ranking/v50-classic-touch-double-t-6cd3d--activation-each-apply-once-webkit-iphone/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/workspace/capydoku/wip/app/tests/v50.spec.js",
+                    "column": 14,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "0ec86a9edfc0ad2a2602-bb19ec37f2e631d78703",
+          "file": "v50.spec.js",
+          "line": 169,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-17T10:37:05.151Z",
+    "duration": 198343.902,
+    "expected": 59,
+    "skipped": 0,
+    "unexpected": 21,
+    "flaky": 0
+  }
+}

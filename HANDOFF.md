@@ -1,3 +1,7 @@
+> Current update: shared leaderboard implemented and public service activated with explicit user approval.
+> See `wip/app/reports/shared-leaderboard/README.md` for current publication and verification details.
+> The original snapshot below is historical; subsequent user instructions authorized publication.
+
 # Capydoku / Capybara Calm — handoff
 
 Snapshot of in-progress **v5.0** work, taken **2026-11-16 19:01 America/New_York (EST, UTC-5)**, so another AI can continue without the Engineer box. Approved by Sebastián Alarcón the same day: write this document and back up the work on a **separate** GitHub branch. **Do not touch `main`, `gh-pages`, or the published site.**

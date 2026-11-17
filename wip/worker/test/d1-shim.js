@@ -8,6 +8,11 @@ export function localD1(schemaPath = new URL("../schema.sql", import.meta.url)) 
   const conv = (sql) => sql.replace(/\?(\d+)/g, (_, n) => `:p${n}`);
   return {
     raw: db,
+    async batch(statements) {
+      db.exec('BEGIN');
+      try {const results=[];for(const stmt of statements)results.push(await stmt.run());db.exec('COMMIT');return results;}
+      catch(e){db.exec('ROLLBACK');throw e;}
+    },
     prepare(sql) {
       const st = db.prepare(conv(sql));
       let args = {};

@@ -1,7 +1,7 @@
 // Capybara Calm leaderboard Worker (Cloudflare Workers Free + D1). NOT DEPLOYED.
 // Endpoints (JSON, CORS locked to ALLOWED_ORIGIN): POST /v1/join · POST /v1/score · GET /v1/leaderboard · POST /v1/opt-out
 // Server checks: impossible totals rejected (rules.js), best-score-only writes, fixed-window rate limits (salted hashes).
-import { checkScore, cleanNickname, UUID, LIMITS, WORLDS } from "./rules.js";
+import { checkScore, checkProgress, cleanNickname, UUID, LIMITS, WORLDS } from "./rules.js";
 const json = (status, body, cors) => new Response(JSON.stringify(body), { status, headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store", ...cors } });
 function corsFor(request, env) {
   const origin = request.headers.get("origin"), allowed = (env.ALLOWED_ORIGIN || "").split(",").map((s) => s.trim()).filter(Boolean);
@@ -20,22 +20,20 @@ export async function allow(db, key, limit, windowMs, now) {
   return (row?.count ?? 1) <= limit;
 }
 async function readBody(request) {
-  if (Number(request.headers.get("content-length") || 0) > 4096) return null;
-  try { const t = await request.text(); return t.length > 4096 ? null : JSON.parse(t || "{}"); } catch { return null; }
+  if (Number(request.headers.get("content-length") || 0) > 16384) return null;
+  try { const t = await request.text(); return t.length > 16384 ? null : JSON.parse(t || "{}"); } catch { return null; }
 }
 async function board(db, world, playerId) {
-  const top = (await db.prepare("SELECT p.nickname AS nickname, s.score AS score, s.player_id AS player_id FROM world_scores s JOIN players p ON p.id = s.player_id WHERE s.world = ?1 ORDER BY s.score DESC, s.updated_at ASC, s.player_id ASC LIMIT 10").bind(world).all()).results || [];
-  const top10 = top.map((r, i) => ({ rank: i + 1, nickname: r.nickname || null, score: r.score, ...(r.player_id === playerId ? { me: true } : {}) }));
-  let me = { rank: null };
-  if (playerId && UUID.test(playerId)) {
-    const mine = await db.prepare("SELECT s.score AS score, s.updated_at AS updated_at, p.nickname AS nickname FROM world_scores s JOIN players p ON p.id = s.player_id WHERE s.world = ?1 AND s.player_id = ?2").bind(world, playerId).first();
-    if (mine) {
-      const ahead = await db.prepare("SELECT COUNT(*) AS n FROM world_scores WHERE world = ?1 AND (score > ?2 OR (score = ?2 AND updated_at < ?3) OR (score = ?2 AND updated_at = ?3 AND player_id < ?4))").bind(world, mine.score, mine.updated_at, playerId).first();
-      const total = await db.prepare("SELECT COUNT(*) AS n FROM world_scores WHERE world = ?1").bind(world).first();
-      me = { rank: ahead.n + 1, of: total.n, nickname: mine.nickname || null, score: mine.score };
-    }
-  }
-  return { world, top10, me };
+  const overall = world === 'overall';
+  const source = overall
+    ? `SELECT p.id player_id,p.nickname,COALESCE(SUM(s.score),0) score,COALESCE(c.last_cleared,0) last_cleared,p.created_at tie_at FROM players p LEFT JOIN world_scores s ON s.player_id=p.id LEFT JOIN campaign_progress c ON c.player_id=p.id GROUP BY p.id`
+    : `SELECT p.id player_id,p.nickname,s.score,COALESCE(c.last_cleared,0) last_cleared,s.updated_at tie_at FROM world_scores s JOIN players p ON p.id=s.player_id LEFT JOIN campaign_progress c ON c.player_id=p.id WHERE s.world=${world}`;
+  const ranked = `WITH totals AS (${source}), ranked AS (SELECT *,ROW_NUMBER() OVER(ORDER BY score DESC,last_cleared DESC,tie_at ASC,player_id ASC) rank,COUNT(*) OVER() total_players FROM totals)`;
+  const top=(await db.prepare(ranked+' SELECT * FROM ranked WHERE rank<=10 ORDER BY rank').all()).results||[];
+  const row=r=>({rank:r.rank,nickname:r.nickname||null,score:r.score,last_cleared:r.last_cleared});
+  const top10=top.map(r=>({...row(r),...(r.player_id===playerId?{me:true}:{})}));
+  const mine=playerId&&UUID.test(playerId)?await db.prepare(ranked+' SELECT * FROM ranked WHERE player_id=?1').bind(playerId).first():null;
+  return {world,top10,me:mine?{...row(mine),of:mine.total_players}:{rank:null}};
 }
 export async function handle(request, env, now = Date.now()) {
   const url = new URL(request.url), cors = corsFor(request, env);
@@ -44,10 +42,15 @@ export async function handle(request, env, now = Date.now()) {
   const db = env.DB, ip = request.headers.get("cf-connecting-ip") || "local", ipKey = await sha256((env.RATE_SALT || "dev-salt") + ip);
   const limited = () => json(429, { error: "rate-limited" }, { ...cors.headers, "retry-after": "60" });
   try {
+    if ((url.pathname === '/' || url.pathname === '/health') && request.method === 'GET') {
+      await db.prepare('SELECT COUNT(*) AS n FROM players').first();
+      return json(200,{service:'Capybara Calm leaderboard',ok:true},cors.headers);
+    }
     if (url.pathname === "/v1/leaderboard" && request.method === "GET") {
       if (!(await allow(db, `read:${ipKey}`, LIMITS.read.perMinute, 60000, now))) return limited();
-      const world = Number(url.searchParams.get("world"));
-      if (!Number.isInteger(world) || world < 1 || world > WORLDS) return json(400, { error: "world" }, cors.headers);
+      const query = url.searchParams.get("world");
+      const world = query === null || query === 'overall' ? 'overall' : Number(query);
+      if (world !== 'overall' && (!Number.isInteger(world) || world < 1 || world > WORLDS)) return json(400, { error: "world" }, cors.headers);
       return json(200, await board(db, world, url.searchParams.get("player_id")), cors.headers);
     }
     if (request.method !== "POST") return json(404, { error: "not-found" }, cors.headers);
@@ -61,6 +64,18 @@ export async function handle(request, env, now = Date.now()) {
       if (!nick.ok) return json(400, { error: "nickname" }, cors.headers);
       await db.prepare("INSERT INTO players (id, nickname, created_at, opted_in_at) VALUES (?1, ?2, ?3, ?3) ON CONFLICT (id) DO UPDATE SET nickname = excluded.nickname").bind(id, nick.value, now).run();
       return json(200, { player_id: id, nickname: nick.value, opted_in: true }, cors.headers);
+    }
+    if (url.pathname === '/v1/progress') {
+      const id=body.player_id;
+      if(typeof id!=='string'||!UUID.test(id))return json(400,{error:'player_id'},cors.headers);
+      if(!(await allow(db,`progress:${ipKey}`,60,60000,now))||!(await allow(db,`progressp:${await sha256(id)}`,20,60000,now)))return limited();
+      if(!await db.prepare('SELECT id FROM players WHERE id=?1').bind(id).first())return json(403,{error:'not-joined'},cors.headers);
+      const checked=checkProgress(body);
+      if(!checked.ok)return json(422,{error:checked.error},cors.headers);
+      const statements=checked.worlds.map(w=>db.prepare('INSERT INTO world_scores (player_id,world,score,updated_at) VALUES (?1,?2,?3,?4) ON CONFLICT(player_id,world) DO UPDATE SET score=excluded.score,updated_at=excluded.updated_at WHERE excluded.score>world_scores.score').bind(id,w.world,w.score,now));
+      statements.push(db.prepare('INSERT INTO campaign_progress (player_id,last_cleared) VALUES (?1,?2) ON CONFLICT(player_id) DO UPDATE SET last_cleared=MAX(campaign_progress.last_cleared,excluded.last_cleared)').bind(id,checked.last_cleared));
+      await db.batch(statements);
+      return json(200,{accepted:true,...await board(db,'overall',id)},cors.headers);
     }
     if (url.pathname === "/v1/score") {
       const id = body.player_id;
@@ -79,6 +94,7 @@ export async function handle(request, env, now = Date.now()) {
       if (!(await allow(db, `optout:${ipKey}`, LIMITS.optOut.perMinute, 60000, now))) return limited();
       const id = body.player_id;
       if (typeof id !== "string" || !UUID.test(id)) return json(400, { error: "player_id" }, cors.headers);
+      await db.prepare("DELETE FROM campaign_progress WHERE player_id = ?1").bind(id).run();
       await db.prepare("DELETE FROM world_scores WHERE player_id = ?1").bind(id).run(); // explicit (D1 FKs are on, but be sure)
       await db.prepare("DELETE FROM players WHERE id = ?1").bind(id).run();
       return json(200, { player_id: id, opted_in: false, deleted: true }, cors.headers);

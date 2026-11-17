@@ -101,7 +101,7 @@ test('transition and hidden time are not counted by the shared active clock',()=
  clock.sync(true);now+=3000;clock.pause();assert.equal(next.metrics.elapsedMs,4000);
  now+=50000;clock.sync(true);now+=1000;clock.pause();assert.equal(next.metrics.elapsedMs,5000);
 });
-test('new content and module are precached; unchanged remote ranking remains disabled',async()=>{
+test('new content and module are precached; public ranking uses HTTPS',async()=>{
  const pre=read('reports/precache.json');for(const f of ['bosses.js','boss-levels.json'])assert.ok(pre.urls.includes(f));
- const {GAME_CONFIG}=await import('../config.js');assert.equal(GAME_CONFIG.leaderboardApi,'');
+ const {GAME_CONFIG}=await import('../config.js');assert.match(GAME_CONFIG.leaderboardApi,/^https:\/\//);
 });

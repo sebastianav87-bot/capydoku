@@ -1,0 +1,18 @@
+✔ client and Worker share the same world ceiling (1.093734ms)
+✔ [mock] spectator: nothing queued or published; public shared view (2.518024ms)
+✔ [mock] join (optional nickname) → queue → flush → top 10 + rank → leave deletes (14.401959ms)
+✔ [mock] offline: queued, survives reload, flushes when back online (0.889686ms)
+✔ [worker] spectator: nothing queued or published; public shared view (49.130627ms)
+✔ [worker] join (optional nickname) → queue → flush → top 10 + rank → leave deletes (30.077592ms)
+✔ [worker] offline: queued, survives reload, flushes when back online (3.272408ms)
+✔ server errors back off exponentially (5 s … 10 min); permanent rejections are dropped (2.956311ms)
+✔ leaving while offline deletes locally now and on the server later (1.075706ms)
+✔ adapter choice: none by default (API URL empty), mock only via the test hook, http only with an https URL (1.181996ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 190.068178

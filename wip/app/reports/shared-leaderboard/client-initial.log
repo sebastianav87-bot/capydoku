@@ -1,0 +1,68 @@
+✔ client and Worker share the same world ceiling (1.647942ms)
+✖ [mock] not joined: nothing queued or sent; local view (5.37255ms)
+✔ [mock] join (optional nickname) → queue → flush → top 10 + rank → leave deletes (21.8631ms)
+✔ [mock] offline: queued, survives reload, flushes when back online (0.972088ms)
+✖ [worker] not joined: nothing queued or sent; local view (55.09544ms)
+✔ [worker] join (optional nickname) → queue → flush → top 10 + rank → leave deletes (35.325466ms)
+✔ [worker] offline: queued, survives reload, flushes when back online (3.654532ms)
+✔ server errors back off exponentially (5 s … 10 min); permanent rejections are dropped (5.050998ms)
+✔ leaving while offline deletes locally now and on the server later (1.354943ms)
+✔ adapter choice: none by default (API URL empty), mock only via the test hook, http only with an https URL (1.823946ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 8
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 235.040814
+
+✖ failing tests:
+
+test at tests/v50-leaderboard.test.js:30:3
+✖ [mock] not joined: nothing queued or sent; local view (5.37255ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+  +   'shared',
+  +   undefined,
+  -   'local',
+  -   'not-joined',
+      'Anonymous capy'
+    ]
+  
+      at TestContext.<anonymous> (file:///workspace/capydoku/wip/app/tests/v50-leaderboard.test.js:35:12)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 'shared', undefined, 'Anonymous capy' ],
+    expected: [ 'local', 'not-joined', 'Anonymous capy' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests/v50-leaderboard.test.js:30:3
+✖ [worker] not joined: nothing queued or sent; local view (55.09544ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+  +   'shared',
+  +   undefined,
+  -   'local',
+  -   'not-joined',
+      'Anonymous capy'
+    ]
+  
+      at TestContext.<anonymous> (file:///workspace/capydoku/wip/app/tests/v50-leaderboard.test.js:35:12)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 'shared', undefined, 'Anonymous capy' ],
+    expected: [ 'local', 'not-joined', 'Anonymous capy' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

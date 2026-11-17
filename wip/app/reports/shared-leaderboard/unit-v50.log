@@ -1,0 +1,49 @@
+
+> capydoku-local-prototype@5.0.0 test:v50
+> node --test tests/v50.test.js tests/v50-score.test.js tests/v50-leaderboard.test.js tests/boss-phases.test.js
+
+✔ all 15 pairs: unchanged phase 1; same rocks/size; unique, no-guess, harder second board and shared survivor (625.320868ms)
+✔ phase checkpoint/refills keep whole-boss time, mistakes and power use; fixed friend cannot be undone (1.643144ms)
+✔ phase 2 and its histories survive save/load even with zero oranges; old half-played bosses still use phase 1 (55.276995ms)
+✔ old completed bosses, lilies, golden lilies and best scores stay untouched; replay starts in phase 1 (0.485177ms)
+✔ two-board targets, final oranges and unchanged 3150 score ceiling; phase 1 grants no golden (3.666349ms)
+✔ transition and hidden time are not counted by the shared active clock (0.273691ms)
+✔ new content and module are precached; public ranking uses HTTPS (1.026921ms)
+✔ client and Worker share the same world ceiling (1.221542ms)
+✔ [mock] spectator: nothing queued or published; public shared view (4.281982ms)
+✔ [mock] join (optional nickname) → queue → flush → top 10 + rank → leave deletes (110.843185ms)
+✔ [mock] offline: queued, survives reload, flushes when back online (1.061322ms)
+✔ [worker] spectator: nothing queued or published; public shared view (266.598527ms)
+✔ [worker] join (optional nickname) → queue → flush → top 10 + rank → leave deletes (34.249959ms)
+✔ [worker] offline: queued, survives reload, flushes when back online (4.662373ms)
+✔ server errors back off exponentially (5 s … 10 min); permanent rejections are dropped (2.58081ms)
+✔ leaving while offline deletes locally now and on the server later (1.48066ms)
+✔ adapter choice: none with an empty API URL, mock only via the test hook, http only with an https URL (7.478846ms)
+✔ target times per board size are the documented table (1.97338ms)
+✔ time bonus: linear under the target, 0 at/over it, never negative, garbage → 0 (0.179339ms)
+✔ logic score = (1000 + 200×oranges + time) × help × role (0.241503ms)
+✔ crate score: orange equivalent from moves vs par, ×1.5, Show me halves (0.331117ms)
+✔ best score only rises; world score sums bests; unscored ponds add nothing (0.543995ms)
+✔ scores survive sanitize; invalid ids/values are dropped; old saves start unscored (37.97744ms)
+✔ 150 ponds in order, contentVersion 5.0, world 1 byte-identical to v4.3.1, sizes 7×7…10×10 (16.002531ms)
+✔ roles for 150: 30 crate ponds (every 5th), 15 gates, 5 world gates, 15 bosses (…9), breathers, finale 150 (0.574672ms)
+✔ every logic pond (120): unique solution, solvable by the no-guess solver, never repeated (also vs. Daily) (746.866545ms)
+✔ difficulty ramp across worlds: score, rank-3 steps, rocks and zone twist rise; forced share falls; bosses harder each world (344.656404ms)
+✔ 30 crate ponds: C1–C6 kept, par = round5(optimal × 1.45), stored solution solves in exactly the optimal moves, BFS agrees (32908.982801ms)
+✔ v4.3 / v4.3.1 save with all 30 ponds: nothing lost, next pond is 31, unscored until replayed (49.434839ms)
+✔ v4.2 save (layout 1, goldens on 10/20/30, Crate Cove solves): migrated once, every lily kept (1.057275ms)
+✔ part-way saves resume where they were; lilies/scores on ponds up to 150 survive sanitize; junk ids are dropped (0.602704ms)
+✔ v5.0 cache covers local runtime imports, styles and entry points; public ranking uses HTTPS (438.477048ms)
+ℹ tests 32
+ℹ suites 0
+ℹ pass 32
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 36716.87448
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice

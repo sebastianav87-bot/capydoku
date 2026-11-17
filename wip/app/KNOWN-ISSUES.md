@@ -1,3 +1,9 @@
+## Shared leaderboard publication
+
+The shared leaderboard is public and enabled with explicit user approval.
+See `reports/shared-leaderboard/README.md` for test results and deployment details.
+The older disabled-ranking notes below are historical snapshots.
+
 ## Two-phase bosses publication
 
 Published with explicit approval; see `reports/boss-phases/PUBLISHED.md`.

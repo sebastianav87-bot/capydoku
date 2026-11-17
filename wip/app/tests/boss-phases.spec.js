@@ -13,7 +13,7 @@ async function seed(page,id,extra={}){
  sol.slice(0,-1).forEach(i=>state.cells[i]=2);
  state.metrics={known:true,started:true,elapsedMs:45000,mistakes:0};
  Object.assign(state,extra);
- await page.goto('/');
+ await page.goto('/?lb=none');
  await page.evaluate(({key,p})=>{localStorage.clear();sessionStorage.clear();localStorage.setItem(key,JSON.stringify(p));},{key:KEY,p:{...fresh(),nickname:'Boss tester',starterChosen:true,tutorialSeen:true,rockIntroSeen:true,music:false,audio:false,completed:Array.from({length:id-1},(_,i)=>i+1),sessions:{[`pond-${id}`]:{...state,signature:boardSignature(first)}}}});
  await page.reload();await expect(page.locator('.screen[data-boss-phase="1"]')).toBeVisible();
  return {first,sol,board:second.find(p=>p.id===id)};

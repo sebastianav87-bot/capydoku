@@ -34,6 +34,7 @@ export function createBonus(ctx) {
     shown = false,
     replaying = false,
     startedAt = null,
+    pausedAt = null,
     lastWin = null;
   const P = () => ctx.progress();
   async function ensureLevels() {
@@ -74,7 +75,7 @@ export function createBonus(ctx) {
     dirty = false;
     shown = false;
     replaying = false;
-    startedAt = null;
+    startedAt = null; pausedAt = null;
     lastWin = null;
     L = parseLevel(def);
     s = newCrateState(L);
@@ -99,7 +100,7 @@ export function createBonus(ctx) {
       rec = P().lilies[pond];
     ctx.shell(
       `crate-screen ${dpad ? "with-dpad" : ""}`,
-      `<header class="bonus-header"><button class="bonus-round leave" data-action="bonusLeave" aria-label="Leave crate pond"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7"/></svg></button><div class="bonus-title"><h2>${pondLabel(pond)}</h2><span class="bonus-tag ${gate ? "gate-tag" : ""}">${pond === FINALE_POND ? "Finale" : isWorldGate(pond) ? "World gate" : gate ? "Spring gate" : "Crate pond"}</span></div><button class="bonus-round" data-action="bonusRestart" aria-label="Restart crate pond"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12a7 7 0 1 1-2.1-5"/><path d="M19 4v4h-4"/></svg></button></header><div class="bonus-stats"><span><small>Moves</small><b data-stat="moves">0</b></span><span><small>Pushes</small><b data-stat="pushes">0</b></span><span><small>Par</small><b>${def.par}</b></span></div><div class="pond-wrap crate-wrap" style="--board-max:${ctx.boardMax(L.n)}px;--board-width:${ctx.boardWidth()};--board-viewport-width:${ctx.boardViewport()}"><div class="crate-board" role="group" aria-label="${L.n} by ${L.n} crate pond" style="--n:${L.n}">${Array.from({ length: L.n * L.n }, (_, i) => {
+      `<header class="bonus-header"><button class="bonus-round leave" data-action="bonusLeave" aria-label="Leave crate pond"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7"/></svg></button><div class="bonus-title"><h2>${pondLabel(pond)}</h2><span class="bonus-tag ${gate ? "gate-tag" : ""}">${pond === FINALE_POND ? "Finale" : isWorldGate(pond) ? "World gate" : gate ? "Spring gate" : "Crate pond"}</span></div><button class="bonus-round" data-action="pause" aria-label="Pause">Ⅱ</button><button class="bonus-round" data-action="bonusRestart" aria-label="Restart crate pond"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12a7 7 0 1 1-2.1-5"/><path d="M19 4v4h-4"/></svg></button></header><div class="bonus-stats"><span><small>Moves</small><b data-stat="moves">0</b></span><span><small>Pushes</small><b data-stat="pushes">0</b></span><span><small>Par</small><b>${def.par}</b></span></div><div class="pond-wrap crate-wrap" style="--board-max:${ctx.boardMax(L.n)}px;--board-width:${ctx.boardWidth()};--board-viewport-width:${ctx.boardViewport()}"><div class="crate-board" role="group" aria-label="${L.n} by ${L.n} crate pond" style="--n:${L.n}">${Array.from({ length: L.n * L.n }, (_, i) => {
         const rock = L.rocks.includes(i),
           goal = L.goals.includes(i);
         return `<button class="crate-cell ${rock ? "is-rock" : ""} ${goal ? "goal" : ""}" data-action="crateTap" data-ci="${i}" aria-label="Row ${Math.floor(i / L.n) + 1}, column ${(i % L.n) + 1}${rock ? ", rock" : goal ? `, ${L.fruit[i]}` : ""}" ${rock ? 'aria-disabled="true"' : ""}>${rock ? '<img class="rock-art" src="assets/rock.png" alt="">' : goal ? `<img class="fruit-target" src="assets/crates/${L.fruit[i]}-target.svg" alt="">` : ""}</button>`;
@@ -142,6 +143,8 @@ export function createBonus(ctx) {
     if (stuck.size && key !== stuckShown) ctx.vibrate("locked");
     stuckShown = key;
     root.querySelectorAll('[data-action="bonusUndo"]').forEach((b) => (b.disabled = !history.length || replaying));
+    const pauseButton = root.querySelector('[data-action="pause"]');
+    if(pauseButton) pauseButton.disabled = replaying || finished;
     const help = root.querySelector(".crate-showme");
     if (help) help.hidden = !(restarts >= SHOW_ME_AFTER) || replaying || finished;
     root.querySelector(".crate-screen")?.classList.toggle("replaying", replaying);
@@ -353,6 +356,8 @@ export function createBonus(ctx) {
     pointerDown,
     pointerUp,
     pointerCancel: () => (swipe = null),
+    pause: () => { stopWalk(); if(pausedAt===null) pausedAt=performance.now(); },
+    resume: () => { if(pausedAt!==null&&startedAt!==null) startedAt+=performance.now()-pausedAt;pausedAt=null; },
     debug: () => ({ level: def?.id, pond, restarts, dirty, shown, replaying, par: def?.par, solution: def?.solution, afterPond, state: s && { ...s, crates: [...s.crates] }, history: history.length, finished, stuck: L && s ? deadlocks(L, s) : [] }),
     stop: () => {
       stopWalk();

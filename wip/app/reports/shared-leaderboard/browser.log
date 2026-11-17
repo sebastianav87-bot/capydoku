@@ -1,0 +1,20 @@
+
+Running 4 tests using 1 worker
+
+(node:5572) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓  1 [chromium] › tests/shared-leaderboard.spec.js:14:1 › two independent profiles share progress/points; anonymous browse, replay, offline queue and leave (37.9s)
+  ✓  2 [chromium] › tests/shared-leaderboard.spec.js:42:1 › Leaderboard closes to the same two-phase boss board and the same crate state (5.5s)
+(node:9668) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓  3 [webkit] › tests/shared-leaderboard.spec.js:14:1 › two independent profiles share progress/points; anonymous browse, replay, offline queue and leave (50.1s)
+  ✓  4 [webkit] › tests/shared-leaderboard.spec.js:42:1 › Leaderboard closes to the same two-phase boss board and the same crate state (15.3s)
+
+  4 passed (1.9m)
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice

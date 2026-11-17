@@ -1,0 +1,12 @@
+{
+  "url": "https://capybara-calm-ranking.sebalarc.chatgpt.site",
+  "public": true,
+  "checks": [
+    "Anonymous GET succeeds without signing up",
+    "Two independent entries: equal score prioritizes consecutive progress 42 over 41",
+    "Replay score improvement changes rank without increasing last cleared",
+    "By-world view agrees with Overall",
+    "Both temporary test entries deleted from the public service"
+  ],
+  "passed": true
+}

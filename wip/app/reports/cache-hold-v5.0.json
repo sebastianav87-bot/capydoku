@@ -2,7 +2,7 @@
   "holdCache": true,
   "preparedLocalOnly": true,
   "published": false,
-  "cache": "capydoku-v5.0-9be5b9e0b436",
-  "sw_sha256": "d2e9fd2f586676e61adfd24427062129477efb5c02a43c8c910f3b9fce6ab6ab",
-  "precache_sha256": "6e834aaa9894e7370809ef12d06c064f234cb96595347faae2bb3ac1b0640b91"
+  "cache": "capydoku-v5.0-41651411c70f",
+  "sw_sha256": "2b284d7a39868556ef501d6aa9d615b91e68aa55a9af14aca3f910151162e247",
+  "precache_sha256": "82bb0370a96eb687f62ea814ba23e2b8dd25dcf2b7dbe6f3a893021f78cdb770"
 }

@@ -150,3 +150,32 @@
 .boss-shifting[data-reduced="true"] .boss-staying .capy{animation:none;transform:none}
 .boss-shifting[data-reduced="true"] .zone-grid::after,.boss-shifting[data-reduced="true"] .boss-sinking::after{animation:none}
 @media(prefers-reduced-motion:reduce){.boss-revealed .zone-outline,.boss-shifting .capy,.boss-shifting .zone-grid::after,.boss-shifting .cell::after{animation:none!important}}
+
+/* Shared leaderboard, public reading and opt-in publishing. */
+.hub-tiles .hub-leaderboard{grid-column:1/-1;flex:1 0 100%;min-height:44px;font-size:16px;background:#FCF6E7;color:var(--ink-header)}
+.play-menu{display:flex;align-items:center;justify-content:space-between;gap:6px;min-height:28px;flex-shrink:0}
+.play-menu .tool-hint,.play-menu .tap-hint{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:0!important}
+.play-menu .pause-btn{flex:0 0 auto;min-height:28px;padding:2px 9px;font-size:12px;border-radius:10px}
+.screen.game.fit-tight .play-menu .tool-hint{display:none}
+.screen.game.fit-tight .play-menu{justify-content:flex-end}
+.pause-dialog{max-height:95%;overflow:auto}
+.leaderboard-layer{padding:10px;z-index:65}
+.leaderboard-dialog{width:100%;max-width:420px;max-height:calc(100dvh - 32px);overflow:auto;padding:14px;border-radius:22px}
+.leaderboard-dialog>header{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.leaderboard-dialog>header h2{font-size:22px}
+.leaderboard-dialog>header button{width:44px;min-height:44px;margin:0}
+.lb-tabs{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.lb-tabs button{flex:1;width:auto;margin:0}
+.lb-tabs button[aria-pressed="true"]{background:var(--green-550);color:white}
+.lb-world{width:100%;min-height:44px;font:inherit;border-radius:10px;padding:5px;background:#FFFDF5;color:var(--ink-header)}
+.lb-table-wrap{overflow:auto}
+.leaderboard-dialog .top10{padding:6px 0}
+.top10-list.shared{width:100%;border-collapse:collapse;font-size:12px;table-layout:auto}
+.top10-list.shared thead th{font-size:10px;text-align:left;padding:6px 3px;color:var(--ink-sub);white-space:nowrap}
+.top10-list.shared .top10-row{display:table-row;font-size:12px}
+.top10-list.shared td,.top10-list.shared tbody th{padding:8px 3px;text-align:left;border-bottom:1px solid #B6CAAA;font-weight:700}
+.top10-list.shared tbody th{max-width:105px;overflow-wrap:anywhere}
+.top10-list.shared td:nth-child(3),.top10-list.shared td:last-child{white-space:nowrap}
+.lb-membership .lb-preview{font-size:12px;padding:8px;border:1px solid #AFCAA2;border-radius:10px;background:#FCF6E7;overflow-wrap:anywhere}
+.last-synced{font-size:11px;color:var(--ink-sub);padding:4px;text-align:left}
+.lb-note:empty{display:none}

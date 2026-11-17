@@ -1,0 +1,863 @@
+
+Running 80 tests using 2 workers
+
+(node:1100) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:1099) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓   2 [chromium-360] › tests/v50.spec.js:61:3 › pond 29: board and controls fit (4.0s)
+  ✓   1 [chromium-412] › tests/v50.spec.js:61:3 › pond 29: board and controls fit (5.0s)
+  ✓   3 [chromium-360] › tests/v50.spec.js:61:3 › pond 49: board and controls fit (3.0s)
+  ✓   4 [chromium-412] › tests/v50.spec.js:61:3 › pond 49: board and controls fit (3.3s)
+  ✓   5 [chromium-360] › tests/v50.spec.js:61:3 › pond 89: board and controls fit (4.0s)
+  ✓   6 [chromium-412] › tests/v50.spec.js:61:3 › pond 89: board and controls fit (4.5s)
+  ✓   7 [chromium-360] › tests/v50.spec.js:61:3 › pond 119: board and controls fit (4.4s)
+  ✓   8 [chromium-412] › tests/v50.spec.js:61:3 › pond 119: board and controls fit (3.2s)
+  ✓   9 [chromium-360] › tests/v50.spec.js:61:3 › pond 149: board and controls fit (2.7s)
+  ✓  10 [chromium-412] › tests/v50.spec.js:61:3 › pond 149: board and controls fit (3.6s)
+  ✓  11 [chromium-360] › tests/v50.spec.js:61:3 › pond 35: board and controls fit (5.9s)
+  ✓  12 [chromium-412] › tests/v50.spec.js:61:3 › pond 35: board and controls fit (6.8s)
+  ✓  13 [chromium-360] › tests/v50.spec.js:61:3 › pond 60: board and controls fit (4.9s)
+  ✓  14 [chromium-412] › tests/v50.spec.js:61:3 › pond 60: board and controls fit (5.8s)
+  ✓  15 [chromium-360] › tests/v50.spec.js:61:3 › pond 90: board and controls fit (4.2s)
+  ✓  16 [chromium-412] › tests/v50.spec.js:61:3 › pond 90: board and controls fit (5.6s)
+  ✓  17 [chromium-360] › tests/v50.spec.js:61:3 › pond 120: board and controls fit (5.4s)
+  ✓  18 [chromium-412] › tests/v50.spec.js:61:3 › pond 120: board and controls fit (5.2s)
+  ✓  19 [chromium-360] › tests/v50.spec.js:61:3 › pond 145: board and controls fit (7.3s)
+  ✓  20 [chromium-412] › tests/v50.spec.js:61:3 › pond 145: board and controls fit (6.8s)
+  ✓  21 [chromium-360] › tests/v50.spec.js:61:3 › pond 150: board and controls fit (5.9s)
+  ✓  22 [chromium-412] › tests/v50.spec.js:61:3 › pond 150: board and controls fit (5.8s)
+  ✓  23 [chromium-360] › tests/v50.spec.js:76:1 › v4.3.1 completed save continues at 31; lilies, daily and unscored history survive (4.1s)
+  ✓  24 [chromium-412] › tests/v50.spec.js:76:1 › v4.3.1 completed save continues at 31; lilies, daily and unscored history survive (4.4s)
+  ✓  25 [chromium-360] › tests/v50.spec.js:90:1 › published half-played pond 29 resumes with its locked capy and oranges (4.7s)
+  ✓  26 [chromium-412] › tests/v50.spec.js:90:1 › published half-played pond 29 resumes with its locked capy and oranges (3.4s)
+  ✓  27 [chromium-360] › tests/v50.spec.js:97:1 › tools, explanations, locks, undo, rules and direct Next pond (9.9s)
+  ✓  28 [chromium-412] › tests/v50.spec.js:97:1 › tools, explanations, locks, undo, rules and direct Next pond (8.4s)
+  ✓  30 [chromium-412] › tests/v50.spec.js:127:29 › crate 60: solve, score, local world top and continue (9.4s)
+  ✓  29 [chromium-360] › tests/v50.spec.js:127:29 › crate 60: solve, score, local world top and continue (11.8s)
+  ✓  31 [chromium-412] › tests/v50.spec.js:127:29 › crate 150: solve, score, local world top and continue (12.8s)
+  ✓  32 [chromium-360] › tests/v50.spec.js:127:29 › crate 150: solve, score, local world top and continue (13.2s)
+  ✓  33 [chromium-412] › tests/v50.spec.js:141:1 › v5.0 cache contains every runtime dependency and reloads offline (4.0s)
+  ✓  34 [chromium-360] › tests/v50.spec.js:141:1 › v5.0 cache contains every runtime dependency and reloads offline (3.2s)
+  ✓  36 [chromium-360] › tests/v50.spec.js:157:30 › crate 145: D-pad and Show me fit and move (3.7s)
+  ✓  35 [chromium-412] › tests/v50.spec.js:157:30 › crate 145: D-pad and Show me fit and move (5.3s)
+  ✓  37 [chromium-360] › tests/v50.spec.js:157:30 › crate 150: D-pad and Show me fit and move (4.1s)
+  ✓  38 [chromium-412] › tests/v50.spec.js:157:30 › crate 150: D-pad and Show me fit and move (5.0s)
+  ✘  39 [chromium-360] › tests/v50.spec.js:169:1 › classic touch double-tap and keyboard activation each apply once (9.7s)
+(node:12431) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✘  40 [chromium-412] › tests/v50.spec.js:169:1 › classic touch double-tap and keyboard activation each apply once (10.4s)
+(node:12644) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  41 [chromium-short] › tests/v50.spec.js:61:3 › pond 29: board and controls fit (3.6s)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓  43 [chromium-short] › tests/v50.spec.js:61:3 › pond 49: board and controls fit (4.1s)
+  ✓  44 [chromium-short] › tests/v50.spec.js:61:3 › pond 89: board and controls fit (3.1s)
+  ✓  45 [chromium-short] › tests/v50.spec.js:61:3 › pond 119: board and controls fit (2.5s)
+  ✓  42 [webkit-iphone] › tests/v50.spec.js:61:3 › pond 29: board and controls fit (13.8s)
+  ✓  46 [chromium-short] › tests/v50.spec.js:61:3 › pond 149: board and controls fit (4.9s)
+  ✓  48 [chromium-short] › tests/v50.spec.js:61:3 › pond 35: board and controls fit (4.1s)
+  ✓  47 [webkit-iphone] › tests/v50.spec.js:61:3 › pond 49: board and controls fit (8.4s)
+  ✓  49 [chromium-short] › tests/v50.spec.js:61:3 › pond 60: board and controls fit (4.9s)
+  ✓  51 [chromium-short] › tests/v50.spec.js:61:3 › pond 90: board and controls fit (4.2s)
+  ✓  52 [chromium-short] › tests/v50.spec.js:61:3 › pond 120: board and controls fit (2.2s)
+  ✓  53 [chromium-short] › tests/v50.spec.js:61:3 › pond 145: board and controls fit (3.2s)
+  ✓  50 [webkit-iphone] › tests/v50.spec.js:61:3 › pond 89: board and controls fit (11.2s)
+  ✓  54 [chromium-short] › tests/v50.spec.js:61:3 › pond 150: board and controls fit (3.5s)
+  ✓  55 [webkit-iphone] › tests/v50.spec.js:61:3 › pond 119: board and controls fit (5.5s)
+  ✓  56 [chromium-short] › tests/v50.spec.js:76:1 › v4.3.1 completed save continues at 31; lilies, daily and unscored history survive (2.3s)
+  ✓  58 [chromium-short] › tests/v50.spec.js:90:1 › published half-played pond 29 resumes with its locked capy and oranges (1.8s)
+  ✓  57 [webkit-iphone] › tests/v50.spec.js:61:3 › pond 149: board and controls fit (4.9s)
+  ✓  59 [chromium-short] › tests/v50.spec.js:97:1 › tools, explanations, locks, undo, rules and direct Next pond (6.5s)
+  ✓  60 [webkit-iphone] › tests/v50.spec.js:61:3 › pond 35: board and controls fit (9.9s)
+  ✘  62 [webkit-iphone] › tests/v50.spec.js:61:3 › pond 60: board and controls fit (596ms)
+  ✓  61 [chromium-short] › tests/v50.spec.js:127:29 › crate 60: solve, score, local world top and continue (7.4s)
+  ✘  63 [chromium-short] › tests/v50.spec.js:127:29 › crate 150: solve, score, local world top and continue (212ms)
+(node:17911) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+(node:17952) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✘  64 [webkit-iphone] › tests/v50.spec.js:61:3 › pond 90: board and controls fit (1.0s)
+  ✘  65 [chromium-short] › tests/v50.spec.js:141:1 › v5.0 cache contains every runtime dependency and reloads offline (558ms)
+(node:18102) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+(node:18110) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✘  67 [chromium-short] › tests/v50.spec.js:157:30 › crate 145: D-pad and Show me fit and move (320ms)
+  ✘  66 [webkit-iphone] › tests/v50.spec.js:61:3 › pond 120: board and controls fit (692ms)
+(node:18256) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+(node:18267) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✘  68 [chromium-short] › tests/v50.spec.js:157:30 › crate 150: D-pad and Show me fit and move (438ms)
+(node:18383) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✘  69 [webkit-iphone] › tests/v50.spec.js:61:3 › pond 145: board and controls fit (601ms)
+  ✘  70 [chromium-short] › tests/v50.spec.js:169:1 › classic touch double-tap and keyboard activation each apply once (280ms)
+(node:18456) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✘  71 [webkit-iphone] › tests/v50.spec.js:61:3 › pond 150: board and controls fit (384ms)
+(node:18584) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✘  72 [webkit-iphone] › tests/v50.spec.js:76:1 › v4.3.1 completed save continues at 31; lilies, daily and unscored history survive (369ms)
+(node:18652) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✘  73 [webkit-iphone] › tests/v50.spec.js:90:1 › published half-played pond 29 resumes with its locked capy and oranges (363ms)
+(node:18720) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✘  74 [webkit-iphone] › tests/v50.spec.js:97:1 › tools, explanations, locks, undo, rules and direct Next pond (371ms)
+(node:18788) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✘  75 [webkit-iphone] › tests/v50.spec.js:127:29 › crate 60: solve, score, local world top and continue (383ms)
+(node:18856) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✘  76 [webkit-iphone] › tests/v50.spec.js:127:29 › crate 150: solve, score, local world top and continue (600ms)
+(node:18924) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✘  77 [webkit-iphone] › tests/v50.spec.js:141:1 › v5.0 cache contains every runtime dependency and reloads offline (400ms)
+(node:18991) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✘  78 [webkit-iphone] › tests/v50.spec.js:157:30 › crate 145: D-pad and Show me fit and move (577ms)
+(node:19058) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✘  79 [webkit-iphone] › tests/v50.spec.js:157:30 › crate 150: D-pad and Show me fit and move (361ms)
+(node:19137) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✘  80 [webkit-iphone] › tests/v50.spec.js:169:1 › classic touch double-tap and keyboard activation each apply once (353ms)
+
+
+  1) [chromium-360] › tests/v50.spec.js:169:1 › classic touch double-tap and keyboard activation each apply once 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('[data-cell="6"]')
+    Expected: "2"
+    Received: "0"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('[data-cell="6"]') with timeout 5000ms
+      - waiting for locator('[data-cell="6"]')
+        3 × locator resolved to <button data-cell="6" data-value="1" class="cell     last-move " aria-label="Row 1, column 7, zone 1, X, last move">…</button>
+          - unexpected value "1"
+        10 × locator resolved to <button data-cell="6" data-value="0" class="cell     last-move " aria-label="Row 1, column 7, zone 1, empty, last move">…</button>
+           - unexpected value "0"
+
+
+      173 |   await page.waitForTimeout(80);
+      174 |   await cell.tap();
+    > 175 |   await expect(cell).toHaveAttribute('data-value', '2');
+          |                      ^
+      176 |   await expect(page.locator('.cell[data-value="2"]')).toHaveCount(1);
+      177 |   await expect(page.locator('.lives')).toHaveAttribute('data-lives', '3');
+      178 |   const wrong = Array.from({ length: q.n * q.n }, (_, i) => i).find((i) => !sol.includes(i));
+        at /workspace/capydoku/wip/app/tests/v50.spec.js:175:22
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-classic-touch-double-t-6cd3d--activation-each-apply-once-chromium-360/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-v50-ranking/v50-classic-touch-double-t-6cd3d--activation-each-apply-once-chromium-360/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-classic-touch-double-t-6cd3d--activation-each-apply-once-chromium-360/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results-v50-ranking/v50-classic-touch-double-t-6cd3d--activation-each-apply-once-chromium-360/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium-412] › tests/v50.spec.js:169:1 › classic touch double-tap and keyboard activation each apply once 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('[data-cell="6"]')
+    Expected: "2"
+    Received: "0"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('[data-cell="6"]') with timeout 5000ms
+      - waiting for locator('[data-cell="6"]')
+        4 × locator resolved to <button data-cell="6" data-value="1" class="cell     last-move " aria-label="Row 1, column 7, zone 1, X, last move">…</button>
+          - unexpected value "1"
+        10 × locator resolved to <button data-cell="6" data-value="0" class="cell     last-move " aria-label="Row 1, column 7, zone 1, empty, last move">…</button>
+           - unexpected value "0"
+
+
+      173 |   await page.waitForTimeout(80);
+      174 |   await cell.tap();
+    > 175 |   await expect(cell).toHaveAttribute('data-value', '2');
+          |                      ^
+      176 |   await expect(page.locator('.cell[data-value="2"]')).toHaveCount(1);
+      177 |   await expect(page.locator('.lives')).toHaveAttribute('data-lives', '3');
+      178 |   const wrong = Array.from({ length: q.n * q.n }, (_, i) => i).find((i) => !sol.includes(i));
+        at /workspace/capydoku/wip/app/tests/v50.spec.js:175:22
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-classic-touch-double-t-6cd3d--activation-each-apply-once-chromium-412/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-v50-ranking/v50-classic-touch-double-t-6cd3d--activation-each-apply-once-chromium-412/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-classic-touch-double-t-6cd3d--activation-each-apply-once-chromium-412/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results-v50-ranking/v50-classic-touch-double-t-6cd3d--activation-each-apply-once-chromium-412/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [chromium-short] › tests/v50.spec.js:127:29 › crate 150: solve, score, local world top and continue 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8765/?lb=none
+    Call log:
+      - navigating to "http://127.0.0.1:8765/?lb=none", waiting until "load"
+
+
+      17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });
+      18 | async function seed(page, id, extra = {}) {
+    > 19 |   await page.goto('/?lb=none');
+         |              ^
+      20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,
+      21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,
+      22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };
+        at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)
+        at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)
+        at /workspace/capydoku/wip/app/tests/v50.spec.js:128:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-crate-150-solve-score-local-world-top-and-continue-chromium-short/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-v50-ranking/v50-crate-150-solve-score-local-world-top-and-continue-chromium-short/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-crate-150-solve-score-local-world-top-and-continue-chromium-short/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results-v50-ranking/v50-crate-150-solve-score-local-world-top-and-continue-chromium-short/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [chromium-short] › tests/v50.spec.js:141:1 › v5.0 cache contains every runtime dependency and reloads offline 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8765/?lb=none
+    Call log:
+      - navigating to "http://127.0.0.1:8765/?lb=none", waiting until "load"
+
+
+      17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });
+      18 | async function seed(page, id, extra = {}) {
+    > 19 |   await page.goto('/?lb=none');
+         |              ^
+      20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,
+      21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,
+      22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };
+        at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)
+        at /workspace/capydoku/wip/app/tests/v50.spec.js:142:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-v5-0-cache-contains-ev-0cf6d-endency-and-reloads-offline-chromium-short/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-v50-ranking/v50-v5-0-cache-contains-ev-0cf6d-endency-and-reloads-offline-chromium-short/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-v5-0-cache-contains-ev-0cf6d-endency-and-reloads-offline-chromium-short/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results-v50-ranking/v50-v5-0-cache-contains-ev-0cf6d-endency-and-reloads-offline-chromium-short/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [chromium-short] › tests/v50.spec.js:157:30 › crate 145: D-pad and Show me fit and move ───────
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8765/?lb=none
+    Call log:
+      - navigating to "http://127.0.0.1:8765/?lb=none", waiting until "load"
+
+
+      17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });
+      18 | async function seed(page, id, extra = {}) {
+    > 19 |   await page.goto('/?lb=none');
+         |              ^
+      20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,
+      21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,
+      22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };
+        at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)
+        at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)
+        at /workspace/capydoku/wip/app/tests/v50.spec.js:158:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-crate-145-D-pad-and-Show-me-fit-and-move-chromium-short/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-v50-ranking/v50-crate-145-D-pad-and-Show-me-fit-and-move-chromium-short/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-crate-145-D-pad-and-Show-me-fit-and-move-chromium-short/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results-v50-ranking/v50-crate-145-D-pad-and-Show-me-fit-and-move-chromium-short/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [chromium-short] › tests/v50.spec.js:157:30 › crate 150: D-pad and Show me fit and move ───────
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8765/?lb=none
+    Call log:
+      - navigating to "http://127.0.0.1:8765/?lb=none", waiting until "load"
+
+
+      17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });
+      18 | async function seed(page, id, extra = {}) {
+    > 19 |   await page.goto('/?lb=none');
+         |              ^
+      20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,
+      21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,
+      22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };
+        at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)
+        at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)
+        at /workspace/capydoku/wip/app/tests/v50.spec.js:158:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-crate-150-D-pad-and-Show-me-fit-and-move-chromium-short/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-v50-ranking/v50-crate-150-D-pad-and-Show-me-fit-and-move-chromium-short/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-crate-150-D-pad-and-Show-me-fit-and-move-chromium-short/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results-v50-ranking/v50-crate-150-D-pad-and-Show-me-fit-and-move-chromium-short/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7) [chromium-short] › tests/v50.spec.js:169:1 › classic touch double-tap and keyboard activation each apply once 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8765/?lb=none
+    Call log:
+      - navigating to "http://127.0.0.1:8765/?lb=none", waiting until "load"
+
+
+      17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });
+      18 | async function seed(page, id, extra = {}) {
+    > 19 |   await page.goto('/?lb=none');
+         |              ^
+      20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,
+      21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,
+      22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };
+        at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)
+        at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)
+        at /workspace/capydoku/wip/app/tests/v50.spec.js:170:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-classic-touch-double-t-6cd3d--activation-each-apply-once-chromium-short/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-v50-ranking/v50-classic-touch-double-t-6cd3d--activation-each-apply-once-chromium-short/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-classic-touch-double-t-6cd3d--activation-each-apply-once-chromium-short/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results-v50-ranking/v50-classic-touch-double-t-6cd3d--activation-each-apply-once-chromium-short/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  8) [webkit-iphone] › tests/v50.spec.js:61:3 › pond 60: board and controls fit ────────────────────
+
+    Error: page.goto: Could not connect to 127.0.0.1: Connection refused
+    Call log:
+      - navigating to "http://127.0.0.1:8765/?lb=none", waiting until "load"
+
+
+      17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });
+      18 | async function seed(page, id, extra = {}) {
+    > 19 |   await page.goto('/?lb=none');
+         |              ^
+      20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,
+      21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,
+      22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };
+        at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)
+        at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)
+        at /workspace/capydoku/wip/app/tests/v50.spec.js:62:11
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-pond-60-board-and-controls-fit-webkit-iphone/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-v50-ranking/v50-pond-60-board-and-controls-fit-webkit-iphone/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-pond-60-board-and-controls-fit-webkit-iphone/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results-v50-ranking/v50-pond-60-board-and-controls-fit-webkit-iphone/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  9) [webkit-iphone] › tests/v50.spec.js:61:3 › pond 90: board and controls fit ────────────────────
+
+    Error: page.goto: Could not connect to 127.0.0.1: Connection refused
+    Call log:
+      - navigating to "http://127.0.0.1:8765/?lb=none", waiting until "load"
+
+
+      17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });
+      18 | async function seed(page, id, extra = {}) {
+    > 19 |   await page.goto('/?lb=none');
+         |              ^
+      20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,
+      21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,
+      22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };
+        at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)
+        at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)
+        at /workspace/capydoku/wip/app/tests/v50.spec.js:62:11
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-pond-90-board-and-controls-fit-webkit-iphone/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-v50-ranking/v50-pond-90-board-and-controls-fit-webkit-iphone/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-pond-90-board-and-controls-fit-webkit-iphone/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results-v50-ranking/v50-pond-90-board-and-controls-fit-webkit-iphone/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  10) [webkit-iphone] › tests/v50.spec.js:61:3 › pond 120: board and controls fit ──────────────────
+
+    Error: page.goto: Could not connect to 127.0.0.1: Connection refused
+    Call log:
+      - navigating to "http://127.0.0.1:8765/?lb=none", waiting until "load"
+
+
+      17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });
+      18 | async function seed(page, id, extra = {}) {
+    > 19 |   await page.goto('/?lb=none');
+         |              ^
+      20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,
+      21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,
+      22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };
+        at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)
+        at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)
+        at /workspace/capydoku/wip/app/tests/v50.spec.js:62:11
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-pond-120-board-and-controls-fit-webkit-iphone/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-v50-ranking/v50-pond-120-board-and-controls-fit-webkit-iphone/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-pond-120-board-and-controls-fit-webkit-iphone/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results-v50-ranking/v50-pond-120-board-and-controls-fit-webkit-iphone/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  11) [webkit-iphone] › tests/v50.spec.js:61:3 › pond 145: board and controls fit ──────────────────
+
+    Error: page.goto: Could not connect to 127.0.0.1: Connection refused
+    Call log:
+      - navigating to "http://127.0.0.1:8765/?lb=none", waiting until "load"
+
+
+      17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });
+      18 | async function seed(page, id, extra = {}) {
+    > 19 |   await page.goto('/?lb=none');
+         |              ^
+      20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,
+      21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,
+      22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };
+        at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)
+        at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)
+        at /workspace/capydoku/wip/app/tests/v50.spec.js:62:11
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-pond-145-board-and-controls-fit-webkit-iphone/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-v50-ranking/v50-pond-145-board-and-controls-fit-webkit-iphone/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-pond-145-board-and-controls-fit-webkit-iphone/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results-v50-ranking/v50-pond-145-board-and-controls-fit-webkit-iphone/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  12) [webkit-iphone] › tests/v50.spec.js:61:3 › pond 150: board and controls fit ──────────────────
+
+    Error: page.goto: Could not connect to 127.0.0.1: Connection refused
+    Call log:
+      - navigating to "http://127.0.0.1:8765/?lb=none", waiting until "load"
+
+
+      17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });
+      18 | async function seed(page, id, extra = {}) {
+    > 19 |   await page.goto('/?lb=none');
+         |              ^
+      20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,
+      21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,
+      22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };
+        at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)
+        at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)
+        at /workspace/capydoku/wip/app/tests/v50.spec.js:62:11
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-pond-150-board-and-controls-fit-webkit-iphone/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-v50-ranking/v50-pond-150-board-and-controls-fit-webkit-iphone/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-pond-150-board-and-controls-fit-webkit-iphone/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results-v50-ranking/v50-pond-150-board-and-controls-fit-webkit-iphone/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  13) [webkit-iphone] › tests/v50.spec.js:76:1 › v4.3.1 completed save continues at 31; lilies, daily and unscored history survive 
+
+    Error: page.goto: Could not connect to 127.0.0.1: Connection refused
+    Call log:
+      - navigating to "http://127.0.0.1:8765/?lb=none", waiting until "load"
+
+
+      17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });
+      18 | async function seed(page, id, extra = {}) {
+    > 19 |   await page.goto('/?lb=none');
+         |              ^
+      20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,
+      21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,
+      22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };
+        at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)
+        at /workspace/capydoku/wip/app/tests/v50.spec.js:79:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-v4-3-1-completed-save--549dd-nd-unscored-history-survive-webkit-iphone/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-v50-ranking/v50-v4-3-1-completed-save--549dd-nd-unscored-history-survive-webkit-iphone/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-v4-3-1-completed-save--549dd-nd-unscored-history-survive-webkit-iphone/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results-v50-ranking/v50-v4-3-1-completed-save--549dd-nd-unscored-history-survive-webkit-iphone/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  14) [webkit-iphone] › tests/v50.spec.js:90:1 › published half-played pond 29 resumes with its locked capy and oranges 
+
+    Error: page.goto: Could not connect to 127.0.0.1: Connection refused
+    Call log:
+      - navigating to "http://127.0.0.1:8765/?lb=none", waiting until "load"
+
+
+      17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });
+      18 | async function seed(page, id, extra = {}) {
+    > 19 |   await page.goto('/?lb=none');
+         |              ^
+      20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,
+      21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,
+      22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };
+        at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)
+        at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)
+        at /workspace/capydoku/wip/app/tests/v50.spec.js:93:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-published-half-played--af212-its-locked-capy-and-oranges-webkit-iphone/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-v50-ranking/v50-published-half-played--af212-its-locked-capy-and-oranges-webkit-iphone/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-published-half-played--af212-its-locked-capy-and-oranges-webkit-iphone/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results-v50-ranking/v50-published-half-played--af212-its-locked-capy-and-oranges-webkit-iphone/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  15) [webkit-iphone] › tests/v50.spec.js:97:1 › tools, explanations, locks, undo, rules and direct Next pond 
+
+    Error: page.goto: Could not connect to 127.0.0.1: Connection refused
+    Call log:
+      - navigating to "http://127.0.0.1:8765/?lb=none", waiting until "load"
+
+
+      17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });
+      18 | async function seed(page, id, extra = {}) {
+    > 19 |   await page.goto('/?lb=none');
+         |              ^
+      20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,
+      21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,
+      22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };
+        at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)
+        at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)
+        at /workspace/capydoku/wip/app/tests/v50.spec.js:98:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-tools-explanations-locks-undo-rules-and-direct-Next-pond-webkit-iphone/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-v50-ranking/v50-tools-explanations-locks-undo-rules-and-direct-Next-pond-webkit-iphone/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-tools-explanations-locks-undo-rules-and-direct-Next-pond-webkit-iphone/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results-v50-ranking/v50-tools-explanations-locks-undo-rules-and-direct-Next-pond-webkit-iphone/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  16) [webkit-iphone] › tests/v50.spec.js:127:29 › crate 60: solve, score, local world top and continue 
+
+    Error: page.goto: Could not connect to 127.0.0.1: Connection refused
+    Call log:
+      - navigating to "http://127.0.0.1:8765/?lb=none", waiting until "load"
+
+
+      17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });
+      18 | async function seed(page, id, extra = {}) {
+    > 19 |   await page.goto('/?lb=none');
+         |              ^
+      20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,
+      21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,
+      22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };
+        at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)
+        at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)
+        at /workspace/capydoku/wip/app/tests/v50.spec.js:128:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-crate-60-solve-score-local-world-top-and-continue-webkit-iphone/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-v50-ranking/v50-crate-60-solve-score-local-world-top-and-continue-webkit-iphone/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-crate-60-solve-score-local-world-top-and-continue-webkit-iphone/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results-v50-ranking/v50-crate-60-solve-score-local-world-top-and-continue-webkit-iphone/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  17) [webkit-iphone] › tests/v50.spec.js:127:29 › crate 150: solve, score, local world top and continue 
+
+    Error: page.goto: Could not connect to 127.0.0.1: Connection refused
+    Call log:
+      - navigating to "http://127.0.0.1:8765/?lb=none", waiting until "load"
+
+
+      17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });
+      18 | async function seed(page, id, extra = {}) {
+    > 19 |   await page.goto('/?lb=none');
+         |              ^
+      20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,
+      21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,
+      22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };
+        at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)
+        at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)
+        at /workspace/capydoku/wip/app/tests/v50.spec.js:128:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-crate-150-solve-score-local-world-top-and-continue-webkit-iphone/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-v50-ranking/v50-crate-150-solve-score-local-world-top-and-continue-webkit-iphone/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-crate-150-solve-score-local-world-top-and-continue-webkit-iphone/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results-v50-ranking/v50-crate-150-solve-score-local-world-top-and-continue-webkit-iphone/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  18) [webkit-iphone] › tests/v50.spec.js:141:1 › v5.0 cache contains every runtime dependency and reloads offline 
+
+    Error: page.goto: Could not connect to 127.0.0.1: Connection refused
+    Call log:
+      - navigating to "http://127.0.0.1:8765/?lb=none", waiting until "load"
+
+
+      17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });
+      18 | async function seed(page, id, extra = {}) {
+    > 19 |   await page.goto('/?lb=none');
+         |              ^
+      20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,
+      21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,
+      22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };
+        at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)
+        at /workspace/capydoku/wip/app/tests/v50.spec.js:142:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-v5-0-cache-contains-ev-0cf6d-endency-and-reloads-offline-webkit-iphone/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-v50-ranking/v50-v5-0-cache-contains-ev-0cf6d-endency-and-reloads-offline-webkit-iphone/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-v5-0-cache-contains-ev-0cf6d-endency-and-reloads-offline-webkit-iphone/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results-v50-ranking/v50-v5-0-cache-contains-ev-0cf6d-endency-and-reloads-offline-webkit-iphone/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  19) [webkit-iphone] › tests/v50.spec.js:157:30 › crate 145: D-pad and Show me fit and move ───────
+
+    Error: page.goto: Could not connect to 127.0.0.1: Connection refused
+    Call log:
+      - navigating to "http://127.0.0.1:8765/?lb=none", waiting until "load"
+
+
+      17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });
+      18 | async function seed(page, id, extra = {}) {
+    > 19 |   await page.goto('/?lb=none');
+         |              ^
+      20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,
+      21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,
+      22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };
+        at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)
+        at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)
+        at /workspace/capydoku/wip/app/tests/v50.spec.js:158:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-crate-145-D-pad-and-Show-me-fit-and-move-webkit-iphone/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-v50-ranking/v50-crate-145-D-pad-and-Show-me-fit-and-move-webkit-iphone/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-crate-145-D-pad-and-Show-me-fit-and-move-webkit-iphone/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results-v50-ranking/v50-crate-145-D-pad-and-Show-me-fit-and-move-webkit-iphone/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  20) [webkit-iphone] › tests/v50.spec.js:157:30 › crate 150: D-pad and Show me fit and move ───────
+
+    Error: page.goto: Could not connect to 127.0.0.1: Connection refused
+    Call log:
+      - navigating to "http://127.0.0.1:8765/?lb=none", waiting until "load"
+
+
+      17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });
+      18 | async function seed(page, id, extra = {}) {
+    > 19 |   await page.goto('/?lb=none');
+         |              ^
+      20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,
+      21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,
+      22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };
+        at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)
+        at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)
+        at /workspace/capydoku/wip/app/tests/v50.spec.js:158:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-crate-150-D-pad-and-Show-me-fit-and-move-webkit-iphone/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-v50-ranking/v50-crate-150-D-pad-and-Show-me-fit-and-move-webkit-iphone/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-crate-150-D-pad-and-Show-me-fit-and-move-webkit-iphone/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results-v50-ranking/v50-crate-150-D-pad-and-Show-me-fit-and-move-webkit-iphone/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  21) [webkit-iphone] › tests/v50.spec.js:169:1 › classic touch double-tap and keyboard activation each apply once 
+
+    Error: page.goto: Could not connect to 127.0.0.1: Connection refused
+    Call log:
+      - navigating to "http://127.0.0.1:8765/?lb=none", waiting until "load"
+
+
+      17 | test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });
+      18 | async function seed(page, id, extra = {}) {
+    > 19 |   await page.goto('/?lb=none');
+         |              ^
+      20 |   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,
+      21 |     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,
+      22 |     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };
+        at seed (/workspace/capydoku/wip/app/tests/v50.spec.js:19:14)
+        at open (/workspace/capydoku/wip/app/tests/v50.spec.js:27:9)
+        at /workspace/capydoku/wip/app/tests/v50.spec.js:170:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-classic-touch-double-t-6cd3d--activation-each-apply-once-webkit-iphone/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-v50-ranking/v50-classic-touch-double-t-6cd3d--activation-each-apply-once-webkit-iphone/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-v50-ranking/v50-classic-touch-double-t-6cd3d--activation-each-apply-once-webkit-iphone/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results-v50-ranking/v50-classic-touch-double-t-6cd3d--activation-each-apply-once-webkit-iphone/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  21 failed
+    [chromium-360] › tests/v50.spec.js:169:1 › classic touch double-tap and keyboard activation each apply once 
+    [chromium-412] › tests/v50.spec.js:169:1 › classic touch double-tap and keyboard activation each apply once 
+    [chromium-short] › tests/v50.spec.js:127:29 › crate 150: solve, score, local world top and continue 
+    [chromium-short] › tests/v50.spec.js:141:1 › v5.0 cache contains every runtime dependency and reloads offline 
+    [chromium-short] › tests/v50.spec.js:157:30 › crate 145: D-pad and Show me fit and move ────────
+    [chromium-short] › tests/v50.spec.js:157:30 › crate 150: D-pad and Show me fit and move ────────
+    [chromium-short] › tests/v50.spec.js:169:1 › classic touch double-tap and keyboard activation each apply once 
+    [webkit-iphone] › tests/v50.spec.js:61:3 › pond 60: board and controls fit ─────────────────────
+    [webkit-iphone] › tests/v50.spec.js:61:3 › pond 90: board and controls fit ─────────────────────
+    [webkit-iphone] › tests/v50.spec.js:61:3 › pond 120: board and controls fit ────────────────────
+    [webkit-iphone] › tests/v50.spec.js:61:3 › pond 145: board and controls fit ────────────────────
+    [webkit-iphone] › tests/v50.spec.js:61:3 › pond 150: board and controls fit ────────────────────
+    [webkit-iphone] › tests/v50.spec.js:76:1 › v4.3.1 completed save continues at 31; lilies, daily and unscored history survive 
+    [webkit-iphone] › tests/v50.spec.js:90:1 › published half-played pond 29 resumes with its locked capy and oranges 
+    [webkit-iphone] › tests/v50.spec.js:97:1 › tools, explanations, locks, undo, rules and direct Next pond 
+    [webkit-iphone] › tests/v50.spec.js:127:29 › crate 60: solve, score, local world top and continue 
+    [webkit-iphone] › tests/v50.spec.js:127:29 › crate 150: solve, score, local world top and continue 
+    [webkit-iphone] › tests/v50.spec.js:141:1 › v5.0 cache contains every runtime dependency and reloads offline 
+    [webkit-iphone] › tests/v50.spec.js:157:30 › crate 145: D-pad and Show me fit and move ─────────
+    [webkit-iphone] › tests/v50.spec.js:157:30 › crate 150: D-pad and Show me fit and move ─────────
+    [webkit-iphone] › tests/v50.spec.js:169:1 › classic touch double-tap and keyboard activation each apply once 
+  59 passed (3.3m)
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice

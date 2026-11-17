@@ -46,3 +46,13 @@ export const LIMITS = Object.freeze({
   read: { perMinute: 120 }, // per IP hash
   optOut: { perMinute: 10 },
 });
+
+export function checkProgress(body) {
+  if (!Array.isArray(body?.completed) || body.completed.length > 150 || !Array.isArray(body.worlds) || body.worlds.length !== 5) return { ok:false,error:'progress' };
+  const done=new Set(body.completed);
+  if(done.size!==body.completed.length||body.completed.some(id=>!Number.isInteger(id)||id<1||id>150))return {ok:false,error:'completed'};
+  let last=0;while(done.has(last+1))last++;
+  const worlds=body.worlds.map(w=>checkScore(w));
+  if(worlds.some(w=>!w.ok)||new Set(worlds.map(w=>w.world)).size!==5)return {ok:false,error:'world-scores'};
+  return {ok:true,last_cleared:last,worlds};
+}

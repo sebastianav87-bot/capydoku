@@ -27,12 +27,12 @@ for (const kind of ["mock", "worker"]) {
     const s = mem();
     return kind === "mock" ? { s, adapter: mockAdapter(s) } : { s, ...workerAdapter() };
   };
-  test(`[${kind}] not joined: nothing queued or sent; local view`, async () => {
+  test(`[${kind}] spectator: nothing queued or published; public shared view`, async () => {
     const { s, adapter } = make(), lb = createLeaderboard({ storage: s, adapter, newId: ids });
     assert.equal(lb.enqueue([W(0, 5000)]), false);
     assert.deepEqual(await lb.flush(), { sent: 0, reason: "not-joined" });
     const b = await lb.board(0, { total: 5000, scored: 3 });
-    assert.deepEqual([b.mode, b.reason, b.me.nickname], ["local", "not-joined", DEFAULT_NAME]);
+    assert.deepEqual([b.mode, b.reason, b.me.nickname], ["shared", undefined, DEFAULT_NAME]);
     assert.ok(!(await adapter.leaderboard(1)).top10.some((e) => e.score === 5000));
   });
   test(`[${kind}] join (optional nickname) → queue → flush → top 10 + rank → leave deletes`, async () => {
@@ -119,16 +119,16 @@ test("leaving while offline deletes locally now and on the server later", async 
   assert.equal(JSON.parse(s.getItem(MOCK_DB_KEY)).players[id], undefined);
   assert.deepEqual(lb.state().pendingOptOut, []);
 });
-test("adapter choice: none by default (API URL empty), mock only via the test hook, http only with an https URL", async () => {
+test("adapter choice: none with an empty API URL, mock only via the test hook, http only with an https URL", async () => {
   const s = mem();
-  assert.equal(pickAdapter(s, "").name, "none");
+  assert.equal(pickAdapter(s, "", "").name, "none");
   assert.equal(pickAdapter(s, "?lb=mock").name, "mock");
   assert.equal(pickAdapter(s, "", "http://insecure.example").name, "none");
   assert.equal(pickAdapter(s, "", "https://x.workers.dev").name, "http");
   s.setItem("capydoku.leaderboard.adapter", "mock");
   assert.equal(pickAdapter(s, "").name, "mock");
   const { GAME_CONFIG } = await import("../config.js");
-  assert.equal(GAME_CONFIG.leaderboardApi, "");
+  assert.match(GAME_CONFIG.leaderboardApi, /^https:\/\//);
   const lb = createLeaderboard({ storage: mem(), adapter: noneAdapter, newId: ids });
   lb.join("Zed");
   lb.enqueue([W(0, 5)]);

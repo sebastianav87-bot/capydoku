@@ -16,7 +16,7 @@ test.beforeEach(async ({ page }) => {
 });
 test.afterEach(() => { expect(errors ?? []).toEqual([]); expect(external ?? []).toEqual([]); });
 async function seed(page, id, extra = {}) {
-  await page.goto('/');
+  await page.goto('/?lb=none');
   const p = { ...fresh(), nickname: 'Test Capy', starterChosen: true, tutorialSeen: true,
     music: false, audio: false, rockIntroSeen: true, rocksReached: id > 20,
     completed: completed(id), bonus: { ...fresh().bonus, controlsSeen: true }, ...extra };

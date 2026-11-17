@@ -1,15 +1,17 @@
 # Capybara Calm — optional leaderboard Worker (Cloudflare Workers Free + D1)
 
-**Status: written and tested locally only. NOT deployed. No Cloudflare account, login or API call has been made.**
-The game ships with `GAME_CONFIG.leaderboardApi = ''` (app/config.js), so the shared leaderboard is OFF and the game
-shows its local-only view. Nothing leaves the device until that URL is set *and* a player opts in.
+**Public and active with user approval.** Production uses this Worker with managed D1 on Sites:
+https://capybara-calm-ranking.sebalarc.chatgpt.site
+Game origin: https://sebastianav87-bot.github.io. `RATE_SALT` is a hosting secret.
+Only opted-in players publish a nickname, best campaign scores and consecutive campaign progress.
+Anonymous visitors can read the board. Puzzle saves remain on the device.
 
 ## What it does
 | Endpoint | Body / query | Result |
 |---|---|---|
 | `POST /v1/join` | `{player_id?, nickname?}` | `{player_id, nickname, opted_in:true}` (upsert; nickname optional, 2–16 chars) |
 | `POST /v1/score` | `{player_id, world 1–5, score, ponds?:[{id, score}]}` | `{accepted, world, score, rank, top10}` |
-| `GET /v1/leaderboard` | `?world=1–5&player_id=` | `{world, top10:[{rank, nickname, score, me?}], me:{rank, of, nickname, score}}` |
+| `GET /v1/leaderboard` | `?world=overall (default) or 1–5&player_id=` | `{world, top10:[{rank, nickname, score, me?}], me:{rank, of, nickname, score}}` |
 | `POST /v1/opt-out` | `{player_id}` | deletes the player row **and** all their scores |
 
 Server-side checks (src/rules.js): impossible totals rejected (per world ≤ 72 450 = 9 crate/boss ponds × 3150 + 21 ponds × 2100;
@@ -20,6 +22,8 @@ IP addresses are never stored: only a salted SHA-256 (`RATE_SALT`) inside short-
 Personal data stored: a random UUID and the optional nickname. No email, no account, no device data.
 CORS only for `ALLOWED_ORIGIN`.
 
+`POST /v1/progress` accepts `{player_id, completed:[pond IDs], worlds:[{world,score,ponds}]}`. It atomically stores best world totals and monotonic consecutive progress. Overall sums world bests, then breaks ties by consecutive progress. Bosses count once, after phase 2. `GET /health` verifies database access.
+
 ## Tests (no account needed)
 ```
 npm install          # miniflare (dev only)
@@ -27,7 +31,7 @@ npm test             # handler + rules on a node:sqlite D1 stand-in, then the re
 ```
 The game's client tests (app/tests/v50-leaderboard.test.js) also run the client against `handle()` here.
 
-## Deploy steps — for Sebastián, once the account exists (not done)
+## Alternative self-managed Cloudflare deployment
 1. Create a free Cloudflare account (Workers Free plan; no payment method needed).
 2. `npx wrangler login`
 3. `npx wrangler d1 create capybara-calm-leaderboard` → copy the `database_id` into wrangler.toml.
@@ -36,7 +40,7 @@ The game's client tests (app/tests/v50-leaderboard.test.js) also run the client 
 6. `npx wrangler secret put RATE_SALT` (any long random string).
 7. `npx wrangler deploy` → note the `https://capybara-calm-leaderboard.<subdomain>.workers.dev` URL.
 8. In the game, set `leaderboardApi` in app/config.js to that URL (https only), rebuild the service worker
-   (`python3 build-sw.py --bump-cache`) and publish. Until then the app stays local-only.
+   (`python3 build-sw.py --bump-cache`) and publish. The current production endpoint is already configured in the game.
 9. Optional: add a Cloudflare rate-limiting rule / WAF as a second layer; Free plan limits (check the current Cloudflare docs; not
    verified live) are about 100 000 Worker requests/day and D1 5 M rows read / 100 000 rows written per day.
 

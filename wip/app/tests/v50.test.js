@@ -153,12 +153,12 @@ test("part-way saves resume where they were; lilies/scores on ponds up to 150 su
   assert.equal(unlocked(q), 150);
 });
 
-test("v5.0 cache covers local runtime imports, styles and entry points; remote ranking stays off", async () => {
+test("v5.0 cache covers local runtime imports, styles and entry points; public ranking uses HTTPS", async () => {
   const { BUILD } = await import('../build-info.js');
   const { GAME_CONFIG } = await import('../config.js');
   assert.equal(BUILD.version, '5.0');
   assert.match(BUILD.cache, /^capydoku-v5\.0-[0-9a-f]{12}$/);
-  assert.equal(GAME_CONFIG.leaderboardApi, '');
+  assert.match(GAME_CONFIG.leaderboardApi, /^https:\/\//);
   const pre = J('../reports/precache.json');
   assert.equal(pre.cache, BUILD.cache);
   const urls = new Set(pre.urls);

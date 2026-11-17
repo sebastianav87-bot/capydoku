@@ -1,6 +1,6 @@
 // Product switch: A = fixed 52px cells; B = constant reference-width board.
-// v5.0 leaderboardApi: the Cloudflare Worker origin (https://…workers.dev). EMPTY = off until Sebastián's account exists.
-export const GAME_CONFIG={leaderboardApi:'',boardSizingMode:'B',lilyTargetVersion:1,lilyTargetMs:Object.freeze({5:120000,6:180000,7:270000,8:360000,9:450000,10:570000})};
+// Public opt-in leaderboard Worker. An empty origin disables remote access.
+export const GAME_CONFIG={leaderboardApi:'https://capybara-calm-ranking.sebalarc.chatgpt.site',boardSizingMode:'B',lilyTargetVersion:1,lilyTargetMs:Object.freeze({5:120000,6:180000,7:270000,8:360000,9:450000,10:570000})};
 
 /* v4.1 haptics: the ONE place every vibration pattern lives (milliseconds; arrays are buzz,pause,buzz…).
  * Android's Vibration API has no amplitude control, so strength = buzz duration.

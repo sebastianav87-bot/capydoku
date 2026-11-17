@@ -26,3 +26,9 @@ CREATE TABLE IF NOT EXISTS rate_limits (
   count         INTEGER NOT NULL,
   PRIMARY KEY (key, window)
 );
+
+-- Consecutive campaign completion, independent of scoring (migrated saves may be unscored).
+CREATE TABLE IF NOT EXISTS campaign_progress (
+  player_id TEXT PRIMARY KEY REFERENCES players(id) ON DELETE CASCADE,
+  last_cleared INTEGER NOT NULL DEFAULT 0 CHECK(last_cleared BETWEEN 0 AND 150)
+);

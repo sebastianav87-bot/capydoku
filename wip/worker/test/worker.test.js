@@ -44,12 +44,12 @@ test("join → score → leaderboard (top 10 + rank, ties by earliest) → opt-o
   r = await req(env, "GET", `/v1/leaderboard?world=1&player_id=${minted}`);
   const b = await r.json();
   assert.equal(b.top10.length, 10);
-  assert.deepEqual(b.top10[0], { rank: 1, nickname: "Capy12", score: 12000 });
+  assert.deepEqual(b.top10[0], { rank: 1, nickname: "Capy12", score: 12000, last_cleared:0 });
   assert.equal(b.top10[1].nickname, "Mossy");
   assert.equal(b.top10[1].me, true);
-  assert.deepEqual(b.me, { rank: 2, of: 13, nickname: "Mossy", score: 12000 });
+  assert.deepEqual(b.me, { rank: 2, of: 13, nickname: "Mossy", score: 12000, last_cleared:0 });
   r = await req(env, "GET", `/v1/leaderboard?world=1&player_id=${id(1)}`);
-  assert.deepEqual((await r.json()).me, { rank: 13, of: 13, nickname: "Capy1", score: 1000 });
+  assert.deepEqual((await r.json()).me, { rank: 13, of: 13, nickname: "Capy1", score: 1000, last_cleared:0 });
   assert.deepEqual((await (await req(env, "GET", "/v1/leaderboard?world=3")).json()).me, { rank: null });
   // opt-out deletes the player and their scores
   r = await req(env, "POST", "/v1/opt-out", { player_id: minted });
@@ -100,4 +100,27 @@ test("CORS: only the game origin; preflight; bad routes/bodies", async () => {
   assert.equal((await req(env, "GET", "/v1/leaderboard?world=0")).status, 400);
   assert.equal((await req(env, "GET", "/nope")).status, 404);
   assert.equal((await handle(new Request("https://w.example/v1/join", { method: "POST", headers: { origin: ORIGIN }, body: "{not json" }), env)).status, 400);
+});
+
+test('public Overall: migrated progress, best totals, consecutive tie break, replay and deletion',async()=>{
+ const env=mk(),done=n=>Array.from({length:n},(_,i)=>i+1);
+ const snapshot=(player_id,score,last)=>({player_id,completed:done(last),worlds:Array.from({length:5},(_,i)=>({world:i+1,score:i===0?score:0,ponds:i===0&&score?[{id:1,score}]:[]}))});
+ const anonymous=await (await req(env,'GET','/v1/leaderboard')).json();assert.deepEqual(anonymous.top10,[]);assert.equal(env.DB.raw.prepare('SELECT COUNT(*) n FROM players').get().n,0);
+ for(const k of [1,2])await req(env,'POST','/v1/join',{player_id:id(k),nickname:`Capy${k}`});
+ assert.equal((await req(env,'POST','/v1/progress',snapshot(id(1),2000,41))).status,200);
+ assert.equal((await req(env,'POST','/v1/progress',snapshot(id(2),2000,42))).status,200);
+ let board=await (await req(env,'GET',`/v1/leaderboard?player_id=${id(1)}`)).json();
+ assert.equal(board.world,'overall');assert.deepEqual(board.top10.map(r=>[r.nickname,r.score,r.last_cleared]),[['Capy2',2000,42],['Capy1',2000,41]]);assert.equal(board.me.rank,2);
+ await req(env,'POST','/v1/progress',snapshot(id(1),2100,41));
+ board=await (await req(env,'GET','/v1/leaderboard')).json();assert.equal(board.top10[0].nickname,'Capy1');assert.equal(board.top10[0].last_cleared,41);
+ await req(env,'POST','/v1/progress',snapshot(id(1),1000,2));
+ board=await (await req(env,'GET','/v1/leaderboard')).json();assert.equal(board.top10[0].score,2100);assert.equal(board.top10[0].last_cleared,41);
+ const migrated=snapshot(id(2),0,60);await req(env,'POST','/v1/progress',migrated);
+ board=await (await req(env,'GET','/v1/leaderboard?world=1')).json();assert.equal(board.top10.find(r=>r.nickname==='Capy2').last_cleared,60);
+ await req(env,'POST','/v1/opt-out',{player_id:id(1)});assert.equal(env.DB.raw.prepare('SELECT COUNT(*) n FROM campaign_progress WHERE player_id=?').get(id(1)).n,0);
+ assert.equal((await (await req(env,'GET','/v1/leaderboard')).json()).top10.length,1);
+ const invalid=snapshot(id(2),1000,2);invalid.worlds[2].score=999999;assert.equal((await req(env,'POST','/v1/progress',invalid)).status,422);
+ assert.equal(env.DB.raw.prepare('SELECT last_cleared n FROM campaign_progress WHERE player_id=?').get(id(2)).n,60);
+ const gap=snapshot(id(2),0,2);gap.completed=[1,2,4,5];const freshId=id(3);await req(env,'POST','/v1/join',{player_id:freshId});gap.player_id=freshId;await req(env,'POST','/v1/progress',gap);
+ assert.equal(env.DB.raw.prepare('SELECT last_cleared n FROM campaign_progress WHERE player_id=?').get(freshId).n,2);
 });

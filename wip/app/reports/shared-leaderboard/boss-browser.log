@@ -1,0 +1,30 @@
+
+Running 14 tests using 2 workers
+
+(node:907) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:906) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓   2 [chromium] › tests/boss-phases.spec.js:26:2 › boss 9: full transformation, shared survivor, combined score and one reward (10.6s)
+  ✓   3 [chromium] › tests/boss-phases.spec.js:50:2 › boss 9: reload during transformation, offline phase 2, loss/retry retains errors and spent power (11.4s)
+  ✓   1 [webkit] › tests/boss-phases.spec.js:26:2 › boss 9: full transformation, shared survivor, combined score and one reward (27.5s)
+  ✓   4 [chromium] › tests/boss-phases.spec.js:68:2 › boss 9: reduced motion keeps a clear survivor and changes the regions without sinking animation (6.8s)
+  ✓   6 [chromium] › tests/boss-phases.spec.js:26:2 › boss 149: full transformation, shared survivor, combined score and one reward (10.3s)
+  ✓   7 [chromium] › tests/boss-phases.spec.js:50:2 › boss 149: reload during transformation, offline phase 2, loss/retry retains errors and spent power (17.0s)
+  ✓   8 [chromium] › tests/boss-phases.spec.js:68:2 › boss 149: reduced motion keeps a clear survivor and changes the regions without sinking animation (4.6s)
+  ✓   9 [chromium] › tests/boss-phases.spec.js:76:1 › an already completed legacy boss keeps rewards, and Replay starts both phases (10.9s)
+  ✓   5 [webkit] › tests/boss-phases.spec.js:50:2 › boss 9: reload during transformation, offline phase 2, loss/retry retains errors and spent power (45.3s)
+  ✓  10 [webkit] › tests/boss-phases.spec.js:68:2 › boss 9: reduced motion keeps a clear survivor and changes the regions without sinking animation (10.6s)
+  ✓  11 [webkit] › tests/boss-phases.spec.js:26:2 › boss 149: full transformation, shared survivor, combined score and one reward (27.5s)
+  ✓  12 [webkit] › tests/boss-phases.spec.js:50:2 › boss 149: reload during transformation, offline phase 2, loss/retry retains errors and spent power (41.1s)
+  ✓  13 [webkit] › tests/boss-phases.spec.js:68:2 › boss 149: reduced motion keeps a clear survivor and changes the regions without sinking animation (9.1s)
+  ✓  14 [webkit] › tests/boss-phases.spec.js:76:1 › an already completed legacy boss keeps rewards, and Replay starts both phases (18.3s)
+
+  14 passed (3.0m)
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice
