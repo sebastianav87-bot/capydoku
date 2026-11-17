@@ -25,7 +25,7 @@
   "firstCapy": 5.333,
   "rocks": 2.167,
   "twist": 0.439,
-  "crateMoves": ""
+  "crateMoves": "82,85,88,91,94,99"
  },
  {
   "world": 3,
@@ -39,7 +39,7 @@
   "firstCapy": 6.792,
   "rocks": 2.75,
   "twist": 0.448,
-  "crateMoves": ""
+  "crateMoves": "101,104,107,111,114,119"
  },
  {
   "world": 4,
@@ -53,7 +53,7 @@
   "firstCapy": 10.083,
   "rocks": 3.708,
   "twist": 0.451,
-  "crateMoves": ""
+  "crateMoves": "121,124,127,131,134,139"
  },
  {
   "world": 5,
@@ -67,6 +67,6 @@
   "firstCapy": 9.583,
   "rocks": 4.458,
   "twist": 0.456,
-  "crateMoves": ""
+  "crateMoves": "142,143,145,152,156,161"
  }
 ]

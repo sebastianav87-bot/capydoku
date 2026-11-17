@@ -190,6 +190,7 @@ let data,
   pending = null,
   gesture = null,
   controlTap = null,
+  recentControlTaps = [],
   cellTap = null,
   recentTaps = [],
   lastDragPointer = -1,
@@ -1402,20 +1403,27 @@ root.addEventListener("pointercancel", () => {
 });
 root.addEventListener("pointerup", (e) => {
   const t = controlTap;
-  if (t?.pointer === e.pointerId)
+  if (t?.pointer === e.pointerId) {
+    t.at = performance.now();
+    t.clicked = false;
+    recentControlTaps.push(t);
+    if (recentControlTaps.length > 8) recentControlTaps.shift();
     requestAnimationFrame(() => {
       if (controlTap === t && !t.handled && !t.cancelled && t.b.isConnected) {
         t.handled = true;
         activateControl(t.b);
       }
     });
+  }
 });
 // v4.3: match a native click to the contact that produced it: by pointerId (Chromium gives touch clicks the touch's
 // own, ever-increasing id), else (engines whose click has no pointerId) the oldest recent contact on the same cell
 // that has not had its click yet. One click consumes one contact.
 function tapForClick(e, i) {
   const now = performance.now();
-  if (Number.isInteger(e.pointerId) && e.pointerId > 0) {
+  // WebKit turns touch contact 2 into a compatibility mouse click with id 1.
+  // That mouse id cannot identify the original touch; match its cell instead.
+  if (Number.isInteger(e.pointerId) && e.pointerId > 0 && e.pointerType !== "mouse") {
     const byId = recentTaps.findLast((t) => t.pointer === e.pointerId && !t.clicked);
     if (byId) return byId;
     if (recentTaps.some((t) => t.pointer === e.pointerId)) return { handled: true }; // duplicate click of a consumed contact
@@ -1425,9 +1433,24 @@ function tapForClick(e, i) {
 }
 // Consume a control fallback's late native click before routing into replacement board DOM.
 root.addEventListener("click", (e) => {
-  // v4.3: guard null (a click without pointerId, e.g. a plain MouseEvent, used to throw here when no control tap was pending).
-  if (controlTap && controlTap.pointer === e.pointerId && (controlTap.handled || controlTap.cancelled)) return;
   const b = e.target.closest("button");
+  // Controls need the same contact accounting as cells. WebKit's compatibility
+  // mouse click may arrive after the fallback changed the DOM or opened a dialog.
+  // Keyboard / assistive activation (detail 0) remains a separate action.
+  if (e.detail !== 0) {
+    const reliableId = Number.isInteger(e.pointerId) && e.pointerId > 0 && e.pointerType !== "mouse";
+    const t = reliableId
+      ? recentControlTaps.findLast((t) => t.pointer === e.pointerId && !t.clicked)
+      : recentControlTaps.find((t) => !t.clicked && performance.now() - t.at < 1000 &&
+          (t.b === b || (!t.b.isConnected && Math.hypot(e.clientX - t.x, e.clientY - t.y) < 10)));
+    if (t) {
+      t.clicked = true;
+      if (t.handled || t.cancelled) return;
+      t.handled = true;
+      if (!t.b.disabled && t.b.isConnected) activateControl(t.b);
+      return;
+    }
+  }
   if (!b || b.disabled) return;
   if (b.dataset.cell !== undefined) {
     const t = e.detail !== 0 ? tapForClick(e, Number(b.dataset.cell)) : null;
@@ -1440,10 +1463,6 @@ root.addEventListener("click", (e) => {
     }
     if (e.detail === 0 || e.pointerId !== lastDragPointer) tap(Number(b.dataset.cell));
     return;
-  }
-  if (controlTap?.b === b && controlTap.pointer === e.pointerId) {
-    if (controlTap.handled || controlTap.cancelled) return;
-    controlTap.handled = true;
   }
   activateControl(b);
 });

@@ -1,38 +1,58 @@
-// v5.0: final pick of the 24 new crate ponds (35…150) from the shortlist measured by the Designer's analyze.py
-// (reports/v5.0/crates/analysis-*.json). C1–C6 (ponds 5…30) are kept byte-for-byte.
-// Rules: the Designer solver's optimal move count must equal the generator's exact reverse-BFS count; no crate starts on
-// a fruit; then the fewest silent traps (silent_trap_push_rate, early silent states ≤ 3 pushes, largest silent region),
-// then the move count closest to the ramp target, then more pushes. par = round5(optimal × 1.45).
+// Approved v5.0 selections: suffix : zero-based candidate index : minimum pushes.
+// Reproducible import; C1–C6 are always read from the published v4.3.1 at the repo root.
 import fs from "node:fs";
-import { CRATE_TARGETS } from "./shortlist-crates-v50.mjs";
+import assert from "node:assert/strict";
+import { parseLevel, newCrateState, stepCrate, isCrateSolved } from "../crates.js";
 const R = (f) => new URL(`../${f}`, import.meta.url);
-const old = JSON.parse(fs.readFileSync(R("crate-levels.json")));
-const keep = old.levels.filter((l) => l.pond <= 30);
-if (keep.length !== 6) throw Error("expected C1–C6");
-const short = JSON.parse(fs.readFileSync(R("reports/v5.0/crates/shortlist.json"))).levels;
-const genMoves = Object.fromEntries(short.map((l) => [l.slot, l.moves]));
-const A = fs.readdirSync(R("reports/v5.0/crates")).filter((f) => /^analysis-\d+\.json$/.test(f)).flatMap((f) => JSON.parse(fs.readFileSync(R(`reports/v5.0/crates/${f}`))));
+const old = JSON.parse(fs.readFileSync(new URL("../../../crate-levels.json", import.meta.url)));
 const NAMES = {
   35: "Bamboo Raft", 40: "Summer Gate", 45: "Cicada Crates", 50: "Sunflower Gate", 55: "Lotus Crates", 60: "Bamboo World Gate",
   65: "Acorn Crates", 70: "Harvest Gate", 75: "Maple Leaf Crates", 80: "Lantern Gate", 85: "Mushroom Crates", 90: "Maple World Gate",
   95: "Snowdrift Crates", 100: "Frost Gate", 105: "Pine Crates", 110: "Icicle Gate", 115: "Sled Crates", 120: "Snowcap World Gate",
   125: "Firefly Crates", 130: "Moonrise Gate", 135: "Starlight Crates", 140: "Comet Gate", 145: "Aurora Crates", 150: "Cloudwater Finale",
 };
-const round5 = (m) => 5 * Math.round((m * 1.45) / 5);
-const levels = [...keep], report = [];
-let id = 7;
-for (const pond of Object.keys(CRATE_TARGETS).map(Number)) {
-  const [n, target] = CRATE_TARGETS[pond];
-  const c = A.filter((a) => a.pond === pond && a.optimal_moves === genMoves[a.slot] && !a.crates_on_fruit_at_start.length);
-  if (!c.length) throw Error(`pond ${pond}: no verified candidate`);
-  const cost = (a) => a.silent_trap_push_rate * 100 + a.early_silent_trap_states_le3 * 0.5 + a.max_silent_region / 40 + Math.abs(a.optimal_moves - target) * 0.3 - a.optimal_pushes * 0.02;
-  c.sort((a, b) => cost(a) - cost(b));
-  const a = c[0];
-  const L = { id: id++, slot: `C${id - 1}`, pond, name: NAMES[pond], n, rows: a.rows, fruit: ["watermelon", "banana", "pear"], optimalMoves: a.optimal_moves, optimalPushes: a.optimal_pushes, pushesInMoveOptimal: a.pushes_in_move_optimal, par: round5(a.optimal_moves), solution: a.solution, source: `v5.0 generator (scripts/gen-crates-v50.mjs, exact reverse BFS) · ${short.find((s) => s.slot === a.slot).file}`, review: `analyze.py: silent trap rate ${a.silent_trap_push_rate}, early silent ${a.early_silent_trap_states_le3}, max silent region ${a.max_silent_region}` };
-  if (L.par !== a.par_suggested) throw Error(`par mismatch ${pond}`);
-  levels.push(L);
-  report.push({ pond, n, target, moves: a.optimal_moves, pushes: a.optimal_pushes, par: L.par, silentRate: a.silent_trap_push_rate, earlySilent: a.early_silent_trap_states_le3, maxSilent: a.max_silent_region, trapRate: a.trap_push_rate, pushStates: a.push_states, candidates: c.length });
+const selections = "9-s902:172:17, 9-s902:224:14, 9-s902:271:21, 9-s901:392:31, 9-s901:425:28, 9-s902:391:27, 9-s901:464:24, 9-s902:417:28, 9-s901:492:32, 9-s901:505:24, 9-s902:453:33, 8-s802:1375:31, 9-s901:528:26, 9-s901:534:36, 8-s802:1382:44, 8-s802:1387:42, 9-s902:474:23, 8-s801:1355:34, 8-s802:1395:27, 8-s802:1396:33, 8-s802:1397:37, 9-s901:552:50, 8-s802:1399:27, 9-s901:554:44".split(", ");
+const levels = [...old.levels], report = [];
+const dirs = { U: "up", D: "down", L: "left", R: "right" };
+for (const [k, entry] of selections.entries()) {
+  const [suffix, index, minimumPushes] = entry.split(":"), pond = 35 + 5 * k;
+  const file = `reports/v5.0/crates/cand-${suffix}.json`;
+  const candidate = JSON.parse(fs.readFileSync(R(file))).levels[Number(index)];
+  assert.ok(candidate, `${file}[${index}] missing`);
+  const { n, rows, moves, pushes, solution } = candidate;
+  const c = { id: k + 7, slot: `C${k + 7}`, pond, name: NAMES[pond], n, rows,
+    fruit: ["watermelon", "banana", "pear"], optimalMoves: moves,
+    optimalPushes: Number(minimumPushes), pushesInMoveOptimal: pushes,
+    par: 5 * Math.round(moves * 1.45 / 5), solution,
+    source: `v5.0 generator · ${file} · index ${index}`,
+    review: "User-selected candidate; minimum pushes supplied with selection" };
+  const L = parseLevel(c);
+  let state = newCrateState(L);
+  assert.ok(!L.start.crates.some((x) => L.goals.includes(x)), `pond ${pond}: crate on fruit`);
+  for (const ch of solution) {
+    const result = stepCrate(L, state, dirs[ch.toUpperCase()]);
+    assert.ok(result.moved, `pond ${pond}: blocked solution`);
+    state = result.state;
+  }
+  assert.ok(isCrateSolved(L, state), `pond ${pond}: solution`);
+  assert.equal(state.moves, moves);
+  assert.equal(state.pushes, pushes);
+  levels.push(c);
+  report.push({ pond, file, index: Number(index), n, moves, minimumPushes: c.optimalPushes,
+    pushesInMoveOptimal: pushes, par: c.par });
 }
-fs.writeFileSync(R("crate-levels.json"), JSON.stringify({ ...old, levels }, null, 1));
-fs.writeFileSync(R("reports/v5.0/crate-pick.json"), JSON.stringify({ report }, null, 1));
+fs.writeFileSync(R("crate-levels.json"), JSON.stringify({ ...old, levels }, null, 1) + "\n");
+fs.writeFileSync(R("reports/v5.0/crate-pick.json"), JSON.stringify({ report }, null, 1) + "\n");
 console.table(report);
+// Replace only the dry-run crate placeholders; keep every logic board and both daily pools.
+const campaign = JSON.parse(fs.readFileSync(R("reports/v5.0/levels-dry.json")));
+for (const c of levels.filter((c) => c.pond > 30)) {
+  const placeholder = campaign.levels[c.pond - 1];
+  assert.equal(placeholder.id, c.pond);
+  assert.equal(placeholder.crate, null);
+  Object.assign(placeholder, { n: c.n, crate: c.id });
+}
+fs.writeFileSync(R("levels.json"), JSON.stringify(campaign) + "\n");
+const ramp = JSON.parse(fs.readFileSync(R("reports/v5.0/world-ramp.json")));
+for (const world of ramp) world.crateMoves = levels.filter((c) => Math.ceil(c.pond / 30) === world.world).map((c) => c.optimalMoves).join(",");
+fs.writeFileSync(R("reports/v5.0/world-ramp.json"), JSON.stringify(ramp, null, 1) + "\n");

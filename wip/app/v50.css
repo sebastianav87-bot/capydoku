@@ -81,9 +81,9 @@
 .screen.game.chrome-v5 .thumbbar .undo-round .round-icon svg{width:26px;height:26px}
 .screen.game.chrome-v5 .thumbbar .undo-round:disabled{opacity:.5}
 .screen.game.chrome-v5 .thumbbar .power-tool{background:var(--identity-light,#F3EEDB)!important;border-color:var(--identity,#7A8F5E)!important}
-.screen.game.chrome-v5 .thumbbar .power-tool .round-icon{width:30px!important;height:30px!important;position:relative;background:none!important;border:0!important;box-shadow:none!important}
-.screen.game.chrome-v5 .thumbbar .power-tool .round-icon>svg{display:none}
-.screen.game.chrome-v5 .thumbbar .power-tool .power-face{width:30px!important;height:30px!important;position:static!important}
+.screen.game.chrome-v5 .thumbbar .power-tool .round-icon{width:30px!important;height:30px!important;min-width:0!important;min-height:0!important;flex:0 0 30px;display:grid;place-items:center;position:relative;background:none!important;border:0!important;box-shadow:none!important}
+.screen.game.chrome-v5 .thumbbar .power-tool .round-icon>svg,.screen.game.chrome-v5 .thumbbar .power-tool .power-glyph{display:none}
+.screen.game.chrome-v5 .thumbbar .power-tool .power-face{width:30px!important;height:30px!important;min-width:0!important;min-height:0!important;position:static!important}
 .screen.game.chrome-v5 .thumbbar .power-tool .power-use-badge{position:absolute;right:-8px;top:-4px;width:16px;height:16px;font-size:10px}
 .screen.game.chrome-v5 .thumbbar .power-tool span{display:flex;flex-direction:column;align-items:center;line-height:1}
 .screen.game.chrome-v5 .thumbbar .power-tool small{display:block!important;font-size:9.5px!important;line-height:11px!important;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -117,3 +117,12 @@
 .cell .zone-mark svg{width:9px;height:9px;fill:none;stroke:#2F6B2A;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 @media (prefers-reduced-motion:reduce){.cell.ripple{animation:none}.cell.break-band::after,.cell.off-solution::after{animation:none}}
 .tutorial-tools{font-size:13px}
+
+/* Keep the compact companion's face and text inside its button, including WebKit.
+   Legacy power styling otherwise contributes a 72px minimum and a second glyph. */
+.screen.game.chrome-v5 .controls.thumbbar>.power-tool{padding:2px!important;gap:1px!important}
+.screen.game.chrome-v5 .thumbbar .power-tool>span{flex:0 0 auto;gap:0;min-width:0;max-width:100%}
+.screen.game.chrome-v5.fit-compact .thumbbar .power-tool .round-icon,.screen.game.chrome-v5.fit-tight .thumbbar .power-tool .round-icon{width:22px!important;height:22px!important;flex-basis:22px}
+.screen.game.chrome-v5.fit-compact .thumbbar .power-tool .power-face,.screen.game.chrome-v5.fit-tight .thumbbar .power-tool .power-face{width:22px!important;height:22px!important}
+.screen.game.chrome-v5.fit-compact .thumbbar .power-tool strong,.screen.game.chrome-v5.fit-tight .thumbbar .power-tool strong{line-height:12px!important}
+.screen.game.chrome-v5.fit-compact .thumbbar .power-tool small,.screen.game.chrome-v5.fit-tight .thumbbar .power-tool small{line-height:10px!important}

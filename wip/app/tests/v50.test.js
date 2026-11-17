@@ -10,7 +10,7 @@ import { totalLilies } from "../rewards.js";
 import * as roles from "../roles.js";
 const J = (f) => JSON.parse(fs.readFileSync(new URL(f, import.meta.url)));
 const data = J("../levels.json"), crates = J("../crate-levels.json"), ramp = J("../reports/v5.0/world-ramp.json");
-const v431 = J("../../app-v4.3.1-backup/levels.json");
+const v431 = J("../../../levels.json");
 const byPond = Object.fromEntries(crates.levels.map((c) => [c.pond, c]));
 const round5 = (m) => 5 * Math.round((m * 1.45) / 5);
 const mem = (o = {}) => { const m = new Map(Object.entries(o)); return { getItem: (k) => (m.has(k) ? m.get(k) : null), setItem: (k, v) => m.set(k, String(v)), m }; };
@@ -75,7 +75,7 @@ test("difficulty ramp across worlds: score, rank-3 steps, rocks and zone twist r
 test("30 crate ponds: C1–C6 kept, par = round5(optimal × 1.45), stored solution solves in exactly the optimal moves, BFS agrees", () => {
   assert.equal(crates.levels.length, 30);
   assert.deepEqual(crates.levels.map((c) => c.pond), roles.CRATE_PONDS);
-  const v43 = J("../../app-v4.3.1-backup/crate-levels.json");
+  const v43 = J("../../../crate-levels.json");
   assert.deepEqual(crates.levels.slice(0, 6), v43.levels);
   const D = { U: "up", D: "down", L: "left", R: "right" };
   let prevWorldMax = 0;
@@ -88,6 +88,8 @@ test("30 crate ponds: C1–C6 kept, par = round5(optimal × 1.45), stored soluti
     for (const ch of c.solution) { const r = stepCrate(L, s, D[ch.toUpperCase()]); assert.ok(r.moved, `pond ${c.pond} blocked`); s = r.state; }
     assert.ok(isCrateSolved(L, s), `pond ${c.pond} solution does not solve`);
     assert.equal(s.moves, c.optimalMoves);
+    assert.equal(s.pushes, c.pushesInMoveOptimal);
+    assert.ok(c.optimalPushes <= s.pushes);
     assert.ok(!L.start.crates.some((x) => L.goals.includes(x)), `pond ${c.pond} starts with a crate on fruit`);
     if (c.pond > 30) {
       const bfs = solveCrates(L, 6e6);
@@ -149,4 +151,22 @@ test("part-way saves resume where they were; lilies/scores on ponds up to 150 su
   assert.ok(q.sessions["pond-150"] && !q.sessions["pond-151"]);
   assert.deepEqual(q.worldsShown, [0, 4]);
   assert.equal(unlocked(q), 150);
+});
+
+test("v5.0 cache covers local runtime imports, styles and entry points; remote ranking stays off", async () => {
+  const { BUILD } = await import('../build-info.js');
+  const { GAME_CONFIG } = await import('../config.js');
+  assert.equal(BUILD.version, '5.0');
+  assert.match(BUILD.cache, /^capydoku-v5\.0-[0-9a-f]{12}$/);
+  assert.equal(GAME_CONFIG.leaderboardApi, '');
+  const pre = J('../reports/precache.json');
+  assert.equal(pre.cache, BUILD.cache);
+  const urls = new Set(pre.urls);
+  for (const name of ['score.js', 'leaderboard.js', 'explain.js', 'difficulty.js', 'v50.css', 'levels.json', 'crate-levels.json']) assert.ok(urls.has(name), name);
+  for (const file of urls) {
+    const path = file === './' ? 'index.html' : file;
+    const contents = fs.readFileSync(new URL('../' + path, import.meta.url), 'utf8');
+    if (path.endsWith('.js')) for (const match of contents.matchAll(/(?:from\s*|import\s*)["']\.\/([^"']+)["']/g)) assert.ok(urls.has(match[1]), `${file} imports uncached ${match[1]}`);
+    if (path === 'index.html') for (const match of contents.matchAll(/(?:href|src)=["']([^"']+\.(?:css|js|webmanifest))["']/g)) assert.ok(urls.has(match[1]), `uncached entry ${match[1]}`);
+  }
 });

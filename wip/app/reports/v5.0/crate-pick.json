@@ -1,0 +1,244 @@
+{
+ "report": [
+  {
+   "pond": 35,
+   "file": "reports/v5.0/crates/cand-9-s902.json",
+   "index": 172,
+   "n": 9,
+   "moves": 82,
+   "minimumPushes": 17,
+   "pushesInMoveOptimal": 17,
+   "par": 120
+  },
+  {
+   "pond": 40,
+   "file": "reports/v5.0/crates/cand-9-s902.json",
+   "index": 224,
+   "n": 9,
+   "moves": 85,
+   "minimumPushes": 14,
+   "pushesInMoveOptimal": 14,
+   "par": 125
+  },
+  {
+   "pond": 45,
+   "file": "reports/v5.0/crates/cand-9-s902.json",
+   "index": 271,
+   "n": 9,
+   "moves": 88,
+   "minimumPushes": 21,
+   "pushesInMoveOptimal": 21,
+   "par": 130
+  },
+  {
+   "pond": 50,
+   "file": "reports/v5.0/crates/cand-9-s901.json",
+   "index": 392,
+   "n": 9,
+   "moves": 91,
+   "minimumPushes": 31,
+   "pushesInMoveOptimal": 31,
+   "par": 130
+  },
+  {
+   "pond": 55,
+   "file": "reports/v5.0/crates/cand-9-s901.json",
+   "index": 425,
+   "n": 9,
+   "moves": 94,
+   "minimumPushes": 28,
+   "pushesInMoveOptimal": 30,
+   "par": 135
+  },
+  {
+   "pond": 60,
+   "file": "reports/v5.0/crates/cand-9-s902.json",
+   "index": 391,
+   "n": 9,
+   "moves": 99,
+   "minimumPushes": 27,
+   "pushesInMoveOptimal": 29,
+   "par": 145
+  },
+  {
+   "pond": 65,
+   "file": "reports/v5.0/crates/cand-9-s901.json",
+   "index": 464,
+   "n": 9,
+   "moves": 101,
+   "minimumPushes": 24,
+   "pushesInMoveOptimal": 24,
+   "par": 145
+  },
+  {
+   "pond": 70,
+   "file": "reports/v5.0/crates/cand-9-s902.json",
+   "index": 417,
+   "n": 9,
+   "moves": 104,
+   "minimumPushes": 28,
+   "pushesInMoveOptimal": 28,
+   "par": 150
+  },
+  {
+   "pond": 75,
+   "file": "reports/v5.0/crates/cand-9-s901.json",
+   "index": 492,
+   "n": 9,
+   "moves": 107,
+   "minimumPushes": 32,
+   "pushesInMoveOptimal": 38,
+   "par": 155
+  },
+  {
+   "pond": 80,
+   "file": "reports/v5.0/crates/cand-9-s901.json",
+   "index": 505,
+   "n": 9,
+   "moves": 111,
+   "minimumPushes": 24,
+   "pushesInMoveOptimal": 26,
+   "par": 160
+  },
+  {
+   "pond": 85,
+   "file": "reports/v5.0/crates/cand-9-s902.json",
+   "index": 453,
+   "n": 9,
+   "moves": 114,
+   "minimumPushes": 33,
+   "pushesInMoveOptimal": 35,
+   "par": 165
+  },
+  {
+   "pond": 90,
+   "file": "reports/v5.0/crates/cand-8-s802.json",
+   "index": 1375,
+   "n": 8,
+   "moves": 119,
+   "minimumPushes": 31,
+   "pushesInMoveOptimal": 33,
+   "par": 175
+  },
+  {
+   "pond": 95,
+   "file": "reports/v5.0/crates/cand-9-s901.json",
+   "index": 528,
+   "n": 9,
+   "moves": 121,
+   "minimumPushes": 26,
+   "pushesInMoveOptimal": 32,
+   "par": 175
+  },
+  {
+   "pond": 100,
+   "file": "reports/v5.0/crates/cand-9-s901.json",
+   "index": 534,
+   "n": 9,
+   "moves": 124,
+   "minimumPushes": 36,
+   "pushesInMoveOptimal": 36,
+   "par": 180
+  },
+  {
+   "pond": 105,
+   "file": "reports/v5.0/crates/cand-8-s802.json",
+   "index": 1382,
+   "n": 8,
+   "moves": 127,
+   "minimumPushes": 44,
+   "pushesInMoveOptimal": 46,
+   "par": 185
+  },
+  {
+   "pond": 110,
+   "file": "reports/v5.0/crates/cand-8-s802.json",
+   "index": 1387,
+   "n": 8,
+   "moves": 131,
+   "minimumPushes": 42,
+   "pushesInMoveOptimal": 42,
+   "par": 190
+  },
+  {
+   "pond": 115,
+   "file": "reports/v5.0/crates/cand-9-s902.json",
+   "index": 474,
+   "n": 9,
+   "moves": 134,
+   "minimumPushes": 23,
+   "pushesInMoveOptimal": 23,
+   "par": 195
+  },
+  {
+   "pond": 120,
+   "file": "reports/v5.0/crates/cand-8-s801.json",
+   "index": 1355,
+   "n": 8,
+   "moves": 139,
+   "minimumPushes": 34,
+   "pushesInMoveOptimal": 36,
+   "par": 200
+  },
+  {
+   "pond": 125,
+   "file": "reports/v5.0/crates/cand-8-s802.json",
+   "index": 1395,
+   "n": 8,
+   "moves": 142,
+   "minimumPushes": 27,
+   "pushesInMoveOptimal": 29,
+   "par": 205
+  },
+  {
+   "pond": 130,
+   "file": "reports/v5.0/crates/cand-8-s802.json",
+   "index": 1396,
+   "n": 8,
+   "moves": 143,
+   "minimumPushes": 33,
+   "pushesInMoveOptimal": 35,
+   "par": 205
+  },
+  {
+   "pond": 135,
+   "file": "reports/v5.0/crates/cand-8-s802.json",
+   "index": 1397,
+   "n": 8,
+   "moves": 145,
+   "minimumPushes": 37,
+   "pushesInMoveOptimal": 37,
+   "par": 210
+  },
+  {
+   "pond": 140,
+   "file": "reports/v5.0/crates/cand-9-s901.json",
+   "index": 552,
+   "n": 9,
+   "moves": 152,
+   "minimumPushes": 50,
+   "pushesInMoveOptimal": 52,
+   "par": 220
+  },
+  {
+   "pond": 145,
+   "file": "reports/v5.0/crates/cand-8-s802.json",
+   "index": 1399,
+   "n": 8,
+   "moves": 156,
+   "minimumPushes": 27,
+   "pushesInMoveOptimal": 27,
+   "par": 225
+  },
+  {
+   "pond": 150,
+   "file": "reports/v5.0/crates/cand-9-s901.json",
+   "index": 554,
+   "n": 9,
+   "moves": 161,
+   "minimumPushes": 44,
+   "pushesInMoveOptimal": 44,
+   "par": 235
+  }
+ ]
+}

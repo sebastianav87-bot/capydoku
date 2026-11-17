@@ -1,0 +1,36 @@
+✔ Peek uses exactly one random valid unsolved cell; never places or returns a solution (2.565726ms)
+✔ Peek excludes Xs, rocks, fixed clues, already placed; last eligible cell allowed, zero disabled (1.053018ms)
+✔ Peek last unsolved target works, all targets placed or X disables without spend (0.697445ms)
+✔ Second chance disabled without a lost orange and at full lives (0.132007ms)
+✔ Second chance after a rejected wrong capy restores exactly its orange; the mistake still counts (v4.3 rev b) (0.53354ms)
+✔ Second chance cannot bypass game over; must be used before zero oranges (0.146199ms)
+✔ Second chance never removes a locked capy (v4.3 rev b) (1.578917ms)
+✔ Nap protects exactly three actual placements/new marks, including safe moves; a wrong capy under Nap is still rejected and counted (0.315843ms)
+✔ Nap clears, no-ops, rocks and capy removal do not consume charges (0.210766ms)
+✔ One drag is one board undo but three new Xs spend all three Nap charges (0.325798ms)
+✔ Undo does not refund lives, activation or charges; Peek is also spent after undo (0.365057ms)
+✔ Unused switch changes ready power; used switch stays spent and active Nap survives (0.15341ms)
+✔ Retry creates a fresh attempt; reload preserves spent power and Nap state (12.61651ms)
+✔ Golden lilies awarded once only for a power-free boss, including replay after a powered clear (0.651116ms)
+✔ v2 migration preserves all compatible progress/boards/streak/settings and defaults mapped chosen starter (0.808712ms)
+✔ Starter selection persists independent of earned bosses and does not change streak or sessions (0.709704ms)
+✔ Fresh state requires chooser, migrations choose Jun by default, invalid power data is bounded (1.316022ms)
+✔ iPhone and iPadOS UA detection; standalone supports both Safari property and display-mode (0.244286ms)
+✔ v4.3: Pond 5 is a crate pond; Pond 1 (7×7) is unique, no-guess solvable and its solution has no violations (1.970213ms)
+✔ all 754 boards: Jun Peek only ghosts true solution cells, no placement or lives change (13445.314507ms)
+✔ Peek never asks to place against an existing capy or spends on an ineligible target (1.350837ms)
+✔ clear-conflicts clears local wrong cells, preserves confirmed locks, is undoable without resource refunds (1.17951ms)
+✔ nickname is NFC, trimmed, 2–16 graphemes, emoji ZWJ/flags, controls rejected, fallback agrees (13.873036ms)
+✔ all three lilies independently OR; strict boundary, best kept, power-independent, separate golden (1.043586ms)
+✔ old completed boards migrate cleared only; unknown historical attempt cannot invent timed/perfect awards (1.05263ms)
+✔ Bloom refunds life but not historical mistake; Nap protects orange but not mistake; undo no metric refund (2.104478ms)
+✔ active clock starts on gesture, pauses without drift, resumes cumulative metrics (0.245939ms)
+✔ nickname hero honors the top safe area as well as all other sides (0.306029ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 13801.753593

@@ -1,0 +1,25 @@
+{"pond": 35, "optimalPushes": 17, "pushStates": 767}
+{"pond": 40, "optimalPushes": 14, "pushStates": 1689}
+{"pond": 45, "optimalPushes": 21, "pushStates": 728}
+{"pond": 50, "optimalPushes": 31, "pushStates": 748}
+{"pond": 55, "optimalPushes": 28, "pushStates": 3582}
+{"pond": 60, "optimalPushes": 27, "pushStates": 971}
+{"pond": 65, "optimalPushes": 24, "pushStates": 1138}
+{"pond": 70, "optimalPushes": 28, "pushStates": 707}
+{"pond": 75, "optimalPushes": 32, "pushStates": 4873}
+{"pond": 80, "optimalPushes": 24, "pushStates": 1366}
+{"pond": 85, "optimalPushes": 33, "pushStates": 12936}
+{"pond": 90, "optimalPushes": 31, "pushStates": 5184}
+{"pond": 95, "optimalPushes": 26, "pushStates": 3199}
+{"pond": 100, "optimalPushes": 36, "pushStates": 4814}
+{"pond": 105, "optimalPushes": 44, "pushStates": 1467}
+{"pond": 110, "optimalPushes": 42, "pushStates": 2884}
+{"pond": 115, "optimalPushes": 23, "pushStates": 1674}
+{"pond": 120, "optimalPushes": 34, "pushStates": 4197}
+{"pond": 125, "optimalPushes": 27, "pushStates": 1335}
+{"pond": 130, "optimalPushes": 33, "pushStates": 3747}
+{"pond": 135, "optimalPushes": 37, "pushStates": 3817}
+{"pond": 140, "optimalPushes": 50, "pushStates": 4617}
+{"pond": 145, "optimalPushes": 27, "pushStates": 1115}
+{"pond": 150, "optimalPushes": 44, "pushStates": 5588}
+{"verified": 24, "method": "exact push BFS with free-walk region collapse"}

@@ -1,12 +1,12 @@
 from pathlib import Path
 import json,hashlib,sys
 root=Path(__file__).resolve().parents[1]
-hold=root/'reports/cache-hold-v4.3.json'  # v4.3 (crate ponds in the path, 7-10 size ramp, bosses 9/19/29)
+hold=root/'reports/cache-hold-v5.0.json'  # v4.3 (crate ponds in the path, 7-10 size ramp, bosses 9/19/29)
 if hold.exists() and json.loads(hold.read_text()).get('holdCache') and '--bump-cache' not in sys.argv:
- raise SystemExit('Cache is held for the local v4.3 batch. Use --bump-cache intentionally for an approved local change; no files changed.')
+ raise SystemExit('Cache is held for the local v5.0 batch. Use --bump-cache intentionally for an approved local change; no files changed.')
 unused={'assets/starters/base.png','assets/starters/bloom.png','assets/starters/bloom-hello-pond.jpg','assets/starters/soaking-scene.jpg','assets/power-icons/bloom-face.png','assets/v64/starters/bloom-hello-pond.png','assets/v6/map-painted.jpg'}  # v4.1: illustrated Pond Path removed; file stays on disk (200) for old v4 clients
-urls=['./','index.html','style.css','theme-v3.css','starters-v3.css','powers.js','platform.js','config.js','app.js','core.js','rewards.js','profile.js','rewards-v4.css','theme.js','characters.js','audio.js','music.js','layout.js','levels.json','manifest.webmanifest','visuals-v4.js','visuals-v4.css','tutorial.js','power-identity-v4.css','updates.js','build-info.js','home-v41.css','bonus-v42.css','bonus-ui.js','crates.js','crate-levels.json','roles.js','crates-v43.css','fit.js']+[str(p.relative_to(root)) for p in sorted((root/'assets').rglob('*')) if p.is_file() and not (p.parent==root/'assets' and p.name.startswith('capy-')) and 'cast' not in p.parts and str(p.relative_to(root)) not in unused]
-DISPLAY_VERSION="4.3.1"
+urls=['./','index.html','style.css','theme-v3.css','starters-v3.css','powers.js','platform.js','config.js','app.js','core.js','rewards.js','profile.js','rewards-v4.css','theme.js','characters.js','audio.js','music.js','layout.js','levels.json','manifest.webmanifest','visuals-v4.js','visuals-v4.css','tutorial.js','power-identity-v4.css','updates.js','build-info.js','home-v41.css','bonus-v42.css','bonus-ui.js','crates.js','crate-levels.json','roles.js','crates-v43.css','fit.js','score.js','leaderboard.js','explain.js','difficulty.js','v50.css']+[str(p.relative_to(root)) for p in sorted((root/'assets').rglob('*')) if p.is_file() and not (p.parent==root/'assets' and p.name.startswith('capy-')) and 'cast' not in p.parts and str(p.relative_to(root)) not in unused]
+DISPLAY_VERSION="5.0"
 h=hashlib.sha256(Path(__file__).read_bytes())
 for u in urls:
  if u=='build-info.js':continue # generated from this same digest; avoid circular hashing

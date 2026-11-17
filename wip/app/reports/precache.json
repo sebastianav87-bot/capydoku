@@ -1,5 +1,5 @@
 {
-  "cache": "capydoku-v4.3.1-6bc138e4dee2",
+  "cache": "capydoku-v5.0-25c22c6bb18a",
   "urls": [
     "./",
     "index.html",
@@ -35,6 +35,11 @@
     "roles.js",
     "crates-v43.css",
     "fit.js",
+    "score.js",
+    "leaderboard.js",
+    "explain.js",
+    "difficulty.js",
+    "v50.css",
     "assets/Nunito-OFL.txt",
     "assets/crates/banana-target.svg",
     "assets/crates/banana.svg",
