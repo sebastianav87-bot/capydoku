@@ -1,3 +1,10 @@
+## Two-phase boss WIP (not published)
+
+All 15 bosses now have two phases. See `reports/boss-phases/README.md` for
+checkpoint/reward semantics, solver witnesses and browser evidence. Phone feel
+and physical iOS behavior remain unverified; the feature is saved only on
+`handoff-v5-wip`. The remote leaderboard remains disabled.
+
 ## v5.0 integration WIP
 
 The campaign and selected crates are verified; see `reports/v5.0/INTEGRATION.md`.

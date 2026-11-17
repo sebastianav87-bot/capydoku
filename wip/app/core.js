@@ -46,6 +46,7 @@ export function units(p) {
   ];
 }
 export function logic(p, cells = Array(p.n * p.n).fill(0), firstOnly = false) {
+  if (p.fixed?.length) cells = cells.map((v, i) => p.fixed.includes(i) ? 2 : v);
   const n = p.n,
     hs = units(p),
     fixed = new Set(cells.map((v, i) => (v === 2 ? i : -1)).filter((i) => i >= 0));
@@ -136,6 +137,7 @@ export function enumerate(p) {
     for (let c = 0; c < n; c++) {
       const i = r * n + c,
         z = p.zones[i];
+      if (p.fixed?.some((j) => Math.floor(j / n) === r && j !== i)) continue;
       if (cols.has(c) || zones.has(z) || p.rocks.includes(i) || (r > 0 && Math.abs(c - prev) <= 1)) continue;
       cols.add(c);
       zones.add(z);
@@ -218,6 +220,7 @@ export function cleanAttempt(v, length) {
     used = raw.used === true,
     kind = ["peek", "secondChance", "nap"].includes(raw.kind) ? raw.kind : null;
   return {
+    ...([1, 2].includes(v?.boss?.phase) ? { boss: { phase: v.boss.phase, rewarded: v.boss.phase === 2 && v.boss.rewarded === true, updatedAt: Number.isFinite(v.boss.updatedAt) ? Math.max(0, v.boss.updatedAt) : 0 } } : {}),
     locked: [...new Set((Array.isArray(v?.locked) ? v.locked : []).filter((i) => Number.isInteger(i) && i >= 0 && i < length))],
     metrics: cleanMetrics(v?.metrics),
     power: {
@@ -311,7 +314,7 @@ export function migrateV2(raw) {
   });
 }
 export function boardSignature(p) {
-  return `${p.n}|${p.zones.join("")}|${[...p.rocks].sort((a, b) => a - b).join(",")}`;
+  return `${p.n}|${p.zones.join("")}|${[...p.rocks].sort((a, b) => a - b).join(",")}${p.fixed?.length ? `|fixed:${p.fixed.join(",")}` : ""}`;
 }
 export function rocksUnlocked(p) {
   return p.rocksReached || unlocked(p) >= 21 || p.completed.some((n) => n >= 21);
@@ -530,14 +533,18 @@ export function migrateCampaign(progress, data) {
   if (!data) return { dropped, upgraded };
   for (const [k, s] of Object.entries(progress.sessions)) {
     const id = /^pond-(\d+)$/.exec(k),
-      p = id ? data.levels[Number(id[1]) - 1] : null;
-    if (!p) continue;
+      p = id ? (s.boss?.phase === 2 ? data.bosses?.find((b) => b.id === Number(id[1])) : data.levels[Number(id[1]) - 1]) : null;
+    if (!p) {
+      if (id && s.boss?.phase === 2) { delete progress.sessions[k]; dropped.push(Number(id[1])); }
+      continue;
+    }
     if (p.crate || isCrate(Number(id[1])) || s.cells.length !== p.n * p.n || s.signature !== boardSignature(p)) {
       delete progress.sessions[k];
       dropped.push(Number(id[1]));
       continue;
     }
-    const next = withLocks(p, s);
+    const restored = p.fixed?.length ? { ...s, cells: s.cells.map((v, i) => p.fixed.includes(i) ? 2 : v) } : s;
+    const next = withLocks(p, restored);
     if (JSON.stringify(next.locked) !== JSON.stringify(s.locked)) upgraded.push(Number(id[1]));
     progress.sessions[k] = next;
   }

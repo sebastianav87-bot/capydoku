@@ -1,0 +1,221 @@
+{
+  "config": {
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+      "/workspace/capydoku/wip/app/node_modules/.bin/playwright",
+      "test",
+      "--config",
+      "playwright.v50.config.js",
+      "--project",
+      "webkit-iphone",
+      "--grep",
+      "pond 49: board and controls fit"
+    ],
+    "configFile": "/workspace/capydoku/wip/app/playwright.v50.config.js",
+    "rootDir": "/workspace/capydoku/wip/app/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/workspace/capydoku/wip/app/test-results-v50-boss-rerun",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium-360",
+        "name": "chromium-360",
+        "testDir": "/workspace/capydoku/wip/app/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "v50.spec.js"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "/workspace/capydoku/wip/app/test-results-v50-boss-rerun",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium-412",
+        "name": "chromium-412",
+        "testDir": "/workspace/capydoku/wip/app/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "v50.spec.js"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "/workspace/capydoku/wip/app/test-results-v50-boss-rerun",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium-short",
+        "name": "chromium-short",
+        "testDir": "/workspace/capydoku/wip/app/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "v50.spec.js"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "/workspace/capydoku/wip/app/test-results-v50-boss-rerun",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit-iphone",
+        "name": "webkit-iphone",
+        "testDir": "/workspace/capydoku/wip/app/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "v50.spec.js"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/workspace/capydoku/wip/app/test-results-v50-boss-rerun",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "webkit-iphone",
+        "testDir": "/workspace/capydoku/wip/app/tests",
+        "snapshotDir": "/workspace/capydoku/wip/app/tests",
+        "testIgnore": [],
+        "testMatch": "v50.spec.js",
+        "timeout": 90000,
+        "use": {
+          "baseURL": "http://127.0.0.1:8765",
+          "isMobile": true,
+          "hasTouch": true,
+          "headless": true,
+          "launchOptions": {
+            "args": []
+          },
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "browserName": "webkit",
+          "viewport": {
+            "width": 390,
+            "height": 664
+          },
+          "deviceScaleFactor": 3
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "webkit-iphone"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/v5.0/boss-rerun-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 2,
+    "webServer": {
+      "command": "python3 -m http.server 8765 --bind 127.0.0.1",
+      "url": "http://127.0.0.1:8765",
+      "reuseExistingServer": true,
+      "stdout": "ignore",
+      "stderr": "ignore"
+    }
+  },
+  "suites": [
+    {
+      "title": "v50.spec.js",
+      "file": "v50.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "pond 49: board and controls fit",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2298,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [
+                    {
+                      "text": "Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2026-11-17T02:21:46.513Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0ec86a9edfc0ad2a2602-8b582b62375b4bd7cfc4",
+          "file": "v50.spec.js",
+          "line": 61,
+          "column": 3
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-17T02:21:45.832Z",
+    "duration": 3249.524,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

@@ -1,3 +1,10 @@
+# Current WIP: two-phase bosses (NOT published)
+
+All 15 second boards are implemented and solver-verified. Checkpoints, cumulative
+metrics/power budget, rewards, reduced motion and offline phase 2 are covered.
+See [boss report](../boss-phases/README.md) for evidence and remaining limits.
+The prior published v5.0 below remains the live version; this feature is WIP only.
+
 # Production status
 
 v5.0 is now published with explicit approval. See [PUBLISHED.md](PUBLISHED.md)

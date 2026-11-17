@@ -1,0 +1,3367 @@
+[
+ {
+  "id": 9,
+  "anchor": {
+   "cell": 4,
+   "row": 1,
+   "column": 5
+  },
+  "size": 8,
+  "phase1Score": 450,
+  "phase2ScoreWithClue": 675,
+  "opening": {
+   "eliminatedByFriend": 19,
+   "firstDeduction": {
+    "technique": "common-conflict",
+    "house": 1,
+    "options": [
+     8,
+     9,
+     10
+    ],
+    "removed": [
+     17
+    ],
+    "rank": 3,
+    "interactions": [],
+    "adjacency": [
+     17
+    ]
+   },
+   "openingRemovedByFriend": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ]
+  },
+  "decisive": {
+   "index": 4,
+   "house": 17,
+   "options": [
+    9,
+    10
+   ],
+   "kind": "region-row-pointing",
+   "removed": [
+    8
+   ]
+  },
+  "regionToRegionChains": 2,
+  "diagonalWitnesses": [
+   {
+    "index": 0,
+    "house": 1,
+    "removed": 17,
+    "option": 10
+   },
+   {
+    "index": 1,
+    "house": 6,
+    "removed": 62,
+    "option": 53
+   },
+   {
+    "index": 1,
+    "house": 6,
+    "removed": 62,
+    "option": 55
+   },
+   {
+    "index": 2,
+    "house": 7,
+    "removed": 49,
+    "option": 58
+   },
+   {
+    "index": 2,
+    "house": 7,
+    "removed": 50,
+    "option": 57
+   },
+   {
+    "index": 3,
+    "house": 11,
+    "removed": 18,
+    "option": 27
+   },
+   {
+    "index": 3,
+    "house": 11,
+    "removed": 34,
+    "option": 27
+   },
+   {
+    "index": 6,
+    "house": 18,
+    "removed": 9,
+    "option": 16
+   },
+   {
+    "index": 6,
+    "house": 18,
+    "removed": 32,
+    "option": 25
+   },
+   {
+    "index": 11,
+    "house": 4,
+    "removed": 45,
+    "option": 38
+   },
+   {
+    "index": 12,
+    "house": 21,
+    "removed": 54,
+    "option": 47
+   },
+   {
+    "index": 13,
+    "house": 14,
+    "removed": 37,
+    "option": 30
+   },
+   {
+    "index": 13,
+    "house": 14,
+    "removed": 37,
+    "option": 46
+   },
+   {
+    "index": 15,
+    "house": 3,
+    "removed": 38,
+    "option": 29
+   },
+   {
+    "index": 15,
+    "house": 3,
+    "removed": 38,
+    "option": 31
+   },
+   {
+    "index": 17,
+    "house": 5,
+    "removed": 55,
+    "option": 46
+   }
+  ],
+  "unique": true,
+  "noGuess": true
+ },
+ {
+  "id": 19,
+  "anchor": {
+   "cell": 29,
+   "row": 4,
+   "column": 3
+  },
+  "size": 9,
+  "phase1Score": 720,
+  "phase2ScoreWithClue": 894,
+  "opening": {
+   "eliminatedByFriend": 31,
+   "firstDeduction": {
+    "technique": "common-conflict",
+    "house": 7,
+    "options": [
+     64,
+     68,
+     69,
+     70,
+     71
+    ],
+    "removed": [
+     79
+    ],
+    "rank": 3,
+    "interactions": [],
+    "adjacency": [
+     79
+    ]
+   },
+   "openingRemovedByFriend": [
+    63,
+    65,
+    66,
+    67
+   ]
+  },
+  "decisive": {
+   "index": 9,
+   "house": 26,
+   "options": [
+    62,
+    80
+   ],
+   "kind": "region-column-pointing",
+   "removed": [
+    17,
+    26,
+    44,
+    53
+   ]
+  },
+  "regionToRegionChains": 5,
+  "diagonalWitnesses": [
+   {
+    "index": 0,
+    "house": 7,
+    "removed": 79,
+    "option": 69
+   },
+   {
+    "index": 0,
+    "house": 7,
+    "removed": 79,
+    "option": 71
+   },
+   {
+    "index": 1,
+    "house": 9,
+    "removed": 10,
+    "option": 0
+   },
+   {
+    "index": 4,
+    "house": 16,
+    "removed": 60,
+    "option": 70
+   },
+   {
+    "index": 5,
+    "house": 19,
+    "removed": 13,
+    "option": 23
+   },
+   {
+    "index": 6,
+    "house": 22,
+    "removed": 50,
+    "option": 40
+   },
+   {
+    "index": 6,
+    "house": 22,
+    "removed": 50,
+    "option": 42
+   },
+   {
+    "index": 7,
+    "house": 25,
+    "removed": 71,
+    "option": 61
+   },
+   {
+    "index": 8,
+    "house": 7,
+    "removed": 78,
+    "option": 70
+   },
+   {
+    "index": 9,
+    "house": 26,
+    "removed": 70,
+    "option": 62
+   },
+   {
+    "index": 9,
+    "house": 26,
+    "removed": 70,
+    "option": 80
+   },
+   {
+    "index": 10,
+    "house": 5,
+    "removed": 42,
+    "option": 52
+   },
+   {
+    "index": 11,
+    "house": 7,
+    "removed": 59,
+    "option": 69
+   },
+   {
+    "index": 11,
+    "house": 7,
+    "removed": 77,
+    "option": 69
+   },
+   {
+    "index": 13,
+    "house": 16,
+    "removed": 51,
+    "option": 61
+   },
+   {
+    "index": 14,
+    "house": 19,
+    "removed": 24,
+    "option": 14
+   },
+   {
+    "index": 18,
+    "house": 6,
+    "removed": 48,
+    "option": 58
+   },
+   {
+    "index": 18,
+    "house": 6,
+    "removed": 49,
+    "option": 57
+   },
+   {
+    "index": 20,
+    "house": 1,
+    "removed": 22,
+    "option": 12
+   }
+  ],
+  "unique": true,
+  "noGuess": true
+ },
+ {
+  "id": 29,
+  "anchor": {
+   "cell": 65,
+   "row": 7,
+   "column": 6
+  },
+  "size": 10,
+  "phase1Score": 1001,
+  "phase2ScoreWithClue": 1095,
+  "opening": {
+   "eliminatedByFriend": 31,
+   "firstDeduction": {
+    "technique": "common-conflict",
+    "house": 10,
+    "options": [
+     0,
+     10,
+     20,
+     30,
+     40,
+     50,
+     70,
+     80,
+     90
+    ],
+    "removed": [
+     1,
+     11
+    ],
+    "rank": 3,
+    "interactions": [],
+    "adjacency": [
+     1,
+     11
+    ]
+   },
+   "openingRemovedByFriend": [
+    60
+   ]
+  },
+  "decisive": {
+   "index": 14,
+   "house": 20,
+   "options": [
+    3,
+    4
+   ],
+   "kind": "region-row-pointing",
+   "removed": [
+    0,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "regionToRegionChains": 3,
+  "diagonalWitnesses": [
+   {
+    "index": 0,
+    "house": 10,
+    "removed": 1,
+    "option": 10
+   },
+   {
+    "index": 0,
+    "house": 10,
+    "removed": 11,
+    "option": 0
+   },
+   {
+    "index": 1,
+    "house": 11,
+    "removed": 70,
+    "option": 81
+   },
+   {
+    "index": 1,
+    "house": 11,
+    "removed": 80,
+    "option": 71
+   },
+   {
+    "index": 2,
+    "house": 8,
+    "removed": 92,
+    "option": 81
+   },
+   {
+    "index": 3,
+    "house": 20,
+    "removed": 13,
+    "option": 2
+   },
+   {
+    "index": 3,
+    "house": 20,
+    "removed": 13,
+    "option": 4
+   },
+   {
+    "index": 3,
+    "house": 20,
+    "removed": 13,
+    "option": 22
+   },
+   {
+    "index": 5,
+    "house": 5,
+    "removed": 48,
+    "option": 57
+   },
+   {
+    "index": 6,
+    "house": 17,
+    "removed": 46,
+    "option": 37
+   },
+   {
+    "index": 6,
+    "house": 17,
+    "removed": 46,
+    "option": 57
+   },
+   {
+    "index": 8,
+    "house": 7,
+    "removed": 83,
+    "option": 72
+   },
+   {
+    "index": 9,
+    "house": 8,
+    "removed": 93,
+    "option": 82
+   },
+   {
+    "index": 10,
+    "house": 13,
+    "removed": 22,
+    "option": 33
+   },
+   {
+    "index": 11,
+    "house": 24,
+    "removed": 24,
+    "option": 33
+   },
+   {
+    "index": 12,
+    "house": 25,
+    "removed": 27,
+    "option": 36
+   },
+   {
+    "index": 14,
+    "house": 20,
+    "removed": 14,
+    "option": 3
+   },
+   {
+    "index": 16,
+    "house": 2,
+    "removed": 39,
+    "option": 28
+   },
+   {
+    "index": 20,
+    "house": 18,
+    "removed": 89,
+    "option": 98
+   },
+   {
+    "index": 22,
+    "house": 17,
+    "removed": 58,
+    "option": 47
+   },
+   {
+    "index": 23,
+    "house": 19,
+    "removed": 88,
+    "option": 99
+   }
+  ],
+  "unique": true,
+  "noGuess": true
+ },
+ {
+  "id": 39,
+  "anchor": {
+   "cell": 8,
+   "row": 1,
+   "column": 9
+  },
+  "size": 9,
+  "phase1Score": 841,
+  "phase2ScoreWithClue": 1081,
+  "opening": {
+   "eliminatedByFriend": 21,
+   "firstDeduction": {
+    "technique": "common-conflict",
+    "house": 4,
+    "options": [
+     36,
+     37,
+     38,
+     39,
+     40,
+     41
+    ],
+    "removed": [
+     48
+    ],
+    "rank": 3,
+    "interactions": [],
+    "adjacency": [
+     48
+    ]
+   },
+   "openingRemovedByFriend": [
+    42,
+    43,
+    44
+   ]
+  },
+  "decisive": {
+   "from": {
+    "index": 8,
+    "house": 23,
+    "options": [
+     52,
+     61
+    ],
+    "kind": "region-column-pointing",
+    "removed": [
+     25,
+     79
+    ]
+   },
+   "then": {
+    "index": 9,
+    "house": 19,
+    "technique": "basic-single",
+    "options": [
+     15
+    ]
+   }
+  },
+  "regionToRegionChains": 2,
+  "diagonalWitnesses": [
+   {
+    "index": 0,
+    "house": 4,
+    "removed": 48,
+    "option": 38
+   },
+   {
+    "index": 0,
+    "house": 4,
+    "removed": 48,
+    "option": 40
+   },
+   {
+    "index": 1,
+    "house": 8,
+    "removed": 64,
+    "option": 72
+   },
+   {
+    "index": 2,
+    "house": 9,
+    "removed": 19,
+    "option": 9
+   },
+   {
+    "index": 3,
+    "house": 19,
+    "removed": 23,
+    "option": 15
+   },
+   {
+    "index": 4,
+    "house": 21,
+    "removed": 22,
+    "option": 14
+   },
+   {
+    "index": 4,
+    "house": 21,
+    "removed": 22,
+    "option": 32
+   },
+   {
+    "index": 5,
+    "house": 23,
+    "removed": 70,
+    "option": 60
+   },
+   {
+    "index": 6,
+    "house": 24,
+    "removed": 56,
+    "option": 66
+   },
+   {
+    "index": 6,
+    "house": 24,
+    "removed": 67,
+    "option": 57
+   },
+   {
+    "index": 7,
+    "house": 25,
+    "removed": 60,
+    "option": 68
+   },
+   {
+    "index": 7,
+    "house": 25,
+    "removed": 77,
+    "option": 69
+   },
+   {
+    "index": 11,
+    "house": 3,
+    "removed": 41,
+    "option": 31
+   },
+   {
+    "index": 12,
+    "house": 4,
+    "removed": 50,
+    "option": 40
+   },
+   {
+    "index": 13,
+    "house": 9,
+    "removed": 28,
+    "option": 18
+   },
+   {
+    "index": 14,
+    "house": 10,
+    "removed": 63,
+    "option": 55
+   },
+   {
+    "index": 14,
+    "house": 10,
+    "removed": 63,
+    "option": 73
+   },
+   {
+    "index": 15,
+    "house": 7,
+    "removed": 58,
+    "option": 68
+   },
+   {
+    "index": 16,
+    "house": 11,
+    "removed": 55,
+    "option": 47
+   },
+   {
+    "index": 16,
+    "house": 11,
+    "removed": 55,
+    "option": 65
+   },
+   {
+    "index": 18,
+    "house": 24,
+    "removed": 75,
+    "option": 65
+   },
+   {
+    "index": 20,
+    "house": 3,
+    "removed": 39,
+    "option": 31
+   },
+   {
+    "index": 22,
+    "house": 8,
+    "removed": 65,
+    "option": 73
+   }
+  ],
+  "unique": true,
+  "noGuess": true
+ },
+ {
+  "id": 49,
+  "anchor": {
+   "cell": 59,
+   "row": 6,
+   "column": 10
+  },
+  "size": 10,
+  "phase1Score": 950,
+  "phase2ScoreWithClue": 1075,
+  "opening": {
+   "eliminatedByFriend": 35,
+   "firstDeduction": {
+    "technique": "common-conflict",
+    "house": 0,
+    "options": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     8
+    ],
+    "removed": [
+     15
+    ],
+    "rank": 3,
+    "interactions": [],
+    "adjacency": [
+     15
+    ]
+   },
+   "openingRemovedByFriend": [
+    9
+   ]
+  },
+  "decisive": {
+   "from": {
+    "index": 10,
+    "house": 28,
+    "options": [
+     80,
+     90
+    ],
+    "kind": "region-column-pointing",
+    "removed": [
+     10,
+     20,
+     40,
+     60,
+     70
+    ]
+   },
+   "then": {
+    "index": 14,
+    "house": 23,
+    "technique": "common-conflict",
+    "options": [
+     21,
+     31,
+     32
+    ]
+   }
+  },
+  "regionToRegionChains": 3,
+  "diagonalWitnesses": [
+   {
+    "index": 0,
+    "house": 0,
+    "removed": 15,
+    "option": 4
+   },
+   {
+    "index": 0,
+    "house": 0,
+    "removed": 15,
+    "option": 6
+   },
+   {
+    "index": 1,
+    "house": 1,
+    "removed": 1,
+    "option": 10
+   },
+   {
+    "index": 1,
+    "house": 1,
+    "removed": 1,
+    "option": 12
+   },
+   {
+    "index": 2,
+    "house": 6,
+    "removed": 73,
+    "option": 64
+   },
+   {
+    "index": 3,
+    "house": 7,
+    "removed": 81,
+    "option": 70
+   },
+   {
+    "index": 3,
+    "house": 7,
+    "removed": 81,
+    "option": 72
+   },
+   {
+    "index": 4,
+    "house": 8,
+    "removed": 91,
+    "option": 80
+   },
+   {
+    "index": 6,
+    "house": 22,
+    "removed": 13,
+    "option": 22
+   },
+   {
+    "index": 7,
+    "house": 23,
+    "removed": 30,
+    "option": 21
+   },
+   {
+    "index": 8,
+    "house": 3,
+    "removed": 42,
+    "option": 31
+   },
+   {
+    "index": 8,
+    "house": 3,
+    "removed": 42,
+    "option": 33
+   },
+   {
+    "index": 9,
+    "house": 24,
+    "removed": 45,
+    "option": 34
+   },
+   {
+    "index": 12,
+    "house": 3,
+    "removed": 22,
+    "option": 31
+   },
+   {
+    "index": 13,
+    "house": 7,
+    "removed": 82,
+    "option": 71
+   },
+   {
+    "index": 14,
+    "house": 23,
+    "removed": 41,
+    "option": 32
+   },
+   {
+    "index": 15,
+    "house": 4,
+    "removed": 33,
+    "option": 44
+   },
+   {
+    "index": 17,
+    "house": 2,
+    "removed": 14,
+    "option": 23
+   },
+   {
+    "index": 18,
+    "house": 29,
+    "removed": 87,
+    "option": 96
+   },
+   {
+    "index": 18,
+    "house": 29,
+    "removed": 87,
+    "option": 98
+   },
+   {
+    "index": 21,
+    "house": 7,
+    "removed": 63,
+    "option": 72
+   },
+   {
+    "index": 22,
+    "house": 13,
+    "removed": 32,
+    "option": 23
+   },
+   {
+    "index": 22,
+    "house": 13,
+    "removed": 32,
+    "option": 43
+   }
+  ],
+  "unique": true,
+  "noGuess": true
+ },
+ {
+  "id": 59,
+  "anchor": {
+   "cell": 69,
+   "row": 7,
+   "column": 10
+  },
+  "size": 10,
+  "phase1Score": 1065,
+  "phase2ScoreWithClue": 1155,
+  "opening": {
+   "eliminatedByFriend": 23,
+   "firstDeduction": {
+    "technique": "common-conflict",
+    "house": 3,
+    "options": [
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37
+    ],
+    "removed": [
+     21,
+     41
+    ],
+    "rank": 3,
+    "interactions": [],
+    "adjacency": [
+     21,
+     41
+    ]
+   },
+   "openingRemovedByFriend": [
+    38,
+    39
+   ]
+  },
+  "decisive": {
+   "from": {
+    "index": 15,
+    "house": 29,
+    "options": [
+     91,
+     92
+    ],
+    "kind": "region-row-pointing",
+    "removed": [
+     90,
+     95,
+     97,
+     98
+    ]
+   },
+   "then": {
+    "index": 22,
+    "house": 25,
+    "technique": "common-conflict",
+    "options": [
+     56,
+     87
+    ]
+   }
+  },
+  "regionToRegionChains": 6,
+  "diagonalWitnesses": [
+   {
+    "index": 0,
+    "house": 3,
+    "removed": 21,
+    "option": 30
+   },
+   {
+    "index": 0,
+    "house": 3,
+    "removed": 21,
+    "option": 32
+   },
+   {
+    "index": 0,
+    "house": 3,
+    "removed": 41,
+    "option": 30
+   },
+   {
+    "index": 0,
+    "house": 3,
+    "removed": 41,
+    "option": 32
+   },
+   {
+    "index": 1,
+    "house": 4,
+    "removed": 31,
+    "option": 40
+   },
+   {
+    "index": 1,
+    "house": 4,
+    "removed": 31,
+    "option": 42
+   },
+   {
+    "index": 2,
+    "house": 11,
+    "removed": 82,
+    "option": 91
+   },
+   {
+    "index": 3,
+    "house": 20,
+    "removed": 6,
+    "option": 17
+   },
+   {
+    "index": 3,
+    "house": 20,
+    "removed": 18,
+    "option": 7
+   },
+   {
+    "index": 4,
+    "house": 21,
+    "removed": 15,
+    "option": 24
+   },
+   {
+    "index": 4,
+    "house": 21,
+    "removed": 23,
+    "option": 12
+   },
+   {
+    "index": 4,
+    "house": 21,
+    "removed": 23,
+    "option": 14
+   },
+   {
+    "index": 5,
+    "house": 22,
+    "removed": 14,
+    "option": 3
+   },
+   {
+    "index": 5,
+    "house": 22,
+    "removed": 14,
+    "option": 5
+   },
+   {
+    "index": 5,
+    "house": 22,
+    "removed": 14,
+    "option": 25
+   },
+   {
+    "index": 6,
+    "house": 21,
+    "removed": 22,
+    "option": 13
+   },
+   {
+    "index": 7,
+    "house": 25,
+    "removed": 96,
+    "option": 87
+   },
+   {
+    "index": 8,
+    "house": 27,
+    "removed": 81,
+    "option": 70
+   },
+   {
+    "index": 8,
+    "house": 27,
+    "removed": 81,
+    "option": 90
+   },
+   {
+    "index": 9,
+    "house": 2,
+    "removed": 34,
+    "option": 25
+   },
+   {
+    "index": 9,
+    "house": 2,
+    "removed": 35,
+    "option": 24
+   },
+   {
+    "index": 10,
+    "house": 3,
+    "removed": 43,
+    "option": 32
+   },
+   {
+    "index": 11,
+    "house": 4,
+    "removed": 33,
+    "option": 42
+   },
+   {
+    "index": 13,
+    "house": 13,
+    "removed": 2,
+    "option": 13
+   },
+   {
+    "index": 14,
+    "house": 28,
+    "removed": 86,
+    "option": 75
+   },
+   {
+    "index": 14,
+    "house": 28,
+    "removed": 86,
+    "option": 95
+   },
+   {
+    "index": 16,
+    "house": 18,
+    "removed": 17,
+    "option": 28
+   },
+   {
+    "index": 21,
+    "house": 22,
+    "removed": 27,
+    "option": 16
+   },
+   {
+    "index": 21,
+    "house": 22,
+    "removed": 36,
+    "option": 25
+   },
+   {
+    "index": 22,
+    "house": 25,
+    "removed": 47,
+    "option": 56
+   },
+   {
+    "index": 23,
+    "house": 4,
+    "removed": 55,
+    "option": 44
+   },
+   {
+    "index": 23,
+    "house": 4,
+    "removed": 55,
+    "option": 46
+   }
+  ],
+  "unique": true,
+  "noGuess": true
+ },
+ {
+  "id": 69,
+  "anchor": {
+   "cell": 98,
+   "row": 10,
+   "column": 9
+  },
+  "size": 10,
+  "phase1Score": 923,
+  "phase2ScoreWithClue": 1147,
+  "opening": {
+   "eliminatedByFriend": 22,
+   "firstDeduction": {
+    "technique": "confinement",
+    "house": 8,
+    "options": [
+     80,
+     81,
+     82,
+     83
+    ],
+    "removed": [
+     50,
+     60,
+     61,
+     64,
+     65,
+     67,
+     70,
+     73,
+     74,
+     75,
+     76,
+     77
+    ],
+    "rank": 2,
+    "interactions": [
+     {
+      "kind": "row-region-claiming",
+      "removed": [
+       50,
+       60,
+       61,
+       64,
+       65,
+       67,
+       70,
+       73,
+       74,
+       75,
+       76,
+       77
+      ]
+     }
+    ],
+    "adjacency": []
+   },
+   "openingRemovedByFriend": [
+    84,
+    85,
+    86,
+    87,
+    88,
+    89
+   ]
+  },
+  "decisive": {
+   "from": {
+    "index": 14,
+    "house": 24,
+    "options": [
+     46,
+     47
+    ],
+    "kind": "region-row-pointing",
+    "removed": [
+     41,
+     44
+    ]
+   },
+   "then": {
+    "index": 19,
+    "house": 23,
+    "technique": "confinement",
+    "options": [
+     33,
+     34
+    ]
+   }
+  },
+  "regionToRegionChains": 4,
+  "diagonalWitnesses": [
+   {
+    "index": 1,
+    "house": 15,
+    "removed": 16,
+    "option": 5
+   },
+   {
+    "index": 2,
+    "house": 0,
+    "removed": 11,
+    "option": 0
+   },
+   {
+    "index": 3,
+    "house": 16,
+    "removed": 35,
+    "option": 46
+   },
+   {
+    "index": 3,
+    "house": 16,
+    "removed": 37,
+    "option": 46
+   },
+   {
+    "index": 3,
+    "house": 16,
+    "removed": 55,
+    "option": 46
+   },
+   {
+    "index": 3,
+    "house": 16,
+    "removed": 57,
+    "option": 46
+   },
+   {
+    "index": 4,
+    "house": 15,
+    "removed": 14,
+    "option": 25
+   },
+   {
+    "index": 5,
+    "house": 21,
+    "removed": 22,
+    "option": 13
+   },
+   {
+    "index": 7,
+    "house": 8,
+    "removed": 72,
+    "option": 81
+   },
+   {
+    "index": 7,
+    "house": 8,
+    "removed": 72,
+    "option": 83
+   },
+   {
+    "index": 8,
+    "house": 23,
+    "removed": 24,
+    "option": 33
+   },
+   {
+    "index": 8,
+    "house": 23,
+    "removed": 43,
+    "option": 34
+   },
+   {
+    "index": 9,
+    "house": 21,
+    "removed": 3,
+    "option": 12
+   },
+   {
+    "index": 10,
+    "house": 24,
+    "removed": 56,
+    "option": 47
+   },
+   {
+    "index": 11,
+    "house": 25,
+    "removed": 82,
+    "option": 71
+   },
+   {
+    "index": 13,
+    "house": 5,
+    "removed": 42,
+    "option": 51
+   },
+   {
+    "index": 13,
+    "house": 5,
+    "removed": 42,
+    "option": 53
+   },
+   {
+    "index": 13,
+    "house": 5,
+    "removed": 62,
+    "option": 51
+   },
+   {
+    "index": 13,
+    "house": 5,
+    "removed": 62,
+    "option": 53
+   },
+   {
+    "index": 14,
+    "house": 24,
+    "removed": 36,
+    "option": 47
+   },
+   {
+    "index": 16,
+    "house": 3,
+    "removed": 23,
+    "option": 32
+   },
+   {
+    "index": 16,
+    "house": 3,
+    "removed": 23,
+    "option": 34
+   },
+   {
+    "index": 17,
+    "house": 21,
+    "removed": 2,
+    "option": 13
+   },
+   {
+    "index": 21,
+    "house": 5,
+    "removed": 63,
+    "option": 52
+   }
+  ],
+  "unique": true,
+  "noGuess": true
+ },
+ {
+  "id": 79,
+  "anchor": {
+   "cell": 96,
+   "row": 10,
+   "column": 7
+  },
+  "size": 10,
+  "phase1Score": 1036,
+  "phase2ScoreWithClue": 1139,
+  "opening": {
+   "eliminatedByFriend": 24,
+   "firstDeduction": {
+    "technique": "common-conflict",
+    "house": 7,
+    "options": [
+     70,
+     71,
+     72,
+     73,
+     74,
+     75
+    ],
+    "removed": [
+     61
+    ],
+    "rank": 3,
+    "interactions": [],
+    "adjacency": [
+     61
+    ]
+   },
+   "openingRemovedByFriend": [
+    76,
+    77,
+    78,
+    79
+   ]
+  },
+  "decisive": {
+   "from": {
+    "index": 3,
+    "house": 21,
+    "options": [
+     0,
+     10,
+     20,
+     30
+    ],
+    "kind": "region-column-pointing",
+    "removed": [
+     40,
+     50,
+     60,
+     70,
+     80
+    ]
+   },
+   "then": {
+    "index": 9,
+    "house": 27,
+    "technique": "common-conflict",
+    "options": [
+     42,
+     71,
+     81,
+     82
+    ]
+   }
+  },
+  "regionToRegionChains": 6,
+  "diagonalWitnesses": [
+   {
+    "index": 0,
+    "house": 7,
+    "removed": 61,
+    "option": 70
+   },
+   {
+    "index": 1,
+    "house": 17,
+    "removed": 18,
+    "option": 7
+   },
+   {
+    "index": 1,
+    "house": 17,
+    "removed": 18,
+    "option": 27
+   },
+   {
+    "index": 2,
+    "house": 20,
+    "removed": 1,
+    "option": 12
+   },
+   {
+    "index": 4,
+    "house": 6,
+    "removed": 73,
+    "option": 64
+   },
+   {
+    "index": 4,
+    "house": 6,
+    "removed": 74,
+    "option": 63
+   },
+   {
+    "index": 5,
+    "house": 7,
+    "removed": 62,
+    "option": 71
+   },
+   {
+    "index": 6,
+    "house": 6,
+    "removed": 54,
+    "option": 65
+   },
+   {
+    "index": 7,
+    "house": 23,
+    "removed": 22,
+    "option": 31
+   },
+   {
+    "index": 7,
+    "house": 23,
+    "removed": 30,
+    "option": 21
+   },
+   {
+    "index": 7,
+    "house": 23,
+    "removed": 41,
+    "option": 32
+   },
+   {
+    "index": 8,
+    "house": 10,
+    "removed": 11,
+    "option": 0
+   },
+   {
+    "index": 8,
+    "house": 10,
+    "removed": 11,
+    "option": 20
+   },
+   {
+    "index": 9,
+    "house": 27,
+    "removed": 72,
+    "option": 81
+   },
+   {
+    "index": 11,
+    "house": 13,
+    "removed": 14,
+    "option": 3
+   },
+   {
+    "index": 12,
+    "house": 17,
+    "removed": 28,
+    "option": 17
+   },
+   {
+    "index": 13,
+    "house": 26,
+    "removed": 64,
+    "option": 75
+   },
+   {
+    "index": 14,
+    "house": 20,
+    "removed": 13,
+    "option": 2
+   },
+   {
+    "index": 14,
+    "house": 20,
+    "removed": 13,
+    "option": 4
+   },
+   {
+    "index": 15,
+    "house": 27,
+    "removed": 31,
+    "option": 42
+   },
+   {
+    "index": 16,
+    "house": 23,
+    "removed": 12,
+    "option": 21
+   },
+   {
+    "index": 16,
+    "house": 23,
+    "removed": 23,
+    "option": 32
+   },
+   {
+    "index": 18,
+    "house": 10,
+    "removed": 21,
+    "option": 10
+   },
+   {
+    "index": 24,
+    "house": 5,
+    "removed": 48,
+    "option": 57
+   }
+  ],
+  "unique": true,
+  "noGuess": true
+ },
+ {
+  "id": 89,
+  "anchor": {
+   "cell": 79,
+   "row": 8,
+   "column": 10
+  },
+  "size": 10,
+  "phase1Score": 1138,
+  "phase2ScoreWithClue": 1222,
+  "opening": {
+   "eliminatedByFriend": 27,
+   "firstDeduction": {
+    "technique": "common-conflict",
+    "house": 9,
+    "options": [
+     90,
+     91,
+     92,
+     93,
+     94
+    ],
+    "removed": [
+     81
+    ],
+    "rank": 3,
+    "interactions": [],
+    "adjacency": [
+     81
+    ]
+   },
+   "openingRemovedByFriend": [
+    95,
+    96,
+    97,
+    98,
+    99
+   ]
+  },
+  "decisive": {
+   "from": {
+    "index": 7,
+    "house": 20,
+    "options": [
+     7,
+     8
+    ],
+    "kind": "region-row-pointing",
+    "removed": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ]
+   },
+   "then": {
+    "index": 12,
+    "house": 21,
+    "technique": "common-conflict",
+    "options": [
+     12,
+     21,
+     22,
+     32,
+     33
+    ]
+   }
+  },
+  "regionToRegionChains": 5,
+  "diagonalWitnesses": [
+   {
+    "index": 0,
+    "house": 9,
+    "removed": 81,
+    "option": 90
+   },
+   {
+    "index": 2,
+    "house": 15,
+    "removed": 66,
+    "option": 55
+   },
+   {
+    "index": 3,
+    "house": 16,
+    "removed": 45,
+    "option": 56
+   },
+   {
+    "index": 3,
+    "house": 16,
+    "removed": 47,
+    "option": 56
+   },
+   {
+    "index": 3,
+    "house": 16,
+    "removed": 57,
+    "option": 46
+   },
+   {
+    "index": 4,
+    "house": 17,
+    "removed": 16,
+    "option": 7
+   },
+   {
+    "index": 4,
+    "house": 17,
+    "removed": 16,
+    "option": 27
+   },
+   {
+    "index": 5,
+    "house": 20,
+    "removed": 17,
+    "option": 8
+   },
+   {
+    "index": 6,
+    "house": 22,
+    "removed": 18,
+    "option": 27
+   },
+   {
+    "index": 6,
+    "house": 22,
+    "removed": 38,
+    "option": 27
+   },
+   {
+    "index": 8,
+    "house": 14,
+    "removed": 83,
+    "option": 94
+   },
+   {
+    "index": 9,
+    "house": 8,
+    "removed": 91,
+    "option": 80
+   },
+   {
+    "index": 9,
+    "house": 8,
+    "removed": 91,
+    "option": 82
+   },
+   {
+    "index": 10,
+    "house": 15,
+    "removed": 24,
+    "option": 15
+   },
+   {
+    "index": 10,
+    "house": 15,
+    "removed": 24,
+    "option": 35
+   },
+   {
+    "index": 11,
+    "house": 24,
+    "removed": 31,
+    "option": 20
+   },
+   {
+    "index": 11,
+    "house": 24,
+    "removed": 31,
+    "option": 40
+   },
+   {
+    "index": 12,
+    "house": 21,
+    "removed": 23,
+    "option": 12
+   },
+   {
+    "index": 12,
+    "house": 21,
+    "removed": 23,
+    "option": 32
+   },
+   {
+    "index": 13,
+    "house": 25,
+    "removed": 33,
+    "option": 42
+   },
+   {
+    "index": 13,
+    "house": 25,
+    "removed": 44,
+    "option": 53
+   },
+   {
+    "index": 13,
+    "house": 25,
+    "removed": 52,
+    "option": 43
+   },
+   {
+    "index": 16,
+    "house": 6,
+    "removed": 56,
+    "option": 67
+   },
+   {
+    "index": 17,
+    "house": 16,
+    "removed": 35,
+    "option": 46
+   },
+   {
+    "index": 17,
+    "house": 16,
+    "removed": 37,
+    "option": 46
+   },
+   {
+    "index": 18,
+    "house": 15,
+    "removed": 14,
+    "option": 25
+   },
+   {
+    "index": 21,
+    "house": 25,
+    "removed": 54,
+    "option": 43
+   },
+   {
+    "index": 24,
+    "house": 1,
+    "removed": 22,
+    "option": 11
+   },
+   {
+    "index": 26,
+    "house": 4,
+    "removed": 32,
+    "option": 41
+   },
+   {
+    "index": 26,
+    "house": 4,
+    "removed": 32,
+    "option": 43
+   }
+  ],
+  "unique": true,
+  "noGuess": true
+ },
+ {
+  "id": 99,
+  "anchor": {
+   "cell": 4,
+   "row": 1,
+   "column": 5
+  },
+  "size": 10,
+  "phase1Score": 996,
+  "phase2ScoreWithClue": 1188,
+  "opening": {
+   "eliminatedByFriend": 35,
+   "firstDeduction": {
+    "technique": "common-conflict",
+    "house": 1,
+    "options": [
+     16,
+     17,
+     19
+    ],
+    "removed": [
+     27
+    ],
+    "rank": 3,
+    "interactions": [],
+    "adjacency": [
+     27
+    ]
+   },
+   "openingRemovedByFriend": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ]
+  },
+  "decisive": {
+   "from": {
+    "index": 8,
+    "house": 23,
+    "options": [
+     26,
+     36
+    ],
+    "kind": "region-column-pointing",
+    "removed": [
+     76,
+     96
+    ]
+   },
+   "then": {
+    "index": 9,
+    "house": 27,
+    "technique": "common-conflict",
+    "options": [
+     73,
+     83,
+     95
+    ]
+   }
+  },
+  "regionToRegionChains": 3,
+  "diagonalWitnesses": [
+   {
+    "index": 0,
+    "house": 1,
+    "removed": 27,
+    "option": 16
+   },
+   {
+    "index": 1,
+    "house": 10,
+    "removed": 51,
+    "option": 40
+   },
+   {
+    "index": 1,
+    "house": 10,
+    "removed": 51,
+    "option": 60
+   },
+   {
+    "index": 2,
+    "house": 11,
+    "removed": 32,
+    "option": 21
+   },
+   {
+    "index": 2,
+    "house": 11,
+    "removed": 32,
+    "option": 41
+   },
+   {
+    "index": 3,
+    "house": 12,
+    "removed": 81,
+    "option": 92
+   },
+   {
+    "index": 3,
+    "house": 12,
+    "removed": 91,
+    "option": 82
+   },
+   {
+    "index": 4,
+    "house": 11,
+    "removed": 60,
+    "option": 71
+   },
+   {
+    "index": 5,
+    "house": 15,
+    "removed": 86,
+    "option": 75
+   },
+   {
+    "index": 5,
+    "house": 15,
+    "removed": 86,
+    "option": 95
+   },
+   {
+    "index": 6,
+    "house": 21,
+    "removed": 28,
+    "option": 17
+   },
+   {
+    "index": 6,
+    "house": 21,
+    "removed": 28,
+    "option": 19
+   },
+   {
+    "index": 7,
+    "house": 22,
+    "removed": 79,
+    "option": 68
+   },
+   {
+    "index": 7,
+    "house": 22,
+    "removed": 79,
+    "option": 88
+   },
+   {
+    "index": 8,
+    "house": 23,
+    "removed": 37,
+    "option": 26
+   },
+   {
+    "index": 10,
+    "house": 28,
+    "removed": 88,
+    "option": 97
+   },
+   {
+    "index": 10,
+    "house": 28,
+    "removed": 88,
+    "option": 99
+   },
+   {
+    "index": 11,
+    "house": 29,
+    "removed": 83,
+    "option": 92
+   },
+   {
+    "index": 13,
+    "house": 11,
+    "removed": 50,
+    "option": 61
+   },
+   {
+    "index": 14,
+    "house": 5,
+    "removed": 48,
+    "option": 59
+   },
+   {
+    "index": 14,
+    "house": 5,
+    "removed": 68,
+    "option": 57
+   },
+   {
+    "index": 16,
+    "house": 22,
+    "removed": 89,
+    "option": 78
+   },
+   {
+    "index": 19,
+    "house": 18,
+    "removed": 49,
+    "option": 38
+   },
+   {
+    "index": 19,
+    "house": 18,
+    "removed": 49,
+    "option": 58
+   },
+   {
+    "index": 19,
+    "house": 18,
+    "removed": 67,
+    "option": 78
+   }
+  ],
+  "unique": true,
+  "noGuess": true
+ },
+ {
+  "id": 109,
+  "anchor": {
+   "cell": 79,
+   "row": 8,
+   "column": 10
+  },
+  "size": 10,
+  "phase1Score": 1153,
+  "phase2ScoreWithClue": 1213,
+  "opening": {
+   "eliminatedByFriend": 27,
+   "firstDeduction": {
+    "technique": "common-conflict",
+    "house": 0,
+    "options": [
+     0,
+     1,
+     3,
+     4,
+     5
+    ],
+    "removed": [
+     14
+    ],
+    "rank": 3,
+    "interactions": [],
+    "adjacency": [
+     14
+    ]
+   },
+   "openingRemovedByFriend": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "decisive": {
+   "from": {
+    "index": 8,
+    "house": 21,
+    "options": [
+     10,
+     11
+    ],
+    "kind": "region-row-pointing",
+    "removed": [
+     13,
+     15,
+     16
+    ]
+   },
+   "then": {
+    "index": 11,
+    "house": 20,
+    "technique": "common-conflict",
+    "options": [
+     3,
+     24
+    ]
+   }
+  },
+  "regionToRegionChains": 4,
+  "diagonalWitnesses": [
+   {
+    "index": 0,
+    "house": 0,
+    "removed": 14,
+    "option": 5
+   },
+   {
+    "index": 1,
+    "house": 9,
+    "removed": 87,
+    "option": 98
+   },
+   {
+    "index": 2,
+    "house": 16,
+    "removed": 85,
+    "option": 96
+   },
+   {
+    "index": 3,
+    "house": 17,
+    "removed": 58,
+    "option": 47
+   },
+   {
+    "index": 3,
+    "house": 17,
+    "removed": 58,
+    "option": 67
+   },
+   {
+    "index": 4,
+    "house": 18,
+    "removed": 57,
+    "option": 48
+   },
+   {
+    "index": 5,
+    "house": 20,
+    "removed": 4,
+    "option": 13
+   },
+   {
+    "index": 6,
+    "house": 21,
+    "removed": 0,
+    "option": 11
+   },
+   {
+    "index": 6,
+    "house": 21,
+    "removed": 21,
+    "option": 10
+   },
+   {
+    "index": 7,
+    "house": 22,
+    "removed": 20,
+    "option": 31
+   },
+   {
+    "index": 7,
+    "house": 22,
+    "removed": 32,
+    "option": 23
+   },
+   {
+    "index": 7,
+    "house": 22,
+    "removed": 33,
+    "option": 22
+   },
+   {
+    "index": 8,
+    "house": 21,
+    "removed": 1,
+    "option": 10
+   },
+   {
+    "index": 10,
+    "house": 8,
+    "removed": 91,
+    "option": 80
+   },
+   {
+    "index": 10,
+    "house": 8,
+    "removed": 91,
+    "option": 82
+   },
+   {
+    "index": 12,
+    "house": 22,
+    "removed": 11,
+    "option": 22
+   },
+   {
+    "index": 12,
+    "house": 22,
+    "removed": 42,
+    "option": 31
+   },
+   {
+    "index": 14,
+    "house": 5,
+    "removed": 62,
+    "option": 51
+   },
+   {
+    "index": 14,
+    "house": 5,
+    "removed": 62,
+    "option": 53
+   },
+   {
+    "index": 15,
+    "house": 6,
+    "removed": 54,
+    "option": 63
+   },
+   {
+    "index": 16,
+    "house": 8,
+    "removed": 92,
+    "option": 81
+   },
+   {
+    "index": 17,
+    "house": 23,
+    "removed": 24,
+    "option": 35
+   },
+   {
+    "index": 17,
+    "house": 23,
+    "removed": 36,
+    "option": 25
+   },
+   {
+    "index": 17,
+    "house": 23,
+    "removed": 45,
+    "option": 34
+   },
+   {
+    "index": 19,
+    "house": 5,
+    "removed": 61,
+    "option": 52
+   },
+   {
+    "index": 20,
+    "house": 6,
+    "removed": 55,
+    "option": 64
+   },
+   {
+    "index": 22,
+    "house": 15,
+    "removed": 26,
+    "option": 35
+   },
+   {
+    "index": 24,
+    "house": 25,
+    "removed": 52,
+    "option": 41
+   },
+   {
+    "index": 26,
+    "house": 3,
+    "removed": 44,
+    "option": 35
+   }
+  ],
+  "unique": true,
+  "noGuess": true
+ },
+ {
+  "id": 119,
+  "anchor": {
+   "cell": 79,
+   "row": 8,
+   "column": 10
+  },
+  "size": 10,
+  "phase1Score": 1256,
+  "phase2ScoreWithClue": 1411,
+  "opening": {
+   "eliminatedByFriend": 27,
+   "firstDeduction": {
+    "technique": "common-conflict",
+    "house": 1,
+    "options": [
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18
+    ],
+    "removed": [
+     1,
+     21
+    ],
+    "rank": 3,
+    "interactions": [],
+    "adjacency": [
+     1,
+     21
+    ]
+   },
+   "openingRemovedByFriend": [
+    19
+   ]
+  },
+  "decisive": {
+   "from": {
+    "index": 23,
+    "house": 28,
+    "options": [
+     82,
+     92
+    ],
+    "kind": "region-column-pointing",
+    "removed": [
+     12,
+     22,
+     32,
+     52
+    ]
+   },
+   "then": {
+    "index": 26,
+    "house": 21,
+    "technique": "common-conflict",
+    "options": [
+     10,
+     11,
+     23
+    ]
+   }
+  },
+  "regionToRegionChains": 4,
+  "diagonalWitnesses": [
+   {
+    "index": 0,
+    "house": 1,
+    "removed": 1,
+    "option": 10
+   },
+   {
+    "index": 0,
+    "house": 1,
+    "removed": 1,
+    "option": 12
+   },
+   {
+    "index": 0,
+    "house": 1,
+    "removed": 21,
+    "option": 10
+   },
+   {
+    "index": 0,
+    "house": 1,
+    "removed": 21,
+    "option": 12
+   },
+   {
+    "index": 1,
+    "house": 3,
+    "removed": 26,
+    "option": 35
+   },
+   {
+    "index": 1,
+    "house": 3,
+    "removed": 26,
+    "option": 37
+   },
+   {
+    "index": 2,
+    "house": 4,
+    "removed": 56,
+    "option": 45
+   },
+   {
+    "index": 2,
+    "house": 4,
+    "removed": 56,
+    "option": 47
+   },
+   {
+    "index": 3,
+    "house": 5,
+    "removed": 42,
+    "option": 51
+   },
+   {
+    "index": 3,
+    "house": 5,
+    "removed": 42,
+    "option": 53
+   },
+   {
+    "index": 4,
+    "house": 6,
+    "removed": 51,
+    "option": 60
+   },
+   {
+    "index": 4,
+    "house": 6,
+    "removed": 51,
+    "option": 62
+   },
+   {
+    "index": 5,
+    "house": 5,
+    "removed": 43,
+    "option": 52
+   },
+   {
+    "index": 6,
+    "house": 18,
+    "removed": 17,
+    "option": 8
+   },
+   {
+    "index": 6,
+    "house": 18,
+    "removed": 17,
+    "option": 28
+   },
+   {
+    "index": 7,
+    "house": 20,
+    "removed": 18,
+    "option": 7
+   },
+   {
+    "index": 8,
+    "house": 22,
+    "removed": 38,
+    "option": 27
+   },
+   {
+    "index": 8,
+    "house": 22,
+    "removed": 47,
+    "option": 36
+   },
+   {
+    "index": 9,
+    "house": 4,
+    "removed": 55,
+    "option": 46
+   },
+   {
+    "index": 10,
+    "house": 24,
+    "removed": 36,
+    "option": 45
+   },
+   {
+    "index": 10,
+    "house": 24,
+    "removed": 44,
+    "option": 35
+   },
+   {
+    "index": 11,
+    "house": 16,
+    "removed": 57,
+    "option": 46
+   },
+   {
+    "index": 14,
+    "house": 17,
+    "removed": 28,
+    "option": 37
+   },
+   {
+    "index": 17,
+    "house": 21,
+    "removed": 13,
+    "option": 22
+   },
+   {
+    "index": 20,
+    "house": 25,
+    "removed": 54,
+    "option": 63
+   },
+   {
+    "index": 20,
+    "house": 25,
+    "removed": 62,
+    "option": 53
+   },
+   {
+    "index": 21,
+    "house": 28,
+    "removed": 83,
+    "option": 92
+   },
+   {
+    "index": 21,
+    "house": 28,
+    "removed": 91,
+    "option": 82
+   },
+   {
+    "index": 22,
+    "house": 29,
+    "removed": 93,
+    "option": 84
+   },
+   {
+    "index": 23,
+    "house": 28,
+    "removed": 81,
+    "option": 92
+   },
+   {
+    "index": 24,
+    "house": 1,
+    "removed": 20,
+    "option": 11
+   },
+   {
+    "index": 26,
+    "house": 21,
+    "removed": 14,
+    "option": 23
+   },
+   {
+    "index": 28,
+    "house": 2,
+    "removed": 16,
+    "option": 27
+   }
+  ],
+  "unique": true,
+  "noGuess": true
+ },
+ {
+  "id": 129,
+  "anchor": {
+   "cell": 95,
+   "row": 10,
+   "column": 6
+  },
+  "size": 10,
+  "phase1Score": 1093,
+  "phase2ScoreWithClue": 1158,
+  "opening": {
+   "eliminatedByFriend": 26,
+   "firstDeduction": {
+    "technique": "common-conflict",
+    "house": 0,
+    "options": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     6,
+     7,
+     8,
+     9
+    ],
+    "removed": [
+     20,
+     30,
+     40
+    ],
+    "rank": 3,
+    "interactions": [],
+    "adjacency": [
+     20,
+     30,
+     40
+    ]
+   },
+   "openingRemovedByFriend": [
+    5
+   ]
+  },
+  "decisive": {
+   "from": {
+    "index": 7,
+    "house": 28,
+    "options": [
+     80,
+     81,
+     83
+    ],
+    "kind": "region-row-pointing",
+    "removed": [
+     82,
+     88,
+     89
+    ]
+   },
+   "then": {
+    "index": 9,
+    "house": 25,
+    "technique": "common-conflict",
+    "options": [
+     48,
+     58,
+     59,
+     69
+    ]
+   }
+  },
+  "regionToRegionChains": 5,
+  "diagonalWitnesses": [
+   {
+    "index": 1,
+    "house": 12,
+    "removed": 73,
+    "option": 82
+   },
+   {
+    "index": 2,
+    "house": 20,
+    "removed": 1,
+    "option": 10
+   },
+   {
+    "index": 3,
+    "house": 21,
+    "removed": 3,
+    "option": 14
+   },
+   {
+    "index": 3,
+    "house": 21,
+    "removed": 12,
+    "option": 23
+   },
+   {
+    "index": 3,
+    "house": 21,
+    "removed": 24,
+    "option": 13
+   },
+   {
+    "index": 4,
+    "house": 24,
+    "removed": 46,
+    "option": 37
+   },
+   {
+    "index": 4,
+    "house": 24,
+    "removed": 46,
+    "option": 57
+   },
+   {
+    "index": 4,
+    "house": 24,
+    "removed": 67,
+    "option": 56
+   },
+   {
+    "index": 5,
+    "house": 25,
+    "removed": 49,
+    "option": 58
+   },
+   {
+    "index": 6,
+    "house": 27,
+    "removed": 79,
+    "option": 68
+   },
+   {
+    "index": 6,
+    "house": 27,
+    "removed": 79,
+    "option": 88
+   },
+   {
+    "index": 8,
+    "house": 12,
+    "removed": 63,
+    "option": 72
+   },
+   {
+    "index": 9,
+    "house": 25,
+    "removed": 68,
+    "option": 59
+   },
+   {
+    "index": 12,
+    "house": 0,
+    "removed": 11,
+    "option": 2
+   },
+   {
+    "index": 13,
+    "house": 4,
+    "removed": 38,
+    "option": 47
+   },
+   {
+    "index": 15,
+    "house": 16,
+    "removed": 37,
+    "option": 26
+   },
+   {
+    "index": 16,
+    "house": 19,
+    "removed": 48,
+    "option": 39
+   },
+   {
+    "index": 17,
+    "house": 4,
+    "removed": 36,
+    "option": 47
+   },
+   {
+    "index": 18,
+    "house": 17,
+    "removed": 66,
+    "option": 77
+   },
+   {
+    "index": 19,
+    "house": 24,
+    "removed": 58,
+    "option": 47
+   },
+   {
+    "index": 21,
+    "house": 3,
+    "removed": 23,
+    "option": 32
+   },
+   {
+    "index": 21,
+    "house": 3,
+    "removed": 23,
+    "option": 34
+   }
+  ],
+  "unique": true,
+  "noGuess": true
+ },
+ {
+  "id": 139,
+  "anchor": {
+   "cell": 49,
+   "row": 5,
+   "column": 10
+  },
+  "size": 10,
+  "phase1Score": 1229,
+  "phase2ScoreWithClue": 1307,
+  "opening": {
+   "eliminatedByFriend": 21,
+   "firstDeduction": {
+    "technique": "common-conflict",
+    "house": 3,
+    "options": [
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36
+    ],
+    "removed": [
+     21
+    ],
+    "rank": 3,
+    "interactions": [],
+    "adjacency": [
+     21
+    ]
+   },
+   "openingRemovedByFriend": [
+    37,
+    38,
+    39
+   ]
+  },
+  "decisive": {
+   "from": {
+    "index": 3,
+    "house": 22,
+    "options": [
+     20,
+     30
+    ],
+    "kind": "region-column-pointing",
+    "removed": [
+     0,
+     10,
+     60,
+     70,
+     80,
+     90
+    ]
+   },
+   "then": {
+    "index": 8,
+    "house": 25,
+    "technique": "common-conflict",
+    "options": [
+     51,
+     52,
+     71,
+     72,
+     91
+    ]
+   }
+  },
+  "regionToRegionChains": 10,
+  "diagonalWitnesses": [
+   {
+    "index": 0,
+    "house": 3,
+    "removed": 21,
+    "option": 30
+   },
+   {
+    "index": 1,
+    "house": 20,
+    "removed": 17,
+    "option": 8
+   },
+   {
+    "index": 1,
+    "house": 20,
+    "removed": 17,
+    "option": 28
+   },
+   {
+    "index": 1,
+    "house": 20,
+    "removed": 18,
+    "option": 7
+   },
+   {
+    "index": 2,
+    "house": 1,
+    "removed": 5,
+    "option": 14
+   },
+   {
+    "index": 2,
+    "house": 1,
+    "removed": 5,
+    "option": 16
+   },
+   {
+    "index": 2,
+    "house": 1,
+    "removed": 25,
+    "option": 14
+   },
+   {
+    "index": 2,
+    "house": 1,
+    "removed": 25,
+    "option": 16
+   },
+   {
+    "index": 3,
+    "house": 22,
+    "removed": 31,
+    "option": 20
+   },
+   {
+    "index": 4,
+    "house": 1,
+    "removed": 22,
+    "option": 11
+   },
+   {
+    "index": 4,
+    "house": 1,
+    "removed": 22,
+    "option": 13
+   },
+   {
+    "index": 6,
+    "house": 1,
+    "removed": 4,
+    "option": 15
+   },
+   {
+    "index": 6,
+    "house": 1,
+    "removed": 24,
+    "option": 15
+   },
+   {
+    "index": 7,
+    "house": 16,
+    "removed": 87,
+    "option": 76
+   },
+   {
+    "index": 7,
+    "house": 16,
+    "removed": 87,
+    "option": 96
+   },
+   {
+    "index": 8,
+    "house": 25,
+    "removed": 61,
+    "option": 52
+   },
+   {
+    "index": 8,
+    "house": 25,
+    "removed": 61,
+    "option": 72
+   },
+   {
+    "index": 9,
+    "house": 29,
+    "removed": 83,
+    "option": 94
+   },
+   {
+    "index": 9,
+    "house": 29,
+    "removed": 84,
+    "option": 93
+   },
+   {
+    "index": 10,
+    "house": 16,
+    "removed": 77,
+    "option": 86
+   },
+   {
+    "index": 13,
+    "house": 21,
+    "removed": 14,
+    "option": 23
+   },
+   {
+    "index": 14,
+    "house": 25,
+    "removed": 62,
+    "option": 51
+   },
+   {
+    "index": 14,
+    "house": 25,
+    "removed": 62,
+    "option": 71
+   },
+   {
+    "index": 15,
+    "house": 6,
+    "removed": 54,
+    "option": 63
+   },
+   {
+    "index": 15,
+    "house": 6,
+    "removed": 54,
+    "option": 65
+   },
+   {
+    "index": 16,
+    "house": 28,
+    "removed": 85,
+    "option": 76
+   },
+   {
+    "index": 17,
+    "house": 15,
+    "removed": 64,
+    "option": 55
+   },
+   {
+    "index": 17,
+    "house": 15,
+    "removed": 64,
+    "option": 75
+   },
+   {
+    "index": 18,
+    "house": 27,
+    "removed": 71,
+    "option": 82
+   },
+   {
+    "index": 18,
+    "house": 27,
+    "removed": 72,
+    "option": 81
+   },
+   {
+    "index": 21,
+    "house": 16,
+    "removed": 75,
+    "option": 66
+   },
+   {
+    "index": 24,
+    "house": 2,
+    "removed": 11,
+    "option": 20
+   },
+   {
+    "index": 25,
+    "house": 6,
+    "removed": 76,
+    "option": 65
+   }
+  ],
+  "unique": true,
+  "noGuess": true
+ },
+ {
+  "id": 149,
+  "anchor": {
+   "cell": 37,
+   "row": 4,
+   "column": 8
+  },
+  "size": 10,
+  "phase1Score": 1310,
+  "phase2ScoreWithClue": 1391,
+  "opening": {
+   "eliminatedByFriend": 33,
+   "firstDeduction": {
+    "technique": "common-conflict",
+    "house": 9,
+    "options": [
+     90,
+     91,
+     92,
+     93,
+     94,
+     95,
+     96,
+     98,
+     99
+    ],
+    "removed": [
+     88
+    ],
+    "rank": 3,
+    "interactions": [],
+    "adjacency": [
+     88
+    ]
+   },
+   "openingRemovedByFriend": [
+    97
+   ]
+  },
+  "decisive": {
+   "from": {
+    "index": 20,
+    "house": 24,
+    "options": [
+     44,
+     45
+    ],
+    "kind": "region-row-pointing",
+    "removed": [
+     41,
+     42,
+     43
+    ]
+   },
+   "then": {
+    "index": 21,
+    "house": 22,
+    "technique": "common-conflict",
+    "options": [
+     22,
+     23,
+     51
+    ]
+   }
+  },
+  "regionToRegionChains": 4,
+  "diagonalWitnesses": [
+   {
+    "index": 0,
+    "house": 9,
+    "removed": 88,
+    "option": 99
+   },
+   {
+    "index": 1,
+    "house": 16,
+    "removed": 85,
+    "option": 76
+   },
+   {
+    "index": 1,
+    "house": 16,
+    "removed": 85,
+    "option": 96
+   },
+   {
+    "index": 2,
+    "house": 18,
+    "removed": 69,
+    "option": 58
+   },
+   {
+    "index": 2,
+    "house": 18,
+    "removed": 69,
+    "option": 78
+   },
+   {
+    "index": 3,
+    "house": 19,
+    "removed": 68,
+    "option": 59
+   },
+   {
+    "index": 6,
+    "house": 8,
+    "removed": 70,
+    "option": 81
+   },
+   {
+    "index": 7,
+    "house": 10,
+    "removed": 11,
+    "option": 0
+   },
+   {
+    "index": 7,
+    "house": 10,
+    "removed": 11,
+    "option": 20
+   },
+   {
+    "index": 8,
+    "house": 11,
+    "removed": 40,
+    "option": 51
+   },
+   {
+    "index": 8,
+    "house": 11,
+    "removed": 50,
+    "option": 41
+   },
+   {
+    "index": 9,
+    "house": 15,
+    "removed": 56,
+    "option": 45
+   },
+   {
+    "index": 10,
+    "house": 16,
+    "removed": 75,
+    "option": 86
+   },
+   {
+    "index": 11,
+    "house": 15,
+    "removed": 54,
+    "option": 65
+   },
+   {
+    "index": 13,
+    "house": 6,
+    "removed": 73,
+    "option": 62
+   },
+   {
+    "index": 13,
+    "house": 6,
+    "removed": 73,
+    "option": 64
+   },
+   {
+    "index": 14,
+    "house": 21,
+    "removed": 12,
+    "option": 3
+   },
+   {
+    "index": 15,
+    "house": 25,
+    "removed": 62,
+    "option": 53
+   },
+   {
+    "index": 16,
+    "house": 6,
+    "removed": 74,
+    "option": 63
+   },
+   {
+    "index": 17,
+    "house": 7,
+    "removed": 82,
+    "option": 71
+   },
+   {
+    "index": 18,
+    "house": 26,
+    "removed": 63,
+    "option": 72
+   },
+   {
+    "index": 18,
+    "house": 26,
+    "removed": 76,
+    "option": 65
+   },
+   {
+    "index": 19,
+    "house": 6,
+    "removed": 55,
+    "option": 64
+   },
+   {
+    "index": 19,
+    "house": 6,
+    "removed": 55,
+    "option": 66
+   },
+   {
+    "index": 22,
+    "house": 25,
+    "removed": 44,
+    "option": 53
+   },
+   {
+    "index": 26,
+    "house": 22,
+    "removed": 13,
+    "option": 22
+   },
+   {
+    "index": 27,
+    "house": 10,
+    "removed": 1,
+    "option": 10
+   },
+   {
+    "index": 28,
+    "house": 11,
+    "removed": 72,
+    "option": 81
+   }
+  ],
+  "unique": true,
+  "noGuess": true
+ }
+]

@@ -1,5 +1,5 @@
 {
-  "cache": "capydoku-v5.0-25c22c6bb18a",
+  "cache": "capydoku-v5.0-9be5b9e0b436",
   "urls": [
     "./",
     "index.html",
@@ -40,6 +40,8 @@
     "explain.js",
     "difficulty.js",
     "v50.css",
+    "bosses.js",
+    "boss-levels.json",
     "assets/Nunito-OFL.txt",
     "assets/crates/banana-target.svg",
     "assets/crates/banana.svg",

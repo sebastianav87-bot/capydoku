@@ -1,0 +1,15 @@
+✔ all 15 pairs: unchanged phase 1; same rocks/size; unique, no-guess, harder second board and shared survivor (403.627529ms)
+✔ phase checkpoint/refills keep whole-boss time, mistakes and power use; fixed friend cannot be undone (1.05063ms)
+✔ phase 2 and its histories survive save/load even with zero oranges; old half-played bosses still use phase 1 (52.506581ms)
+✔ old completed bosses, lilies, golden lilies and best scores stay untouched; replay starts in phase 1 (0.562195ms)
+✔ two-board targets, final oranges and unchanged 3150 score ceiling; phase 1 grants no golden (0.707945ms)
+✔ transition and hidden time are not counted by the shared active clock (0.274332ms)
+✔ new content and module are precached; unchanged remote ranking remains disabled (0.581875ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 625.102528

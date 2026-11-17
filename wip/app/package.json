@@ -7,14 +7,16 @@
   },
   "scripts": {
     "generate": "python3 scripts/retune-v2.py && python3 scripts/build-sw.py",
-    "test:unit": "node --test tests/unit.test.js tests/powers.test.js tests/v31.test.js tests/v4.test.js tests/updates.test.js tests/rewards.test.js tests/v41.test.js tests/v42.test.js tests/v43.test.js tests/v43-build.test.js tests/v43-wrongcapy.test.js tests/v431.test.js tests/v50.test.js tests/v50-score.test.js tests/v50-leaderboard.test.js",
+    "test:unit": "node --test tests/unit.test.js tests/powers.test.js tests/v31.test.js tests/v4.test.js tests/updates.test.js tests/rewards.test.js tests/v41.test.js tests/v42.test.js tests/v43.test.js tests/v43-build.test.js tests/v43-wrongcapy.test.js tests/v431.test.js tests/v50.test.js tests/v50-score.test.js tests/v50-leaderboard.test.js tests/boss-phases.test.js",
     "test:e2e": "playwright test",
     "test": "npm run test:unit && npm run test:e2e",
     "start": "python3 -m http.server 8765 --bind 127.0.0.1",
     "screenshots:sheet": "python3 scripts/contact-sheet-v3.py",
-    "test:v50": "node --test tests/v50.test.js tests/v50-score.test.js tests/v50-leaderboard.test.js",
+    "test:v50": "node --test tests/v50.test.js tests/v50-score.test.js tests/v50-leaderboard.test.js tests/boss-phases.test.js",
     "test:e2e:v50": "playwright test --config playwright.v50.config.js",
-    "verify:crates:v50": "python3 scripts/verify-crates-v50.py"
+    "verify:crates:v50": "python3 scripts/verify-crates-v50.py",
+    "test:bosses": "node --test tests/boss-phases.test.js",
+    "test:e2e:bosses": "playwright test --config playwright.boss.config.js"
   },
   "keywords": [],
   "author": "",
