@@ -1,3 +1,6 @@
+> Subsequently published with explicit approval. See [PUBLISHED.md](PUBLISHED.md)
+> for the production commit, public checks and rollback reference.
+
 # Two-phase bosses — v5.0 WIP
 
 Scope: all 15 bosses, ponds 9/19/29/39/49/59/69/79/89/99/109/119/129/139/149.

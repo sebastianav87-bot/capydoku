@@ -1,3 +1,8 @@
+## Two-phase bosses publication
+
+Published with explicit approval; see `reports/boss-phases/PUBLISHED.md`.
+The earlier WIP status below describes the pre-publication snapshot.
+
 ## Two-phase boss WIP (not published)
 
 All 15 bosses now have two phases. See `reports/boss-phases/README.md` for

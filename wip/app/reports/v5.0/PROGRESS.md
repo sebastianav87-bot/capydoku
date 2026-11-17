@@ -1,3 +1,8 @@
+# Published: two-phase bosses
+
+The feature is now live with explicit approval; see
+[publication report](../boss-phases/PUBLISHED.md). Earlier WIP notes below are historical.
+
 # Current WIP: two-phase bosses (NOT published)
 
 All 15 second boards are implemented and solver-verified. Checkpoints, cumulative
