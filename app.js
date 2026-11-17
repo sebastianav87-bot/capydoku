@@ -233,7 +233,7 @@ function saveRound() {
   persist();
 }
 function shell(cls, inner) {
-  root.innerHTML = `<section class="screen ${cls}" data-world="${tintWorld + 1}">${inner}<div class="art-tag">AI illustration</div>${warning ? `<div class="persistent-warning" role="status">${warning}</div>` : ""}</section>`;
+  root.innerHTML = `<section class="screen ${cls}" data-world="${tintWorld + 1}">${inner}${warning ? `<div class="persistent-warning" role="status">${warning}</div>` : ""}</section>`;
 }
 function capyBadge(where = "home") {
   return `<button class="capy-badge ${where === "game" ? "mini" : ""}" data-action="switchCapy" aria-label="Switch capy"><img src="${sprite(progress.selected)}" alt="">${where !== "game" ? `<span><strong>${progress.selected}</strong><small>${where === "collection" ? "Tap to switch" : "Your capy"}</small></span>` : ""}<b aria-hidden="true">⇄</b></button>`;
@@ -847,7 +847,20 @@ function transformBoss() {
   for (const i of solutionCells(previousPuzzle)) {
     const cell = grid.querySelector(`[data-cell="${i}"]`);
     cell.classList.add(i === survivor ? 'boss-staying' : 'boss-sinking');
-    if (i !== survivor) cell.style.setProperty('--sink-delay', `${300 + order++ * 90}ms`);
+    if (i !== survivor) {
+      const delay = 300 + order++ * 90;
+      cell.style.setProperty('--sink-delay', `${delay}ms`);
+      if (!reduced) {
+        // Decoration lives above the grid, so the clipped sinking capy does not clip its dust.
+        const dust = document.createElement('span'), box = cell.getBoundingClientRect(), bounds = grid.getBoundingClientRect();
+        dust.className = 'boss-earth';
+        dust.setAttribute('aria-hidden', 'true');
+        dust.style.cssText = `left:${box.left-bounds.left}px;top:${box.top-bounds.top}px;width:${box.width}px;height:${box.height}px;--sink-delay:${delay}ms`;
+        dust.innerHTML = Array.from({length:7},(_,k)=>`<i class="dust-puff" style="--dx:${[-62,-38,-12,20,48,65,4][k]*box.width/100}px;--dy:${[-35,-68,-85,-72,-44,-18,-40][k]*box.height/100}px;--turn:${k%2?14:-18}deg;--size:${[45,55,48,60,42,36,52][k]}%;--lag:${k*13}ms"></i>`).join('') +
+          Array.from({length:4},(_,k)=>`<i class="earth-crumb" style="--dx:${[-65,-30,38,70][k]*box.width/100}px;--dy:${[-24,-48,-38,-12][k]*box.height/100}px;--turn:${k%2?90:-75}deg;--lag:${k*18}ms"></i>`).join('');
+        grid.append(dust);
+      }
+    }
   }
   puzzle = nextPuzzle; state = nextState;
   solveOrder = [survivor];
