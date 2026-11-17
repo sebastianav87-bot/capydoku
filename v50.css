@@ -126,3 +126,27 @@
 .screen.game.chrome-v5.fit-compact .thumbbar .power-tool .power-face,.screen.game.chrome-v5.fit-tight .thumbbar .power-tool .power-face{width:22px!important;height:22px!important}
 .screen.game.chrome-v5.fit-compact .thumbbar .power-tool strong,.screen.game.chrome-v5.fit-tight .thumbbar .power-tool strong{line-height:12px!important}
 .screen.game.chrome-v5.fit-compact .thumbbar .power-tool small,.screen.game.chrome-v5.fit-tight .thumbbar .power-tool small{line-height:10px!important}
+
+/* Two-phase bosses: one persistent friend, one grid, new regions. */
+.boss-phase{flex:0 0 auto;min-height:24px;margin:3px 12px 0;text-align:center;color:var(--ink-header);font-size:13px;font-weight:900;line-height:18px}
+.boss-phase span{margin-left:8px;font-size:11px;font-weight:700}
+.boss-survivor{outline:3px solid #D6A642;outline-offset:-4px}
+.boss-survivor .capy{transform:translateY(8%) scale(.88);transform-origin:bottom}
+.boss-shifting .pond-wrap{isolation:isolate}
+.boss-shifting .cell{position:relative;overflow:hidden}
+.boss-shifting .boss-sinking::after{content:"";position:absolute;inset:44% 5% 5%;border-radius:50%;background:radial-gradient(ellipse,#433325 0 45%,#8F6D47 50%,transparent 70%);z-index:0;animation:boss-ground .35s ease-out var(--sink-delay) both}
+.boss-shifting .boss-sinking .capy{position:relative;z-index:1;animation:boss-sink .5s cubic-bezier(.4,-.35,.7,1) var(--sink-delay) both}
+.boss-shifting .lock-badge,.boss-shifting .zone-mark{visibility:hidden}
+.boss-shifting .boss-staying{outline:3px solid #D6A642;outline-offset:-4px}
+.boss-shifting .boss-staying .capy{animation:boss-peek 1.2s ease-in-out both;position:relative;z-index:2}
+.boss-shifting .zone-grid::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:5;background:radial-gradient(ellipse at center,#E7D6ACAA,transparent 70%);opacity:0;animation:boss-dust .5s ease-out 1s both}
+.boss-revealed .zone-outline{animation:boss-regions .4s ease-out}
+@keyframes boss-ground{from{transform:scaleX(.1);opacity:0}to{transform:scaleX(1);opacity:1}}
+@keyframes boss-sink{0%{transform:translateY(0) rotate(0);opacity:1}25%{transform:translateY(-10%) rotate(-7deg)}100%{transform:translateY(110%) rotate(12deg);opacity:0}}
+@keyframes boss-peek{0%,25%{transform:translateY(0)}55%{transform:translateY(40%) scale(.85)}100%{transform:translateY(8%) scale(.88)}}
+@keyframes boss-dust{0%,100%{opacity:0}50%{opacity:1}}
+@keyframes boss-regions{from{opacity:.25}to{opacity:1}}
+.boss-shifting[data-reduced="true"] .boss-sinking .capy{animation:none;opacity:0}
+.boss-shifting[data-reduced="true"] .boss-staying .capy{animation:none;transform:none}
+.boss-shifting[data-reduced="true"] .zone-grid::after,.boss-shifting[data-reduced="true"] .boss-sinking::after{animation:none}
+@media(prefers-reduced-motion:reduce){.boss-revealed .zone-outline,.boss-shifting .capy,.boss-shifting .zone-grid::after,.boss-shifting .cell::after{animation:none!important}}

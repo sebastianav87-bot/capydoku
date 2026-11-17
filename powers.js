@@ -94,7 +94,7 @@ export function undoChanges(s, cells, p = null) {
   return undoAttempt(s, cells, p).cells.some((v, i) => v !== s.cells[i]);
 }
 export function awardPureBoss(progress, p, s, daily = false) {
-  if (solved(p, s.cells) && !daily && isBoss(p.id) && !s.power.used && !progress.goldenLilies.includes(p.id)) {
+  if (solved(p, s.cells) && (!s.boss || s.boss.phase === 2) && !daily && isBoss(p.id) && !s.power.used && !progress.goldenLilies.includes(p.id)) {
     progress.goldenLilies.push(p.id);
     return true;
   }

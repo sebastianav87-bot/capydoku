@@ -18,9 +18,9 @@ export function crateOranges(moves, par) {
   return moves <= par ? 3 : moves <= 1.25 * par ? 2 : moves <= 1.5 * par ? 1 : 0;
 }
 /** Logic pond. `oranges` = regular oranges left (0–3; the crate spare is not counted). */
-export function logicScore({ id, n, oranges, seconds, helped = false }) {
+export function logicScore({ id, n, oranges, seconds, helped = false, phases = 1 }) {
   const o = Math.max(0, Math.min(3, Number.isInteger(oranges) ? oranges : 0));
-  const raw = (SCORE_BASE + PER_ORANGE * o + timeBonus(seconds, TARGET_SECONDS[n])) * (helped ? HELP_FACTOR : 1) * (isBoss(id) ? ROLE_FACTOR : 1);
+  const raw = (SCORE_BASE + PER_ORANGE * o + timeBonus(seconds, TARGET_SECONDS[n] * (phases === 2 ? 2 : 1))) * (helped ? HELP_FACTOR : 1) * (isBoss(id) ? ROLE_FACTOR : 1);
   return Math.round(raw);
 }
 export function crateScore({ id, moves, par, seconds, shown = false }) {

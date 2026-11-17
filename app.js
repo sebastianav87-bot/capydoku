@@ -10,7 +10,9 @@ import {
   emptyLilies,
   duration,
   targetMs,
+  pondTargetMs,
 } from "./rewards.js";
+import { bossPhase, bossBoard, freshBossAttempt, phaseTwoAttempt, restoreBoss } from "./bosses.js";
 import { BUILD } from "./build-info.js";
 import { createUpdateManager, updateNotice } from "./updates.js";
 import {
@@ -160,7 +162,7 @@ function syncClock() {
     state.metrics.elapsedMs = Math.max(state.metrics.elapsedMs, clock.metrics?.elapsedMs || 0);
     clock.bind(state.metrics);
   }
-  clock.sync(view === "game" && !modal && !tutorial && !document.hidden);
+  clock.sync(view === "game" && state?.lives > 0 && !modal && !tutorial && !document.hidden);
 }
 function beginTiming() {
   if (tutorial || modal || view !== "game") return;
@@ -225,6 +227,7 @@ function saveRound() {
   if (tutorial?.replay) return;
   syncClock();
   clock.flush();
+  if (state.boss) state.boss.updatedAt = Date.now();
   progress.sessions[sessionKey()] = { ...state, cells: [...state.cells], signature: boardSignature(puzzle) };
   persist();
 }
@@ -288,9 +291,10 @@ function rememberHub(on) {
 }
 function inProgress(id) {
   if (!id || isCrate(id)) return false;
-  const q = data.levels[id - 1],
-    saved = progress.sessions[`pond-${id}`];
-  return !!(q && saved?.cells?.some(Boolean) && saved.signature === boardSignature(q) && saved.cells.length === q.n * q.n && !solved(q, saved.cells) && saved.lives > 0);
+  const saved = progress.sessions[`pond-${id}`],
+    q = isBoss(id) ? bossBoard(data, id, bossPhase(saved)) : data.levels[id - 1];
+  return !!(q && saved?.cells?.some(Boolean) && saved.signature === boardSignature(q) && saved.cells.length === q.n * q.n &&
+    (saved.boss?.phase === 2 && !saved.boss.rewarded || !solved(q, saved.cells) && saved.lives > 0));
 }
 function currentPond() {
   return progress.completed.length >= POND_COUNT ? null : unlocked(progress);
@@ -302,7 +306,11 @@ function launch() {
   try {
     onHub = sessionStorage.getItem(HUB_KEY) === "1";
   } catch {}
-  const next = currentPond();
+  const checkpoint = Object.entries(progress.sessions)
+    .filter(([key, s]) => /^pond-/.test(key) && s.boss?.phase === 2 && !s.boss.rewarded)
+    .sort((a, b) => (b[1].boss.updatedAt || 0) - (a[1].boss.updatedAt || 0))
+    .map(([key]) => Number(key.slice(5))).find((id) => inProgress(id));
+  const next = checkpoint || currentPond();
   if (!onHub && inProgress(next)) start(next);
   else home();
 }
@@ -360,7 +368,7 @@ function transition(id) {
   }
   shell(
     `transition hub ${boss ? "boss-transition" : ""}`,
-    `${hubBar()}<div class="transition-card" data-level="${id}" data-role="${role(id)}"><small class="transition-kicker">${resume ? "In progress" : newWorld ? "New world" : boss ? "Boss pond" : "Next pond"}</small><h1>${boss ? "Boss " : ""}Pond ${id}</h1><p class="transition-world">World ${k + 1} · ${WORLDS[k]} · ${q.n}×${q.n}${q.rocks.length ? ` · ${q.rocks.length} rock${q.rocks.length > 1 ? "s" : ""}` : ""}</p>${boss ? `<img class="transition-boss" src="${bossAsset(id, bs)}" alt=""><div class="boss-info"><strong>The world's toughest pond</strong><small>The crate gate after it grows your Hot Spring.<br>Clear it without your power for a golden lily.</small></div>` : hubCapy()}${newWorld ? '<p class="transition-note">A gentler pond to warm up in the new world.</p>' : ""}${spare ? `<p class="transition-spare"><i class="orange spare" aria-hidden="true"></i>Spare orange ready · from the crate pond</p>` : ""}<section class="solve-lilies transition-lilies" aria-label="Lilies for this pond"><strong>Lilies · ${lilyCount(r)}/3</strong>${lilyDetails(r, q.n)}</section><button class="primary" data-action="enterPond" data-level="${id}" data-entry-primary>${resume ? "Continue" : "Start"} ${boss ? "boss " : ""}pond ${id}</button>${hubTiles()}</div>`,
+    `${hubBar()}<div class="transition-card" data-level="${id}" data-role="${role(id)}"><small class="transition-kicker">${resume ? "In progress" : newWorld ? "New world" : boss ? "Boss pond" : "Next pond"}</small><h1>${boss ? "Boss " : ""}Pond ${id}</h1><p class="transition-world">World ${k + 1} · ${WORLDS[k]} · ${q.n}×${q.n}${q.rocks.length ? ` · ${q.rocks.length} rock${q.rocks.length > 1 ? "s" : ""}` : ""}</p>${boss ? `<img class="transition-boss" src="${bossAsset(id, bs)}" alt=""><div class="boss-info"><strong>Two phases · one boss pond</strong><small>The crate gate after it grows your Hot Spring.<br>Clear both phases without your power for a golden lily.</small></div>` : hubCapy()}${newWorld ? '<p class="transition-note">A gentler pond to warm up in the new world.</p>' : ""}${spare ? `<p class="transition-spare"><i class="orange spare" aria-hidden="true"></i>Spare orange ready · from the crate pond</p>` : ""}<section class="solve-lilies transition-lilies" aria-label="Lilies for this pond"><strong>Lilies · ${lilyCount(r)}/3</strong>${lilyDetails(r, q.n, null, boss ? 2 : 1)}</section><button class="primary" data-action="enterPond" data-level="${id}" data-entry-primary>${resume ? "Continue" : "Start"} ${boss ? "boss " : ""}pond ${id}</button>${hubTiles()}</div>`,
   );
   showVersionNotice();
 }
@@ -412,11 +420,16 @@ function start(id, daily = false, retry = false) {
     persist();
   }
   const k = sessionKey(),
-    saved = progress.sessions[k];
+    saved = progress.sessions[k],
+    boss = !daily && isBoss(id),
+    resumeSecond = boss && saved?.boss?.phase === 2 && (!retry || !saved.boss.rewarded);
+  if (boss) puzzle = bossBoard(data, id, resumeSecond ? 2 : 1);
   state =
     !retry && saved && saved.signature === boardSignature(puzzle) && saved.cells.length === puzzle.n * puzzle.n
       ? dropWrongCapys(puzzle, { cells: [...saved.cells], lives: saved.lives, ...cleanAttempt(saved, saved.cells.length) })
-      : newAttempt(puzzle.n);
+      : resumeSecond && retry ? phaseTwoAttempt(puzzle, saved)
+      : boss ? freshBossAttempt(puzzle) : newAttempt(puzzle.n);
+  if (boss) state = restoreBoss(puzzle, state);
   // v4.2: a spare orange earned in the crate bonus joins the first attempt on the pond it was earned for.
   if (!daily && claimSpare(progress.bonus, puzzle.id)) state = { ...state, spare: 1 };
   state = withLocks(puzzle, state);
@@ -430,9 +443,8 @@ function start(id, daily = false, retry = false) {
   view = "game";
   renderGame();
   if (solved(puzzle, state.cells)) {
-    view = "solved";
-    renderGame();
-    animateJump();
+    if (state.boss && !state.boss.rewarded) complete();
+    else { view = "solved"; renderGame(); animateJump(); }
   } else if (state.lives === 0) gameOver();
   if (!modal) maybeRockIntro();
   if (!daily && id === 1 && !progress.tutorialSeen && view === "game") startTutorial(false);
@@ -472,7 +484,7 @@ function boardHTML() {
         isbad = bad.has(i),
         hi = state.power.peekCell === i && peekVisible(),
         zoneDone = doneZones.has(puzzle.zones[i]);
-      return `<button class="cell ${locked ? "capy-locked" : ""} ${isbad ? "bad" : ""} ${hi ? "peeked" : ""} ${zoneDone ? "zone-solved" : ""} ${i === lastMove ? "last-move" : ""}" data-cell="${i}" data-value="${v}" aria-label="Row ${Math.floor(i / puzzle.n) + 1}, column ${(i % puzzle.n) + 1}, zone ${puzzle.zones[i] + 1}, ${rock ? "rock" : v === 2 ? (isbad ? "capy, conflict" : "capy") : v === 1 ? "X" : "empty"}${locked ? ", locked correct capy" : ""}${zoneDone ? ", zone done" : ""}${i === lastMove ? ", last move" : ""}${hi ? ", Peek glow" : ""}" ${view === "solved" ? "disabled" : ""} ${rock ? 'aria-disabled="true" data-rock="true"' : ""} style="--zone-gradient:linear-gradient(145deg,${colors[puzzle.zones[i]][0]},${colors[puzzle.zones[i]][1]});background:var(--zone-gradient)">${pattern(puzzle.zones[i])}${marks.has(i) ? '<span class="zone-mark" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2.5 6.5 5 9l4.5-6"/></svg></span>' : ""}${rock ? '<img class="rock-art" src="assets/rock.png" alt="">' : v === 1 ? '<span class="xmark">×</span>' : v === 2 ? `<img class="capy" alt="" src="${pieceSprite()}">${locked ? '<span class="lock-badge" aria-hidden="true"><svg viewBox="0 0 12 12"><rect x="2.5" y="5.5" width="7" height="5" rx="1"/><path d="M4 5.5V4a2 2 0 0 1 4 0v1.5"/></svg></span>' : ""}` : hi ? `<img class="peek-ghost" src="${pieceSprite()}" alt="Peek ghost">` : ""}</button>`;
+      return `<button class="cell ${locked ? "capy-locked" : ""} ${isbad ? "bad" : ""} ${hi ? "peeked" : ""} ${zoneDone ? "zone-solved" : ""} ${i === lastMove ? "last-move" : ""} ${puzzle.fixed?.includes(i) ? "boss-survivor" : ""}" data-cell="${i}" data-value="${v}" aria-label="Row ${Math.floor(i / puzzle.n) + 1}, column ${(i % puzzle.n) + 1}, zone ${puzzle.zones[i] + 1}, ${rock ? "rock" : v === 2 ? (isbad ? "capy, conflict" : "capy") : v === 1 ? "X" : "empty"}${locked ? ", locked correct capy" : ""}${puzzle.fixed?.includes(i) ? ", fixed friend from phase 1" : ""}${zoneDone ? ", zone done" : ""}${i === lastMove ? ", last move" : ""}${hi ? ", Peek glow" : ""}" ${view === "solved" ? "disabled" : ""} ${rock ? 'aria-disabled="true" data-rock="true"' : ""} style="--zone-gradient:linear-gradient(145deg,${colors[puzzle.zones[i]][0]},${colors[puzzle.zones[i]][1]});background:var(--zone-gradient)">${pattern(puzzle.zones[i])}${marks.has(i) ? '<span class="zone-mark" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2.5 6.5 5 9l4.5-6"/></svg></span>' : ""}${rock ? '<img class="rock-art" src="assets/rock.png" alt="">' : v === 1 ? '<span class="xmark">×</span>' : v === 2 ? `<img class="capy" alt="" src="${pieceSprite()}">${locked ? '<span class="lock-badge" aria-hidden="true"><svg viewBox="0 0 12 12"><rect x="2.5" y="5.5" width="7" height="5" rx="1"/><path d="M4 5.5V4a2 2 0 0 1 4 0v1.5"/></svg></span>' : ""}` : hi ? `<img class="peek-ghost" src="${pieceSprite()}" alt="Peek ghost">` : ""}</button>`;
     })
     .join("")}</div></div>`;
 }
@@ -489,10 +501,13 @@ function renderGame() {
     compact = v5Chrome();
   shell(
     `game ${clear ? "solved" : ""} ${compact && !clear ? "chrome-v5" : ""}`,
-    `${compact && !clear ? compactHeaderHTML(label, count) : `<header class="topbar"><button class="level-pill" data-action="home" aria-label="Back to home">‹ ${clear ? label : ""}</button>${clear ? "" : '<button class="help-btn" data-action="rules" aria-label="Rules">?</button>'}${clear ? `<div class="solved-counter" aria-label="${count} of ${puzzle.n} capys"><img src="${pieceSprite()}" alt=""><strong>${count}/${puzzle.n}</strong></div>` : `<h2>${label}${isDaily ? ` · ${puzzle.date.slice(5)}` : ""}</h2><div class="top-counter"><img src="${pieceSprite()}" alt=""><strong class="capy-counter-total">${count}/${puzzle.n}</strong></div>`}${clear ? "" : `<div class="life-area"><div class="lives" data-lives="${state.lives}" data-spare="${state.spare ? 1 : 0}" aria-label="${state.lives} oranges left${state.spare ? " plus 1 spare orange" : ""}">${[0, 1, 2].map((i) => `<span class="orange ${i >= state.lives ? "used" : ""}"></span>`).join("")}${state.spare ? '<span class="orange spare" title="Spare orange · this pond only"></span>' : ""}</div>${state.power.napRemaining ? `<span class="nap-badge">Nap · ${state.power.napRemaining}</span>` : ""}</div>`}</header>`}${clear ? '<div class="banner" role="status">Pond cleared</div>' : compact ? "" : ruleCards()}${boardHTML()}<section class="lower">${clear ? `<div class="spring celebration" data-phase="gather"><div class="steam"></div><div class="dock"></div>${progress.completed.includes(10) ? '<div class="lantern l1"></div><div class="lantern l2"></div>' : ""}<div class="ripples">${Array.from({ length: puzzle.n }, (_, i) => `<i class="splash-ring" style="--i:${i};--land:${landingAt(i)}ms;left:${((i + 0.5) * 100) / puzzle.n}%"></i>`).join("")}</div><div class="steam-puffs"><i></i><i></i><i></i></div><div class="jumpers" style="--count:${puzzle.n}">${Array.from({ length: puzzle.n }, (_, i) => `<img class="soaking-capy" src="${pieceSprite("swim")}" alt="" style="--i:${i};--land:${landingAt(i)}ms;--soak-x:${[18, 65, 34, 80, 17, 59, 45, 28, 74, 50][i]}%;--soak-y:${[42, 46, 65, 66, 82, 83, 56, 54, 58, 72][i]}%">`).join("")}</div>${pureReward ? `<span class="reward-lily golden-lily" role="img" aria-label="Golden lily pad reward" style="--reaction:${reactionAt(puzzle.n)}ms">✦<small>${puzzle.id}</small></span>` : ""}<div class="reaction" style="--reaction:${reactionAt(puzzle.n)}ms"><img src="${sprite(progress.selected, "portrait")}" alt=""><span>Ahh…</span></div>${state.lives ? `<div class="orange-saved" style="--reaction:${reactionAt(puzzle.n)}ms">🍊 ${state.lives} kept</div>` : ""}</div>${lilyResultsHTML()}<p class="sub">${reward ? `${pureReward ? "Pure solve · Golden lily pad" : "Boss cleared · the crate gate is next!"}` : isDaily ? `Splash! ${streakAt(progress, puzzle.day)} day streak` : "Splash! Into the hot spring"}</p><div class="chips"><button class="chip" data-action="collection">♨ Hot Spring</button><button class="chip primary" data-action="next">Next pond →</button></div>` : (compact ? thumbLowerHTML() : `${state.spare ? '<p class="tap-hint spare-hint"><i class="orange spare mini" aria-hidden="true"></i><span><strong>Spare orange · this pond only</strong> · used first if you slip; mistakes still count</span></p>' : '<p class="tap-hint">Tap × · Double-tap capy · Drag ×</p>'}${messageCardHTML()}<div class="controls"><button class="undo-round" data-action="undo" aria-label="Undo" ${history.some((h) => undoChanges(state, h.cells, puzzle)) ? "" : "disabled"}><span class="round-icon neutral-undo"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M37 24H11m0 0 12-12M11 24l12 12"/></svg></span><strong>Undo</strong></button>${powerButton()}</div>`)}</section>`,
+    `${compact && !clear ? compactHeaderHTML(label, count) : `<header class="topbar"><button class="level-pill" data-action="home" aria-label="Back to home">‹ ${clear ? label : ""}</button>${clear ? "" : '<button class="help-btn" data-action="rules" aria-label="Rules">?</button>'}${clear ? `<div class="solved-counter" aria-label="${count} of ${puzzle.n} capys"><img src="${pieceSprite()}" alt=""><strong>${count}/${puzzle.n}</strong></div>` : `<h2>${label}${isDaily ? ` · ${puzzle.date.slice(5)}` : ""}</h2><div class="top-counter"><img src="${pieceSprite()}" alt=""><strong class="capy-counter-total">${count}/${puzzle.n}</strong></div>`}${clear ? "" : `<div class="life-area"><div class="lives" data-lives="${state.lives}" data-spare="${state.spare ? 1 : 0}" aria-label="${state.lives} oranges left${state.spare ? " plus 1 spare orange" : ""}">${[0, 1, 2].map((i) => `<span class="orange ${i >= state.lives ? "used" : ""}"></span>`).join("")}${state.spare ? '<span class="orange spare" title="Spare orange · this pond only"></span>' : ""}</div>${state.power.napRemaining ? `<span class="nap-badge">Nap · ${state.power.napRemaining}</span>` : ""}</div>`}</header>`}${!isDaily && state.boss && !clear ? bossBadgeHTML() : ""}${clear ? '<div class="banner" role="status">Pond cleared</div>' : compact ? "" : ruleCards()}${boardHTML()}<section class="lower">${clear ? `<div class="spring celebration" data-phase="gather"><div class="steam"></div><div class="dock"></div>${progress.completed.includes(10) ? '<div class="lantern l1"></div><div class="lantern l2"></div>' : ""}<div class="ripples">${Array.from({ length: puzzle.n }, (_, i) => `<i class="splash-ring" style="--i:${i};--land:${landingAt(i)}ms;left:${((i + 0.5) * 100) / puzzle.n}%"></i>`).join("")}</div><div class="steam-puffs"><i></i><i></i><i></i></div><div class="jumpers" style="--count:${puzzle.n}">${Array.from({ length: puzzle.n }, (_, i) => `<img class="soaking-capy" src="${pieceSprite("swim")}" alt="" style="--i:${i};--land:${landingAt(i)}ms;--soak-x:${[18, 65, 34, 80, 17, 59, 45, 28, 74, 50][i]}%;--soak-y:${[42, 46, 65, 66, 82, 83, 56, 54, 58, 72][i]}%">`).join("")}</div>${pureReward ? `<span class="reward-lily golden-lily" role="img" aria-label="Golden lily pad reward" style="--reaction:${reactionAt(puzzle.n)}ms">✦<small>${puzzle.id}</small></span>` : ""}<div class="reaction" style="--reaction:${reactionAt(puzzle.n)}ms"><img src="${sprite(progress.selected, "portrait")}" alt=""><span>Ahh…</span></div>${state.lives ? `<div class="orange-saved" style="--reaction:${reactionAt(puzzle.n)}ms">🍊 ${state.lives} kept</div>` : ""}</div>${lilyResultsHTML()}<p class="sub">${reward ? `${pureReward ? "Pure solve · Golden lily pad" : "Boss cleared · the crate gate is next!"}` : isDaily ? `Splash! ${streakAt(progress, puzzle.day)} day streak` : "Splash! Into the hot spring"}</p><div class="chips"><button class="chip" data-action="collection">♨ Hot Spring</button><button class="chip primary" data-action="next">Next pond →</button></div>` : (compact ? thumbLowerHTML() : `${state.spare ? '<p class="tap-hint spare-hint"><i class="orange spare mini" aria-hidden="true"></i><span><strong>Spare orange · this pond only</strong> · used first if you slip; mistakes still count</span></p>' : '<p class="tap-hint">Tap × · Double-tap capy · Drag ×</p>'}${messageCardHTML()}<div class="controls"><button class="undo-round" data-action="undo" aria-label="Undo" ${history.some((h) => undoChanges(state, h.cells, puzzle)) ? "" : "disabled"}><span class="round-icon neutral-undo"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M37 24H11m0 0 12-12M11 24l12 12"/></svg></span><strong>Undo</strong></button>${powerButton()}</div>`)}</section>`,
   );
+  if (state.boss) root.querySelector(".screen").dataset.bossPhase = String(bossPhase(state));
   if (focusedCell !== undefined) root.querySelector(`[data-cell="${focusedCell}"]`)?.focus({ preventScroll: true });
+  const renderedPuzzle = puzzle;
   requestAnimationFrame(() => {
+    if (puzzle !== renderedPuzzle || view === "bossTransform") return;
     drawOutlines();
     if (tutorial) renderTutorial();
   });
@@ -802,8 +817,54 @@ function tap(i) {
     }, DOUBLE_TAP_MS),
   };
 }
-function complete() {
+function bossBadgeHTML() {
+  return `<p class="boss-phase" tabindex="-1" role="status" aria-live="polite">Phase ${bossPhase(state)} of 2${bossPhase(state) === 2 ? '<span>One friend stayed · new regions</span>' : ''}</p>`;
+}
+function transformBoss() {
   clock.pause();
+  cancelTap();
+  const previousPuzzle = puzzle, previousState = state,
+    nextPuzzle = bossBoard(data, puzzle.id, 2),
+    nextState = withLocks(nextPuzzle, phaseTwoAttempt(nextPuzzle, state)),
+    token = ++roundToken,
+    survivor = nextPuzzle.fixed[0],
+    reduced = matchMedia("(prefers-reduced-motion:reduce)").matches;
+  // Persist the playable next phase first. A reload at ANY animation frame resumes it.
+  puzzle = nextPuzzle; state = nextState; view = "bossTransform";
+  clock.bind(state.metrics);
+  history = []; currentHint = null;
+  saveRound();
+  puzzle = previousPuzzle; state = previousState;
+  renderGame(); drawOutlines();
+  const screen = root.querySelector('.screen'), grid = root.querySelector('.zone-grid');
+  screen.classList.add('boss-shifting');
+  screen.dataset.reduced = String(reduced);
+  root.querySelector('.boss-phase').textContent = 'Phase 1 complete · one friend is staying…';
+  grid.setAttribute('aria-label', 'The ground opens. One capy stays for phase 2.');
+  root.querySelectorAll('button').forEach((b) => b.disabled = true);
+  let order = 0;
+  for (const i of solutionCells(previousPuzzle)) {
+    const cell = grid.querySelector(`[data-cell="${i}"]`);
+    cell.classList.add(i === survivor ? 'boss-staying' : 'boss-sinking');
+    if (i !== survivor) cell.style.setProperty('--sink-delay', `${300 + order++ * 90}ms`);
+  }
+  puzzle = nextPuzzle; state = nextState;
+  solveOrder = [survivor];
+  setTimeout(() => {
+    if (token !== roundToken || view !== 'bossTransform') return;
+    view = 'game'; modal = null; lastMove = survivor; lastWhy = null;
+    renderGame();
+    root.querySelector('.screen').classList.add('boss-revealed');
+    root.querySelector('.boss-phase')?.focus({ preventScroll: true });
+    saveRound();
+  }, reduced ? 200 : 900 + order * 90);
+}
+
+function complete() {
+  if (!isDaily && state.boss?.phase === 1) { transformBoss(); return; }
+  if (state.boss?.rewarded) return;
+  clock.pause();
+  if (state.boss) state.boss.rewarded = true;
   lastLilyResult = awardLilies(progress, puzzle, state.metrics, isDaily);
   // v5.0: pond score (not for the Daily). Unknown time (an attempt from an older version) earns no time bonus.
   lastScore = isDaily
@@ -817,6 +878,7 @@ function complete() {
           oranges: state.lives,
           seconds: state.metrics.known && state.metrics.started ? state.metrics.elapsedMs / 1000 : Infinity,
           helped: state.power.used && state.power.kind === "secondChance",
+          phases: state.boss ? 2 : 1,
         }),
       );
   cancelTap();
@@ -1179,7 +1241,7 @@ function rulesSheet() {
       .map(([a, b], i) => `<li><span>${i + 1}</span><div><strong>${a}</strong><small>${b}</small></div></li>`)
       .join(
         "",
-      )}</ol><p class="mistake-rule"><strong>Wrong spot?</strong> The capy hops right back out and costs an orange. If it breaks a rule, the row, column, zone or touching capy lights up; if it breaks none, it just <em>doesn't fit the solution</em>. Right spots lock in place.</p><p class="power-brief">Same puzzle rules for every buddy.<br>One power per attempt · Three oranges.<br>Lily time target: ${duration(targetMs(puzzle.n))}. No countdown.</p><button class="primary replay-tutorial" data-action="replayTutorial">↻ Replay tutorial</button><small class="replay-sub">A quick, hands-on reminder</small><button class="sheet-done" data-action="closeRules">Back to pond</button></section>`,
+      )}</ol><p class="mistake-rule"><strong>Wrong spot?</strong> The capy hops right back out and costs an orange. If it breaks a rule, the row, column, zone or touching capy lights up; if it breaks none, it just <em>doesn't fit the solution</em>. Right spots lock in place.</p><p class="power-brief">Same puzzle rules for every buddy.<br>One power per attempt · Three oranges.<br>Lily time target: ${duration(pondTargetMs(puzzle))}. No countdown.</p><button class="primary replay-tutorial" data-action="replayTutorial">↻ Replay tutorial</button><small class="replay-sub">A quick, hands-on reminder</small><button class="sheet-done" data-action="closeRules">Back to pond</button></section>`,
   );
   root.querySelector(".sheet-done").focus();
 }
@@ -1478,6 +1540,9 @@ try {
   const res = await fetch("./levels.json");
   if (!res.ok) throw Error("content");
   data = await res.json();
+  const bossResponse = await fetch("./boss-levels.json");
+  if (!bossResponse.ok) throw Error("boss content");
+  data.bosses = (await bossResponse.json()).levels;
   loaded = load(storage, data);
   await bonus.ensureLevels().catch(() => {}); // rev b: the hub can open on a crate pond, so its par/thumbnail must be ready before the first render.
   progress = loaded.progress;
@@ -1681,7 +1746,7 @@ function progressLedger() {
 }
 function lilyResultsHTML() {
   const r = (isDaily ? progress.dailyLilies[puzzle.date] : progress.lilies[puzzle.id]) || emptyLilies();
-  return `<div class="solve-time">${state.metrics.known ? `${duration(state.metrics.elapsedMs)} · ${state.metrics.mistakes} mistake${state.metrics.mistakes === 1 ? "" : "s"}` : "Earlier attempt · time and mistakes not recorded"}</div><section class="solve-lilies" aria-label="Lilies for this pond"><strong>Lilies for this pond · ${lilyCount(r)}/3</strong>${lilyDetails(r, puzzle.n, lastLilyResult?.newly)}</section>${scoreLine()}`;
+  return `<div class="solve-time">${state.metrics.known ? `${duration(state.metrics.elapsedMs)} · ${state.metrics.mistakes} mistake${state.metrics.mistakes === 1 ? "" : "s"}` : "Earlier attempt · time and mistakes not recorded"}</div><section class="solve-lilies" aria-label="Lilies for this pond"><strong>Lilies for this pond · ${lilyCount(r)}/3</strong>${lilyDetails(r, puzzle.n, lastLilyResult?.newly, state.boss ? 2 : 1)}</section>${scoreLine()}`;
 }
 
 root.addEventListener("input", (e) => {
