@@ -28,3 +28,5 @@ Remaining limits: physical iPhone behavior is unverified; full historical unit t
 The first parallel campaign run lost its reused HTTP server when another suite finished; double-tap timing also failed under the parallel load. The independent-server, single-worker rerun is the final campaign check (`campaign-recheck.log`, `../v5.0/ranking-recheck-results.json`). Initial logs are retained as diagnostic history, not claimed as passing.
 
 Rollback frontend: `pre-shared-leaderboard-v5.0` → `aa235a4b06c07bd733298776b8beba68325da7f2`. Use a normal revert/release commit restoring that runtime; do not force-push history. Disable `leaderboardApi` and rebuild cache to disconnect the app without deleting the service database.
+
+Published successfully: main `d384a149bcb09e2c53d56cd6cc4f1ade4f9ba4d8`; Pages build completed; **114 live URLs HTTP 200 and byte-identical to tested runtime**. See `PUBLISHED.md` and `live-verification.json`.

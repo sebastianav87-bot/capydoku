@@ -23,7 +23,7 @@ test at tests/v50-leaderboard.test.js:30:3
 ✖ [mock] not joined: nothing queued or sent; local view (5.37255ms)
   AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
   + actual - expected
-  
+
     [
   +   'shared',
   +   undefined,
@@ -31,7 +31,7 @@ test at tests/v50-leaderboard.test.js:30:3
   -   'not-joined',
       'Anonymous capy'
     ]
-  
+
       at TestContext.<anonymous> (file:///workspace/capydoku/wip/app/tests/v50-leaderboard.test.js:35:12)
       at async Test.run (node:internal/test_runner/test:1409:7)
       at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
@@ -47,7 +47,7 @@ test at tests/v50-leaderboard.test.js:30:3
 ✖ [worker] not joined: nothing queued or sent; local view (55.09544ms)
   AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
   + actual - expected
-  
+
     [
   +   'shared',
   +   undefined,
@@ -55,7 +55,7 @@ test at tests/v50-leaderboard.test.js:30:3
   -   'not-joined',
       'Anonymous capy'
     ]
-  
+
       at TestContext.<anonymous> (file:///workspace/capydoku/wip/app/tests/v50-leaderboard.test.js:35:12)
       at async Test.run (node:internal/test_runner/test:1409:7)
       at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {

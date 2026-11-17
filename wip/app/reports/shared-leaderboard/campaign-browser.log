@@ -146,7 +146,7 @@ Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HO
   ✘  80 [webkit-iphone] › tests/v50.spec.js:169:1 › classic touch double-tap and keyboard activation each apply once (353ms)
 
 
-  1) [chromium-360] › tests/v50.spec.js:169:1 › classic touch double-tap and keyboard activation each apply once 
+  1) [chromium-360] › tests/v50.spec.js:169:1 › classic touch double-tap and keyboard activation each apply once
 
     Error: expect(locator).toHaveAttribute(expected) failed
 
@@ -187,7 +187,7 @@ Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HO
 
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
-  2) [chromium-412] › tests/v50.spec.js:169:1 › classic touch double-tap and keyboard activation each apply once 
+  2) [chromium-412] › tests/v50.spec.js:169:1 › classic touch double-tap and keyboard activation each apply once
 
     Error: expect(locator).toHaveAttribute(expected) failed
 
@@ -228,7 +228,7 @@ Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HO
 
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
-  3) [chromium-short] › tests/v50.spec.js:127:29 › crate 150: solve, score, local world top and continue 
+  3) [chromium-short] › tests/v50.spec.js:127:29 › crate 150: solve, score, local world top and continue
 
     Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8765/?lb=none
     Call log:
@@ -260,7 +260,7 @@ Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HO
 
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
-  4) [chromium-short] › tests/v50.spec.js:141:1 › v5.0 cache contains every runtime dependency and reloads offline 
+  4) [chromium-short] › tests/v50.spec.js:141:1 › v5.0 cache contains every runtime dependency and reloads offline
 
     Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8765/?lb=none
     Call log:
@@ -355,7 +355,7 @@ Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HO
 
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
-  7) [chromium-short] › tests/v50.spec.js:169:1 › classic touch double-tap and keyboard activation each apply once 
+  7) [chromium-short] › tests/v50.spec.js:169:1 › classic touch double-tap and keyboard activation each apply once
 
     Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8765/?lb=none
     Call log:
@@ -547,7 +547,7 @@ Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HO
 
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
-  13) [webkit-iphone] › tests/v50.spec.js:76:1 › v4.3.1 completed save continues at 31; lilies, daily and unscored history survive 
+  13) [webkit-iphone] › tests/v50.spec.js:76:1 › v4.3.1 completed save continues at 31; lilies, daily and unscored history survive
 
     Error: page.goto: Could not connect to 127.0.0.1: Connection refused
     Call log:
@@ -578,7 +578,7 @@ Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HO
 
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
-  14) [webkit-iphone] › tests/v50.spec.js:90:1 › published half-played pond 29 resumes with its locked capy and oranges 
+  14) [webkit-iphone] › tests/v50.spec.js:90:1 › published half-played pond 29 resumes with its locked capy and oranges
 
     Error: page.goto: Could not connect to 127.0.0.1: Connection refused
     Call log:
@@ -610,7 +610,7 @@ Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HO
 
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
-  15) [webkit-iphone] › tests/v50.spec.js:97:1 › tools, explanations, locks, undo, rules and direct Next pond 
+  15) [webkit-iphone] › tests/v50.spec.js:97:1 › tools, explanations, locks, undo, rules and direct Next pond
 
     Error: page.goto: Could not connect to 127.0.0.1: Connection refused
     Call log:
@@ -642,7 +642,7 @@ Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HO
 
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
-  16) [webkit-iphone] › tests/v50.spec.js:127:29 › crate 60: solve, score, local world top and continue 
+  16) [webkit-iphone] › tests/v50.spec.js:127:29 › crate 60: solve, score, local world top and continue
 
     Error: page.goto: Could not connect to 127.0.0.1: Connection refused
     Call log:
@@ -674,7 +674,7 @@ Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HO
 
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
-  17) [webkit-iphone] › tests/v50.spec.js:127:29 › crate 150: solve, score, local world top and continue 
+  17) [webkit-iphone] › tests/v50.spec.js:127:29 › crate 150: solve, score, local world top and continue
 
     Error: page.goto: Could not connect to 127.0.0.1: Connection refused
     Call log:
@@ -706,7 +706,7 @@ Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HO
 
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
-  18) [webkit-iphone] › tests/v50.spec.js:141:1 › v5.0 cache contains every runtime dependency and reloads offline 
+  18) [webkit-iphone] › tests/v50.spec.js:141:1 › v5.0 cache contains every runtime dependency and reloads offline
 
     Error: page.goto: Could not connect to 127.0.0.1: Connection refused
     Call log:
@@ -801,7 +801,7 @@ Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HO
 
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
-  21) [webkit-iphone] › tests/v50.spec.js:169:1 › classic touch double-tap and keyboard activation each apply once 
+  21) [webkit-iphone] › tests/v50.spec.js:169:1 › classic touch double-tap and keyboard activation each apply once
 
     Error: page.goto: Could not connect to 127.0.0.1: Connection refused
     Call log:
@@ -834,27 +834,27 @@ Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HO
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
   21 failed
-    [chromium-360] › tests/v50.spec.js:169:1 › classic touch double-tap and keyboard activation each apply once 
-    [chromium-412] › tests/v50.spec.js:169:1 › classic touch double-tap and keyboard activation each apply once 
-    [chromium-short] › tests/v50.spec.js:127:29 › crate 150: solve, score, local world top and continue 
-    [chromium-short] › tests/v50.spec.js:141:1 › v5.0 cache contains every runtime dependency and reloads offline 
+    [chromium-360] › tests/v50.spec.js:169:1 › classic touch double-tap and keyboard activation each apply once
+    [chromium-412] › tests/v50.spec.js:169:1 › classic touch double-tap and keyboard activation each apply once
+    [chromium-short] › tests/v50.spec.js:127:29 › crate 150: solve, score, local world top and continue
+    [chromium-short] › tests/v50.spec.js:141:1 › v5.0 cache contains every runtime dependency and reloads offline
     [chromium-short] › tests/v50.spec.js:157:30 › crate 145: D-pad and Show me fit and move ────────
     [chromium-short] › tests/v50.spec.js:157:30 › crate 150: D-pad and Show me fit and move ────────
-    [chromium-short] › tests/v50.spec.js:169:1 › classic touch double-tap and keyboard activation each apply once 
+    [chromium-short] › tests/v50.spec.js:169:1 › classic touch double-tap and keyboard activation each apply once
     [webkit-iphone] › tests/v50.spec.js:61:3 › pond 60: board and controls fit ─────────────────────
     [webkit-iphone] › tests/v50.spec.js:61:3 › pond 90: board and controls fit ─────────────────────
     [webkit-iphone] › tests/v50.spec.js:61:3 › pond 120: board and controls fit ────────────────────
     [webkit-iphone] › tests/v50.spec.js:61:3 › pond 145: board and controls fit ────────────────────
     [webkit-iphone] › tests/v50.spec.js:61:3 › pond 150: board and controls fit ────────────────────
-    [webkit-iphone] › tests/v50.spec.js:76:1 › v4.3.1 completed save continues at 31; lilies, daily and unscored history survive 
-    [webkit-iphone] › tests/v50.spec.js:90:1 › published half-played pond 29 resumes with its locked capy and oranges 
-    [webkit-iphone] › tests/v50.spec.js:97:1 › tools, explanations, locks, undo, rules and direct Next pond 
-    [webkit-iphone] › tests/v50.spec.js:127:29 › crate 60: solve, score, local world top and continue 
-    [webkit-iphone] › tests/v50.spec.js:127:29 › crate 150: solve, score, local world top and continue 
-    [webkit-iphone] › tests/v50.spec.js:141:1 › v5.0 cache contains every runtime dependency and reloads offline 
+    [webkit-iphone] › tests/v50.spec.js:76:1 › v4.3.1 completed save continues at 31; lilies, daily and unscored history survive
+    [webkit-iphone] › tests/v50.spec.js:90:1 › published half-played pond 29 resumes with its locked capy and oranges
+    [webkit-iphone] › tests/v50.spec.js:97:1 › tools, explanations, locks, undo, rules and direct Next pond
+    [webkit-iphone] › tests/v50.spec.js:127:29 › crate 60: solve, score, local world top and continue
+    [webkit-iphone] › tests/v50.spec.js:127:29 › crate 150: solve, score, local world top and continue
+    [webkit-iphone] › tests/v50.spec.js:141:1 › v5.0 cache contains every runtime dependency and reloads offline
     [webkit-iphone] › tests/v50.spec.js:157:30 › crate 145: D-pad and Show me fit and move ─────────
     [webkit-iphone] › tests/v50.spec.js:157:30 › crate 150: D-pad and Show me fit and move ─────────
-    [webkit-iphone] › tests/v50.spec.js:169:1 › classic touch double-tap and keyboard activation each apply once 
+    [webkit-iphone] › tests/v50.spec.js:169:1 › classic touch double-tap and keyboard activation each apply once
   59 passed (3.3m)
 npm notice
 npm notice New major version of npm available! 11.9.0 -> 12.2.2
