@@ -1,3 +1,8 @@
+# Production status
+
+v5.0 is now published with explicit approval. See [PUBLISHED.md](PUBLISHED.md)
+for the production commit, checks and rollback reference.
+
 # Continued integration on handoff-v5-wip
 
 Campaign and the 24 explicitly selected crates are integrated. Published world 1,

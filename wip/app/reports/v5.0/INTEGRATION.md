@@ -1,3 +1,6 @@
+> Subsequent status: the WIP push succeeded after connection setup. Publication
+> was later explicitly authorized and completed; see [PUBLISHED.md](PUBLISHED.md).
+
 # v5.0 campaign integration — WIP only
 
 Continued from `HANDOFF.md` on `handoff-v5-wip`, based on commit

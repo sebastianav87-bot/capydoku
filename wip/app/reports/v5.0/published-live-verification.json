@@ -1,0 +1,568 @@
+{
+  "commit": "91beb341ae233f9ff76612e089c4c2fd380f75b0",
+  "cache": "capydoku-v5.0-25c22c6bb18a",
+  "resources": [
+    {
+      "url": "./",
+      "status": 200,
+      "sha256": "b37230f6c20c9c87907aad8a1dd4104d36f604c968274358fb35c6854aac8d95"
+    },
+    {
+      "url": "index.html",
+      "status": 200,
+      "sha256": "b37230f6c20c9c87907aad8a1dd4104d36f604c968274358fb35c6854aac8d95"
+    },
+    {
+      "url": "style.css",
+      "status": 200,
+      "sha256": "3db86c389938b74cdd88edd9f48edab429ae4272eab00c7281ce6aeb932b1993"
+    },
+    {
+      "url": "theme-v3.css",
+      "status": 200,
+      "sha256": "09093f972cf5d4f3945cfd565c11df4238e077b50116ea8a346516c9f8090858"
+    },
+    {
+      "url": "starters-v3.css",
+      "status": 200,
+      "sha256": "dfe3734ef3378ba261472917a4ed73359b1804e2c83a85fe7ff992de2f739f65"
+    },
+    {
+      "url": "powers.js",
+      "status": 200,
+      "sha256": "c419ff84d20ab36f7fd02c9be60a7d0f839d7bc88dadd551e91426ec7d894118"
+    },
+    {
+      "url": "platform.js",
+      "status": 200,
+      "sha256": "88000f2d89eb25f74af55cac01982b1f6b1c107cc7cb005a84932ca4c35a31ac"
+    },
+    {
+      "url": "config.js",
+      "status": 200,
+      "sha256": "83251465f7c65f27a6a43b85889ee83ad6b4fb7f5db6c54aaaadf65caae06ddd"
+    },
+    {
+      "url": "app.js",
+      "status": 200,
+      "sha256": "d4cdf543360b5506408e9344cb72e35061b572fc06050e571eb6ac6921b6a17d"
+    },
+    {
+      "url": "core.js",
+      "status": 200,
+      "sha256": "0a6c7e3020c88f744abaed62794dd8d58207d4ccdd72fdaa934164a820e0d24e"
+    },
+    {
+      "url": "rewards.js",
+      "status": 200,
+      "sha256": "bd2d134ba96b7787cac0d085d03d9423fac66c208e53bc81f6f8a8ebcfd233dd"
+    },
+    {
+      "url": "profile.js",
+      "status": 200,
+      "sha256": "88bdc5ab47ae2a845948fd58e59e16e3accf869ae4a8e9755e33fcf4b03d51b4"
+    },
+    {
+      "url": "rewards-v4.css",
+      "status": 200,
+      "sha256": "022ef9540614999501374475433b4fa7ccf6136531266e66c870388f4bba2564"
+    },
+    {
+      "url": "theme.js",
+      "status": 200,
+      "sha256": "e5c0ecf7ff74f4b942ab0a21215cb7cd8418de555d39357ca9dee6dad42f971d"
+    },
+    {
+      "url": "characters.js",
+      "status": 200,
+      "sha256": "4497d6419b97b767f0cbe4b36a382db58cc1cf23828c760ddcacf23c84216c58"
+    },
+    {
+      "url": "audio.js",
+      "status": 200,
+      "sha256": "9ef259459acfa34735044109b7a7bea3c1e48dae0cd44335eef62f875ee715c9"
+    },
+    {
+      "url": "music.js",
+      "status": 200,
+      "sha256": "50da2975b8fb7ad76b1d790fe9ae5b483c8d400350228bf31a1336fec36b4d55"
+    },
+    {
+      "url": "layout.js",
+      "status": 200,
+      "sha256": "d3962587679a4054a47ab683f075c6fb2fe360c037920e3c5d906c831b8f9c6d"
+    },
+    {
+      "url": "levels.json",
+      "status": 200,
+      "sha256": "00824feb6b900bac4065366174622eaff0516e9cc3c7fd3d4465c9bca7060785"
+    },
+    {
+      "url": "manifest.webmanifest",
+      "status": 200,
+      "sha256": "f11666b21294b5a388c71af8d64814d26118fd8d3f593f93865efb8c82d012f8"
+    },
+    {
+      "url": "visuals-v4.js",
+      "status": 200,
+      "sha256": "e60729eb41fee71145bd39f36b6c08bb3468c8b57389f4744040d65f69387e64"
+    },
+    {
+      "url": "visuals-v4.css",
+      "status": 200,
+      "sha256": "a12fd6b8b343a161a707c00f6c22e20b56b21369b279c8bcce9ef7b0dd29a079"
+    },
+    {
+      "url": "tutorial.js",
+      "status": 200,
+      "sha256": "085ab7c1c02def10a1609f7dc567aa4cb265c7faf5e0edc462b2d0d81cae6546"
+    },
+    {
+      "url": "power-identity-v4.css",
+      "status": 200,
+      "sha256": "1a4645523ba034c7a92673c83a0c9cb8a863cc38f3e924057ea9f9d35d8cd9bc"
+    },
+    {
+      "url": "updates.js",
+      "status": 200,
+      "sha256": "f416a5c234cf0439b9bec2d76018ce8b0b077aa0d7bb7ae806135383faab0a7e"
+    },
+    {
+      "url": "build-info.js",
+      "status": 200,
+      "sha256": "d6e20e5fbabb9ce7efdd24514b11d2bd99f387464b53b85fdaf962a1e743c725"
+    },
+    {
+      "url": "home-v41.css",
+      "status": 200,
+      "sha256": "1e4022ef6874b047598c776bfecffea4654418709417461b30c44a153abc8fc9"
+    },
+    {
+      "url": "bonus-v42.css",
+      "status": 200,
+      "sha256": "d3c2a613ae0723abda479b9f853fc5b475cbb69878aeb166b32277f53b597b4e"
+    },
+    {
+      "url": "bonus-ui.js",
+      "status": 200,
+      "sha256": "2557b1f6db181d77d122e7bda04e0d4b4cfb77003237223b2357d29bad3f01ed"
+    },
+    {
+      "url": "crates.js",
+      "status": 200,
+      "sha256": "2a98c0253661f940239956342eee87f65ca5a5c75bc0087a63b173f38059bc98"
+    },
+    {
+      "url": "crate-levels.json",
+      "status": 200,
+      "sha256": "72cc534c5d1256a6b1784db72ab6746c67d611333d4bbf09ac183f13964b4881"
+    },
+    {
+      "url": "roles.js",
+      "status": 200,
+      "sha256": "a82db864353568111bfcb56080f03423dc577da329a8bf7511e9c71b66eaa993"
+    },
+    {
+      "url": "crates-v43.css",
+      "status": 200,
+      "sha256": "b7505474bd39f87b7411d94f93a1d21e2c2f9ba98c4c5a33b027549de2248bf4"
+    },
+    {
+      "url": "fit.js",
+      "status": 200,
+      "sha256": "529e8ffb0dba6d61d9fcd27c17c9002bd32f06d06c47e150612334d37227001e"
+    },
+    {
+      "url": "score.js",
+      "status": 200,
+      "sha256": "49aef359e410df619ab706c5a56f6d96a78180a34e918b65c591f7eba81d605a"
+    },
+    {
+      "url": "leaderboard.js",
+      "status": 200,
+      "sha256": "44613092950bb123087324c7206d903f78f7e4bf4f7b34cde9ab000c2afd1ea1"
+    },
+    {
+      "url": "explain.js",
+      "status": 200,
+      "sha256": "3ca44fe685f12720e806218012cae474b6d3621ffab88fb60660bf08bb27758c"
+    },
+    {
+      "url": "difficulty.js",
+      "status": 200,
+      "sha256": "b2fd25044b053587bb12059d83a34601f88ef64af61b595a4d1f8cb9032e1000"
+    },
+    {
+      "url": "v50.css",
+      "status": 200,
+      "sha256": "e71eabfe88d1482b26599ba727d37a6995e398db1c40f478c187e8535104baeb"
+    },
+    {
+      "url": "assets/Nunito-OFL.txt",
+      "status": 200,
+      "sha256": "580df76c95a1ec5ab878ceb25bb3d85c6a076804e9c970c8c6972aea775fdf65"
+    },
+    {
+      "url": "assets/crates/banana-target.svg",
+      "status": 200,
+      "sha256": "0e9337e1364e8885cc94df0be39ab7856bb1027dcce973bebd28fad1cde8e521"
+    },
+    {
+      "url": "assets/crates/banana.svg",
+      "status": 200,
+      "sha256": "49e8b5f93177e57b3c919de1b237811036e6c765a3c3455a43d453501f63432b"
+    },
+    {
+      "url": "assets/crates/crate-packed.svg",
+      "status": 200,
+      "sha256": "fa0ecf171aa09e04383708692413043fd709c4c05383d4163adee6e789413ca8"
+    },
+    {
+      "url": "assets/crates/crate.svg",
+      "status": 200,
+      "sha256": "02f2c2d55ee1030021afe49c6d53adba61b9efe1bf689994ab85a3dd268f7178"
+    },
+    {
+      "url": "assets/crates/pear-target.svg",
+      "status": 200,
+      "sha256": "b8ae0195ca06454d6f012a8e6bbb0db79bff4b8249cc51650d2eb579e338ddc4"
+    },
+    {
+      "url": "assets/crates/pear.svg",
+      "status": 200,
+      "sha256": "058bba018ae89b8a98796e6299d5874177c8647e0b61eb3db45d6351af5db11e"
+    },
+    {
+      "url": "assets/crates/watermelon-target.svg",
+      "status": 200,
+      "sha256": "0d9a14483695cd2a6ac62d06a84a94b6769429cf14db431c3567b2c3a9375f82"
+    },
+    {
+      "url": "assets/crates/watermelon.svg",
+      "status": 200,
+      "sha256": "d474243afce9a1ea8bb47db3abd991def77fe6200b2a6580325e3c7803d206a1"
+    },
+    {
+      "url": "assets/hotspring-bg.jpg",
+      "status": 200,
+      "sha256": "03e15c38adb09761e259222876f361a11b4e4337fe736ca3a984e9db3865d8bd"
+    },
+    {
+      "url": "assets/icon-192.png",
+      "status": 200,
+      "sha256": "5d46c7c36704cd8b1371c0f391d3d0480b05799f2d0df6d272087573a12820cf"
+    },
+    {
+      "url": "assets/icon-512.png",
+      "status": 200,
+      "sha256": "c3dc09c2c7a9b4ac930c2f6a813a04ecba446f89ab8fd40dd48848be284e211a"
+    },
+    {
+      "url": "assets/map-bg.jpg",
+      "status": 200,
+      "sha256": "7f2e3ca8aa9c032b84adddd4fcd4845f87cdb37c39a287293ec6c5ccb2313c39"
+    },
+    {
+      "url": "assets/music/LICENSES.md",
+      "status": 200,
+      "sha256": "9292c6be44fceab05971557cb67c5a95cd982aae786d51d8d01b019599539946"
+    },
+    {
+      "url": "assets/music/northumberland.mp3",
+      "status": 200,
+      "sha256": "fdaed826c8eb474752c66d94fba2aaab0bea38b90d26b03277abfa65317bd307"
+    },
+    {
+      "url": "assets/music/northumberland.ogg",
+      "status": 200,
+      "sha256": "b98cbf1ff4519a7ab32b0f11bdfeae35f964fcface2a32444059076060d206f7"
+    },
+    {
+      "url": "assets/nunito-500.ttf",
+      "status": 200,
+      "sha256": "ceb6eec0a584cae83e8f3ab868e2f03977b38ff6e78632bc8a7ec69dcf9f7c18"
+    },
+    {
+      "url": "assets/nunito-700.ttf",
+      "status": 200,
+      "sha256": "1a025dfce6e6e03bbe31ba82277ec5ed96df8b8dd58b3df6267269490b90b1dc"
+    },
+    {
+      "url": "assets/nunito-800.ttf",
+      "status": 200,
+      "sha256": "c5776505c7b3df3c3ca763477b795d6bbc6517760bede0462ab77d1fb44954a6"
+    },
+    {
+      "url": "assets/palette.json",
+      "status": 200,
+      "sha256": "0d73aab8ed5382f69c2605bd0d9530a3ddc241f1988f84a8525ea926dca6a3c3"
+    },
+    {
+      "url": "assets/power-icons/jun-face.png",
+      "status": 200,
+      "sha256": "90eaf74f2fc75be8e9a4f5d08fef2c2ff08f59765fd3e9a24d68723e4416335c"
+    },
+    {
+      "url": "assets/power-icons/nap.svg",
+      "status": 200,
+      "sha256": "5dd2b20c4fed3a4d72997b4b80eaced6668cd264884b461ca7aad8dd980f3d33"
+    },
+    {
+      "url": "assets/power-icons/peek.svg",
+      "status": 200,
+      "sha256": "1ff713d03ab5945dbb5f49f929b54a0f9284fe1e043e2e17e58de5448d0f2953"
+    },
+    {
+      "url": "assets/power-icons/remy-face.png",
+      "status": 200,
+      "sha256": "6905e9d1813671d506f1a2b452fc89d1fcd6978a4313af5f8e579e434ff97396"
+    },
+    {
+      "url": "assets/power-icons/second-chance.svg",
+      "status": 200,
+      "sha256": "1c7e11c9713218a4b7ffcbe70cc41166990e7bb1b74f3a3f4efa596c060a1b1b"
+    },
+    {
+      "url": "assets/rock.png",
+      "status": 200,
+      "sha256": "83a24ec2b860512a2a947f456a2dd29c4530390b106b97314dd6bcb778121296"
+    },
+    {
+      "url": "assets/starter-palette.json",
+      "status": 200,
+      "sha256": "4e81924b46226da6a330e86cfaf064d581d8c5a9f75b7f44f5435c86555bf5d4"
+    },
+    {
+      "url": "assets/starters/doze.png",
+      "status": 200,
+      "sha256": "9860602265c52c0949164c51fd4002477913b52c592d21cc564ed9ae8a650909"
+    },
+    {
+      "url": "assets/starters/jun.png",
+      "status": 200,
+      "sha256": "59026bcf81e77dd08ff70fae9f470e636831a4c01c90ac6b934b36470de4d32d"
+    },
+    {
+      "url": "assets/starters/remy.png",
+      "status": 200,
+      "sha256": "9e5378a852eab095266894f24c429485570720237a98e65884bb74c3ecd3d46e"
+    },
+    {
+      "url": "assets/v6/capy-jump.png",
+      "status": 200,
+      "sha256": "2dde41ffa38576f9571b1c6dd559126d0454c0603c3900b876ec3992e5c63157"
+    },
+    {
+      "url": "assets/v6/capy-sit.png",
+      "status": 200,
+      "sha256": "fec2c94df838e87cb3a330d9b589e53e382cba0f851a3d3d77afa3336a9ccae2"
+    },
+    {
+      "url": "assets/v6/cave-beaten.png",
+      "status": 200,
+      "sha256": "bda98793b46f02eafa80cb8385b843172757467e481f9290c9501e85e316f1f4"
+    },
+    {
+      "url": "assets/v6/cave-locked.png",
+      "status": 200,
+      "sha256": "67f766802909f4d6af11297e6451038bfaa98f4d5b4150d6c14e3a307f3dfdcd"
+    },
+    {
+      "url": "assets/v6/cave-ready.png",
+      "status": 200,
+      "sha256": "332cd6a6e5a417ea0153de670a5aea10186c390e7393bc31c56c1e48332fadaf"
+    },
+    {
+      "url": "assets/v6/celebration-pool.jpg",
+      "status": 200,
+      "sha256": "8587bfb7982e2f11f1d9f039ebe7b2bd00a6d2245f08dbf2515d8d90def117b7"
+    },
+    {
+      "url": "assets/v6/generic-capy.svg",
+      "status": 200,
+      "sha256": "c0b7599f3ccfcacb65800886ade4a4f95da769fff502dda972c2936fa2a2bc6c"
+    },
+    {
+      "url": "assets/v6/geyser-beaten.png",
+      "status": 200,
+      "sha256": "5583ade4d527e4a8e98820079bbe9c1b2f8e0b777b20a77c3910d3be7eadf993"
+    },
+    {
+      "url": "assets/v6/geyser-locked.png",
+      "status": 200,
+      "sha256": "ea9c3ed10bdb133b837f35d0a21e6107c8ed962759b0a04fbe8ecb85ac8cd748"
+    },
+    {
+      "url": "assets/v6/geyser-ready.png",
+      "status": 200,
+      "sha256": "20a4830c2b76693c0b4974434ac657c5ec2b9e45c5c416c0870cf649597bcb86"
+    },
+    {
+      "url": "assets/v6/hotspring.jpg",
+      "status": 200,
+      "sha256": "24054f633a59a06face067322ced8f2cf43cf481599323bde4a4971b6f2eecdf"
+    },
+    {
+      "url": "assets/v6/tutorial-hand.svg",
+      "status": 200,
+      "sha256": "057ed934cdd1796d8eb78503edae2f74794b8f6b14f121d935d2f443b11770ed"
+    },
+    {
+      "url": "assets/v6/waterfall-beaten.png",
+      "status": 200,
+      "sha256": "5fecca7d3c76dad9d40a9ef4d977439c138f765c7b3fcd63bc7e8bb12f2531c8"
+    },
+    {
+      "url": "assets/v6/waterfall-locked.png",
+      "status": 200,
+      "sha256": "9696261307d83413afdfbd99a1b7673c680ead584cdcecc2d5ca8099a6a08458"
+    },
+    {
+      "url": "assets/v6/waterfall-ready.png",
+      "status": 200,
+      "sha256": "b48cd93087deb3cf5ff8d411d6286dd05de3be8f728f52a4b234f95cc55f77f5"
+    },
+    {
+      "url": "assets/v63/boss-cave-beaten.svg",
+      "status": 200,
+      "sha256": "586db2eebe031147d3055d3456ee989a25f0712a7786c327b2e53b9c3f8021fe"
+    },
+    {
+      "url": "assets/v63/boss-cave-locked.svg",
+      "status": 200,
+      "sha256": "a510aca02671d6faa3cc088d251f108d4a0b848c9f77f908364d99c81b5f2e98"
+    },
+    {
+      "url": "assets/v63/boss-cave-next.svg",
+      "status": 200,
+      "sha256": "6fabd7d3f5799408444492193a3d437978c653a6d6ff0cc2eef1d1383a13f77f"
+    },
+    {
+      "url": "assets/v63/boss-geyser-beaten.svg",
+      "status": 200,
+      "sha256": "7a3176e5aea7e1b13b5db9f3a8d58b571c7d8389a793a4a467da754cf13d72d7"
+    },
+    {
+      "url": "assets/v63/boss-geyser-locked.svg",
+      "status": 200,
+      "sha256": "b7f16bffe83636dd03738bcc3823adb38f7c5c3b70a4bdce950223ef78245110"
+    },
+    {
+      "url": "assets/v63/boss-geyser-next.svg",
+      "status": 200,
+      "sha256": "dc21bd0aa6751313615b8cf65326222587763af1b2f31b86b066f900eb3affb8"
+    },
+    {
+      "url": "assets/v63/boss-waterfall-beaten.svg",
+      "status": 200,
+      "sha256": "f3baf2da43ad85ec806d6805e4ef02e2d03b6327dacac169b4d0b09be3b3f08d"
+    },
+    {
+      "url": "assets/v63/boss-waterfall-locked.svg",
+      "status": 200,
+      "sha256": "c47e0b3d9a6bd10508a07e25e9d022375c877f418303f0f1c9bcce7fce66cbd4"
+    },
+    {
+      "url": "assets/v63/boss-waterfall-next.svg",
+      "status": 200,
+      "sha256": "79a6eac123047c73bbed08437aebc29c1be231d2953a7b3b7a502b4b3df0f4c4"
+    },
+    {
+      "url": "assets/v64/power-icons/bloom-face.png",
+      "status": 200,
+      "sha256": "092ded803ae9a5bd63c9d18d3d308ec932a59b3f1112ad9211f7d466eb0d4205"
+    },
+    {
+      "url": "assets/v64/starters/bloom-32@1x.png",
+      "status": 200,
+      "sha256": "8bc44ca232c733e2ef08ae0c8a9167469361b331bf5b13242c2b0cb9521883cf"
+    },
+    {
+      "url": "assets/v64/starters/bloom-32@2x.png",
+      "status": 200,
+      "sha256": "a0c56a01cee037d3f4c3444c7ff928045a4e7a284aa86485371579659dd16da2"
+    },
+    {
+      "url": "assets/v64/starters/bloom-32@3x.png",
+      "status": 200,
+      "sha256": "3319d8da7de1d3f1c9fc08e14b68f3c9172f4c4e8966d266e2fae733b7d71875"
+    },
+    {
+      "url": "assets/v64/starters/bloom-44@1x.png",
+      "status": 200,
+      "sha256": "ba41edc0f74132beddc26fa0b850ee16c0d1d3f224b202ce74233c6cd7ac827e"
+    },
+    {
+      "url": "assets/v64/starters/bloom-44@2x.png",
+      "status": 200,
+      "sha256": "5d419fb8a881b6564e6c7254f76ba78e6a8336c72e430e16e0280b02dececbed"
+    },
+    {
+      "url": "assets/v64/starters/bloom-44@3x.png",
+      "status": 200,
+      "sha256": "37201167ce363c0404c991af2f0934e79e1e2068f2cb48465071f560f26524bb"
+    },
+    {
+      "url": "assets/v64/starters/bloom-51@1x.png",
+      "status": 200,
+      "sha256": "a7f6005b077764a973b9f4ec2fbebeb9eccb8d9674d9830611e76d4e745d4f04"
+    },
+    {
+      "url": "assets/v64/starters/bloom-51@2x.png",
+      "status": 200,
+      "sha256": "cc711f8c272c24f2b674bb799d5131942042a4751d76dfcebb74298d83add544"
+    },
+    {
+      "url": "assets/v64/starters/bloom-51@3x.png",
+      "status": 200,
+      "sha256": "993ad5f190e0eab32ecf1994c81b5b916335d2cf74d1639f110ae519adda024e"
+    },
+    {
+      "url": "assets/v64/starters/bloom-64@1x.png",
+      "status": 200,
+      "sha256": "a0c56a01cee037d3f4c3444c7ff928045a4e7a284aa86485371579659dd16da2"
+    },
+    {
+      "url": "assets/v64/starters/bloom-64@2x.png",
+      "status": 200,
+      "sha256": "f8add0d350fac827202123095001a2486873e7474518b1ea6cc368862875169b"
+    },
+    {
+      "url": "assets/v64/starters/bloom-64@3x.png",
+      "status": 200,
+      "sha256": "67fc0a31837c048731f5fa27906b0f9361bacfdf509d186fb03254b46bc8524b"
+    },
+    {
+      "url": "assets/v64/starters/bloom-hello-pond.jpg",
+      "status": 200,
+      "sha256": "d42ca5e984904caea99aa24078f0704f7efcb5d84b045ab2d0635986ba9ba0eb"
+    },
+    {
+      "url": "assets/v64/starters/bloom.png",
+      "status": 200,
+      "sha256": "6471871028c154968ed1e5a1ea25b915f3346b216e26fec37fcb7842ad3208b1"
+    },
+    {
+      "url": "assets/v65/lily-earned.svg",
+      "status": 200,
+      "sha256": "6c044f9e6e2295c0953d21320a629c745b6e4fbd6796e3668ca70cdc670dee6a"
+    },
+    {
+      "url": "assets/v65/lily-golden.svg",
+      "status": 200,
+      "sha256": "07cf57d3f88033be8e2cb4dffd140360a6b9473329663e7429ef9dd6bfca5937"
+    },
+    {
+      "url": "assets/v65/lily-outline.svg",
+      "status": 200,
+      "sha256": "96fa21eca77dc0d0f1de3e3c47a4d6a4b85fb1a2babfc21829f4c0b964589ffd"
+    },
+    {
+      "url": "sw.js",
+      "status": 200,
+      "sha256": "38c8e026bd93871ef0b7757b4c6ae7343600370c93b734b7f72a474e7416a27a"
+    }
+  ],
+  "allPublishedBytesMatchTestedRuntime": true,
+  "rollbackTag": "pre-v5.0-v4.3.1"
+}
