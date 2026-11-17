@@ -233,7 +233,7 @@ function saveRound() {
   persist();
 }
 function shell(cls, inner) {
-  root.innerHTML = `<section class="screen ${cls}" data-world="${tintWorld + 1}">${inner}<div class="art-tag">AI illustration</div>${warning ? `<div class="persistent-warning" role="status">${warning}</div>` : ""}</section>`;
+  root.innerHTML = `<section class="screen ${cls}" data-world="${tintWorld + 1}">${inner}${warning ? `<div class="persistent-warning" role="status">${warning}</div>` : ""}</section>`;
 }
 function capyBadge(where = "home") {
   return `<button class="capy-badge ${where === "game" ? "mini" : ""}" data-action="switchCapy" aria-label="Switch capy"><img src="${sprite(progress.selected)}" alt="">${where !== "game" ? `<span><strong>${progress.selected}</strong><small>${where === "collection" ? "Tap to switch" : "Your capy"}</small></span>` : ""}<b aria-hidden="true">⇄</b></button>`;
