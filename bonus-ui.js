@@ -1,10 +1,11 @@
-/* v4.3 crate ponds: ponds 5/10/15/20/25/30 of the main path (10/20/30 are world gates, 30 is the finale).
+/* v4.3 crate ponds; v5.0: every 5th pond of 150 (every 10th is a gate, every 30th a world gate, 150 the finale).
  * Three lilies: Packed / Clean run (no Undo, no Restart) / Par. After 3 Restarts "Show me" replays the
  * solution and gives the Packed lily only. Par earns +1 orange for the next pond (not on the finale).
  * Rules live in crates.js; this file renders and routes input. Owned by app.js through a small context. */
 import { parseLevel, newCrateState, stepCrate, walkPath, deadlocks, packedCount, isCrateSolved, awardCrate, FRUITS, SHOW_ME_AFTER } from "./crates.js";
 import { lilyImg, lilyCount } from "./rewards.js";
-import { isGate, pondLabel, FINALE_POND } from "./roles.js";
+import { isGate, isWorldGate, pondLabel, FINALE_POND, POND_COUNT } from "./roles.js";
+import { crateScore, recordScore } from "./score.js";
 const DIRS = { U: "up", D: "down", L: "left", R: "right" };
 export function crateLilyDetails(record, par, newly = null, shown = false) {
   return `<div class="lily-details crate-lilies">${["Packed", "Clean run", `Par · ${par} moves`].map((t, i) => {
@@ -32,6 +33,7 @@ export function createBonus(ctx) {
     dirty = false,
     shown = false,
     replaying = false,
+    startedAt = null,
     lastWin = null;
   const P = () => ctx.progress();
   async function ensureLevels() {
@@ -72,6 +74,7 @@ export function createBonus(ctx) {
     dirty = false;
     shown = false;
     replaying = false;
+    startedAt = null;
     lastWin = null;
     L = parseLevel(def);
     s = newCrateState(L);
@@ -96,7 +99,7 @@ export function createBonus(ctx) {
       rec = P().lilies[pond];
     ctx.shell(
       `crate-screen ${dpad ? "with-dpad" : ""}`,
-      `<header class="bonus-header"><button class="bonus-round leave" data-action="bonusLeave" aria-label="Leave crate pond"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7"/></svg></button><div class="bonus-title"><h2>${pondLabel(pond)}</h2><span class="bonus-tag ${gate ? "gate-tag" : ""}">${pond === FINALE_POND ? "Finale" : gate ? "World gate" : "Crate pond"}</span></div><button class="bonus-round" data-action="bonusRestart" aria-label="Restart crate pond"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12a7 7 0 1 1-2.1-5"/><path d="M19 4v4h-4"/></svg></button></header><div class="bonus-stats"><span><small>Moves</small><b data-stat="moves">0</b></span><span><small>Pushes</small><b data-stat="pushes">0</b></span><span><small>Par</small><b>${def.par}</b></span></div><div class="pond-wrap crate-wrap" style="--board-max:${ctx.boardMax(L.n)}px;--board-width:${ctx.boardWidth()};--board-viewport-width:${ctx.boardViewport()}"><div class="crate-board" role="group" aria-label="${L.n} by ${L.n} crate pond" style="--n:${L.n}">${Array.from({ length: L.n * L.n }, (_, i) => {
+      `<header class="bonus-header"><button class="bonus-round leave" data-action="bonusLeave" aria-label="Leave crate pond"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7"/></svg></button><div class="bonus-title"><h2>${pondLabel(pond)}</h2><span class="bonus-tag ${gate ? "gate-tag" : ""}">${pond === FINALE_POND ? "Finale" : isWorldGate(pond) ? "World gate" : gate ? "Spring gate" : "Crate pond"}</span></div><button class="bonus-round" data-action="bonusRestart" aria-label="Restart crate pond"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12a7 7 0 1 1-2.1-5"/><path d="M19 4v4h-4"/></svg></button></header><div class="bonus-stats"><span><small>Moves</small><b data-stat="moves">0</b></span><span><small>Pushes</small><b data-stat="pushes">0</b></span><span><small>Par</small><b>${def.par}</b></span></div><div class="pond-wrap crate-wrap" style="--board-max:${ctx.boardMax(L.n)}px;--board-width:${ctx.boardWidth()};--board-viewport-width:${ctx.boardViewport()}"><div class="crate-board" role="group" aria-label="${L.n} by ${L.n} crate pond" style="--n:${L.n}">${Array.from({ length: L.n * L.n }, (_, i) => {
         const rock = L.rocks.includes(i),
           goal = L.goals.includes(i);
         return `<button class="crate-cell ${rock ? "is-rock" : ""} ${goal ? "goal" : ""}" data-action="crateTap" data-ci="${i}" aria-label="Row ${Math.floor(i / L.n) + 1}, column ${(i % L.n) + 1}${rock ? ", rock" : goal ? `, ${L.fruit[i]}` : ""}" ${rock ? 'aria-disabled="true"' : ""}>${rock ? '<img class="rock-art" src="assets/rock.png" alt="">' : goal ? `<img class="fruit-target" src="assets/crates/${L.fruit[i]}-target.svg" alt="">` : ""}</button>`;
@@ -145,6 +148,7 @@ export function createBonus(ctx) {
   }
   function commit(dir, record = true) {
     if (finished) return false;
+    startedAt ??= performance.now(); // v5.0 score clock: from the first move (or Show me) to the solve
     const r = stepCrate(L, s, dir);
     if (!r.moved) {
       const p = ctx.root.querySelector(".crate-player");
@@ -231,6 +235,9 @@ export function createBonus(ctx) {
     replaying = false;
     stopWalk();
     lastWin = { moves: s.moves, shown, ...awardCrate(P(), pond, def.par, { moves: s.moves, clean: !dirty, shown }) };
+    const seconds = startedAt === null ? 0 : (performance.now() - startedAt) / 1000;
+    lastWin.score = recordScore(P(), pond, crateScore({ id: pond, moves: s.moves, par: def.par, seconds, shown }));
+    ctx.afterScore?.(pond);
     ctx.persist();
     ctx.vibrate("solve");
     ctx.root.querySelector(".crate-board")?.classList.add("all-packed");
@@ -247,7 +254,7 @@ export function createBonus(ctx) {
     ctx.setView("bonusReward");
     ctx.shell(
       `bonus-reward crate-pond-reward ${finale ? "finale-reward" : gate ? "gate-reward" : ""}`,
-      `<span class="bonus-tag reward-tag">${pondLabel(pond)}</span><h1>${finale ? "The Hot Spring is complete!" : gate ? "World gate open!" : "Fruit packed!"}</h1><p class="reward-sub">${finale ? `${ctx.capyName()} packed the last crate of all 30 ponds` : gate ? "Your Hot Spring grew" : w.shown ? "Watched the solution · Packed lily" : `${ctx.capyName()} packed every fruit`}</p><div class="reward-scene"><img class="reward-bg" src="assets/v6/celebration-pool.jpg" alt=""><img class="reward-capy" src="${ctx.capySprite()}" alt=""><div class="reward-crates">${FRUITS.map((f) => `<span><img src="assets/crates/crate-packed.svg" alt=""><img class="reward-fruit" src="${FRUIT_SRC(f)}" alt="${f}"></span>`).join("")}</div></div><section class="solve-lilies crate-reward-lilies" aria-label="Lilies for this crate pond"><strong>Lilies for this pond · ${lilyCount(r)}/3</strong>${crateLilyDetails(r, def.par, w.newly, w.shown)}</section>${orange ? `<section class="reward-orange"><i class="orange spare big" aria-hidden="true"></i><span><strong>+1 orange</strong><small>for Pond ${next}</small><em>${w.granted ? "Saves you once." : "Already waiting · no stacking"}</em><small class="reward-fine">Next pond only · no stacking</small></span></section>` : ""}<p class="reward-moves"><strong>${w.shown ? "Solution shown" : `${w.moves} moves · par ${def.par}`}</strong><br><small>${w.shown ? "Solve it yourself for Clean run and Par" : `Best path ${def.optimalMoves} moves`}</small></p><button class="primary" data-action="bonusContinue" data-level="${finale ? 0 : next}">${finale ? "Finish" : `Continue → Pond ${next}`}</button>`,
+      `<span class="bonus-tag reward-tag">${pondLabel(pond)}</span><h1>${finale ? "The Hot Spring is complete!" : isWorldGate(pond) ? "World gate open!" : gate ? "Spring gate open!" : "Fruit packed!"}</h1><p class="reward-sub">${finale ? `${ctx.capyName()} packed the last crate of all ${POND_COUNT} ponds` : isWorldGate(pond) ? "A new world opens · your Hot Spring grew" : gate ? "Your Hot Spring grew" : w.shown ? "Watched the solution · Packed lily" : `${ctx.capyName()} packed every fruit`}</p><div class="reward-scene"><img class="reward-bg" src="assets/v6/celebration-pool.jpg" alt=""><img class="reward-capy" src="${ctx.capySprite()}" alt=""><div class="reward-crates">${FRUITS.map((f) => `<span><img src="assets/crates/crate-packed.svg" alt=""><img class="reward-fruit" src="${FRUIT_SRC(f)}" alt="${f}"></span>`).join("")}</div></div><section class="solve-lilies crate-reward-lilies" aria-label="Lilies for this crate pond"><strong>Lilies for this pond · ${lilyCount(r)}/3</strong>${crateLilyDetails(r, def.par, w.newly, w.shown)}</section>${orange ? `<section class="reward-orange"><i class="orange spare big" aria-hidden="true"></i><span><strong>+1 orange</strong><small>for Pond ${next}</small><em>${w.granted ? "Saves you once." : "Already waiting · no stacking"}</em><small class="reward-fine">Next pond only · no stacking</small></span></section>` : ""}<p class="pond-score" data-score="${w.score.score}"><span>Pond score</span><strong>${w.score.score.toLocaleString("en-US")}</strong><small>${w.score.newBest ? (w.score.previous === null ? "First score" : "New best!") : `Best ${w.score.best.toLocaleString("en-US")}`}${w.shown ? " · Show me halves it" : ""}</small></p><p class="reward-moves"><strong>${w.shown ? "Solution shown" : `${w.moves} moves · par ${def.par}`}</strong><br><small>${w.shown ? "Solve it yourself for Clean run and Par" : `Best path ${def.optimalMoves} moves`}</small></p><button class="primary" data-action="bonusContinue" data-level="${finale ? 0 : next}">${finale ? "Finish" : `Continue → Pond ${next}`}</button>`,
     );
   }
   function controlsCard(first = false) {

@@ -1,4 +1,4 @@
-import { CRATE_PONDS } from "./roles.js";
+import { CRATE_PONDS, FINALE_POND } from "./roles.js";
 /* v4.2 crate bonus: pure Sokoban rules (no DOM). Levels are stored with an outer '#' border so the Designer's
  * verify/solver.py reads them unchanged; in the app that border is the board frame and only the n×n interior
  * is drawn. Cells are interior indices r*n+c. '#' inside = solid rock. */
@@ -170,7 +170,7 @@ export function solveCrates(L, limit = 3e6) {
 /* v4.3 crate ponds: Par earns +1 spare orange for the NEXT pond only. Pure helpers so the rules are unit-tested.
  * bonus.v2 = { v:2, best:{pondId:moves}, legacy:{solved,best}|null (v4.2 Crate Cove record), spare, dpad, controlsSeen }. */
 export const SHOW_ME_AFTER = 3; // Restarts before "Show me" appears
-export const SPARE_PONDS = Object.freeze(CRATE_PONDS.filter((id) => id !== 30).map((id) => id + 1)); // 6/11/16/21/26
+export const SPARE_PONDS = Object.freeze(CRATE_PONDS.filter((id) => id !== FINALE_POND).map((id) => id + 1)); // 6/11/…/146 (v5.0: every crate pond but the finale 150)
 const okMoves = (m) => Number.isInteger(m) && m > 0 && m < 100000;
 function cleanLegacy(b) {
   const solved = [...new Set((Array.isArray(b?.solved) ? b.solved : []).filter((k) => [1, 2, 3].includes(k)))].sort(),
@@ -187,7 +187,7 @@ export function cleanBonus(raw) {
     forPond = Number.isInteger(b.spare?.forPond) && SPARE_PONDS.includes(b.spare.forPond) ? b.spare.forPond : null;
   return { v: 2, best, legacy, spare: forPond ? { forPond } : null, dpad: b.dpad === true, controlsSeen: b.controlsSeen === true };
 }
-/** Par on a crate pond grants one spare orange for the pond right after; never stacks; never from the finale (30).
+/** Par on a crate pond grants one spare orange for the pond right after; never stacks; never from the finale (150).
  * Returns true if newly granted. */
 export function grantSpare(bonus, pond) {
   const forPond = pond + 1;

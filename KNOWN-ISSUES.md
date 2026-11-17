@@ -1,3 +1,11 @@
+## v5.0 integration WIP
+
+The campaign and selected crates are verified; see `reports/v5.0/INTEGRATION.md`.
+The historical full unit suite still needs a port away from omitted backups and
+mockup sources, old version/count assertions, and an unbounded legacy deadlock
+audit. The dedicated v5.0 campaign/migration suites pass. Remote ranking is off.
+Physical iPhone/Safari toolbar behavior and haptics remain unverified.
+
 # Known issues / honest limits — local v4.3.1 (v4.3 rev b + iPhone fit; not published)
 
 ## v4.3.1 (iPhone fit)

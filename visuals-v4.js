@@ -1,11 +1,12 @@
 import{CHARACTERS,sprite,pieceSprite,powerIconSrc,powerIdentity}from'./characters.js';
-export const WORLDS=['Reedwater shore','Bamboo hush','Cloudwater summit'];
+// v5.0: five worlds of 30 ponds, each with a light season tint (CSS [data-world]).
+export const WORLDS=['Reedwater Spring','Bamboo Summer','Maple Autumn','Snowcap Winter','Cloudwater Twilight'];
 export const MAP_HEIGHT=3740;
 export const MAP_NODES=[{"level":1,"x":206.0,"y":3595},{"level":2,"x":305.861,"y":3485},{"level":3,"x":267.717,"y":3375},{"level":4,"x":144.283,"y":3265},{"level":5,"x":106.139,"y":3155},{"level":6,"x":206.0,"y":3045},{"level":7,"x":305.861,"y":2935},{"level":8,"x":267.717,"y":2825},{"level":9,"x":144.283,"y":2715},{"level":10,"x":206,"y":2560},{"level":11,"x":206.0,"y":2405},{"level":12,"x":305.861,"y":2295},{"level":13,"x":267.717,"y":2185},{"level":14,"x":144.283,"y":2075},{"level":15,"x":106.139,"y":1965},{"level":16,"x":206.0,"y":1855},{"level":17,"x":305.861,"y":1745},{"level":18,"x":267.717,"y":1635},{"level":19,"x":144.283,"y":1525},{"level":20,"x":206,"y":1370},{"level":21,"x":206.0,"y":1215},{"level":22,"x":305.861,"y":1105},{"level":23,"x":267.717,"y":995},{"level":24,"x":144.283,"y":885},{"level":25,"x":106.139,"y":775},{"level":26,"x":206.0,"y":665},{"level":27,"x":305.861,"y":555},{"level":28,"x":267.717,"y":445},{"level":29,"x":144.283,"y":335},{"level":30,"x":206.0,"y":180}];
 export const mapNodes=()=>MAP_NODES.map(v=>({...v}));
-export const mapBossAsset=(id,state)=>`assets/v63/boss-${['waterfall','cave','geyser'][Math.floor((id-1)/10)]}-${state}.svg`;
+export const mapBossAsset=(id,state)=>`assets/v63/boss-${['waterfall','cave','geyser'][Math.floor((id-1)/10)%3]}-${state}.svg`;
 export function bossState(p,id){return p.completed.includes(id)?'beaten':Array.from({length:id-1},(_,j)=>j+1).every(n=>p.completed.includes(n))?'next':'locked'}
-export const bossAsset=(id,state)=>`assets/v6/${['waterfall','cave','geyser'][Math.floor((id-1)/10)]}-${state==='next'?'ready':state}.png`;
+export const bossAsset=(id,state)=>`assets/v6/${['waterfall','cave','geyser'][Math.floor((id-1)/10)%3]}-${state==='next'?'ready':state}.png`;
 export function ruleCards(){return `<div class="rules-line" aria-label="One capy per row, column and zone; no touching, even diagonally">${['One per row<br>& column','One per<br>zone','No<br>touching'].map((text,k)=>`<div class="rule-card"><svg viewBox="0 0 32 32" aria-hidden="true">${Array.from({length:9},(_,i)=>{let r=Math.floor(i/3),c=i%3;return `<rect x="${c*10+1}" y="${r*10+1}" width="9" height="9" rx="1" fill="${k===1?['#A6C994','#BED7E2','#DFCE92'][[0,0,1,0,1,1,2,2,2][i]]:'#D6DFC4'}"/>${k===2&&i!==4?`<path d="M${c*10+3} ${r*10+3}l5 5m0-5l-5 5" stroke="#7B8C68"/>`:[0,5,7].includes(i)||k===2&&i===4?`<circle cx="${c*10+5.5}" cy="${r*10+5.5}" r="2.5" fill="#5D7354"/>`:''}`}).join('')}</svg><strong>${text}</strong></div>`).join('')}</div>`}
 export function powerIcon(subject){return `<img class="power-glyph" src="${powerIconSrc(subject)}" alt="">`}
 // First-use toast slot is ready for v6.1. Not auto-fired: the active power message remains card-only.

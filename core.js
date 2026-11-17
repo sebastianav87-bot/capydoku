@@ -2,7 +2,8 @@ import { HAPTIC_CONFIG } from "./config.js";
 import { cleanMetrics, cleanLilies, emptyLilies } from "./rewards.js";
 import { nickname } from "./profile.js";
 import { cleanBonus } from "./crates.js";
-import { BOSS_PONDS, GOLDEN_REMAP, isCrate } from "./roles.js";
+import { BOSS_PONDS, GOLDEN_REMAP, isCrate, POND_COUNT } from "./roles.js";
+import { cleanScores } from "./score.js";
 /* No dependencies, no network, no hidden solution table. */
 export const SCHEMA = 3,
   KEY = "capydoku.progress.v3",
@@ -206,6 +207,10 @@ export function fresh() {
     bonus: cleanBonus(null),
     // v4.3 pond layout: 2 = crate ponds at 5/10/15/20/25/30, bosses at 9/19/29. Missing/1 = the v4.2 layout (one-time migration).
     layout: 2,
+    // v5.0 pond scores: { pondId: { best, at } }. Older saves have none: their ponds stay unscored until replayed.
+    scores: {},
+    // v5.0: world-complete (top 10) screens already shown, by 0-based world index.
+    worldsShown: [],
   };
 }
 export function cleanAttempt(v, length) {
@@ -241,7 +246,7 @@ export function sanitize(raw) {
   if (!raw || raw.version !== SCHEMA) return fresh();
   const p = fresh();
   p.completed = [
-    ...new Set((Array.isArray(raw.completed) ? raw.completed : []).filter((n) => Number.isInteger(n) && n >= 1 && n <= 30)),
+    ...new Set((Array.isArray(raw.completed) ? raw.completed : []).filter((n) => Number.isInteger(n) && n >= 1 && n <= POND_COUNT)),
   ].sort((a, b) => a - b);
   p.nickname = nickname(raw.nickname).valid ? nickname(raw.nickname).text : "";
   p.lilies = cleanLilies(raw.lilies, p.completed);
@@ -270,6 +275,8 @@ export function sanitize(raw) {
     ),
   ];
   p.bonus = cleanBonus(raw.bonus);
+  p.scores = cleanScores(raw.scores);
+  p.worldsShown = [...new Set((Array.isArray(raw.worldsShown) ? raw.worldsShown : []).filter((w) => Number.isInteger(w) && w >= 0 && w < 5))].sort();
   p.legacySelected = ["Classic", "Beanie", "Orange", "Duck"].includes(raw.legacySelected) ? raw.legacySelected : null;
   if (Number.isInteger(raw.daily?.lastDay) && Number.isInteger(raw.daily?.streak) && raw.daily.streak >= 0 && raw.daily.streak < 100000)
     p.daily = { lastDay: raw.daily.lastDay, streak: raw.daily.streak };
@@ -277,7 +284,7 @@ export function sanitize(raw) {
     for (const [key, v] of Object.entries(raw.sessions).slice(-40)) {
       if (
         !legacyRelaxAttempt(raw, v) &&
-        /^(pond-([1-9]|[12][0-9]|30)|daily-\d{4}-\d{2}-\d{2}-(safe|rocks))$/.test(key) &&
+        /^(pond-([1-9]|[1-9][0-9]|1[0-4][0-9]|150)|daily-\d{4}-\d{2}-\d{2}-(safe|rocks))$/.test(key) &&
         [25, 36, 49, 64, 81, 100].includes(v?.cells?.length) &&
         v.cells.every((x) => [0, 1, 2].includes(x)) &&
         Number.isInteger(v.lives) &&
@@ -393,8 +400,8 @@ export function save(storage, progress, readOnly = false) {
   }
 }
 export function unlocked(p) {
-  for (let n = 1; n <= 30; n++) if (!p.completed.includes(n)) return n;
-  return 30;
+  for (let n = 1; n <= POND_COUNT; n++) if (!p.completed.includes(n)) return n;
+  return POND_COUNT;
 }
 export function streakAt(p, day) {
   return p.daily.lastDay !== null && day - p.daily.lastDay <= 1 && day >= p.daily.lastDay ? p.daily.streak : 0;

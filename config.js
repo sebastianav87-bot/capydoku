@@ -1,5 +1,6 @@
 // Product switch: A = fixed 52px cells; B = constant reference-width board.
-export const GAME_CONFIG={boardSizingMode:'B',lilyTargetVersion:1,lilyTargetMs:Object.freeze({5:120000,6:180000,7:270000,8:360000,9:450000,10:570000})};
+// v5.0 leaderboardApi: the Cloudflare Worker origin (https://…workers.dev). EMPTY = off until Sebastián's account exists.
+export const GAME_CONFIG={leaderboardApi:'',boardSizingMode:'B',lilyTargetVersion:1,lilyTargetMs:Object.freeze({5:120000,6:180000,7:270000,8:360000,9:450000,10:570000})};
 
 /* v4.1 haptics: the ONE place every vibration pattern lives (milliseconds; arrays are buzz,pause,buzz…).
  * Android's Vibration API has no amplitude control, so strength = buzz duration.
@@ -19,7 +20,8 @@ export const HAPTIC_CONFIG=Object.freeze({
   clearTap:42,     // single tap: X → empty, or clearing a placed (unlocked) capy
   dragTick:34,     // each newly painted cell while dragging (throttled)
   correct:110,      // a legal capy (double-tap); a double-tap never also ticks
-  mistake:Object.freeze([170,90,170]), // v4.3 rev b: a capy on a wrong spot (rejected, costs an orange)
+  mistake:Object.freeze([170,90,170]), // v4.3 rev b: a capy on a wrong spot (rejected, costs an orange); v5.0: one that breaks a visible rule
+  offSolution:Object.freeze([60,50,60,50,60]), // v5.0: rule-legal but not in the solution (rejected, costs an orange): three short taps, unlike mistake's two long buzzes
   solve:Object.freeze([130,70,180,70,320]),
   landing:65,      // each capy splashing into the hot spring
   locked:30,       // tapping a locked correct capy: light bump, no penalty (v4.2: also a stuck-crate warning)
