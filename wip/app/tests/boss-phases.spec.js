@@ -30,6 +30,9 @@ for(const id of [9,149]){
   await finishFirst(page,sol);
   await expect(page.locator('.boss-shifting')).toBeVisible();
   await expect(page.locator('.boss-sinking')).toHaveCount(first.n-1);
+  await expect(page.locator('.boss-earth[aria-hidden="true"]')).toHaveCount(first.n-1);
+  await expect(page.locator('.boss-earth .dust-puff')).toHaveCount((first.n-1)*7);
+  await expect(page.locator('.boss-earth .earth-crumb')).toHaveCount((first.n-1)*4);
   const delays=await page.locator('.boss-sinking').evaluateAll(nodes=>nodes.map(n=>parseFloat(n.style.getPropertyValue('--sink-delay'))));expect(delays).toEqual(Array.from({length:first.n-1},(_,i)=>300+90*i));await expect(page.locator('.boss-staying')).toHaveCount(1);
   await expect(page.locator('.spring,.pond-score')).toHaveCount(0);
   const checkpoint=await read(page);expect(checkpoint.completed).not.toContain(id);expect(checkpoint.scores[id]).toBeUndefined();expect(checkpoint.sessions[`pond-${id}`].boss.phase).toBe(2);
@@ -68,8 +71,8 @@ for(const id of [9,149]){
  test(`boss ${id}: reduced motion keeps a clear survivor and changes the regions without sinking animation`,async({page})=>{
   await page.emulateMedia({reducedMotion:'reduce'});
   const {sol,board}=await seed(page,id);await capyTool(page);
-  const state=await page.locator(`[data-cell="${sol.at(-1)}"]`).evaluate(el=>{el.click();return {reduced:document.querySelector('.screen').dataset.reduced,sinks:[...document.querySelectorAll('.boss-sinking .capy')].map(n=>getComputedStyle(n).animationName),survivors:document.querySelectorAll('.boss-staying').length};});
-  expect(state.reduced).toBe('true');expect(state.survivors).toBe(1);expect(state.sinks.every(a=>a==='none')).toBe(true);
+  const state=await page.locator(`[data-cell="${sol.at(-1)}"]`).evaluate(el=>{el.click();return {reduced:document.querySelector('.screen').dataset.reduced,sinks:[...document.querySelectorAll('.boss-sinking .capy')].map(n=>getComputedStyle(n).animationName),survivors:document.querySelectorAll('.boss-staying').length,dust:document.querySelectorAll('.boss-earth').length};});
+  expect(state.dust).toBe(0);expect(state.reduced).toBe('true');expect(state.survivors).toBe(1);expect(state.sinks.every(a=>a==='none')).toBe(true);
   await phase2(page);await expect(page.locator(`[data-cell="${board.fixed[0]}"]`)).toHaveAttribute('data-value','2');await expect(page.locator('.spring,.flyer')).toHaveCount(0);
  });
 }

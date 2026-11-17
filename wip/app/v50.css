@@ -134,12 +134,12 @@
 .boss-survivor .capy{transform:translateY(8%) scale(.88);transform-origin:bottom}
 .boss-shifting .pond-wrap{isolation:isolate}
 .boss-shifting .cell{position:relative;overflow:hidden}
-.boss-shifting .boss-sinking::after{content:"";position:absolute;inset:44% 5% 5%;border-radius:50%;background:radial-gradient(ellipse,#433325 0 45%,#8F6D47 50%,transparent 70%);z-index:0;animation:boss-ground .35s ease-out var(--sink-delay) both}
+.boss-shifting .boss-sinking::after{content:"";position:absolute;inset:57% 9% 9%;clip-path:polygon(0 45%,15% 25%,24% 32%,39% 4%,56% 20%,71% 8%,84% 33%,100% 45%,90% 70%,72% 83%,51% 96%,31% 82%,13% 87%);background:linear-gradient(#624A32,#A57D51);z-index:0;animation:boss-ground .35s ease-out var(--sink-delay) both}
 .boss-shifting .boss-sinking .capy{position:relative;z-index:1;animation:boss-sink .5s cubic-bezier(.4,-.35,.7,1) var(--sink-delay) both}
 .boss-shifting .lock-badge,.boss-shifting .zone-mark{visibility:hidden}
 .boss-shifting .boss-staying{outline:3px solid #D6A642;outline-offset:-4px}
 .boss-shifting .boss-staying .capy{animation:boss-peek 1.2s ease-in-out both;position:relative;z-index:2}
-.boss-shifting .zone-grid::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:5;background:radial-gradient(ellipse at center,#E7D6ACAA,transparent 70%);opacity:0;animation:boss-dust .5s ease-out 1s both}
+.boss-shifting .zone-grid::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:5;background:radial-gradient(ellipse at 28% 62%,#E7D6AC66,transparent 42%),radial-gradient(ellipse at 68% 40%,#E7D6AC55,transparent 48%);opacity:0;animation:boss-dust .5s ease-out 1s both}
 .boss-revealed .zone-outline{animation:boss-regions .4s ease-out}
 @keyframes boss-ground{from{transform:scaleX(.1);opacity:0}to{transform:scaleX(1);opacity:1}}
 @keyframes boss-sink{0%{transform:translateY(0) rotate(0);opacity:1}25%{transform:translateY(-10%) rotate(-7deg)}100%{transform:translateY(110%) rotate(12deg);opacity:0}}
@@ -179,3 +179,13 @@
 .lb-membership .lb-preview{font-size:12px;padding:8px;border:1px solid #AFCAA2;border-radius:10px;background:#FCF6E7;overflow-wrap:anywhere}
 .last-synced{font-size:11px;color:var(--ink-sub);padding:4px;text-align:left}
 .lb-note:empty{display:none}
+
+/* Little clouds rise beyond each cell while its capy slips below the ground. */
+.boss-shifting .zone-grid{position:relative}
+.boss-earth{position:absolute;z-index:6;pointer-events:none;contain:layout style}
+.boss-earth i{position:absolute;display:block;left:50%;top:65%;opacity:0;transform-origin:center;will-change:transform,opacity}
+.boss-earth .dust-puff{width:var(--size);height:calc(var(--size)*.7);margin-left:calc(var(--size)*-.5);border-radius:43% 57% 61% 39% / 58% 49% 51% 42%;background:radial-gradient(ellipse at 38% 32%,#F5E6C7 5%,#DEC49A 65%,#C6A678 100%);animation:boss-puff .55s ease-out calc(var(--sink-delay) + var(--lag)) both}
+.boss-earth .earth-crumb{width:9%;height:7%;border-radius:28% 45% 24% 38%;background:#A07A50;animation:boss-crumb .4s ease-out calc(var(--sink-delay) + var(--lag)) both}
+@keyframes boss-puff{0%{opacity:0;transform:translate(0,8%) scale(.15)}20%{opacity:.85}65%{opacity:.45}100%{opacity:0;transform:translate(var(--dx),var(--dy)) rotate(var(--turn)) scale(1.65)}}
+@keyframes boss-crumb{0%{opacity:0;transform:translate(0,0) scale(.5)}20%{opacity:1}55%{opacity:.8;transform:translate(var(--dx),var(--dy)) rotate(var(--turn))}100%{opacity:0;transform:translate(var(--dx),65%) rotate(var(--turn)) scale(.4)}}
+@media(prefers-reduced-motion:reduce){.boss-earth{display:none}.boss-earth i{animation:none!important}}
