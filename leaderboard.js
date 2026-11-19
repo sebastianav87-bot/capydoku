@@ -1,4 +1,4 @@
-/* v5.0 optional shared leaderboard — CLIENT. Opt-in; nothing is sent unless the player joins.
+/* v5.0 shared leaderboard — CLIENT. The game nickname enrolls every named player automatically.
  * Sent when joined: a random player id (UUID, not personal), an optional nickname (2–16 characters) and the best
  * world scores with their per-pond breakdown. Local scores always stay in the main save (score.js).
  * Backend (approved: Cloudflare Workers Free + D1, code in /workspace/capydoku/worker) speaks:
@@ -7,7 +7,7 @@
  *   GET  /v1/leaderboard?world=&player_id= → {world, top10:[{rank,nickname,score,me?}], me:{rank,of?,nickname,score}}
  *   POST /v1/opt-out {player_id} → {deleted}
  * Adapters share that contract: httpAdapter(base) for the Worker, mockAdapter (local, tests / `?lb=mock`), noneAdapter.
- * The real API URL is EMPTY in config.js (off) until Sebastián's Cloudflare account exists. */
+ * The public API origin is configured in config.js. */
 import { nickname as checkNickname } from "./profile.js";
 import { worldScores } from "./score.js";
 import { GAME_CONFIG } from "./config.js";
@@ -42,7 +42,8 @@ export function cleanLB(raw) {
     optIn = !!playerId,
     name = optIn && typeof r.nickname === "string" && checkNickname(r.nickname).valid ? checkNickname(r.nickname).text : "";
   return {
-    v: 3,
+    v: 4,
+    resumeId: !optIn && Array.isArray(r.pendingOptOut) ? r.pendingOptOut.findLast(x => typeof x === "string" && UUID.test(x)) || null : null,
     snapshot: optIn && Array.isArray(r.snapshot?.completed) && Array.isArray(r.snapshot?.worlds) ? r.snapshot : null,
     sentSnapshot: optIn && typeof r.sentSnapshot === 'string' ? r.sentSnapshot.slice(0,16000) : '',
     optIn,
@@ -53,8 +54,8 @@ export function cleanLB(raw) {
     sent: optIn && r.sent && typeof r.sent === "object" ? Object.fromEntries(Object.entries(r.sent).filter(([w, s]) => /^[1-5]$/.test(w) && Number.isInteger(s))) : {},
     failures: optIn && Number.isInteger(r.failures) ? Math.max(0, Math.min(20, r.failures)) : 0,
     nextTry: optIn && Number.isFinite(r.nextTry) ? r.nextTry : 0,
-    // ids that left while offline: their server copy is deleted on the next chance (even though no longer opted in)
-    pendingOptOut: Array.isArray(r.pendingOptOut) ? r.pendingOptOut.filter((x) => typeof x === "string" && UUID.test(x)).slice(-5) : [],
+    // Old deletion queues no longer remove automatically enrolled players.
+    pendingOptOut: [],
   };
 }
 export const backoff = (failures) => Math.min(BACKOFF_MS.max, BACKOFF_MS.base * 2 ** Math.max(0, failures - 1));
@@ -152,29 +153,18 @@ export function createLeaderboard({ storage, adapter = noneAdapter, online = () 
     adapter,
     state: () => JSON.parse(JSON.stringify(st)),
     displayName: () => st.nickname || DEFAULT_NAME,
-    /** Opt in (or change the nickname). `name` is optional; an invalid one is rejected (returns false). */
+    /** Enroll an existing or newly named player, without a separate enrollment step. */
+    autoJoin(name) {
+      if (!adapter.connected || st.optIn || !checkNickname(name).valid) return false;
+      return api.join(name);
+    },
+    /** Register automatically (or change the display name). `name` is optional; an invalid one is rejected (returns false). */
     join(name = "") {
       const trimmed = typeof name === "string" ? name.trim() : "";
       if (trimmed && !checkNickname(trimmed).valid) return false;
       const text = trimmed ? checkNickname(trimmed).text : "";
-      st = cleanLB({ ...st, optIn: true, playerId: st.playerId || newId(), nickname: text, registered: st.registered && st.nickname === text, failures: 0, nextTry: 0 });
+      st = cleanLB({ ...st, optIn: true, playerId: st.playerId || st.resumeId || newId(), nickname: text, registered: st.registered && st.nickname === text, failures: 0, nextTry: 0 });
       persist();
-      return true;
-    },
-    /** Leave: deletes the nickname, id and queue here, and asks the backend to delete the entries.
-     * If the backend can't be reached, the deletion is retried later (pendingOptOut). */
-    async leave() {
-      const id = st.playerId;
-      tables = {}; saveTables();
-      st = cleanLB({ pendingOptOut: [...st.pendingOptOut, ...(id ? [id] : [])] });
-      persist();
-      return { removed: await api.flushOptOuts() };
-    },
-    async flushOptOuts() {
-      if (!st.pendingOptOut.length) return true;
-      if (!adapter.connected || !online()) return false;
-      for (const id of [...st.pendingOptOut])
-        try { await adapter.optOut(id); st.pendingOptOut = st.pendingOptOut.filter((x) => x !== id); persist(); } catch { return false; }
       return true;
     },
     /** Queue best world scores (`world` 0-based from score.js; sent 1-based). Only while opted in; never lowers. */
@@ -200,7 +190,6 @@ export function createLeaderboard({ storage, adapter = noneAdapter, online = () 
       return flushing;
     },
     async flushOnce(force = false) {
-      await api.flushOptOuts();
       if (!st.optIn) return { sent: 0, reason: "not-joined" };
       if (!adapter.connected) return { sent: 0, reason: "no-backend" };
       if (!online()) return { sent: 0, reason: "offline" };
@@ -211,7 +200,7 @@ export function createLeaderboard({ storage, adapter = noneAdapter, online = () 
       try {
         if (!st.registered) {
           await adapter.join({ player_id: st.playerId, nickname: st.nickname || undefined });
-          if(!stillJoined()){ await adapter.optOut(playerId);return {sent,reason:'not-joined'}; }
+          if(!stillJoined())return {sent,reason:'not-joined'};
           st.registered = true;
           persist();
         }
@@ -231,11 +220,11 @@ export function createLeaderboard({ storage, adapter = noneAdapter, online = () 
         for(let pass=0;pass<8&&st.snapshot&&stillJoined();pass++) {
           const snapshot=st.snapshot,key=fingerprint(snapshot);
           await adapter.progress({player_id:playerId,...snapshot});
-          if(!stillJoined()){await api.flushOptOuts();return {sent,reason:'not-joined'};}
+          if(!stillJoined())return {sent,reason:'not-joined'};
           st.sentSnapshot=key;if(fingerprint(st.snapshot)===key)st.snapshot=null;
           sent++;persist();
         }
-        if(!stillJoined()){await api.flushOptOuts();return {sent,reason:'not-joined'};}
+        if(!stillJoined())return {sent,reason:'not-joined'};
         st.failures = 0;
         st.nextTry = 0;
         persist();
