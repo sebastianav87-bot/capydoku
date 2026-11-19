@@ -1,8 +1,9 @@
 {
   "holdCache": true,
-  "preparedLocalOnly": true,
-  "published": false,
+  "preparedLocalOnly": false,
+  "published": true,
   "cache": "capydoku-v5.0-3e1df1a0593b",
   "sw_sha256": "ca776e1b6f3317427d8cf2094d34b78118f55415cf8d4057f61e641972678b34",
-  "precache_sha256": "1927a84c3bc4bde81bf116df1782b9f6086ae16ba68a55df40049b9dd6277475"
+  "precache_sha256": "1927a84c3bc4bde81bf116df1782b9f6086ae16ba68a55df40049b9dd6277475",
+  "publishedCommit": "eeb2d71c9419f26c230f111f4033ba182ee851fd"
 }

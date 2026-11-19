@@ -1,4 +1,4 @@
-> Latest WIP: automatic leaderboard enrollment from the game nickname, with no Join or Leave controls, per the updated user instruction. See `wip/app/reports/auto-leaderboard/README.md`. Not yet published.
+> Latest WIP: automatic leaderboard enrollment from the game nickname, with no Join or Leave controls, per the updated user instruction. See `wip/app/reports/auto-leaderboard/README.md`. Published with explicit user approval; see the release report.
 
 > Current update: shared leaderboard implemented and public service activated with explicit user approval.
 > See `wip/app/reports/shared-leaderboard/README.md` for current publication and verification details.

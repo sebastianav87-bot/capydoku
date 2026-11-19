@@ -2,7 +2,7 @@
 
 User requested that entering a game nickname automatically count the player and their accumulated points, with no separate Join step. The follow-up explicitly removed the ability to leave. This supersedes the earlier optional-membership requirements.
 
-Saved in handoff-v5-wip; not yet published. No production players or service configuration were changed during testing.
+Published with explicit user approval; implementation saved in handoff-v5-wip. Production service configuration was unchanged.
 
 - Saving the initial nickname automatically registers and sends current campaign scores and consecutive progress.
 - Existing named saves register and send historical best scores and completions at next app startup. Existing registered identities and chosen leaderboard names remain intact.
@@ -16,3 +16,5 @@ Verification: 34 current campaign/migration/solver/client unit tests passed. Six
 Existing players must open the updated game with connectivity before this device-local progress can appear remotely. Scores from devices that have not opened the update cannot be collected remotely.
 
 Prepared offline cache: `capydoku-v5.0-3e1df1a0593b` (113 URLs).
+
+Published main commit: `eeb2d71c9419f26c230f111f4033ba182ee851fd`. Rollback tag: `pre-auto-ranking-v5.0` → `545e89522fa83724715c69e0f414bc530f153abe`. The extracted release passed the 113-resource offline/reload smoke test with zero browser errors. The archive-only test disables remote ranking with the existing loopback-only test switch; real ranking flows were separately checked against the local Worker and production service health. See archive-smoke.json, pages-build.json and live-verification.json.
