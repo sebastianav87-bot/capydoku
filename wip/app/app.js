@@ -1286,8 +1286,6 @@ function activateControl(b) {
       leaderboardDialog('Syncing your existing scores and progress…');
       break;
     }
-    case 'lbLeave':
-      leaderboard.leave().then(({removed})=>{if(modal==='leaderboard'){leaderboardDialog(removed?'Your shared entry was deleted.':'Deletion queued. Reconnect to remove your shared entry.');refreshLeaderboard();}});break;
     case 'lbClose':closeLeaderboard();break;
     case "worldTop":
       root.querySelector(".progress-ledger")?.remove();
@@ -1553,11 +1551,13 @@ try {
   loaded = load(storage, data);
   await bonus.ensureLevels().catch(() => {}); // rev b: the hub can open on a crate pond, so its par/thumbnail must be ready before the first render.
   progress = loaded.progress;
+  const autoEnrolled = leaderboard.autoJoin(progress.nickname);
   queueScores();
   music.configure({ enabled: progress.music });
   warning = loaded.readOnly ? "Newer progress found. Playing without overwriting it." : loaded.error;
   enterOnboarding();
-  if (loaded.contentMigration?.dropped.length) toast("Ponds refreshed. Your progress & lilies are safe.");
+  if (autoEnrolled) toast("Your nickname, score and progress sync automatically to the shared leaderboard.");
+  else if (loaded.contentMigration?.dropped.length) toast("Ponds refreshed. Your progress & lilies are safe.");
   else if (loaded.migrated) toast("Your pond path & streak are safe.");
 } catch {
   shell(
@@ -1610,7 +1610,7 @@ function nicknameScreen(edit = false) {
       .map((n) => `<img class="nickname-${n.toLowerCase()}" src="${sprite(n)}" alt="${n}">`)
       .join(
         "",
-      )}</div><div class="nickname-question"><h2>What should we call you?</h2><p>Any nickname feels at home.</p></div><div class="nickname-form"><label for="nickname-input">Nickname</label><input id="nickname-input" autocomplete="off" autocapitalize="words" spellcheck="false" placeholder="e.g. Lily" value="${escapeHTML(progress.nickname)}" aria-describedby="nickname-validation"><div class="nickname-validation" id="nickname-validation"><span>2–16 characters · Emoji welcome</span><b>0/16</b></div><div class="local-name-note"><span aria-hidden="true">♧</span><div><strong>Stored only on this phone.</strong><small>No email. No real name. No account.</small></div></div><button class="primary" data-action="saveNickname" disabled>${edit ? "Save nickname" : "Let’s begin →"}</button>${edit ? '<button data-action="cancelNickname">Cancel</button>' : '<p class="nickname-edit-note">You can change it in Settings.</p>'}</div>`,
+      )}</div><div class="nickname-question"><h2>What should we call you?</h2><p>Any nickname feels at home.</p></div><div class="nickname-form"><label for="nickname-input">Nickname</label><input id="nickname-input" autocomplete="off" autocapitalize="words" spellcheck="false" placeholder="e.g. Lily" value="${escapeHTML(progress.nickname)}" aria-describedby="nickname-validation"><div class="nickname-validation" id="nickname-validation"><span>2–16 characters · Emoji welcome</span><b>0/16</b></div><div class="local-name-note"><span aria-hidden="true">♧</span><div><strong>Your nickname appears on the shared leaderboard.</strong><small>Your score and progress sync automatically. No email or account.</small></div></div><button class="primary" data-action="saveNickname" disabled>${edit ? "Save nickname" : "Let’s begin →"}</button>${edit ? '<button data-action="cancelNickname">Cancel</button>' : '<p class="nickname-edit-note">You can change it in Settings.</p>'}</div>`,
   );
   validateNicknameInput();
 }
@@ -1634,12 +1634,14 @@ function saveNickname() {
   if (!r.valid) return;
   progress.nickname = r.text;
   persist();
+  leaderboard.autoJoin(r.text);
+  queueScores();
   if (nicknameEditing) {
     home();
     settings();
   } else enterOnboarding();
 }
-// ---------- v5.0 scores, world-complete top 10, optional leaderboard ----------
+// ---------- v5.0 scores, world-complete top 10, automatic shared leaderboard ----------
 // v5.0 Hot Spring: one season badge per world; each lights up when that world's gate (30/60/90/120/150) is open,
 // and shows how many of the world's 3 crate gates are open.
 function worldBadgesHTML() {
@@ -1722,7 +1724,7 @@ function openLeaderboard() {
 function leaderboardDialog(note='',editing=false) {
   if(modal!=='leaderboard'){openLeaderboard();return;}
   const st=leaderboard.state(),form=editing;
-  root.querySelector('.lb-membership').innerHTML=`<p class="small-text lb-note" role="status">${escapeHTML(note)}</p>${form?`<p class="lb-privacy">If you join, others can see your chosen name, best campaign scores and last cleared pond. No account is needed.</p><label class="lb-label" for="lb-name">Display name (optional)</label><input id="lb-name" autocomplete="off" maxlength="64" value="${escapeHTML(st.optIn?st.nickname:progress.nickname||'')}"><p class="lb-preview" aria-live="polite"></p><button class="primary" data-action="lbJoin">${st.optIn?'Save name':'Join leaderboard'}</button><button data-action="lbCancelName">Cancel</button>`:`<button data-action="lbEdit">${st.optIn?'Edit name':'Join leaderboard'}</button>`}${st.optIn?'<button class="lb-leave" data-action="lbLeave">Leave and delete my entry</button>':''}`;
+  root.querySelector('.lb-membership').innerHTML=`<p class="small-text lb-note" role="status">${escapeHTML(note)}</p>${form?`<p class="lb-privacy">Your name, best campaign scores and last cleared pond appear automatically on the shared leaderboard. No account is needed.</p><label class="lb-label" for="lb-name">Display name (optional)</label><input id="lb-name" autocomplete="off" maxlength="64" value="${escapeHTML(st.optIn?st.nickname:progress.nickname||'')}"><p class="lb-preview" aria-live="polite"></p><button class="primary" data-action="lbJoin">Save name</button><button data-action="lbCancelName">Cancel</button>`:`<button data-action="lbEdit">Edit name</button>`}`;
   if(form)updateLeaderboardPreview();
 }
 function updateLeaderboardPreview() {

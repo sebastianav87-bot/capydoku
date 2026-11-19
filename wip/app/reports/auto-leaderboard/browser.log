@@ -1,0 +1,22 @@
+
+Running 6 tests using 1 worker
+
+(node:6781) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓  1 [chromium] › tests/shared-leaderboard.spec.js:15:1 › two independent profiles share progress/points; automatic named enrollment, replay and offline queue (7.0s)
+  ✓  2 [chromium] › tests/shared-leaderboard.spec.js:42:1 › Leaderboard closes to the same two-phase boss board and the same crate state (1.2s)
+  ✓  3 [chromium] › tests/shared-leaderboard.spec.js:50:1 › saving a name and reopening an existing named save publish automatically without join or leave controls (2.3s)
+(node:7910) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓  4 [webkit] › tests/shared-leaderboard.spec.js:15:1 › two independent profiles share progress/points; automatic named enrollment, replay and offline queue (6.4s)
+  ✓  5 [webkit] › tests/shared-leaderboard.spec.js:42:1 › Leaderboard closes to the same two-phase boss board and the same crate state (1.5s)
+  ✓  6 [webkit] › tests/shared-leaderboard.spec.js:50:1 › saving a name and reopening an existing named save publish automatically without join or leave controls (2.1s)
+
+  6 passed (25.7s)
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.3
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.3
+npm notice To update run: npm install -g npm@12.2.3
+npm notice

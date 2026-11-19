@@ -1,6 +1,4 @@
-// v5.0 leaderboard client: opt-in only, privacy (nothing queued or sent before joining), offline queue + backoff,
-// leave deletes (retried if offline), adapter contract — the local mock AND the real Worker handler
-// (worker/src/index.js on a local SQLite stand-in; no Cloudflare account, no network).
+// Shared leaderboard: automatic enrollment, aggregate scores, offline sync and legacy migration.
 import test from "node:test";
 import assert from "node:assert/strict";
 import { createLeaderboard, mockAdapter, noneAdapter, httpAdapter, cleanLB, backoff, LB_KEY, MOCK_DB_KEY, pickAdapter, DEFAULT_NAME, WORLD_MAX } from "../leaderboard.js";
@@ -35,7 +33,7 @@ for (const kind of ["mock", "worker"]) {
     assert.deepEqual([b.mode, b.reason, b.me.nickname], ["shared", undefined, DEFAULT_NAME]);
     assert.ok(!(await adapter.leaderboard(1)).top10.some((e) => e.score === 5000));
   });
-  test(`[${kind}] join (optional nickname) → queue → flush → top 10 + rank → leave deletes`, async () => {
+  test(`[${kind}] join (optional nickname) → queue → flush → top 10 + rank → reload preserves membership`, async () => {
     const { s, adapter, env } = make(), lb = createLeaderboard({ storage: s, adapter, newId: ids });
     assert.equal(lb.join("x"), false);
     assert.equal(lb.state().optIn, false);
@@ -54,11 +52,9 @@ for (const kind of ["mock", "worker"]) {
     lb.enqueue([W(0, 100)]); // lower never re-queued
     assert.equal(lb.pending(), 0);
     const id = lb.state().playerId;
-    assert.deepEqual(await lb.leave(), { removed: true });
-    const st = JSON.parse(s.getItem(LB_KEY));
-    assert.deepEqual([st.optIn, st.playerId, st.nickname, st.queue, st.pendingOptOut], [false, null, "", {}, []]);
-    assert.equal((await adapter.leaderboard(1, id)).me.rank, null);
-    if (kind === "worker") assert.equal(env.DB.raw.prepare("SELECT COUNT(*) n FROM players WHERE id = ?").get(id).n, 0);
+    assert.equal(typeof lb.leave, 'undefined');
+    const resumed = createLeaderboard({storage:s,adapter,newId:ids});
+    assert.equal(resumed.state().playerId,id);assert.equal((await resumed.board(0)).me.rank,1);
   });
   test(`[${kind}] offline: queued, survives reload, flushes when back online`, async () => {
     const { s, adapter } = make();
@@ -101,24 +97,6 @@ test("server errors back off exponentially (5 s … 10 min); permanent rejection
   assert.deepEqual(await lb2.flush(), { sent: 0, reason: "ok" });
   assert.equal(lb2.pending(), 0);
 });
-test("leaving while offline deletes locally now and on the server later", async () => {
-  const s = mem(), mock = mockAdapter(s);
-  let on = true;
-  const lb = createLeaderboard({ storage: s, adapter: mock, online: () => on, newId: ids });
-  lb.join("Pip");
-  lb.enqueue([W(0, 3000)]);
-  await lb.flush();
-  const id = lb.state().playerId;
-  on = false;
-  assert.deepEqual(await lb.leave(), { removed: false });
-  assert.equal(lb.state().optIn, false);
-  assert.deepEqual(lb.state().pendingOptOut, [id]);
-  assert.ok(JSON.parse(s.getItem(MOCK_DB_KEY)).players[id]);
-  on = true;
-  await lb.flush();
-  assert.equal(JSON.parse(s.getItem(MOCK_DB_KEY)).players[id], undefined);
-  assert.deepEqual(lb.state().pendingOptOut, []);
-});
 test("adapter choice: none with an empty API URL, mock only via the test hook, http only with an https URL", async () => {
   const s = mem();
   assert.equal(pickAdapter(s, "", "").name, "none");
@@ -137,4 +115,32 @@ test("adapter choice: none with an empty API URL, mock only via the test hook, h
   assert.equal(cleanLB({ optIn: true }).optIn, false);
   assert.deepEqual(cleanLB({ optIn: false, playerId: "00000000-0000-4000-8000-000000000001", nickname: "Hi", queue: { 1: { score: 5 } } }), cleanLB(null));
   assert.deepEqual(cleanLB({ optIn: true, playerId: "00000000-0000-4000-8000-000000000001", queue: { 1: { score: 5 }, 9: { score: 1 }, 2: { score: -3 }, 3: { score: 99999 } } }).queue, { 1: { score: 5, ponds: undefined } });
+});
+
+test('game nicknames enroll two existing profiles with historical scores without a separate join', async () => {
+  const { adapter } = workerAdapter(), a = createLeaderboard({storage:mem(),adapter,newId:ids}), b = createLeaderboard({storage:mem(),adapter,newId:ids});
+  assert.equal(a.autoJoin('Juniper'),true);assert.equal(b.autoJoin('Pebble'),true);
+  a.enqueueProgress({completed:[1,2],scores:{1:{best:1200}}});b.enqueueProgress({completed:[1],scores:{1:{best:900}}});
+  await a.flush();await b.flush();
+  const board=await b.board('overall');assert.deepEqual(board.entries.map(r=>[r.nickname,r.score,r.last_cleared]),[['Juniper',1200,2],['Pebble',900,1]]);
+  assert.equal(a.autoJoin('Another name'),false);assert.equal(a.displayName(),'Juniper');
+});
+
+test('automatic enrollment survives offline reload without exposing a leave operation', async () => {
+  const s=mem(),{adapter}=workerAdapter();let online=false;
+  let lb=createLeaderboard({storage:s,adapter,online:()=>online,newId:ids});
+  assert.equal(lb.autoJoin('Fern'),true);lb.enqueueProgress({completed:[1],scores:{1:{best:700}}});
+  assert.equal((await lb.flush()).reason,'offline');
+  lb=createLeaderboard({storage:s,adapter,online:()=>online,newId:ids});online=true;await lb.flush();
+  assert.equal((await lb.board('overall')).entries[0].score,700);assert.equal(typeof lb.leave,'undefined');
+});
+
+test('legacy exclusions no longer prevent automatic enrollment; pending old deletions reuse their identity', async () => {
+  const s=mem(),{adapter}=workerAdapter(),id=ids();
+  await adapter.join({player_id:id,nickname:'Legacy'});
+  s.setItem(LB_KEY,JSON.stringify({v:3,optIn:false,excluded:true,pendingOptOut:[id]}));
+  const lb=createLeaderboard({storage:s,adapter,newId:ids});assert.equal(lb.autoJoin('Legacy'),true);assert.equal(lb.state().playerId,id);assert.deepEqual(lb.state().pendingOptOut,[]);
+  lb.enqueueProgress({completed:[1],scores:{1:{best:600}}});await lb.flush();assert.equal((await lb.board('overall')).entries.length,1);
+  assert.equal(createLeaderboard({storage:mem(),adapter:noneAdapter,newId:ids}).autoJoin('Local'),false);
+  assert.equal(createLeaderboard({storage:mem(),adapter:mockAdapter(mem()),newId:ids}).autoJoin(''),false);
 });
